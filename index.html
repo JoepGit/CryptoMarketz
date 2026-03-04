@@ -1377,29 +1377,61 @@ setInterval(fetchMarkets,90000);
 
 /* ── NEWS ── */
 function tAgo(d){var s=Math.floor((Date.now()-new Date(d))/1000);if(s<60)return'now';if(s<3600)return Math.floor(s/60)+'m';if(s<86400)return Math.floor(s/3600)+'h';return Math.floor(s/86400)+'d';}
+
+function fetchFeedWithFallback(feedUrl, srcName){
+  var proxies=[
+    'https://api.allorigins.win/raw?url=',
+    'https://corsproxy.io/?',
+    'https://api.codetabs.com/v1/proxy?quest='
+  ];
+  function tryProxy(i){
+    if(i>=proxies.length)return Promise.resolve([]);
+    return fetch(proxies[i]+encodeURIComponent(feedUrl),{signal:AbortSignal.timeout(6000)})
+      .then(function(r){if(!r.ok)throw new Error('bad');return r.text();})
+      .then(function(txt){
+        var xml=new DOMParser().parseFromString(txt,'text/xml');
+        var items=Array.from(xml.querySelectorAll('item')).slice(0,20).map(function(it){
+          var title=(it.querySelector('title')||{}).textContent||'';
+          var link=(it.querySelector('link')||{}).textContent||'';
+          var pub=(it.querySelector('pubDate')||{}).textContent||'';
+          if(!title||!link)return null;
+          return{title:title.trim(),url:link.trim(),date:pub?new Date(pub):new Date(),src:srcName};
+        }).filter(Boolean);
+        if(!items.length)throw new Error('empty');
+        return items;
+      })
+      .catch(function(){return tryProxy(i+1);});
+  }
+  return tryProxy(0);
+}
+
+function renderNews(all){
+  var tmpl=function(item,cls){return'<div class="'+cls+'" onclick="window.open(\''+item.url+'\',\'_blank\')">'+
+    '<div class="'+(cls==='ni'?'ni-h':'nf-t')+'">'+item.title+'</div>'+
+    '<div class="'+(cls==='ni'?'ni-m':'nf-m')+'"><span class="ni-src">'+item.src+'</span><span>·</span><span>'+tAgo(item.date)+'</span></div></div>';};
+  var nd=document.getElementById('news-dash');if(nd)nd.innerHTML=all.slice(0,20).map(function(i){return tmpl(i,'ni');}).join('')||'<div style="font-family:\'Orbitron\',monospace;font-size:9px;color:var(--sub)">No news.</div>';
+  var nf=document.getElementById('news-full');if(nf)nf.innerHTML=all.slice(0,40).map(function(i){return tmpl(i,'nfi');}).join('')||'<div style="font-family:\'Orbitron\',monospace;font-size:9px;color:var(--sub)">No news.</div>';
+}
+
 function fetchNews(){
-  var proxy='https://api.allorigins.win/raw?url=';
-  var feeds=[{name:'CoinTelegraph',url:'https://cointelegraph.com/rss'},{name:'CoinDesk',url:'https://feeds.feedburner.com/CoinDesk'}];
-  Promise.all(feeds.map(function(f){
-    return fetch(proxy+encodeURIComponent(f.url)).then(function(r){return r.text();}).then(function(txt){
-      var xml=new DOMParser().parseFromString(txt,'text/xml');
-      return Array.from(xml.querySelectorAll('item')).slice(0,20).map(function(it){
-        var title=(it.querySelector('title')||{}).textContent||'';
-        var link=(it.querySelector('link')||{}).textContent||'';
-        var pub=(it.querySelector('pubDate')||{}).textContent||'';
-        if(!title||!link)return null;
-        return{title:title.trim(),url:link.trim(),date:pub?new Date(pub):new Date(),src:f.name};
-      }).filter(Boolean);
-    }).catch(function(){return[];});
-  })).then(function(groups){
-    var all=[];groups.forEach(function(g){all=all.concat(g);});
-    all.sort(function(a,b){return b.date-a.date;});
-    var tmpl=function(item,cls){return'<div class="'+cls+'" onclick="window.open(\''+item.url+'\',\'_blank\')">'+
-      '<div class="'+(cls==='ni'?'ni-h':'nf-t')+'">'+item.title+'</div>'+
-      '<div class="'+(cls==='ni'?'ni-m':'nf-m')+'"><span class="ni-src">'+item.src+'</span><span>·</span><span>'+tAgo(item.date)+'</span></div></div>';};
-    var nd=document.getElementById('news-dash');if(nd)nd.innerHTML=all.slice(0,20).map(function(i){return tmpl(i,'ni');}).join('')||'<div style="font-family:\'Orbitron\',monospace;font-size:9px;color:var(--sub)">No news.</div>';
-    var nf=document.getElementById('news-full');if(nf)nf.innerHTML=all.slice(0,40).map(function(i){return tmpl(i,'nfi');}).join('')||'<div style="font-family:\'Orbitron\',monospace;font-size:9px;color:var(--sub)">No news.</div>';
-  });
+  var feeds=[
+    {name:'CoinTelegraph',url:'https://cointelegraph.com/rss'},
+    {name:'CoinDesk',url:'https://www.coindesk.com/arc/outboundfeeds/rss/'}
+  ];
+  Promise.all(feeds.map(function(f){return fetchFeedWithFallback(f.url,f.name);}))
+    .then(function(groups){
+      var all=[];groups.forEach(function(g){all=all.concat(g);});
+      all.sort(function(a,b){return b.date-a.date;});
+      if(all.length>0){renderNews(all);}
+      else{
+        /* All proxies failed — show clickable links as fallback */
+        var fallback=[
+          {title:'Open CoinTelegraph for the latest crypto news →',url:'https://cointelegraph.com',src:'CoinTelegraph',date:new Date()},
+          {title:'Open CoinDesk for market updates and analysis →',url:'https://coindesk.com',src:'CoinDesk',date:new Date()}
+        ];
+        renderNews(fallback);
+      }
+    });
 }
 setInterval(fetchNews,300000);
 
