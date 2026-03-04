@@ -2595,24 +2595,24 @@ async function aiSend(){
   aiShowThinking();
 
   try{
-    var resp=await fetch('https://api.anthropic.com/v1/messages',{
+    var resp=await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyAWPHDcSx-_bSDdhXOwgN8_vilVYmhsNEw,{
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify({
-        model:'claude-sonnet-4-20250514',
-        max_tokens:1000,
-        system:aiGetSystemPrompt(),
-        messages:aiHistory
+        system_instruction:{parts:[{text:aiGetSystemPrompt()}]},
+        contents:aiHistory.map(function(m){return{role:m.role==='assistant'?'model':'user',parts:[{text:m.content}]};})
       })
     });
     var data=await resp.json();
-    var reply=(data.content&&data.content[0]&&data.content[0].text)||'Sorry, er ging iets mis. Probeer het opnieuw.';
+    var reply=(data.candidates&&data.candidates[0]&&data.candidates[0].content&&data.candidates[0].content.parts&&data.candidates[0].content.parts[0]&&data.candidates[0].content.parts[0].text)||'Sorry, something went wrong. Please try again.';
+    // Show API error details if present
+    if(!data.candidates&&data.error){reply='**API Error:** '+data.error.message+' (code: '+data.error.code+')';}
     aiRemoveThinking();
     aiHistory.push({role:'assistant',content:reply});
     aiAddMessage('ai',reply);
   } catch(e){
     aiRemoveThinking();
-    aiAddMessage('ai','**Connection error** — Could not reach the AI. Check your internet connection and try again.');
+    aiAddMessage('ai','**Connection error:** '+e.message);
   }
 
   aiTyping=false;
