@@ -488,20 +488,77 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--cream);ov
 .exb-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--gold2),var(--gold));transition:width .8s ease}
 .exb-pct{font-family:'Orbitron',monospace;font-size:8px;color:var(--gold);width:34px;text-align:right;flex-shrink:0}
 
-@media(max-width:768px){
-  :root{--sb:0px}
-  .sb{display:none}.tkr{left:0}
-  .page{padding:20px 14px}
-  .d-prices{grid-template-columns:1fr 1fr}
-  .d-tz{grid-template-columns:1fr 1fr}
-  .hl-grid{grid-template-columns:1fr}
-  .eg,.rg,.plg,.cg{grid-template-columns:1fr}
-  .mkt-hdr,.mkt-row{grid-template-columns:.3fr 2fr 1.3fr .8fr}
-  .port-summary{grid-template-columns:1fr 1fr}
-  .port-form{grid-template-columns:1fr 1fr}
-  .pt-hdr,.pt-row{grid-template-columns:1.5fr 1fr 1fr 1fr}
-  .whale-grid,.whale-stat-grid{grid-template-columns:1fr}
-}
+/* ═══ AI ANALYST ═══ */
+.ai-wrap{display:grid;grid-template-columns:260px 1fr;gap:14px;height:calc(100vh - 140px);min-height:500px}
+.ai-sidebar{display:flex;flex-direction:column;gap:10px}
+.ai-prompts{background:rgba(17,15,19,.88);border:1px solid var(--bdr);border-radius:12px;padding:14px;flex-shrink:0}
+.ai-prompts-title{font-family:'Orbitron',monospace;font-size:8px;letter-spacing:.18em;color:var(--sub);margin-bottom:10px;text-transform:uppercase}
+.ai-prompt-btn{display:block;width:100%;text-align:left;background:rgba(212,175,55,.04);border:1px solid rgba(212,175,55,.1);border-radius:7px;padding:9px 11px;color:var(--cream);font-size:11px;cursor:pointer;margin-bottom:6px;transition:all .18s;line-height:1.4}
+.ai-prompt-btn:hover{background:rgba(212,175,55,.09);border-color:rgba(212,175,55,.28);color:var(--gold)}
+.ai-prompt-btn:last-child{margin-bottom:0}
+.ai-prompt-label{font-family:'Orbitron',monospace;font-size:7px;color:rgba(212,175,55,.4);letter-spacing:.1em;display:block;margin-bottom:3px}
+.ai-settings{background:rgba(17,15,19,.88);border:1px solid var(--bdr);border-radius:12px;padding:14px}
+.ai-settings-title{font-family:'Orbitron',monospace;font-size:8px;letter-spacing:.18em;color:var(--sub);margin-bottom:10px;text-transform:uppercase}
+.ai-sel-label{font-family:'Orbitron',monospace;font-size:7.5px;color:var(--sub);letter-spacing:.1em;display:block;margin-bottom:5px;margin-top:10px}
+.ai-sel-label:first-of-type{margin-top:0}
+.ai-select{width:100%;background:var(--c4);border:1px solid var(--bdr);border-radius:7px;padding:8px 10px;color:var(--cream);font-size:11px;outline:none;font-family:'DM Sans',sans-serif;transition:border-color .18s}
+.ai-select:focus{border-color:rgba(212,175,55,.4)}
+.ai-select option{background:#1a1720}
+
+.ai-main{display:flex;flex-direction:column;background:rgba(17,15,19,.88);border:1px solid var(--bdr);border-radius:12px;overflow:hidden}
+.ai-header{padding:14px 18px;border-bottom:1px solid var(--bdr);display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.ai-header-left{display:flex;align-items:center;gap:10px}
+.ai-header-icon{width:34px;height:34px;border-radius:8px;background:rgba(212,175,55,.08);border:1px solid rgba(212,175,55,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ai-header-icon svg{width:16px;height:16px;stroke:var(--gold);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ai-header-title{font-family:'Orbitron',monospace;font-size:11px;font-weight:700;color:var(--cream)}
+.ai-header-sub{font-size:10px;color:var(--sub);margin-top:1px}
+.ai-status{display:flex;align-items:center;gap:6px;font-family:'Orbitron',monospace;font-size:8px;color:var(--sub)}
+.ai-status-dot{width:6px;height:6px;border-radius:50%;background:var(--grn);animation:wblink 2s ease-in-out infinite;flex-shrink:0}
+.ai-status-dot.thinking{background:var(--gold)}
+
+.ai-messages{flex:1;overflow-y:auto;padding:18px;display:flex;flex-direction:column;gap:14px;scroll-behavior:smooth}
+.ai-messages::-webkit-scrollbar{width:4px}
+.ai-messages::-webkit-scrollbar-track{background:transparent}
+.ai-messages::-webkit-scrollbar-thumb{background:rgba(212,175,55,.15);border-radius:2px}
+
+.ai-msg{display:flex;gap:10px;align-items:flex-start;animation:msgIn .25s ease}
+@keyframes msgIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.ai-msg.user{flex-direction:row-reverse}
+.ai-msg-av{width:28px;height:28px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11px;font-weight:700}
+.ai-msg.ai .ai-msg-av{background:rgba(212,175,55,.1);border:1px solid rgba(212,175,55,.2);color:var(--gold)}
+.ai-msg.user .ai-msg-av{background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.2);color:var(--grn);font-family:'Orbitron',monospace;font-size:9px}
+.ai-msg-bubble{max-width:85%;padding:11px 14px;border-radius:10px;font-size:12.5px;line-height:1.7}
+.ai-msg.ai .ai-msg-bubble{background:rgba(212,175,55,.04);border:1px solid rgba(212,175,55,.1);color:var(--cream)}
+.ai-msg.user .ai-msg-bubble{background:rgba(74,222,128,.06);border:1px solid rgba(74,222,128,.12);color:var(--cream)}
+.ai-msg-bubble strong{color:var(--gold);font-weight:600}
+.ai-msg-bubble h3{font-family:'Orbitron',monospace;font-size:10px;color:var(--gold);margin:10px 0 5px;letter-spacing:.06em}
+.ai-msg-bubble ul{padding-left:16px;margin:6px 0}
+.ai-msg-bubble ul li{margin-bottom:4px;color:var(--sub)}
+.ai-msg-bubble ul li strong{color:var(--cream)}
+.ai-msg-time{font-family:'Orbitron',monospace;font-size:7px;color:rgba(122,106,82,.4);margin-top:4px;text-align:right}
+
+.ai-thinking{display:flex;gap:5px;align-items:center;padding:12px 14px}
+.ai-thinking span{width:6px;height:6px;border-radius:50%;background:var(--gold);opacity:.4;animation:thdot .9s ease-in-out infinite}
+.ai-thinking span:nth-child(2){animation-delay:.15s}
+.ai-thinking span:nth-child(3){animation-delay:.3s}
+@keyframes thdot{0%,60%,100%{transform:translateY(0);opacity:.4}30%{transform:translateY(-5px);opacity:1}}
+
+.ai-input-area{padding:14px 16px;border-top:1px solid var(--bdr);display:flex;gap:10px;align-items:flex-end;flex-shrink:0}
+.ai-textarea{flex:1;background:var(--c4);border:1px solid var(--bdr);border-radius:9px;padding:10px 13px;color:var(--cream);font-size:13px;font-family:'DM Sans',sans-serif;outline:none;resize:none;min-height:44px;max-height:120px;transition:border-color .18s;line-height:1.5}
+.ai-textarea:focus{border-color:rgba(212,175,55,.4)}
+.ai-textarea::placeholder{color:rgba(122,106,82,.35)}
+.ai-send{width:44px;height:44px;border-radius:9px;background:linear-gradient(135deg,var(--gold2),var(--gold));border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:opacity .18s}
+.ai-send:hover{opacity:.85}
+.ai-send:disabled{opacity:.35;cursor:not-allowed}
+.ai-send svg{width:16px;height:16px;stroke:#08070a;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.ai-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;flex:1;padding:40px;text-align:center;opacity:.5}
+.ai-empty svg{width:40px;height:40px;stroke:var(--gold);fill:none;stroke-width:1.2;stroke-linecap:round;margin-bottom:14px;opacity:.5}
+.ai-empty-title{font-family:'Orbitron',monospace;font-size:11px;color:var(--cream);margin-bottom:6px}
+.ai-empty-sub{font-size:12px;color:var(--sub);line-height:1.6;max-width:280px}
+.ai-clear{font-family:'Orbitron',monospace;font-size:7.5px;color:rgba(122,106,82,.4);cursor:pointer;border:1px solid rgba(122,106,82,.15);background:none;padding:4px 9px;border-radius:4px;transition:all .18s;letter-spacing:.08em}
+.ai-clear:hover{color:var(--sub);border-color:rgba(122,106,82,.3)}
+
+@media(max-width:768px){.ai-wrap{grid-template-columns:1fr;height:auto}.ai-sidebar{display:none}}
 </style>
 </head>
 <body>
@@ -559,6 +616,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--cream);ov
     </ul>
     <div class="sb-sec">Tools</div>
     <ul class="sbn">
+      <li><a onclick="goPage('ai',this)">
+        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>AI Analyst <span style="font-family:'Orbitron',monospace;font-size:6px;background:linear-gradient(135deg,#b8860b,#d4af37);color:#08070a;padding:2px 5px;border-radius:2px;margin-left:2px;font-weight:700;letter-spacing:.05em">AI</span></a></li>
       <li><a onclick="goPage('portfolio',this)">
         <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>Portfolio<span class="sb-lk" id="lk-portfolio">🔒</span></a></li>
       <li><a onclick="goPage('whales',this)">
@@ -1572,6 +1631,100 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--cream);ov
     </div><!-- end lkd whales -->
     </div>
 
+
+    <!-- ═══ AI ANALYST ═══ -->
+    <div class="page" id="page-ai">
+      <div class="ph">
+        <h1>AI Analyst</h1>
+        <p>Deep dive on any coin, setup or market question — powered by Claude AI</p>
+      </div>
+      <div class="ai-wrap">
+        <!-- LEFT: prompts + settings -->
+        <div class="ai-sidebar">
+          <div class="ai-prompts">
+            <div class="ai-prompts-title">Quick Deep Dives</div>
+            <button class="ai-prompt-btn" onclick="aiQuickPrompt(this)">
+              <span class="ai-prompt-label">MARKET OVERVIEW</span>
+              Provide a full analysis of the current Bitcoin market structure and what is likely to happen next.
+            </button>
+            <button class="ai-prompt-btn" onclick="aiQuickPrompt(this)">
+              <span class="ai-prompt-label">ALTCOIN CYCLE</span>
+              When does altcoin season typically begin and which sectors have the most potential in this cycle?
+            </button>
+            <button class="ai-prompt-btn" onclick="aiQuickPrompt(this)">
+              <span class="ai-prompt-label">RISK ASSESSMENT</span>
+              What are the biggest risks in the crypto market right now and how do I protect my portfolio?
+            </button>
+            <button class="ai-prompt-btn" onclick="aiQuickPrompt(this)">
+              <span class="ai-prompt-label">ON-CHAIN SIGNALS</span>
+              Explain which on-chain metrics matter most right now and what signals they are giving.
+            </button>
+            <button class="ai-prompt-btn" onclick="aiQuickPrompt(this)">
+              <span class="ai-prompt-label">TRADE SETUP</span>
+              How do I build a professional trade setup for BTC with entry, stop loss and take profit zones?
+            </button>
+            <button class="ai-prompt-btn" onclick="aiQuickPrompt(this)">
+              <span class="ai-prompt-label">MACRO IMPACT</span>
+              How do Fed rate decisions and the DXY affect the crypto market and what do you expect in the coming months?
+            </button>
+          </div>
+          <div class="ai-settings">
+            <div class="ai-settings-title">Analysis Style</div>
+            <span class="ai-sel-label">Focus</span>
+            <select class="ai-select" id="ai-focus">
+              <option value="balanced">Balanced (technical + fundamental)</option>
+              <option value="technical">Pure technical analysis</option>
+              <option value="fundamental">Fundamental / on-chain</option>
+              <option value="macro">Macro &amp; sentiment</option>
+              <option value="beginner">Beginner friendly</option>
+            </select>
+            <span class="ai-sel-label">Language</span>
+            <select class="ai-select" id="ai-lang">
+              <option value="en">English</option>
+              <option value="nl">Nederlands</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- RIGHT: chat -->
+        <div class="ai-main">
+          <div class="ai-header">
+            <div class="ai-header-left">
+              <div class="ai-header-icon">
+                <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <div>
+                <div class="ai-header-title">CryptoMarketz AI</div>
+                <div class="ai-header-sub">Crypto market analyst · Powered by Claude</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px">
+              <button class="ai-clear" onclick="aiClear()" id="ai-clear-btn" style="display:none">CLEAR CHAT</button>
+              <div class="ai-status">
+                <div class="ai-status-dot" id="ai-status-dot"></div>
+                <span id="ai-status-txt">Online</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ai-messages" id="ai-messages">
+            <div class="ai-empty" id="ai-empty">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              <div class="ai-empty-title">Ask the AI Analyst anything</div>
+              <div class="ai-empty-sub">Use the quick prompts on the left or type your own question about coins, setups, market structure, on-chain data or macro.</div>
+            </div>
+          </div>
+
+          <div class="ai-input-area">
+            <textarea class="ai-textarea" id="ai-input" placeholder="Ask anything about the market... e.g. 'Analyse ETH on the 4H timeframe'" rows="1" onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();aiSend()}" oninput="this.style.height='auto';this.style.height=Math.min(this.scrollHeight,120)+'px'"></textarea>
+            <button class="ai-send" id="ai-send-btn" onclick="aiSend()">
+              <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
         <!-- ═══ PRICING ═══ -->
     <div class="page" id="page-pricing">
       <div class="ph"><h1>Pricing</h1><p>Choose the plan that fits your goals. Cancel anytime.</p></div>
@@ -2318,6 +2471,167 @@ function eduTab(idx,btn){
   if(btn)btn.classList.add('on');
   var panel=document.getElementById('edu-panel-'+idx);
   if(panel)panel.classList.add('on');
+}
+
+/* ── AI ANALYST ── */
+var aiHistory=[];
+var aiTyping=false;
+
+function aiUserInitial(){
+  var name=(document.getElementById('sb-name')||{}).textContent||'U';
+  return name.charAt(0).toUpperCase();
+}
+
+function aiGetSystemPrompt(){
+  var focus=document.getElementById('ai-focus')?document.getElementById('ai-focus').value:'balanced';
+  var lang=document.getElementById('ai-lang')?document.getElementById('ai-lang').value:'nl';
+  var focusMap={
+    balanced:'Always provide both technical and fundamental insights.',
+    technical:'Focus purely on technical analysis: price action, indicators, chart patterns, timeframes.',
+    fundamental:'Focus on fundamental analysis, tokenomics, on-chain data and project quality.',
+    macro:'Focus on macroeconomic factors, Fed policy, DXY, M2, risk-on/off sentiment.',
+    beginner:'Explain everything in a beginner-friendly way, avoid jargon or always explain it clearly.'
+  };
+  var langInstr=lang==='en'?'Respond in English.':'Respond in Dutch (Nederlands).';
+  return 'You are an experienced crypto market analyst for the CryptoMarketz platform. You provide in-depth analyses of the crypto market based on technical analysis, on-chain data, macro economics and market sentiment. Always give concrete, well-substantiated analyses — no vague answers. Use markdown-style formatting: use **bold** for important terms and short ALL-CAPS headings for sections. Be direct and professional. '+focusMap[focus]+' '+langInstr;
+}
+
+function aiAddMessage(role,text){
+  var empty=document.getElementById('ai-empty');
+  if(empty)empty.style.display='none';
+  var clearBtn=document.getElementById('ai-clear-btn');
+  if(clearBtn)clearBtn.style.display='';
+
+  var msgs=document.getElementById('ai-messages');
+  var div=document.createElement('div');
+  div.className='ai-msg '+role;
+
+  var av=document.createElement('div');
+  av.className='ai-msg-av';
+  av.textContent=role==='ai'?'AI':aiUserInitial();
+
+  var bubble=document.createElement('div');
+  bubble.className='ai-msg-bubble';
+
+  // Simple markdown: **bold**, lines starting with # as h3
+  var html=text
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>')
+    .replace(/^#{1,3} (.+)$/gm,'<h3>$1</h3>')
+    .replace(/^[-•] (.+)$/gm,'<li>$1</li>')
+    .replace(/(<li>.*<\/li>)/gs,'<ul>$1</ul>')
+    .replace(/\n\n/g,'</p><p>')
+    .replace(/\n/g,'<br>');
+  bubble.innerHTML='<p>'+html+'</p>';
+
+  var time=document.createElement('div');
+  time.className='ai-msg-time';
+  time.textContent=new Date().toLocaleTimeString('nl-NL',{hour:'2-digit',minute:'2-digit'});
+
+  var inner=document.createElement('div');
+  inner.appendChild(bubble);
+  inner.appendChild(time);
+
+  div.appendChild(av);
+  div.appendChild(inner);
+  msgs.appendChild(div);
+  msgs.scrollTop=msgs.scrollHeight;
+  return bubble;
+}
+
+function aiShowThinking(){
+  var msgs=document.getElementById('ai-messages');
+  var div=document.createElement('div');
+  div.className='ai-msg ai';
+  div.id='ai-thinking-msg';
+
+  var av=document.createElement('div');
+  av.className='ai-msg-av';
+  av.textContent='AI';
+
+  var bubble=document.createElement('div');
+  bubble.className='ai-msg-bubble';
+  bubble.innerHTML='<div class="ai-thinking"><span></span><span></span><span></span></div>';
+
+  div.appendChild(av);
+  div.appendChild(bubble);
+  msgs.appendChild(div);
+  msgs.scrollTop=msgs.scrollHeight;
+}
+
+function aiRemoveThinking(){
+  var el=document.getElementById('ai-thinking-msg');
+  if(el)el.remove();
+}
+
+function aiSetStatus(thinking){
+  var dot=document.getElementById('ai-status-dot');
+  var txt=document.getElementById('ai-status-txt');
+  var btn=document.getElementById('ai-send-btn');
+  if(thinking){
+    if(dot)dot.className='ai-status-dot thinking';
+    if(txt)txt.textContent='Analyseren...';
+    if(btn)btn.disabled=true;
+  } else {
+    if(dot)dot.className='ai-status-dot';
+    if(txt)txt.textContent='Online';
+    if(btn)btn.disabled=false;
+  }
+}
+
+async function aiSend(){
+  if(aiTyping)return;
+  var input=document.getElementById('ai-input');
+  var text=(input.value||'').trim();
+  if(!text)return;
+
+  input.value='';
+  input.style.height='auto';
+  aiTyping=true;
+  aiSetStatus(true);
+
+  aiHistory.push({role:'user',content:text});
+  aiAddMessage('user',text);
+  aiShowThinking();
+
+  try{
+    var resp=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        model:'claude-sonnet-4-20250514',
+        max_tokens:1000,
+        system:aiGetSystemPrompt(),
+        messages:aiHistory
+      })
+    });
+    var data=await resp.json();
+    var reply=(data.content&&data.content[0]&&data.content[0].text)||'Sorry, er ging iets mis. Probeer het opnieuw.';
+    aiRemoveThinking();
+    aiHistory.push({role:'assistant',content:reply});
+    aiAddMessage('ai',reply);
+  } catch(e){
+    aiRemoveThinking();
+    aiAddMessage('ai','**Connection error** — Could not reach the AI. Check your internet connection and try again.');
+  }
+
+  aiTyping=false;
+  aiSetStatus(false);
+}
+
+function aiQuickPrompt(btn){
+  var label=btn.querySelector('.ai-prompt-label');
+  var full=btn.textContent.replace(label?label.textContent:'','').trim();
+  var input=document.getElementById('ai-input');
+  if(input){input.value=full;input.style.height='auto';input.style.height=Math.min(input.scrollHeight,120)+'px';input.focus();}
+}
+
+function aiClear(){
+  aiHistory=[];
+  var msgs=document.getElementById('ai-messages');
+  msgs.innerHTML='<div class="ai-empty" id="ai-empty"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg><div class="ai-empty-title">Ask the AI Analyst anything</div><div class="ai-empty-sub">Use the quick prompts on the left or type your own question about coins, setups, market structure, on-chain data or macro.</div></div>';
+  var clearBtn=document.getElementById('ai-clear-btn');
+  if(clearBtn)clearBtn.style.display='none';
 }
 </script>
 
