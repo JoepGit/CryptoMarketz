@@ -2595,7 +2595,7 @@ async function aiSend(){
   aiShowThinking();
 
   try{
-    var resp=await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyAWPHDcSx-_bSDdhXOwgN8_vilVYmhsNEw,{
+    var resp=await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=JOUW_GEMINI_API_KEY_HIER',{
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify({
