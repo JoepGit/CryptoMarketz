@@ -594,6 +594,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--cream);ov
     <ul class="sbn">
       <li><a class="active" onclick="goPage('dashboard',this)">
         <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>Dashboard</a></li>
+      <li><a onclick="goPage('guide',this)">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Platform Guide</a></li>
       <li><a onclick="goPage('markets',this)">
         <svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>Crypto Markets</a></li>
       <li><a onclick="goPage('heatmap',this)">
@@ -617,7 +619,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--cream);ov
     <div class="sb-sec">Tools</div>
     <ul class="sbn">
       <li><a onclick="goPage('ai',this)">
-        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>AI Analyst <span style="font-family:'Orbitron',monospace;font-size:6px;background:linear-gradient(135deg,#b8860b,#d4af37);color:#08070a;padding:2px 5px;border-radius:2px;margin-left:2px;font-weight:700;letter-spacing:.05em">AI</span></a></li>
+        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>AI Analyst <span style="font-family:'Orbitron',monospace;font-size:6px;background:linear-gradient(135deg,#b8860b,#d4af37);color:#08070a;padding:2px 5px;border-radius:2px;margin-left:2px;font-weight:700;letter-spacing:.05em">AI</span><span class="sb-lk" id="lk-ai">🔒</span></a></li>
       <li><a onclick="goPage('portfolio',this)">
         <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>Portfolio<span class="sb-lk" id="lk-portfolio">🔒</span></a></li>
       <li><a onclick="goPage('whales',this)">
@@ -668,174 +670,401 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--cream);ov
         <div class="card tz"><div class="tz-city">Hong Kong</div><div class="tz-time" id="tz-hk">—</div><div class="tz-st" id="tzs-hk">—</div></div>
       </div>
 
-      <!-- Feature Showcase -->
-      <div class="card fsh" id="fsh-card">
-        <!-- Header -->
-        <div class="fsh-head">
-          <div class="fsh-brand">
-            <span class="fsh-title">CRYPTOMARKETZ</span>
-            <span class="fsh-sep">—</span>
-            <span class="fsh-sub">PLATFORM GUIDE</span>
-          </div>
-          <div class="fsh-badges">
-            <span class="fsh-badge free">FREE</span>
-            <span class="fsh-badge pro">PRO</span>
-          </div>
-        </div>
+      <!-- ↓ Platform Guide moved to its own sidebar page -->
+      <!-- Platform Guide moved to sidebar page -->
 
-        <!-- Body: nav + content -->
-        <div class="fsh-body">
-          <!-- Left nav -->
-          <nav class="fsh-nav" id="fsh-nav">
-            <button class="fsh-navbtn on" data-fsh="0" type="button">
-              <span class="fsh-navbtn-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></span>
-              <div><div class="fsh-navbtn-label">Crypto Markets</div><div class="fsh-navbtn-tier free">FREE</div></div>
-            </button>
-            <button class="fsh-navbtn" data-fsh="1" type="button">
-              <span class="fsh-navbtn-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span>
-              <div><div class="fsh-navbtn-label">Heatmap &amp; Liquidity</div><div class="fsh-navbtn-tier free">FREE</div></div>
-            </button>
-            <button class="fsh-navbtn" data-fsh="2" type="button">
-              <span class="fsh-navbtn-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="19" x2="20" y2="19"/><line x1="7" y1="17" x2="7" y2="8"/><line x1="12" y1="17" x2="12" y2="5"/><line x1="17" y1="17" x2="17" y2="10"/></svg></span>
-              <div><div class="fsh-navbtn-label">BTC Chart</div><div class="fsh-navbtn-tier free">FREE</div></div>
-            </button>
-            <button class="fsh-navbtn" data-fsh="3" type="button">
-              <span class="fsh-navbtn-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/></svg></span>
-              <div><div class="fsh-navbtn-label">Crypto News</div><div class="fsh-navbtn-tier free">FREE</div></div>
-            </button>
-            <button class="fsh-navbtn" data-fsh="4" type="button">
-              <span class="fsh-navbtn-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
-              <div><div class="fsh-navbtn-label">Trading Signals</div><div class="fsh-navbtn-tier pro">PRO</div></div>
-            </button>
-            <button class="fsh-navbtn" data-fsh="5" type="button">
-              <span class="fsh-navbtn-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span>
-              <div><div class="fsh-navbtn-label">Market Analysis</div><div class="fsh-navbtn-tier pro">PRO</div></div>
-            </button>
-            <button class="fsh-navbtn" data-fsh="6" type="button">
-              <span class="fsh-navbtn-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
-              <div><div class="fsh-navbtn-label">Risk Management</div><div class="fsh-navbtn-tier pro">PRO</div></div>
-            </button>
-            <button class="fsh-navbtn" data-fsh="7" type="button">
-              <span class="fsh-navbtn-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>
-              <div><div class="fsh-navbtn-label">Education &amp; Books</div><div class="fsh-navbtn-tier pro">PRO</div></div>
-            </button>
-            <button class="fsh-navbtn" data-fsh="8" type="button">
-              <span class="fsh-navbtn-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></span>
-              <div><div class="fsh-navbtn-label">Portfolio</div><div class="fsh-navbtn-tier pro">PRO</div></div>
-            </button>
-            <button class="fsh-navbtn" data-fsh="9" type="button">
-              <span class="fsh-navbtn-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></span>
-              <div><div class="fsh-navbtn-label">Whale Tracker</div><div class="fsh-navbtn-tier pro">PRO</div></div>
-            </button>
+    </div><!-- /page-dashboard -->
+
+    <!-- ═══ CRYPTO MARKETS ═══ -->
+    <div class="page" id="page-markets">
+      <div class="ph"><h1>Crypto Markets</h1><p>Top 100 by market cap · refreshes every 90s</p></div>
+      <div class="card" style="overflow:hidden">
+        <div class="mkt-hdr"><span>#</span><span>Asset</span><span>Price</span><span>24h %</span><span>Mkt Cap</span><span>Volume</span></div>
+        <div id="mkt-rows"><div class="mkt-mt">Loading...</div></div>
+      </div>
+    </div>
+
+    <!-- ═══ PLATFORM GUIDE ═══ -->
+    <div class="page" id="page-guide">
+      <div class="ph"><h1>Platform Guide</h1><p>Everything included in your CryptoMarketz membership</p></div>
+      <div class="card" style="overflow:hidden">
+        <div style="display:flex;min-height:640px">
+
+          <!-- LEFT NAV -->
+          <nav style="width:240px;border-right:1px solid var(--bdr);flex-shrink:0;padding:8px 0;overflow-y:auto" id="fsh-nav">
+            <div style="padding:10px 16px 6px;font-family:'Orbitron',monospace;font-size:7px;letter-spacing:.2em;color:var(--sub);opacity:.5">FREE</div>
+            <button class="fsh-navbtn on" data-fsh="0" type="button"><span class="fsh-navbtn-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></span><div><div class="fsh-navbtn-label">Crypto Markets</div><div class="fsh-navbtn-tier free">FREE</div></div></button>
+            <button class="fsh-navbtn" data-fsh="1" type="button"><span class="fsh-navbtn-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span><div><div class="fsh-navbtn-label">Heatmap &amp; Liquidity</div><div class="fsh-navbtn-tier free">FREE</div></div></button>
+            <button class="fsh-navbtn" data-fsh="2" type="button"><span class="fsh-navbtn-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="19" x2="20" y2="19"/><line x1="7" y1="17" x2="7" y2="8"/><line x1="12" y1="17" x2="12" y2="5"/><line x1="17" y1="17" x2="17" y2="10"/></svg></span><div><div class="fsh-navbtn-label">BTC Chart</div><div class="fsh-navbtn-tier free">FREE</div></div></button>
+            <button class="fsh-navbtn" data-fsh="3" type="button"><span class="fsh-navbtn-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/></svg></span><div><div class="fsh-navbtn-label">Crypto News</div><div class="fsh-navbtn-tier free">FREE</div></div></button>
+            <div style="padding:10px 16px 6px;font-family:'Orbitron',monospace;font-size:7px;letter-spacing:.2em;color:var(--sub);opacity:.5;margin-top:4px">PRO</div>
+            <button class="fsh-navbtn" data-fsh="4" type="button"><span class="fsh-navbtn-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><div><div class="fsh-navbtn-label">Trading Signals</div><div class="fsh-navbtn-tier pro">PRO</div></div></button>
+            <button class="fsh-navbtn" data-fsh="5" type="button"><span class="fsh-navbtn-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span><div><div class="fsh-navbtn-label">Market Analysis</div><div class="fsh-navbtn-tier pro">PRO</div></div></button>
+            <button class="fsh-navbtn" data-fsh="6" type="button"><span class="fsh-navbtn-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span><div><div class="fsh-navbtn-label">Risk Management</div><div class="fsh-navbtn-tier pro">PRO</div></div></button>
+            <button class="fsh-navbtn" data-fsh="7" type="button"><span class="fsh-navbtn-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span><div><div class="fsh-navbtn-label">Education &amp; Books</div><div class="fsh-navbtn-tier pro">PRO</div></div></button>
+            <button class="fsh-navbtn" data-fsh="8" type="button"><span class="fsh-navbtn-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></span><div><div class="fsh-navbtn-label">Portfolio</div><div class="fsh-navbtn-tier pro">PRO</div></div></button>
+            <button class="fsh-navbtn" data-fsh="9" type="button"><span class="fsh-navbtn-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></span><div><div class="fsh-navbtn-label">Whale Tracker</div><div class="fsh-navbtn-tier pro">PRO</div></div></button>
+            <button class="fsh-navbtn" data-fsh="10" type="button"><span class="fsh-navbtn-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><div><div class="fsh-navbtn-label">AI Analyst <span style="font-family:'Orbitron',monospace;font-size:6px;background:linear-gradient(135deg,#b8860b,#d4af37);color:#08070a;padding:1px 4px;border-radius:2px;font-weight:700">AI</span></div><div class="fsh-navbtn-tier pro">PRO</div></div></button>
           </nav>
 
-          <!-- Content panels -->
-          <div class="fsh-content" id="fsh-content">
+          <!-- RIGHT PANELS -->
+          <div class="fsh-content" id="fsh-content" style="flex:1">
 
+            <!-- 0: CRYPTO MARKETS -->
             <div class="fsh-panel on" data-fsh-panel="0">
-              <div class="fsh-panel-tag free">LIVE DATA</div>
-              <div class="fsh-panel-h">Crypto Markets</div>
-              <div class="fsh-panel-sub">Real-time price intelligence</div>
-              <div class="fsh-panel-p">Track the top 100 coins live — price, market cap, volume, and 24h movement in one clean overview. No noise, just signal.</div>
-              <div class="fsh-pills"><span class="fsh-pill">Prices</span><span class="fsh-pill">Market Cap</span><span class="fsh-pill">Top Movers</span></div>
-              <div class="fsh-corner-badge free">FREE</div>
-              <div class="fsh-deco"><svg width="110" height="44" viewBox="0 0 110 44"><polyline points="0,38 22,32 44,24 66,16 88,10 110,4" fill="none" stroke="#d4af37" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;height:100%">
+                <div style="padding:48px 44px;display:flex;flex-direction:column;justify-content:center">
+                  <div class="fsh-panel-tag free">FREE · LIVE DATA</div>
+                  <div class="fsh-panel-h" style="font-size:36px;margin-bottom:8px">Crypto Markets</div>
+                  <div style="font-size:14px;color:var(--gold);margin-bottom:16px;letter-spacing:.02em">Real-time prices for 100+ coins</div>
+                  <div style="font-size:13px;color:var(--sub);line-height:1.8;margin-bottom:24px">Track price, market cap, volume and 24h movement for the top 100 coins — all in one clean live overview. No noise, just signal.</div>
+                  <div style="display:flex;gap:16px;margin-bottom:28px">
+                    <div style="text-align:center"><div style="font-family:'Orbitron',monospace;font-size:22px;font-weight:700;color:var(--cream)">100+</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);letter-spacing:.12em;margin-top:2px">COINS TRACKED</div></div>
+                    <div style="width:1px;background:var(--bdr)"></div>
+                    <div style="text-align:center"><div style="font-family:'Orbitron',monospace;font-size:22px;font-weight:700;color:var(--cream)">90s</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);letter-spacing:.12em;margin-top:2px">REFRESH RATE</div></div>
+                    <div style="width:1px;background:var(--bdr)"></div>
+                    <div style="text-align:center"><div style="font-family:'Orbitron',monospace;font-size:22px;font-weight:700;color:#4ade80">FREE</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);letter-spacing:.12em;margin-top:2px">NO CODE NEEDED</div></div>
+                  </div>
+                  <button onclick="goPage('markets',null)" style="align-self:flex-start;background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-family:'Orbitron',monospace;font-size:9px;letter-spacing:.1em;padding:10px 22px;border-radius:7px;cursor:pointer">OPEN MARKETS →</button>
+                </div>
+                <div style="border-left:1px solid var(--bdr);padding:24px 20px;display:flex;flex-direction:column;gap:6px;justify-content:center;background:rgba(0,0,0,.15)">
+                  <div style="font-family:'Orbitron',monospace;font-size:7.5px;color:var(--sub);letter-spacing:.14em;margin-bottom:6px;padding-bottom:8px;border-bottom:1px solid var(--bdr)">LIVE PREVIEW</div>
+                  <div style="display:grid;grid-template-columns:.3fr 1.4fr 1fr .7fr;gap:4px;font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);padding:4px 0;letter-spacing:.08em"><span>#</span><span>ASSET</span><span>PRICE</span><span>24H</span></div>
+                  <div style="display:grid;grid-template-columns:.3fr 1.4fr 1fr .7fr;gap:4px;align-items:center;padding:7px 0;border-bottom:1px solid rgba(212,175,55,.04)"><span style="font-family:'Orbitron',monospace;font-size:8px;color:var(--sub)">1</span><div><div style="font-size:11px;font-weight:600">Bitcoin</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub)">BTC</div></div><span style="font-family:'Orbitron',monospace;font-size:10px;font-weight:600">$72,384</span><span style="font-family:'Orbitron',monospace;font-size:8px;font-weight:700;color:#4ade80">+1.2%</span></div>
+                  <div style="display:grid;grid-template-columns:.3fr 1.4fr 1fr .7fr;gap:4px;align-items:center;padding:7px 0;border-bottom:1px solid rgba(212,175,55,.04)"><span style="font-family:'Orbitron',monospace;font-size:8px;color:var(--sub)">2</span><div><div style="font-size:11px;font-weight:600">Ethereum</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub)">ETH</div></div><span style="font-family:'Orbitron',monospace;font-size:10px;font-weight:600">$3,842</span><span style="font-family:'Orbitron',monospace;font-size:8px;font-weight:700;color:#4ade80">+0.8%</span></div>
+                  <div style="display:grid;grid-template-columns:.3fr 1.4fr 1fr .7fr;gap:4px;align-items:center;padding:7px 0;border-bottom:1px solid rgba(212,175,55,.04)"><span style="font-family:'Orbitron',monospace;font-size:8px;color:var(--sub)">3</span><div><div style="font-size:11px;font-weight:600">Solana</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub)">SOL</div></div><span style="font-family:'Orbitron',monospace;font-size:10px;font-weight:600">$162</span><span style="font-family:'Orbitron',monospace;font-size:8px;font-weight:700;color:#f43f5e">-0.4%</span></div>
+                  <div style="display:grid;grid-template-columns:.3fr 1.4fr 1fr .7fr;gap:4px;align-items:center;padding:7px 0;border-bottom:1px solid rgba(212,175,55,.04)"><span style="font-family:'Orbitron',monospace;font-size:8px;color:var(--sub)">4</span><div><div style="font-size:11px;font-weight:600">BNB</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub)">BNB</div></div><span style="font-family:'Orbitron',monospace;font-size:10px;font-weight:600">$421</span><span style="font-family:'Orbitron',monospace;font-size:8px;font-weight:700;color:#4ade80">+2.1%</span></div>
+                  <div style="display:grid;grid-template-columns:.3fr 1.4fr 1fr .7fr;gap:4px;align-items:center;padding:7px 0"><span style="font-family:'Orbitron',monospace;font-size:8px;color:var(--sub)">5</span><div><div style="font-size:11px;font-weight:600">XRP</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub)">XRP</div></div><span style="font-family:'Orbitron',monospace;font-size:10px;font-weight:600">$0.54</span><span style="font-family:'Orbitron',monospace;font-size:8px;font-weight:700;color:#4ade80">+3.4%</span></div>
+                  <div style="margin-top:8px;text-align:center;font-family:'Orbitron',monospace;font-size:7.5px;color:var(--sub);opacity:.5">+95 more coins live</div>
+                </div>
+              </div>
             </div>
 
+            <!-- 1: HEATMAP -->
             <div class="fsh-panel" data-fsh-panel="1">
-              <div class="fsh-panel-tag free">REAL-TIME</div>
-              <div class="fsh-panel-h">Heatmap &amp; Liquidity</div>
-              <div class="fsh-panel-sub">Visualize market rotation instantly</div>
-              <div class="fsh-panel-p">Spot volume flows, fear &amp; greed, and top daily gainers at a glance. Know where the money is moving before the crowd catches on.</div>
-              <div class="fsh-pills"><span class="fsh-pill">Volume Flows</span><span class="fsh-pill">Fear &amp; Greed</span><span class="fsh-pill">Top Gainers</span></div>
-              <div class="fsh-corner-badge free">FREE</div>
-              <div class="fsh-deco"><svg width="110" height="44" viewBox="0 0 110 44"><rect x="0" y="10" width="22" height="34" rx="2" fill="#4ade80" opacity=".4"/><rect x="26" y="4" width="22" height="40" rx="2" fill="#f43f5e" opacity=".35"/><rect x="52" y="14" width="22" height="30" rx="2" fill="#4ade80" opacity=".45"/><rect x="78" y="6" width="22" height="38" rx="2" fill="#4ade80" opacity=".38"/></svg></div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;height:100%">
+                <div style="padding:48px 44px;display:flex;flex-direction:column;justify-content:center">
+                  <div class="fsh-panel-tag free">FREE · VISUAL</div>
+                  <div class="fsh-panel-h" style="font-size:36px;margin-bottom:8px">Heatmap &amp; Liquidity</div>
+                  <div style="font-size:14px;color:var(--gold);margin-bottom:16px">See where the money is moving</div>
+                  <div style="font-size:13px;color:var(--sub);line-height:1.8;margin-bottom:24px">Spot sector rotation at a glance. Top 50 coins color-coded by 24h performance, live Fear &amp; Greed index, volume flows and today's biggest gainers.</div>
+                  <div style="display:flex;gap:16px;margin-bottom:28px">
+                    <div style="text-align:center"><div style="font-family:'Orbitron',monospace;font-size:22px;font-weight:700;color:var(--cream)">50</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);letter-spacing:.12em;margin-top:2px">COINS MAPPED</div></div>
+                    <div style="width:1px;background:var(--bdr)"></div>
+                    <div style="text-align:center"><div style="font-family:'Orbitron',monospace;font-size:22px;font-weight:700;color:var(--cream)">4</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);letter-spacing:.12em;margin-top:2px">LIVE WIDGETS</div></div>
+                    <div style="width:1px;background:var(--bdr)"></div>
+                    <div style="text-align:center"><div style="font-family:'Orbitron',monospace;font-size:22px;font-weight:700;color:#4ade80">FREE</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);letter-spacing:.12em;margin-top:2px">INCLUDED</div></div>
+                  </div>
+                  <button onclick="goPage('heatmap',null)" style="align-self:flex-start;background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-family:'Orbitron',monospace;font-size:9px;letter-spacing:.1em;padding:10px 22px;border-radius:7px;cursor:pointer">OPEN HEATMAP →</button>
+                </div>
+                <div style="border-left:1px solid var(--bdr);padding:24px 20px;display:flex;flex-direction:column;justify-content:center;background:rgba(0,0,0,.15)">
+                  <div style="font-family:'Orbitron',monospace;font-size:7.5px;color:var(--sub);letter-spacing:.14em;margin-bottom:12px">HEATMAP PREVIEW</div>
+                  <div style="display:flex;flex-wrap:wrap;gap:3px;margin-bottom:14px">
+                    <div style="width:52px;height:36px;border-radius:4px;background:rgba(74,222,128,.55);display:flex;align-items:center;justify-content:center;flex-direction:column"><span style="font-family:'Orbitron',monospace;font-size:7px;font-weight:700;color:#fff">BTC</span><span style="font-family:'Orbitron',monospace;font-size:8px;font-weight:800;color:#fff">+1.2%</span></div>
+                    <div style="width:44px;height:36px;border-radius:4px;background:rgba(74,222,128,.4);display:flex;align-items:center;justify-content:center;flex-direction:column"><span style="font-family:'Orbitron',monospace;font-size:7px;font-weight:700;color:#fff">ETH</span><span style="font-family:'Orbitron',monospace;font-size:8px;font-weight:800;color:#fff">+0.8%</span></div>
+                    <div style="width:38px;height:36px;border-radius:4px;background:rgba(244,63,94,.45);display:flex;align-items:center;justify-content:center;flex-direction:column"><span style="font-family:'Orbitron',monospace;font-size:7px;font-weight:700;color:#fff">SOL</span><span style="font-family:'Orbitron',monospace;font-size:8px;font-weight:800;color:#fff">-0.4%</span></div>
+                    <div style="width:34px;height:36px;border-radius:4px;background:rgba(74,222,128,.6);display:flex;align-items:center;justify-content:center;flex-direction:column"><span style="font-family:'Orbitron',monospace;font-size:7px;font-weight:700;color:#fff">BNB</span><span style="font-family:'Orbitron',monospace;font-size:8px;font-weight:800;color:#fff">+2.1%</span></div>
+                    <div style="width:30px;height:36px;border-radius:4px;background:rgba(74,222,128,.35);display:flex;align-items:center;justify-content:center;flex-direction:column"><span style="font-family:'Orbitron',monospace;font-size:7px;font-weight:700;color:#fff">XRP</span><span style="font-family:'Orbitron',monospace;font-size:8px;font-weight:800;color:#fff">+3%</span></div>
+                    <div style="width:28px;height:36px;border-radius:4px;background:rgba(244,63,94,.3);display:flex;align-items:center;justify-content:center;flex-direction:column"><span style="font-family:'Orbitron',monospace;font-size:7px;font-weight:700;color:#fff">ADA</span><span style="font-family:'Orbitron',monospace;font-size:8px;font-weight:800;color:#fff">-1%</span></div>
+                    <div style="width:26px;height:36px;border-radius:4px;background:rgba(74,222,128,.7);display:flex;align-items:center;justify-content:center;flex-direction:column"><span style="font-family:'Orbitron',monospace;font-size:7px;font-weight:700;color:#fff">DOT</span><span style="font-family:'Orbitron',monospace;font-size:8px;font-weight:800;color:#fff">+5%</span></div>
+                    <div style="width:24px;height:36px;border-radius:4px;background:rgba(244,63,94,.55);display:flex;align-items:center;justify-content:center;flex-direction:column"><span style="font-family:'Orbitron',monospace;font-size:6px;font-weight:700;color:#fff">AVAX</span><span style="font-family:'Orbitron',monospace;font-size:7px;font-weight:800;color:#fff">-2%</span></div>
+                  </div>
+                  <div style="background:rgba(212,175,55,.05);border:1px solid var(--bdr);border-radius:8px;padding:10px 12px">
+                    <div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);letter-spacing:.12em;margin-bottom:6px">FEAR &amp; GREED INDEX</div>
+                    <div style="display:flex;align-items:center;gap:8px"><span style="font-family:'Orbitron',monospace;font-size:20px;font-weight:700;color:#ff8c42">38</span><span style="font-family:'Orbitron',monospace;font-size:9px;color:#ff8c42">FEAR</span></div>
+                    <div style="margin-top:6px;height:4px;border-radius:999px;background:linear-gradient(90deg,#f43f5e,#d4af37,#4ade80);position:relative"><div style="position:absolute;top:-3px;left:35%;width:3px;height:10px;background:#fff;border-radius:2px"></div></div>
+                  </div>
+                </div>
+              </div>
             </div>
 
+            <!-- 2: BTC CHART -->
             <div class="fsh-panel" data-fsh-panel="2">
-              <div class="fsh-panel-tag free">LIVE DATA</div>
-              <div class="fsh-panel-h">BTC Chart</div>
-              <div class="fsh-panel-sub">Interactive TradingView integration</div>
-              <div class="fsh-panel-p">Draw levels, switch timeframes, and plan your trades directly on the platform. A full charting suite — without leaving the dashboard.</div>
-              <div class="fsh-pills"><span class="fsh-pill">Draw Levels</span><span class="fsh-pill">Multi-Timeframe</span><span class="fsh-pill">Plan Trades</span></div>
-              <div class="fsh-corner-badge free">FREE</div>
-              <div class="fsh-deco"><svg width="110" height="44" viewBox="0 0 110 44"><polyline points="0,34 18,28 36,20 54,28 72,14 90,8 110,4" fill="none" stroke="#d4af37" stroke-width="1.5" stroke-linecap="round"/><line x1="54" y1="0" x2="54" y2="44" stroke="#d4af37" stroke-width="0.6" stroke-dasharray="3,3" opacity=".4"/></svg></div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;height:100%">
+                <div style="padding:48px 44px;display:flex;flex-direction:column;justify-content:center">
+                  <div class="fsh-panel-tag free">FREE · CHARTING</div>
+                  <div class="fsh-panel-h" style="font-size:36px;margin-bottom:8px">BTC Chart</div>
+                  <div style="font-size:14px;color:var(--gold);margin-bottom:16px">Full TradingView integration</div>
+                  <div style="font-size:13px;color:var(--sub);line-height:1.8;margin-bottom:24px">Draw support &amp; resistance, switch timeframes from 1m to 1W, use all TradingView indicators — without ever leaving CryptoMarketz.</div>
+                  <div style="display:flex;gap:16px;margin-bottom:28px">
+                    <div style="text-align:center"><div style="font-family:'Orbitron',monospace;font-size:22px;font-weight:700;color:var(--cream)">100+</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);letter-spacing:.12em;margin-top:2px">INDICATORS</div></div>
+                    <div style="width:1px;background:var(--bdr)"></div>
+                    <div style="text-align:center"><div style="font-family:'Orbitron',monospace;font-size:22px;font-weight:700;color:var(--cream)">8+</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);letter-spacing:.12em;margin-top:2px">TIMEFRAMES</div></div>
+                    <div style="width:1px;background:var(--bdr)"></div>
+                    <div style="text-align:center"><div style="font-family:'Orbitron',monospace;font-size:22px;font-weight:700;color:#4ade80">FREE</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);letter-spacing:.12em;margin-top:2px">NO ACCOUNT</div></div>
+                  </div>
+                  <button onclick="goPage('tvbtc',null)" style="align-self:flex-start;background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-family:'Orbitron',monospace;font-size:9px;letter-spacing:.1em;padding:10px 22px;border-radius:7px;cursor:pointer">OPEN CHART →</button>
+                </div>
+                <div style="border-left:1px solid var(--bdr);padding:24px 20px;display:flex;flex-direction:column;justify-content:center;background:rgba(0,0,0,.15)">
+                  <div style="font-family:'Orbitron',monospace;font-size:7.5px;color:var(--sub);letter-spacing:.14em;margin-bottom:12px">CHART PREVIEW</div>
+                  <svg viewBox="0 0 280 160" style="width:100%;border:1px solid var(--bdr);border-radius:6px;background:#0a080c">
+                    <line x1="0" y1="140" x2="280" y2="140" stroke="rgba(212,175,55,.1)" stroke-width="1"/>
+                    <line x1="0" y1="100" x2="280" y2="100" stroke="rgba(212,175,55,.06)" stroke-width="1" stroke-dasharray="3,3"/>
+                    <line x1="0" y1="60" x2="280" y2="60" stroke="rgba(212,175,55,.06)" stroke-width="1" stroke-dasharray="3,3"/>
+                    <polyline points="0,120 20,115 40,108 60,118 80,100 100,88 120,95 140,78 160,62 180,70 200,55 220,48 240,58 260,44 280,36" fill="none" stroke="#d4af37" stroke-width="1.5" stroke-linecap="round"/>
+                    <polyline points="0,120 20,115 40,108 60,118 80,100 100,88 120,95 140,78 160,62 180,70 200,55 220,48 240,58 260,44 280,36 280,140 0,140" fill="url(#cg)" opacity=".3"/>
+                    <defs><linearGradient id="cg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#d4af37" stop-opacity=".5"/><stop offset="100%" stop-color="#d4af37" stop-opacity="0"/></linearGradient></defs>
+                    <line x1="180" y1="20" x2="180" y2="140" stroke="rgba(74,222,128,.3)" stroke-width="1" stroke-dasharray="3,3"/>
+                    <text x="182" y="28" font-family="monospace" font-size="8" fill="rgba(74,222,128,.7)">Support</text>
+                    <rect x="200" y="8" width="70" height="20" rx="3" fill="rgba(212,175,55,.1)" stroke="rgba(212,175,55,.2)" stroke-width="1"/>
+                    <text x="208" y="21" font-family="monospace" font-size="8" fill="#d4af37">$72,384</text>
+                  </svg>
+                  <div style="display:flex;gap:6px;margin-top:10px;flex-wrap:wrap">
+                    <span style="font-family:'Orbitron',monospace;font-size:7px;padding:3px 8px;border:1px solid var(--bdr);color:var(--sub);border-radius:3px">1m</span>
+                    <span style="font-family:'Orbitron',monospace;font-size:7px;padding:3px 8px;border:1px solid var(--bdr);color:var(--sub);border-radius:3px">5m</span>
+                    <span style="font-family:'Orbitron',monospace;font-size:7px;padding:3px 8px;border:1px solid rgba(212,175,55,.4);color:var(--gold);border-radius:3px">1H</span>
+                    <span style="font-family:'Orbitron',monospace;font-size:7px;padding:3px 8px;border:1px solid var(--bdr);color:var(--sub);border-radius:3px">4H</span>
+                    <span style="font-family:'Orbitron',monospace;font-size:7px;padding:3px 8px;border:1px solid var(--bdr);color:var(--sub);border-radius:3px">1D</span>
+                    <span style="font-family:'Orbitron',monospace;font-size:7px;padding:3px 8px;border:1px solid var(--bdr);color:var(--sub);border-radius:3px">1W</span>
+                  </div>
+                </div>
+              </div>
             </div>
 
+            <!-- 3: CRYPTO NEWS -->
             <div class="fsh-panel" data-fsh-panel="3">
-              <div class="fsh-panel-tag free">LIVE DATA</div>
-              <div class="fsh-panel-h">Crypto News</div>
-              <div class="fsh-panel-sub">Stay informed without leaving the platform</div>
-              <div class="fsh-panel-p">A real-time news feed with the latest crypto and market updates. Curated and delivered directly on the dashboard — always one step ahead.</div>
-              <div class="fsh-pills"><span class="fsh-pill">Real-Time Feed</span><span class="fsh-pill">Market News</span><span class="fsh-pill">No Tab Switching</span></div>
-              <div class="fsh-corner-badge free">FREE</div>
-              <div class="fsh-deco"><svg width="110" height="44" viewBox="0 0 110 44"><rect x="0" y="4" width="110" height="8" rx="2" fill="#d4af37" opacity=".18"/><rect x="0" y="18" width="80" height="6" rx="2" fill="#d4af37" opacity=".12"/><rect x="0" y="30" width="95" height="6" rx="2" fill="#d4af37" opacity=".1"/></svg></div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;height:100%">
+                <div style="padding:48px 44px;display:flex;flex-direction:column;justify-content:center">
+                  <div class="fsh-panel-tag free">FREE · LIVE FEED</div>
+                  <div class="fsh-panel-h" style="font-size:36px;margin-bottom:8px">Crypto News</div>
+                  <div style="font-size:14px;color:var(--gold);margin-bottom:16px">CoinTelegraph &amp; CoinDesk live</div>
+                  <div style="font-size:13px;color:var(--sub);line-height:1.8;margin-bottom:24px">Stay ahead of the market with live news straight in your terminal. No tab-switching, no distractions — the news comes to you, updated every 5 minutes.</div>
+                  <div style="display:flex;gap:16px;margin-bottom:28px">
+                    <div style="text-align:center"><div style="font-family:'Orbitron',monospace;font-size:22px;font-weight:700;color:var(--cream)">2</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);letter-spacing:.12em;margin-top:2px">NEWS SOURCES</div></div>
+                    <div style="width:1px;background:var(--bdr)"></div>
+                    <div style="text-align:center"><div style="font-family:'Orbitron',monospace;font-size:22px;font-weight:700;color:var(--cream)">5m</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);letter-spacing:.12em;margin-top:2px">AUTO REFRESH</div></div>
+                    <div style="width:1px;background:var(--bdr)"></div>
+                    <div style="text-align:center"><div style="font-family:'Orbitron',monospace;font-size:22px;font-weight:700;color:#4ade80">FREE</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);letter-spacing:.12em;margin-top:2px">INCLUDED</div></div>
+                  </div>
+                  <button onclick="goPage('news',null)" style="align-self:flex-start;background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-family:'Orbitron',monospace;font-size:9px;letter-spacing:.1em;padding:10px 22px;border-radius:7px;cursor:pointer">OPEN NEWS →</button>
+                </div>
+                <div style="border-left:1px solid var(--bdr);padding:24px 20px;display:flex;flex-direction:column;gap:8px;justify-content:center;background:rgba(0,0,0,.15)">
+                  <div style="font-family:'Orbitron',monospace;font-size:7.5px;color:var(--sub);letter-spacing:.14em;margin-bottom:4px">LIVE FEED PREVIEW</div>
+                  <div style="padding:9px 0;border-bottom:1px solid rgba(212,175,55,.05)"><div style="font-size:11px;font-weight:500;line-height:1.4;margin-bottom:4px;color:var(--cream)">Bitcoin breaks $72K resistance as institutional buying accelerates</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub)"><span style="color:var(--gold)">CT</span> · 3m ago</div></div>
+                  <div style="padding:9px 0;border-bottom:1px solid rgba(212,175,55,.05)"><div style="font-size:11px;font-weight:500;line-height:1.4;margin-bottom:4px;color:var(--cream)">Ethereum ETF sees record $420M inflow in single day</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub)"><span style="color:var(--gold)">CD</span> · 11m ago</div></div>
+                  <div style="padding:9px 0;border-bottom:1px solid rgba(212,175,55,.05)"><div style="font-size:11px;font-weight:500;line-height:1.4;margin-bottom:4px;color:var(--cream)">Fed signals rate cut delay — crypto markets react with caution</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub)"><span style="color:var(--gold)">CT</span> · 24m ago</div></div>
+                  <div style="padding:9px 0"><div style="font-size:11px;font-weight:500;line-height:1.4;margin-bottom:4px;color:var(--cream)">Solana DeFi TVL hits all-time high of $8.2B amid altcoin surge</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub)"><span style="color:var(--gold)">CD</span> · 38m ago</div></div>
+                </div>
+              </div>
             </div>
 
+            <!-- 4: TRADING SIGNALS -->
             <div class="fsh-panel" data-fsh-panel="4">
-              <div class="fsh-panel-tag pro">MEMBERS ONLY</div>
-              <div class="fsh-panel-h">Trading Signals</div>
-              <div class="fsh-panel-sub">Live calls from the CryptoMarketz team</div>
-              <div class="fsh-panel-p">Receive entry points, take-profit targets, and stop-loss levels — sourced directly from our analysts. Precision signals, exclusive for Pro members.</div>
-              <div class="fsh-pills"><span class="fsh-pill">Entry Points</span><span class="fsh-pill">Take Profit</span><span class="fsh-pill">Stop Loss</span></div>
-              <div class="fsh-corner-badge pro">PRO</div>
-              <div class="fsh-deco"><svg width="110" height="44" viewBox="0 0 110 44"><polygon points="55,4 65,24 55,44 45,24" fill="none" stroke="#d4af37" stroke-width="1.2" opacity=".5"/><circle cx="55" cy="24" r="4" fill="#d4af37" opacity=".6"/></svg></div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;height:100%">
+                <div style="padding:48px 44px;display:flex;flex-direction:column;justify-content:center">
+                  <div class="fsh-panel-tag pro">MEMBERS ONLY</div>
+                  <div class="fsh-panel-h" style="font-size:36px;margin-bottom:8px">Trading Signals</div>
+                  <div style="font-size:14px;color:var(--gold);margin-bottom:16px">Live calls from our analysts</div>
+                  <div style="font-size:13px;color:var(--sub);line-height:1.8;margin-bottom:24px">Receive exact entry points, take-profit targets and stop-loss levels the moment our analysts post them. Never miss a setup again.</div>
+                  <div style="display:flex;gap:16px;margin-bottom:20px">
+                    <div style="text-align:center"><div style="font-family:'Orbitron',monospace;font-size:22px;font-weight:700;color:var(--gold)">340+</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);letter-spacing:.12em;margin-top:2px">SIGNALS POSTED</div></div>
+                    <div style="width:1px;background:var(--bdr)"></div>
+                    <div style="text-align:center"><div style="font-family:'Orbitron',monospace;font-size:22px;font-weight:700;color:#4ade80">74%</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);letter-spacing:.12em;margin-top:2px">WIN RATE</div></div>
+                    <div style="width:1px;background:var(--bdr)"></div>
+                    <div style="text-align:center"><div style="font-family:'Orbitron',monospace;font-size:22px;font-weight:700;color:#4ade80">+31%</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);letter-spacing:.12em;margin-top:2px">AVG MONTHLY</div></div>
+                  </div>
+                  <button onclick="goPage('pricing',null)" style="align-self:flex-start;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#08070a;border:none;font-family:'Orbitron',monospace;font-size:9px;letter-spacing:.1em;padding:10px 22px;border-radius:7px;cursor:pointer;font-weight:700">UNLOCK PRO →</button>
+                </div>
+                <div style="border-left:1px solid var(--bdr);padding:24px 20px;display:flex;flex-direction:column;gap:8px;justify-content:center;background:rgba(0,0,0,.15)">
+                  <div style="font-family:'Orbitron',monospace;font-size:7.5px;color:var(--sub);letter-spacing:.14em;margin-bottom:4px">SIGNAL PREVIEW</div>
+                  <div style="background:rgba(74,222,128,.05);border:1px solid rgba(74,222,128,.2);border-radius:8px;padding:12px">
+                    <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px"><span style="font-family:'Orbitron',monospace;font-size:14px;font-weight:900">BTC/USD</span><span style="font-family:'Orbitron',monospace;font-size:8px;padding:3px 8px;border-radius:3px;background:rgba(74,222,128,.1);color:#4ade80;font-weight:700">BUY</span></div>
+                    <div style="display:flex;justify-content:space-between;font-family:'Orbitron',monospace;font-size:9px;padding:5px 0;border-bottom:1px solid rgba(74,222,128,.1)"><span style="color:var(--sub)">ENTRY</span><span>$71,200</span></div>
+                    <div style="display:flex;justify-content:space-between;font-family:'Orbitron',monospace;font-size:9px;padding:5px 0;border-bottom:1px solid rgba(74,222,128,.1)"><span style="color:var(--sub)">TAKE PROFIT</span><span style="color:#4ade80">$76,500</span></div>
+                    <div style="display:flex;justify-content:space-between;font-family:'Orbitron',monospace;font-size:9px;padding:5px 0"><span style="color:var(--sub)">STOP LOSS</span><span style="color:#f43f5e">$69,800</span></div>
+                  </div>
+                  <div style="background:rgba(212,175,55,.05);border:1px solid rgba(212,175,55,.15);border-radius:8px;padding:10px;text-align:center">
+                    <div style="font-family:'Orbitron',monospace;font-size:8px;color:var(--sub);letter-spacing:.1em;margin-bottom:4px">RISK / REWARD</div>
+                    <div style="font-family:'Orbitron',monospace;font-size:20px;font-weight:700;color:var(--gold)">1 : 3.8</div>
+                  </div>
+                </div>
+              </div>
             </div>
 
+            <!-- 5: MARKET ANALYSIS -->
             <div class="fsh-panel" data-fsh-panel="5">
-              <div class="fsh-panel-tag pro">MEMBERS ONLY</div>
-              <div class="fsh-panel-h">Market Analysis</div>
-              <div class="fsh-panel-sub">Deep-dive written by the team</div>
-              <div class="fsh-panel-p">In-depth breakdowns of key market levels and structure. Written by our analysts so you have the context that matters — exclusive for members.</div>
-              <div class="fsh-pills"><span class="fsh-pill">Key Levels</span><span class="fsh-pill">Market Structure</span><span class="fsh-pill">Written Analysis</span></div>
-              <div class="fsh-corner-badge pro">PRO</div>
-              <div class="fsh-deco"><svg width="110" height="44" viewBox="0 0 110 44"><line x1="0" y1="38" x2="110" y2="38" stroke="#d4af37" stroke-width="0.8" opacity=".3"/><line x1="20" y1="38" x2="20" y2="16" stroke="#d4af37" stroke-width="6" stroke-linecap="round" opacity=".35"/><line x1="46" y1="38" x2="46" y2="4" stroke="#d4af37" stroke-width="6" stroke-linecap="round" opacity=".5"/><line x1="72" y1="38" x2="72" y2="22" stroke="#d4af37" stroke-width="6" stroke-linecap="round" opacity=".3"/><line x1="98" y1="38" x2="98" y2="10" stroke="#d4af37" stroke-width="6" stroke-linecap="round" opacity=".45"/></svg></div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;height:100%">
+                <div style="padding:48px 44px;display:flex;flex-direction:column;justify-content:center">
+                  <div class="fsh-panel-tag pro">MEMBERS ONLY</div>
+                  <div class="fsh-panel-h" style="font-size:36px;margin-bottom:8px">Market Analysis</div>
+                  <div style="font-size:14px;color:var(--gold);margin-bottom:16px">Deep-dives written by our team</div>
+                  <div style="font-size:13px;color:var(--sub);line-height:1.8;margin-bottom:24px">Weekly breakdowns of key levels, market structure and what to watch next. Written by experienced analysts — so you always know the bigger picture before you trade.</div>
+                  <div style="display:flex;gap:16px;margin-bottom:20px">
+                    <div style="text-align:center"><div style="font-family:'Orbitron',monospace;font-size:22px;font-weight:700;color:var(--gold)">Weekly</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);letter-spacing:.12em;margin-top:2px">UPDATES</div></div>
+                    <div style="width:1px;background:var(--bdr)"></div>
+                    <div style="text-align:center"><div style="font-family:'Orbitron',monospace;font-size:22px;font-weight:700;color:var(--cream)">BTC</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);letter-spacing:.12em;margin-top:2px">ETH · ALTS</div></div>
+                    <div style="width:1px;background:var(--bdr)"></div>
+                    <div style="text-align:center"><div style="font-family:'Orbitron',monospace;font-size:22px;font-weight:700;color:var(--gold)">PRO</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);letter-spacing:.12em;margin-top:2px">EXCLUSIVE</div></div>
+                  </div>
+                  <button onclick="goPage('pricing',null)" style="align-self:flex-start;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#08070a;border:none;font-family:'Orbitron',monospace;font-size:9px;letter-spacing:.1em;padding:10px 22px;border-radius:7px;cursor:pointer;font-weight:700">UNLOCK PRO →</button>
+                </div>
+                <div style="border-left:1px solid var(--bdr);padding:24px 20px;display:flex;flex-direction:column;justify-content:center;background:rgba(0,0,0,.15)">
+                  <div style="font-family:'Orbitron',monospace;font-size:7.5px;color:var(--sub);letter-spacing:.14em;margin-bottom:12px">ANALYSIS PREVIEW</div>
+                  <div style="background:rgba(212,175,55,.04);border:1px solid var(--bdr);border-radius:8px;padding:14px">
+                    <div style="font-family:'Orbitron',monospace;font-size:9px;font-weight:700;color:var(--gold);margin-bottom:8px">WEEKLY OUTLOOK — BTC</div>
+                    <div style="font-size:11px;color:var(--sub);line-height:1.7;margin-bottom:10px">Bitcoin is currently testing the $72K resistance zone with strong momentum. A confirmed break above opens a run to $76-78K. Key support remains at $69.8K...</div>
+                    <div style="font-family:'Orbitron',monospace;font-size:7.5px;color:var(--sub);letter-spacing:.1em;margin-bottom:6px">KEY LEVELS</div>
+                    <div style="font-family:'Orbitron',monospace;font-size:8px;color:var(--cream);padding:3px 0;border-bottom:1px solid rgba(212,175,55,.06)"><span style="color:var(--gold)">BTC:</span> Support $69.8K / Resistance $76K</div>
+                    <div style="font-family:'Orbitron',monospace;font-size:8px;color:var(--cream);padding:3px 0"><span style="color:var(--gold)">ETH:</span> Support $3.6K / Resistance $4.1K</div>
+                  </div>
+                </div>
+              </div>
             </div>
 
+            <!-- 6: RISK MANAGEMENT -->
             <div class="fsh-panel" data-fsh-panel="6">
-              <div class="fsh-panel-tag pro">MEMBERS ONLY</div>
-              <div class="fsh-panel-h">Risk Management</div>
-              <div class="fsh-panel-sub">Trade with precision and discipline</div>
-              <div class="fsh-panel-p">Position sizing calculator, R:R tools, and proven frameworks to keep your risk consistent — so one bad trade never breaks the game.</div>
-              <div class="fsh-pills"><span class="fsh-pill">Position Sizing</span><span class="fsh-pill">R:R Calculator</span><span class="fsh-pill">Frameworks</span></div>
-              <div class="fsh-corner-badge pro">PRO</div>
-              <div class="fsh-deco"><svg width="110" height="44" viewBox="0 0 110 44"><path d="M55 4 L96 20 L96 32 C96 40 75 46 55 44 C35 46 14 40 14 32 L14 20 Z" fill="none" stroke="#d4af37" stroke-width="1.2" opacity=".4"/></svg></div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;height:100%">
+                <div style="padding:48px 44px;display:flex;flex-direction:column;justify-content:center">
+                  <div class="fsh-panel-tag pro">MEMBERS ONLY</div>
+                  <div class="fsh-panel-h" style="font-size:36px;margin-bottom:8px">Risk Management</div>
+                  <div style="font-size:14px;color:var(--gold);margin-bottom:16px">Trade with discipline, protect capital</div>
+                  <div style="font-size:13px;color:var(--sub);line-height:1.8;margin-bottom:24px">Position sizing tools, R:R calculators and proven frameworks — built into the platform. One bad trade should never blow your account. This module prevents that.</div>
+                  <div style="display:flex;gap:16px;margin-bottom:20px">
+                    <div style="text-align:center"><div style="font-family:'Orbitron',monospace;font-size:22px;font-weight:700;color:var(--cream)">1-2%</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);letter-spacing:.12em;margin-top:2px">MAX RISK/TRADE</div></div>
+                    <div style="width:1px;background:var(--bdr)"></div>
+                    <div style="text-align:center"><div style="font-family:'Orbitron',monospace;font-size:22px;font-weight:700;color:var(--gold)">1:3+</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);letter-spacing:.12em;margin-top:2px">MIN R:R RATIO</div></div>
+                    <div style="width:1px;background:var(--bdr)"></div>
+                    <div style="text-align:center"><div style="font-family:'Orbitron',monospace;font-size:22px;font-weight:700;color:var(--gold)">PRO</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);letter-spacing:.12em;margin-top:2px">EXCLUSIVE</div></div>
+                  </div>
+                  <button onclick="goPage('pricing',null)" style="align-self:flex-start;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#08070a;border:none;font-family:'Orbitron',monospace;font-size:9px;letter-spacing:.1em;padding:10px 22px;border-radius:7px;cursor:pointer;font-weight:700">UNLOCK PRO →</button>
+                </div>
+                <div style="border-left:1px solid var(--bdr);padding:24px 20px;display:flex;flex-direction:column;justify-content:center;background:rgba(0,0,0,.15)">
+                  <div style="font-family:'Orbitron',monospace;font-size:7.5px;color:var(--sub);letter-spacing:.14em;margin-bottom:12px">POSITION CALCULATOR</div>
+                  <div style="background:rgba(212,175,55,.04);border:1px solid var(--bdr);border-radius:8px;padding:14px;display:flex;flex-direction:column;gap:8px">
+                    <div style="display:flex;justify-content:space-between;font-family:'Orbitron',monospace;font-size:9px"><span style="color:var(--sub)">ACCOUNT SIZE</span><span>$10,000</span></div>
+                    <div style="display:flex;justify-content:space-between;font-family:'Orbitron',monospace;font-size:9px"><span style="color:var(--sub)">RISK PER TRADE</span><span>1% = $100</span></div>
+                    <div style="display:flex;justify-content:space-between;font-family:'Orbitron',monospace;font-size:9px"><span style="color:var(--sub)">ENTRY PRICE</span><span>$71,200</span></div>
+                    <div style="display:flex;justify-content:space-between;font-family:'Orbitron',monospace;font-size:9px"><span style="color:var(--sub)">STOP LOSS</span><span style="color:#f43f5e">$69,800</span></div>
+                    <div style="height:1px;background:var(--bdr)"></div>
+                    <div style="display:flex;justify-content:space-between;font-family:'Orbitron',monospace;font-size:11px"><span style="color:var(--sub)">POSITION SIZE</span><span style="color:var(--gold);font-weight:700">0.071 BTC</span></div>
+                    <div style="display:flex;justify-content:space-between;font-family:'Orbitron',monospace;font-size:11px"><span style="color:var(--sub)">R:R RATIO</span><span style="color:#4ade80;font-weight:700">1 : 3.8</span></div>
+                  </div>
+                </div>
+              </div>
             </div>
 
+            <!-- 7: EDUCATION -->
             <div class="fsh-panel" data-fsh-panel="7">
-              <div class="fsh-panel-tag pro">EDUCATION</div>
-              <div class="fsh-panel-h">Education &amp; Books</div>
-              <div class="fsh-panel-sub">A curated library for serious traders</div>
-              <div class="fsh-panel-p">Trading playbooks, strategy guides, and a hand-picked book library with a fullscreen flipbook reader. Built to make you sharper.</div>
-              <div class="fsh-pills"><span class="fsh-pill">Playbooks</span><span class="fsh-pill">Strategy Guides</span><span class="fsh-pill">Book Library</span></div>
-              <div class="fsh-corner-badge pro">PRO</div>
-              <div class="fsh-deco"><svg width="110" height="44" viewBox="0 0 110 44"><rect x="8" y="4" width="26" height="40" rx="4" fill="#d4af37" opacity=".22"/><rect x="38" y="0" width="30" height="44" rx="4" fill="#d4af37" opacity=".16"/><rect x="72" y="6" width="26" height="38" rx="4" fill="#d4af37" opacity=".2"/><rect x="10" y="4" width="4" height="16" rx="1" fill="#d4af37" opacity=".5"/></svg></div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;height:100%">
+                <div style="padding:48px 44px;display:flex;flex-direction:column;justify-content:center">
+                  <div class="fsh-panel-tag pro">MEMBERS ONLY</div>
+                  <div class="fsh-panel-h" style="font-size:36px;margin-bottom:8px">Education &amp; Books</div>
+                  <div style="font-size:14px;color:var(--gold);margin-bottom:16px">From beginner to serious trader</div>
+                  <div style="font-size:13px;color:var(--sub);line-height:1.8;margin-bottom:24px">6 modules, 36 lessons covering TA, risk, psychology, fundamentals and portfolio building. Plus a full book library with flipbook reader — all inside the platform.</div>
+                  <div style="display:flex;gap:16px;margin-bottom:20px">
+                    <div style="text-align:center"><div style="font-family:'Orbitron',monospace;font-size:22px;font-weight:700;color:var(--gold)">36</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);letter-spacing:.12em;margin-top:2px">LESSONS</div></div>
+                    <div style="width:1px;background:var(--bdr)"></div>
+                    <div style="text-align:center"><div style="font-family:'Orbitron',monospace;font-size:22px;font-weight:700;color:var(--gold)">6</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);letter-spacing:.12em;margin-top:2px">MODULES</div></div>
+                    <div style="width:1px;background:var(--bdr)"></div>
+                    <div style="text-align:center"><div style="font-family:'Orbitron',monospace;font-size:22px;font-weight:700;color:var(--gold)">10+</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);letter-spacing:.12em;margin-top:2px">TRADING BOOKS</div></div>
+                  </div>
+                  <button onclick="goPage('pricing',null)" style="align-self:flex-start;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#08070a;border:none;font-family:'Orbitron',monospace;font-size:9px;letter-spacing:.1em;padding:10px 22px;border-radius:7px;cursor:pointer;font-weight:700">UNLOCK PRO →</button>
+                </div>
+                <div style="border-left:1px solid var(--bdr);padding:24px 20px;display:flex;flex-direction:column;justify-content:center;background:rgba(0,0,0,.15)">
+                  <div style="font-family:'Orbitron',monospace;font-size:7.5px;color:var(--sub);letter-spacing:.14em;margin-bottom:12px">MODULES</div>
+                  <div style="display:flex;flex-direction:column;gap:6px">
+                    <div style="display:flex;align-items:center;justify-content:space-between;background:rgba(212,175,55,.05);border:1px solid var(--bdr);border-radius:6px;padding:9px 12px"><div><div style="font-size:11px;font-weight:600;color:var(--cream)">Technical Analysis</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);margin-top:2px">6 lessons · Charts, Indicators, Patterns</div></div><span style="font-family:'Orbitron',monospace;font-size:7px;padding:2px 7px;border-radius:3px;background:rgba(74,222,128,.1);color:#4ade80">BEG→ADV</span></div>
+                    <div style="display:flex;align-items:center;justify-content:space-between;background:rgba(212,175,55,.05);border:1px solid var(--bdr);border-radius:6px;padding:9px 12px"><div><div style="font-size:11px;font-weight:600;color:var(--cream)">Risk Management</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);margin-top:2px">6 lessons · Position Sizing, Stop Loss</div></div><span style="font-family:'Orbitron',monospace;font-size:7px;padding:2px 7px;border-radius:3px;background:rgba(212,175,55,.1);color:var(--gold)">ESSENTIAL</span></div>
+                    <div style="display:flex;align-items:center;justify-content:space-between;background:rgba(212,175,55,.05);border:1px solid var(--bdr);border-radius:6px;padding:9px 12px"><div><div style="font-size:11px;font-weight:600;color:var(--cream)">Trading Psychology</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);margin-top:2px">6 lessons · FOMO, Discipline, Mindset</div></div><span style="font-family:'Orbitron',monospace;font-size:7px;padding:2px 7px;border-radius:3px;background:rgba(74,222,128,.1);color:#4ade80">ALL LEVELS</span></div>
+                    <div style="text-align:center;font-family:'Orbitron',monospace;font-size:7.5px;color:var(--sub);opacity:.5;padding-top:4px">+ 3 more modules</div>
+                  </div>
+                </div>
+              </div>
             </div>
 
+            <!-- 8: PORTFOLIO -->
             <div class="fsh-panel" data-fsh-panel="8">
-              <div class="fsh-panel-tag pro">TOOLS</div>
-              <div class="fsh-panel-h">Portfolio</div>
-              <div class="fsh-panel-sub">Track every position in real time</div>
-              <div class="fsh-panel-p">Add your trades with entry price and size. See live unrealized PnL, automatic R:R calculation, and a full portfolio summary — all in one place.</div>
-              <div class="fsh-pills"><span class="fsh-pill">Live PnL</span><span class="fsh-pill">R:R Calculator</span><span class="fsh-pill">Position Sizing</span></div>
-              <div class="fsh-corner-badge pro">PRO</div>
-              <div class="fsh-deco"><svg width="110" height="44" viewBox="0 0 110 44"><polyline points="0,36 18,30 36,22 54,26 72,14 90,8 110,4" fill="none" stroke="#4ade80" stroke-width="1.5" stroke-linecap="round"/><circle cx="54" cy="26" r="3" fill="#f43f5e" opacity=".7"/><circle cx="90" cy="8" r="3" fill="#4ade80" opacity=".7"/></svg></div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;height:100%">
+                <div style="padding:48px 44px;display:flex;flex-direction:column;justify-content:center">
+                  <div class="fsh-panel-tag pro">MEMBERS ONLY</div>
+                  <div class="fsh-panel-h" style="font-size:36px;margin-bottom:8px">Portfolio Tracker</div>
+                  <div style="font-size:14px;color:var(--gold);margin-bottom:16px">Live PnL on every position</div>
+                  <div style="font-size:13px;color:var(--sub);line-height:1.8;margin-bottom:24px">Add your trades and watch unrealized PnL update in real time. Automatic R:R calculation, full portfolio summary — no spreadsheet needed.</div>
+                  <div style="display:flex;gap:16px;margin-bottom:20px">
+                    <div style="text-align:center"><div style="font-family:'Orbitron',monospace;font-size:22px;font-weight:700;color:#4ade80">Live</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);letter-spacing:.12em;margin-top:2px">PNL UPDATES</div></div>
+                    <div style="width:1px;background:var(--bdr)"></div>
+                    <div style="text-align:center"><div style="font-family:'Orbitron',monospace;font-size:22px;font-weight:700;color:var(--gold)">Auto</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);letter-spacing:.12em;margin-top:2px">R:R CALC</div></div>
+                    <div style="width:1px;background:var(--bdr)"></div>
+                    <div style="text-align:center"><div style="font-family:'Orbitron',monospace;font-size:22px;font-weight:700;color:var(--gold)">PRO</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);letter-spacing:.12em;margin-top:2px">EXCLUSIVE</div></div>
+                  </div>
+                  <button onclick="goPage('pricing',null)" style="align-self:flex-start;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#08070a;border:none;font-family:'Orbitron',monospace;font-size:9px;letter-spacing:.1em;padding:10px 22px;border-radius:7px;cursor:pointer;font-weight:700">UNLOCK PRO →</button>
+                </div>
+                <div style="border-left:1px solid var(--bdr);padding:24px 20px;display:flex;flex-direction:column;justify-content:center;background:rgba(0,0,0,.15)">
+                  <div style="font-family:'Orbitron',monospace;font-size:7.5px;color:var(--sub);letter-spacing:.14em;margin-bottom:10px">PORTFOLIO PREVIEW</div>
+                  <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:12px">
+                    <div style="background:rgba(212,175,55,.05);border:1px solid var(--bdr);border-radius:6px;padding:10px;text-align:center"><div style="font-family:'Orbitron',monospace;font-size:14px;font-weight:700;color:#4ade80">+$2,840</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);margin-top:3px">UNREALISED PNL</div></div>
+                    <div style="background:rgba(212,175,55,.05);border:1px solid var(--bdr);border-radius:6px;padding:10px;text-align:center"><div style="font-family:'Orbitron',monospace;font-size:14px;font-weight:700;color:var(--gold)">1:3.2</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);margin-top:3px">AVG R:R</div></div>
+                  </div>
+                  <div style="display:flex;flex-direction:column;gap:5px">
+                    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;font-family:'Orbitron',monospace;font-size:7.5px;color:var(--sub);padding:4px 0;border-bottom:1px solid var(--bdr)"><span>COIN</span><span>ENTRY</span><span style="text-align:right">PNL</span></div>
+                    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;font-family:'Orbitron',monospace;font-size:9px;padding:5px 0;border-bottom:1px solid rgba(212,175,55,.05)"><span style="font-weight:700">BTC</span><span style="color:var(--sub)">$68,400</span><span style="text-align:right;color:#4ade80">+5.8%</span></div>
+                    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;font-family:'Orbitron',monospace;font-size:9px;padding:5px 0;border-bottom:1px solid rgba(212,175,55,.05)"><span style="font-weight:700">ETH</span><span style="color:var(--sub)">$3,620</span><span style="text-align:right;color:#4ade80">+6.1%</span></div>
+                    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;font-family:'Orbitron',monospace;font-size:9px;padding:5px 0"><span style="font-weight:700">SOL</span><span style="color:var(--sub)">$148</span><span style="text-align:right;color:#f43f5e">-1.2%</span></div>
+                  </div>
+                </div>
+              </div>
             </div>
 
+            <!-- 9: WHALE TRACKER -->
             <div class="fsh-panel" data-fsh-panel="9">
-              <div class="fsh-panel-tag pro">TOOLS</div>
-              <div class="fsh-panel-h">Whale Tracker</div>
-              <div class="fsh-panel-sub">Follow the smart money on-chain</div>
-              <div class="fsh-panel-p">Monitor large transfers across BTC, ETH, SOL and more. See exchange inflows vs outflows, get a signal interpretation and know what the whales are doing.</div>
-              <div class="fsh-pills"><span class="fsh-pill">Large Transfers</span><span class="fsh-pill">Inflow / Outflow</span><span class="fsh-pill">Signal Reading</span></div>
-              <div class="fsh-corner-badge pro">PRO</div>
-              <div class="fsh-deco"><svg width="110" height="44" viewBox="0 0 110 44"><circle cx="20" cy="22" r="8" fill="none" stroke="#d4af37" stroke-width="1.2" opacity=".5"/><circle cx="55" cy="16" r="12" fill="none" stroke="#d4af37" stroke-width="1.2" opacity=".4"/><circle cx="90" cy="24" r="6" fill="none" stroke="#d4af37" stroke-width="1.2" opacity=".45"/><line x1="28" y1="22" x2="43" y2="18" stroke="#d4af37" stroke-width="0.8" opacity=".3"/><line x1="67" y1="18" x2="84" y2="22" stroke="#d4af37" stroke-width="0.8" opacity=".3"/></svg></div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;height:100%">
+                <div style="padding:48px 44px;display:flex;flex-direction:column;justify-content:center">
+                  <div class="fsh-panel-tag pro">MEMBERS ONLY</div>
+                  <div class="fsh-panel-h" style="font-size:36px;margin-bottom:8px">Whale Tracker</div>
+                  <div style="font-size:14px;color:var(--gold);margin-bottom:16px">Follow the smart money on-chain</div>
+                  <div style="font-size:13px;color:var(--sub);line-height:1.8;margin-bottom:24px">Monitor large transfers across BTC, ETH, SOL and more in real time. See exchange inflows vs outflows and get instant signal interpretation — know what the whales are doing before the crowd notices.</div>
+                  <div style="display:flex;gap:16px;margin-bottom:20px">
+                    <div style="text-align:center"><div style="font-family:'Orbitron',monospace;font-size:22px;font-weight:700;color:var(--cream)">$1M+</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);letter-spacing:.12em;margin-top:2px">MIN TRANSFER</div></div>
+                    <div style="width:1px;background:var(--bdr)"></div>
+                    <div style="text-align:center"><div style="font-family:'Orbitron',monospace;font-size:22px;font-weight:700;color:var(--gold)">Live</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);letter-spacing:.12em;margin-top:2px">ON-CHAIN DATA</div></div>
+                    <div style="width:1px;background:var(--bdr)"></div>
+                    <div style="text-align:center"><div style="font-family:'Orbitron',monospace;font-size:22px;font-weight:700;color:var(--gold)">PRO</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);letter-spacing:.12em;margin-top:2px">EXCLUSIVE</div></div>
+                  </div>
+                  <button onclick="goPage('pricing',null)" style="align-self:flex-start;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#08070a;border:none;font-family:'Orbitron',monospace;font-size:9px;letter-spacing:.1em;padding:10px 22px;border-radius:7px;cursor:pointer;font-weight:700">UNLOCK PRO →</button>
+                </div>
+                <div style="border-left:1px solid var(--bdr);padding:24px 20px;display:flex;flex-direction:column;justify-content:center;background:rgba(0,0,0,.15)">
+                  <div style="font-family:'Orbitron',monospace;font-size:7.5px;color:var(--sub);letter-spacing:.14em;margin-bottom:10px">LIVE ALERTS PREVIEW</div>
+                  <div style="display:flex;flex-direction:column;gap:7px">
+                    <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 10px;background:rgba(244,63,94,.05);border:1px solid rgba(244,63,94,.15);border-radius:6px"><div style="display:flex;align-items:center;gap:8px"><span style="font-family:'Orbitron',monospace;font-size:10px;font-weight:700;color:var(--gold)">BTC</span><div><div style="font-size:10px;font-weight:600">1,240 BTC</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub)">2m ago</div></div></div><div style="text-align:right"><div style="font-family:'Orbitron',monospace;font-size:11px;font-weight:700">$103.4M</div><span style="font-family:'Orbitron',monospace;font-size:7px;padding:2px 6px;border-radius:3px;background:rgba(244,63,94,.1);color:#f43f5e;border:1px solid rgba(244,63,94,.2)">OUT</span></div></div>
+                    <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 10px;background:rgba(74,222,128,.05);border:1px solid rgba(74,222,128,.15);border-radius:6px"><div style="display:flex;align-items:center;gap:8px"><span style="font-family:'Orbitron',monospace;font-size:10px;font-weight:700;color:var(--gold)">ETH</span><div><div style="font-size:10px;font-weight:600">18,500 ETH</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub)">7m ago</div></div></div><div style="text-align:right"><div style="font-family:'Orbitron',monospace;font-size:11px;font-weight:700">$46.2M</div><span style="font-family:'Orbitron',monospace;font-size:7px;padding:2px 6px;border-radius:3px;background:rgba(74,222,128,.1);color:#4ade80;border:1px solid rgba(74,222,128,.2)">IN</span></div></div>
+                    <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 10px;background:rgba(244,63,94,.05);border:1px solid rgba(244,63,94,.15);border-radius:6px"><div style="display:flex;align-items:center;gap:8px"><span style="font-family:'Orbitron',monospace;font-size:10px;font-weight:700;color:var(--gold)">SOL</span><div><div style="font-size:10px;font-weight:600">420K SOL</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub)">14m ago</div></div></div><div style="text-align:right"><div style="font-family:'Orbitron',monospace;font-size:11px;font-weight:700">$62.0M</div><span style="font-family:'Orbitron',monospace;font-size:7px;padding:2px 6px;border-radius:3px;background:rgba(244,63,94,.1);color:#f43f5e;border:1px solid rgba(244,63,94,.2)">OUT</span></div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 10: AI ANALYST -->
+            <div class="fsh-panel" data-fsh-panel="10">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;height:100%">
+                <div style="padding:48px 44px;display:flex;flex-direction:column;justify-content:center">
+                  <div class="fsh-panel-tag pro">AI · POWERED</div>
+                  <div class="fsh-panel-h" style="font-size:36px;margin-bottom:8px">AI Analyst</div>
+                  <div style="font-size:14px;color:var(--gold);margin-bottom:16px">Professional analysis, instantly</div>
+                  <div style="font-size:13px;color:var(--sub);line-height:1.8;margin-bottom:24px">Ask anything — trade setups, on-chain signals, macro outlook, coin breakdowns. Powered by Claude AI and trained to think like a professional crypto analyst. Available 24/7.</div>
+                  <div style="display:flex;gap:16px;margin-bottom:20px">
+                    <div style="text-align:center"><div style="font-family:'Orbitron',monospace;font-size:22px;font-weight:700;color:#4ade80">24/7</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);letter-spacing:.12em;margin-top:2px">ALWAYS ONLINE</div></div>
+                    <div style="width:1px;background:var(--bdr)"></div>
+                    <div style="text-align:center"><div style="font-family:'Orbitron',monospace;font-size:22px;font-weight:700;color:var(--gold)">AI</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);letter-spacing:.12em;margin-top:2px">CLAUDE POWERED</div></div>
+                    <div style="width:1px;background:var(--bdr)"></div>
+                    <div style="text-align:center"><div style="font-family:'Orbitron',monospace;font-size:22px;font-weight:700;color:var(--gold)">PRO</div><div style="font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);letter-spacing:.12em;margin-top:2px">EXCLUSIVE</div></div>
+                  </div>
+                  <button onclick="goPage('pricing',null)" style="align-self:flex-start;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#08070a;border:none;font-family:'Orbitron',monospace;font-size:9px;letter-spacing:.1em;padding:10px 22px;border-radius:7px;cursor:pointer;font-weight:700">UNLOCK PRO →</button>
+                </div>
+                <div style="border-left:1px solid var(--bdr);padding:24px 20px;display:flex;flex-direction:column;justify-content:center;background:rgba(0,0,0,.15)">
+                  <div style="font-family:'Orbitron',monospace;font-size:7.5px;color:var(--sub);letter-spacing:.14em;margin-bottom:12px">AI CHAT PREVIEW</div>
+                  <div style="display:flex;flex-direction:column;gap:8px">
+                    <div style="display:flex;justify-content:flex-end"><div style="background:rgba(74,222,128,.08);border:1px solid rgba(74,222,128,.2);border-radius:8px 8px 2px 8px;padding:9px 12px;max-width:80%;font-size:11px;color:var(--cream);line-height:1.5">What's the BTC market structure right now?</div></div>
+                    <div style="display:flex;gap:8px;align-items:flex-start"><div style="width:24px;height:24px;border-radius:6px;background:rgba(212,175,55,.1);border:1px solid rgba(212,175,55,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Orbitron',monospace;font-size:7px;color:var(--gold);font-weight:700">AI</div><div style="background:rgba(212,175,55,.05);border:1px solid var(--bdr);border-radius:2px 8px 8px 8px;padding:9px 12px;font-size:11px;color:var(--sub);line-height:1.6"><strong style="color:var(--cream)">BTC is in a bullish continuation pattern.</strong> Price is holding above the $70K macro support with strong volume. Key resistance at $73.8K — a break above targets $76–78K. Momentum indicators are bullish on the 4H and daily.</div></div>
+                    <div style="display:flex;justify-content:flex-end"><div style="background:rgba(74,222,128,.08);border:1px solid rgba(74,222,128,.2);border-radius:8px 8px 2px 8px;padding:9px 12px;max-width:80%;font-size:11px;color:var(--cream);line-height:1.5">Should I enter now or wait for a dip?</div></div>
+                  </div>
+                </div>
+              </div>
             </div>
 
           </div>
         </div>
 
-        <!-- Footer progress -->
+        <!-- Progress footer -->
         <div class="fsh-footer" id="fsh-footer">
           <button class="fsh-prog on" data-fsh-dot="0" type="button"><span class="fsh-prog-fill" id="fsh-fill-0"></span></button>
           <button class="fsh-prog" data-fsh-dot="1" type="button"><span class="fsh-prog-fill" id="fsh-fill-1"></span></button>
@@ -847,23 +1076,12 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--cream);ov
           <button class="fsh-prog" data-fsh-dot="7" type="button"><span class="fsh-prog-fill" id="fsh-fill-7"></span></button>
           <button class="fsh-prog" data-fsh-dot="8" type="button"><span class="fsh-prog-fill" id="fsh-fill-8"></span></button>
           <button class="fsh-prog" data-fsh-dot="9" type="button"><span class="fsh-prog-fill" id="fsh-fill-9"></span></button>
-          <span class="fsh-counter" id="fsh-counter">01 / 10</span>
+          <button class="fsh-prog" data-fsh-dot="10" type="button"><span class="fsh-prog-fill" id="fsh-fill-10"></span></button>
+          <span class="fsh-counter" id="fsh-counter">01 / 11</span>
           <button class="fsh-playbtn" id="fsh-playbtn" type="button">PAUSE</button>
         </div>
       </div>
-
-
-      
-    </div>
-
-    <!-- ═══ CRYPTO MARKETS ═══ -->
-    <div class="page" id="page-markets">
-      <div class="ph"><h1>Crypto Markets</h1><p>Top 100 by market cap · refreshes every 90s</p></div>
-      <div class="card" style="overflow:hidden">
-        <div class="mkt-hdr"><span>#</span><span>Asset</span><span>Price</span><span>24h %</span><span>Mkt Cap</span><span>Volume</span></div>
-        <div id="mkt-rows"><div class="mkt-mt">Loading...</div></div>
-      </div>
-    </div>
+    </div><!-- /page-guide -->
 
     <!-- ═══ HEATMAP & LIQUIDITY (new tab with 4 widgets) ═══ -->
     <div class="page" id="page-heatmap">
@@ -1864,7 +2082,7 @@ function loadTvBtc(){
 function isAdm(){return sessionStorage.getItem('jc_admin')==='1';}
 function isUnlk(){return sessionStorage.getItem('jc_ok')==='1'||isAdm();}
 function applyState(){
-  ['sig','an','risk','books','heatmap','education','portfolio','whales'].forEach(function(p){
+  ['sig','an','risk','books','heatmap','education','portfolio','whales','ai'].forEach(function(p){
     var ov=document.getElementById('lko-'+p);if(ov&&isUnlk())ov.style.display='none';
     var lk=document.getElementById('lk-'+p);if(lk&&isUnlk())lk.style.display='none';
   });
@@ -2595,24 +2813,24 @@ async function aiSend(){
   aiShowThinking();
 
   try{
-    var resp=await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=JOUW_GEMINI_API_KEY_HIER',{
+    var resp=await fetch('https://api.anthropic.com/v1/messages',{
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify({
-        system_instruction:{parts:[{text:aiGetSystemPrompt()}]},
-        contents:aiHistory.map(function(m){return{role:m.role==='assistant'?'model':'user',parts:[{text:m.content}]};})
+        model:'claude-sonnet-4-20250514',
+        max_tokens:1000,
+        system:aiGetSystemPrompt(),
+        messages:aiHistory
       })
     });
     var data=await resp.json();
-    var reply=(data.candidates&&data.candidates[0]&&data.candidates[0].content&&data.candidates[0].content.parts&&data.candidates[0].content.parts[0]&&data.candidates[0].content.parts[0].text)||'Sorry, something went wrong. Please try again.';
-    // Show API error details if present
-    if(!data.candidates&&data.error){reply='**API Error:** '+data.error.message+' (code: '+data.error.code+')';}
+    var reply=(data.content&&data.content[0]&&data.content[0].text)||'Sorry, er ging iets mis. Probeer het opnieuw.';
     aiRemoveThinking();
     aiHistory.push({role:'assistant',content:reply});
     aiAddMessage('ai',reply);
   } catch(e){
     aiRemoveThinking();
-    aiAddMessage('ai','**Connection error:** '+e.message);
+    aiAddMessage('ai','**Connection error** — Could not reach the AI. Check your internet connection and try again.');
   }
 
   aiTyping=false;
@@ -2637,8 +2855,8 @@ function aiClear(){
 
 <script>
 (function(){
-  const PAGES = ['markets','heatmap','tvbtc','news','signals','analysis','risk','education','portfolio','whales'];
-  const TOTAL = 10;
+  const PAGES = ['markets','heatmap','tvbtc','news','signals','analysis','risk','education','portfolio','whales','ai'];
+  const TOTAL = 11;
   const DELAY = 4800;
   let cur = 0;
   let autoplay = true;
