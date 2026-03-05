@@ -307,7 +307,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--cream);ov
 .edu-stat-lbl{font-family:'Orbitron',monospace;font-size:7px;color:var(--sub);letter-spacing:.12em;margin-top:3px}
 
 /* legacy grid kept for fallback */
-.eg{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}
+.eg{display:grid;grid-template-columns:repeat(4,1fr);gap:11px}
 .ec{padding:20px}
 .ec-n{font-family:'Orbitron',monospace;font-size:8px;color:rgba(212,175,55,.35);margin-bottom:8px}
 .ec h3{font-family:'Orbitron',monospace;font-size:11px;font-weight:700;margin-bottom:6px}
@@ -327,7 +327,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--cream);ov
 .rc p{font-size:12px;color:var(--sub);line-height:1.8}
 
 /* PRICING */
-.plg{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;max-width:840px}
+.plg{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;max-width:840px}
 .pl{padding:26px 22px;position:relative;transition:transform .2s}
 .pl:hover{transform:translateY(-3px)}
 .pl.ft{background:linear-gradient(155deg,rgba(212,175,55,.07),rgba(245,240,232,.02));border-color:rgba(212,175,55,.26)}
@@ -356,7 +356,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--cream);ov
 .cc-v{font-family:'Orbitron',monospace;font-size:11px;color:var(--gold);font-weight:700}
 
 /* BOOKS */
-.bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}
+.bgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:11px}
 @media(max-width:900px){.bgrid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:768px){.bgrid{grid-template-columns:1fr}}
 .btile{padding:14px;cursor:pointer;position:relative;overflow:hidden}
@@ -476,7 +476,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--cream);ov
 .wh-usd{font-family:'Orbitron',monospace;font-size:11px;font-weight:700;color:var(--cream)}
 .wh-coin{font-family:'Orbitron',monospace;font-size:7.5px;color:var(--sub);margin-top:2px}
 .wh-dir-badge{font-family:'Orbitron',monospace;font-size:7px;letter-spacing:.08em;padding:2px 6px;border-radius:3px;flex-shrink:0}
-.whale-stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin-bottom:14px}
+.whale-stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;margin-bottom:14px}
 .wstat{padding:14px}
 .wstat-label{font-family:'Orbitron',monospace;font-size:7.5px;letter-spacing:.13em;color:var(--sub);text-transform:uppercase;margin-bottom:6px}
 .wstat-val{font-family:'Orbitron',monospace;font-size:16px;font-weight:700}
@@ -620,6 +620,10 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--cream);ov
     <ul class="sbn">
       <li><a onclick="goPage('ai',this)">
         <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>AI Analyst <span style="font-family:'Orbitron',monospace;font-size:6px;background:linear-gradient(135deg,#b8860b,#d4af37);color:#08070a;padding:2px 5px;border-radius:2px;margin-left:2px;font-weight:700;letter-spacing:.05em">AI</span><span class="sb-lk" id="lk-ai">🔒</span></a></li>
+      
+      <li><a onclick="goPage('ai-brief',this)">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8"/><path d="M8 17h8"/><path d="M8 9h2"/></svg>AI Daily Market Brief<span class="sb-lk" id="lk-ai-brief">🔒</span></a></li>
+
       <li><a onclick="goPage('portfolio',this)">
         <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>Portfolio<span class="sb-lk" id="lk-portfolio">🔒</span></a></li>
       <li><a onclick="goPage('whales',this)">
@@ -1943,13 +1947,128 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--cream);ov
       </div>
     </div>
 
-        <!-- ═══ PRICING ═══ -->
+        
+    <!-- ═══ AI DAILY MARKET BRIEF ═══ -->
+    <div class="page" id="page-ai-brief">
+      <div class="ph"><h1>AI Daily Market Brief</h1><p>Daily overview built for quick decision making.</p></div>
+      <div class="lkd">
+        <div id="lko-ai-brief" class="lko"><div class="lkb">
+          <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <div class="lk-ti">Members Only</div>
+          <div class="lk-sb">The AI Daily Market Brief is exclusive to CryptoMarketz members.</div>
+          <div class="lk-r"><input class="lk-i" id="li-ai-brief" placeholder="Access code" onkeydown="if(event.key==='Enter')unlock('ai-brief')"><button class="lk-bt" onclick="unlock('ai-brief')">Unlock</button></div>
+          <div class="lk-e" id="le-ai-brief"></div>
+          <div class="lk-ft">No code? <a onclick="goPage('pricing',null)">View pricing →</a></div>
+        </div></div>
+
+        <div class="card" style="padding:18px;margin-bottom:14px">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+            <div style="font-family:'Orbitron',monospace;font-size:11px;font-weight:700;color:var(--gold)">Market brief</div>
+            <div style="font-family:'Orbitron',monospace;font-size:8px;color:var(--sub);letter-spacing:.1em">Updated 08:00 UTC</div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
+            <div class="card" style="padding:12px;background:rgba(17,15,19,55)"><div style="font-family:'Orbitron',monospace;font-size:8px;color:var(--sub);letter-spacing:.14em">BTC</div><div style="margin-top:6px;font-size:12px;color:var(--cream)">Neutral</div></div>
+            <div class="card" style="padding:12px;background:rgba(17,15,19,55)"><div style="font-family:'Orbitron',monospace;font-size:8px;color:var(--sub);letter-spacing:.14em">ETH</div><div style="margin-top:6px;font-size:12px;color:var(--cream)">Constructive</div></div>
+            <div class="card" style="padding:12px;background:rgba(17,15,19,55)"><div style="font-family:'Orbitron',monospace;font-size:8px;color:var(--sub);letter-spacing:.14em">FUNDING</div><div style="margin-top:6px;font-size:12px;color:var(--cream)">Slightly positive</div></div>
+            <div class="card" style="padding:12px;background:rgba(17,15,19,55)"><div style="font-family:'Orbitron',monospace;font-size:8px;color:var(--sub);letter-spacing:.14em">VOL</div><div style="margin-top:6px;font-size:12px;color:var(--cream)">Elevated</div></div>
+          </div>
+        </div>
+
+        <div class="card" style="padding:18px;margin-bottom:14px">
+          <div style="font-family:'Orbitron',monospace;font-size:11px;font-weight:700;color:var(--gold);margin-bottom:10px">Top narratives today</div>
+          <div style="font-size:12px;color:var(--cream);line-height:1.9">1. AI Agents<br>2. DePIN<br>3. RWAs</div>
+        </div>
+
+        <div class="card" style="padding:18px">
+          <div style="font-family:'Orbitron',monospace;font-size:11px;font-weight:700;color:var(--gold);margin-bottom:10px">AI summary</div>
+          <div style="font-size:12px;color:var(--sub);line-height:1.85">
+            Bitcoin is holding key support while liquidity rotates into mid caps. AI and DePIN remain the strongest narratives by attention. Expect volatility around major levels.
+          </div>
+        </div>
+
+        <div style="font-family:'Orbitron',monospace;font-size:8px;color:rgba(122,106,82,.3);letter-spacing:.1em;text-align:center;padding:10px 0 4px">
+          DATA SIMULATED · FOR UI PREVIEW
+        </div>
+      </div>
+    </div>
+
+
+
+<!-- ═══ PRICING ═══ -->
     <div class="page" id="page-pricing">
       <div class="ph"><h1>Pricing</h1><p>Choose the plan that fits your goals. Cancel anytime.</p></div>
-      <div class="plg">
-        <div class="card pl"><div class="pl-name">Starter</div><div class="pl-price" style="color:var(--sub)">$29</div><div class="pl-per">per month</div><div class="pl-div"></div><ul class="pl-ul"><li><span>Daily signals (5/week)</span></li><li><span>Basic market analysis</span></li><li><span>Community Discord</span></li><li><span>Weekly newsletter</span></li><li class="no"><span>Premium alerts</span></li><li class="no"><span>1-on-1 mentorship</span></li></ul><button class="pl-bt bt-o" onclick="goPage('contact',null)">Get Started</button></div>
-        <div class="card pl ft"><div class="pl-badge">Most Popular</div><div class="pl-name">Pro</div><div class="pl-price">$79</div><div class="pl-per">per month</div><div class="pl-div"></div><ul class="pl-ul"><li><span>Unlimited signals</span></li><li><span>Daily market analysis</span></li><li><span>VIP Telegram &amp; Discord</span></li><li><span>Weekly live sessions</span></li><li><span>Premium alerts</span></li><li class="no"><span>1-on-1 mentorship</span></li></ul><button class="pl-bt bt-s" onclick="goPage('contact',null)">Join Pro</button></div>
-        <div class="card pl"><div class="pl-name">Elite</div><div class="pl-price" style="color:var(--gold)">$199</div><div class="pl-per">per month</div><div class="pl-div"></div><ul class="pl-ul"><li><span>Everything in Pro</span></li><li><span>2× monthly 1-on-1 sessions</span></li><li><span>Personal trading plan</span></li><li><span>Direct mentor access</span></li><li><span>Priority notifications</span></li><li><span>Exclusive Elite channel</span></li></ul><button class="pl-bt bt-o" onclick="goPage('contact',null)">Go Elite</button></div>
+      
+        <div class="plg">
+
+          <!-- STARTER -->
+          <div class="card pl">
+            <div class="pl-name">Starter</div>
+            <div class="pl-price" style="color:var(--sub)">$0</div>
+            <div class="pl-per">free</div>
+            <div class="pl-div"></div>
+            <ul class="pl-ul">
+              <li><span>Dashboard access</span></li>
+              <li><span>Crypto markets</span></li>
+              <li><span>Crypto news</span></li>
+              <li><span>Education library</span></li>
+              <li><span>Basic signals (3/week)</span></li>
+            </ul>
+            <button class="pl-bt bt-o" onclick="goPage('contact',null)">Get Started</button>
+          </div>
+
+          <!-- PRO -->
+          <div class="card pl">
+            <div class="pl-name">Pro</div>
+            <div class="pl-price">$29</div>
+            <div class="pl-per">per month</div>
+            <div class="pl-div"></div>
+            <ul class="pl-ul">
+              <li><span>Unlimited signals</span></li>
+              <li><span>Daily market analysis</span></li>
+              <li><span>Premium alerts</span></li>
+              <li><span>VIP telegram</span></li>
+              <li><span>Weekly live session</span></li>
+              <li><span>Heatmap &amp; liquidity tools</span></li>
+            </ul>
+            <button class="pl-bt bt-s" onclick="goPage('contact',null)">Join Pro</button>
+          </div>
+
+          <!-- AI ANALYST -->
+          <div class="card pl ft">
+            <div class="pl-badge">Favorite</div>
+            <div class="pl-name">AI Analyst</div>
+            <div class="pl-price">$49</div>
+            <div class="pl-per">per month</div>
+            <div class="pl-div"></div>
+            <ul class="pl-ul">
+              <li><span>Everything in Starter + Pro</span></li>
+              <li><span>AI market analyst</span></li>
+              <li><span>BTC / ETH deep dive</span></li>
+              <li><span>Narrative tracking</span></li>
+              <li><span>Whale alerts advanced</span></li>
+              <li><span>Smart money flows</span></li>
+              <li><span>AI trade ideas</span></li>
+            </ul>
+            <button class="pl-bt bt-o" onclick="goPage('contact',null)">Start AI Plan</button>
+          </div>
+
+          <!-- ELITE -->
+          <div class="card pl">
+            <div class="pl-name">Elite</div>
+            <div class="pl-price" style="color:var(--gold)">$149</div>
+            <div class="pl-per">per month</div>
+            <div class="pl-div"></div>
+            <ul class="pl-ul">
+              <li><span>Everything in AI plan</span></li>
+              <li><span>Private trading group</span></li>
+              <li><span>1-on-1 sessions</span></li>
+              <li><span>Personal trading plan</span></li>
+              <li><span>Priority signals</span></li>
+            </ul>
+            <button class="pl-bt bt-o" onclick="goPage('contact',null)">Go Elite</button>
+          </div>
+
+        </div></div>
       </div>
     </div>
 
@@ -2082,7 +2201,7 @@ function loadTvBtc(){
 function isAdm(){return sessionStorage.getItem('jc_admin')==='1';}
 function isUnlk(){return sessionStorage.getItem('jc_ok')==='1'||isAdm();}
 function applyState(){
-  ['sig','an','risk','books','heatmap','education','portfolio','whales','ai'].forEach(function(p){
+  ['sig','an','risk','books','heatmap','education','portfolio','whales','ai','ai-narratives','ai-brief'].forEach(function(p){
     var ov=document.getElementById('lko-'+p);if(ov&&isUnlk())ov.style.display='none';
     var lk=document.getElementById('lk-'+p);if(lk&&isUnlk())lk.style.display='none';
   });
@@ -2855,7 +2974,7 @@ function aiClear(){
 
 <script>
 (function(){
-  const PAGES = ['markets','heatmap','tvbtc','news','signals','analysis','risk','education','portfolio','whales','ai'];
+  const PAGES = ['markets','heatmap','tvbtc','news','signals','analysis','risk','education','portfolio','whales','ai','ai-narratives','ai-brief'];
   const TOTAL = 11;
   const DELAY = 4800;
   let cur = 0;
