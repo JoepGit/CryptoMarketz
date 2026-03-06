@@ -13,28 +13,172 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-      - name: Generate brief
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Generate market brief
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          mkdir -p data
-          cat <<EOF > data/market-brief.json
-          {
-            "date": "AI Generated",
-            "title": "Crypto Market Brief",
-            "summary": "Bitcoin is holding key support while liquidity rotates into mid caps.",
-            "btc": "Neutral",
-            "eth": "Constructive",
-            "narrative": "AI Agents and DePIN remain dominant narratives.",
-            "risk": "Volatility around macro data.",
-            "focus": "Watch liquidity rotation."
+          python <<'PY'
+          import json
+          import os
+          import urllib.request
+          from datetime import datetime
+
+          os.makedirs("data", exist_ok=True)
+
+          def get_json(url):
+              req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+              with urllib.request.urlopen(req, timeout=20) as response:
+                  return json.loads(response.read().decode("utf-8"))
+
+          today = datetime.utcnow().strftime("%Y-%m-%d")
+
+          fallback = {
+              "date": today,
+              "title": "Daily Crypto Market Brief",
+              "summary": "Unable to generate AI brief right now.",
+              "btc": "No update available.",
+              "eth": "No update available.",
+              "market": "No market overview available.",
+              "narratives": [
+                  "No narrative data available."
+              ],
+              "risk": "No risk update available.",
+              "focus": "No focus update available."
           }
-          EOF
 
-      - name: Commit
+          try:
+              market_data = get_json(
+                  "https://api.coingecko.com/api/v3/coins/markets"
+                  "?vs_currency=usd&ids=bitcoin,ethereum,solana,binancecoin,xrp,litecoin"
+                  "&price_change_percentage=24h"
+              )
+
+              global_data = get_json("https://api.coingecko.com/api/v3/global")
+
+              rows = []
+              for coin in market_data:
+                  rows.append({
+                      "name": coin.get("name"),
+                      "symbol": coin.get("symbol", "").upper(),
+                      "price": coin.get("current_price"),
+                      "change_24h": coin.get("price_change_percentage_24h_in_currency"),
+                      "market_cap": coin.get("market_cap"),
+                      "volume": coin.get("total_volume")
+                  })
+
+              total_mcap = global_data.get("data", {}).get("total_market_cap", {}).get("usd")
+              total_vol = global_data.get("data", {}).get("total_volume", {}).get("usd")
+              btc_dom = global_data.get("data", {}).get("market_cap_percentage", {}).get("btc")
+              eth_dom = global_data.get("data", {}).get("market_cap_percentage", {}).get("eth")
+
+              api_key = os.environ.get("GEMINI_API_KEY", "").strip()
+
+              if not api_key:
+                  result = fallback
+                  result["summary"] = "Missing GEMINI_API_KEY secret."
+              else:
+                  prompt = f"""
+          You are the CryptoMarketz AI desk.
+
+          Write a professional crypto daily market brief for {today}.
+
+          Use the market data below and turn it into a useful, information-dense brief.
+          Be factual, concise, and calm.
+          No hype language.
+          No markdown.
+          Output VALID JSON only.
+
+          Market data:
+          Coins: {json.dumps(rows)}
+          Total market cap USD: {total_mcap}
+          Total volume USD: {total_vol}
+          BTC dominance: {btc_dom}
+          ETH dominance: {eth_dom}
+
+          Return exactly this JSON structure:
+          {{
+            "date": "{today}",
+            "title": "Daily Crypto Market Brief",
+            "summary": "4 to 6 sentences with what happened in the market and why it matters",
+            "btc": "3 to 5 sentences focused on bitcoin structure, flows, momentum, and positioning",
+            "eth": "3 to 5 sentences focused on ethereum structure, relative strength, and flows",
+            "market": "3 to 5 sentences on majors, rotations, breadth, and general market tone",
+            "narratives": [
+              "Narrative 1",
+              "Narrative 2",
+              "Narrative 3"
+            ],
+            "risk": "2 to 4 sentences on main risks to watch",
+            "focus": "2 to 4 sentences on what traders should watch next"
+          }}
+
+          Rules:
+          - JSON only
+          - no code blocks
+          - no markdown
+          - narratives must be short
+          - write a real daily brief, not generic filler
+          """
+
+                  url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
+                  payload = {
+                      "contents": [
+                          {
+                              "parts": [
+                                  {"text": prompt}
+                              ]
+                          }
+                      ]
+                  }
+
+                  req = urllib.request.Request(
+                      url,
+                      data=json.dumps(payload).encode("utf-8"),
+                      headers={"Content-Type": "application/json"},
+                      method="POST"
+                  )
+
+                  with urllib.request.urlopen(req, timeout=45) as response:
+                      raw = response.read().decode("utf-8")
+
+                  parsed = json.loads(raw)
+                  text = (
+                      parsed.get("candidates", [{}])[0]
+                      .get("content", {})
+                      .get("parts", [{}])[0]
+                      .get("text", "")
+                      .strip()
+                  )
+
+                  if text.startswith("```json"):
+                      text = text.replace("```json", "", 1).strip()
+                  if text.startswith("```"):
+                      text = text.replace("```", "", 1).strip()
+                  if text.endswith("```"):
+                      text = text[:-3].strip()
+
+                  result = json.loads(text)
+
+          except Exception as e:
+              result = fallback
+              result["summary"] = f"Workflow error: {str(e)}"
+
+          with open("data/market-brief.json", "w", encoding="utf-8") as f:
+              json.dump(result, f, ensure_ascii=False, indent=2)
+          PY
+
+      - name: Commit updated brief
         run: |
-          git config user.name github-actions
-          git config user.email actions@github.com
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/market-brief.json
-          git commit -m "update brief" || echo "no changes"
+          git diff --cached --quiet || git commit -m "Update AI market brief"
           git push
