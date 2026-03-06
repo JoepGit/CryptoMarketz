@@ -16,13 +16,25 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
       - name: Generate market brief with Gemini
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          mkdir -p data
+          python <<'PY'
+          import json
+          import os
+          import urllib.request
+          import urllib.error
+          from datetime import datetime
 
-          PROMPT=$(cat <<'EOF'
+          os.makedirs("data", exist_ok=True)
+
+          prompt = """
           You are the CryptoMarketz AI desk.
 
           Write a professional daily crypto market brief as valid JSON only.
@@ -43,39 +55,68 @@ jobs:
           - No markdown
           - No code fences
           - Output valid JSON only
-          EOF
-          )
+          """
 
-          RESPONSE=$(curl -s \
-            -H "Content-Type: application/json" \
-            -X POST \
-            "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}" \
-            -d "{
-              \"contents\": [{
-                \"parts\": [{
-                  \"text\": $(jq -Rs . <<< "$PROMPT")
-                }]
-              }]
-            }")
+          api_key = os.environ.get("GEMINI_API_KEY", "")
+          url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
 
-          TEXT=$(echo "$RESPONSE" | jq -r '.candidates[0].content.parts[0].text // empty')
+          payload = {
+              "contents": [
+                  {
+                      "parts": [
+                          {"text": prompt}
+                      ]
+                  }
+              ]
+          }
 
-          if [ -z "$TEXT" ]; then
-            cat > data/market-brief.json <<'EOF'
-{
-  "date": "AI error",
-  "title": "Market Brief",
-  "summary": "Gemini returned an empty response.",
-  "btc": "",
-  "eth": "",
-  "narrative": "",
-  "risk": "",
-  "focus": ""
-}
-EOF
-          else
-            echo "$TEXT" > data/market-brief.json
-          fi
+          fallback = {
+              "date": datetime.utcnow().strftime("%Y-%m-%d"),
+              "title": "Market Brief",
+              "summary": "Gemini returned an empty or invalid response.",
+              "btc": "",
+              "eth": "",
+              "narrative": "",
+              "risk": "",
+              "focus": ""
+          }
+
+          try:
+              req = urllib.request.Request(
+                  url,
+                  data=json.dumps(payload).encode("utf-8"),
+                  headers={"Content-Type": "application/json"},
+                  method="POST"
+              )
+
+              with urllib.request.urlopen(req) as response:
+                  raw = response.read().decode("utf-8")
+
+              parsed = json.loads(raw)
+              text = (
+                  parsed.get("candidates", [{}])[0]
+                  .get("content", {})
+                  .get("parts", [{}])[0]
+                  .get("text", "")
+                  .strip()
+              )
+
+              if not text:
+                  result = fallback
+              else:
+                  try:
+                      result = json.loads(text)
+                  except Exception:
+                      result = fallback
+                      result["summary"] = text[:500]
+
+          except Exception as e:
+              result = fallback
+              result["summary"] = f"Workflow error: {str(e)}"
+
+          with open("data/market-brief.json", "w", encoding="utf-8") as f:
+              json.dump(result, f, ensure_ascii=False, indent=2)
+          PY
 
       - name: Commit updated brief
         run: |
