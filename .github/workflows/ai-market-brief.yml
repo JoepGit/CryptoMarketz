@@ -58,11 +58,9 @@ jobs:
               }]
             }")
 
-          TEXT=$(echo "$RESPONSE" | jq -r '.candidates[0].content.parts[0].text // empty')
+          TEXT=$(echo "$RESPONSE" | jq -r '.candidates[0].content.parts[0].text')
 
-          printf "%s" "$TEXT" | sed 's/^```json//; s/^```//; s/```$//' > data/market-brief.json
-
-          jq empty data/market-brief.json
+          echo "$TEXT" > data/market-brief.json
 
       - name: Commit updated brief
         run: |
