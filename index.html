@@ -1963,25 +1963,45 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--cream);ov
 
         <div class="card" style="padding:18px;margin-bottom:14px">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
-            <div style="font-family:'Orbitron',monospace;font-size:11px;font-weight:700;color:var(--gold)">Market brief</div>
+            <div style="font-family:'Orbitron',monospace;font-size:11px;font-weight:700;color:var(--gold)">Daily market brief</div>
             <div id="brief-date" style="font-family:'Orbitron',monospace;font-size:8px;color:var(--sub);letter-spacing:.1em">Updated --</div>
           </div>
           <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
-            <div class="card" style="padding:12px;background:rgba(17,15,19,.55)"><div style="font-family:'Orbitron',monospace;font-size:8px;color:var(--sub);letter-spacing:.14em">BTC</div><div id="brief-btc" style="margin-top:6px;font-size:12px;color:var(--cream)">loading...</div></div>
-            <div class="card" style="padding:12px;background:rgba(17,15,19,.55)"><div style="font-family:'Orbitron',monospace;font-size:8px;color:var(--sub);letter-spacing:.14em">ETH</div><div id="brief-eth" style="margin-top:6px;font-size:12px;color:var(--cream)">loading...</div></div>
-            <div class="card" style="padding:12px;background:rgba(17,15,19,.55)"><div style="font-family:'Orbitron',monospace;font-size:8px;color:var(--sub);letter-spacing:.14em">RISK</div><div id="brief-risk" style="margin-top:6px;font-size:12px;color:var(--cream)">loading...</div></div>
-            <div class="card" style="padding:12px;background:rgba(17,15,19,.55)"><div style="font-family:'Orbitron',monospace;font-size:8px;color:var(--sub);letter-spacing:.14em">FOCUS</div><div id="brief-focus" style="margin-top:6px;font-size:12px;color:var(--cream)">loading...</div></div>
+            <div class="card" style="padding:12px;background:rgba(17,15,19,.55)"><div style="font-family:'Orbitron',monospace;font-size:8px;color:var(--sub);letter-spacing:.14em">BTC structure</div><div id="brief-btc" style="margin-top:6px;font-size:12px;color:var(--cream);line-height:1.6">loading...</div></div>
+            <div class="card" style="padding:12px;background:rgba(17,15,19,.55)"><div style="font-family:'Orbitron',monospace;font-size:8px;color:var(--sub);letter-spacing:.14em">ETH flows</div><div id="brief-eth" style="margin-top:6px;font-size:12px;color:var(--cream);line-height:1.6">loading...</div></div>
+            <div class="card" style="padding:12px;background:rgba(17,15,19,.55)"><div style="font-family:'Orbitron',monospace;font-size:8px;color:var(--sub);letter-spacing:.14em">Funding + OI</div><div id="brief-funding" style="margin-top:6px;font-size:12px;color:var(--cream);line-height:1.6">loading...</div></div>
+            <div class="card" style="padding:12px;background:rgba(17,15,19,.55)"><div style="font-family:'Orbitron',monospace;font-size:8px;color:var(--sub);letter-spacing:.14em">Volatility outlook</div><div id="brief-volatility" style="margin-top:6px;font-size:12px;color:var(--cream);line-height:1.6">loading...</div></div>
           </div>
         </div>
 
-        <div class="card" style="padding:18px;margin-bottom:14px">
-          <div style="font-family:'Orbitron',monospace;font-size:11px;font-weight:700;color:var(--gold);margin-bottom:10px">Top narratives today</div>
-          <div id="brief-narrative" style="font-size:12px;color:var(--cream);line-height:1.9">loading...</div>
+        <div style="display:grid;grid-template-columns:1.2fr .8fr;gap:14px;margin-bottom:14px">
+          <div class="card" style="padding:18px">
+            <div style="font-family:'Orbitron',monospace;font-size:11px;font-weight:700;color:var(--gold);margin-bottom:10px">Top narratives</div>
+            <div id="brief-narrative" style="font-size:12px;color:var(--cream);line-height:1.9">loading...</div>
+          </div>
+          <div class="card" style="padding:18px">
+            <div style="font-family:'Orbitron',monospace;font-size:11px;font-weight:700;color:var(--gold);margin-bottom:10px">Macro impact</div>
+            <div id="brief-macro" style="font-size:12px;color:var(--sub);line-height:1.85">loading...</div>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
+          <div class="card" style="padding:18px">
+            <div style="font-family:'Orbitron',monospace;font-size:11px;font-weight:700;color:var(--gold);margin-bottom:10px">Whale flows</div>
+            <div id="brief-whales" style="font-size:12px;color:var(--sub);line-height:1.85">loading...</div>
+          </div>
+          <div class="card" style="padding:18px">
+            <div style="font-family:'Orbitron',monospace;font-size:11px;font-weight:700;color:var(--gold);margin-bottom:10px">Risk and focus</div>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <div><div style="font-family:'Orbitron',monospace;font-size:8px;color:var(--sub);letter-spacing:.14em;margin-bottom:4px">Risk</div><div id="brief-risk" style="font-size:12px;color:var(--cream);line-height:1.7">loading...</div></div>
+              <div><div style="font-family:'Orbitron',monospace;font-size:8px;color:var(--sub);letter-spacing:.14em;margin-bottom:4px">Focus</div><div id="brief-focus" style="font-size:12px;color:var(--cream);line-height:1.7">loading...</div></div>
+            </div>
+          </div>
         </div>
 
         <div class="card" style="padding:18px">
-          <div style="font-family:'Orbitron',monospace;font-size:11px;font-weight:700;color:var(--gold);margin-bottom:10px">AI summary</div>
-          <div id="brief-summary" style="font-size:12px;color:var(--sub);line-height:1.85">loading market brief...</div>
+          <div style="font-family:'Orbitron',monospace;font-size:11px;font-weight:700;color:var(--gold);margin-bottom:10px">AI market report</div>
+          <div id="brief-summary" style="font-size:12px;color:var(--sub);line-height:1.9;white-space:pre-wrap">loading market brief...</div>
         </div>
       </div>
     </div>
@@ -3083,13 +3103,32 @@ async function loadMarketBrief(){
       if(el) el.innerText = value || "";
     };
 
+    const normalizeList = (value) => {
+      if(Array.isArray(value)) return value.map((item, i) => `${i + 1}. ${item}`).join("\n");
+      return value || "";
+    };
+
+    const joinParts = (...parts) => parts.filter(Boolean).join(" ");
+
     set("brief-date", data.date ? `Updated ${data.date}` : "Updated --");
-    set("brief-btc", data.btc);
-    set("brief-eth", data.eth);
+    set("brief-btc", data.btc_structure || data.btc);
+    set("brief-eth", data.eth_flows || data.eth);
+    set("brief-funding", data.funding_oi || data.funding || "");
+    set("brief-volatility", data.volatility_outlook || data.volatility || "");
+    set("brief-narrative", normalizeList(data.top_narratives || data.narratives || data.narrative));
+    set("brief-macro", data.macro_impact || data.macro || "");
+    set("brief-whales", data.whale_flows || data.whales || "");
     set("brief-risk", data.risk);
     set("brief-focus", data.focus);
-    set("brief-narrative", data.narrative);
-    set("brief-summary", data.summary);
+    set("brief-summary", data.full_report || data.summary || joinParts(
+      data.summary,
+      data.btc_structure || data.btc,
+      data.eth_flows || data.eth,
+      data.macro_impact || data.macro,
+      data.whale_flows || data.whales,
+      data.funding_oi || data.funding,
+      data.volatility_outlook || data.volatility
+    ));
   }catch(err){
     const summary = document.getElementById("brief-summary");
     if(summary) summary.innerText = "market brief unavailable";
