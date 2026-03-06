@@ -60,22 +60,22 @@ jobs:
 
           TEXT=$(echo "$RESPONSE" | jq -r '.candidates[0].content.parts[0].text // empty')
 
-if [ -z "$TEXT" ]; then
-  TEXT='{
-    "date": "AI error",
-    "title": "Market Brief",
-    "summary": "Gemini returned empty response",
-    "btc": "",
-    "eth": "",
-    "narrative": "",
-    "risk": "",
-    "focus": ""
-  }'
-fi
-
-echo "$TEXT" > data/market-brief.json
-
-          echo "$TEXT" > data/market-brief.json
+          if [ -z "$TEXT" ]; then
+            cat > data/market-brief.json <<'EOF'
+{
+  "date": "AI error",
+  "title": "Market Brief",
+  "summary": "Gemini returned an empty response.",
+  "btc": "",
+  "eth": "",
+  "narrative": "",
+  "risk": "",
+  "focus": ""
+}
+EOF
+          else
+            echo "$TEXT" > data/market-brief.json
+          fi
 
       - name: Commit updated brief
         run: |
