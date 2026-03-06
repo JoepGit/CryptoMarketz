@@ -1,10 +1,14 @@
 {
-  "date": "AI Generated",
-  "title": "Crypto Market Brief",
-  "summary": "Bitcoin is holding key support while liquidity rotates into mid caps.",
-  "btc": "Neutral",
-  "eth": "Constructive",
-  "narrative": "AI Agents and DePIN remain dominant narratives.",
-  "risk": "Volatility around macro data.",
-  "focus": "Watch liquidity rotation."
+  "date": "2026-03-06",
+  "title": "Daily AI Market Brief",
+  "btc_structure": "No bitcoin structure update available.",
+  "eth_flows": "No ethereum flow update available.",
+  "funding_oi": "No funding and open interest update available.",
+  "volatility_outlook": "No volatility outlook available.",
+  "top_narratives": "No narrative update available.",
+  "macro_impact": "No macro impact update available.",
+  "whale_flows": "No whale flow update available.",
+  "risk": "No risk update available.",
+  "focus": "No focus update available.",
+  "full_report": "Workflow error: HTTP Error 404: Not Found"
 }
