@@ -2,8 +2,6 @@ name: AI Market Brief
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 7 * * *"
 
 permissions:
   contents: write
@@ -16,40 +14,21 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Generate AI Market Brief
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      - name: Generate placeholder market brief
         run: |
           mkdir -p data
-
-          curl -s \
-          -H "Content-Type: application/json" \
-          -X POST \
-          "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=$GEMINI_API_KEY" \
-          -d '{
-            "contents":[
-              {
-                "parts":[
-                  {
-                    "text":"Write a short crypto market brief as JSON with keys date,title,summary,btc,eth,narrative,risk,focus"
-                  }
-                ]
-              }
-            ]
-          }' > response.json
-
-          cat > data/market-brief.json <<EOF
-{
-  "date": "AI Generated",
-  "title": "Crypto Market Brief",
-  "summary": "AI market brief generated",
-  "btc": "",
-  "eth": "",
-  "narrative": "",
-  "risk": "",
-  "focus": ""
-}
-EOF
+          cat > data/market-brief.json <<'EOF'
+          {
+            "date": "AI Generated",
+            "title": "Crypto Market Brief",
+            "summary": "AI market brief generated",
+            "btc": "",
+            "eth": "",
+            "narrative": "",
+            "risk": "",
+            "focus": ""
+          }
+          EOF
 
       - name: Commit updated brief
         run: |
