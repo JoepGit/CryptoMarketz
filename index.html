@@ -1981,9 +1981,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--cream);ov
 
         <div class="card" style="padding:18px">
           <div style="font-family:'Orbitron',monospace;font-size:11px;font-weight:700;color:var(--gold);margin-bottom:10px">AI summary</div>
-          <div style="font-size:12px;color:var(--sub);line-height:1.85">
-            Bitcoin is holding key support while liquidity rotates into mid caps. AI and DePIN remain the strongest narratives by attention. Expect volatility around major levels.
-          </div>
+          <div id="brief-summary" style="font-size:12px;color:var(--sub);line-height:1.85">
+loading market brief...
+</div>
         </div>
 
         <div style="font-family:'Orbitron',monospace;font-size:8px;color:rgba(122,106,82,.3);letter-spacing:.1em;text-align:center;padding:10px 0 4px">
@@ -3076,6 +3076,38 @@ function aiClear(){
   go(0);
   startAuto();
 })();
+</script>
+</script>
+
+<script>
+
+async function loadMarketBrief(){
+
+  try{
+
+    const res = await fetch("/data/market-brief.json");
+    const data = await res.json();
+
+    const summary = document.getElementById("brief-summary");
+
+    if(summary){
+      summary.innerText = data.summary;
+    }
+
+  }catch(err){
+
+    const summary = document.getElementById("brief-summary");
+
+    if(summary){
+      summary.innerText = "market brief unavailable";
+    }
+
+  }
+
+}
+
+loadMarketBrief();
+
 </script>
 
 </body>
