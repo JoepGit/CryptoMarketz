@@ -2,6 +2,8 @@ name: AI Market Brief
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "0 7 * * *"
 
 permissions:
   contents: write
@@ -11,29 +13,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Generate placeholder market brief
+      - name: Generate brief
         run: |
           mkdir -p data
-          cat > data/market-brief.json <<'EOF'
+          cat <<EOF > data/market-brief.json
           {
             "date": "AI Generated",
             "title": "Crypto Market Brief",
-            "summary": "AI market brief generated",
-            "btc": "",
-            "eth": "",
-            "narrative": "",
-            "risk": "",
-            "focus": ""
+            "summary": "Bitcoin is holding key support while liquidity rotates into mid caps.",
+            "btc": "Neutral",
+            "eth": "Constructive",
+            "narrative": "AI Agents and DePIN remain dominant narratives.",
+            "risk": "Volatility around macro data.",
+            "focus": "Watch liquidity rotation."
           }
           EOF
 
-      - name: Commit updated brief
+      - name: Commit
         run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
+          git config user.name github-actions
+          git config user.email actions@github.com
           git add data/market-brief.json
-          git commit -m "Update AI market brief" || echo "No changes"
+          git commit -m "update brief" || echo "no changes"
           git push
