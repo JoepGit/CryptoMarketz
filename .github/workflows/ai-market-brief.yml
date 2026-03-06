@@ -101,8 +101,33 @@ jobs:
                   .strip()
               )
 
-              if not text:
-                  result = fallback
+              try:
+    req = urllib.request.Request(
+        url,
+        data=json.dumps(payload).encode("utf-8"),
+        headers={"Content-Type": "application/json"},
+        method="POST"
+    )
+
+    with urllib.request.urlopen(req) as response:
+        raw = response.read().decode("utf-8")
+
+    parsed = json.loads(raw)
+
+    if "candidates" in parsed:
+        text = parsed["candidates"][0]["content"]["parts"][0]["text"]
+
+        try:
+            result = json.loads(text)
+        except:
+            result = fallback
+            result["summary"] = text
+    else:
+        result = fallback
+
+except Exception as e:
+    result = fallback
+    result["summary"] = str(e)
               else:
                   try:
                       result = json.loads(text)
