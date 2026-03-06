@@ -21,7 +21,7 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Generate market brief
+      - name: Generate premium market brief
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
@@ -42,16 +42,17 @@ jobs:
 
           fallback = {
               "date": today,
-              "title": "Daily Crypto Market Brief",
-              "summary": "Unable to generate AI brief right now.",
-              "btc": "No update available.",
-              "eth": "No update available.",
-              "market": "No market overview available.",
-              "narratives": [
-                  "No narrative data available."
-              ],
+              "title": "Daily AI Market Brief",
+              "btc_structure": "No bitcoin structure update available.",
+              "eth_flows": "No ethereum flow update available.",
+              "funding_oi": "No funding and open interest update available.",
+              "volatility_outlook": "No volatility outlook available.",
+              "top_narratives": "No narrative update available.",
+              "macro_impact": "No macro impact update available.",
+              "whale_flows": "No whale flow update available.",
               "risk": "No risk update available.",
-              "focus": "No focus update available."
+              "focus": "No focus update available.",
+              "full_report": "Unable to generate AI brief right now."
           }
 
           try:
@@ -83,17 +84,16 @@ jobs:
 
               if not api_key:
                   result = fallback
-                  result["summary"] = "Missing GEMINI_API_KEY secret."
+                  result["full_report"] = "Missing GEMINI_API_KEY secret."
               else:
                   prompt = f"""
           You are the CryptoMarketz AI desk.
 
-          Write a professional crypto daily market brief for {today}.
+          Write a premium Bloomberg-style crypto market brief for {today}.
 
-          Use the market data below and turn it into a useful, information-dense brief.
-          Be factual, concise, and calm.
-          No hype language.
-          No markdown.
+          Use the market data below and create a calm, factual, information-dense report.
+          Do not use hype language.
+          Do not use markdown.
           Output VALID JSON only.
 
           Market data:
@@ -106,26 +106,26 @@ jobs:
           Return exactly this JSON structure:
           {{
             "date": "{today}",
-            "title": "Daily Crypto Market Brief",
-            "summary": "4 to 6 sentences with what happened in the market and why it matters",
-            "btc": "3 to 5 sentences focused on bitcoin structure, flows, momentum, and positioning",
-            "eth": "3 to 5 sentences focused on ethereum structure, relative strength, and flows",
-            "market": "3 to 5 sentences on majors, rotations, breadth, and general market tone",
-            "narratives": [
-              "Narrative 1",
-              "Narrative 2",
-              "Narrative 3"
-            ],
-            "risk": "2 to 4 sentences on main risks to watch",
-            "focus": "2 to 4 sentences on what traders should watch next"
+            "title": "Daily AI Market Brief",
+            "btc_structure": "2 to 4 sentences on bitcoin market structure, momentum, support resistance, and positioning",
+            "eth_flows": "2 to 4 sentences on ethereum relative strength, capital rotation, and flow dynamics",
+            "funding_oi": "2 to 4 sentences on derivatives tone, funding behavior, and speculative positioning",
+            "volatility_outlook": "2 to 4 sentences on volatility expectations and liquidity conditions",
+            "top_narratives": "3 to 5 short narrative themes in one compact paragraph",
+            "macro_impact": "2 to 4 sentences on macro conditions, rates, dollar, liquidity, and risk appetite",
+            "whale_flows": "2 to 4 sentences on larger wallet behavior, accumulation or distribution assumptions, and caution about inference limits",
+            "risk": "1 to 3 sentences on the main risk to watch next",
+            "focus": "1 to 3 sentences on what traders should focus on next",
+            "full_report": "A strong 300 to 450 word market report that ties everything together in a professional Blockworks or Bloomberg style"
           }}
 
           Rules:
           - JSON only
           - no code blocks
           - no markdown
-          - narratives must be short
-          - write a real daily brief, not generic filler
+          - no bullet points
+          - write like a market desk, not like a hype thread
+          - if data is limited, be transparent and cautious rather than making things up
           """
 
                   url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
@@ -167,9 +167,19 @@ jobs:
 
                   result = json.loads(text)
 
+                  required_keys = [
+                      "date", "title", "btc_structure", "eth_flows", "funding_oi",
+                      "volatility_outlook", "top_narratives", "macro_impact",
+                      "whale_flows", "risk", "focus", "full_report"
+                  ]
+
+                  for key in required_keys:
+                      if key not in result:
+                          result[key] = fallback[key]
+
           except Exception as e:
               result = fallback
-              result["summary"] = f"Workflow error: {str(e)}"
+              result["full_report"] = f"Workflow error: {str(e)}"
 
           with open("data/market-brief.json", "w", encoding="utf-8") as f:
               json.dump(result, f, ensure_ascii=False, indent=2)
