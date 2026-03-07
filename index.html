@@ -53,8 +53,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--cream);ov
 .sb-sec{padding:15px 13px 5px;font-family:'Orbitron',monospace;font-size:7px;letter-spacing:.22em;color:rgba(122,106,82,.3);text-transform:uppercase}
 .sbn{list-style:none;padding:0 7px}
 .sbn li a{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;font-size:12.5px;font-weight:500;color:var(--sub);transition:all .15s;margin-bottom:2px;cursor:pointer;text-decoration:none;border:1px solid transparent}
-.sbn li a:hover{background:rgba(212,175,55,.05);color:var(--cream)}
-.sbn li a.active{background:rgba(212,175,55,.09);color:var(--gold);border-color:rgba(212,175,55,.18)}
+.sbn li a:hover{background:rgba(212,175,55,.06);color:var(--cream);border-color:rgba(212,175,55,.12);box-shadow:0 0 18px rgba(212,175,55,.05)}
+.sbn li a.active{background:rgba(212,175,55,.09);color:var(--gold);border-color:rgba(212,175,55,.22);box-shadow:0 0 18px rgba(212,175,55,.06)}
 .sbn li a svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;opacity:.65}
 .sbn li a.active svg,.sbn li a:hover svg{opacity:1}
 .sb-lk{font-size:9px;margin-left:auto;opacity:.35}
@@ -81,8 +81,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--cream);ov
 .ph{margin-bottom:22px}
 .ph h1{font-family:'Orbitron',monospace;font-size:20px;font-weight:700;margin-bottom:3px}
 .ph p{font-size:13px;color:var(--sub)}
-.card{background:rgba(17,15,19,.88);border:1px solid var(--bdr);border-radius:12px;transition:border-color .2s}
-.card:hover{border-color:rgba(212,175,55,.26)}
+.card{background:rgba(17,15,19,.88);border:1px solid var(--bdr);border-radius:12px;transition:transform .2s,border-color .2s,box-shadow .2s}
+.card:hover{transform:translateY(-2px);border-color:rgba(212,175,55,.35);box-shadow:0 0 25px rgba(212,175,55,.08)}
 
 /* DASHBOARD */
 
@@ -687,6 +687,13 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--cream);ov
       <li><a onclick="goPage('tvbtc',this)">
         <svg viewBox="0 0 24 24"><line x1="4" y1="19" x2="20" y2="19"/><line x1="7" y1="17" x2="7" y2="8"/><line x1="12" y1="17" x2="12" y2="5"/><line x1="17" y1="17" x2="17" y2="10"/></svg>BTC Chart</a></li>
     </ul>
+    <div class="sb-sec">AI</div>
+    <ul class="sbn">
+      <li><a onclick="goPage('ai',this)">
+        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>AI Analyst <span style="font-family:'Orbitron',monospace;font-size:6px;background:linear-gradient(135deg,#b8860b,#d4af37);color:#08070a;padding:2px 5px;border-radius:2px;margin-left:2px;font-weight:700;letter-spacing:.05em">AI</span><span class="sb-lk" id="lk-ai">🔒</span></a></li>
+      <li><a onclick="goPage('ai-brief',this)">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8"/><path d="M8 17h8"/><path d="M8 9h2"/></svg>AI Daily Market Brief<span class="sb-lk" id="lk-ai-brief">🔒</span></a></li>
+    </ul>
     <div class="sb-sec">Learn</div>
     <ul class="sbn">
       <li><a onclick="goPage('education',this)">
@@ -700,12 +707,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--cream);ov
     </ul>
     <div class="sb-sec">Tools</div>
     <ul class="sbn">
-      <li><a onclick="goPage('ai',this)">
-        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>AI Analyst <span style="font-family:'Orbitron',monospace;font-size:6px;background:linear-gradient(135deg,#b8860b,#d4af37);color:#08070a;padding:2px 5px;border-radius:2px;margin-left:2px;font-weight:700;letter-spacing:.05em">AI</span><span class="sb-lk" id="lk-ai">🔒</span></a></li>
-      
-      <li><a onclick="goPage('ai-brief',this)">
-        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8"/><path d="M8 17h8"/><path d="M8 9h2"/></svg>AI Daily Market Brief<span class="sb-lk" id="lk-ai-brief">🔒</span></a></li>
-
       <li><a onclick="goPage('portfolio',this)">
         <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>Portfolio<span class="sb-lk" id="lk-portfolio">🔒</span></a></li>
       <li><a onclick="goPage('whales',this)">
