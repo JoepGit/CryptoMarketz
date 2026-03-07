@@ -147,11 +147,10 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--cream);ov
 .greet h1 em{font-style:normal;color:var(--gold)}
 .greet p{font-size:13px;color:var(--sub)}
 .dashboard-hero{min-height:calc(100vh - 155px);display:flex;flex-direction:column;justify-content:center;padding:10px 0 90px}
-.dashboard-terminal-title{margin-top:28px;font-family:'Orbitron',monospace;font-size:22px;font-weight:800;color:var(--gold);letter-spacing:.08em}
-.dashboard-terminal-status{margin-top:8px;font-family:'Orbitron',monospace;font-size:10px;color:rgba(212,175,55,.45);letter-spacing:.18em;text-transform:uppercase}
 .dashboard-feed{margin-top:42px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:14px;align-items:start;width:100%;max-width:1180px}
 .dashboard-stack{display:flex;flex-direction:column;gap:14px}
-.morning-brief-card{padding:18px 20px;background:linear-gradient(180deg,rgba(212,175,55,.06),rgba(17,15,19,.9));border:1px solid rgba(212,175,55,.16);border-radius:16px;box-shadow:0 0 0 1px rgba(212,175,55,.04) inset}
+.morning-brief-card{padding:18px 20px;background:linear-gradient(180deg,rgba(212,175,55,.06),rgba(17,15,19,.9));border:1px solid rgba(212,175,55,.16);border-radius:16px;box-shadow:0 0 0 1px rgba(212,175,55,.04) inset;cursor:pointer;transition:border-color .18s,transform .18s}
+.morning-brief-card:hover{border-color:rgba(212,175,55,.34);transform:translateY(-1px)}
 .db-kicker{font-family:'Orbitron',monospace;font-size:8px;letter-spacing:.18em;color:rgba(212,175,55,.58);text-transform:uppercase;margin-bottom:10px}
 .db-title{font-family:'Orbitron',monospace;font-size:22px;font-weight:800;line-height:1.15;color:var(--cream);margin-bottom:8px}
 .db-sub{font-size:13px;color:var(--gold);line-height:1.7;margin-bottom:14px}
@@ -682,7 +681,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--cream);ov
       <li><a onclick="goPage('markets',this)">
         <svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>Crypto Markets</a></li>
       <li><a onclick="goPage('heatmap',this)">
-        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Heatmap &amp; Liquidity<span class="sb-lk" id="lk-heatmap">🔒</span></a></li>
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Heatmap &amp; Liquidity</a></li>
       <li><a onclick="goPage('news',this)">
         <svg viewBox="0 0 24 24"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><line x1="10" y1="7" x2="18" y2="7"/><line x1="10" y1="11" x2="18" y2="11"/><line x1="10" y1="15" x2="18" y2="15"/></svg>Crypto News</a></li>
       <li><a onclick="goPage('tvbtc',this)">
@@ -754,12 +753,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--cream);ov
           <div id="clock-d" style="margin-top:3px;font-size:9px;color:var(--sub);letter-spacing:.08em;font-family:'Orbitron',monospace"></div>
         </div>
 
-        <div class="dashboard-terminal-title">CryptoMarketz Daily Terminal</div>
-        <div class="dashboard-terminal-status">System Status: Online</div>
-
         <div class="dashboard-feed">
           <div class="dashboard-stack">
-            <div class="morning-brief-card">
+            <div class="morning-brief-card" onclick="goPage('ai-brief',null)">
               <div class="db-kicker">Morning brief</div>
               <div class="db-title" id="dash-brief-title">AI Market Report</div>
               <div class="db-sub" id="dash-brief-sub">Your daily market briefing appears here and refreshes with the AI report.</div>
@@ -769,7 +765,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--cream);ov
                 <span class="db-pill" id="dash-brief-focus">focus loading</span>
               </div>
               <div class="db-copy" id="dash-brief-copy">Loading market brief.</div>
-              <div class="db-link" onclick="goPage('brief',null)">Open full AI brief <span>→</span></div>
+              <div class="db-link" onclick="goPage('ai-brief',null)">Open full AI brief <span>→</span></div>
             </div>
 
             <div class="card dashboard-side-card">
@@ -1218,14 +1214,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--cream);ov
     <div class="page" id="page-heatmap">
       <div class="ph"><h1>Heatmap &amp; Liquidity</h1><p>Top 50 heatmap · liquidity snapshot · fear &amp; greed · top gainers</p></div>
       <div class="lkd">
-        <div id="lko-heatmap" class="lko"><div class="lkb">
-          <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          <div class="lk-ti">Members Only</div>
-          <div class="lk-sb">Heatmap &amp; Liquidity is exclusive to CryptoMarketz members.</div>
-          <div class="lk-r"><input class="lk-i" id="li-heatmap" placeholder="Access code" onkeydown="if(event.key==='Enter')unlock('heatmap')"><button class="lk-bt" onclick="unlock('heatmap')">Unlock</button></div>
-          <div class="lk-e" id="le-heatmap"></div>
-          <div class="lk-ft">No code? <a onclick="goPage('pricing',null)">View pricing →</a></div>
-        </div></div>
 
       <!-- Row 1: Heatmap (left big) + Fear & Greed (right) -->
       <div class="hl-grid" style="margin-bottom:11px">
