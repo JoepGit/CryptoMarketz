@@ -3515,7 +3515,7 @@ async function refreshBotSignals(){
   var grid=document.getElementById('bot-signals-grid');
   var upd=document.getElementById('bot-last-updated');
   if(!grid)return;
-  grid.innerHTML='<div style="font-family:'Orbitron',monospace;font-size:9px;color:var(--sub);padding:20px">Laden...</div>';
+  grid.innerHTML='<div style="font-family:\'Orbitron\',monospace;font-size:9px;color:var(--sub);padding:20px">Laden...</div>';
 
   var sigs=await loadBotSignals();
 
@@ -3533,10 +3533,10 @@ async function refreshBotSignals(){
 
   if(!sigs.length){
     grid.innerHTML='<div class="card" style="padding:40px;text-align:center;grid-column:1/-1">'
-      +'<div style="font-size:32px;margin-bottom:12px">🤖</div>'
-      +'<div style="font-family:'Orbitron',monospace;font-size:11px;font-weight:700;color:var(--cream);margin-bottom:8px">BOT NOG NIET ACTIEF</div>'
+      +'<div style="font-size:32px;margin-bottom:12px">\uD83E\uDD16</div>'
+      +'<div style="font-family:\'Orbitron\',monospace;font-size:11px;font-weight:700;color:var(--cream);margin-bottom:8px">BOT NOG NIET ACTIEF</div>'
       +'<div style="font-size:13px;color:var(--sub);line-height:1.7;max-width:380px;margin:0 auto">Voeg <strong style="color:var(--cream)">CLAUDE_API_KEY</strong> toe als GitHub Secret en run de workflow. Daarna verschijnen hier elk uur verse AI-signalen.</div>'
-      +'<div style="margin-top:16px;font-family:'Orbitron',monospace;font-size:8px;color:rgba(29,185,84,.5);letter-spacing:.1em">GitHub → Settings → Secrets → Actions → New secret</div>'
+      +'<div style="margin-top:16px;font-family:\'Orbitron\',monospace;font-size:8px;color:rgba(29,185,84,.5);letter-spacing:.1em">GitHub \u2192 Settings \u2192 Secrets \u2192 Actions \u2192 New secret</div>'
       +'</div>';
     return;
   }
@@ -3552,23 +3552,23 @@ async function refreshBotSignals(){
     return '<div class="card" style="padding:16px 18px;background:'+bgCol+';border-color:'+bdCol+'">'
       +'<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">'
       +'<div style="display:flex;align-items:center;gap:8px">'
-      +'<div style="font-family:'Orbitron',monospace;font-size:16px;font-weight:900;color:var(--cream)">'+escapeHtml(s.coin)+'</div>'
-      +'<span style="font-family:'Orbitron',monospace;font-size:9px;font-weight:700;padding:3px 9px;border-radius:4px;background:'+bgCol+';color:'+fgCol+';border:1px solid '+bdCol+'">'+s.type+'</span>'
+      +'<div style="font-family:\'Orbitron\',monospace;font-size:16px;font-weight:900;color:var(--cream)">'+escapeHtml(s.coin)+'</div>'
+      +'<span style="font-family:\'Orbitron\',monospace;font-size:9px;font-weight:700;padding:3px 9px;border-radius:4px;background:'+bgCol+';color:'+fgCol+';border:1px solid '+bdCol+'">'+s.type+'</span>'
       +'</div>'
-      +'<span style="font-family:'Orbitron',monospace;font-size:6px;padding:2px 7px;border-radius:2px;background:rgba(29,185,84,.12);color:#1DB954;border:1px solid rgba(29,185,84,.2);letter-spacing:.08em">BOT</span>'
+      +'<span style="font-family:\'Orbitron\',monospace;font-size:6px;padding:2px 7px;border-radius:2px;background:rgba(29,185,84,.12);color:#1DB954;border:1px solid rgba(29,185,84,.2);letter-spacing:.08em">BOT</span>'
       +'</div>'
       +(sub.length?'<div style="display:flex;flex-direction:column;gap:4px;margin-bottom:10px">'
         +sub.map(function(line){
           var isEntry=line.startsWith('Entry');var isTP=line.startsWith('TP');var isSL=line.startsWith('SL');
           var lc=isTP?'var(--grn)':isSL?'var(--red)':'var(--cream)';
-          return '<div style="display:flex;justify-content:space-between;font-family:'Orbitron',monospace;font-size:9px;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.04)">'
+          return '<div style="display:flex;justify-content:space-between;font-family:\'Orbitron\',monospace;font-size:9px;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.04)">'
             +'<span style="color:var(--sub)">'+line.split(':')[0].toUpperCase()+'</span>'
             +'<span style="color:'+lc+';font-weight:600">'+line.split(':').slice(1).join(':').trim()+'</span>'
             +'</div>';
         }).join('')
         +'</div>':'')
       +(s.note?'<div style="font-size:11px;color:var(--sub);line-height:1.6;font-style:italic;margin-bottom:8px">'+escapeHtml(s.note)+'</div>':'')
-      +'<div style="font-family:'Orbitron',monospace;font-size:7.5px;color:rgba(122,106,82,.45)">'+timeStr+'</div>'
+      +'<div style="font-family:\'Orbitron\',monospace;font-size:7.5px;color:rgba(122,106,82,.45)">'+timeStr+'</div>'
       +'</div>';
   }).join('');
 }
