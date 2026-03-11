@@ -1,5 +1,49 @@
 [
   {
+    "id": 1773264833803,
+    "coin": "BTC/USD",
+    "type": "WATCH",
+    "entry": "70625",
+    "tp": "73500",
+    "sl": "68500",
+    "note": "Positieve 1h en 24h momentum, maar 7d daling vraagt voorzichtigheid; wacht op confirmatie boven $71000.",
+    "timestamp": "2026-03-11T21:33:53.730Z",
+    "generated_at": "Wed, 11 Mar 2026 21:33:53 GMT"
+  },
+  {
+    "id": 1773264833782,
+    "coin": "ETH/USD",
+    "type": "BUY",
+    "entry": "2068",
+    "tp": "2250",
+    "sl": "1980",
+    "note": "Sterke 24h gain (+1.44%) tegen zwakke 7d trend; entry bij breakout boven $2100 aanbevolen.",
+    "timestamp": "2026-03-11T21:33:53.730Z",
+    "generated_at": "Wed, 11 Mar 2026 21:33:53 GMT"
+  },
+  {
+    "id": 1773264834405,
+    "coin": "BNB/USD",
+    "type": "BUY",
+    "entry": "653",
+    "tp": "710",
+    "sl": "620",
+    "note": "Beste relative performance (1.60% 24h, -1.58% 7d) met solide volume; momentum intact.",
+    "timestamp": "2026-03-11T21:33:53.730Z",
+    "generated_at": "Wed, 11 Mar 2026 21:33:53 GMT"
+  },
+  {
+    "id": 1773264834545,
+    "coin": "SOL/USD",
+    "type": "WATCH",
+    "entry": "87.3",
+    "tp": "95",
+    "sl": "81",
+    "note": "Positieve 1h/24h tegen sterke 7d daling (-6.55%); wacht op stabilisatie rond $85 voor entry.",
+    "timestamp": "2026-03-11T21:33:53.730Z",
+    "generated_at": "Wed, 11 Mar 2026 21:33:53 GMT"
+  },
+  {
     "id": 1773261305798,
     "coin": "ETH/USD",
     "type": "BUY",
