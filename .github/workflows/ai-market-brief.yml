@@ -24,33 +24,36 @@ jobs:
         run: |
           TODAY=$(date +'%Y-%m-%d')
 
-          PROMPT="You are a professional crypto market analyst. Generate a daily market brief for $TODAY. Return ONLY a valid JSON object with exactly these fields, no markdown, no explanation:\n{\n  \"date\": \"$TODAY\",\n  \"btc_structure\": \"2 sentences about Bitcoin price structure, support and resistance\",\n  \"eth_flows\": \"2 sentences about Ethereum flows and price action\",\n  \"funding_oi\": \"2 sentences about funding rates and open interest\",\n  \"volatility_outlook\": \"2 sentences about volatility expectations\",\n  \"top_narratives\": [\"narrative 1\", \"narrative 2\", \"narrative 3\", \"narrative 4\"],\n  \"macro_impact\": \"2 sentences about macro conditions affecting crypto\",\n  \"whale_flows\": \"2 sentences about large wallet activity\",\n  \"risk\": \"1 sentence about the key risk\",\n  \"focus\": \"1 sentence primary focus for traders today\",\n  \"full_report\": \"4-5 sentence complete market summary\"\n}"
+          python3 << 'PYEOF'
+          import os, json, urllib.request, urllib.error
+          from datetime import date
 
-          RESPONSE=$(curl -s \
-            "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=$GEMINI_API_KEY" \
-            -H "Content-Type: application/json" \
-            -d "{\"contents\":[{\"parts\":[{\"text\":\"$PROMPT\"}]}]}")
+          today = str(date.today())
+          api_key = os.environ['GEMINI_API_KEY']
 
-          echo "$RESPONSE" | python3 -c "
-          import sys, json
-          data = json.load(sys.stdin)
-          text = data['candidates'][0]['content']['parts'][0]['text']
-          # Strip markdown code fences if present
-          text = text.strip()
-          if text.startswith('\`\`\`'):
-              text = '\n'.join(text.split('\n')[1:])
-          if text.endswith('\`\`\`'):
-              text = '\n'.join(text.split('\n')[:-1])
-          brief = json.loads(text.strip())
-          with open('data/marketbrief.json', 'w') as f:
-              json.dump(brief, f, indent=2)
-          print('Brief written successfully')
-          "
+          prompt = f"""Generate a daily crypto market brief for {today}.
+          Return ONLY a valid JSON object with exactly these fields, no markdown, no explanation:
+          btc_structure, eth_flows, funding_oi, volatility_outlook,
+          top_narratives (array of 4 strings), macro_impact, whale_flows,
+          risk, focus, full_report"""
 
-      - name: Commit and push updated brief
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/marketbrief.json
-          git commit -m "Update AI market brief $TODAY" || echo "No changes to commit"
-          git push
+          payload = json.dumps({
+            "contents": [{"parts": [{"text": prompt}]}]
+          }).encode()
+
+          url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
+          req = urllib.request.Request(url, data=payload, headers={"Content-Type": "application/json"})
+
+          try:
+            with urllib.request.urlopen(req) as r:
+              data = json.loads(r.read())
+          except urllib.error.HTTPError as e:
+            print("HTTP Error:", e.code, e.read().decode())
+            raise
+
+          print("Raw response:", json.dumps(data)[:500])
+
+          text = data['candidates'][0]['content']['parts'][0]['text'].strip()
+          if text.startswith('```'):
+            text = '\n'.join(text.split('\n')[1:])
+          if
