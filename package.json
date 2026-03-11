@@ -1,0 +1,12 @@
+{
+  "name": "cryptomarketz-signal-bot",
+  "version": "1.0.0",
+  "description": "Automatische signal bot voor CryptoMarketz",
+  "type": "module",
+  "scripts": {
+    "bot": "node bot/signal-bot.js"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
