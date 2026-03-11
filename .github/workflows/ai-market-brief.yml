@@ -15,45 +15,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Ensure data folder exists
-        run: mkdir -p data
-
       - name: Generate AI market brief via Gemini
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python3 generate_brief.py
+
+      - name: Commit and push updated brief
         run: |
-          TODAY=$(date +'%Y-%m-%d')
-
-          python3 << 'PYEOF'
-          import os, json, urllib.request, urllib.error
-          from datetime import date
-
-          today = str(date.today())
-          api_key = os.environ['GEMINI_API_KEY']
-
-          prompt = f"""Generate a daily crypto market brief for {today}.
-          Return ONLY a valid JSON object with exactly these fields, no markdown, no explanation:
-          btc_structure, eth_flows, funding_oi, volatility_outlook,
-          top_narratives (array of 4 strings), macro_impact, whale_flows,
-          risk, focus, full_report"""
-
-          payload = json.dumps({
-            "contents": [{"parts": [{"text": prompt}]}]
-          }).encode()
-
-          url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
-          req = urllib.request.Request(url, data=payload, headers={"Content-Type": "application/json"})
-
-          try:
-            with urllib.request.urlopen(req) as r:
-              data = json.loads(r.read())
-          except urllib.error.HTTPError as e:
-            print("HTTP Error:", e.code, e.read().decode())
-            raise
-
-          print("Raw response:", json.dumps(data)[:500])
-
-          text = data['candidates'][0]['content']['parts'][0]['text'].strip()
-          if text.startswith('```'):
-            text = '\n'.join(text.split('\n')[1:])
-          if
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/marketbrief.json
+          git commit -m "Update AI market brief" || echo "No changes to commit"
+          git push
