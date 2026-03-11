@@ -14,12 +14,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      - name: Generate AI market brief via Gemini
+      - name: Generate AI market brief via Claude
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
         run: python3 generate_brief.py
-
       - name: Commit and push updated brief
         run: |
           git config user.name "github-actions[bot]"
