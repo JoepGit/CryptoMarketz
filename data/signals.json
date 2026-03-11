@@ -1,5 +1,38 @@
 [
   {
+    "id": 1773268061821,
+    "coin": "ETH/USD",
+    "type": "BUY",
+    "entry": "2071.44",
+    "tp": "2180.00",
+    "sl": "2010.00",
+    "note": "Sterkste 24h performer met 2.06% gain, positieve momentum tegen weektrend.",
+    "timestamp": "2026-03-11T22:27:41.414Z",
+    "generated_at": "Wed, 11 Mar 2026 22:27:41 GMT"
+  },
+  {
+    "id": 1773268061827,
+    "coin": "SOL/USD",
+    "type": "WATCH",
+    "entry": "87.44",
+    "tp": "92.00",
+    "sl": "84.00",
+    "note": "Tweede beste 24h performance (2.46%) maar zwakke 7d trend (-5.35%), afwachten voor bevestiging.",
+    "timestamp": "2026-03-11T22:27:41.414Z",
+    "generated_at": "Wed, 11 Mar 2026 22:27:41 GMT"
+  },
+  {
+    "id": 1773268061875,
+    "coin": "BTC/USD",
+    "type": "WATCH",
+    "entry": "70599",
+    "tp": "73500",
+    "sl": "68500",
+    "note": "Dominante marktleider maar minimaal momentum (0.03% 1h), geen duidelijke setup.",
+    "timestamp": "2026-03-11T22:27:41.414Z",
+    "generated_at": "Wed, 11 Mar 2026 22:27:41 GMT"
+  },
+  {
     "id": 1773264833803,
     "coin": "BTC/USD",
     "type": "WATCH",
