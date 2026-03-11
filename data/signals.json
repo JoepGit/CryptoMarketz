@@ -1,1 +1,46 @@
-[]
+[
+  {
+    "id": 1773258094481,
+    "coin": "ETH/USD",
+    "type": "BUY",
+    "entry": "2074.47",
+    "tp": "2180.00",
+    "sl": "1990.00",
+    "note": "Sterkste 24h momentum (+1.87%), volume hoog, oversold na 7d daling.",
+    "timestamp": "2026-03-11T19:41:33.882Z",
+    "generated_at": "Wed, 11 Mar 2026 19:41:33 GMT"
+  },
+  {
+    "id": 1773258094422,
+    "coin": "SOL/USD",
+    "type": "BUY",
+    "entry": "87.49",
+    "tp": "92.50",
+    "sl": "83.00",
+    "note": "Positieve 24h performance (+1.92%) met recovery setup na 7d decline.",
+    "timestamp": "2026-03-11T19:41:33.882Z",
+    "generated_at": "Wed, 11 Mar 2026 19:41:33 GMT"
+  },
+  {
+    "id": 1773258094781,
+    "coin": "BTC/USD",
+    "type": "WATCH",
+    "entry": "70661",
+    "tp": "73500",
+    "sl": "69000",
+    "note": "Zwakke momentum (0.91% 24h), afwachten op verdere directie.",
+    "timestamp": "2026-03-11T19:41:33.882Z",
+    "generated_at": "Wed, 11 Mar 2026 19:41:33 GMT"
+  },
+  {
+    "id": 1773258094766,
+    "coin": "XRP/USD",
+    "type": "WATCH",
+    "entry": "1.39",
+    "tp": "1.48",
+    "sl": "1.32",
+    "note": "Negatieve 1h (-0.56%) ondanks positieve 24h, onduidelijk signaal.",
+    "timestamp": "2026-03-11T19:41:33.882Z",
+    "generated_at": "Wed, 11 Mar 2026 19:41:33 GMT"
+  }
+]
