@@ -3401,7 +3401,7 @@ function initBriefNavigation(){
 
 async function loadMarketBrief(){
   try{
-    const res = await fetch('/data/market-brief.json?t=' + Date.now());
+    const res = await fetch('/data/marketbrief.json?t=' + Date.now());
     const data = await res.json();
 
     const set = (id, value) => {
