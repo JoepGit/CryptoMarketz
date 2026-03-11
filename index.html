@@ -786,6 +786,8 @@ body::before{background:radial-gradient(circle at 18% 0%, rgba(29,185,84,.12), t
         <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>AI Analyst <span style="font-family:'Orbitron',monospace;font-size:6px;background:linear-gradient(135deg,#7df2df,#63b8ff);color:#041018;padding:2px 5px;border-radius:2px;margin-left:2px;font-weight:700;letter-spacing:.05em">AI</span><span class="sb-lk" id="lk-ai">🔒</span></a></li>
       <li><a onclick="goPage('ai-brief',this)">
         <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8"/><path d="M8 17h8"/><path d="M8 9h2"/></svg>AI Daily Market Brief<span class="sb-lk" id="lk-ai-brief">🔒</span></a></li>
+      <li><a onclick="goPage('bot-signals',this)">
+        <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>Bot Signals <span style="font-family:'Orbitron',monospace;font-size:6px;background:rgba(29,185,84,.2);color:#1DB954;border:1px solid rgba(29,185,84,.3);padding:1px 5px;border-radius:2px;margin-left:2px;font-weight:700;letter-spacing:.05em">BOT</span><span class="sb-lk" id="lk-bot-signals">&#x1F512;</span></a></li>
     </ul>
     <div class="sb-sec">Learn</div>
     <ul class="sbn">
@@ -2298,6 +2300,68 @@ body::before{background:radial-gradient(circle at 18% 0%, rgba(29,185,84,.12), t
 
 
 
+
+    <!-- ═══ BOT SIGNALS ═══ -->
+    <div class="page" id="page-bot-signals">
+      <div class="ph"><h1>Bot Signals</h1><p>AI-generated trading signals · vernieuwd elk uur via GitHub Actions</p></div>
+      <div class="lkd">
+        <div id="lko-bot-signals" class="lko"><div class="lkb">
+          <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <div class="lk-ti">Members Only</div>
+          <div class="lk-sb">Bot Signals zijn exclusief voor CryptoMarketz members.</div>
+          <div class="lk-r"><input class="lk-i" id="li-bot-signals" placeholder="Access code" onkeydown="if(event.key==='Enter')unlock('bot-signals')"><button class="lk-bt" onclick="unlock('bot-signals')">Unlock</button></div>
+          <div class="lk-e" id="le-bot-signals"></div>
+          <div class="lk-ft">No code? <a onclick="goPage('pricing',null)">View pricing →</a></div>
+        </div></div>
+
+        <!-- Header card -->
+        <div class="card" style="padding:18px 22px;margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+          <div style="display:flex;align-items:center;gap:14px">
+            <div style="width:38px;height:38px;border-radius:10px;background:rgba(29,185,84,.1);border:1px solid rgba(29,185,84,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1DB954" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <div>
+              <div style="font-family:'Orbitron',monospace;font-size:11px;font-weight:700;color:#1DB954;letter-spacing:.06em">AI BOT SIGNALS</div>
+              <div style="font-size:12px;color:var(--sub);margin-top:2px">Claude AI analyseert elk uur de markt en post automatisch signalen</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px">
+            <div id="bot-last-updated" style="font-family:'Orbitron',monospace;font-size:8px;color:var(--sub);letter-spacing:.1em">Laden...</div>
+            <button onclick="refreshBotSignals()" style="background:rgba(29,185,84,.08);border:1px solid rgba(29,185,84,.2);color:#1DB954;font-family:'Orbitron',monospace;font-size:8px;padding:6px 12px;border-radius:6px;cursor:pointer;letter-spacing:.06em">&#8635; REFRESH</button>
+          </div>
+        </div>
+
+        <!-- Stats row -->
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:11px;margin-bottom:14px" id="bot-stats-row">
+          <div class="card" style="padding:14px 16px">
+            <div style="font-family:'Orbitron',monospace;font-size:7.5px;color:var(--sub);letter-spacing:.13em;margin-bottom:6px">TOTAAL SIGNALEN</div>
+            <div id="bot-stat-total" style="font-family:'Orbitron',monospace;font-size:20px;font-weight:700;color:var(--cream)">0</div>
+          </div>
+          <div class="card" style="padding:14px 16px">
+            <div style="font-family:'Orbitron',monospace;font-size:7.5px;color:var(--sub);letter-spacing:.13em;margin-bottom:6px">BUY SIGNALEN</div>
+            <div id="bot-stat-buy" style="font-family:'Orbitron',monospace;font-size:20px;font-weight:700;color:var(--grn)">0</div>
+          </div>
+          <div class="card" style="padding:14px 16px">
+            <div style="font-family:'Orbitron',monospace;font-size:7.5px;color:var(--sub);letter-spacing:.13em;margin-bottom:6px">SELL SIGNALEN</div>
+            <div id="bot-stat-sell" style="font-family:'Orbitron',monospace;font-size:20px;font-weight:700;color:var(--red)">0</div>
+          </div>
+          <div class="card" style="padding:14px 16px">
+            <div style="font-family:'Orbitron',monospace;font-size:7.5px;color:var(--sub);letter-spacing:.13em;margin-bottom:6px">WATCH</div>
+            <div id="bot-stat-watch" style="font-family:'Orbitron',monospace;font-size:20px;font-weight:700;color:var(--accent)">0</div>
+          </div>
+        </div>
+
+        <!-- Signals grid -->
+        <div id="bot-signals-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:11px">
+          <div style="font-family:'Orbitron',monospace;font-size:9px;color:var(--sub);padding:20px">Laden...</div>
+        </div>
+
+        <div style="font-family:'Orbitron',monospace;font-size:8px;color:rgba(122,106,82,.3);letter-spacing:.1em;text-align:center;padding:16px 0 4px">
+          &#9888; BOT SIGNALEN ZIJN AI-GEGENEREERD &middot; GEEN FINANCIEEL ADVIES &middot; ALTIJD EIGEN ANALYSE DOEN
+        </div>
+      </div>
+    </div><!-- /page-bot-signals -->
+
 <!-- ═══ PRICING ═══ -->
     <div class="page" id="page-pricing">
       <div class="ph"><h1>Pricing</h1><p>Choose the plan that fits your goals. Cancel anytime.</p></div>
@@ -2507,7 +2571,7 @@ function loadTvBtc(){
 function isAdm(){return sessionStorage.getItem('jc_admin')==='1';}
 function isUnlk(){return sessionStorage.getItem('jc_ok')==='1'||isAdm();}
 function applyState(){
-  ['sig','an','risk','books','heatmap','education','portfolio','whales','ai','ai-narratives','ai-brief'].forEach(function(p){
+  ['sig','an','risk','books','heatmap','education','portfolio','whales','ai','ai-narratives','ai-brief','bot-signals'].forEach(function(p){
     var ov=document.getElementById('lko-'+p);if(ov&&isUnlk())ov.style.display='none';
     var lk=document.getElementById('lk-'+p);if(lk&&isUnlk())lk.style.display='none';
   });
@@ -2751,12 +2815,70 @@ function tMs(ts){var s=Math.floor((Date.now()-ts)/1000);if(s<60)return'Just now'
 function sCl(t){return(t==='BUY'||t==='WATCH')?'buy':t==='SELL'?'sell':'news';}
 function sIco(t){if(t==='BUY')return'<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>';if(t==='SELL')return'<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></svg>';return'<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/></svg>';}
 function sigHtml(s,del){var cl=sCl(s.type);var sub=[s.entry&&'Entry: '+s.entry,s.tp&&'TP: '+s.tp,s.sl&&'SL: '+s.sl].filter(Boolean).join(' · ');var d=(del&&isAdm())?'<button style="background:none;border:none;color:rgba(244,63,94,.3);cursor:pointer;font-size:14px;float:right;padding:0 3px" onclick="delSig('+s.id+')">×</button>':'';return'<div style="padding:8px 0;border-bottom:1px solid rgba(212,175,55,.05);display:flex;gap:8px;align-items:flex-start"><div style="width:27px;height:27px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11px;background:'+(cl==='buy'?'rgba(74,222,128,.1)':cl==='sell'?'rgba(244,63,94,.1)':'rgba(212,175,55,.1)')+';color:'+(cl==='buy'?'var(--grn)':cl==='sell'?'var(--red)':'var(--accent)')+'">'+sIco(s.type)+'</div><div style="flex:1">'+d+'<div style="font-size:11px;font-weight:600;margin-bottom:1px">'+s.coin+(s.type!=='NEWS'?' — '+s.type:'')+'</div>'+(sub?'<div style="font-size:10px;color:var(--sub);line-height:1.4">'+sub+'</div>':'')+(s.note?'<div style="font-size:10px;color:var(--sub);line-height:1.4;font-style:italic;margin-top:2px">'+s.note+'</div>':'')+'<span style="font-family:\'Orbitron\',monospace;font-size:8px;padding:1px 6px;border-radius:100px;font-weight:700;margin-top:2px;display:inline-block;background:'+(cl==='buy'?'rgba(74,222,128,.1)':cl==='sell'?'rgba(244,63,94,.1)':'rgba(212,175,55,.1)')+';color:'+(cl==='buy'?'var(--grn)':cl==='sell'?'var(--red)':'var(--accent)')+'">'+s.type+'</span><div style="font-family:\'Orbitron\',monospace;font-size:7.5px;color:rgba(122,106,82,.4);margin-top:2px">'+tMs(s.id)+'</div></div></div>';}
-function renderSignals(){var sigs=gSigs(),empty='<div style=\"font-family:\'Orbitron\',monospace;font-size:9px;color:var(--sub)\">No signals yet.</div>';var sf=document.getElementById('sig-full');if(sf)sf.innerHTML=sigs.length?sigs.map(function(s){return sigHtml(s,true);}).join(''):empty;var ds=document.getElementById('dash-signals');if(ds)ds.innerHTML=sigs.length?sigs.slice(0,3).map(function(s){return sigHtml(s,false);}).join(''):empty;}
+/* ── BOT SIGNALS: laadt data/signals.json en combineert met handmatige signalen ── */
+async function loadBotSignals(){
+  try{
+    var res=await fetch('/data/signals.json?t='+Date.now());
+    if(!res.ok)return[];
+    var data=await res.json();
+    if(!Array.isArray(data))return[];
+    return data.map(function(s){
+      return{
+        id:s.id||Date.now()+Math.random(),
+        coin:s.coin||'—',
+        type:s.type||'WATCH',
+        entry:s.entry||'',
+        tp:s.tp||'',
+        sl:s.sl||'',
+        note:s.note||'',
+        bot:true,
+        ts:s.timestamp?new Date(s.timestamp).getTime():Date.now()
+      };
+    });
+  }catch(e){return[];}
+}
+
+async function renderSignals(){
+  var manualSigs=gSigs();
+  var botSigs=await loadBotSignals();
+  /* Combineer: handmatig bovenaan, dan bot — geen duplicaten op coin+type */
+  var seen=new Set();
+  var combined=[];
+  manualSigs.forEach(function(s){combined.push(s);seen.add(s.coin+'_'+s.type);});
+  botSigs.forEach(function(s){var key=s.coin+'_'+s.type;if(!seen.has(key)){combined.push(s);}});
+  combined.sort(function(a,b){return(b.id||b.ts||0)-(a.id||a.ts||0);});
+
+  var empty='<div style="font-family:\'Orbitron\',monospace;font-size:9px;color:var(--sub)">No signals yet.</div>';
+  var sf=document.getElementById('sig-full');
+  if(sf)sf.innerHTML=combined.length?combined.map(function(s){return sigHtmlFull(s,true);}).join(''):empty;
+  var ds=document.getElementById('dash-signals');
+  if(ds)ds.innerHTML=combined.length?combined.slice(0,3).map(function(s){return sigHtmlFull(s,false);}).join(''):empty;
+}
+
+function sigHtmlFull(s,del){
+  var cl=sCl(s.type);
+  var sub=[s.entry&&'Entry: '+s.entry,s.tp&&'TP: '+s.tp,s.sl&&'SL: '+s.sl].filter(Boolean).join(' · ');
+  var d=(del&&isAdm()&&!s.bot)?'<button style="background:none;border:none;color:rgba(244,63,94,.3);cursor:pointer;font-size:14px;float:right;padding:0 3px" onclick="delSig('+s.id+')">×</button>':'';
+  var botBadge=s.bot?'<span style="font-family:\'Orbitron\',monospace;font-size:6px;padding:1px 5px;border-radius:2px;background:rgba(29,185,84,.15);color:#1DB954;border:1px solid rgba(29,185,84,.25);margin-left:4px;letter-spacing:.06em">BOT</span>':'';
+  var bgCol=cl==='buy'?'rgba(74,222,128,.1)':cl==='sell'?'rgba(244,63,94,.1)':'rgba(212,175,55,.1)';
+  var fgCol=cl==='buy'?'var(--grn)':cl==='sell'?'var(--red)':'var(--accent)';
+  var ts=s.id||s.ts||Date.now();
+  return'<div style="padding:8px 0;border-bottom:1px solid rgba(212,175,55,.05);display:flex;gap:8px;align-items:flex-start">'
+    +'<div style="width:27px;height:27px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11px;background:'+bgCol+';color:'+fgCol+'">'+sIco(s.type)+'</div>'
+    +'<div style="flex:1">'+d
+    +'<div style="font-size:11px;font-weight:600;margin-bottom:1px">'+escapeHtml(s.coin)+(s.type!=='NEWS'?' — '+s.type:'')+botBadge+'</div>'
+    +(sub?'<div style="font-size:10px;color:var(--sub);line-height:1.4">'+escapeHtml(sub)+'</div>':'')
+    +(s.note?'<div style="font-size:10px;color:var(--sub);line-height:1.4;font-style:italic;margin-top:2px">'+escapeHtml(s.note)+'</div>':'')
+    +'<span style="font-family:\'Orbitron\',monospace;font-size:8px;padding:1px 6px;border-radius:100px;font-weight:700;margin-top:2px;display:inline-block;background:'+bgCol+';color:'+fgCol+'">'+s.type+'</span>'
+    +'<div style="font-family:\'Orbitron\',monospace;font-size:7.5px;color:rgba(122,106,82,.4);margin-top:2px">'+tMs(ts)+'</div>'
+    +'</div></div>';
+}
+
 function delSig(id){sSigs(gSigs().filter(function(s){return s.id!==id;}));renderSignals();}
 function postSignal(){var coin=document.getElementById('sf-coin').value.trim();if(!coin){alert('Enter a pair.');return;}var sigs=gSigs();sigs.unshift({id:Date.now(),coin:coin,type:document.getElementById('sf-type').value,entry:document.getElementById('sf-entry').value.trim(),tp:document.getElementById('sf-tp').value.trim(),sl:document.getElementById('sf-sl').value.trim(),note:document.getElementById('sf-note').value.trim()});sSigs(sigs);['sf-coin','sf-entry','sf-tp','sf-sl','sf-note'].forEach(function(id){document.getElementById(id).value='';});renderSignals();}
 function postSignalAdm(){var coin=document.getElementById('adm-coin').value.trim();if(!coin){alert('Enter a pair.');return;}var sigs=gSigs();sigs.unshift({id:Date.now(),coin:coin,type:document.getElementById('adm-type').value,entry:document.getElementById('adm-entry').value.trim(),tp:document.getElementById('adm-tp').value.trim(),sl:document.getElementById('adm-sl').value.trim(),note:document.getElementById('adm-note').value.trim()});sSigs(sigs);['adm-coin','adm-entry','adm-tp','adm-sl','adm-note'].forEach(function(id){document.getElementById(id).value='';});renderSignals();alert('Signal posted!');}
 function clearSignals(){if(confirm('Delete all signals?')){sSigs([]);renderSignals();}}
-setInterval(renderSignals,60000);
+setInterval(renderSignals,5*60*1000);
 
 /* ── ANALYSIS ── */
 function getAnalysis(){try{return JSON.parse(localStorage.getItem('jcm_an')||'null');}catch(e){return null;}}
@@ -3385,6 +3507,79 @@ function aiClear(){
 </script>
 
 <script>
+
+/* ══════════════════════════════════════════
+   BOT SIGNALS PAGE
+══════════════════════════════════════════ */
+async function refreshBotSignals(){
+  var grid=document.getElementById('bot-signals-grid');
+  var upd=document.getElementById('bot-last-updated');
+  if(!grid)return;
+  grid.innerHTML='<div style="font-family:'Orbitron',monospace;font-size:9px;color:var(--sub);padding:20px">Laden...</div>';
+
+  var sigs=await loadBotSignals();
+
+  if(upd)upd.textContent='Bijgewerkt om '+new Date().toLocaleTimeString('nl-NL',{hour:'2-digit',minute:'2-digit'});
+
+  // Stats
+  var total=sigs.length;
+  var buys=sigs.filter(function(s){return s.type==='BUY';}).length;
+  var sells=sigs.filter(function(s){return s.type==='SELL';}).length;
+  var watches=sigs.filter(function(s){return s.type==='WATCH';}).length;
+  var st=document.getElementById('bot-stat-total'); if(st)st.textContent=total;
+  var sb=document.getElementById('bot-stat-buy'); if(sb)sb.textContent=buys;
+  var ss=document.getElementById('bot-stat-sell'); if(ss)ss.textContent=sells;
+  var sw=document.getElementById('bot-stat-watch'); if(sw)sw.textContent=watches;
+
+  if(!sigs.length){
+    grid.innerHTML='<div class="card" style="padding:40px;text-align:center;grid-column:1/-1">'
+      +'<div style="font-size:32px;margin-bottom:12px">🤖</div>'
+      +'<div style="font-family:'Orbitron',monospace;font-size:11px;font-weight:700;color:var(--cream);margin-bottom:8px">BOT NOG NIET ACTIEF</div>'
+      +'<div style="font-size:13px;color:var(--sub);line-height:1.7;max-width:380px;margin:0 auto">Voeg <strong style="color:var(--cream)">CLAUDE_API_KEY</strong> toe als GitHub Secret en run de workflow. Daarna verschijnen hier elk uur verse AI-signalen.</div>'
+      +'<div style="margin-top:16px;font-family:'Orbitron',monospace;font-size:8px;color:rgba(29,185,84,.5);letter-spacing:.1em">GitHub → Settings → Secrets → Actions → New secret</div>'
+      +'</div>';
+    return;
+  }
+
+  grid.innerHTML=sigs.map(function(s){
+    var cl=s.type==='BUY'?'buy':s.type==='SELL'?'sell':'watch';
+    var bgCol=cl==='buy'?'rgba(74,222,128,.08)':cl==='sell'?'rgba(244,63,94,.08)':'rgba(212,175,55,.06)';
+    var bdCol=cl==='buy'?'rgba(74,222,128,.25)':cl==='sell'?'rgba(244,63,94,.25)':'rgba(212,175,55,.2)';
+    var fgCol=cl==='buy'?'var(--grn)':cl==='sell'?'var(--red)':'var(--accent)';
+    var ts=s.ts||s.id||Date.now();
+    var timeStr=new Date(ts).toLocaleString('nl-NL',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'});
+    var sub=[s.entry&&'Entry: '+s.entry, s.tp&&'TP: '+s.tp, s.sl&&'SL: '+s.sl].filter(Boolean);
+    return '<div class="card" style="padding:16px 18px;background:'+bgCol+';border-color:'+bdCol+'">'
+      +'<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">'
+      +'<div style="display:flex;align-items:center;gap:8px">'
+      +'<div style="font-family:'Orbitron',monospace;font-size:16px;font-weight:900;color:var(--cream)">'+escapeHtml(s.coin)+'</div>'
+      +'<span style="font-family:'Orbitron',monospace;font-size:9px;font-weight:700;padding:3px 9px;border-radius:4px;background:'+bgCol+';color:'+fgCol+';border:1px solid '+bdCol+'">'+s.type+'</span>'
+      +'</div>'
+      +'<span style="font-family:'Orbitron',monospace;font-size:6px;padding:2px 7px;border-radius:2px;background:rgba(29,185,84,.12);color:#1DB954;border:1px solid rgba(29,185,84,.2);letter-spacing:.08em">BOT</span>'
+      +'</div>'
+      +(sub.length?'<div style="display:flex;flex-direction:column;gap:4px;margin-bottom:10px">'
+        +sub.map(function(line){
+          var isEntry=line.startsWith('Entry');var isTP=line.startsWith('TP');var isSL=line.startsWith('SL');
+          var lc=isTP?'var(--grn)':isSL?'var(--red)':'var(--cream)';
+          return '<div style="display:flex;justify-content:space-between;font-family:'Orbitron',monospace;font-size:9px;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.04)">'
+            +'<span style="color:var(--sub)">'+line.split(':')[0].toUpperCase()+'</span>'
+            +'<span style="color:'+lc+';font-weight:600">'+line.split(':').slice(1).join(':').trim()+'</span>'
+            +'</div>';
+        }).join('')
+        +'</div>':'')
+      +(s.note?'<div style="font-size:11px;color:var(--sub);line-height:1.6;font-style:italic;margin-bottom:8px">'+escapeHtml(s.note)+'</div>':'')
+      +'<div style="font-family:'Orbitron',monospace;font-size:7.5px;color:rgba(122,106,82,.45)">'+timeStr+'</div>'
+      +'</div>';
+  }).join('');
+}
+
+/* Laad bot signals als de pagina geopend wordt */
+var _origGoPage=window.goPage;
+window.goPage=function(id,el){
+  if(typeof _origGoPage==='function')_origGoPage(id,el);
+  if(id==='bot-signals')refreshBotSignals();
+};
+
 function initBriefNavigation(){
   const navs = document.querySelectorAll('.brief-nav');
   const panels = document.querySelectorAll('.brief-panel');
