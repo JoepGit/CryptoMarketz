@@ -7,7 +7,7 @@ api_key = os.environ['GEMINI_API_KEY']
 prompt = f"Generate a daily crypto market brief for {today}. Return ONLY a valid JSON object with exactly these fields, no markdown, no explanation: btc_structure, eth_flows, funding_oi, volatility_outlook, top_narratives (array of 4 strings), macro_impact, whale_flows, risk, focus, full_report"
 
 payload = json.dumps({"contents": [{"parts": [{"text": prompt}]}]}).encode()
-url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
+url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={api_key}"
 req = urllib.request.Request(url, data=payload, headers={"Content-Type": "application/json"})
 
 try:
