@@ -1,5 +1,49 @@
 [
   {
+    "id": 1773261305798,
+    "coin": "ETH/USD",
+    "type": "BUY",
+    "entry": "2069.02",
+    "tp": "2180.00",
+    "sl": "2020.00",
+    "note": "Positief 24h momentum (+1.21%) met sterke volume, pullback kans op support.",
+    "timestamp": "2026-03-11T20:35:05.525Z",
+    "generated_at": "Wed, 11 Mar 2026 20:35:05 GMT"
+  },
+  {
+    "id": 1773261306489,
+    "coin": "BNB/USD",
+    "type": "BUY",
+    "entry": "651.85",
+    "tp": "700.00",
+    "sl": "630.00",
+    "note": "Hoogste 24h gainer (+1.30%) met relatief lage 7d daling, bullish divergentie.",
+    "timestamp": "2026-03-11T20:35:05.525Z",
+    "generated_at": "Wed, 11 Mar 2026 20:35:05 GMT"
+  },
+  {
+    "id": 1773261305919,
+    "coin": "BTC/USD",
+    "type": "WATCH",
+    "entry": "70478",
+    "tp": "73500",
+    "sl": "68500",
+    "note": "Zwakke 1h actie (-0.19%), afwachten of 24h support ($70k) standhield.",
+    "timestamp": "2026-03-11T20:35:05.525Z",
+    "generated_at": "Wed, 11 Mar 2026 20:35:05 GMT"
+  },
+  {
+    "id": 1773261305684,
+    "coin": "SOL/USD",
+    "type": "WATCH",
+    "entry": "87.11",
+    "tp": "95.00",
+    "sl": "82.00",
+    "note": "Sterkste 7d daling (-5.63%), oversold mogelijk maar wacht op confirmation.",
+    "timestamp": "2026-03-11T20:35:05.525Z",
+    "generated_at": "Wed, 11 Mar 2026 20:35:05 GMT"
+  },
+  {
     "id": 1773258094481,
     "coin": "ETH/USD",
     "type": "BUY",
