@@ -1,0 +1,37 @@
+name: CryptoMarketz Signal Bot
+
+on:
+  schedule:
+    - cron: '0 * * * *'   # elk uur
+  workflow_dispatch:        # ook handmatig te starten
+
+jobs:
+  generate-signals:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install node-fetch@3
+
+      - name: Run signal bot
+        env:
+          CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
+        run: node bot/signal-bot.js
+
+      - name: Commit & push signals.json
+        run: |
+          git config user.name "Signal Bot"
+          git config user.email "bot@cryptomarketz.com"
+          git add data/signals.json
+          git diff --cached --quiet || git commit -m "🤖 Signals update $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push
