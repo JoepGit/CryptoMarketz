@@ -1,18 +1,18 @@
 {
-  "btc_structure": "Bitcoin trading in a consolidation phase between $42,800-$44,200, with resistance at the 200-day MA. Daily close above $43,900 needed to confirm bullish breakout. Support holding at $42,500 indicates controlled distribution.",
-  "eth_flows": "ETH experiencing net inflows into spot ETFs (+$127M yesterday) while futures positioning shows slight short bias. Large holders accumulating below $2,450, suggesting institutional confidence despite macro headwinds.",
-  "funding_oi": "Perpetual funding rates neutral at 0.008% across major exchanges. Open interest at 4-month highs ($68B aggregate), concentrated in BTC/ETH pairs. Liquidation cascade risk elevated above $45,200 and below $41,800.",
-  "volatility_outlook": "30-day realized volatility at 18.2%, IV skew favoring put protection. Expect range-bound environment until March FOMC minutes (March 19) trigger directional move. ATM straddles pricing ~2.8% daily moves.",
+  "date": "2026-03-12",
+  "focus": "Bitcoin en Ethereum tonen zwakte na weeklong dalende trend; BNB en SOL bewijzen relatieve sterkte met positieve 24h-moves.",
+  "risk": "Bearish technische setup, lagere volumes",
+  "btc_structure": "Bitcoin noteert $70,105 met intraday -0,47% verlies en een teleurstellende weekprestatie van -3,83%. Dit niveau ligt onder recente support; volumeruzie en afnemende koopkracht suggereren verdere neerwaartse druk.",
+  "eth_flows": "Ethereum staat op $2,056,55 met een dagelijks herstel van +0,49%, maar onderperformt tegen Bitcoin met -3,81% op weekbasis. Het positieve dagmomentum is fragiel en afhankelijk van institutionele steun; volume ($19,43B) blijft aanzienlijk maar verdeling geeft nog geen duidelijk koopseinen.",
   "top_narratives": [
-    "Fed policy divergence: Markets repricing rate cut expectations as inflation data shows sticky core CPI, reducing 2026 easing cycle probability",
-    "Institutional accumulation phase: Mega-cap tech stocks correlation with crypto weakening as digital asset class attracts dedicated capital flows",
-    "Layer-2 scaling narratives gaining traction as Ethereum rollup solutions capture $4.2B TVL, boosting ecosystem confidence",
-    "Geopolitical risk premium embedded: Central bank digital currency developments in Asia reshaping cross-border settlement assumptions"
+    "Weeklong correctie breidt zich uit in top-5 assets",
+    "BNB en SOL tonen defensieve sterkte in neermarkt",
+    "Lage intraday volatiliteit suggereert consolidatie voor volgende move",
+    "Macro-risico's blijven markt onder druk houden"
   ],
-  "macro_impact": "US dollar strength (+0.6% DXY week-over-week) pressuring risk assets broadly, but crypto showing relative resilience. Treasury yields stable at 4.22%, reducing carry trade unwind risks. PMI data due Friday could reset positioning.",
-  "whale_flows": "7 transactions >1000 BTC detected moving to exchange wallets ($296M notional), interpreted as profit-taking rather than capitulation. ETH whale activity lighter with key holders maintaining long-term positions. Stablecoin reserves on Binance/Kraken at 3-month lows.",
-  "risk": "CRITICAL: Liquidation cluster at $41,200 could cascade downward if macro sentiment deteriorates. Secondary risk: regulatory clarity delays pushing institutional inflows to Q2 2026. Geopolitical escalation could spike volatility beyond 35%.",
-  "focus": "Monitor US macro calendar closely (CPI Thursday, Jobs Friday). Watch BTC dominance at 52.4% for risk-on rotation signals. Key level: ETH/BTC ratio near 0.0565 - break below suggests relative weakness.",
-  "full_report": "Cryptocurrency markets displaying classic accumulation dynamics on March 12, 2026, with Bitcoin consolidating after February's +8.2% rally and Ethereum tracking institutional inflows despite macroeconomic headwinds. The asset class is repositioning ahead of critical US economic data and Fed communications scheduled for mid-March. Funding rates remain benign, suggesting leverage isn't excessive, but open interest concentration warrants careful monitoring given liquidation thresholds. Whale transactions indicate selective profit-taking among long-term holders rather than capitulation, consistent with healthy market maturation. Narrative rotation toward Layer-2 scaling solutions and CBDC developments provides fundamental support independent of macro noise. The prevailing risk is sharp downside if Fed hawkishness resurfaces or geopolitical tensions escalate, but current technical structure supports a $41,500-$45,000 trading range until directional catalysts emerge. Volatility expected to remain contained before March 19-21 data releases trigger the next significant move.",
-  "date": "2026-03-12"
+  "macro_impact": "Macro-onzekerheid en renteverwachtingen blijven beperkend werken op risicovolle activa. De aanhoudende weekcorrectie duidt op afnemend sentiment en mogelijke herpositionering van grotere beleggers.",
+  "whale_flows": "BTC-volume ($45,38B) lijkt adequaat maar beweging blijft klein; ETH-volume ($19,43B) getuigt van operationeel belang maar geen duidelijke accumulatiefase. Lager volume in kleinere alts suggereert exit-gedrag van hogere positiehouders.",
+  "funding_oi": "Verwacht dat funding rates onder druk blijven na weekcorrectie; shorters hebben mogelijke winsten geboekt en kunnen voorzichtig blijven. OI-continu's wijzen op voorzichtige positiegroei zonder aggressieve bullish bouw.",
+  "volatility_outlook": "Intraday moves van -0,5% tot +1% suggereren compressie; verwacht dat echte breakout pas volgt na macro-catalysatoren. Komende dagen kritisch voor herstelingang of dieper testvel.",
+  "full_report": "CryptoMarketz marktbriefing 12-03-2026: Bitcoin ($70,105, -0,47% 1h, -3,83% 7d) en Ethereum ($2,056,55, +0,49% 24h, -3,81% 7d) vertonen weekcorrectie met grote volume ($45,38B en $19,43B), terwijl BNB (+1,06% 24h) en SOL (+0,84% 24h) defensieve outperformance tonen. XRP volgt de rood trend met -3,66% op 7-daagbasis. Technische setup blijft bearish; herstels zijn voorbijgaand. Macro-risico's en afgezwakte institutionele interesse blijven markt onder druk houden. Traders moeten wachten op solide support-tests voordat bullish posities opnieuw worden opgebouwd."
 }
