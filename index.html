@@ -2879,7 +2879,7 @@ function sigHtml(s,del){var cl=sCl(s.type);var sub=[s.entry&&'Entry: '+s.entry,s
 /* ── BOT SIGNALS: laadt data/signals.json en combineert met handmatige signalen ── */
 async function loadBotSignals(){
   try{
-    var res=await fetch('/data/signals.json?t='+Date.now());
+    var res=await fetch('/data/signals.json?t='+Date.now(), {cache:'no-store'});
     if(!res.ok)return[];
     var data=await res.json();
     if(!Array.isArray(data))return[];
@@ -3628,7 +3628,10 @@ async function refreshBotSignals(){
             +'</div>';
         }).join('')
         +'</div>':'')
-      +(s.note?'<div style="font-size:11px;color:var(--sub);line-height:1.6;font-style:italic;margin-bottom:8px">'+escapeHtml(s.note)+'</div>':'')
+      +(s.note?'<div style="margin-top:10px;padding:8px 10px;background:rgba(255,255,255,.04);border-left:2px solid '+fgCol+';border-radius:0 6px 6px 0">'
+        +'<div style="font-family:\'Orbitron\',monospace;font-size:7px;color:'+fgCol+';letter-spacing:.12em;margin-bottom:4px">AI ANALYSE</div>'
+        +'<div style="font-size:11px;color:var(--cream);line-height:1.5;opacity:.85">'+escapeHtml(s.note)+'</div>'
+        +'</div>':'')
       +'<div style="font-family:\'Orbitron\',monospace;font-size:7.5px;color:rgba(122,106,82,.45)">'+timeStr+'</div>'
       +'</div>';
   }).join('');
@@ -3647,7 +3650,7 @@ window.goPage=function(id,el){
 async function renderBotWL() {
   let results = [];
   try {
-    const res = await fetch('/data/results.json?t=' + Date.now());
+    const res = await fetch('/data/results.json?t=' + Date.now(), {cache:'no-store'});
     if (res.ok) results = await res.json();
   } catch(e) {}
 
@@ -3789,7 +3792,7 @@ function closeBotHistory(){
 
 async function loadMarketBrief(){
   try{
-    const res = await fetch('/data/marketbrief.json?t=' + Date.now());
+    const res = await fetch('/data/marketbrief.json?t=' + Date.now(), {cache:'no-store'});
     const data = await res.json();
 
     const set = (id, value) => {
