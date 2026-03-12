@@ -1,18 +1,18 @@
 {
-  "date": "donderdag 12 maart 2026",
-  "focus": "Bitcoin ondervindt lichte druk terwijl altcoins gemengde signalen afgeven in een consoliderende markt.",
-  "risk": "Neutraal met voorzichtige bearish bias",
-  "btc_structure": "Bitcoin daalt 0.48% naar $69.931, wat wijst op voorzichtige winstvastelling na recente rallies. De daling blijft marginaal ondanks het hoge handelsvolume van $45.10B, wat duidt op sterke steunzones in de buurt van huidige niveaus.",
-  "eth_flows": "Ethereum stijgt bescheiden 0.42% naar $2.065,39 met een stabiel volume van $19.03B, wat suggereert dat institutionele flows zich consolideren. De relative outperformance ten opzichte van Bitcoin duidt op rotatie naar smart contract narratieven.",
+  "date": "2026-03-12",
+  "focus": "Bitcoin consolidateert rond $69.927 in extreme fear terwijl ETH +0.93% stijgt op institutionele inflows via BlackRock's nieuwe staked ETH product.",
+  "risk": "Extreme Fear regime met Fed rate cut kansen onder 1%",
+  "btc_structure": "Bitcoin handelt op $69.927 met -0.66% op 1h en -0.11% op 24h, maar 7d performance toont -4.07% zwakte. De $70K range wordt verdedigd ondanks macro headwinds, terwijl futures volume 5x groter is dan spot op Binance.",
+  "eth_flows": "Ether klimt naar $2.064.0 met +0.93% dagwinst ondanks bredere marktpressure (-3.46% op 7d). BlackRock's gelanceerde staked ETH ETF drijft institutionele vraag, wat liquiditeit en yield-gerichte inflows genereert.",
   "top_narratives": [
-    "Consolidatiepatroon in major assets wijst op afwachting voor macro-triggers",
-    "Altcoin stabiliteit (SOL +0.50%, BNB +0.74%) suggereert verschuiving van risico naar secundaire tokens",
-    "XRP-zwakte (-0.95%) reflecteert mogelijk regelgevingssentiment",
-    "Volume concentratie in BTC en ETH duidt op professionele marktparticipatie"
+    "BlackRock staked Ethereum ETF launch accelereert institutionele ETH adoptie en yield attractie",
+    "Tether investeert in Ark Labs voor Bitcoin stablecoin en payments readiness",
+    "Fed rate cut odds onder 1% drukken risicoassets terwijl crypto futures domineren over spot",
+    "Perp DEX competition escaleert tussen blockchains als voornaamste groeimotor"
   ],
-  "macro_impact": "De gemengde prijsactie suggereert dat markten wachten op macro-economische catalysators. Lichte Bitcoin-druk kan gerelateerd zijn aan risico-off sentiment in traditionele markten.",
-  "whale_flows": "Het volume van $45.10B in Bitcoin met slechts -0.48% daling duidt op disciplineerde grote positionering. De stabiele volumes in ETH ($19.03B) en kleinere altcoins suggereren gedistribueerde liquiditeit zonder extreme whale-bewegingen.",
-  "funding_oi": "Verwacht mag worden dat funding rates gelijk blijven gezien het neurale prijssignaal. Open interest zal waarschijnlijk stabiel blijven tot duidelijkere directional triggers verschijnen.",
-  "volatility_outlook": "Impliciete volatiliteit blijft gedrukt gegeven de marginale dagelijkse bewegingen. Uitbraak uit $69.000-$70.500 range zal nodig zijn voor volatiiliteitsstijging.",
-  "full_report": "De markt bevindt zich donderdag 12 maart in een voorzichtige consolidatiefase. Bitcoin ($69.931, -0.48%) ervaart lichte druk terwijl Ethereum ($2.065,39, +0.42%) relatief beter presteert, wat een rotatie naar altcoins suggereert. SOL en BNB tonen positieve momentum met +0.50% en +0.74% respectievelijk, alleen XRP (-0.95%) onderperformt. Met volumes van $45.10B in BTC en $19.03B in ETH blijft professionele participatie stabiel, maar de afwezigheid van directionele sterkte wijst op marktdeelnemers die wachten op macro-triggers. Dit is een voorzichtige holding-dag tot hogere volatiliteit keert."
+  "macro_impact": "Dalende Fed rate cut verwachtingen (onder 1%) verstevigen risk-off sentiment, waardoor de Fear & Greed Index op 18 (Extreme Fear) blijft. Institutionele inflows via BlackRock's staked ETH product en Cryptio's $45M fundraising tonen echter nog steeds groeipotentieel in crypto-as-a-service. FATF-waarschuwingen over offshore crypto firms cre\u00ebren regulatorische onzekerheid.",
+  "whale_flows": "Totale marktcap daalde marginaal -0.24% naar $2.46T op $99.8B 24h volume. BNB en ETH tonen resilience met +1.01% resp. +0.93%, terwijl DOT (-2.04%) en AVAX (-1.48%) onderperformen. Bitcoin futures dominantie (5x spot) duidt op leveraged posities in consolidatie.",
+  "funding_oi": "Funding rates en Open Interest data niet beschikbaar vandaag. Monitoring van deze metriek is essentieel gezien de extreme fear sentiment en potenti\u00eble liquidatierisico's bij plotselinge volatiliteit.",
+  "volatility_outlook": "Met Fear & Greed Index op 18 (Extreme Fear) en afgenomen Fed rate cut verwachtingen, blijft volatiliteit elevated maar gedisciplineerd rond sleutelsteunpunten. Institutionele inflows via ETF producten kunnen scherpe liquidaties voorkomen, maar technische schwakte over 7d (-4.07% BTC, -3.46% ETH) roept voorzichtigheid uit.",
+  "full_report": "Bitcoin consolidateert op $69.927 (-0.66% 1h, -0.11% 24h, -4.07% 7d) in extreme fear regime terwijl Ethereum sterker presteert op $2.064.0 (+0.93% 24h) dankzij BlackRock's staked ETH ETF launch. De Fear & Greed Index staat op 18 na stijging van gisteren's 15, gedreven door dalende Fed rate cut kansen (onder 1%) en macro-onzekerheid. Institutionele inflows blijven zichtbaar via Cryptio's $45M fundraising en Tether's Ark Labs investering, maar totale marktcap (-0.24% naar $2.46T) en BTC dominantie op 56.7% tonen voorzichtigheid. Bitcoin futures trading is nu 5x groter dan spot op Binance, wat verhoogde leverage en liquidatierisico aangeeft. BNB outperform (+1.01%) terwijl DOT (-2.04%) en AVAX (-1.48%) onderliggende zwakte weerspiegelen."
 }
