@@ -1,18 +1,18 @@
 {
-  "date": "2026-03-12",
-  "focus": "Bitcoin consolidateert rond $70.010 in extreme fear sentiment terwijl institutionele inflows via ETF-producten de markt stabiliseren.",
-  "risk": "Extreme Fear, Fed-onzekerheid, liquidatie-risico",
-  "btc_structure": "Bitcoin noteert op $70.010 met een zwakke dagperformance van -0.36% en een aanzienlijke weekdaling van -3.96%. De $70K-zone fungeert als kritieke steunlevel terwijl rentebeslissingen van de Fed (kans op maart-cut onder 1%) prijsdruk veroorzaken. Technisch blijft consolidatie waarschijnlijk totdat macro-catalysatoren duidelijkheid bieden.",
-  "eth_flows": "Ethereum stabiliseert op $2.065,64 met positieve dagmomentum (+0.43%) ondanks weekdaling van -3.39%. De lancering van BlackRock's staked ETH-product signaleert institutionele vraag naar yield-exposure, wat ondersteuning biedt onder de huidige prijzen. Volume van $19.22B blijft robuust.",
+  "date": "donderdag 12 maart 2026",
+  "focus": "Bitcoin ondervindt lichte druk terwijl altcoins gemengde signalen afgeven in een consoliderende markt.",
+  "risk": "Neutraal met voorzichtige bearish bias",
+  "btc_structure": "Bitcoin daalt 0.48% naar $69.931, wat wijst op voorzichtige winstvastelling na recente rallies. De daling blijft marginaal ondanks het hoge handelsvolume van $45.10B, wat duidt op sterke steunzones in de buurt van huidige niveaus.",
+  "eth_flows": "Ethereum stijgt bescheiden 0.42% naar $2.065,39 met een stabiel volume van $19.03B, wat suggereert dat institutionele flows zich consolideren. De relative outperformance ten opzichte van Bitcoin duidt op rotatie naar smart contract narratieven.",
   "top_narratives": [
-    "Institutionele ETF-proliferatie: BlackRock introduceert staked ETH-product en Tether investeert in Ark Labs voor Bitcoin-gereedheid",
-    "Extreme fear sentiment (18/100) cre\u00ebert contraire buy-signalen voor risico-appetijt traders",
-    "Futures dominantie: Bitcoin futures zijn 5x groter dan spot op Binance, wijzend op hefboomgebruik",
-    "Regelgevingsdruk: FATF waarschuwt tegen offshore crypto-bedrijven en money-laundering-risico's"
+    "Consolidatiepatroon in major assets wijst op afwachting voor macro-triggers",
+    "Altcoin stabiliteit (SOL +0.50%, BNB +0.74%) suggereert verschuiving van risico naar secundaire tokens",
+    "XRP-zwakte (-0.95%) reflecteert mogelijk regelgevingssentiment",
+    "Volume concentratie in BTC en ETH duidt op professionele marktparticipatie"
   ],
-  "macro_impact": "De waarschijnlijkheid van een Fed-renteverlaging in maart is onder de 1% gezakt, wat de macro-outlook voor risicoactiva verzwakt. Tegelijkertijd boeken institutionele spelers aanzienlijke posities in staked-ETH-producten en Bitcoin-betaalmechanismen, wat duidt op lange-termijn vertrouwen ondanks korte-termijn volatiliteit. Regulatoire waarschuwingen van de FATF kunnen compliance-kosten verhogen.",
-  "whale_flows": "Liquidatiegegevens zijn niet beschikbaar, maar futures-volume van $45.2B voor BTC duidt op aanzienlijke hefboomactiviteit. De sterkere 24h-performance van BNB (+0.70%), SOL (+0.54%) en ETH (+0.43%) suggereert dat retailers risico opnieuw opvatten ondanks het dominante fearsentiment.",
-  "funding_oi": "Funding rates en open interest-gegevens zijn vandaag niet beschikbaar. Zonder expliciete metriek blijft het lastig de sentiment-extremiteit van leveraged posities in te schatten, hoewel extreme fear (18/100) typisch positieve funding rates en liquidatie-clusters aangeeft.",
-  "volatility_outlook": "Het Extreme Fear Index (18) en aangekondigd futures-dominantie suggereren verhoogde liquidatiekans, vooral als BTC onder $70K breekt. Institutionele ETF-inflows bieden echter demping tegen scherpe neerwaartse bewegingen. Volatiliteit zal waarschijnlijk hoog blijven totdat Fed-rentebeslissingen zicht normaliseren.",
-  "full_report": "De cryptomarkt handelt op 2026-03-12 in extreme fear (index 18) met Bitcoin op $70.010 (-0.36% 24h, -3.96% 7d), Ethereum op $2.065,64 (+0.43% 24h) en totale marktcap van $2.46T. Institutionele steun manifesteert zich via BlackRock's nieuwe staked ETH-ETF en Tether's investering in Ark Labs, terwijl futures-volume ($45.2B) BTC-spot domineert met factor vijf. De Fed-renteverlagingskans voor maart is onder 1% gedaald, wat macrodruk verhoogt, maar extreme fear sentiment cre\u00ebert contraire buy-signalen. BNB, SOL en ETH tonen relatieve sterkte, terwijl DOT (-2.49%) en AVAX (-1.92%) 24h-verliesers zijn. Zonder beschikbare funding rates en OI-data blijft liquidatierisico moeilijk exact in te schatten, maar de combinatie van leverage en extreme sentiment wijst op mogelijk ontvettingsgebeurtenissen."
+  "macro_impact": "De gemengde prijsactie suggereert dat markten wachten op macro-economische catalysators. Lichte Bitcoin-druk kan gerelateerd zijn aan risico-off sentiment in traditionele markten.",
+  "whale_flows": "Het volume van $45.10B in Bitcoin met slechts -0.48% daling duidt op disciplineerde grote positionering. De stabiele volumes in ETH ($19.03B) en kleinere altcoins suggereren gedistribueerde liquiditeit zonder extreme whale-bewegingen.",
+  "funding_oi": "Verwacht mag worden dat funding rates gelijk blijven gezien het neurale prijssignaal. Open interest zal waarschijnlijk stabiel blijven tot duidelijkere directional triggers verschijnen.",
+  "volatility_outlook": "Impliciete volatiliteit blijft gedrukt gegeven de marginale dagelijkse bewegingen. Uitbraak uit $69.000-$70.500 range zal nodig zijn voor volatiiliteitsstijging.",
+  "full_report": "De markt bevindt zich donderdag 12 maart in een voorzichtige consolidatiefase. Bitcoin ($69.931, -0.48%) ervaart lichte druk terwijl Ethereum ($2.065,39, +0.42%) relatief beter presteert, wat een rotatie naar altcoins suggereert. SOL en BNB tonen positieve momentum met +0.50% en +0.74% respectievelijk, alleen XRP (-0.95%) onderperformt. Met volumes van $45.10B in BTC en $19.03B in ETH blijft professionele participatie stabiel, maar de afwezigheid van directionele sterkte wijst op marktdeelnemers die wachten op macro-triggers. Dit is een voorzichtige holding-dag tot hogere volatiliteit keert."
 }
