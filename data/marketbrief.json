@@ -1,18 +1,18 @@
 {
   "date": "2026-03-12",
-  "focus": "Markt in extreme fear toestand met mild herstel in early hours terwijl macro-onzekerheid rond olieprijzen en CBDC-regelgeving aanhoudt.",
-  "risk": "Extreme Fear, bearish sentiment dominant",
-  "btc_structure": "Bitcoin noteert op $70.167 met minimale beweging (+0,21% 1h, -0,48% 24h) en verliest 1,14% over 7 dagen. Technische steun kritiek op deze niveaus met volume van $42,81B die verdunning suggereert. Liquiditeitspatronen wijzen op voorzichtigheid onder l\u00e5ngs gezien negatieve funding rate signalen.",
-  "eth_flows": "Ethereum staat op $2.059,91 met bescheiden intraday winst (+0,38% 1h) maar 24h daling van 0,61% en 7d verlies van 0,77%. Layer-2 sector onder druk na OP Labs personeelsbesparingen, wat sentiment drukt ondanks steeds meer institutionele onchain activiteit.",
+  "focus": "Markt balanceert tussen extreme fear en lichte technische rebounds terwijl regulatorische spanning toeneemt.",
+  "risk": "Extreme Fear sentiment; liquidatie risico laag",
+  "btc_structure": "Bitcoin noteert op $70,284 met minimale dagaretournering van -0.35% en een zwakke weeklading van -0.98%. De technische weerstand rond $71,000 blijft relevant; support ligt kritisch rond $69,000 gezien de extreme fear condities.",
+  "eth_flows": "Ethereum handelt op $2,064.37 met vergelijkbare negatieve momentum (-0.44% 24h) en zwakker weekprestatie (-0.56%). Volume van $18.2B suggereert geleidelijke accumulation in de lage zones ondanks sentimentdruk.",
   "top_narratives": [
-    "CBDC-regelgeving: U.S. Senate stemt voor CBDC-verbod in huisvestingswet, cre\u00ebert politieke onzekerheid",
-    "Macro-koppelingen: $100 olieprijzen be\u00efnvloeden Bitcoin-netwerk-economie en miner-rentabiliteit",
-    "Institutionele adoptie: Cryptio haalt $45M op voor boekhoudingstools, toont groeiende onchain-beweging",
-    "Liquiditeit & Solvabiliteit: JPMorgan-zaak rond vermeende $328M Ponzi-scam schaadt vertrouwen in bankpartners"
+    "CBDC-ban voorgesteld in VS Senaat: negatieve regulatorische druk op overheidsdigitale valuta's",
+    "OP Labs bedrijfsoptimalisering: consolidatie in Layer-2 ecosysteem",
+    "Institutionele compliance-tools groei: Cryptio's $45M funding wijst op professionalisering",
+    "Bitcoin funding rates negatief: bears overconfident volgens marktdata"
   ],
-  "macro_impact": "Regelgevingsonzekerheid rond CBDC's en het vermeende Ponzi-schandaal bij JPMorgan vergroten risico-aversie. Tegelijkertijd biedt de stijging van olieprijzen naar $100 een macro-indicator die Bitcoin-hashrate en miner-opbrengsten rechtstreeks be\u00efnvloedt, wat lange-termijn-stabiliteit van het netwerk ondersteunt.",
-  "whale_flows": "Liquidatiegegevens niet beschikbaar, maar 24h volume-verdeling toont terughoudendheid: BTC $42,81B, ETH $18,08B. Afwezigheid van massale liquidaties suggereert geen acuut margin-stress, maar dalende dagelijkse volumes wijzen op exit van gelegenheidshandelaren.",
-  "funding_oi": "Funding rate-data niet beschikbaar voor vandaag, maar recent flipte Bitcoin funding rate naar negatief volgens Cointelegraph-berichtgeving, wat aangeeft dat shorts overgeoptimistisch zijn geworden. Open Interest-gegevens ontbreken, maar negatieve funding rates suggereren mogelijke short-liquidaties bij rally's.",
-  "volatility_outlook": "Fear & Greed Index op 18 (Extreme Fear) met lichte verbetering van 15 gisteren duidt op stabilisering zonder duidelijk sentiment-trendbreuk. Verwacht geringe volatiliteit in komende uren totdat macro-katalysatoren (belastingnieuws, CBDC-stemming-resultaten) impactvoller worden.",
-  "full_report": "De cryptomarkt blijft in extreme fear-toestand (F&G: 18) met Bitcoin op $70.167 (-0,48% 24h) en Ethereum op $2.059,91 (-0,61% 24h), terwijl totale marktcap daalt naar $2,47T (-0,51%). Regelgeving rondom CBDC's en macro-factoren zoals olieprijzen be\u00efnvloeden sentiment, hoewel institutionele flows via tools als Cryptio toenemen. Negatieve Bitcoin funding rates suggereren overconfidentie bij shorts, wat mogelijke liquidaties kan triggeren. Volume blijft relatief gezond ($100,5B 24h) zonder acuut liquidatiegevaar, maar afwezigheid van sterke bullish triggers houdt markt in wachttoestand."
+  "macro_impact": "De voorgestelde CBDC-ban en JPMorgan-schandaal cre\u00ebren negatieve regulatory headwinds, terwijl institutionele adoptie (Cryptio, VeryAI/Solana) tegenpools biedt. Olieprijzen rond $100 blijven indirect crypto-relevant door macro-liquiditeit dynamieken.",
+  "whale_flows": "Liquidatiedata ontbreekt, maar volume concentratie in BTC ($42.85B) en ETH ($18.2B) suggereert dat whale positioning stabiel blijft ondanks downside pressure. BNB's relatieve sterkte (-0.12% vs -0.35% BTC) duidt op institutionele diversificatie.",
+  "funding_oi": "Funding rate data niet beschikbaar; echter Cointelegraph meldt negatieve Bitcoin funding rates wat duidt op overleveraged short positions. Open Interest metrics ontbreken; continuering van deze negatieve rates zou liquidaties van bears kunnen triggerren bij bounce.",
+  "volatility_outlook": "Fear & Greed Index op 18 (Extreme Fear, licht verbeterd van gisteren's 15) suggereert extreme sentiment compressie. Lage liquidatiedynamiek gecombineerd met extreme fear cre\u00ebert potentieel voor snelle volatiele rebounds bij technische triggers.",
+  "full_report": "Op 12 maart 2026 handelt Bitcoin op $70,284 (-0.35% 24h) terwijl Ethereum noteert op $2,064.37 (-0.44% 24h) in een markt met extreme fear sentiment (Fear & Greed: 18). De totale crypto marktcap van $2.47T daalde 0.51% met $100.5B dagvolume. Negatieve Bitcoin funding rates wijzen op overconfidente bear positionering, terwijl institutionele inflows (Cryptio $45M, VeryAI $10M) contrasteren met regulatorische headwinds rond CBDC-wetgeving in de VS. BTC dominantie blijft solid op 56.8%; technische support is kritisch rond $69,000 gegeven de weekly downtrend van -0.98%."
 }
