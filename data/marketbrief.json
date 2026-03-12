@@ -1,18 +1,18 @@
 {
   "date": "donderdag 12 maart 2026",
-  "focus": "Breed marktcorrectie zet door met Bitcoin onder druk op $69.447, terwijl institutionele flows voorzichtig blijven.",
-  "risk": "Rood | Correctie in volle gang",
-  "btc_structure": "Bitcoin noteert op $69.447 met een dagverlies van 1.94% en handelt onder psychologische steun rond $70k. Het volume van $45.06B duidt op gedisciplineerde verkoop zonder paniekverkopen, wat suggests dat bears gefaseerd positie uitbreiden.",
-  "eth_flows": "Ethereum staat op $2.040,67 met een meer gematigde daling van 1.38% over 24h, terwijl volume van $19.27B uitsluitend technische liquidaties volgt. De minder scherpe downside duidt op relatieve sterkte ten opzichte van Bitcoin.",
+  "focus": "Brede marktcorrectie met Bitcoin onder druk rond $69.633, terwijl institutionele vraag voorzichtig blijft.",
+  "risk": "Bearish momentum, liquidatie risico",
+  "btc_structure": "Bitcoin noteert op $69.633 met een dagverlies van -1.72%, wat wijst op voorzichtigheid rond technische weerstandsniveaus. Het handelsvolume van $45.24B blijft substantieel, maar de neerwaartse druk suggereert dat kopers momenteel voorzichtig zijn.",
+  "eth_flows": "Ethereum staat op $2.048,42 met een minder sterke daling van -1.18%, wat duidt op relatieve stabiliteit ten opzichte van Bitcoin. Het volume van $19.36B toont nog steeds actieve participatie, hoewel grote institutionele instroom uitblijft.",
   "top_narratives": [
-    "Fed-rentetarieven blijven hogere yields aantrekken van risicokapitaal",
-    "Macro-indices tonen voorzichtige defensieve positionering",
-    "Derivative-expiraties deze week triggeren geplande de-risking",
-    "Altseason stagneert; BNB, XRP en SOL volgen Bitcoin-momentum"
+    "Macro-rentes blijven drukfactor voor risicoactiva",
+    "Institutionele accumulatie pauzeert tijdelijk",
+    "Altcoin-underperformance (XRP -1.91%, SOL -1.32%)",
+    "Technische support levels onder toetsing"
   ],
-  "macro_impact": "Macro-headwinds vanuit renteverwachtingen drukken risk-on sentiment; Fed Funds Futures reflecteren onzekerheid rond inflatietrajectorie. Dit leidt tot voorzichtige houding onder institutionele beleggers en gedisciplineerde profit-taking.",
-  "whale_flows": "Whale-activiteit blijft beperkt op $45B BTC-volume; grote aankoopclusters ontbreken rond $67-68k support, wat duidt op wachthoudende positie van cash-heavy funds tot macro-duidelijkheid.",
-  "funding_oi": "Funding rates normaliseren na overgeleverde long-posities; verwachting is dat OI deze week 5-8% lager eindigt naarmate de-risking doorzet. Dit biedt ruimte voor stabilisatie na deze correctie.",
-  "volatility_outlook": "Verwachte volatiliteit stijgt naar 55-65 IV-regime op korte termijn door expiratie-drukkingen en macro-onzekerheid. Break onder $67k zou volatiliteitsspikes tot 75+ IV kunnen triggeren.",
-  "full_report": "De cryptomarkt kampt donderdag 12 maart met een brede correctie: Bitcoin daalt 1.94% naar $69.447, Ethereum 1.38% naar $2.040,67, terwijl XRP (-1.83%) en SOL (-1.03%) meedalend zwakker presteren. BNB betoont relatieve sterkte met slechts -0.40% op $647.09. Volumes blijven substantieel ($45.06B BTC, $19.27B ETH) wat wijst op gestructureerde verkoop in plaats van paniek. Macro-factoren domineren sentiment: Fed-rentetariefdiscussies drukken risk-on exposure, en derivative-expiraties deze week versnellen de-risking-cycli. Whale-flows tonen voorzichtigheid met afwezigheid van agressieve bids onder $68k, wat erop duidt dat grote spelers wachten op meer duidelijkheid. Technisch gezien vormt $67-68k kritieke steun; een break daaronder zou volatiliteitsspikes naar 75+ IV kunnen katalyseren. Voor midterm-beleggers: defensieve positionering voorkeur tot macro-houvast wederkeert."
+  "macro_impact": "Stijgende renteverwachtingen en sterkere dollar-indices drukken op risicoactiva breed. Fed-communicatie in deze periode blijft bepalend voor het sentiment in crypto-markten.",
+  "whale_flows": "Afnemend volume op $45.24B BTC en $19.36B ETH suggereert dat grote spelers hun posities consolideren in plaats van aggressief in te kopen. XRP's -1.91% daling op $2.22B volume wijst op gerichte verkoopdruk in altcoins.",
+  "funding_oi": "Funding rates dalen waarschijnlijk marginaal, wat duidt op afnemende speculatieve long-posities. Open Interest kan continu testen onder weerstand nu kopers terughoudender zijn.",
+  "volatility_outlook": "Volatiliteit blijft gematigd maar asymmetrisch naar beneden gericht. Verwacht hogere swings totdat macro-catalysts duidelijkheid bieden over Fed-beleid.",
+  "full_report": "De cryptomarkt noteerde op donderdag 12 maart 2026 een brede, matige correctie met Bitcoin op $69.633 (-1.72%) en Ethereum op $2.048,42 (-1.18%). Altcoins presteren ondermaats, met XRP op $1.37 (-1.91%), SOL op $85.67 (-1.32%) en BNB op $648.01 (-0.30%). Handelsvolumes blijven substantieel ($45.24B BTC, $19.36B ETH), maar de neerwaartse druk suggereert gereduceerde institutionele vraag. De macro-omgeving met stijgende renteverwachtingen en dollar-sterkte blijft het primaire risico. Technische support-niveaus staan onder toetsing, terwijl whale-flows voorzichtig blijven. Verwachting: consolidatie volgt zolang macro-catalysts geen duidelijkheid bieden."
 }
