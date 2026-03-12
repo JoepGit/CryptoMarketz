@@ -1,18 +1,18 @@
 {
-  "date": "2026-03-12",
-  "focus": "Bitcoin stabiliseert rond $70.370 in extreme fear-regime terwijl institutionele vraag naar staked ETH en stablecoins toeneemt ondanks macro headwinds.",
-  "risk": "Extreme fear, quantumbedreiging, liquidaties",
-  "btc_structure": "Bitcoin noteert $70.370 met minimale beweging (1h -0.08%, 24h +0.35%), maar 7-daagse daling van -2.92% geeft voorzichtigheid aan. Maart Fed rate cut odds zakken onder 1%, wat bullish sentiment belemmert. Support blijft kritisch rond huidige niveaus met $70K als psychologische kern.",
-  "eth_flows": "Ethereum klimt naar $2.081,24 met sterker momentum (+1.39% 24h, +0.76% 1h) dan Bitcoin, ondersteund door BlackRock's nieuwe staked ether ETF-lancering. Het volume van $18.7B reflecteert institutionele interesse in yield-genererende producten ondanks 7-daagse correctie van -2.72%.",
+  "date": "donderdag 12 maart 2026",
+  "focus": "Bitcoin stabiliseert rond $70.4K terwijl altcoins voorzichtig groen kleuren in een lage-volumedag.",
+  "risk": "Laterale consolidatie, lage volatiliteit",
+  "btc_structure": "Bitcoin handelt op $70,404 met minimale beweging van +0,40% in 24h, wat wijst op sterke ondersteuning in deze zone. De volume van $43.08B blijft gezond, maar de geringe prijsverandering suggereert dat marktdeelnemers afwachten.",
+  "eth_flows": "Ethereum toont relatieve sterkte met +1,37% tot $2,080.76, ondersteund door $17.68B dagvolume. Dit suggereert voorzichtige optimisme onder ETH-houders terwijl BTC stagneert.",
   "top_narratives": [
-    "Institutionele adoptie via staked ETH en stablecoin-integratie (Tether-Ark Labs, BlackRock ETF)",
-    "Quantum-risico breekt door: Ark Invest waarschuwt voor 1/3 Bitcoin-aanbod onder bedreiging",
-    "Fed monetary policy impasse: maart rate cut kans onder 1%, macro headwind voor crypto",
-    "Toename crypto-fraude: ATM-verlies stijgt 33% in 2025, regelgeving verscherpt (FATF waarschuwing)"
+    "Consolidatiepatroon BTC rond $70K-steun",
+    "Altseason-signalen met ETH outperformance",
+    "Lage volatiliteit duidt op spanningopbouw",
+    "Macro-verwachtingen vormen support"
   ],
-  "macro_impact": "De afwezigheid van maart Fed rate cut perspectief drukt risicoappetijt, maar institutionele flows naar staked assets en stablecoin-infrastractuur suggereren selectieve groei. FATF-waarschuwing over offshore-gaten veroorzaakt regulatorische spanning, terwijl quantumbedreiging langetermijn zorgen oproept.",
-  "whale_flows": "Liquidatiedata ontbreekt, maar volume-concentratie rond Bitcoin ($44.61B) en Ethereum ($18.7B) suggereert institutionele positioning in defensieve structuren. Afwezigheid massale liquidaties wijst op voorzichtige positionering in extreme fear-omgeving.",
-  "funding_oi": "Funding rate en open interest data niet beschikbaar voor positionering-inzicht. Gegeven extreme fear index (18 vandaag vs 15 gisteren) en afwezigheid liquidatie-cascades, is het waarschijnlijk dat shorters voorzichtig zijn en leverage beperkt wordt gehouden.",
-  "volatility_outlook": "Fear & Greed Index op 18 (Extreme Fear) suggereert lage volatiliteit op korte termijn met risico op schoksacties bij nieuwsgebeurtenissen. Quantum-risicoverslag en regelgevingsnieuws kunnen incidentele volatiliteit triggeren, maar institutionele bid onder ETF-vraag stabiliseert.",
-  "full_report": "CryptoMarketz marktbrief 12 maart 2026: Bitcoin sustains $70.370 (-2.92% wekelijks) in extreme fear clima (Fear & Greed 18) terwijl Ethereum voordeel haalt uit institutionele staking-vraag op $2.081,24 (+1.39% 24h). Macro tailwind ontbreekt met maart Fed rate cut odds onder 1%, maar stablecoin-innovatie (Tether-Ark) en BlackRock ETF-lancering tonen selectieve institutionele inflow. Quantum-bedreigingsnarratief (Ark Invest) en FATF-regulatie-waarschuwing cre\u00ebren langetermijn structurele spanning. Totale market cap: $2.47T (-0.26%), dominantie BTC 56.7%. Aanraders: volg Ethereum's correlatie met staking-ETF volumetrends en monitor quantum-bezorgdheid voor Bitcoin-risico reassessment."
+  "macro_impact": "De lage volatiliteit en stabiele prijzen suggereren dat marktdeelnemers wachten op macro-catalysatoren. Geen grote Fed-berichten vandaag, maar geopolitieke risico's blijven onderhuids.",
+  "whale_flows": "Whale-activiteit is minimaal met gedempte volumes—$43.08B BTC-volume is statisch terwijl $17.68B ETH-volume relatief gezond blijft. Dit wijst op voorzichtige accumulatie eerder dan liquidaties.",
+  "funding_oi": "Funding rates zullen waarschijnlijk neutraal blijven gegeven de lage prijsvolatiliteit. Long-positiegroei mag niet verwacht worden zonder duidelijke breakout boven $71K.",
+  "volatility_outlook": "Volatiliteit zal waarschijnlijk laag blijven totdat BTC uit de $70K-zone breekt. Technische triggers op $71.5K (resistance) of $69.5K (support) kunnen beweging initiëren.",
+  "full_report": "Bitcoin stabiliseert op $70,404 (+0,40%, vol $43.08B) in een lage-energiedag die consolidatiepatronen vertoont. Ethereum outperformt met +1,37% naar $2,080.76 ($17.68B volume), terwijl Solana (+1,26% naar $87.15) en Binance Coin (+1,06% naar $654.84) voorzichtig volgen. XRP verliest terrein met -0,29% naar $1.39. De markt wacht op duidelijke directie; lage volumes en prijsstabiliteit suggereren accumulatie boven liquidaties. Altseason-signalen nemen toe met ETH-outperformance, maar volgehoudendheid vereist een BTC-breakout boven $71.5K."
 }
