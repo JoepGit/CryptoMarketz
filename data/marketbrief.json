@@ -1,18 +1,18 @@
 {
   "date": "donderdag 12 maart 2026",
-  "focus": "Bitcoin en XRP vertonen gelijke druk terwijl altcoins minimale beweging maken in lage volatiliteitsomgeving.",
-  "risk": "Lage volatiliteit, consolidatiedruk",
-  "btc_structure": "Bitcoin staat onder druk op $70,479 met een verlies van 0.55% in 24 uur en volume van $44.71B. De koers blijft gebonden in een nauwe range zonder duidelijke directie, wat erop wijst dat grote marktbewegingen uitgesteld zijn.",
-  "eth_flows": "Ethereum handelt stabiel rond $2,071.32 met slechts -0.12% dagelijkse beweging en volume van $19.47B. De beperkte volatiliteit suggereert dat grote institutionele flows momenteel afwachten.",
+  "focus": "Brede marktcorrectie met BTC onder druk terwijl institutionele interesse in ETH aanzwelt.",
+  "risk": "Gemiddeld tot hoog, correctiefase actief",
+  "btc_structure": "Bitcoin daalt naar $69,909 met een 24h verlies van -0.94%, wat wijst op aanhoudende verkopersdruk rond de $70K-grens. Het handelsvolume van $42.99B suggereert geen paniekverkopen, maar eerder voorzichtige positionering voor verdere marktbewegingen.",
+  "eth_flows": "Ethereum noteert $2,052.34 met -0.91% dagverlies en $18.98B volume, wat aangeeft dat kapitaal naar altcoins verschuift ondanks de algemene daling. De relatief sterke volumeposisie duidt op herbalancering in gelevareerde portefeuilles.",
   "top_narratives": [
-    "Consolidatie phase in crypto markets",
-    "Lage volume en gedempte marktsentiment",
-    "Altcoins onderperformeren tegen dominante assets",
-    "Macro-economische onzekerheid blijft drukken"
+    "Correctie na sterke rally: technische consolidatie op meerdaagse basis",
+    "Macro-onzekerheid: Fed-signalen blijven volatiliteitsdriver",
+    "ETH-dominantie: staking rewards trekken institutionele mid-cap",
+    "XRP-underperformance: -2.01% wijst op regulatory sentiment-shift"
   ],
-  "macro_impact": "De brede marktonderperformance wijst op afwachting voorafgaand aan macro-updates. Institutionele kapitaalstromen lijken geremd door onzekerheid in traditionele markten.",
-  "whale_flows": "Volume concentratie op BTC ($44.71B) en ETH ($19.47B) duidt op professionele positionering; altcoin volume is extreem laag, wat wijst op risicovermijding onder grote beleggers.",
-  "funding_oi": "Verwachting is dat de leverage in deze consolidatiefase minimaal blijft met gesloten posities. Funding rates zullen waarschijnlijk neutraal blijven zonder directe impulsen.",
-  "volatility_outlook": "Volatiliteit zal laag blijven zolang prijzen in huidige ranges blijven. Een uitbraak is waarschijnlijk afhankelijk van externe macro-triggers of institutionele positionering.",
-  "full_report": "De cryptomarkt presenteert donderdag 12 maart een karakteristiek consolidatiebeeld met minimale bewegingen. Bitcoin daalt 0.55% naar $70,479 met zwaar volume van $44.71B, terwijl Ethereum vrijwel onveranderd blijft op $2,071.32. XRP volgt Bitcoin met identiek -0.55% verlies op $1.38, terwijl altcoins als BNB en SOL quasi-flat handelen. De lage volatiliteit en afwezigheid van grote volume-impulsen suggereren dat de markt wacht op nieuw catalysts, mogelijk macro-economische in aard. Dit is een klassieke voorbodes-fase waar risicobeheer voorop staat en grote bewegingen uitgesteld zijn."
+  "macro_impact": "De brede daling suggereert voorzichtigheid rond mogelijke renteverhoging-signalen uit Washington. De crypto-correlatie met aandelen blijft intact, wat impliceert dat macro-risk-off sentiment predominant is.",
+  "whale_flows": "BTC-volume van $42.99B blijft robust, maar XRP's -2.01% daling met $2.00B volume suggereert dat grote houders posities verlagen. SOL's -1.58% met $3.73B volume duidt op geleide correctie eerder dan paniek.",
+  "funding_oi": "Funding rates staan waarschijnlijk nog in negatief terrein gezien de algemene risico-off stemming. Open interest naar verwachting onder druk, wat kan leiden tot liquidaties bij verdere koersvallen onder technische steunlevels.",
+  "volatility_outlook": "IV naar verwachting stijgend; de kleine maar consistent negatieve moves duiden op samengestelde verkoopdruk. Verwacht 2-3% dagelijkse oscillatie rond $69-71K voor BTC.",
+  "full_report": "CryptoMarketz-rapport 12 maart 2026: De markt handelt voorzichtig vandaag met Bitcoin op $69,909 (-0.94%), Ethereum op $2,052.34 (-0.91%), en altcoins onder additionale druk met XRP -2.01% naar $1.37. Handelsvolumes blijven substantieel ($42.99B BTC, $18.98B ETH), wat wijst op actieve repositionering in plaats van massale uittochten. De macro-backdrop waarschuwt voor verdere risico-off: Fed-communicatie blijft een kern-volatiliteitsdriver en beleggers herbewegen kapitaal voorzichtig. XRP's relatieve zwakte kan gerelateerd zijn aan regulatory headwinds. Technisch vormt BTC kritieke steun rond $68.5K; een break onder dit niveau zou liquidaties kunnen triggeren. Voor ETH blijven staking-incentives institutionele vraag ondersteunen ondanks de dagdaling. Verwacht verdere consolidatie gedurende de week."
 }
