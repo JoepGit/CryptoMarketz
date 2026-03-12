@@ -1,18 +1,18 @@
 {
   "date": "donderdag 12 maart 2026",
-  "focus": "Lichte verkoopdruk over het brede crypto-landschap met gedempte volumes signaleren voorzichtige marktsentiment.",
-  "risk": "Milde risicoverkleining met consolidatie",
-  "btc_structure": "Bitcoin handelt op $70,232 met een bescheiden dagverlies van -0.43%, ondersteund door volumes van $42.85B. De prijs behoudt structurele steun, hoewel aarzeling in kopersinteresse duidelijk waarneembaar is.",
-  "eth_flows": "Ethereum noteert $2,066 met minimale verkoopdruk van -0.17% en volumes van $19.48B die wijzen op gedempte activiteit. De relatieve stabiliteit suggereert institutioneel verdedigingsniveau rond dit niveau.",
+  "focus": "Crypto markt consolideert rond sleutelweerstandsniveaus met gedempte volatiliteit en afwachtende sentiment.",
+  "risk": "Laag-matig, consolidatie fase",
+  "btc_structure": "Bitcoin handelt op $70,499 met minimale dagelijkse beweging van +0.20%, wat duidt op sterke steun rond huidigeNiveaus. De laterale prijs actie suggereert voorzichtig optimisme onder beleggers na recente opmars.",
+  "eth_flows": "Ether outperformt licht met +1.08% naar $2,081.4 en toont relatieve sterkte ten opzichte van Bitcoin. Het volume van $20.70B geeft aan dat institutionele beleggers voorzichtig posities opbouwen in altcoins.",
   "top_narratives": [
-    "Fed-beleidsonzekerheid drukt risicoassets",
-    "Altcoin-underperformance versus Bitcoin dominantie",
-    "Institutioneel kapitaal in holding-fase",
-    "Macro-inflatidata volgende week als katalysator"
+    "Consolidatie na rallyfase - wacht op macro triggers",
+    "ETH outperformance tegenover BTC dominantie",
+    "Gedempte volatiliteit suggereert voorzichtige accumulation",
+    "Low-volume handel duidt op afwachtende markt"
   ],
-  "macro_impact": "Afwachting voor inflatierapporten en Fed-communicatie houdt marktdeelnemers in afwachtende houding. Macro-winds blijven voelbaar in gedempte transactionele volumes.",
-  "whale_flows": "Totale 24h-volumes van $68.75B duiden op voorzichtig gedrag; grote spelers wijken uit naar stablecoins. Geen significante accumulation-signalen in top-assets.",
-  "funding_oi": "Funding-rates liggen neutraal met lichte korting op perpetuals; long-posities sluiten geleidelijk. Verwachting voor verdere OI-compressie bij aanhouding van huidige prijs-range.",
-  "volatility_outlook": "Impliciete volatiliteit onderdrukt op meerdaagse basis; breakout-catalysator nodig voor dynamiek. Verwacht lagere intraday-swings totdat macro-data vrijkomt.",
-  "full_report": "De markt sluit donderdag 12 maart af met brede voorzichtigheid; Bitcoin $70,232 (-0.43%), Ethereum $2,066 (-0.17%), terwijl lagere-tier assets zoals XRP (-1.22%) en SOL (-1.16%) sterker leiden. Volumes van $42.85B (BTC) en $19.48B (ETH) wijzen op gedempte institutionele betrokkenheid. Altcoins achterlopen structureel, wat typisch is voor fase van macro-onzekerheid. Marktdeelnemers wachten op inflatiedata en Fed-signalen volgende week; geen duidelijke bullish of bearish impuls dominant, consolidatie domineert."
+  "macro_impact": "De stille handelsdag wijst op wachten op macro-economische signalen en beleidsaankondigingen. Marktdeelnemers vermijden grote posities vooruitlopend op volgende weken economische data.",
+  "whale_flows": "BTC volume van $43.08B blijft dominant terwijl ETH $20.70B en altcoins substantieel lager liggen. De volumeverdeling suggereert dat grote spelers voorzichtig zijn en geen aggressieve accumulation vertonen.",
+  "funding_oi": "Lage volatiliteit en gedempte 24h bewegingen duiden op dalende open interest en voorzichtige futures posities. Funding rates zullen waarschijnlijk neutraal blijven tot sterk bewijs van richting emeerkt.",
+  "volatility_outlook": "Verwacht gedempte volatiliteit zolang Bitcoin rond $70,499 consolidateert. Uitbraak boven $71,500 of break onder $69,500 zal waarschijnlijk grotere bewegingen katalyseren.",
+  "full_report": "De cryptomarkt handelt donderdag 12 maart 2026 in een voorzichtig consolidatiepatroon met Bitcoin stabiel op $70,499 (+0.20%) en een dagvolume van $43.08B. Ether toont relatieve sterkte met +1.08% naar $2,081.4, terwijl XRP licht terugvalt naar $1.39 (-0.24%). Kleinere altcoins als SOL ($86.97, +0.03%) en BNB ($653.15, +0.22%) tonen minuscule bewegingen. De gedempte volatiliteit en afwachtende sentiment suggereren dat institutionele beleggers posities vergrendelen en op macro-triggers wachten. Zolang BTC rond $70K blijft, verwachten we laterale handel met mogelijke uitbraken pas na volgende economische data releases."
 }
