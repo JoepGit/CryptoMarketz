@@ -5,18 +5,25 @@ today = str(date.today())
 api_key = os.environ['CLAUDE_API_KEY']
 
 def fetch(url):
-    with urllib.request.urlopen(url, timeout=10) as r:
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    with urllib.request.urlopen(req, timeout=10) as r:
         return r.read()
 
-# ── 1. Live prijzen + top gainers/losers (CoinGecko) ──────────────────────
-print("📊 CoinGecko prijzen ophalen...")
+# ── 1. CoinGecko: prijzen, gainers/losers, dominantie, global mcap ────────
+print("📊 CoinGecko ophalen...")
 COINS = "bitcoin,ethereum,solana,binancecoin,ripple,cardano,avalanche-2,chainlink,polkadot,uniswap"
-cg_url = (
+market_data = json.loads(fetch(
     f"https://api.coingecko.com/api/v3/coins/markets"
     f"?vs_currency=usd&ids={COINS}&order=market_cap_desc"
     f"&per_page=10&page=1&sparkline=false&price_change_percentage=1h,24h,7d"
-)
-market_data = json.loads(fetch(cg_url))
+))
+
+global_data = json.loads(fetch("https://api.coingecko.com/api/v3/global"))["data"]
+btc_dom    = round(global_data["market_cap_percentage"]["btc"], 1)
+eth_dom    = round(global_data["market_cap_percentage"]["eth"], 1)
+total_mcap = round(global_data["total_market_cap"]["usd"] / 1e12, 2)
+total_vol  = round(global_data["total_volume"]["usd"] / 1e9, 1)
+mcap_chg   = round(global_data.get("market_cap_change_percentage_24h_usd", 0), 2)
 
 SYMBOLS = {
     "bitcoin":"BTC","ethereum":"ETH","solana":"SOL","binancecoin":"BNB",
@@ -26,26 +33,77 @@ SYMBOLS = {
 
 price_lines = []
 for c in market_data:
-    sym  = SYMBOLS.get(c["id"], c["symbol"].upper())
-    p    = c["current_price"]
-    h1   = round(c.get("price_change_percentage_1h_in_currency") or 0, 2)
-    h24  = round(c.get("price_change_percentage_24h") or 0, 2)
-    h7d  = round(c.get("price_change_percentage_7d_in_currency") or 0, 2)
-    vol  = round(c["total_volume"] / 1e9, 2)
-    mc   = round(c["market_cap"] / 1e9, 1)
+    sym = SYMBOLS.get(c["id"], c["symbol"].upper())
+    p   = c["current_price"]
+    h1  = round(c.get("price_change_percentage_1h_in_currency") or 0, 2)
+    h24 = round(c.get("price_change_percentage_24h") or 0, 2)
+    h7d = round(c.get("price_change_percentage_7d_in_currency") or 0, 2)
+    vol = round(c["total_volume"] / 1e9, 2)
     price_lines.append(
-        f"{sym}/USD: ${p:,} | 1h {h1:+.2f}% | 24h {h24:+.2f}% | 7d {h7d:+.2f}% | vol ${vol}B | mcap ${mc}B"
+        f"{sym}/USD: ${p:,} | 1h {h1:+.2f}% | 24h {h24:+.2f}% | 7d {h7d:+.2f}% | vol ${vol}B"
     )
 
-# Top gainers / losers op 24h
 sorted_24h = sorted(market_data, key=lambda c: c.get("price_change_percentage_24h") or 0)
-losers  = [f"{SYMBOLS.get(c['id'], c['symbol'].upper())} {round(c.get('price_change_percentage_24h') or 0,2):+.2f}%" for c in sorted_24h[:3]]
-gainers = [f"{SYMBOLS.get(c['id'], c['symbol'].upper())} {round(c.get('price_change_percentage_24h') or 0,2):+.2f}%" for c in sorted_24h[-3:][::-1]]
+losers  = [f"{SYMBOLS.get(c['id'],c['symbol'].upper())} {round(c.get('price_change_percentage_24h') or 0,2):+.2f}%" for c in sorted_24h[:3]]
+gainers = [f"{SYMBOLS.get(c['id'],c['symbol'].upper())} {round(c.get('price_change_percentage_24h') or 0,2):+.2f}%" for c in sorted_24h[-3:][::-1]]
 
 market_block = "\n".join(price_lines)
-print("✅ Prijzen:\n" + market_block)
+print(f"✅ {len(market_data)} coins | BTC dom {btc_dom}% | Total mcap ${total_mcap}T")
 
-# ── 2. Fear & Greed Index ─────────────────────────────────────────────────
+# ── 2. Binance public API: funding rates + open interest ──────────────────
+print("\n📈 Binance funding rates + OI ophalen...")
+funding_lines = []
+oi_lines = []
+BINANCE_PAIRS = ["BTCUSDT", "ETHUSDT", "SOLUSDT", "BNBUSDT", "XRPUSDT"]
+
+for pair in BINANCE_PAIRS:
+    try:
+        # Funding rate
+        fr_data = json.loads(fetch(
+            f"https://fapi.binance.com/fapi/v1/premiumIndex?symbol={pair}"
+        ))
+        fr = round(float(fr_data["lastFundingRate"]) * 100, 4)
+        funding_lines.append(f"{pair}: {fr:+.4f}%")
+    except Exception as e:
+        funding_lines.append(f"{pair}: n/a")
+
+    try:
+        # Open Interest
+        oi_data = json.loads(fetch(
+            f"https://fapi.binance.com/fapi/v1/openInterest?symbol={pair}"
+        ))
+        oi = round(float(oi_data["openInterest"]))
+        sym = pair.replace("USDT","")
+        # get price for USD value
+        price = next((c["current_price"] for c in market_data if SYMBOLS.get(c["id"]) == sym), 1)
+        oi_usd = round(oi * price / 1e9, 2)
+        oi_lines.append(f"{pair}: {oi:,} contracts (${oi_usd}B)")
+    except Exception as e:
+        oi_lines.append(f"{pair}: n/a")
+
+# Binance 24h liquidaties
+print("💥 Liquidaties ophalen...")
+liq_lines = []
+for pair in ["BTCUSDT", "ETHUSDT"]:
+    try:
+        liq_data = json.loads(fetch(
+            f"https://fapi.binance.com/fapi/v1/allForceOrders?symbol={pair}&limit=100"
+        ))
+        long_liq  = sum(float(o["origQty"]) * float(o["price"]) for o in liq_data if o["side"] == "SELL")
+        short_liq = sum(float(o["origQty"]) * float(o["price"]) for o in liq_data if o["side"] == "BUY")
+        liq_lines.append(
+            f"{pair}: longs geliquideerd ${round(long_liq/1e6,1)}M | shorts geliquideerd ${round(short_liq/1e6,1)}M"
+        )
+    except Exception as e:
+        liq_lines.append(f"{pair}: n/a")
+
+funding_block = "\n".join(funding_lines)
+oi_block      = "\n".join(oi_lines)
+liq_block     = "\n".join(liq_lines) if liq_lines else "Niet beschikbaar"
+print(f"✅ Funding rates: {funding_block}")
+print(f"✅ Open Interest: {oi_block}")
+
+# ── 3. Fear & Greed Index ─────────────────────────────────────────────────
 print("\n😨 Fear & Greed ophalen...")
 try:
     fg_data = json.loads(fetch("https://api.alternative.me/fng/?limit=2"))
@@ -55,74 +113,83 @@ try:
         f"Vandaag: {fg_now['value']} ({fg_now['value_classification']}) | "
         f"Gisteren: {fg_prev['value']} ({fg_prev['value_classification']})"
     )
-    print("✅ Fear & Greed: " + fg_block)
+    print("✅ " + fg_block)
 except Exception as e:
     fg_block = "Niet beschikbaar"
     print("⚠️  Fear & Greed mislukt:", e)
 
-# ── 3. Crypto nieuws (CoinDesk RSS + Cointelegraph RSS) ───────────────────
+# ── 4. Nieuws (CoinDesk + Cointelegraph RSS) ──────────────────────────────
 print("\n📰 Nieuws ophalen...")
 news_items = []
 
 def parse_rss(url, source, max_items=5):
     try:
-        xml_data = fetch(url)
-        root = ET.fromstring(xml_data)
-        items = root.findall(".//item")[:max_items]
-        for item in items:
+        root = ET.fromstring(fetch(url))
+        for item in root.findall(".//item")[:max_items]:
             title = item.findtext("title", "").strip()
             if title:
                 news_items.append(f"[{source}] {title}")
     except Exception as e:
-        print(f"⚠️  {source} RSS mislukt: {e}")
+        print(f"⚠️  {source} mislukt: {e}")
 
 parse_rss("https://www.coindesk.com/arc/outboundfeeds/rss/", "CoinDesk")
 parse_rss("https://cointelegraph.com/rss", "Cointelegraph")
+news_block = "\n".join(news_items[:10]) if news_items else "Niet beschikbaar"
+print(f"✅ {len(news_items)} nieuwsberichten")
 
-if news_items:
-    news_block = "\n".join(news_items[:10])
-    print(f"✅ {len(news_items)} nieuwsberichten gevonden")
-else:
-    news_block = "Geen nieuws beschikbaar"
-    print("⚠️  Geen nieuws")
-
-# ── 4. Prompt samenstellen ────────────────────────────────────────────────
+# ── 5. Prompt samenstellen ────────────────────────────────────────────────
 prompt = f"""Je bent hoofdanalist van CryptoMarketz. Schrijf een dagelijkse marktbrief in het Nederlands voor {today}.
 
-═══ LIVE PRIJSDATA (gebruik UITSLUITEND deze prijzen) ═══
+═══ LIVE PRIJSDATA — gebruik UITSLUITEND deze prijzen ═══
 {market_block}
 
 Top gainers 24h: {', '.join(gainers)}
 Top losers 24h:  {', '.join(losers)}
 
+═══ GLOBAL MARKT ═══
+Totale crypto market cap: ${total_mcap}T ({mcap_chg:+.2f}% 24h)
+24h totaal volume: ${total_vol}B
+BTC dominantie: {btc_dom}% | ETH dominantie: {eth_dom}%
+
+═══ BINANCE FUTURES: FUNDING RATES ═══
+{funding_block}
+(positief = longs betalen shorts = bullish sentiment, negatief = shorts betalen longs = bearish)
+
+═══ BINANCE FUTURES: OPEN INTEREST ═══
+{oi_block}
+
+═══ RECENTE LIQUIDATIES ═══
+{liq_block}
+
 ═══ FEAR & GREED INDEX ═══
 {fg_block}
 
-═══ ACTUEEL CRYPTO NIEUWS ═══
+═══ ACTUEEL NIEUWS ═══
 {news_block}
 
 INSTRUCTIES:
-- Gebruik ALLEEN de prijzen uit de data hierboven — verzin geen andere getallen
-- Baseer whale_flows en funding_oi op het volume en de koersbewegingen hierboven
-- Verwerk het nieuws in je macro_impact en top_narratives
-- Schrijf in het Nederlands, professioneel maar begrijpelijk
+- Gebruik ALLEEN prijzen uit de data hierboven — verzin geen andere getallen
+- Verwerk funding rates en OI in funding_oi sectie
+- Verwerk liquidaties in whale_flows
+- Verwerk nieuws in macro_impact en top_narratives
+- Schrijf professioneel Nederlands
 
-Geef ALLEEN een geldig JSON object terug, geen markdown, geen uitleg buiten de JSON:
+Geef ALLEEN een geldig JSON object terug, geen markdown, geen uitleg:
 {{
   "date": "{today}",
   "focus": "één zin: primaire focus vandaag",
   "risk": "risk regime in 3-5 woorden",
-  "btc_structure": "2-3 zinnen over BTC structuur met exacte prijs",
+  "btc_structure": "2-3 zinnen over BTC met exacte prijs en key levels",
   "eth_flows": "2-3 zinnen over ETH met exacte prijs",
   "top_narratives": ["narrative 1", "narrative 2", "narrative 3", "narrative 4"],
-  "macro_impact": "2-3 zinnen macro context gebaseerd op het nieuws",
-  "whale_flows": "2-3 zinnen whale/exchange flows gebaseerd op volume data",
-  "funding_oi": "2-3 zinnen funding rates gebaseerd op Fear & Greed en koersbewegingen",
-  "volatility_outlook": "2-3 zinnen verwachte volatiliteit",
-  "full_report": "4-6 zinnen volledig overzicht met exacte prijzen en Fear & Greed score"
+  "macro_impact": "2-3 zinnen macro context gebaseerd op nieuws",
+  "whale_flows": "2-3 zinnen gebaseerd op liquidaties en volume",
+  "funding_oi": "2-3 zinnen gebaseerd op de funding rates en OI hierboven",
+  "volatility_outlook": "2-3 zinnen verwachte volatiliteit op basis van Fear & Greed en liquidaties",
+  "full_report": "4-6 zinnen volledig overzicht met exacte prijzen, Fear & Greed score en funding rates"
 }}"""
 
-# ── 5. Claude API call ────────────────────────────────────────────────────
+# ── 6. Claude API call ────────────────────────────────────────────────────
 print("\n🤖 Claude brief genereren...")
 payload = json.dumps({
     "model": "claude-haiku-4-5-20251001",
@@ -160,4 +227,4 @@ os.makedirs('data', exist_ok=True)
 with open('data/marketbrief.json', 'w') as f:
     json.dump(brief, f, indent=2)
 
-print(f"\n✅ Brief geschreven! BTC: ${market_data[0]['current_price']:,} | Fear & Greed: {fg_block}")
+print(f"\n✅ Brief klaar! BTC: ${market_data[0]['current_price']:,} | Fear & Greed: {fg_now['value']} | BTC dom: {btc_dom}%")
