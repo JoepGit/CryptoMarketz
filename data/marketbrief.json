@@ -1,18 +1,18 @@
 {
   "date": "2026-03-12",
-  "focus": "Markt balanceert tussen extreme fear en lichte technische rebounds terwijl regulatorische spanning toeneemt.",
-  "risk": "Extreme Fear sentiment; liquidatie risico laag",
-  "btc_structure": "Bitcoin noteert op $70,284 met minimale dagaretournering van -0.35% en een zwakke weeklading van -0.98%. De technische weerstand rond $71,000 blijft relevant; support ligt kritisch rond $69,000 gezien de extreme fear condities.",
-  "eth_flows": "Ethereum handelt op $2,064.37 met vergelijkbare negatieve momentum (-0.44% 24h) en zwakker weekprestatie (-0.56%). Volume van $18.2B suggereert geleidelijke accumulation in de lage zones ondanks sentimentdruk.",
+  "focus": "Markt in extreme fear-regime met lichte intraday recovery terwijl macro headwinds (CBDC-ban, private credit risico's) sentiment onder druk houden.",
+  "risk": "Extreme Fear, bearish sentiment, liquidatie-risico",
+  "btc_structure": "Bitcoin noteert op $70.329 met minimale intraday winst (+0.51% 1h) maar gestage weekdaling (-0.92% 7d). Dominantie van 56.8% suggereert nog steeds sterke positie, maar weekly range toont consolidatie zonder duidelijke bullish impuls. $70k-niveau fungeert als kritieke support.",
+  "eth_flows": "Ethereum op $2.066,84 (-0.42% 24h, -0.44% 7d) volgt BTC-patroon nauw met volume van $17,87B. Layer-2 ontwikkelingen (OP Labs personeel) geven geen boost; institutionele on-chain accounting-trend (Cryptio $45M) suggereert langterm interest ondanks korttermijn-druk.",
   "top_narratives": [
-    "CBDC-ban voorgesteld in VS Senaat: negatieve regulatorische druk op overheidsdigitale valuta's",
-    "OP Labs bedrijfsoptimalisering: consolidatie in Layer-2 ecosysteem",
-    "Institutionele compliance-tools groei: Cryptio's $45M funding wijst op professionalisering",
-    "Bitcoin funding rates negatief: bears overconfident volgens marktdata"
+    "CBDC-ban in Amerikaanse huisvesting als regulatory tailwind voor private crypto",
+    "Private credit systeem-risico's potentieel trigger voor Bitcoin vlucht-naar-kwaliteit",
+    "Layer-2 consolidatie (OP Labs focus-versmalling) versus Solana-momentum (VeryAI identity)",
+    "On-chain institutional adoption (Cryptio, Polychain investeringen) ondanks bear-regime"
   ],
-  "macro_impact": "De voorgestelde CBDC-ban en JPMorgan-schandaal cre\u00ebren negatieve regulatory headwinds, terwijl institutionele adoptie (Cryptio, VeryAI/Solana) tegenpools biedt. Olieprijzen rond $100 blijven indirect crypto-relevant door macro-liquiditeit dynamieken.",
-  "whale_flows": "Liquidatiedata ontbreekt, maar volume concentratie in BTC ($42.85B) en ETH ($18.2B) suggereert dat whale positioning stabiel blijft ondanks downside pressure. BNB's relatieve sterkte (-0.12% vs -0.35% BTC) duidt op institutionele diversificatie.",
-  "funding_oi": "Funding rate data niet beschikbaar; echter Cointelegraph meldt negatieve Bitcoin funding rates wat duidt op overleveraged short positions. Open Interest metrics ontbreken; continuering van deze negatieve rates zou liquidaties van bears kunnen triggerren bij bounce.",
-  "volatility_outlook": "Fear & Greed Index op 18 (Extreme Fear, licht verbeterd van gisteren's 15) suggereert extreme sentiment compressie. Lage liquidatiedynamiek gecombineerd met extreme fear cre\u00ebert potentieel voor snelle volatiele rebounds bij technische triggers.",
-  "full_report": "Op 12 maart 2026 handelt Bitcoin op $70,284 (-0.35% 24h) terwijl Ethereum noteert op $2,064.37 (-0.44% 24h) in een markt met extreme fear sentiment (Fear & Greed: 18). De totale crypto marktcap van $2.47T daalde 0.51% met $100.5B dagvolume. Negatieve Bitcoin funding rates wijzen op overconfidente bear positionering, terwijl institutionele inflows (Cryptio $45M, VeryAI $10M) contrasteren met regulatorische headwinds rond CBDC-wetgeving in de VS. BTC dominantie blijft solid op 56.8%; technische support is kritisch rond $69,000 gegeven de weekly downtrend van -0.98%."
+  "macro_impact": "US Senate CBDC-ban signaliseert sterker crypto-friendly beleid, maar risico's rond private credit en mogelijke rente-volatiliteit wegen op sentiment. $100-olie scenario's worden geanalyseerd voor Bitcoin-netwerk-impact, wat macro-onzekerheid reflecteert.",
+  "whale_flows": "Liquidatie-data niet beschikbaar, maar $100.5B 24h-volume en breed negatieve 24h-returns (-0.40% BTC, -0.42% ETH) suggereren gedistribueerde verkopingen. BNB relatief sterk (-0.26%) wijst op institutionele stabiliteit in exchange-ecosysteem.",
+  "funding_oi": "Funding rates en open interest data niet beschikbaar voor directe analyse. Bitcoin funding rate flip naar negatief (volgens Cointelegraph) suggereert overextended short-posities, maar bearish sentiment domineert markt; shorts vergroten risico's op squeeze.",
+  "volatility_outlook": "Fear & Greed Index op 18 (Extreme Fear, +3 vs gisteren) signaleert potentieel for mean-reversion bounce, maar macro-headwinds (CBDC-debat, private credit risico) kunnen verdere volatiliteit triggeren. Liquidatie-treshold rond $70k-$68k kritiek.",
+  "full_report": "Cryptomarkten handelen onder Extreme Fear (Index: 18) met BTC op $70.329 (-0.92% weekly) en ETH op $2.066,84 (-0.44% weekly) terwijl totale market cap $2,47T bedraagt. Intraday licht bullish (+0.51% BTC 1h) maar weekly trend bearish; BTC-dominantie 56.8% intact. Politieke tailwind via US Senate CBDC-ban wordt gecompenseerd door macro-risico's rondom private credit en energieprijzen. Cointelegraph rapporteert negatieve Bitcoin funding rates ondanks bear-sentiment, waarschuwend voor short-overextension. Institutionele adoption-signals (Cryptio $45M, Polychain VeryAI) suggereren lange-termijn geloof ondanks korttermijn-druk op prijzen."
 }
