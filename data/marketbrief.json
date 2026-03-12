@@ -1,18 +1,18 @@
 {
   "date": "donderdag 12 maart 2026",
-  "focus": "Voorzichtige marktconsolidatie na lichte verkoopdruk op alle major assets.",
-  "risk": "Milde bearish consolidatie fase",
-  "btc_structure": "Bitcoin handelt op $70,236 met een bescheiden dagverlies van -0.35%. De markt toont weinig momentum na recente hogere niveaus, met volumes van $42.64B die wijzen op gedempte activiteit.",
-  "eth_flows": "Ethereum presteert onderuit op $2,063.62 met -0.26% verlies op 24h basis. De relative outperformance versus Bitcoin (kleinere verlies) suggereert institutionele steun in het Ethereum segment met $17.84B volume.",
+  "focus": "Brede marktcorrectie zet door met alle major assets in rood, BTC handelt onder $70.5k support.",
+  "risk": "Mild risico, consolidatiepatroon",
+  "btc_structure": "Bitcoin daalt 0.57% naar $70,239 met een volume van $43.02B, wat wijst op gemiddelde verkoopdruk. De prijs blijft boven de $70k-grens maar ontbreekt het aan bullish impulsen voor een doorbraak.",
+  "eth_flows": "Ethereum trekt iets minder volume aan met $21.66B en daalt slechts 0.41% naar $2,060.07, wat een relatieve stabiliteit ten opzichte van Bitcoin aangeeft. De minder steile daling suggereert institutionele steun rond deze prijszone.",
   "top_narratives": [
     "Macro-economische onzekerheid drukt risico-assets",
-    "Institutionele accumulatie in ETH stakers",
-    "BNB ecosystem resilience ondanks marktdruk",
-    "XRP volatiliteit rond regulatory clarity"
+    "Ethereum outperformance tegenover Bitcoin in consolidatie",
+    "Lagere volumepatronen op altcoins (XRP, SOL)",
+    "Verlengde accumulatiefase voor långsluiting"
   ],
-  "macro_impact": "Brede marktvoorzichtigheid weerspiegeld in slinkende volumes en negatieve 24h returns. Macro-headwinds blijven druk uitoefenen op risicobereidheid van beleggers.",
-  "whale_flows": "Whales tonen gereduceerde activiteit: BTC volume $42.64B en ETH $17.84B duiden op afwachtende positie. XRP's -1.08% verlies met $1.94B volume suggereert gerichte liquidaties in altcoin segment.",
-  "funding_oi": "Verwacht gematigde long-liquidaties bij verder verlies onder $70k. Funding rates dalen waarschijnlijk naar neutral territorium gegeven de huidige consolidatie.",
-  "volatility_outlook": "ATR-contractie waarschijnlijk met huidige range-bound beweging. Volatiliteit blijft laag zolang BTC boven $69,500 weerstand handelt.",
-  "full_report": "Donderdag 12 maart brengt voorzichtige consolidatie in de cryptomarkt met Bitcoin op $70,236 (-0.35%), Ethereum op $2,063.62 (-0.26%), BNB op $649.53 (-0.39%), XRP op $1.37 (-1.08%) en Solana op $86.62 (-0.56%). De brede negatieve tint wijst op aanhoudende marktvoorzichtigheid, hoewel de verliezen marginaal blijven. Ethereum outperformt relatief, ondersteund door $17.84B volume en mogelijke institutionele interest. XRP toont de meeste zwakte met -1.08% verlies. Macro-headwinds blijven het sentiment drukken, terwijl consolidatie zich voordoet rond huidige support-niveaus."
+  "macro_impact": "Geopolitieke spanning en renteverhoging-angst blijven marktsentiment onder druk zetten. De brede daling op laag volume duidt op afwachting voorafgaand aan Fed-statements volgende week.",
+  "whale_flows": "Whale-activiteit concentreert zich op Bitcoin ($43B volume) terwijl altcoins zoals XRP ($1.86B) en SOL ($3.66B) relatief licht verhandeld worden, wat een voorzichtige houding van grotere spelers aangeeft.",
+  "funding_oi": "Funding rates zijn naar verwachting geneutraliseerd tot licht negatief door de brede daling. Open interest dips kunnen volgen wanneer leverageposities worden gelikwideerd rond $70k support.",
+  "volatility_outlook": "Impliciete volatiliteit blijft verhoogd maar lagere intraday-bewegingen suggereren compressie. Doorbraak boven $71k of onder $68.5k zou hernieuwde range-uitbraak kunnen triggeren.",
+  "full_report": "Donderdag 12 maart brengt een voorzichtige marktcorrectie zonder paniekverkoop. Bitcoin daalt 0.57% naar $70,239 met substantieel volume ($43.02B), terwijl Ethereum beter standhoudend is op $2,060.07 (-0.41%, $21.66B volume). Altcoins zoals XRP (-1.24% naar $1.37) en SOL (-1.09% naar $86.36) ondervinden meer druk. De daling op matig volume duidt op gezonde consolidatie in plaats van kapitaalflucht. Whale-activiteit concentreert zich op Bitcoin, terwijl lagere volumes op altcoins voorzichtigheid uitstralen. Macro-factoren—renteverheffingsverwachtingen en geopolitieke spanningen—blijven de primaire headwind. Beleggers wachten op Fed-comunicatie volgende week. Technisch gezien blijven $70k en $68.5k kritieke steunniveaus voor Bitcoin."
 }
