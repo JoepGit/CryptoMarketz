@@ -1,5 +1,38 @@
 [
   {
+    "id": 1773315125069,
+    "coin": "ETH/USD",
+    "type": "BUY",
+    "entry": "2069.65",
+    "tp": "2150.00",
+    "sl": "2020.00",
+    "note": "Positieve 24h momentum (+2.27%) met solide volume, lokale steun intact.",
+    "timestamp": "2026-03-12T11:32:04.233Z",
+    "generated_at": "Thu, 12 Mar 2026 11:32:04 GMT"
+  },
+  {
+    "id": 1773315124833,
+    "coin": "BNB/USD",
+    "type": "BUY",
+    "entry": "652.49",
+    "tp": "700.00",
+    "sl": "630.00",
+    "note": "Sterkste 24h performer (+2.31%) met minste weekverlies (-1.74%), momentum intact.",
+    "timestamp": "2026-03-12T11:32:04.233Z",
+    "generated_at": "Thu, 12 Mar 2026 11:32:04 GMT"
+  },
+  {
+    "id": 1773315125074,
+    "coin": "SOL/USD",
+    "type": "WATCH",
+    "entry": "86.84",
+    "tp": "95.00",
+    "sl": "82.00",
+    "note": "Sterk weekverlies (-6.29%), wacht op bevestiging voordat entry; potentieel oversold.",
+    "timestamp": "2026-03-12T11:32:04.233Z",
+    "generated_at": "Thu, 12 Mar 2026 11:32:04 GMT"
+  },
+  {
     "id": 1773311975340,
     "coin": "ETH/USD",
     "type": "BUY",
