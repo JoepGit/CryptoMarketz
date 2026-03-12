@@ -332,6 +332,15 @@ body{font-family:'DM Sans',sans-serif;background:#06090d;color:var(--cream);over
 .edu-lesson-tag{font-family:'Orbitron',monospace;font-size:6.5px;letter-spacing:.09em;padding:2px 7px;border-radius:2px;background:rgba(212,175,55,.06);color:rgba(212,175,55,.5)}
 .edu-lesson-tag.beg{background:rgba(74,222,128,.06);color:rgba(74,222,128,.55)}
 .edu-lesson-tag.adv{background:rgba(244,63,94,.06);color:rgba(244,63,94,.55)}
+.video-modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:9999;align-items:center;justify-content:center}
+.video-modal-overlay.open{display:flex}
+.video-modal{background:#0a0a0a;border:1px solid rgba(212,175,55,.3);border-radius:12px;width:90%;max-width:860px;overflow:hidden}
+.video-modal-header{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:1px solid rgba(255,255,255,.06)}
+.video-modal-title{font-family:'Orbitron',monospace;font-size:12px;color:var(--accent);letter-spacing:.1em}
+.video-modal-close{background:transparent;border:none;color:var(--sub);font-size:20px;cursor:pointer;padding:0 4px;line-height:1}
+.video-modal-close:hover{color:var(--cream)}
+.video-modal video{width:100%;display:block;max-height:70vh;background:#000}
+.edu-lesson.has-video::after{content:'▶';position:absolute;top:12px;right:14px;font-size:11px;color:rgba(212,175,55,.4)}
 
 /* key concepts bar */
 .edu-concepts{padding:16px 20px;border-top:1px solid var(--bdr);display:flex;flex-wrap:wrap;gap:7px;align-items:center}
@@ -1461,7 +1470,7 @@ body::before{background:radial-gradient(circle at 18% 0%, rgba(29,185,84,.12), t
             <div class="edu-stat"><div class="edu-stat-val">Beg–Adv</div><div class="edu-stat-lbl">Level</div></div>
           </div>
           <div class="edu-lessons">
-            <div class="edu-lesson">
+            <div class="edu-lesson has-video" onclick="openLessonVideo('videos/Candlestick lesson 1.1.mp4','LESSON 1.1 · Reading Candlestick Charts')">
               <div class="edu-lesson-num">LESSON 1.1</div>
               <div class="edu-lesson-title">Reading Candlestick Charts</div>
               <div class="edu-lesson-desc">Understand OHLC data, candle anatomy, and what each candle tells you about buyer/seller strength. Learn doji, hammer, engulfing and other single-candle signals.</div>
@@ -3878,5 +3887,36 @@ initBriefNavigation();
 loadMarketBrief();
 </script>
 
+<div class="video-modal-overlay" id="video-modal-overlay" onclick="closeLessonVideo(event)">
+  <div class="video-modal" id="video-modal">
+    <div class="video-modal-header">
+      <span class="video-modal-title" id="video-modal-title"></span>
+      <button class="video-modal-close" onclick="closeLessonVideo(null)">✕</button>
+    </div>
+    <video id="video-modal-player" controls playsinline></video>
+  </div>
+</div>
+<script>
+function openLessonVideo(src, title) {
+  var overlay = document.getElementById('video-modal-overlay');
+  var player = document.getElementById('video-modal-player');
+  var titleEl = document.getElementById('video-modal-title');
+  titleEl.textContent = title;
+  player.src = src;
+  player.load();
+  player.play();
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLessonVideo(e) {
+  if (e && e.target !== document.getElementById('video-modal-overlay')) return;
+  var overlay = document.getElementById('video-modal-overlay');
+  var player = document.getElementById('video-modal-player');
+  player.pause();
+  player.src = '';
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+</script>
 </body>
 </html>
