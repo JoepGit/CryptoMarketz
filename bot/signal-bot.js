@@ -104,10 +104,23 @@ function checkAndResolveSignals(signals, priceMap) {
   const resolvedIds = new Set(results.map(r => r.id));
   const newResults = [];
   const stillActive = [];
+  const now = Date.now();
+  const WATCH_EXPIRY_MS = 24 * 60 * 60 * 1000; // WATCH signals vervallen na 24h
 
   for (const sig of signals) {
-    if (sig.type === 'WATCH' || resolvedIds.has(sig.id)) {
-      stillActive.push(sig);
+    // WATCH signals: verwijder na 24h
+    if (sig.type === 'WATCH') {
+      const sigAge = now - (sig.id || 0);
+      if (sigAge < WATCH_EXPIRY_MS) {
+        stillActive.push(sig);
+      } else {
+        console.log(`  ⏰ WATCH ${sig.coin} verlopen (>24h) — verwijderd`);
+      }
+      continue;
+    }
+
+    if (resolvedIds.has(sig.id)) {
+      // Al afgesloten, niet meer tonen
       continue;
     }
 
@@ -177,20 +190,24 @@ async function generateSignals(marketData, candleData) {
 LIVE MARKTDATA + TECHNISCHE ANALYSE (${new Date().toUTCString()}):
 ${summary}
 
-TAAK: Analyseer de 1H en 4H charts en geef maximaal 5 trading setups met de BESTE kans van slagen.
+TAAK: Analyseer de 1H en 4H charts en geef maximaal 5 trading setups.
 
 REGELS:
 - Gebruik ALLEEN de exacte prijzen uit de data hierboven
-- Alleen signalen met duidelijke technische setup op 1H én 4H
-- Type: "BUY" of "SELL" (geen WATCH — die nemen een slot in)
-- Entry: dichtbij huidige prijs (realistisch)
-- TP en SL gebaseerd op technische levels (24h high/low, EMA levels)
+- Geef ZOWEL BUY als SELL signalen op basis van de technische analyse:
+  * BUY als: uptrend op 4H, prijs boven EMA20/EMA50, RSI < 70, bullish momentum
+  * SELL als: downtrend op 4H, prijs onder EMA20/EMA50, RSI > 60, bearish momentum, of RSI overbought (>70)
+- Forceer een eerlijke mix: als meerdere coins bearish zijn, geef SELL — niet alleen BUY
+- Alleen signalen met duidelijke technische setup op zowel 1H als 4H
+- Type: "BUY" of "SELL" (geen WATCH)
+- Entry: dichtbij huidige prijs
+- TP en SL gebaseerd op technische levels (EMA, 24h high/low)
 - Risk/Reward minimaal 1:2
 - Maximaal 1 signaal per coin
-- Note: korte Nederlandse uitleg met verwijzing naar technische reden (EMA, RSI, trend)
+- Note: Nederlandse uitleg met exacte technische reden (vermeld RSI waarde, trend richting, EMA positie)
 
 Geef ALLEEN een geldige JSON array terug, niets anders:
-[{"coin":"BTC/USD","type":"BUY","entry":"83200","tp":"88000","sl":"81500","note":"4H trend bullish boven EMA50, RSI niet overbought."}]`;
+[{"coin":"BTC/USD","type":"BUY","entry":"83200","tp":"88000","sl":"81500","note":"4H trend bullish boven EMA50, RSI 52 niet overbought."},{"coin":"ETH/USD","type":"SELL","entry":"2050","tp":"1900","sl":"2120","note":"4H bearish onder EMA20, RSI 72 overbought, volume dalend."}]`;
 
   const res = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
@@ -331,10 +348,10 @@ Geef ALLEEN een geldig JSON object terug, geen markdown:
       console.log(`⏸️  Alle ${MAX_ACTIVE_TRADES} slots bezet — geen nieuwe signalen`);
     }
 
-    // 5. Bewaar max 50 signalen (actief + recent afgesloten voor weergave)
-    const toSave = finalSignals.slice(0, 50);
+    // 5. Bewaar ALLEEN actieve signalen (max MAX_ACTIVE_TRADES)
+    const toSave = finalSignals.slice(0, MAX_ACTIVE_TRADES);
     writeJson(signalsPath, toSave);
-    console.log(`💾 ${toSave.length} signalen → signals.json`);
+    console.log(`💾 ${toSave.length} actieve signalen → signals.json`);
 
     // 6. Market brief genereren
     console.log('📝 Market brief genereren...');
