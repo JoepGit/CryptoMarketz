@@ -1,18 +1,18 @@
 {
-  "date": "2026-03-12",
-  "focus": "Bitcoin houdt $70K niveau vast terwijl extreme fear sentiment blijft domineren en institutionele crypto-adoptie accelereert via nieuwe ETF-producten.",
-  "risk": "Extreme Fear, Fed-hawkish, quantum-risico",
-  "btc_structure": "Bitcoin noteert op $70,061 met geringe intraday beweging (-0.06% 1h) maar zwakker weekniveau (-3.35% 7d), ondersteund door $44.83B volume. De $70K-zone blijft kritisch support level; breaks onder dit niveau activeren liquidatiecascades gegeven extreme fear sentiment.",
-  "eth_flows": "Ethereum (+0.80% 1h, +0.78% 24h) outperformt Bitcoin op $2,072.14 dankzij BlackRock's nieuwe staked ether ETF-lancering. Deze institutionele inflow signaleert hernieuwde vraag naar yield-generatie in crypto-fondsen ondanks brede weeklijkse daling van -3.15%.",
+  "date": "donderdag 12 maart 2026",
+  "focus": "Breed marktcorrectie zet door met Bitcoin onder druk op $69.447, terwijl institutionele flows voorzichtig blijven.",
+  "risk": "Rood | Correctie in volle gang",
+  "btc_structure": "Bitcoin noteert op $69.447 met een dagverlies van 1.94% en handelt onder psychologische steun rond $70k. Het volume van $45.06B duidt op gedisciplineerde verkoop zonder paniekverkopen, wat suggests dat bears gefaseerd positie uitbreiden.",
+  "eth_flows": "Ethereum staat op $2.040,67 met een meer gematigde daling van 1.38% over 24h, terwijl volume van $19.27B uitsluitend technische liquidaties volgt. De minder scherpe downside duidt op relatieve sterkte ten opzichte van Bitcoin.",
   "top_narratives": [
-    "Institutionele adoptie versnelt: BlackRock staked ETH, Tether-Ark Labs Bitcoin-stablecoin partnership, Cryptio's $45M funding",
-    "Quantum-bedreigingen: Ark Invest waarschuwt dat \u00e9\u00e9n-derde van Bitcoin-supply kwetsbaar is voor quantum-aanvallen",
-    "Fed-monetair beleid: maart rate-cut kansen onder 1% duwen risicoactiva onder druk",
-    "Scam-epidemie: Crypto ATM-verliezen stijgen 33% in 2025 door AI-geavanceerde fraude"
+    "Fed-rentetarieven blijven hogere yields aantrekken van risicokapitaal",
+    "Macro-indices tonen voorzichtige defensieve positionering",
+    "Derivative-expiraties deze week triggeren geplande de-risking",
+    "Altseason stagneert; BNB, XRP en SOL volgen Bitcoin-momentum"
   ],
-  "macro_impact": "De Fed-hawkish houding (maart rate-cut onder 1%) belast risicomarkten structureel, terwijl institutionele productinnovaties (BlackRock staked ETH, Tether-Ark partnership) langetermijn-adoptiefundamenten versterken. Quantumdreiging-narratief wekt veiligheidsvragen op en kan langetermijn-allocatie-beslissingen be\u00efnvloeden.",
-  "whale_flows": "Liquidatiegegevens ontbreken, maar lage intraday-volatiliteit (-0.06% BTC 1h) suggereert positie-voorzichtigheid gegeven extreme fear regime. SOL (+0.84%), ETH (+0.78%) en BNB (+0.51%) performantieleiders duiden op voorzichtige risk-on-rotatie in altseason-segment.",
-  "funding_oi": "Funding rates en open interest data niet beschikbaar; zonder deze metriek is sentiment-kalibratie beperkt tot Fear & Greed Index (18/100 extreme fear) die persistent short-bias aangeeft.",
-  "volatility_outlook": "Extreme Fear Index op 18 (stijging van 15 gisteren) signaleert neerwaarts sentiment-risico met potentieel voor sharp reversals bij technische breaks. $70K BTC-support test en $2K ETH-niveau vormen kritische volatiliteit-triggers; lagere liquidaties duiden op gedempte leveraged exposure.",
-  "full_report": "Cryptocurrencymarkt vertoont defensieve houding op 12 maart 2026 met Bitcoin vastgehouden op $70,061 (-0.47% 24h, -3.35% 7d) en Ethereum op $2,072.14 (+0.78% 24h), ondersteund door $44.83B respectievelijk $19.07B volume. Fear & Greed Index staat op 18 (extreme fear, stijging van 15 gisteren), duiding op verslechterd sentiment ondanks institutionele macro-positieven: BlackRock's staked ether ETF-lancering, Tether-Ark Labs Bitcoin-payment-partnership en Cryptio's $45M funding ronde signaleren langetermijn-institutionalisering. De Fed-monetaire hawkishness (maart rate-cut onder 1%) en Ark Invest quantum-threat-waarschuwing (\u00e9\u00e9n-derde Bitcoin-supply kwetsbaar) vormen overliggende macro-headwinds; scam-epidemie (+33% ATM-verliezen 2025) ondergraaft retail-vertrouwen. Zonder funding rates/OI kunnen we sentiment niet volledig kalibreren, maar de 7-dagen daling (-3.35% BTC, -5.57% ADA) wijst op institutionele positie-normalisatie na recente rally."
+  "macro_impact": "Macro-headwinds vanuit renteverwachtingen drukken risk-on sentiment; Fed Funds Futures reflecteren onzekerheid rond inflatietrajectorie. Dit leidt tot voorzichtige houding onder institutionele beleggers en gedisciplineerde profit-taking.",
+  "whale_flows": "Whale-activiteit blijft beperkt op $45B BTC-volume; grote aankoopclusters ontbreken rond $67-68k support, wat duidt op wachthoudende positie van cash-heavy funds tot macro-duidelijkheid.",
+  "funding_oi": "Funding rates normaliseren na overgeleverde long-posities; verwachting is dat OI deze week 5-8% lager eindigt naarmate de-risking doorzet. Dit biedt ruimte voor stabilisatie na deze correctie.",
+  "volatility_outlook": "Verwachte volatiliteit stijgt naar 55-65 IV-regime op korte termijn door expiratie-drukkingen en macro-onzekerheid. Break onder $67k zou volatiliteitsspikes tot 75+ IV kunnen triggeren.",
+  "full_report": "De cryptomarkt kampt donderdag 12 maart met een brede correctie: Bitcoin daalt 1.94% naar $69.447, Ethereum 1.38% naar $2.040,67, terwijl XRP (-1.83%) en SOL (-1.03%) meedalend zwakker presteren. BNB betoont relatieve sterkte met slechts -0.40% op $647.09. Volumes blijven substantieel ($45.06B BTC, $19.27B ETH) wat wijst op gestructureerde verkoop in plaats van paniek. Macro-factoren domineren sentiment: Fed-rentetariefdiscussies drukken risk-on exposure, en derivative-expiraties deze week versnellen de-risking-cycli. Whale-flows tonen voorzichtigheid met afwezigheid van agressieve bids onder $68k, wat erop duidt dat grote spelers wachten op meer duidelijkheid. Technisch gezien vormt $67-68k kritieke steun; een break daaronder zou volatiliteitsspikes naar 75+ IV kunnen katalyseren. Voor midterm-beleggers: defensieve positionering voorkeur tot macro-houvast wederkeert."
 }
