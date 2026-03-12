@@ -1,18 +1,18 @@
 {
   "date": "2026-03-12",
-  "focus": "Bitcoin consolidateert rond $69.927 in extreme fear terwijl ETH +0.93% stijgt op institutionele inflows via BlackRock's nieuwe staked ETH product.",
-  "risk": "Extreme Fear regime met Fed rate cut kansen onder 1%",
-  "btc_structure": "Bitcoin handelt op $69.927 met -0.66% op 1h en -0.11% op 24h, maar 7d performance toont -4.07% zwakte. De $70K range wordt verdedigd ondanks macro headwinds, terwijl futures volume 5x groter is dan spot op Binance.",
-  "eth_flows": "Ether klimt naar $2.064.0 met +0.93% dagwinst ondanks bredere marktpressure (-3.46% op 7d). BlackRock's gelanceerde staked ETH ETF drijft institutionele vraag, wat liquiditeit en yield-gerichte inflows genereert.",
+  "focus": "Extreme Fear sentiment (18) tempert marktmomentum terwijl institutionele inflows via nieuwe ETF-producten doorgaan.",
+  "risk": "Extreme Fear, lage volatiliteit, macro headwinds",
+  "btc_structure": "Bitcoin handelt op $70,263 met minimale beweging (-0.02% in 24h), maar 7-daags verlies van -3.07% wijst op voortdurende druk. Weeklijkse pullback blijft dominant ondanks stabiele spot-volumes ($43.98B).",
+  "eth_flows": "Ether toont relatieve sterkte met +1.24% in 24h op $2,078.21 en profiteert van BlackRock's nieuw gestakte ether ETF-lancering. 7-daags verlies van -2.87% is minder diep dan Bitcoin, duiding op institutionele accumulation.",
   "top_narratives": [
-    "BlackRock staked Ethereum ETF launch accelereert institutionele ETH adoptie en yield attractie",
-    "Tether investeert in Ark Labs voor Bitcoin stablecoin en payments readiness",
-    "Fed rate cut odds onder 1% drukken risicoassets terwijl crypto futures domineren over spot",
-    "Perp DEX competition escaleert tussen blockchains als voornaamste groeimotor"
+    "Institutionele ether-inflows via BlackRock staked ETF lancering",
+    "Quantum-dreigingperceptie: Ark Invest waarschuwt voor ~33% Bitcoin-supply risico",
+    "Tether-investering in Ark Labs signaleert Bitcoin-betaalmiddel-evolutie",
+    "Crypto ATM-fraude surge (33% in 2025) ondergraaft retail vertrouwen"
   ],
-  "macro_impact": "Dalende Fed rate cut verwachtingen (onder 1%) verstevigen risk-off sentiment, waardoor de Fear & Greed Index op 18 (Extreme Fear) blijft. Institutionele inflows via BlackRock's staked ETH product en Cryptio's $45M fundraising tonen echter nog steeds groeipotentieel in crypto-as-a-service. FATF-waarschuwingen over offshore crypto firms cre\u00ebren regulatorische onzekerheid.",
-  "whale_flows": "Totale marktcap daalde marginaal -0.24% naar $2.46T op $99.8B 24h volume. BNB en ETH tonen resilience met +1.01% resp. +0.93%, terwijl DOT (-2.04%) en AVAX (-1.48%) onderperformen. Bitcoin futures dominantie (5x spot) duidt op leveraged posities in consolidatie.",
-  "funding_oi": "Funding rates en Open Interest data niet beschikbaar vandaag. Monitoring van deze metriek is essentieel gezien de extreme fear sentiment en potenti\u00eble liquidatierisico's bij plotselinge volatiliteit.",
-  "volatility_outlook": "Met Fear & Greed Index op 18 (Extreme Fear) en afgenomen Fed rate cut verwachtingen, blijft volatiliteit elevated maar gedisciplineerd rond sleutelsteunpunten. Institutionele inflows via ETF producten kunnen scherpe liquidaties voorkomen, maar technische schwakte over 7d (-4.07% BTC, -3.46% ETH) roept voorzichtigheid uit.",
-  "full_report": "Bitcoin consolidateert op $69.927 (-0.66% 1h, -0.11% 24h, -4.07% 7d) in extreme fear regime terwijl Ethereum sterker presteert op $2.064.0 (+0.93% 24h) dankzij BlackRock's staked ETH ETF launch. De Fear & Greed Index staat op 18 na stijging van gisteren's 15, gedreven door dalende Fed rate cut kansen (onder 1%) en macro-onzekerheid. Institutionele inflows blijven zichtbaar via Cryptio's $45M fundraising en Tether's Ark Labs investering, maar totale marktcap (-0.24% naar $2.46T) en BTC dominantie op 56.7% tonen voorzichtigheid. Bitcoin futures trading is nu 5x groter dan spot op Binance, wat verhoogde leverage en liquidatierisico aangeeft. BNB outperform (+1.01%) terwijl DOT (-2.04%) en AVAX (-1.48%) onderliggende zwakte weerspiegelen."
+  "macro_impact": "Fed rate-cut kansen dalen onder 1% voor maart, wat rentedruck op risicoactiva verzwart. Institutionele kapitaal blijft via BlackRock en andere fondsen instromen ondanks macro-headwinds, wat conflicterende signalen geeft.",
+  "whale_flows": "Liquidatiegegevens ontbreken, maar 24h-volumeverloop ($99.9B totaal) toont gedempte activiteit. Beperkte whale-schommelingen consonant met Extreme Fear sentiment dat liquidatiegevaar minimaliseert.",
+  "funding_oi": "Funding rates en Open Interest-data zijn niet beschikbaar voor analyse; zonder deze sleutelindicatoren kan sentiment-bias niet via leverage-posities worden geverifieerd.",
+  "volatility_outlook": "Extreme Fear Index (18, +3 punten van gisteren) suggereert verhoogde liquidatiedrempel maar beperkte directe volatiliteitsuitbarstingen. Makrocatalysten (Fed-beleidsvorming, quantum-betreffende uitwisseling) blijven key risico's.",
+  "full_report": "Op 2026-03-12 handelt Bitcoin op $70,263 (-0.02% 24h, -3.07% 7d) terwijl Ether op $2,078.21 stijgt (+1.24% 24h) dankzij BlackRock's staked ETF-lancering. Het Fear & Greed Index staat op extreme 18, slechts 3 punten hoger dan gisteren, wat aanhoudende bearish sentiment reflecteert. Institutionele kapitaal stroomt in via nieuwe producten (BlackRock, Cryptio), in contrast met lage retail-vertrouwen. Totale marktcap van $2.47T is quasi onveranderd (-0.09% 24h), BTC dominantie stabiel op 56.7%. Quantum-bedreigingperceptie en FATF-waarschuwingen over offshore-gaten voegen macrorisico toe. Zonder leverage-indicatoren (funding rates/OI) blijft liquidatiegevaar moeilijk vast te stellen, maar extreme fear minimaliseert kortstondige liquidatieketens."
 }
