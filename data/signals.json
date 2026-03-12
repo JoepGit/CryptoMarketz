@@ -1,5 +1,38 @@
 [
   {
+    "id": 1773304981589,
+    "coin": "ETH/USD",
+    "type": "BUY",
+    "entry": "2041.62",
+    "tp": "2150.00",
+    "sl": "1980.00",
+    "note": "Sterkste momentum van top 5 (0.90% 24h), positieve 1h trend intact.",
+    "timestamp": "2026-03-12T08:43:00.883Z",
+    "generated_at": "Thu, 12 Mar 2026 08:43:00 GMT"
+  },
+  {
+    "id": 1773304980898,
+    "coin": "BNB/USD",
+    "type": "BUY",
+    "entry": "646.74",
+    "tp": "685.00",
+    "sl": "625.00",
+    "note": "Minste negatieve 7d verlies (-0.56%), stabiliteit suggereert bottom formation.",
+    "timestamp": "2026-03-12T08:43:00.883Z",
+    "generated_at": "Thu, 12 Mar 2026 08:43:00 GMT"
+  },
+  {
+    "id": 1773304981659,
+    "coin": "SOL/USD",
+    "type": "WATCH",
+    "entry": "85.85",
+    "tp": "92.50",
+    "sl": "81.00",
+    "note": "Sterkste negatieve 7d (-4.69%), wacht op stabilisatie alvorens long entry.",
+    "timestamp": "2026-03-12T08:43:00.883Z",
+    "generated_at": "Thu, 12 Mar 2026 08:43:00 GMT"
+  },
+  {
     "id": 1773301775321,
     "coin": "ETH/USD",
     "type": "BUY",
