@@ -28,10 +28,10 @@ jobs:
           CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
         run: node bot/signal-bot.js
 
-      - name: Commit & push signals.json
+      - name: Commit & push data files
         run: |
           git config user.name "Signal Bot"
           git config user.email "bot@cryptomarketz.com"
-          git add data/signals.json
-          git diff --cached --quiet || git commit -m "🤖 Signals update $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git add data/signals.json data/marketbrief.json data/results.json
+          git diff --cached --quiet || git commit -m "🤖 Bot update $(date -u '+%Y-%m-%d %H:%M UTC')"
           git push
