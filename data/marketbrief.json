@@ -1,18 +1,18 @@
 {
   "date": "2026-03-12",
-  "focus": "Extreme Fear sentiment (18) tempert marktmomentum terwijl institutionele inflows via nieuwe ETF-producten doorgaan.",
-  "risk": "Extreme Fear, lage volatiliteit, macro headwinds",
-  "btc_structure": "Bitcoin handelt op $70,263 met minimale beweging (-0.02% in 24h), maar 7-daags verlies van -3.07% wijst op voortdurende druk. Weeklijkse pullback blijft dominant ondanks stabiele spot-volumes ($43.98B).",
-  "eth_flows": "Ether toont relatieve sterkte met +1.24% in 24h op $2,078.21 en profiteert van BlackRock's nieuw gestakte ether ETF-lancering. 7-daags verlies van -2.87% is minder diep dan Bitcoin, duiding op institutionele accumulation.",
+  "focus": "Bitcoin consolidateert rond $70.263 in extreme fear-omgeving terwijl Ethereum outperformance laat zien met +1.24% dagwinst.",
+  "risk": "Extreme Fear, liquidatierisico laag",
+  "btc_structure": "Bitcoin noteert op $70.263 met minimale intraday beweging (-0.23% 1h, -0.02% 24h) maar verliest 3.07% weekly. De markt toont geen momentum naar beneden ondanks extreme vrees, wat stabiliteit suggeert rond deze level. Verwacht weerstand boven $71.000 en support op $68.500.",
+  "eth_flows": "Ethereum presteert relatief sterk op $2.078,21 met +1.24% dagwinst en +0.54% intradaywinst, tegen de markttrend in. Dit suggereert institutionele voorkeur voor ETH, versterkt door BlackRock's lancering van een staked ether ETF die yield-vraag aanboort.",
   "top_narratives": [
-    "Institutionele ether-inflows via BlackRock staked ETF lancering",
-    "Quantum-dreigingperceptie: Ark Invest waarschuwt voor ~33% Bitcoin-supply risico",
-    "Tether-investering in Ark Labs signaleert Bitcoin-betaalmiddel-evolutie",
-    "Crypto ATM-fraude surge (33% in 2025) ondergraaft retail vertrouwen"
+    "Institutionele ETH-vraag stijgt via staking-ETF's; BlackRock debueert staked ether product",
+    "Quantum-risico voor Bitcoin-supply: Ark Invest waarschuwt voor 1/3 van BTC-voorraad kwetsbaar",
+    "Regelgeving verscherpt: FATF waarschuwt over offshore crypto en geldwitswasproblemen",
+    "Stablecoin-integratie accelereert: Tether investeringen in Ark Labs voor Bitcoin-payment-readiness"
   ],
-  "macro_impact": "Fed rate-cut kansen dalen onder 1% voor maart, wat rentedruck op risicoactiva verzwart. Institutionele kapitaal blijft via BlackRock en andere fondsen instromen ondanks macro-headwinds, wat conflicterende signalen geeft.",
-  "whale_flows": "Liquidatiegegevens ontbreken, maar 24h-volumeverloop ($99.9B totaal) toont gedempte activiteit. Beperkte whale-schommelingen consonant met Extreme Fear sentiment dat liquidatiegevaar minimaliseert.",
-  "funding_oi": "Funding rates en Open Interest-data zijn niet beschikbaar voor analyse; zonder deze sleutelindicatoren kan sentiment-bias niet via leverage-posities worden geverifieerd.",
-  "volatility_outlook": "Extreme Fear Index (18, +3 punten van gisteren) suggereert verhoogde liquidatiedrempel maar beperkte directe volatiliteitsuitbarstingen. Makrocatalysten (Fed-beleidsvorming, quantum-betreffende uitwisseling) blijven key risico's.",
-  "full_report": "Op 2026-03-12 handelt Bitcoin op $70,263 (-0.02% 24h, -3.07% 7d) terwijl Ether op $2,078.21 stijgt (+1.24% 24h) dankzij BlackRock's staked ETF-lancering. Het Fear & Greed Index staat op extreme 18, slechts 3 punten hoger dan gisteren, wat aanhoudende bearish sentiment reflecteert. Institutionele kapitaal stroomt in via nieuwe producten (BlackRock, Cryptio), in contrast met lage retail-vertrouwen. Totale marktcap van $2.47T is quasi onveranderd (-0.09% 24h), BTC dominantie stabiel op 56.7%. Quantum-bedreigingperceptie en FATF-waarschuwingen over offshore-gaten voegen macrorisico toe. Zonder leverage-indicatoren (funding rates/OI) blijft liquidatiegevaar moeilijk vast te stellen, maar extreme fear minimaliseert kortstondige liquidatieketens."
+  "macro_impact": "Fed rate-cut kansen voor maart zijn onder 1% gedaald, wat renteverwachtingen strafft en risicomiddelen onder druk zet. Institutionele inflow in crypto-accounting en staking-producten duidt echter op versnellende enterprise-adoptie ondanks macro-headwinds. Regelgeving rond offshore platforms en quantum-risico's blijven overhangend.",
+  "whale_flows": "Liquidatiegegevens niet beschikbaar, maar volume-spreiding toont concentratie in BTC ($43.98B) en ETH ($18.39B) tegen 24-uurs calme beweging. De afwezigheid van grote liquidaties bij extreme fear-niveaus suggereert voorzichtig whale-accumulation of sideline-positie.",
+  "funding_oi": "Funding rate- en open interest-data niet beschikbaar voor gefinancieerde markten. Zonder deze indicatoren is sentiment-bepaling beperkt tot Fear & Greed Index op 18 (Extreme Fear), wat wijst op potenti\u00eble long-squeeze-kwetsbaarheid of contrarian accumulation.",
+  "volatility_outlook": "Fear & Greed Index op 18 (Extreme Fear) historisch correlatief met volatility-bodem; liquidatie-risico's zijn laag gegeven beperkte leveraged positie-groei. Verwacht begrensd dagelijks trading-bereik zolang macro-bellows (Fed, geopolitiek) dormant blijven; break-out potentieel naar beneden limitering onder $68.500.",
+  "full_report": "CryptoMarketz marktbrief 2026-03-12: Bitcoin stabiliseert rond $70.263 (-0.02% 24h, -3.07% 7d) in Extreme Fear-regime (Index: 18), terwijl Ethereum relatieve sterkte demonstreert op $2.078,21 (+1.24%) aangedreven door institutionele staking-vraag via BlackRock's ETF-lancering. Totale marktcap noteert $2.47T (-0.09%), BTC-dominantie 56.7%, vol $99.9B \u2014 toon van consolidatie in risicomijding. Macro-context verslechterd: Fed maart rate-cut kansen onder 1%, maar enterprise-crypto-adoption versnelt via accounting-tools en stablecoins. Quantum-waarschuwing van Ark Invest (1/3 BTC-supply risico) en FATF-regulering vormen langetermijnhawkish-kaders. Liquidatie-gegevens niet beschikbaar; geen grote whale-exits waargenomen, mogelijke accumulatiefase op dips."
 }
