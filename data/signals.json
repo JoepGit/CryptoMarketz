@@ -1,5 +1,38 @@
 [
   {
+    "id": 1773281324931,
+    "coin": "ETH/USD",
+    "type": "BUY",
+    "entry": "2045.87",
+    "tp": "2150.00",
+    "sl": "1980.00",
+    "note": "Positieve 24h momentum (+0.39%) met sterke support, risico/reward 1:2.5.",
+    "timestamp": "2026-03-12T02:08:44.242Z",
+    "generated_at": "Thu, 12 Mar 2026 02:08:44 GMT"
+  },
+  {
+    "id": 1773281324651,
+    "coin": "BNB/USD",
+    "type": "BUY",
+    "entry": "647.55",
+    "tp": "700.00",
+    "sl": "620.00",
+    "note": "Bullish 24h performance (+0.59%), weerstand doorbroken, risico/reward 1:2.3.",
+    "timestamp": "2026-03-12T02:08:44.242Z",
+    "generated_at": "Thu, 12 Mar 2026 02:08:44 GMT"
+  },
+  {
+    "id": 1773281325129,
+    "coin": "BTC/USD",
+    "type": "WATCH",
+    "entry": "69858",
+    "tp": "73000",
+    "sl": "67500",
+    "note": "7d daling (-4.03%) aanzienlijk, wacht op reversal signal of support bevestiging.",
+    "timestamp": "2026-03-12T02:08:44.242Z",
+    "generated_at": "Thu, 12 Mar 2026 02:08:44 GMT"
+  },
+  {
     "id": 1773271645224,
     "coin": "BNB/USD",
     "type": "BUY",
