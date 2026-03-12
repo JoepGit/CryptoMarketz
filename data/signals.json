@@ -1,5 +1,38 @@
 [
   {
+    "id": 1773298608170,
+    "coin": "ETH/USD",
+    "type": "BUY",
+    "entry": "2030.22",
+    "tp": "2150.00",
+    "sl": "1950.00",
+    "note": "Positieve intraday momentum (0.19% 1h, +0.29% 24h) met sterke volume, technisch steun rond huidige niveau.",
+    "timestamp": "2026-03-12T06:56:47.212Z",
+    "generated_at": "Thu, 12 Mar 2026 06:56:47 GMT"
+  },
+  {
+    "id": 1773298607766,
+    "coin": "BNB/USD",
+    "type": "WATCH",
+    "entry": "644.58",
+    "tp": "680.00",
+    "sl": "620.00",
+    "note": "Lichte uptrend met lage volatiliteit, wacht op volume confirmatie voordat positie opening.",
+    "timestamp": "2026-03-12T06:56:47.212Z",
+    "generated_at": "Thu, 12 Mar 2026 06:56:47 GMT"
+  },
+  {
+    "id": 1773298607901,
+    "coin": "BTC/USD",
+    "type": "WATCH",
+    "entry": "69482",
+    "tp": "73500",
+    "sl": "67000",
+    "note": "Consolidatie fase na 7d daling van -4.03%, geen duidelijk buy/sell signaal momenteel.",
+    "timestamp": "2026-03-12T06:56:47.212Z",
+    "generated_at": "Thu, 12 Mar 2026 06:56:47 GMT"
+  },
+  {
     "id": 1773294720009,
     "coin": "BNB/USD",
     "type": "BUY",
