@@ -1,18 +1,18 @@
 {
   "date": "2026-03-12",
-  "focus": "Bitcoin en Ethereum tonen zwakte na weeklong dalende trend; BNB en SOL bewijzen relatieve sterkte met positieve 24h-moves.",
-  "risk": "Bearish technische setup, lagere volumes",
-  "btc_structure": "Bitcoin noteert $70,105 met intraday -0,47% verlies en een teleurstellende weekprestatie van -3,83%. Dit niveau ligt onder recente support; volumeruzie en afnemende koopkracht suggereren verdere neerwaartse druk.",
-  "eth_flows": "Ethereum staat op $2,056,55 met een dagelijks herstel van +0,49%, maar onderperformt tegen Bitcoin met -3,81% op weekbasis. Het positieve dagmomentum is fragiel en afhankelijk van institutionele steun; volume ($19,43B) blijft aanzienlijk maar verdeling geeft nog geen duidelijk koopseinen.",
+  "focus": "Markt in Extreme Fear-territorium terwijl BTC stabiliteit zoekt rond $70,090 ondanks weekelijkse neerwaartse druk.",
+  "risk": "Extreme Fear, rood sentiment, zwakke momentum",
+  "btc_structure": "Bitcoin handelt op $70,090 met een milde intraday daling van -0.34%. Over zeven dagen zien we significantere druk met -3.85%, wat wijst op een voortdurende correctiefase na het recente rally-momentum. Het volume van $45.46B geeft aan dat verkopers voorzichtig blijven maar er geen paniekverkoop plaatsvindt.",
+  "eth_flows": "Ethereum noteert $2,056.82 met minimale intraday beweging (-0.21%), maar 7-daagse verlies van -3.80% toont gelijktijdige correctie. Het 24h-volume van $19.27B is relatief gezond, wat suggereert dat grote wallets nog niet massaal Exit zoeken ondanks het negatieve sentiment.",
   "top_narratives": [
-    "Weeklong correctie breidt zich uit in top-5 assets",
-    "BNB en SOL tonen defensieve sterkte in neermarkt",
-    "Lage intraday volatiliteit suggereert consolidatie voor volgende move",
-    "Macro-risico's blijven markt onder druk houden"
+    "Extreme Fear Index (18) duidt op mogelijk reversal-moment voor opportunistische accumulators",
+    "BTC en ETH tonen parallelle weekdaling (-3.85% en -3.80%), wat systematische marktdruk bevestigt",
+    "BNB en SOL blijven relatief sterk (+0.62% en +0.56% 24h) terwijl altcoins achterblijven",
+    "Lage volatiliteit in 1h-bewegingen (-0.12% tot -0.65%) duidt op consolidatie voor volgende move"
   ],
-  "macro_impact": "Macro-onzekerheid en renteverwachtingen blijven beperkend werken op risicovolle activa. De aanhoudende weekcorrectie duidt op afnemend sentiment en mogelijke herpositionering van grotere beleggers.",
-  "whale_flows": "BTC-volume ($45,38B) lijkt adequaat maar beweging blijft klein; ETH-volume ($19,43B) getuigt van operationeel belang maar geen duidelijke accumulatiefase. Lager volume in kleinere alts suggereert exit-gedrag van hogere positiehouders.",
-  "funding_oi": "Verwacht dat funding rates onder druk blijven na weekcorrectie; shorters hebben mogelijke winsten geboekt en kunnen voorzichtig blijven. OI-continu's wijzen op voorzichtige positiegroei zonder aggressieve bullish bouw.",
-  "volatility_outlook": "Intraday moves van -0,5% tot +1% suggereren compressie; verwacht dat echte breakout pas volgt na macro-catalysatoren. Komende dagen kritisch voor herstelingang of dieper testvel.",
-  "full_report": "CryptoMarketz marktbriefing 12-03-2026: Bitcoin ($70,105, -0,47% 1h, -3,83% 7d) en Ethereum ($2,056,55, +0,49% 24h, -3,81% 7d) vertonen weekcorrectie met grote volume ($45,38B en $19,43B), terwijl BNB (+1,06% 24h) en SOL (+0,84% 24h) defensieve outperformance tonen. XRP volgt de rood trend met -3,66% op 7-daagbasis. Technische setup blijft bearish; herstels zijn voorbijgaand. Macro-risico's en afgezwakte institutionele interesse blijven markt onder druk houden. Traders moeten wachten op solide support-tests voordat bullish posities opnieuw worden opgebouwd."
+  "macro_impact": "In afwezigheid van nieuw macro-nieuws blijft het Extreme Fear sentiment dominant, mogelijk veroorzaakt door eerdere macro-headwinds die nog steeds doorwerken in risico-aversief gedrag. Het ontbreken van bullish catalysts houdt beleggers in afwachtende positie.",
+  "whale_flows": "Het totale volume van $45.46B in BTC en $19.27B in ETH suggereert dat whales voorzichtig accumuleren op deze Fear-niveaus, maar de -3.85% weekdaling toont dat zij niet agressief long gaan. De lagere volumes in altcoins (bijvoorbeeld LINK $0.32B, ADA $0.41B) duiden erop dat kapitalstroom naar veiliger havens verhuist.",
+  "funding_oi": "Met Fear & Greed op 18 (Extreme Fear, gestegen van 15 gisteren) moeten funding rates zeer laag staan, wat wijst op afnemend leveraged long-positie\u00ebn. De intraday dalingen van -0.21% tot -0.57% combineren met Fear-sentiment, wat suggests dat short-posities mogelijk profiteren, maar niet in extreme mate.",
+  "volatility_outlook": "Verwachte volatiliteit blijft gedrukt gegeven de minimale intraday-bewegingen (-0.12% tot -0.65%) en geconsolideerde prijsniveaus. Pas een doorbraak boven de $70k-weerstand voor BTC of onder strategische support zou merkbare volatiliteitstoename kunnen triggeren.",
+  "full_report": "Op 2026-03-12 opereert de cryptomarkt onder Extreme Fear-omstandigheden (Fear & Greed Index: 18) met BTC handelend op $70,090 (-0.77% 24h, -3.85% 7d) en ETH op $2,056.82 (-0.20% 24h, -3.80% 7d). Ondanks het rode sentiment blijft het volume robuust ($45.46B voor BTC, $19.27B voor ETH), wat aanduidt dat paniekverkoop beperkt is. BNB (+0.62%) en SOL (+0.56%) bieden lichte relatieve sterkte, terwijl DOT (-2.91%) en AVAX (-1.80%) zwaarder getroffen zijn. De intraday-bewegingen blijven beperkt (-0.12% tot -0.57%), wat consolidatie voor de volgende directie suggereert; de marktrally wacht op nieuwe bullish catalysts of een verdere verzwakking die support-levels aantrekt."
 }
