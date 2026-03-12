@@ -1,5 +1,49 @@
 [
   {
+    "id": 1773308589885,
+    "coin": "ETH/USD",
+    "type": "BUY",
+    "entry": "2047.61",
+    "tp": "2150.00",
+    "sl": "2000.00",
+    "note": "Sterkste 24h performance (+1.50%), bullish momentum met gezonde pullback setup.",
+    "timestamp": "2026-03-12T09:43:09.674Z",
+    "generated_at": "Thu, 12 Mar 2026 09:43:09 GMT"
+  },
+  {
+    "id": 1773308590024,
+    "coin": "BNB/USD",
+    "type": "BUY",
+    "entry": "647.98",
+    "tp": "680.00",
+    "sl": "630.00",
+    "note": "Positieve 24h trend (+1.07%) met minimale weekverlies, stabiele technische positie.",
+    "timestamp": "2026-03-12T09:43:09.674Z",
+    "generated_at": "Thu, 12 Mar 2026 09:43:09 GMT"
+  },
+  {
+    "id": 1773308590099,
+    "coin": "SOL/USD",
+    "type": "WATCH",
+    "entry": "85.78",
+    "tp": "92.00",
+    "sl": "82.00",
+    "note": "Sterke weekdaling (-4.77%) vraagt verdere confirmation voordat bullish setup.",
+    "timestamp": "2026-03-12T09:43:09.674Z",
+    "generated_at": "Thu, 12 Mar 2026 09:43:09 GMT"
+  },
+  {
+    "id": 1773308590245,
+    "coin": "XRP/USD",
+    "type": "WATCH",
+    "entry": "1.38",
+    "tp": "1.45",
+    "sl": "1.34",
+    "note": "Minimaal momentum, afwachten tot duidelijke directie stabiliseert.",
+    "timestamp": "2026-03-12T09:43:09.674Z",
+    "generated_at": "Thu, 12 Mar 2026 09:43:09 GMT"
+  },
+  {
     "id": 1773304981589,
     "coin": "ETH/USD",
     "type": "BUY",
