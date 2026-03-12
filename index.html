@@ -2359,6 +2359,67 @@ body::before{background:radial-gradient(circle at 18% 0%, rgba(29,185,84,.12), t
         <div style="font-family:'Orbitron',monospace;font-size:8px;color:rgba(122,106,82,.3);letter-spacing:.1em;text-align:center;padding:16px 0 4px">
           &#9888; BOT SIGNALEN ZIJN AI-GEGENEREERD &middot; GEEN FINANCIEEL ADVIES &middot; ALTIJD EIGEN ANALYSE DOEN
         </div>
+
+        <!-- ═══ WINS / VERLIES + HISTORY ═══ -->
+        <!-- PERFORMANCE STATS -->
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:18px">
+          <!-- WINS -->
+          <div class="card" style="padding:22px 24px;position:relative;overflow:hidden;cursor:pointer;border-color:rgba(29,185,84,.25)" onclick="showBotHistory('win')">
+            <div style="position:absolute;inset:0;background:radial-gradient(circle at 30% 50%,rgba(29,185,84,.08),transparent 65%);pointer-events:none"></div>
+            <div style="font-family:'Orbitron',monospace;font-size:8px;letter-spacing:.2em;color:rgba(29,185,84,.6);text-transform:uppercase;margin-bottom:8px">WIN RATE</div>
+            <div style="font-family:'Orbitron',monospace;font-size:48px;font-weight:900;line-height:1;color:#1DB954" id="bot-win-pct">—</div>
+            <div style="font-family:'Orbitron',monospace;font-size:11px;color:rgba(29,185,84,.7);margin-top:6px" id="bot-win-count">0 wins</div>
+            <div style="height:4px;background:rgba(255,255,255,.06);border-radius:999px;overflow:hidden;margin-top:10px">
+              <div id="bot-win-bar" style="height:100%;background:linear-gradient(90deg,#1DB954,#1ed760);border-radius:999px;width:0%;transition:width .8s ease"></div>
+            </div>
+            <div style="margin-top:8px;font-family:'Orbitron',monospace;font-size:7px;color:rgba(29,185,84,.35);letter-spacing:.1em">KLIK VOOR HISTORY →</div>
+          </div>
+
+          <!-- VERLIES -->
+          <div class="card" style="padding:22px 24px;position:relative;overflow:hidden;cursor:pointer;border-color:rgba(255,77,77,.25)" onclick="showBotHistory('loss')">
+            <div style="position:absolute;inset:0;background:radial-gradient(circle at 70% 50%,rgba(255,77,77,.08),transparent 65%);pointer-events:none"></div>
+            <div style="font-family:'Orbitron',monospace;font-size:8px;letter-spacing:.2em;color:rgba(255,77,77,.6);text-transform:uppercase;margin-bottom:8px">VERLIES RATE</div>
+            <div style="font-family:'Orbitron',monospace;font-size:48px;font-weight:900;line-height:1;color:var(--red)" id="bot-loss-pct">—</div>
+            <div style="font-family:'Orbitron',monospace;font-size:11px;color:rgba(255,77,77,.7);margin-top:6px" id="bot-loss-count">0 losses</div>
+            <div style="height:4px;background:rgba(255,255,255,.06);border-radius:999px;overflow:hidden;margin-top:10px">
+              <div id="bot-loss-bar" style="height:100%;background:linear-gradient(90deg,#ff4d4d,#ff6b7a);border-radius:999px;width:0%;transition:width .8s ease"></div>
+            </div>
+            <div style="margin-top:8px;font-family:'Orbitron',monospace;font-size:7px;color:rgba(255,77,77,.35);letter-spacing:.1em">KLIK VOOR HISTORY →</div>
+          </div>
+
+          <!-- TOTALE P&L -->
+          <div class="card" style="padding:22px 24px;position:relative;overflow:hidden;cursor:pointer;border-color:rgba(212,175,55,.2)" onclick="showBotHistory('all')">
+            <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(212,175,55,.06),transparent 65%);pointer-events:none"></div>
+            <div style="font-family:'Orbitron',monospace;font-size:8px;letter-spacing:.2em;color:rgba(212,175,55,.6);text-transform:uppercase;margin-bottom:8px">TOTALE P&amp;L</div>
+            <div style="font-family:'Orbitron',monospace;font-size:36px;font-weight:900;line-height:1" id="bot-total-pnl">—</div>
+            <div style="font-family:'Orbitron',monospace;font-size:11px;color:var(--sub);margin-top:6px" id="bot-total-trades">0 afgesloten trades</div>
+            <div style="height:4px;background:rgba(255,255,255,.06);border-radius:999px;overflow:hidden;margin-top:10px">
+              <div id="bot-pnl-bar" style="height:100%;border-radius:999px;width:50%;transition:width .8s ease"></div>
+            </div>
+            <div style="margin-top:8px;font-family:'Orbitron',monospace;font-size:7px;color:rgba(212,175,55,.35);letter-spacing:.1em">ALLE TRADES HISTORY →</div>
+          </div>
+        </div>
+
+        <!-- HISTORY PANEL -->
+        <div id="bot-history-modal" style="display:none;margin-top:14px">
+          <div class="card" style="padding:0;overflow:hidden">
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--bdr);flex-wrap:wrap;gap:8px">
+              <div style="font-family:'Orbitron',monospace;font-size:10px;font-weight:700;color:var(--accent);letter-spacing:.08em" id="bot-history-title">TRADE HISTORY</div>
+              <div style="display:flex;gap:6px">
+                <button onclick="showBotHistory('all')" id="hbtn-all" style="background:rgba(212,175,55,.12);border:1px solid rgba(212,175,55,.3);color:var(--accent);font-family:'Orbitron',monospace;font-size:7.5px;padding:4px 10px;border-radius:5px;cursor:pointer">ALLE</button>
+                <button onclick="showBotHistory('win')" id="hbtn-win" style="background:none;border:1px solid var(--bdr);color:var(--sub);font-family:'Orbitron',monospace;font-size:7.5px;padding:4px 10px;border-radius:5px;cursor:pointer">WINS</button>
+                <button onclick="showBotHistory('loss')" id="hbtn-loss" style="background:none;border:1px solid var(--bdr);color:var(--sub);font-family:'Orbitron',monospace;font-size:7.5px;padding:4px 10px;border-radius:5px;cursor:pointer">LOSSES</button>
+                <button onclick="closeBotHistory()" style="background:none;border:1px solid var(--bdr);color:var(--sub);font-family:'Orbitron',monospace;font-size:7.5px;padding:4px 10px;border-radius:5px;cursor:pointer">× SLUITEN</button>
+              </div>
+            </div>
+            <div id="bot-history-list" style="padding:6px 0;max-height:480px;overflow-y:auto"></div>
+            <div style="padding:10px 18px;border-top:1px solid var(--bdr);font-family:'Orbitron',monospace;font-size:8px;color:var(--sub);display:flex;justify-content:space-between" id="bot-history-footer">
+              <span id="bot-history-count"></span>
+              <span id="bot-history-pnl-sum"></span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div><!-- /page-bot-signals -->
 
@@ -3577,10 +3638,142 @@ async function refreshBotSignals(){
 var _origGoPage=window.goPage;
 window.goPage=function(id,el){
   if(typeof _origGoPage==='function')_origGoPage(id,el);
-  if(id==='bot-signals')refreshBotSignals();
+  if(id==='bot-signals'){refreshBotSignals();renderBotWL();}
 };
 
-function initBriefNavigation(){
+/* ══════════════════════════════════════════
+   BOT WIN / LOSS TRACKER (automatisch via results.json)
+══════════════════════════════════════════ */
+async function renderBotWL() {
+  let results = [];
+  try {
+    const res = await fetch('/data/results.json?t=' + Date.now());
+    if (res.ok) results = await res.json();
+  } catch(e) {}
+
+  window._botResults = results;
+
+  var wins   = results.filter(function(r){ return r.result === 'win'; });
+  var losses = results.filter(function(r){ return r.result === 'loss'; });
+  var total  = wins.length + losses.length;
+  var winPct  = total > 0 ? Math.round((wins.length / total) * 100) : 0;
+  var lossPct = total > 0 ? Math.round((losses.length / total) * 100) : 0;
+
+  // Totale P&L optellen
+  var totalPnl = 0;
+  results.forEach(function(r) {
+    var n = parseFloat((r.pnl || '0').replace('%','').replace('+',''));
+    if (!isNaN(n)) totalPnl += n;
+  });
+  var pnlPositive = totalPnl >= 0;
+
+  var wp  = document.getElementById('bot-win-pct');
+  var lp  = document.getElementById('bot-loss-pct');
+  var wc  = document.getElementById('bot-win-count');
+  var lc  = document.getElementById('bot-loss-count');
+  var wb  = document.getElementById('bot-win-bar');
+  var lb  = document.getElementById('bot-loss-bar');
+  var tp  = document.getElementById('bot-total-pnl');
+  var tt  = document.getElementById('bot-total-trades');
+  var pb  = document.getElementById('bot-pnl-bar');
+
+  if(wp) wp.textContent = total > 0 ? winPct + '%' : '—';
+  if(lp) lp.textContent = total > 0 ? lossPct + '%' : '—';
+  if(wc) wc.textContent = wins.length + ' win' + (wins.length !== 1 ? 's' : '');
+  if(lc) lc.textContent = losses.length + ' loss' + (losses.length !== 1 ? 'es' : '');
+  if(tt) tt.textContent = total + ' afgesloten trade' + (total !== 1 ? 's' : '');
+  if(tp) {
+    tp.textContent = total > 0 ? (pnlPositive ? '+' : '') + totalPnl.toFixed(2) + '%' : '—';
+    tp.style.color = total > 0 ? (pnlPositive ? '#1DB954' : 'var(--red)') : 'var(--sub)';
+  }
+  if(pb) {
+    pb.style.background = pnlPositive
+      ? 'linear-gradient(90deg,#1DB954,#1ed760)'
+      : 'linear-gradient(90deg,#ff4d4d,#ff6b7a)';
+    pb.style.width = total > 0 ? Math.min(Math.abs(totalPnl) * 2 + 10, 100) + '%' : '0%';
+  }
+
+  setTimeout(function(){
+    if(wb) wb.style.width = winPct + '%';
+    if(lb) lb.style.width = lossPct + '%';
+  }, 100);
+}
+
+function showBotHistory(filter) {
+  var modal = document.getElementById('bot-history-modal');
+  var list  = document.getElementById('bot-history-list');
+  var title = document.getElementById('bot-history-title');
+  var footer_count = document.getElementById('bot-history-count');
+  var footer_pnl   = document.getElementById('bot-history-pnl-sum');
+  if(!modal || !list) return;
+
+  var arr = window._botResults || [];
+  var filtered = (filter && filter !== 'all') ? arr.filter(function(r){ return r.result === filter; }) : arr;
+
+  // Filter buttons styling
+  ['all','win','loss'].forEach(function(f) {
+    var btn = document.getElementById('hbtn-' + f);
+    if(!btn) return;
+    var active = f === (filter || 'all');
+    btn.style.background = active ? (f==='win'?'rgba(29,185,84,.12)':f==='loss'?'rgba(255,77,77,.12)':'rgba(212,175,55,.12)') : 'none';
+    btn.style.borderColor = active ? (f==='win'?'rgba(29,185,84,.3)':f==='loss'?'rgba(255,77,77,.3)':'rgba(212,175,55,.3)') : 'var(--bdr)';
+    btn.style.color = active ? (f==='win'?'#1DB954':f==='loss'?'var(--red)':'var(--accent)') : 'var(--sub)';
+  });
+
+  if(title) title.textContent = filter==='win' ? 'WIN HISTORY' : filter==='loss' ? 'LOSS HISTORY' : 'ALLE TRADES';
+
+  // P&L som van gefilterde trades
+  var pnlSum = 0;
+  filtered.forEach(function(r) {
+    var n = parseFloat((r.pnl||'0').replace('%','').replace('+',''));
+    if(!isNaN(n)) pnlSum += n;
+  });
+  if(footer_count) footer_count.textContent = filtered.length + ' trade' + (filtered.length!==1?'s':'');
+  if(footer_pnl) {
+    footer_pnl.textContent = filtered.length > 0 ? 'Totaal P&L: ' + (pnlSum>=0?'+':'') + pnlSum.toFixed(2) + '%' : '';
+    footer_pnl.style.color = pnlSum >= 0 ? '#1DB954' : 'var(--red)';
+  }
+
+  if(!filtered.length){
+    list.innerHTML = '<div style="padding:32px;text-align:center;font-family:\'Orbitron\',monospace;font-size:9px;color:var(--sub)">Nog geen '+(filter==='win'?'wins':filter==='loss'?'losses':'afgesloten trades')+' — de bot checkt elk uur TP/SL.</div>';
+  } else {
+    list.innerHTML = filtered.map(function(r, i){
+      var isWin = r.result === 'win';
+      var col = isWin ? '#1DB954' : 'var(--red)';
+      var bg  = isWin ? 'rgba(29,185,84,.04)' : 'rgba(255,77,77,.04)';
+      var icon = isWin ? '✓' : '✗';
+      var dateStr = r.resolved_at ? new Date(r.resolved_at).toLocaleDateString('nl-NL',{day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'}) : '';
+      var num = filtered.length - i; // nieuwste bovenaan = hoogste nummer
+      return '<div style="display:flex;align-items:center;gap:12px;padding:11px 18px;border-bottom:1px solid rgba(255,255,255,.04);background:'+bg+'">'
+        +'<div style="font-family:\'Orbitron\',monospace;font-size:8px;color:var(--sub);width:20px;text-align:right;flex-shrink:0">#'+num+'</div>'
+        +'<div style="width:28px;height:28px;border-radius:7px;background:'+(isWin?'rgba(29,185,84,.12)':'rgba(255,77,77,.12)')+';color:'+col+';display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0">'+icon+'</div>'
+        +'<div style="flex:1;min-width:0">'
+          +'<div style="display:flex;align-items:center;gap:6px">'
+            +'<span style="font-family:\'Orbitron\',monospace;font-size:12px;font-weight:700;color:var(--cream)">'+escapeHtml(r.coin)+'</span>'
+            +'<span style="font-family:\'Orbitron\',monospace;font-size:8px;padding:2px 6px;border-radius:3px;background:rgba(255,255,255,.06);color:var(--sub)">'+r.type+'</span>'
+          +'</div>'
+          +'<div style="font-family:\'Orbitron\',monospace;font-size:7.5px;color:var(--sub);margin-top:3px">'
+            +'Entry '+escapeHtml(String(r.entry))+' · TP '+escapeHtml(String(r.tp))+' · SL '+escapeHtml(String(r.sl))
+          +'</div>'
+          +(dateStr?'<div style="font-family:\'Orbitron\',monospace;font-size:7px;color:rgba(122,106,82,.4);margin-top:2px">'+dateStr+'</div>':'')
+        +'</div>'
+        +(r.pnl?'<div style="font-family:\'Orbitron\',monospace;font-size:16px;font-weight:700;color:'+col+';flex-shrink:0">'+escapeHtml(r.pnl)+'</div>':'')
+        +'</div>';
+    }).join('');
+  }
+
+  modal.style.display = 'block';
+  setTimeout(function(){ modal.scrollIntoView({behavior:'smooth', block:'nearest'}); }, 50);
+}
+
+function closeBotHistory(){
+  var modal = document.getElementById('bot-history-modal');
+  if(modal) modal.style.display = 'none';
+}
+
+
+
+
   const navs = document.querySelectorAll('.brief-nav');
   const panels = document.querySelectorAll('.brief-panel');
   if(!navs.length || !panels.length) return;
