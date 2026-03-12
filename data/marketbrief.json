@@ -1,18 +1,18 @@
 {
-  "date": "2026-03-12",
-  "focus": "Markt in extreme fear-regime met lichte intraday recovery terwijl macro headwinds (CBDC-ban, private credit risico's) sentiment onder druk houden.",
-  "risk": "Extreme Fear, bearish sentiment, liquidatie-risico",
-  "btc_structure": "Bitcoin noteert op $70.329 met minimale intraday winst (+0.51% 1h) maar gestage weekdaling (-0.92% 7d). Dominantie van 56.8% suggereert nog steeds sterke positie, maar weekly range toont consolidatie zonder duidelijke bullish impuls. $70k-niveau fungeert als kritieke support.",
-  "eth_flows": "Ethereum op $2.066,84 (-0.42% 24h, -0.44% 7d) volgt BTC-patroon nauw met volume van $17,87B. Layer-2 ontwikkelingen (OP Labs personeel) geven geen boost; institutionele on-chain accounting-trend (Cryptio $45M) suggereert langterm interest ondanks korttermijn-druk.",
+  "date": "donderdag 12 maart 2026",
+  "focus": "Brede marktcorrectie met lagere volumes suggereert voorzichtige sentiment voor komend weekend.",
+  "risk": "Laag volatiliteit, consolidatie fase",
+  "btc_structure": "Bitcoin staat op $70.290 met een bescheiden daling van -0.57% in 24 uur, ondersteund door $43.04B handelsvolume. De prijs handelt zonder sterke directionaliteit, wat wijst op marktevenwicht rond huidige niveaus.",
+  "eth_flows": "Ethereum volgt het bredere patroon met $2.066,53 en een minimale verliesstand van -0.40% bij $18.37B volume. Het stabiele handelsvolume duidt op voortgaande institutionele interesse ondanks geringe prijsbewegingen.",
   "top_narratives": [
-    "CBDC-ban in Amerikaanse huisvesting als regulatory tailwind voor private crypto",
-    "Private credit systeem-risico's potentieel trigger voor Bitcoin vlucht-naar-kwaliteit",
-    "Layer-2 consolidatie (OP Labs focus-versmalling) versus Solana-momentum (VeryAI identity)",
-    "On-chain institutional adoption (Cryptio, Polychain investeringen) ondanks bear-regime"
+    "Marktconsolidatie na recente rally's",
+    "Vraag naar stablecoins blijft voorzichtig",
+    "Altcoin underperformance tegenover BTC",
+    "Wachtstand voor macro-economische updates"
   ],
-  "macro_impact": "US Senate CBDC-ban signaliseert sterker crypto-friendly beleid, maar risico's rond private credit en mogelijke rente-volatiliteit wegen op sentiment. $100-olie scenario's worden geanalyseerd voor Bitcoin-netwerk-impact, wat macro-onzekerheid reflecteert.",
-  "whale_flows": "Liquidatie-data niet beschikbaar, maar $100.5B 24h-volume en breed negatieve 24h-returns (-0.40% BTC, -0.42% ETH) suggereren gedistribueerde verkopingen. BNB relatief sterk (-0.26%) wijst op institutionele stabiliteit in exchange-ecosysteem.",
-  "funding_oi": "Funding rates en open interest data niet beschikbaar voor directe analyse. Bitcoin funding rate flip naar negatief (volgens Cointelegraph) suggereert overextended short-posities, maar bearish sentiment domineert markt; shorts vergroten risico's op squeeze.",
-  "volatility_outlook": "Fear & Greed Index op 18 (Extreme Fear, +3 vs gisteren) signaleert potentieel for mean-reversion bounce, maar macro-headwinds (CBDC-debat, private credit risico) kunnen verdere volatiliteit triggeren. Liquidatie-treshold rond $70k-$68k kritiek.",
-  "full_report": "Cryptomarkten handelen onder Extreme Fear (Index: 18) met BTC op $70.329 (-0.92% weekly) en ETH op $2.066,84 (-0.44% weekly) terwijl totale market cap $2,47T bedraagt. Intraday licht bullish (+0.51% BTC 1h) maar weekly trend bearish; BTC-dominantie 56.8% intact. Politieke tailwind via US Senate CBDC-ban wordt gecompenseerd door macro-risico's rondom private credit en energieprijzen. Cointelegraph rapporteert negatieve Bitcoin funding rates ondanks bear-sentiment, waarschuwend voor short-overextension. Institutionele adoption-signals (Cryptio $45M, Polychain VeryAI) suggereren lange-termijn geloof ondanks korttermijn-druk op prijzen."
+  "macro_impact": "Afwezigheid van grote macro-catalysatoren leidt tot gedempte handelsdynamiek. Beleggers wachten op signalen van centrale banken en inflatiegegevens voordat ze nieuwe posities opbouwen.",
+  "whale_flows": "Gemengde signalen in whale-activiteit met BTC-volume dominant op $43.04B, terwijl kleinere altcoins zoals XRP ($1.94B) en SOL ($3.69B) zwakker uitvoeren. Dit suggereert concentratie van kapitaal in grotere assets.",
+  "funding_oi": "Funding rates blijven laag met beperkte shorting-activiteit, wat wijst op prudentie van leveraged traders. Open Interest stabiliseert rond huidige niveaus zonder scherpe veranderingen.",
+  "volatility_outlook": "Verwacht zeer lage volatiliteit gedurende de komende 24-48 uur met beperkte breakout-kansen. Range-bound trading domineert, met kritieke niveaus ongeveer 1-2% rond huidige prijzen.",
+  "full_report": "De cryptomarkt toont donderdag 12 maart 2026 een algeheel voorzichtig patroon met BTC op $70.290 (-0.57%), ETH op $2.066,53 (-0.40%), en bredere altschwaktes zoals XRP (-0.89%) en SOL (-0.91%). Ondanks substantieel volume in BTC ($43.04B), ontbreken sterke directionaliteit en catalysatoren voor nieuwe trends. Whale-kapitaal concentreert zich in grote assets, terwijl kleinere altcoins onderuit gaan. De markt staat in consolidatiefase met lage volatiliteit en wacht op macro-updates voordat substantiële bewegingen ontstaan."
 }
