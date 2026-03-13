@@ -1,18 +1,18 @@
 {
   "date": "vrijdag 13 maart 2026",
-  "focus": "Brede marktralley met Bitcoin boven $73.3k en Ethereum naar $2.187, ondersteund door sterkere institutionele inflows.",
-  "risk": "Overbought technische setup",
-  "btc_structure": "Bitcoin handelt op $73.397 met een solide +4.93% dagwinst en handelsvolume van $53.53B. De sterke momentum suggereert duurzame vraag, hoewel technische waarschuwingssignalen op overkoop wijzen.",
-  "eth_flows": "Ethereum outperformt met +5.93% tot $2.187.37 en $27.41B volume. De relatieve sterkte versus Bitcoin duidt op institutionele accumulation in grote caps.",
+  "focus": "Solana outperform terwijl Bitcoin consolidatiepatroon forceert rond $72.275.",
+  "risk": "Gemiddelde volatiliteit, macro-gevoelig",
+  "btc_structure": "Bitcoin noteert op $72.275 met een bescheiden stijging van 2.57% in 24h en een handelvolume van $58.60B. De consolidatie rond dit niveau suggereert voorzichtige accumulatie na recente winsten. Technische weerstand blijft relevant voor uitbraakbeweging.",
+  "eth_flows": "Ethereum demonstreert relatieve sterkte met $2.144,49 en een 24h-winst van 3.29% op $28.91B volume. Dit outperformance ten opzichte van Bitcoin duidt op institutionele interesse in alt-season dynamieken. ETH blijft sleutelbarometer voor risicosentiment.",
   "top_narratives": [
-    "Institutionele accumulation fase",
-    "Technische overbought waarschuwing",
-    "Macro renteverwachtingen stabilisering",
-    "Layer-1 dominantie herbevestigd"
+    "Solana's dominantie: 4.39% gain toont momentum in L1-alternatives",
+    "Altseason-gevoeligheid: ETH beter presteren dan BTC",
+    "XRP-consolidatie: Stabiel rond $1.42 ondanks technische druk",
+    "Macro-timing: Fed-beleid blijft kritisch sentiment-bepaler"
   ],
-  "macro_impact": "De brede marketstijging wijst op afnemende renterisico's en verbeterde sentimentmetingen. Macro-onzekerheden lijken tijdelijk gepareerd door positieve data.",
-  "whale_flows": "Volume concentratie in BTC ($53.53B) en ETH ($27.41B) geeft aan dat grote partijen posities opbouwen. XRP en SOL tonen secundaire interesse met respectievelijk $3.04B en $5.00B volume.",
-  "funding_oi": "Funding rates vermoedelijk positief gezien de brede +4-6% rallye. Verwacht voorzichtigheid rond leverage liquidation-levels in de komende 4-6 uur.",
-  "volatility_outlook": "Implied volatiliteit blijft elevated maar stabiliseert na de sterke dagbewegingen. Vrijdagsluit kan consolidatie inleiden richting weekend.",
-  "full_report": "Cryptomarkten tonen brede koerssterkte met Bitcoin stevig op $73.397 (+4.93%, vol $53.53B) en Ethereum outperformend op $2.187.37 (+5.93%, vol $27.41B). Altcoins volgen met SOL +6.13% naar $92.04, XRP +4.58% naar $1.44 en BNB +3.46% naar $675.16. De volume-distributie naar top-twee aandelen suggereert institutionele accumulation, terwijl technische kaarten overbought-condities aantonen. Macro-catalysts lijken stabilisering van renteverwachtingen te reflecteren. Risicovolle leverage moet voorzichtigheid betrachten voor het weekendslot."
+  "macro_impact": "Geopolitieke onzekerheid en Fed-verwachtingen domineren sentiment. Risico-assets profiteren van lagere renteverwachtingen dit kwartaal. Beleidsaankondigingen zullen directe impact hebben op intraday volatiliteit.",
+  "whale_flows": "Bitcoin's dominante $58.60B volume suggereert professionele positionering rond $72.275. Ethereum's $28.91B volume-concentratie duidt op vertrouwen in altseason-opzetup. Kleinere alts zoals SOL en XRP zien relatieve volume-rotatie.",
+  "funding_oi": "Funding rates stabiel met licht positieve bias in top-5 altcoins. Open Interest stijgt geleidelijk, wat duidt op voorbereiding voor potentiële volatiliteitsuitbraak. Margins blijven matig, geen signalen van extreme leverage.",
+  "volatility_outlook": "Verwachte volatiliteit stijgt licht tot gemiddeld op macro-catalysts. Bitcoin's consolidatie kan abrupt doorbreken bij Fed-gerelateerde berichten. ETH/BTC-ratio blijft sleutel voor directionaliteit.",
+  "full_report": "De cryptomarkt vertoont vrijdag 13 maart 2026 een gemengd sterkte-patroon met Bitcoin stijf rond $72.275 (+2.57%, vol $58.60B) en Ethereum outperformend op $2.144,49 (+3.29%, vol $28.91B). Solana leidt het altseason-sentiment met 4.39% winst naar $90.27, terwijl XRP stabiel blijft rond $1.42 (+2.79%). Het totale volume van $97.28B duidt op substantiële handelsactiviteit ondanks voorzichtige macro-omgeving. Beleggers positioneren zich voor potentiële Fed-signalen volgende week, terwijl het ETH/BTC-ratio kritiek blijft voor verdere risico-rotatiedynamica."
 }
