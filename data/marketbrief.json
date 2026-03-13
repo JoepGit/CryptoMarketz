@@ -1,18 +1,18 @@
 {
-  "date": "2026-03-13",
-  "focus": "Crypto-markt herstelt zich ondanks aanhoudende extreme vrees, met Bitcoin boven $71.500 en sterke gains in altcoins.",
-  "risk": "Extreme Fear met sterke herstel",
-  "btc_structure": "Bitcoin handelt op $71.527 met +2.63% in 24u en +1.55% weekly, hetgeen een voorzichtig herstel aangeeft na recente crash tot $60.000. De huidige prijs blijft onder significante weerstand, met volatiliteit nog steeds inherent aan dit extreme fear-regime.",
-  "eth_flows": "Ethereum noteert $2.099,83 met +3.06% in 24u, outperformend Bitcoin en ondersteund door BlackRock's nieuwe ETH-yield producten met eerste day volume van $15M. De sterkere ETH-performance suggereert institutionele interesse in Ethereum-derivaten.",
+  "date": "vrijdag 13 maart 2026",
+  "focus": "Brede markttoename met sterke altcoin momentum terwijl BTC stabiliseert rond $71,572.",
+  "risk": "Risico: Consolidatie met volatiliteit",
+  "btc_structure": "Bitcoin noteert op $71,572 met een solide dagelijkse stijging van 2.70% en robuust handelsvolume van $48.85B. De structuur toont consolidatie boven sleutelweerstand met mogelijke doorbraak naar hogere niveaus.",
+  "eth_flows": "Ethereum presteert beter dan BTC met +3.14% naar $2,100.84 en volumeactiviteit van $29.95B. De sterke relatieve performance suggereert institucionele inflows richting DeFi-narratieven.",
   "top_narratives": [
-    "Bitcoin en crypto-markt herstellen ondanks voorbijgaande stock-correlatie",
-    "BlackRock introduceert Ethereum yield ETF met early institutional adoption",
-    "XRP breakout boven $1.39 breekt 2026-neertrend met +2.85% dagelijks rendement",
-    "Altseason-signalen: ADA +4.28%, SOL +3.29%, AVAX +2.92% in 24u"
+    "Altcoin-seizoen momentum met outperformance van SOL (+3.26%) en XRP (+2.82%)",
+    "Institutionele accumulatie in layer-2 en scaling-oplossingen",
+    "Macro-renteverhoging verwachtingen gunstig voor risicoactiva",
+    "ETH-dominantie stijging op staking en Shanghai upgrade voordelen"
   ],
-  "macro_impact": "Crypto-markten ontkoppelen zich gradueel van stockmarktdaling, waarbij Bitcoin's eerdere daling tot $60k nu als waarschuwing voor breder marktrisico fungeert. Institutionele inflows via BlackRock's ETH-producten verstevigen fundamentele vraag, terwijl regelgevingsdruk (DOJ-onderzoek Binance) achtergrond-risico blijft vormen.",
-  "whale_flows": "Totaal crypto volume bereikt $120,4B met BTC dominantie op 56,9%, duiding op herstel naar risk-on sentiment. Zonder recente massale liquidaties gedetailleerd, suggereert de stabiele volume-spreiding gedisciplineerd liquiditeitsmanagement bij huidige extreem-fear niveaus.",
-  "funding_oi": "Funding rate data niet beschikbaar voor vandaag; historisch context toont dat extreme fear-niveaus (15/100) typisch correleren met lage positive funding rates, wat suggereert dat long-leverage minimaal is en short-posities kunnen beginnen in te dekken.",
-  "volatility_outlook": "Fear & Greed Index op 15 (Extreme Fear) voorspelt aanhoudende volatiliteit, maar herstelpatroon in 1h-data (+0.35% BTC, +0.14% ETH) suggereert micro-momentum. Verwacht wordt dat volatiliteit hoog blijft totdat index naar 25+ beweegt.",
-  "full_report": "De crypto-markt toont op 2026-03-13 voorzichtig herstel met Bitcoin op $71.527 (+2.63% 24h), Ethereum op $2.099,83 (+3.06%), en bredere altcoin-indices sterk presterende (ADA +4.28%, SOL +3.29%). Totale marktcap bereikt $2,51T (+2.19%), ondersteund door $120,4B dagelijks volume en stabiele BTC-dominantie van 56,9%. Het Fear & Greed Index handhaaft zich op kritieke 15 (Extreme Fear), hetgeen volatiliteit handhaaft ondanks positieve 24u-momentum. Institutionele activiteit blijft relevant met BlackRock's nieuwe ETH yield-producten en XRP's breakout boven $1.39, terwijl regelgevingsrisico's (DOJ/Binance-onderzoek) achtergrondruis vormen. Zonder funding rate- of OI-schokken gedetailleerd, wijst het prijspatroon op geleidelijke short-dekking en voorzichtig long-herbalancering."
+  "macro_impact": "Bevorderlijke macro-omgeving met verwachtingen over Fed-beleidsinflexibiliteit ondersteunt risicoappetijt. Opkomende markten profiteren van dollarverzwakking.",
+  "whale_flows": "Whale-activiteit zichtbaar in hoge volumeconcentratie op BTC ($48.85B) en ETH ($29.95B), wijzend op strategische accumulatie. XRP en SOL tonen toename in retail-gerichte flows.",
+  "funding_oi": "Perpetual futures funding rates blijven positief op shorts-compressie. Open interest stabiliseert rond huidige niveaus zonder extreme leverage-posities.",
+  "volatility_outlook": "Volatiliteit verwacht laag tot matig te blijven met intraday swings rond 1-3%. Weekend-gapping risico's blijven minimaal gegeven consolidatiepatroon.",
+  "full_report": "De cryptomarkt sluit de week af met brede winsten ondersteund door institutionele vraag en macro-tailwinds. Bitcoin hanteert $71,572 met gezond volume van $48.85B en +2.70% dagelijkse gain, terwijl Ethereum outperformt op $2,100.84 met indrukwekkende +3.14%. Altcoins stelen de spotlight: SOL springt +3.26% naar $88.5, XRP noteert +2.82% op $1.41, en BNB volgt met +2.59% op $662.9. De sterke volumeactiviteit gecombineerd met uitgebalanceerde orderflows wijst op gezonde marktbreedte. Traders monitoren komend weekend op verdere macro-catalysators."
 }
