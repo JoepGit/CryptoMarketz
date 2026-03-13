@@ -1,18 +1,18 @@
 {
-  "date": "vrijdag 13 maart 2026",
-  "focus": "Bredere markttoename met solide volumesteun suggereert voorzichtige risico-appetijt herstelling na recente volatiliteit.",
-  "risk": "Moderaat opwaarts momentum, voorzichtig",
-  "btc_structure": "Bitcoin handelt op $71.316 met een dagelijkse winst van 2.70% en gezond transactievolume van $48.31B. De prijs behoudt steun rond psychologische niveaus, met technische sterkte in intraday-patronen.",
-  "eth_flows": "Ethereum toont relatieve outperformance met 3.22% winst naar $2.095,34, ondersteund door $29.74B volume. Sterkere Ethereum-dynamieken duiden op institutionele akkumulatie in derivaten markten.",
+  "date": "2026-03-13",
+  "focus": "Crypto-markt herstelt zich ondanks aanhoudende extreme vrees, met Bitcoin boven $71.500 en sterke gains in altcoins.",
+  "risk": "Extreme Fear met sterke herstel",
+  "btc_structure": "Bitcoin handelt op $71.527 met +2.63% in 24u en +1.55% weekly, hetgeen een voorzichtig herstel aangeeft na recente crash tot $60.000. De huidige prijs blijft onder significante weerstand, met volatiliteit nog steeds inherent aan dit extreme fear-regime.",
+  "eth_flows": "Ethereum noteert $2.099,83 met +3.06% in 24u, outperformend Bitcoin en ondersteund door BlackRock's nieuwe ETH-yield producten met eerste day volume van $15M. De sterkere ETH-performance suggereert institutionele interesse in Ethereum-derivaten.",
   "top_narratives": [
-    "Risk-on sentiment herstel na macro-onzekerheden",
-    "Ethereum derivaten accumulation fase",
-    "Bitcoin stabilisatie rond $71K sterktezone",
-    "Altcoin outperformance op momentum trades"
+    "Bitcoin en crypto-markt herstellen ondanks voorbijgaande stock-correlatie",
+    "BlackRock introduceert Ethereum yield ETF met early institutional adoption",
+    "XRP breakout boven $1.39 breekt 2026-neertrend met +2.85% dagelijks rendement",
+    "Altseason-signalen: ADA +4.28%, SOL +3.29%, AVAX +2.92% in 24u"
   ],
-  "macro_impact": "Geopolitieke stabiliteit en Fed-speculatie lijken voorlopig in evenwicht. Markt wacht op volgende macro-catalysatoren zonder duidelijke directionaliteit deze sessie.",
-  "whale_flows": "Large volume flows naar Ethereum ($29.74B) en Bitcoin ($48.31B) suggereren institutionele participatie. SOL-volume ($4.60B) toont retail momentum in altseason narratief.",
-  "funding_oi": "Funding rates blijven mild positief gezien markt-sentiment. Open interest voldoende voor verdere expansie zonder excessieve leverage-waarschuwingen op korte termijn.",
-  "volatility_outlook": "Intraday volatiliteit gemiddeld met alle top-5 assets in groen. Verwacht continue 2-4% dagelijkse bewegingen zonder extremen volgende 48 uur.",
-  "full_report": "Cryptomarkten tonen breed herstel vrijdag 13 maart 2026. Bitcoin ($71.316, +2.70%) en Ethereum ($2.095,34, +3.22%) leiden het momentum, ondersteund door respectievelijk $48.31B en $29.74B volume. SOL spant uit met 3.78% groei naar $88.53 op $4.60B volume, terwijl XRP (+3.07%, $1.41) en BNB (+2.54%, $660.86) solide support behouden. Technische setups suggereren risico-appetite herstel zonder duidelijke oververkochte condities. Institutionele akkumulatie in ETH-derivaten en breed volumerondersteun wijzen op voorzichtige optimisme, hoewel macro-onzekerheden beleggers voorzichtig houden voor weekend-gapping."
+  "macro_impact": "Crypto-markten ontkoppelen zich gradueel van stockmarktdaling, waarbij Bitcoin's eerdere daling tot $60k nu als waarschuwing voor breder marktrisico fungeert. Institutionele inflows via BlackRock's ETH-producten verstevigen fundamentele vraag, terwijl regelgevingsdruk (DOJ-onderzoek Binance) achtergrond-risico blijft vormen.",
+  "whale_flows": "Totaal crypto volume bereikt $120,4B met BTC dominantie op 56,9%, duiding op herstel naar risk-on sentiment. Zonder recente massale liquidaties gedetailleerd, suggereert de stabiele volume-spreiding gedisciplineerd liquiditeitsmanagement bij huidige extreem-fear niveaus.",
+  "funding_oi": "Funding rate data niet beschikbaar voor vandaag; historisch context toont dat extreme fear-niveaus (15/100) typisch correleren met lage positive funding rates, wat suggereert dat long-leverage minimaal is en short-posities kunnen beginnen in te dekken.",
+  "volatility_outlook": "Fear & Greed Index op 15 (Extreme Fear) voorspelt aanhoudende volatiliteit, maar herstelpatroon in 1h-data (+0.35% BTC, +0.14% ETH) suggereert micro-momentum. Verwacht wordt dat volatiliteit hoog blijft totdat index naar 25+ beweegt.",
+  "full_report": "De crypto-markt toont op 2026-03-13 voorzichtig herstel met Bitcoin op $71.527 (+2.63% 24h), Ethereum op $2.099,83 (+3.06%), en bredere altcoin-indices sterk presterende (ADA +4.28%, SOL +3.29%). Totale marktcap bereikt $2,51T (+2.19%), ondersteund door $120,4B dagelijks volume en stabiele BTC-dominantie van 56,9%. Het Fear & Greed Index handhaaft zich op kritieke 15 (Extreme Fear), hetgeen volatiliteit handhaaft ondanks positieve 24u-momentum. Institutionele activiteit blijft relevant met BlackRock's nieuwe ETH yield-producten en XRP's breakout boven $1.39, terwijl regelgevingsrisico's (DOJ/Binance-onderzoek) achtergrondruis vormen. Zonder funding rate- of OI-schokken gedetailleerd, wijst het prijspatroon op geleidelijke short-dekking en voorzichtig long-herbalancering."
 }
