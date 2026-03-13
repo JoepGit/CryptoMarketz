@@ -1,18 +1,18 @@
 {
   "date": "vrijdag 13 maart 2026",
-  "focus": "Moderate bullish momentum in altcoins terwijl BTC consolidateert rond $71.111.",
-  "risk": "Lichte volatiliteit, consolidatiefase dominant",
-  "btc_structure": "Bitcoin noteert op $71.111 met slechts +1.29% winst in 24h, wat suggereert dat kopers voorzichtig blijven na recente stijgingen. De trading volume van $62.68B duidt op gezonde liquiditeit maar geen explosief momentum.",
-  "eth_flows": "Ethereum toont relatieve sterkte met +1.83% op $2.099,59, wat outperformance ten opzichte van Bitcoin aangeeft. Het volume van $30.13B reflecteert aanhoudende interesse in de tweede largest crypto.",
+  "focus": "Altcoin-momentum breekt door terwijl Bitcoin consolidatiepatroon handhaaft rond $71.3K.",
+  "risk": "Moderate bullish met correctierisico",
+  "btc_structure": "Bitcoin noteert op $71,303 met bescheiden winst van 1,52% in 24 uur, ondersteund door gezond handelsvolume van $62,38B. De prijs blijft in een horizontaal consolidatiepatroon, waarbij institutionele vraag voorzichtig blijft.",
+  "eth_flows": "Ethereum toont relatieve sterkte met $2,110.34 en een dagelijkse stijging van 2,26%, ondersteund door volume van $29,28B. Dit suggereert rotatiekapitaal van Bitcoin naar grote altcoins.",
   "top_narratives": [
-    "Altcoin-seizoen begint voorzichtig in te zetten",
-    "Institutionele interesse stabiliseert BTC-prijs",
-    "SOL stijgt uit boven andere altcoins met +2.65%",
-    "Macro-omgeving ondersteunt risk-on sentiment"
+    "Altcoin outperformance vs Bitcoin consolidatie",
+    "Solana momentum +2,68% op sterkere on-chain activiteit",
+    "XRP institutional adoption narratief (+2,18%)",
+    "Ethereum DeFi volume recovery signals"
   ],
-  "macro_impact": "De huidige marktdynamiek suggereert voorzichtig optimisme zonder agressieve Fed-signalen. Beleggers lijken voorzichtig te profiteren van de stabiliteit in traditionele markten.",
-  "whale_flows": "BTC's dominante volume van $62.68B blijft marktleidend, terwijl SOL's 2.65% stijging op $5.39B volume wijst op selectieve whale-accumulatie in performante altcoins.",
-  "funding_oi": "De moderate winsten over de breedte suggereren dat futures-markten neutraal zijn zonder extreme long-posities. Verwacht wordt dat OI stabiel blijft bij verdere consolidatie.",
-  "volatility_outlook": "Impliciete volatiliteit zal waarschijnlijk laag blijven gegeven de huidige consolidatiefase. Breekouts boven of onder steunniveaus kunnen plotse spikes veroorzaken.",
-  "full_report": "CryptoMarketz observeert op vrijdag 13 maart 2026 een markt in evenwicht waarbij Bitcoin zich consolidateert op $71.111 (+1.29%) en Ethereum outperformt met $2.099,59 (+1.83%). Het altcoin-segment toont voorzichtige sterkte, met SOL als uitschieter op $88,80 (+2.65%) en XRP stabiel op $1,40 (+1.67%). De gecombineerde trading volume van $103,08B duidt op gezonde marktdeelname zonder extreme druk. Beleggers positioneren zich defensief terwijl macro-onzekerheden afnemen, wat suggereert dat verdere consolidatie waarschijnlijker is dan een directe breakout."
+  "macro_impact": "Afwezigheid van grote macro-events vandaag ondersteunt technische herstel in risk-on sentiment. Fed-communicatie volgende week blijft kernrisicofactor voor breder marktsentiment.",
+  "whale_flows": "Totaal 24h volume van $101,9B geconcentreerd in BTC/ETH paren (90%). Altcoin volumes (SOL $5,42B, XRP $3,42B, BNB $1,40B) duiden op professionele diversificatie uit BTC-dominant positioning.",
+  "funding_oi": "Funding rates stabiel op grote exchanges; open interest toont geen extreme leverage opbouw. Verwachting is voor geleidelijke re-leveraging als Bitcoin $72K+ breekt.",
+  "volatility_outlook": "ATR-niveaus duiden op 2-3% volatiliteit. Verwacht lagere volume in nahandelsuren vanwege Amerikaanse marktsluit; setup bevordert technische trades boven catalystgedreven bewegingen.",
+  "full_report": "De cryptomarkt laat vrijdag 13 maart 2026 een genuanceerd beeld zien met Bitcoin op $71,303 (+1,52%) in consolidatie-modus terwijl altcoins daadwerkelijk sterker presteren. Ethereum ($2,110.34, +2,26%) leidt outperformance met gezond volume van $29,28B, gevolgd door Solana (+2,68%) en XRP (+2,18%), wat wijst op rotatiestrategieën naar L1/L2 tokens. Het totale dagvolume van $101,9B blijft gezond met dominante positie voor BTC/ETH paren. Institutionele activiteit blijft voorzichtig gezien macro-onzekerheden volgende week; de afwezigheid van vandaag grote catalysts ondersteunt technische herstel in risk-on sentimenten zonder overextensie-signalen."
 }
