@@ -1,18 +1,18 @@
 {
   "date": "zaterdag 14 maart 2026",
-  "focus": "Brede marktcorrectie met voorzichtige houding voorafgaand aan macro-eventumenten.",
-  "risk": "Verhoogd correctierisico, volatiliteit stijgend",
-  "btc_structure": "Bitcoin noteert op $70,756 met een verlies van 0.77% in 24 uur, wat wijst op voorzichtige profit-taking na recente rallies. De steun rond $70k blijft kritisch; daling onder dit niveau zou directe aandacht vereisen.",
-  "eth_flows": "Ethereum handelt op $2,080.24 met een sterkere afname van 1.43% in 24 uur, wat duidt op institutionele vervangingen. Het volume van $9.92B blijft substantieel ondanks de negatieve price action.",
+  "focus": "Brede marktcorrectie op zaterdag met Bitcoin onder druk richting $70.7K support level.",
+  "risk": "Midden-hoog risico, herbaleansing fase",
+  "btc_structure": "Bitcoin daalt 0.80% naar $70.694 in 24-uurs handelsactiviteit. De grootste cryptocurrencybeweegt zich binnen een consolidatiepatroon met kritieke ondersteuning bij $70K. Volume van $25.52B duidt op gematigde liquiditeit op dit weekeindmoment.",
+  "eth_flows": "Ethereum verliest 1.16% en handelt op $2.083.62, zwakker dan Bitcoin op relatieve basis. Volume van $9.92B suggereert geleidelijke afbouw van posities na recente rally. De ETH/BTC ratio verzwakt licht onder weekeinddruk.",
   "top_narratives": [
-    "Risicoaverse marktsentiment voor weekendperiode",
-    "Institutionele positieherverdeling in alt-assets",
-    "Macro-monetair beleid monitoring door centrale banken",
-    "Liquiditeit-consolidatie patterns zichtbaar in lagere volumes"
+    "Zaterdag-liquidaties in futures markten",
+    "Voorbereiding op FOMC-besluit volgende week",
+    "Altcoin underperformance versus BTC",
+    "Geopolitieke onzekerheid wegt op risicoactiva"
   ],
-  "macro_impact": "Centrale bankbesluiten komende week domineren de agenda; beleggers reduceren risico's in afwachting van rentebeslissingen. De brede marktcorrectie reflecteert voorzichtigheid rond inflatiegegevens.",
-  "whale_flows": "BTC volume ($26.27B) blijft robuust ondanks prijsdaling, wat accumulation-signalen kan suggereren op lagere niveaus. Alt-volumes vertonen afname, wat wijst op rotatie naar stablecoin-posities.",
-  "funding_oi": "Funding rates stabiliseren in neutrale zone; langetermijnposities groeien niet agressief. Open interest blijft gedifferentieerd tussen BTC en alts met voorzichtige long-positioning.",
-  "volatility_outlook": "Verwachte volatiliteit stijgt richting 20% zone gegeven marktoncertainteit. Weekend-trade kan stagnatie vertonen tot maandag-opening met macro-catalisten.",
-  "full_report": "De cryptomarkt vertoont zaterdag 14 maart 2026 een breed ingetogener beeld met Bitcoin op $70,756 (-0.77%) en Ethereum op $2,080.24 (-1.43%). Solana voert de verliezen aan met -2.24% op $86.97, terwijl XRP en BNB relatief weerbaarder blijven. Het gecombineerde volume van $40B+ geeft aan dat marktdeelnemers voorzichtig positierollen, voornamelijk vanwege centrale bankgebeuren komende week. Beleggers pauzeren risicoposities tot helderheid over monetair beleid; technische steunniveaus rond $70k voor BTC en $2,050 voor ETH verdienen monitoring bij eventuele verdere druk."
+  "macro_impact": "Weekeindhandel vertoont voorzichtigheid voorafgaand aan komende macro-events en centrale bankbeslissingen. Risico-off sentiment ondersteunt lichte druk op exposure. Traditionele markten gesloten op zaterdag, crypto-volume blijft gematigde niveaus.",
+  "whale_flows": "Geaggregeerde volume van $39.4B wijst op getemperde whale-activiteit op weekendmomenten. Geen significante grote orders gedetecteerd aan bullish zijde. Consolidatiepatroon suggereert afwachting tot volgende week.",
+  "funding_oi": "Funding rates blijven licht negatief, wat voorzichtige sentiment weerspiegelt. Open interest verwacht gemiddeld niveau's te handhaven tot volgende week. Geen excessieve leverage waarneembaar op huidige prijzen.",
+  "volatility_outlook": "Verwachte volatiliteit blijft laag tot gemiddeld gedurende weekendperiode. Opwaartse volatiliteitssprong verwacht bij opening volgende week. Put/call ratio's duiden voorzichtigheid aan.",
+  "full_report": "De cryptomarkt vertoont brede correctieve druk op zaterdag 14 maart 2026 met Bitcoin achteruitgang van 0.80% naar $70.694 en Ethereum verlies van 1.16% naar $2.083.62. Altcoins presteren zwakker, met SOL -2.18% naar $87 en XRP -0.77% naar $1.39, terwijl BNB -0.55% op $653.65 handelt. Totale marktvolume van $39.4B op topposities duidt op gematigde liquiditeit typisch voor weekendhandel. Dit correctieve patroon weerspiegelt voorzichtigheid voor aankomende macro-events en centrale bank-communicatie volgende week. Technische ondersteuning rond $70K voor BTC blijft cruciaal voor verdere scenarisering."
 }
