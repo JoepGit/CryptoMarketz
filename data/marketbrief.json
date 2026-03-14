@@ -1,18 +1,18 @@
 {
-  "date": "zaterdag 14 maart 2026",
-  "focus": "Brede marktcorrectie van 0,95-1,86% weerspiegelt voorzichtigheid voor Fed-beleid volgende week.",
-  "risk": "Mild bearish, correctieve druk",
-  "btc_structure": "Bitcoin verliest $680 tot $70,586 met bescheiden dagvolume van $57,09B. Steun rond $69,500 blijft intact; breuk onder $70,000 zou volgende barrière op $68,500 activeren.",
-  "eth_flows": "Ethereum daalt 0,81% naar $2,077.77 met $25,37B dagvolume. Relatieve stabiliteit ten opzichte van altcoins suggereert institutionele houvast; kritieke steun ligt op $2,000.",
+  "date": "2026-03-14",
+  "focus": "Extreme Fear sentiment (16) drukt markt omlaag ondanks weeklijkse winsten; Bitcoin houdt $70.7K niveau vast terwijl liquidaties uitblijven.",
+  "risk": "Extreme Fear met negatieve 24h-balans",
+  "btc_structure": "Bitcoin noteert $70,727 met -0.98% in 24h maar +4.02% weekly, waaruit veerkracht op deze level spreekt. Macro-onzekerheid rondom geopolitieke spanningen (Iran-waarschuwing Trump) remt bullish momentum. $71K blijft kritieke weerstand voor herstel.",
+  "eth_flows": "Ethereum $2,080.24 (-0.97% 24h, +5.48% weekly) outperforms Bitcoin relatief maar volgt algemene marktdruk. Het stablecoin-momentum (Circle > BlackRock in tokenized Treasuries) helpt ETH-ecosysteem indirect, maar liquidatie-data ontbreekt voor directe flow-analyse.",
   "top_narratives": [
-    "Fed-rentebesluit 19 maart - inflatie-bewustzijn domineert sentiment",
-    "Altcoin liquidaties XRP (-1.86%) en SOL (-1.50%) wijzen op risicomijding",
-    "Weekend illiquiditeit gebruikelijk zaterdag; maandag mogelijk volatileherintrede",
-    "BTC dominantie-consolidatie voor volgende impulsfase boven $72,000"
+    "Stablecoins als backbone globale betalingen (10-jaar scenario billionaires)",
+    "Bitcoin infrastructuur-kwetsbaarheid: 72% telecom-resilient, maar 5 hosting-providers kritiek",
+    "XRP fundamenteel-technisch ongelijktijdig: gap tussen network-use en tokenwaarde",
+    "Custodia Bank verliest juridische strijd met Fed, maar Fed opent master-account-deuren"
   ],
-  "macro_impact": "Wachten op Federal Reserve-renteverklaring dinsdag 19 maart veroorzaakt risk-off posturing. Markt prijst in potentiële hawkish forward guidance ondanks recente inflatievertraging.",
-  "whale_flows": "Daling in totaal volume naar $91,33B duidt op weekend-stagnatie. BTC-volume relatief gezond ($57,09B), maar altcoin-exodus (XRP $2,90B) suggereert profit-taking na recente rally's.",
-  "funding_oi": "Verwacht lichte funding-rate normalisatie aankomende week. Open Interest-contraction waarschijnlijk als beleggers posities inkorten vóór Fed-aankondiging; lange liquidaties in focus.",
-  "volatility_outlook": "IV-contractie normaal voor zaterdag; verwacht dinsdag volatiliteitsuitbreiding rond Fed-verklaring. Short-term range-trading tot $68,500-$72,000 waarschijnlijk maandag.",
-  "full_report": "De cryptomarkt sluit vrijdag af met brede correcties van 0,81% tot 1,86% onder 5 major's. Bitcoin ($70,586) en Ethereum ($2,077.77) vertonen relatieve veerkracht, terwijl altcoins zwakker presteren met XRP (-1.86%) en SOL (-1.50%) voorbij. Totaal dagvolume bedraagt $91,33B met BTC-dominantie ($57,09B) als anker. Macro-katalysator: Fed-rentebesluit dinsdag 19 maart drukt zware schuld op risicoposities. Technisch gezien blijven kritieke supports ongeschonden (BTC $69,500, ETH $2,000), maar doorbraak volgende week vereist positiever stimulus of inflatie-surprises naar beneden."
+  "macro_impact": "Geopolitieke spanningen (Trump-Iran-waarschuwing) veroorzaken voorzichtigheid ondanks crypto-positieven (stablecoin-groei naar $11B). Fed-beweging op master-accounts en BlackRock-nuancering (geen exotic crypto ETFs) cre\u00ebren mixed signals. BPI Bitcoin-tax-relief-target (augustus) biedt langterm supportnarratief maar geen immediate catalyst.",
+  "whale_flows": "Liquidatie-data niet beschikbaar, maar totaal 24h-volume ($124.7B) geeft normale activiteit aan. Absence van grote liquidaties wijst op voorzichtige positie-sizing in extreme fear-regime (16 op graafindicator).",
+  "funding_oi": "Funding rates en open interest-data niet beschikbaar voor grote paren (BTCUSDT, ETHUSDT, SOLUSDT, BNBUSDT, XRPUSDT). Zonder deze metriek lastig leverage-sentiment in te schatten, maar extreme fear (16) suggereert reeds-gesloten long-positions.",
+  "volatility_outlook": "Extreme Fear Index (16, licht omhoog van 15) typeert bear-markt-hypothesis en rechtvaardigt voorzichtigheid. Afwezigheid massale liquidaties in combinatie met -1% 24h-daling suggereert gedempte volatiliteit komende uren, maar geopolitieke newsflow kan plotse swings triggeren.",
+  "full_report": "Bitcoin ($70,727) en Ethereum ($2,080.24) ervaren milde correcties (-0.98% en -0.97% respectievelijk) in extreme fear-omgeving (Fear & Greed 16), hoewel weeklijkse winsten (+4.02% en +5.48%) veerkracht aantonen. Totale marktcap daalde naar $2.49T (-1.04% 24h), met BTC-dominantie stabiel op 56.8%. Macro-context mengelt positieven (stablecoins $11B record, Fed master-account beweging) met negatieven (Trump geopolitieke waarschuwingen, BlackRock exotic-crypto-skepticisme). Liquidatie-data en funding rates ontbreken, maar normale volume ($124.7B) en absence grote liquidaties suggereren gedempte leveraging. Uitleider-underperformers zijn DOT (-4.50%), ADA (-3.49%) en AVAX (-2.39%), terwijl BTC/ETH/BNB +4-5% weekly blijven groeien. Short-term volatiliteit gedempd tot nieuws-triggers."
 }
