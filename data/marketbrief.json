@@ -1,18 +1,18 @@
 {
   "date": "zaterdag 14 maart 2026",
-  "focus": "Brede marktcorrectie met aanhoudende verkopersdruk op alle major altcoins terwijl Bitcoin zich relatief stabieler handhaaft.",
-  "risk": "Rood - Neerwaartse momentum versterkt",
-  "btc_structure": "Bitcoin noteert op $70,667 met een bescheiden daling van -1.35% in 24 uur. De weerstand rond $71K houdt standhoudend, terwijl steun rond $69K kritiek blijft.",
-  "eth_flows": "Ether toont zwakker momentum met -2.28% op $2,075.7 en handelsvolume van $12.66B. De lagere prijsactie suggereert grotere uitstroom uit institutionele posities.",
+  "focus": "Brede marktcorrectie met SOL als zwakste schakel terwijl BTC steun zoekt rond $70.7k.",
+  "risk": "Moderate risk, pullback regime",
+  "btc_structure": "Bitcoin noteert op $70,717 met een dagelijks verlies van -1.30% en $30.86B volume. De grootste cryptomunt vindt steun in deze zone na recente winsten, met aandacht voor de $70k-grens als kritieke ondersteuning. Technisch beeld blijft neutraal zolang deze support standhoudend.",
+  "eth_flows": "Ethereum daalt sterker met -2.11% naar $2,077.13 en $12.37B volume, wat wijst op voorzichtigheid in alt-season. De tweede largest cap verliest momentum sneller dan BTC, typisch voor risicoavers weekend-trading. Institutionele positie-afbouw lijkt voorzichtig doorgaan.",
   "top_narratives": [
-    "Marktbrede risk-off sentiment overheerst voor het weekend",
-    "Altcoin underperformance versus Bitcoin structureel",
-    "Volume-gebaseerde sell-signal in grote posities",
-    "Macro-economische onzekerheid drukt risk assets"
+    "Macro-onzekerheid drukt risk assets",
+    "Alt-season momentum vertraagd",
+    "Weekend-liquidaties onder monitoren",
+    "Support-levels kritisch voor volgende week"
   ],
-  "macro_impact": "Weekendhandel vertoont lagere liquiditeit wat volatiliteit vergroot. Risicoavers sentiment prevaleert voorafgaand aan volgende week's macrogegevens.",
-  "whale_flows": "Totaal spot volume van $49.51B wijst op geleidelijke positionafbouw. Ethereum volume ($12.66B) onderpresteren tegen BTC ($31.71B) duidt op differentië tussen majors.",
-  "funding_oi": "Negatieve funding rates op leveraged posities suggereren korte termijn dekking. OI-daling verwacht bij voortduring van huidige trend.",
-  "volatility_outlook": "Verwachting voor lagere volatiliteit door weekendliquiditeit, doch technische breuk onder $2,050 ETH zou sharper correctie kunnen triggeren.",
-  "full_report": "De cryptomarkt vertoont zaterdag 14 maart eenduidige neerwaartse druk met Bitcoin op $70,667 (-1.35%), Ethereum op $2,075.7 (-2.28%) en Solana zelfs op $86.93 (-2.62%). Altcoins dalen konsistent sterker dan de marktleider, waarbij XRP ($1.39, -0.99%) en BNB ($653.73, -1.04%) meer stabiliteit behouden. Het totale tradingvolume van $49.51B suggereert geleidelijke liquidatie eerder dan paniekverkopen. Technisch vormt zich een potentiële hogere-tijdframe bearish patroon dat verdere testen van steunniveaus kan inleiding geven volgende week."
+  "macro_impact": "Externe macro-factoren lijken meer gewicht te krijgen in het weekend, met risico-off sentiment dat altcoins harder treft. Verwachting is dat beleggershouding maandag opnieuw getest wordt rond centrale banktaal en inflatiepunten.",
+  "whale_flows": "Volume-spreiding toont BTC dominant ($30.86B) terwijl ETH significant zwakker is ($12.37B), wat erop wijst dat grote houders naar stablecoin gaan. Kleinere alts als BNB ($0.75B) en SOL ($2.54B) ondergaan schaalverkoop.",
+  "funding_oi": "Funding rates wijzen op voorzichtigheid met licht negatieve carry voor leveraged longs. Open interest verwacht daling tot stabilisering tegen ondersteuning; geen tekenen van forced liquidaties in grote volumes.",
+  "volatility_outlook": "Impliciete volatiliteit stijgt zacht in weekeindtradinguren; verwachting is gemiddelde Daily Range van 2-3% tot maandag-open. Squeeze-potential bij macro-nieuws in Aziatische sessie.",
+  "full_report": "CryptoMarketz observeert zaterdag 14 maart een gedifferentieerde correctie waarin Bitcoin ($70,717, -1.30%) meer weerstand biedt dan Ethereum ($2,077.13, -2.11%) en vooral Solana ($87.03, -2.88%) onder druk staat. Het volume-patroon ($30.86B BTC vs $12.37B ETH) suggereert voorzichtig kapitaalverlies naar stablecoins. XRP (+/- $1.39, -0.95%) en BNB ($653.91, -1.22%) vertonen minder volatiliteit, typisch voor weekend-handel. Macro-sentiment blijft voorzichtig met aandacht voor maandag-heropening in de VS waar centrale bankberichten en werkgelegenheidsdata marktrichting bepalen. Traders monitoren de $70k-steun in Bitcoin en $2k-zone in Ethereum als kritieke punten voor volgende beweging."
 }
