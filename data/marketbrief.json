@@ -1,18 +1,18 @@
 {
   "date": "zaterdag 14 maart 2026",
-  "focus": "Brede marktcorrectie zet door met XRP als zwakste schakels terwijl Bitcoin steun zoekt rond $71k.",
-  "risk": "Rood: Afbouwfase correctie",
-  "btc_structure": "Bitcoin noteert op $70,980 met een verlies van 0,77% in 24 uur, wat duidt op voorzichtig sentiment. De weerstand rond $72k blijft cruciaal; doorbreking ervan zou nieuwe dynamiek kunnen injecteren. Volume van $57,14B geeft stabiliteit aan, maar de dagelijkse daling suggereert dat kopers terughoudend blijven.",
-  "eth_flows": "Ethereum daalt sneller naar $2,090,12 met een verlies van 0,96%, wat duidt op zwakkere relatieve prestatie versus Bitcoin. De trading volume van $24,52B blijft stevig, maar outflows overheersen nog steeds de inflows in deze fase.",
+  "focus": "Brede marktcorrectie van 0,95-1,86% weerspiegelt voorzichtigheid voor Fed-beleid volgende week.",
+  "risk": "Mild bearish, correctieve druk",
+  "btc_structure": "Bitcoin verliest $680 tot $70,586 met bescheiden dagvolume van $57,09B. Steun rond $69,500 blijft intact; breuk onder $70,000 zou volgende barrière op $68,500 activeren.",
+  "eth_flows": "Ethereum daalt 0,81% naar $2,077.77 met $25,37B dagvolume. Relatieve stabiliteit ten opzichte van altcoins suggereert institutionele houvast; kritieke steun ligt op $2,000.",
   "top_narratives": [
-    "Macro-headwinds en renteverwachtingen drukken risicoactiva",
-    "XRP volatiliteit (-1,79%) wijst op tekortkomingen in institutioneel vertrouwen",
-    "Altcoin-underperformance tegen BTC dominantie",
-    "Weekend liquiditeitsafname stelt markt onder druk"
+    "Fed-rentebesluit 19 maart - inflatie-bewustzijn domineert sentiment",
+    "Altcoin liquidaties XRP (-1.86%) en SOL (-1.50%) wijzen op risicomijding",
+    "Weekend illiquiditeit gebruikelijk zaterdag; maandag mogelijk volatileherintrede",
+    "BTC dominantie-consolidatie voor volgende impulsfase boven $72,000"
   ],
-  "macro_impact": "De bredere economische omgeving blijft onzeker met rentepolitiek in focus voor centrale banken. Deze onzekerheid werkt negatief uit op risicovolle activa inclusief crypto, wat de uniforme rode verliesverhalen vandaag verklaren.",
-  "whale_flows": "De gecombineerde volume van $90,59B (top-5 pairs) suggereert gedisciplineerde exit-posities van grotere partijen in weekend-sessie. XRP's relatief sterke volumedaling ($2,94B) wijst op selectieve klachten tegen deze asset.",
-  "funding_oi": "Funding rates zijn negatief gebleven, wat aangeeft dat short-posities worden beloond. Open Interest zal waarschijnlijk dalen als deze trendonzekerheid aanhoudend blijft. Weekend-leverage-afbouw verwacht.",
-  "volatility_outlook": "Implied volatiliteit stijgt voorzichtig terwijl Saturday-sessies traditioneel minder liquide zijn. Verwacht hogere bid-ask spreads en mogelijke gaprisico's tot maandag; $70-72k blijft cruciaal voor BTC richtingbepaling.",
-  "full_report": "De cryptomarkt kampte zaterdag 14 maart 2026 met brede rodedrukking: Bitcoin ($70,980, -0,77%), Ethereum ($2,090,12, -0,96%), Solana ($88,04, -1,19%), BNB ($655,36, -0,86%) en vooral XRP ($1,40, -1,79%) verloren terrein. Gecombineerde volume van $90,59B geeft aan dat institutionele spelers voorzichtig hun posities aanpassen. Macro-onzekerheid rond rentepolitiek blijft het primaire headwind, terwijl weekend-illiquiditeit extra volatiliteit kan introduceren. Bitcoin's steun op $70k is kritisch; doorbreking zou corrigerende druk kunnen versnellen. Traders worden geadviseerd waakzaam te blijven op maandag-opening voor potentiële gap-bewegingen."
+  "macro_impact": "Wachten op Federal Reserve-renteverklaring dinsdag 19 maart veroorzaakt risk-off posturing. Markt prijst in potentiële hawkish forward guidance ondanks recente inflatievertraging.",
+  "whale_flows": "Daling in totaal volume naar $91,33B duidt op weekend-stagnatie. BTC-volume relatief gezond ($57,09B), maar altcoin-exodus (XRP $2,90B) suggereert profit-taking na recente rally's.",
+  "funding_oi": "Verwacht lichte funding-rate normalisatie aankomende week. Open Interest-contraction waarschijnlijk als beleggers posities inkorten vóór Fed-aankondiging; lange liquidaties in focus.",
+  "volatility_outlook": "IV-contractie normaal voor zaterdag; verwacht dinsdag volatiliteitsuitbreiding rond Fed-verklaring. Short-term range-trading tot $68,500-$72,000 waarschijnlijk maandag.",
+  "full_report": "De cryptomarkt sluit vrijdag af met brede correcties van 0,81% tot 1,86% onder 5 major's. Bitcoin ($70,586) en Ethereum ($2,077.77) vertonen relatieve veerkracht, terwijl altcoins zwakker presteren met XRP (-1.86%) en SOL (-1.50%) voorbij. Totaal dagvolume bedraagt $91,33B met BTC-dominantie ($57,09B) als anker. Macro-katalysator: Fed-rentebesluit dinsdag 19 maart drukt zware schuld op risicoposities. Technisch gezien blijven kritieke supports ongeschonden (BTC $69,500, ETH $2,000), maar doorbraak volgende week vereist positiever stimulus of inflatie-surprises naar beneden."
 }
