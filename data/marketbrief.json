@@ -1,18 +1,18 @@
 {
   "date": "zaterdag 14 maart 2026",
-  "focus": "Brede marktcorrectie op lage volumes wijst op voorzichtige sentiment voor weekend.",
-  "risk": "Milde risicoaversie, lage liquiditeit",
-  "btc_structure": "Bitcoin handelt op $70,798 met een dagelijkse daling van -1.09% bij $52.62B volume. De weerstand rond $71k blijkt voorzichtig onder druk, terwijl $70k supportniveau vooralsnog standhoudt op weinig volume.",
-  "eth_flows": "Ethereum daalt sterker naar $2,091.79 (-1.51%) op $24.98B volume, wat wijst op zwakkere institutionele interesse. De ETH/BTC ratio verzwakt marginaal, wat defensief gedrag aangeeft.",
+  "focus": "Lichte verkoopdruk over de hele markt met BTC stijf boven $71K, maar ETH en altcoins tonen relatief meer zwakte.",
+  "risk": "Laag momentum, consolidatie fase",
+  "btc_structure": "Bitcoin handelt op $71,278 met een minimale daling van -0.16% in 24u, wat duidt op stabiliteit rond deze steunzone. Volume bedraagt $57.37B, wat suggereert dat grote bewegingen vooralsnog uitblijven op dit weekend.",
+  "eth_flows": "Ethereum verliest iets meer terrein op $2,104.8 (-0.42%), terwijl volume op $24.30B blijft hangen. Dit duidt op zwakkere relative sterkte ten opzichte van Bitcoin tijdens dit handelssegment.",
   "top_narratives": [
-    "Weekend liquidity drain zonder macro catalisatoren",
-    "Altseason momentum voorzichtig afgenomen",
-    "Institutionele positioning voor volgende week afwachtend",
-    "On-chain volumes dalen parallel aan spotmarkt"
+    "Weekend consolidatie na weekerse positieafsluiting",
+    "Altcoin underperformance vs Bitcoin dominantie",
+    "Verwachting macro-catalisten volgende week",
+    "Liquiditeitsvacuüm in reguliere handelsuren"
   ],
-  "macro_impact": "Geopolitieke rust en Fed-stilte zorgen voor afwezigheid van impulsieve moves. Weekend handelspatronen duiden op consolidatie voorafgaand aan volgende week's data.",
-  "whale_flows": "Totaal $86.95B volume suggeert geleidelijke liquiditeitsafvloeiing. Geen significante whale accumulation zichtbaar; eerder voorzichtige positiereductie in topaltcoins.",
-  "funding_oi": "Funding rates blijven neutraal met licht negatieve bias. Open Interest stabiel, wat wijst op afwachtende houding van leveraged traders.",
-  "volatility_outlook": "Verwachte volatiliteit beperkt tot 1-2% dagelijkse bewegingen zolang macro catalisten ontbreken. Weekend seasonaliteit suggereert range-bound handelen tot maandag.",
-  "full_report": "De markt opent zaterdag in milde roodstand met BTC op $70,798 (-1.09%), ETH op $2,091.79 (-1.51%), en brede altcoin zwakte aangeleid door SOL (-2.47%). Volume concentreert zich in BTC ($52.62B) en ETH ($24.98B), terwijl altseasonnaliteit afneemt met BNB en XRP stabiel rond -0.8%. Geen macro triggers of whale accumulation zichtbaar; consolidatief patroon dominant. Weekend liquiditeitspatronen suggereren afwachtende positioning voorafgaand aan komende week, met supportniveaus intakt en technische structuur onveranderd."
+  "macro_impact": "Zaterdagse handel karakteriseert zich door lagere volumes en retail inactiviteit; macrogebeurtenis volgende week kunnen nieuwe directie bepalen.",
+  "whale_flows": "BTC volume domineert op $57.37B, terwijl altcoin volumes (XRP $3.08B, SOL $4.61B) relatief laag blijven. Dit suggereert dat grote spelers voorzichtig positioneren voor komende week.",
+  "funding_oi": "Funding rates vermoedelijk neutraal tot licht negatief gezien de gedempte sentiment; verwacht geen grote liquidaties op huidige prijsniveaus.",
+  "volatility_outlook": "Verwacht lage volatiliteit gedurende zaterdagavond en zondag, met mogelijk weer iets meer beweging maandagochtend. ATR contractie duidt op slapheid.",
+  "full_report": "De cryptomarkt toont zaterdagavond een diffuus beeld met Bitcoin stabiel op $71,278 (-0.16%), Ethereum zwakker op $2,104.8 (-0.42%), en altcoins zoals SOL (-0.85% naar $88.61) en XRP (-0.60% naar $1.40) die meer corrigeren. Volume concentreert zich bij Bitcoin ($57.37B), terwijl kleinere altcoins veel lager handelen. Dit patroon wijst op consolidatieperiode voor het weekend zonder sterke directionale bias. Beleggers positioneren voorzichtig voor mogelijke macro-catalisten volgende week. Een volgende impuls verwacht zich naar boven ($72K) of beneden ($70K) afhankelijk van externe factoren."
 }
