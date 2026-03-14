@@ -1,18 +1,18 @@
 {
   "date": "zaterdag 14 maart 2026",
-  "focus": "Brede marktcorrectie met -1% tot -1.6% verliezen over alle topcoins, vol stabiliteit suggereert voorzichtige houding.",
-  "risk": "Licht negatief sentiment, consolidatie-fase",
-  "btc_structure": "Bitcoin staat op $70,698 met een daling van -1.12% in 24 uur. Het volume van $55.82B geeft aan dat grote bewegingen kunnen volgen, maar het koersniveau suggereert stabilisatie rond deze steunzone.",
-  "eth_flows": "Ethereum daalt naar $2,079.58 met -0.99% verlies op dagbasis en $24.76B volume. De relatief kleinere daling ten opzichte van altcoins wijst op institutioneel gedrag.",
+  "focus": "Brede marktcorrectie met -1.5% tot -2% dalingen in topcoins signaleert voorzichtigheid voor het weekend.",
+  "risk": "Verhoogde correctiedruk, gemiddelde volatiliteit",
+  "btc_structure": "Bitcoin noteert op $70,678 met een dagverlies van -1.77% en volumineus handelsverkeer van $54.62B. De prijs hangt rond belangrijke steunzones na kleine teruggang, waarbij volume aangeeft dat marktdeelnemers posities evalueren.",
+  "eth_flows": "Ethereum staat op $2,078.72 met een minder sterke daling van -1.51% en $23.76B dagvolume. Dit duidt op relatieve stabiliteit in het altcoin-segment ondanks breedere marktpressure.",
   "top_narratives": [
-    "Zaterdag consolidatie met lichte correctie",
-    "Volume stabiliteit in topcoins",
-    "Altcoins zwakker dan mainchain-assets",
-    "Macro-onzekerheid drukt op weekendhandel"
+    "Weekend-consolidatie zonder major macrogebeurtenissen",
+    "Profit-taking na recente rally-fase",
+    "Institutionele exposure evaluatie in Q1",
+    "Altcoin-underperformance ten opzichte van Bitcoin"
   ],
-  "macro_impact": "Weekend-liquiditeit is lager, wat kan verklaren waarom alle assets licht rood staan. Beleggers wachten mogelijks op maandagse macro-data voordat zij grote posities innemen.",
-  "whale_flows": "BTC-volume van $55.82B en ETH van $24.76B blijven robuust ondanks lagere koersen, wat erop duidt dat whales geleidelijk accumuleert op deze niveaus.",
-  "funding_oi": "Gegeven het voorzichtige sentiment en lager weekend-volume, verwachten we dalende funding rates komende 24 uur. Short-positie-liquidaties kunnen steun bieden rond huidige niveaus.",
-  "volatility_outlook": "Volatiliteit blijft beperkt gezien het zaterdag-karakter. Verwacht lagere range-gebonden handel tot het weekend voorbij is.",
-  "full_report": "De cryptomarkt toont op zaterdag 14 maart 2026 een algemene correctie met Bitcoin op $70,698 (-1.12%), Ethereum op $2,079.58 (-0.99%), BNB op $653.83 (-1.43%), XRP op $1.4 (-1.47%) en Solana op $87.36 (-1.59%). De totale volume in Bitcoin en Ethereum blijft gezond met respectievelijk $55.82B en $24.76B, wat aangeeft dat verkopers niet paniekachtig zijn. Weekend-liquiditeit is traditioneel lager, en deze correctie lijkt eerder een normale consolidatie dan een alarmsignaal. Altcoins presteren iets zwakker, wat typisch is bij marktcorrecties. Beleggers wachten waarschijnlijk op maandagse macro-data voordat zij grote posities verschuiven."
+  "macro_impact": "Het weekend-effect reduceeert institutioneel handelsvolume en marktliquiditeit. Geen significante macroeconomische catalysators verwacht tot maandag.",
+  "whale_flows": "Bitcoin volume van $54.62B wijst op actieve positionering door larger players. Ethereum's $23.76B en Solana's $4.39B volume suggereren selectieve reallocaties zonder massale uitverkopen.",
+  "funding_oi": "Funding rates vermoedelijk licht negatief op main exchanges. Open interest waarschijnlijk onder druk door technische liquidaties rond $70K support voor Bitcoin.",
+  "volatility_outlook": "Verwacht lagere volatiliteit doorheen weekend bij afgenomen liquiditeit. Brede marktcorrectie van -1.5% tot -2% reflecteert normale consolidatie zonder paniekverkopen.",
+  "full_report": "CryptoMarketz rapporteert een voorzichtige marktdag op zaterdag 14 maart 2026 met Bitcoin op $70,678 (-1.77%), Ethereum op $2,078.72 (-1.51%), en brede verliesstroken in top-5 activa. Dagvolume van $54.62B voor BTC en $23.76B voor ETH duidt op actieve hedging en profit-taking na eerdere winsten. De correctie van gemiddeld -1.7% is technisch gezond en suggereert consolidatie boven kritieke steunzones. Weekend-effecten reduceren institutinonele participatie, wat lagere volatiliteit verwacht. Traders monitoren $70K-support voor Bitcoin en $2,050-niveau voor Ethereum als pivotpunten voor volgende sessie."
 }
