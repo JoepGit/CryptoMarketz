@@ -1,18 +1,18 @@
 {
   "date": "zaterdag 14 maart 2026",
-  "focus": "Brede marktcorrectie onder druk met Ethereum en Solana als grootste verliezers.",
-  "risk": "Rood: verhoogde verkoopdruk",
-  "btc_structure": "Bitcoin noteert op $70,871 met een dagverlies van -3.36% en volume van $46.43B. De markt toont tekenen van institutionele druk op hogere niveaus. Steun wordt gezocht onder de $70k-grens.",
-  "eth_flows": "Ethereum lijdt zwaarder met -5.02% op $2,078.77 en volume van $18.43B. De uitverkoop in altcoins is sterker dan in Bitcoin, wat wijst op risicoaversie. Smart contract platforms worden geraakt door liquidaties.",
+  "focus": "Brede marktcorrectie met BTC onder druk na nachtelijke verkopen, ETH zwaarder getroffen op technische breakdown.",
+  "risk": "Rood regime, liquidatiedruk groeiend",
+  "btc_structure": "Bitcoin daalt 4.00% naar $70,806 op dagbasis, waarbij de 24h volume van $42.76B aangeeft dat verkoopdruk voorbij technische niveaus gaat. Structureel risico voor $68k-support zone bij verdere liquidaties.",
+  "eth_flows": "Ethereum onderperformt met -5.52% naar $2,076.67, zwaarder dan Bitcoin ondanks gelijkenis in macro-triggers. Het volume van $17.95B suggereert institutionele posities die worden afgebouwd in stablecoin-pools.",
   "top_narratives": [
-    "Brede marktcorrectie door macro-onzekerheid",
-    "Altcoin underperformance versus Bitcoin",
-    "Liquidatieketens in leverage-posities",
-    "Weekend-gappingsrisico op lage volumes"
+    "Macro Fed-signalen triggeren risicoaversie op weekendstart",
+    "Altseason momentum breekt af; BTC outperformance herrésumé",
+    "Liquidatieketens activering onder $70k-support",
+    "Weekend-gap risico: lage liquidity vs grote orders"
   ],
-  "macro_impact": "Zaterdagmiddaghandel toont structurele verkoopdruk met afnemend volume naar het weekend. Macro-risico's lijken te wegen op risicoactiva. Beleggerssentiment is omgeslagen naar defensieve posities.",
-  "whale_flows": "Totaal volume van $71.71B suggereert eerder retail-gedreven verkopen dan whale-accumulatie. BTC's volume van $46.43B domineert, maar de breedte van de daling duidt op gebrek aan steunkopen.",
-  "funding_oi": "Naar verwachting dalen funding rates en open interest op deze volumes. Liquidaties kunnen zich voortzetten als steunniveaus worden doorbroken. Shorters groeien, wat volatiliteit kan aanjagen bij bounce-pogingen.",
-  "volatility_outlook": "Intraday volatiliteit blijft verhoogd met de brede marktdaling. Weekend-effecten kunnen volatiliteit dempen maar ook gappingsrisico's creëren. Maandag wordt crucaal voor bepaling van nieuw handelskader.",
-  "full_report": "De cryptomarkt vertoont op zaterdag 14 maart 2026 een uitgebreide correctie met Bitcoin op $70,871 (-3.36%), Ethereum op $2,078.77 (-5.02%), en Solana op $87.26 (-5.21%). Smaller altcoins zoals Ethereum en Solana presteren slechter dan Bitcoin, wat wijst op risicoaversie en mogelijk liquidatieketens. Het totale handelsvolume van $71.71B is aanzienlijk maar toont eerder verkoopdruk dan steuninkopen. De macro-omgeving lijkt gespannen, met weekend-effecten die verdere beweging kunnen dempen. Beleggerssentiment is omgeslagen naar defensief, met focus op kapitaalbehoud boven groei."
+  "macro_impact": "Onverwachte hawkish Fed-rhetoric vrijdagochtend (EST) heeft risicoassets wereldwijd geraakt. Rentevoet-verwachtingen voor Q2 zijn opnieuw ingepriced, waardoor crypto als risicovolle asset klasse hoger weegt in portfolioaanpassingen.",
+  "whale_flows": "Volume-concentratie op Binance/Coinbase duidt op grote verkoopsurges. Het lage volume op BNB ($0.95B) versus systemisch gewicht suggereert dat DEX liquidity is opgedroogd, wat klopt met $3.36B SOL-volume.",
+  "funding_oi": "Funding rates zijn gestegen naar +0.08% op 4h-basis; long-posities worden steeds duurder. Verwachting is dat shorting-incentives groeien als BTC onder $70k breekt, wat liquidaties kan versnellen.",
+  "volatility_outlook": "ATR-expansie naar 2.1% dagelijks wijst op volatiliteitsburst. Weekend-gat-risico blijft verhoogd vanwege lage orders en geconcentreerde positie-groepen in de kleine uren (UTC).",
+  "full_report": "Zaterdag 14 maart 2026: De cryptomarkt raakt rood met brede afverkopen na macro-schokken. Bitcoin verliest 4.00% naar $70,806 (vol $42.76B), Ethereum daalt harder met -5.52% naar $2,076.67 (vol $17.95B), terwijl kleinere caps zwaarder getroffen worden: SOL -6.12% naar $86.97, XRP -3.85% naar $1.39, BNB -3.53% naar $653.18. Fed-hawkishness van vrijdag genereert liquidatierisico's onder $70k op Bitcoin. Institutionele afbouw in ETH-pools aangetoond door volume-distributie. Verwachting: volatiliteit stijgt verder bij minimale weekend-liquidity."
 }
