@@ -1,18 +1,18 @@
 {
   "date": "zaterdag 14 maart 2026",
-  "focus": "Brede marktcorrectie met alle topcoins in het rood; risicoaverse sentiment domineert het weekend.",
-  "risk": "Verhoogd; neerwaartse druk persistent",
-  "btc_structure": "Bitcoin daalt naar $70,665 met een verlies van 2.30% in 24 uur. De technische steun rond $70K wordt getest terwijl institutionele liquidaties druk uitoefenen op de markt.",
-  "eth_flows": "Ethereum verliest 2.61% tot $2,069.99 met een vol van $22.38B. Staking rewards kunnen niet tegenwicht bieden tegen de algemenere verkoopdruk op het altcoin-segment.",
+  "focus": "Brede marktcorrectie met gezonde pullback in alle majors na recente rally.",
+  "risk": "Moderate risk, technische consolidatie",
+  "btc_structure": "Bitcoin noteert op $70,726 met een daling van 2.71% in 24 uur, wat duidt op profit-taking na weerstand. Het volume van $49.59B blijft solide, wat stabiliteit aangeeft ondanks de negatieve dagelijkse performance.",
+  "eth_flows": "Ethereum daalt 3.16% naar $2,075.01 met volume van $21.02B, wat een sterker verkoopmomentum toont dan Bitcoin. Dit suggereert dat altcoin-traders selectiever worden in deze correctiefase.",
   "top_narratives": [
-    "Brede risicoaversie in crypto-markten",
-    "Weekend-volatiliteit en lagere liquiditeit",
-    "Institutionele exit-bewegingen",
-    "Macro-onzekerheid verplaatst kapitaal uit defensieve assets"
+    "Profit-taking na rally-fase",
+    "Altcoin underperformance tov Bitcoin",
+    "Weekend liquiditeitscontratie",
+    "Macro-economische onzekerheid"
   ],
-  "macro_impact": "Geopolitieke spanningen en renteverwachtingen blijven de risico-appetite onder druk zetten. De correlatie met traditionele markten versterkt neerwaartse bewegingen in het crypto-segment.",
-  "whale_flows": "Totaal volumerek van $81.23B suggereert orderly liquidaties in plaats van paniekverkopen. BTC-vol van $51.15B duidt op gedisciplineerde positioneersveranderingen door grote spelers.",
-  "funding_oi": "Shortings nemen toe bij lagere niveaus; long-positie-afsluiting domineert het weekend. Verwachting is dat funding rates negatief zullen blijven tot maandagopening.",
-  "volatility_outlook": "ATR breidt uit met alle coins 2-4% in het rood. Weekendgaps vormen risico's; volatiliteit kan toenemen bij maandagopeningsgap.",
-  "full_report": "De crypto-markt vertoont brede neerwaartse bewegingen op zaterdag 14 maart 2026 met Bitcoin op $70,665 (-2.30%), Ethereum op $2,069.99 (-2.61%), en alle top-5 assets onder druk. SOL voert het neerwaartse verlies aan met -3.73% tot $86.77, terwijl XRP (-2.41% naar $1.39) en BNB (-2.19% naar $652.05) eveneens terugvallen. Met een gecombineerde volume van $81.23B lijkt dit eerder een orderly market-reallocation dan panische liquidatie, wat suggereert dat institutionele spelers voorzichtig posities aanpassen. Het weekendcorrectie-patroon duidt op macro-onzekerheid en lagere risicobereidheid voorafgaand aan de volgende handelsweek."
+  "macro_impact": "Weekend-sessies vertonen traditioneel lagere volumes en grotere volatiliteit; de huidige daling lijkt technisch van aard. Institutionele orders zijn waarschijnlijk uit de markt totdat maandagochtend.",
+  "whale_flows": "Volume concentratie in BTC ($49.59B) en ETH ($21.02B) toont dat grandes het dumpingsgeweld beperken. SOL ervaart sterkste verkoop met -4.29%, wat duidt op retail-gedreven exitposities.",
+  "funding_oi": "Naar verwachting zullen funding rates naar beneden normaliseren gegeven de correctie; short-squeezers kunnen volgende week actief worden als steun vasthoudt.",
+  "volatility_outlook": "Verwacht lagere IV gedurende weekend; volatiliteit kan maandag heropleven bij heropening Amerikaanse markten. $70K-support voor Bitcoin wordt kritisch monitored.",
+  "full_report": "De cryptomarkt ervaart een gezonde technische pullback op zaterdag 14 maart 2026, met Bitcoin dalend naar $70,726 (-2.71%), Ethereum naar $2,075.01 (-3.16%), en Solana het hardst getroffen met -4.29% naar $87.04. Het totale dagvolume blijft robuust met $49.59B in BTC-volume, wat professionele liquiditeit aangeeft. XRP en BNB volgen het patroon met respectievelijk -3.14% en -2.59%, wat suggereert dat profit-taking universeel plaatsvindt. Weekend-sessies vertonen typische lagere volumes; technische steunniveaus zullen doorslaggevend zijn voor Monday's opening. Risk-management blijft essentieel totdat macro-factoren en institutionele capitaalstromen duidelijker worden."
 }
