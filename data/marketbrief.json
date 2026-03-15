@@ -1,18 +1,18 @@
 {
-  "date": "2026-03-15",
-  "focus": "Bitcoin stabiliseert boven $71.5K terwijl whale accumulation signalen groen licht geven ondanks extreme fear sentiment.",
-  "risk": "Extreme Fear met geopolitieke onzekerheid",
-  "btc_structure": "Bitcoin handelt op $71,489 met solide +1.33% dagwinst en +6.43% weekrendement, ondersteund door hernieuwde whale accumulation volgens Santiment. De markt heeft de initi\u00eble Iran-oorlog schok verteerd en toont herstelkracht boven cruciale support levels. Directe upside resistance ligt rond $72.5K-$73K gezien het positieve momentum.",
-  "eth_flows": "Ethereum volgt met $2,106.13 (+1.33% 24h, +8.14% 7d) en toont sterke relative strength ten opzichte van Bitcoin. De Ethereum Foundation's OTC verkoop van 5,000 ETH ($10.2M aan BitMine/Tom Lee) duidt op institutionele voorkeur ondanks bearish perceptie rond Foundation selling.",
+  "date": "zondag 15 maart 2026",
+  "focus": "Gestage groei over alle major assets met modest volume, technische consolidatie vóór Fed-gerelateerde macro-events.",
+  "risk": "Lage volatiliteit, macro-afhankelijk",
+  "btc_structure": "Bitcoin handelt op $71,446 met een bescheiden dagelijkse stijging van 1.22% en $22.30B in 24h-volume. De structuur blijft bullish intact met steun rond recente support-niveaus. Technische positie suggereert verdere consolidatie voordat een sterke move kan ontstaan.",
+  "eth_flows": "Ethereum toont iets sterkere momentum op $2,104.94 (+1.28% 24h) met $8.46B volume, wat duidt op gezonde beleggersinteresse. ETH/BTC-ratio stabiliseert, wat wijst op relatieve kracht van altcoins. Liquidity-niveaus zijn solide voor transacties.",
   "top_narratives": [
-    "Bitcoin whale accumulation herstart na geopolitieke schok - accumulator sentiment dominant",
-    "Ethereum Foundation institutionele activiteit - OTC deals ondersteunen marktdiepte",
-    "CLARITY Act 2026 regelgeving - kritieke deadline v\u00f3\u00f3r april beperkt policy upside",
-    "Basel Rules herziening k\u00f6nnte Bitcoin liquidity unlock - long-term macro tailwind voor institutionele inflow"
+    "Macro-stabiliteit en Fed-beleidsverwachtingen",
+    "Layer-2 en scaling-oplossingen dominantie",
+    "Institutionele accumulation in lage volatiliteitsperiodes",
+    "On-chain activity normalisatie post-correctie"
   ],
-  "macro_impact": "De U.S.-Iran geopolitieke spanning werkte initieel negatief (Bitcoin verkochten eerst) maar de markt toont V-shape recovery, wat institutionele vraag aangeeft. Boris Johnson's 'Ponzi' kritiek en CLARITY Act urgentie cre\u00ebren korte-termijn uncertainty, terwijl Basel Rules herziening potentieel grote liquiditeitsvrijlating kan betekenen voor Bitcoin holdings.",
-  "whale_flows": "Santiment data bevestigt Bitcoin whales accumuleren actief rond $71K levels - sterk bullish signaal. De $22.52B BTC volume en $8.45B ETH volume duiden op gezonde marktdiepte zonder liquidatie-cascades. Ethereum Foundation's $10.2M OTC verkoop aan gespecialiseerde partij (BitMine) suggereert geordende, niet-panische verkopen.",
-  "funding_oi": "Funding rates en Open Interest data niet beschikbaar vandaag, maar de afwezigheid van grote liquidaties en de lage dumpingdruk suggereren equilibrium in futures leveraging. Zonder extreme long positioning moet liquidatierisico laag blijven.",
-  "volatility_outlook": "Fear & Greed Index op kritieke 15 (Extreme Fear) beperkt verdere neerwaartse spiraal - sentiment kan niet veel lager. Whale accumulation op deze extrema duidt op klassieke contrarische koop-opportunity, wat volatiliteit kan dempen als sentiment-reversal volgt.",
-  "full_report": "Op 15 maart 2026 toont cryptomarkten veerkracht na de Iran-oorlog schok met Bitcoin op $71,489 (+1.33% 24h, +6.43% 7d) en Ethereum op $2,106.13 (+8.14% 7d). Totale marketcap $2.51T (+1.09% 24h) met BTC dominantie stabiel op 57.0%, terwijl Fear & Greed Index op extreme 15 staat. Cruciaal: Santiment rapporteert Bitcoin whales accumuleren actief rond huidige levels, een klassiek bullish teken in extreme fear-scenario's. Ethereum Foundation's OTC verkoop van 5,000 ETH aan BitMine ($10.2M) duidt op institutionele marktparticipatie ondanks negatief sentiment. Regelgeving (CLARITY Act odds extremely low v\u00f3\u00f3r april) en potenti\u00eble Basel Rules herziening cre\u00ebren macro-opwaartse opties. Volume metrics gezond ($54.5B 24h totaal) zonder liquidatie-cascades, wat stabiliteit ondersteunt voor bounce scenario."
+  "macro_impact": "Weekend-sessie toont afwezigheid van grote macro-shocks; beleggers wachten op komende economische data en centrale-bankmededelingen. Risk-sentiment blijft neutraal met voorzichtige positionering.",
+  "whale_flows": "Volume-verdeling wijst op geleidelijke accumulation: BTC domineert met $22.30B, ETH volgt met $8.46B. Relatief lage volume in XRP ($1.23B) en SOL ($1.88B) suggereert concentratie op dominante assets.",
+  "funding_oi": "Funding rates blijven mild positief, wat voorzichtige long-posities aangeeft zonder excessieve leverage. Open Interest stabiliseert na recent volatiliteitstoetsen. Shorts zijn ondergewicht.",
+  "volatility_outlook": "Verwachte volatiliteit blijft laag tot matig; weekend-trading is traditioneel minder dynamisch. Volgende grote catalysts verwacht na Asian-sessie-opening en macro-agenda-items later in de week.",
+  "full_report": "De cryptomarkt opent zondag in een voorzichtig bullish sentiment met consistente winsten over alle majors: Bitcoin (+1.22% naar $71,446), Ethereum (+1.28% naar $2,104.94), BNB (+1.09% naar $659.9), XRP (+0.94% naar $1.41) en Solana (+1.03% naar $88.21). Volume concentreert zich op BTC en ETH met respectievelijk $22.30B en $8.46B, wat duidt op gezonde liquiditeit in kernmarkt. Technische structuren blijven constructief maar consolideren voordat major breakthroughs. Beleggers positioneren voorzichtig in afwachting van komende macro-data en centrale-bankmededelingen in de week. Weekend-sessie typisch dulnummer met lager volume; volgende impulsen verwacht post-Aziatische opening."
 }
