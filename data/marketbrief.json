@@ -1,18 +1,18 @@
 {
   "date": "zondag 15 maart 2026",
-  "focus": "Crypto-markt toont stabiliteit na weekendhandel met BTC op $71,362 en ETH op $2,091.97.",
-  "risk": "Laag volatiliteit, consolidatie fase",
-  "btc_structure": "Bitcoin handelt op $71,362 met een bescheiden dagwinst van 0.97% en volume van $22.74B. De prijs behoudt steun rond de $71k-zone, wat op gezonde accumulatie duidt. Technisch blijft de uptrend intact zonder noemenswaardige druk.",
-  "eth_flows": "Ethereum noteert $2,091.97 met 0.75% dagelijkse stijging en $10.14B in volume. De grotere altcoin volgt Bitcoin conservatief, wat wijst op voorzichtige positionering voor langere-termijnholders. ETH-volume blijft substantieel ondanks weekendhandel.",
+  "focus": "Bitcoin handelt rond $71,533 met voorzichtige groeisignalen terwijl macro-onzekerheid beleggers voorzichtig houdt.",
+  "risk": "Verhoogde volatiliteit, macro-afhankelijk",
+  "btc_structure": "Bitcoin noteert op $71,533 met een bescheiden plus van 1.15% in 24 uur en een handelsvolume van $22.57B. De steun rond deze niveaus blijft intact, hoewel doorbraak naar $73k-bereik nog uitblijft. Technical setup suggereert laterale consolidatie boven $70k-support.",
+  "eth_flows": "Ethereum staat op $2,096.20 met een stijging van 0.91% en volume van $10.10B. Inflows naar staking-pools lijken stabiel, maar uitflows naar exchanges nemen toe rond dit prijsniveau. ERC-20 token-actie geeft geen duidelijk directional signal.",
   "top_narratives": [
-    "Institutionele accumulatie in lage volatiliteitsfase",
-    "Altseason voorbereiding na ETH stabilisatie",
-    "Macro-onzekerheden domineren sentimentmarkt",
-    "Volume-consolidatie voorafgaand aan grote bewegingen"
+    "Macro renteverhoging verwachtingen drukken risicoactiva",
+    "Bitcoin institutionele accumulation rond $70k-zone",
+    "Ethereum staking rendement onder druk",
+    "Layer-2 volume groei in kleinere alts"
   ],
-  "macro_impact": "Weekendhandelstromen blijven gematigd zonder grote macro-aankondigingen. Beleggers wachten op maandagochtend-richtingbeslissing; centrale bankbeleid blijft kritieke factor voor risicobereidheid. Fiat-markten liggen stil, wat cryptocurrency-volumes beperkt.",
-  "whale_flows": "BTC-volume van $22.74B suggereert gezonde liquiditeit zonder extreme whale-bewegingen. ETH volgt met $10.14B, terwijl XRP opvallend sterker dagwins (+1.58%) toont op $1.41. Kleinere altcoins (BNB, SOL) tonen evenwichtige distributie zonder paniekverkoop.",
-  "funding_oi": "Funding rates verwachten zich stabiel uit gegeven de weekendtiming. Open Interest hints op voorzichtige positiebouw; contango-backwardatie normaliseert zich na volatiele week. Longs blijven gedomineerd zonder buitensporige leverage.",
-  "volatility_outlook": "Impliciete volatiliteit daalt naar gemiddelde niveaus met verwachting van rustig weekeindslot. Maandagochtend kan directionaliteit brengen via macro-data en technische breaks boven/onder key levels. Weekend consolidatie duidt op voorbereiding voor week-catalysts.",
-  "full_report": "De cryptocurrencymarkt sluit het weekeinde af met stabiliteit: Bitcoin handelt op $71,362 (+0.97%), Ethereum op $2,091.97 (+0.75%), terwijl kleinere altcoins als XRP ($1.41, +1.58%) en Solana ($87.69, +0.86%) bescheiden winsten tonen. Totaal volume blijft robuust met $22.74B voor BTC en $10.14B voor ETH, ondanks weekendtiming. Dit patroon duidt op institutionele accumulatie in een lage-volatiliteitsfase zonder paniek. Macro-onzekerheden blijven op de achtergrond; beleggers wachten op maandagse marktopening voor richtingaanduiding. Technisch intact; geen signalen voor capitulatie of euphorie."
+  "macro_impact": "Fed-signalen voor verdere kassiering blijven marktsentiment drukken. Weekend-positioning suggereert defensieve houding voorafgaand aan weekopening. Geopolitieke risico's blijven volatiliteitscatalyst.",
+  "whale_flows": "Grote volumepulsen in BTC ($22.57B) versus ETH ($10.10B) duiden op Bitcoin-voorkeur van institutionele spelers. Whale accumulation onder $70k blijft voorzichtig, geen explosieve buyvolumes waargenomen.",
+  "funding_oi": "Funding rates blijven near-zero, wat tepiditeit in leveraged lange posities aangeeft. Perpetual OI contracties suggereren risicoreductie voor weekslot. Verwachting van gemiddelde volatiliteit in komende 48 uur.",
+  "volatility_outlook": "IV-smile suggereert vraag naar put-protectie rond $68k. Weekend-dunne liquiditeit kan schoksgewijs bewegingen tot 2-3% veroorzaken. Volatiliteit verwacht laag tot mid-range zonder major newscatalyst.",
+  "full_report": "De cryptomarkten sluiten het weekend in balans met Bitcoin op $71,533 (+1.15%) en Ethereum op $2,096.20 (+0.91%). Handelsvolume in BTC ($22.57B) overschaduwt Ethereum ($10.10B) significant, wat institutionele focus aangeeft. XRP (+1.61% naar $1.41) en SOL (+0.98% naar $87.87) tonen bescheiden groeisignalen, terwijl BNB-momentum afzwakt op $660.05. Macro-onzekerheid rond rentedynamieken houdt beleggers defensief gepositioneerd, met whale-flows wijzend op voorzichtige accumulatie onder sleutelniveaus. Volatiliteitsverwachting blijft gematigd voor maandag."
 }
