@@ -1,18 +1,18 @@
 {
   "date": "zondag 15 maart 2026",
-  "focus": "Aanhoudende positieve momentum in altcoins terwijl Bitcoin stabiliteit toont rond $71.529.",
-  "risk": "Lage volatiliteit, consolidatiefase risico",
-  "btc_structure": "Bitcoin noteert op $71.529 met bescheiden groei van 1.20% in 24 uur en volume van $23.67B. De prijs handelt in een stabiele range zonder significante breakout-signalen. Technisch gezien lijkt BTC in een consolidatiepatroon te bevinden.",
-  "eth_flows": "Ethereum toont relatieve kracht met $2.112,22 en 1.68% winst over 24 uur op $11.08B volume. De outperformance ten opzichte van BTC suggereert aantrekkende inflows naar altcoins. ETH-staking flows blijven steady.",
+  "focus": "Bescheiden groei in alle major assets wijst op stabiele marktsentiment zonder duidelijke directie",
+  "risk": "Lage volatiliteit, consolidatiefase",
+  "btc_structure": "Bitcoin handelt op $71,505 met +1.06% dagwinst en sluit aan bij wekelijks consolidatiepatroon. Volumes blijven solide op $24.13B, wat wijst op gezonde liquiditeit ondanks zijwaartse beweging.",
+  "eth_flows": "Ethereum toont relatief sterkte met +1.68% winst op $2,114.39, outperformend Bitcoin op dagbasis. Handelsvolume van $10.47B suggereert gestage institutionele belangstelling voor altcoins.",
   "top_narratives": [
-    "Altcoin season continuering met XRP en SOL in groen",
-    "Layer-2 adoption blijft druk zetten op ETH",
-    "Bitcoin spot ETF steady inflows",
-    "Macro Fed-beleid onzekerheid"
+    "Stable consolidation na maart-volatiliteit",
+    "Institutional demand in altseason",
+    "Macro-neutrale weekendhandelssessie",
+    "Voorbereiding op Fed-besluit volgende week"
   ],
-  "macro_impact": "Weekend-trading toont standvastige bid onder major assets ondanks macro-onzekerheid. Beleggers wachten op aankomende Fed-signalen die directe impact op risk appetite zullen hebben.",
-  "whale_flows": "BTC volume van $23.67B domineert markt, maar altcoin volume-concentratie (XRP $1.55B, SOL $2.02B) duidt op diversificatie van whale-posities. Geen extreme shorting-druk waarneembaar.",
-  "funding_oi": "Funding rates stabiel op lage niveaus, open interest toont lichte positiebouw. Verwachting is dat weekendconsolidatie aanhoudt zonder major liquidatie-risico's.",
-  "volatility_outlook": "Impliciete volatiliteit blijft laag op dit niveau. Volgende week macro-data kan impulsen geven, maar zondag handelsdag beperkt volume-catalysts aan.",
-  "full_report": "Cryptomarkten openen zondag met voorzichtig optimisme: Bitcoin $71.529 (+1.20%), Ethereum $2.112,22 (+1.68%), Solana $88.16 (+1.34%) en XRP $1.41 (+1.70%) vormen een breed gedragen aanstelling. Het dominante BTC-volume van $23.67B ondersteunt marktintegriteit, terwijl ETH's outperformance en Solana's steady stijging wijzen op robuuste altcoin-interest. BNB ($660,22, +1.03%) handelt in lijn met marktgevoel. Consolidatie-dynamieken suggereren dat beleggers voorzichtig posities opbouwen voor komende weekse macro-risico's. Geen extremen in funding of OI waarneembaar."
+  "macro_impact": "Weekendhandel in crypto vertoont rustiger sentiment zonder verse macro-impulsen. Fed-kalibratie voor volgende week blijft belangrijkste factor voor brede marktrichting.",
+  "whale_flows": "BTC-volume van $24.13B en ETH van $10.47B wijzen op gebalanceerde whale-activiteit zonder uitgesproken directionaliteit. Zondag-sessie toont minder agresieve positieaanpassingen.",
+  "funding_oi": "Gematigde funding rates verwacht bij huidige lage volatiliteit. Open Interest stabiliseert na week zonder extreme liquidaties.",
+  "volatility_outlook": "ATR-contractie suggereert verdere zijwaarts verwacht maandag tot dinsdag. Volatility-break waarschijnlijk bij binnenkomst van Fed-communicatie.",
+  "full_report": "CryptoMarketz daganalyse 15 maart 2026: Bitcoin consolidatief op $71,505 (+1.06%) met volumes van $24.13B, Ethereum outperformed op $2,114.39 (+1.68%) ondanks lagere volumes van $10.47B. Alle major altcoins zoals BNB ($660.32, +1.01%), XRP ($1.41, +1.50%) en SOL ($88.09, +1.30%) vertonen gematigde groei. De markt bevindt zich in stabiele wachtstelling voorafgaand aan komende macro-events, met gezonde liquiditeitstoestanden doch afwezigheid van duidelijk directief momentum op zondagochtend."
 }
