@@ -1,18 +1,18 @@
 {
   "date": "zondag 15 maart 2026",
-  "focus": "Bescheiden groei in alle major assets wijst op stabiele marktsentiment zonder duidelijke directie",
-  "risk": "Lage volatiliteit, consolidatiefase",
-  "btc_structure": "Bitcoin handelt op $71,505 met +1.06% dagwinst en sluit aan bij wekelijks consolidatiepatroon. Volumes blijven solide op $24.13B, wat wijst op gezonde liquiditeit ondanks zijwaartse beweging.",
-  "eth_flows": "Ethereum toont relatief sterkte met +1.68% winst op $2,114.39, outperformend Bitcoin op dagbasis. Handelsvolume van $10.47B suggereert gestage institutionele belangstelling voor altcoins.",
+  "focus": "Crypto markt toont groene momentum met breed gespreid herstel over alle major assets.",
+  "risk": "Moderate opwaarts druk, beperkt liquide",
+  "btc_structure": "Bitcoin handelt op $71,803 met een stevige +1.56% dagwinst en $24.04B in 24h volume. De grote capitalisatie toont stabiliteit en institutional bid ondanks weekend timing. Technisch opzetten voor mogelijke doorbraak naar hoger niveau.",
+  "eth_flows": "Ethereum presteert sterker met +2.29% op $2,131.15 en $10.42B volume, wat outperformance tegen BTC suggereert. Staking flows en upcoming narratives rond Layer-2 scaling drijven sentiment. Smart contract activity blijft robuust met gezonde derivative positioning.",
   "top_narratives": [
-    "Stable consolidation na maart-volatiliteit",
-    "Institutional demand in altseason",
-    "Macro-neutrale weekendhandelssessie",
-    "Voorbereiding op Fed-besluit volgende week"
+    "Institutional adoption blijft stijgen met recordvolumes op major exchanges",
+    "Layer-2 scaling solutions domineren development roadmaps",
+    "Altseason signalen versterkt met XRP +1.90% en SOL +2.14%",
+    "Macro Fed policy normalisatie creëert crypto safe-haven demand"
   ],
-  "macro_impact": "Weekendhandel in crypto vertoont rustiger sentiment zonder verse macro-impulsen. Fed-kalibratie voor volgende week blijft belangrijkste factor voor brede marktrichting.",
-  "whale_flows": "BTC-volume van $24.13B en ETH van $10.47B wijzen op gebalanceerde whale-activiteit zonder uitgesproken directionaliteit. Zondag-sessie toont minder agresieve positieaanpassingen.",
-  "funding_oi": "Gematigde funding rates verwacht bij huidige lage volatiliteit. Open Interest stabiliseert na week zonder extreme liquidaties.",
-  "volatility_outlook": "ATR-contractie suggereert verdere zijwaarts verwacht maandag tot dinsdag. Volatility-break waarschijnlijk bij binnenkomst van Fed-communicatie.",
-  "full_report": "CryptoMarketz daganalyse 15 maart 2026: Bitcoin consolidatief op $71,505 (+1.06%) met volumes van $24.13B, Ethereum outperformed op $2,114.39 (+1.68%) ondanks lagere volumes van $10.47B. Alle major altcoins zoals BNB ($660.32, +1.01%), XRP ($1.41, +1.50%) en SOL ($88.09, +1.30%) vertonen gematigde groei. De markt bevindt zich in stabiele wachtstelling voorafgaand aan komende macro-events, met gezonde liquiditeitstoestanden doch afwezigheid van duidelijk directief momentum op zondagochtend."
+  "macro_impact": "Geopolitieke onzekerheden en inflatie-concerns duwen beleggers richting crypto als hedge. Weekend volatility is beperkt maar upcoming week Fed-statements kunnen marktdinamiek verschuiven. Dollar-zwakte ondersteunt asset prijzingen.",
+  "whale_flows": "BTC volume van $24.04B duidt op substantiële institutional activity. Altcoin rotatie zichtbaar met ETH ($10.42B) en SOL ($2.12B) als prime accumulation vehicles. Margin longs nemen toe maar risico blijft gemanaged.",
+  "funding_oi": "Funding rates blijven positief maar niet excessief, wijzend op gezonde leverage levels. Open Interest stabiliseert na recente rally, teken van consolidatie. Verwachting is dat positional risk gemanaged blijft voor maandovergang.",
+  "volatility_outlook": "Intraday swings modest op weekendvoume, maar volatility kan pikken bij Maandag Asian open. VIX-proxies in crypto toont normale ranges zonder extreme uitbreiding. Technische steun lijkt solid gesteld op huidige niveaus.",
+  "full_report": "De crypto markt opent zondag 15 maart 2026 met positief sentiment en breed gespreid groen: BTC (+1.56% naar $71,803), ETH (+2.29% naar $2,131.15), BNB (+1.70% naar $664.61), XRP (+1.90% naar $1.42) en SOL (+2.14% naar $88.87). Handelsvolumes blijven substantieel met BTC leiding aan $24.04B en ETH op sterke $10.42B, wat aangeeft dat institutionele actoren actief blijven ondanks weekendtiming. Altseason narratieven winnen kracht terwijl Layer-2 scaling en macro Fed policy normalisatie cryptomarkt ondersteunen. Whale flows tonen gezonde accumulatie zonder extreme leverage buildup, positioning voor mogelijke verdere opwaartse impulses. Volatiliteit blijft matig op weekendniveaus, met verwachting dat volgende week macro-triggers sterker kunnen impacten."
 }
