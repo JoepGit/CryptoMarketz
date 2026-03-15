@@ -1,18 +1,18 @@
 {
   "date": "zondag 15 maart 2026",
-  "focus": "Solana outperformt met 3.43% winst terwijl Bitcoin consolidateert rond $71.946 in lage weekendvolumes.",
-  "risk": "Laag-tot-matig, weekend liquiditeit",
-  "btc_structure": "Bitcoin handelt rond $71.946 met bescheiden 24h-winst van 1.68% en $25.28B volume. De consolidatie lijkt gezond zonder noemenswaardige richtingbreuk in zicht. Weekendhandel kenmerkt zich door gereduceerde bewegingen.",
-  "eth_flows": "Ethereum noteert $2.135,03 met 2.30% dagwinst en $12.06B volume, wat sterker presteert dan Bitcoin relatief gezien. Smart contract volume blijft stabiel zonder opvallende uitstromingen of inflows.",
+  "focus": "Solana leidt marktmomentum met 4.98% gain terwijl Bitcoin stabiliseert rond $72.599.",
+  "risk": "Elevated volatility, accumulatie fase",
+  "btc_structure": "Bitcoin noteert op $72.599 met bescheiden 2.17% dagwinst en volume van $27.94B. De prijs behoudt steun boven $72k in een laterale consolidatiefase. Geen duidelijke breakout naar hogere niveaus waarneembaar.",
+  "eth_flows": "Ether toont relatieve sterkte met 3.84% groei tot $2.176.02 en $13.78B dagvolume. Ethflow signalen duiden op institutionele interest, al blijft uitbraakbevestiging uit.",
   "top_narratives": [
-    "Altseason momentum: SOL +3.43% leidt rallytje aan",
-    "Weekend consolidatie in top-3 assets",
-    "Volume concentratie in BTC/ETH blijft dominant",
-    "Risk-on sentiment in kleinere caps (XRP +2.35%)"
+    "Solana momentum: sterke 4.98% dagprestatie suggereert herstel in altcoin sentiment",
+    "Ripple stabiliteit: XRP stijgt 2.86% tot $1.44 op hernieuwde integratie verwachtingen",
+    "BNB consolidatie: Binance token +2.62% maar laag volume ($0.82B) wijst op voorzichtigheid",
+    "Macro wachtstand: Weekendhandel beperkt; institutionele positionering volgt maandag"
   ],
-  "macro_impact": "Weekend-handelspatronen tonen gereduceerde institutionele activiteit. Macro-kalender blijft stil zonder Fed-speakers of economische releases.",
-  "whale_flows": "BTC-volume van $25.28B suggereert voorzichtige accumulatie, terwijl Ethereum's $12.06B aangeeft spreidingsgedrag. Kleine caps vertonen relatieve outperformance in lagere volumes.",
-  "funding_oi": "Verwachting is voor stabiele funding rates door afwezigheid van grote richtingbreuken. Open Interest lijkt onveranderd met neutrale positionering in weekend-uren.",
-  "volatility_outlook": "IV-verwachting laag voor zondag vanwege beperkte newscatalysts. Maandagochtend kan volatiliteit toenemen met macro-releases en institutionele heropening.",
-  "full_report": "Crypto markten handelen zondags in lage liquiditeit met Bitcoin stabiel op $71.946 (+1.68%) en Ethereum sterker op $2.135,03 (+2.30%). Solana valt op met 3.43% winst terwijl kleinere tokens zoals XRP en BNB bescheiden groen tonen. Weekendvolumes concentreren zich in top-assets met $25.28B voor BTC en $12.06B voor ETH. De overall sentiment blijft risk-on maar voorzichtig zonder noemenswaardige whale-migraties. Voor de week vooruit zal institutionele liquiditeitsheropening en macro-developments de primaire drijvers zijn."
+  "macro_impact": "Zaterdagavond handel toont minimale macro-triggers; markten wachten op maandagse economische updates. Fed-beleidssentiment blijft kritieke factor voor risk-on bewegingen.",
+  "whale_flows": "BTC volumeconcentratie ($27.94B) sterker dan ETH ($13.78B), duidt op whale accumulatie in dominante asset. Solana volume ($3.00B) significant gegeven marktcap, suggereert gerichte institutiële rentes.",
+  "funding_oi": "Zondagavond funding rates stabiel; lage liquiditeit voorafgaand maandag. Open Interest daling suggereert voorzichtige positionering voor volatiele weekstart.",
+  "volatility_outlook": "Impliciete volatiliteit gedrukt op weekendtiming; verwachting van stijging maandag bij US-sessie opening. Solana en altcoins tonen hoger risico-profiel dan BTC.",
+  "full_report": "CryptoMarketz dagbrief — Bitcoin stabiliseert op $72.599 (+2.17%) met $27.94B volume in typische zondagse laterale beweging, terwijl Ethereum $2.176.02 (+3.84%, $13.78B vol) bereikt en institutionele interesse aantoont. Solana leidt met indrukwekkende 4.98% gain tot $92.27 ondanks weekend-timing. XRP (+2.86% naar $1.44) en BNB (+2.62% naar $673.48) volgen, doch met significante volumeverschillen. Weekend-handelsvolumes blijven geconcentreerd in top-assets; maandagochtend wereldwijde opening kritiek voor trendbevestiging. Technische positionering neutraal tot licht bullish, risicofactoren blijven geopolitiek en macro-surprises."
 }
