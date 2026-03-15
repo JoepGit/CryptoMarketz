@@ -1,18 +1,18 @@
 {
   "date": "zondag 15 maart 2026",
-  "focus": "Moderate bullish consolidatie met algemene marktbreedte-groei na weekend-koopsignalen.",
-  "risk": "Lage volatiliteit, correlatie-risico",
-  "btc_structure": "Bitcoin noteert op $71,866 met +2.06% dagelijkse winst op $22.33B volume. De prijs handelt in een compact bereik zonder verdere uitbreking boven de weeklysessie-high.",
-  "eth_flows": "Ethereum leidt de beweging met +2.75% tot $2,120.03 op $8.54B volume. Sterkere inflow-signalen duiden op institutionele herbewapening in de altcoin-sector.",
+  "focus": "Bitcoin consolidateert rond $71,744 terwijl Ethereum momentum toont met +2.11% winst naar $2,117.7.",
+  "risk": "Neutrale bias, lage volatiliteit",
+  "btc_structure": "Bitcoin behoudt steun op $71,744 met een bescheiden +1.47% dagwinst en $22.47B handelsvolume. De support lijkt solide in dit prijsniveau, echter ontbreekt nog duidelijke breakout momentum naar hogere niveaus.",
+  "eth_flows": "Ethereum outperformt Bitcoin met +2.11% naar $2,117.7 en $9.26B volume. Dit relativaire sterkte suggereert institutionele interesse in altcoins, mogelijk gerelateerd aan DeFi-activiteit.",
   "top_narratives": [
-    "Zondagse liquiditeitsflucht naar veiliger assets",
-    "Institutionele altcoin-accumulatie in ETH",
-    "Macro-wachttijd voor Fed-signalen week 16",
-    "Layer-1 momentum-herstel post-consolidatie"
+    "Ethereum outperformance op altcoin rally",
+    "Bitcoin consolidatie onder $72k",
+    "SOL en XRP tonen parallelle momentum met +1.83% en +1.76%",
+    "Laag volume op BNB wijst op institutional positioning"
   ],
-  "macro_impact": "Weekend-handle zonder grootschalige macro-data; markt wacht op volgende rentebeslissing. De correlatie met traditionele markten blijft sterk maar gemodereerd.",
-  "whale_flows": "Totaal gecombineerd volume van $34.5B wijst op geleidelijke positie-opbouw in BTC en ETH-complexen. Geen panische liquidaties waargenomen op het oppervlak.",
-  "funding_oi": "Funding rates blijven licht positief; geen extreem leverage-risico gedetecteerd. Long-positie-groei is gecontroleerd met gezonde deleveraging-pockets.",
-  "volatility_outlook": "Impliciete volatiliteit (IV) gedrukt naar 45-50 range; weekend-rust in derivaten-markt. Volgende beweging verwacht maandag na opening Amerikaanse cash-handelsuren.",
-  "full_report": "Op zondag 15 maart 2026 toont de cryptomarkt brede groei met Bitcoin op $71,866 (+2.06%, vol $22.33B), Ethereum stellend voort op $2,120.03 (+2.75%, vol $8.54B), en altcoins zoals BNB ($663.4, +1.99%), XRP ($1.42, +1.91%) en SOL ($88.6, +2.17%) in touw. Weekend-liquiditeitsafvloeiing richting veiliger assets is stabiel zonder crashsignalen. Institutionele flows concentreren zich op ETH-accumulatie, terwijl BTC-volume solide maar niet explosief blijft. De markt wacht op volgende Fed-communicatie en macro-triggers; volatiliteit is gemodereerd met funding rates gezond gepositioneerd. Technisch gezien consolideren beide tier-1 assets zonder duidelijke directie tot maandagochtend openingsbel."
+  "macro_impact": "Weekend handelsactiviteit blijft gedempd met gereduceerde flows. Institutionele actoren lijken positie-constructief zonder aggressive buying.",
+  "whale_flows": "Volume concentratie in BTC ($22.47B) en ETH ($9.26B) suggereert major player positioning. BNB-volume ($0.53B) blijft relatief laag, duidt op accumulation fase.",
+  "funding_oi": "Funding rates zouden neutralaal moeten stabiliseren bij huidige prijzen zonder extreme leverage. Long-positie groei verwacht bij verdere Ethereum sterkte.",
+  "volatility_outlook": "Expect gereduceerde volatiliteit tot morgenvroeg Europese sessie. Weekend handelspatronen suggereren trending consolidatie boven support levels.",
+  "full_report": "De cryptocoinmarkt presenteert zich in een neutrale consolidatie modus op zondag 15 maart 2026. Bitcoin stabiliseert op $71,744 (+1.47%, $22.47B volume) zonder duidelijke directional bias, terwijl Ethereum significant outperformt met +2.11% naar $2,117.7 en $9.26B volume. Altcoins volgen positief met SOL op $88.36 (+1.83%) en XRP op $1.42 (+1.76%). Het lage weekend-handelsvolume op BNB ($0.53B) suggereert dat whale accumulators positioning nemen vóór de week. Macro-factoren lijken neutraal, met institutionele interest gericht op Ethereum-sterkte, mogelijk gerelateerd aan DeFi-narratieven. Traders dienen steun op $71,744 BTC en $2,117.7 ETH in de gaten te houden voor mogelijke breakout-scenarios."
 }
