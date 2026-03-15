@@ -1,18 +1,18 @@
 {
   "date": "zondag 15 maart 2026",
-  "focus": "Crypto markt vertoont stabiele laterale beweging met minimale volatiliteit over alle major assets.",
+  "focus": "Groene markt met modest momentum terwijl Bitcoin op $71,496 consolidateert rond psychologische barrière.",
   "risk": "Lage volatiliteit, consolidatie fase",
-  "btc_structure": "Bitcoin handelt op $71,467 met een bescheiden dagwinst van 0.99% en een solide volume van $23.07B. De sterke volumesteun duidt op institutionele betrokkenheid ondanks de lage dagelijkse koersbeweging.",
-  "eth_flows": "Ethereum noteert $2,093.39 met 0.83% winst en een volume van $9.26B, wat wijst op voorzichtig optimisme onder traders. De kleinere volumeexpansie ten opzichte van Bitcoin suggereert dat kapitaal momenteel naar de leading asset verschuift.",
+  "btc_structure": "Bitcoin noteert op $71,496 met +1.14% gain in 24h op $23.22B volume. De markt handelt boven de gemiddelde trend maar toont voorzichtigheid rond de $72,000 niveau. Technisch gezien blijft BTC in een laterale trading range zonder duidelijke breakout.",
+  "eth_flows": "Ethereum handelt op $2,093.11 met bescheiden +0.77% performance en $9.45B dagvolume. De underperformance versus Bitcoin suggereert voorzichtigheid in de altcoin sector. ETH/BTC ratio geeft aan dat dominantie nog niet hersteld is.",
   "top_narratives": [
-    "Consolidatie in bull market na recente rallies",
-    "Institutionele accumulation op dips",
-    "Alt-seizoen uitstel door BTC dominantie",
-    "Macro-economische onzekerheid drukt risicodrang"
+    "Milde bullish sentimentshift in Q1 2026",
+    "Altcoin rotation nog steeds beperkt",
+    "Institutionele accumulatie op stabiele niveaus",
+    "Macro-economische onzekerheid aanhoudend"
   ],
-  "macro_impact": "De relatief vlakke dagdynamiek duidt op afwachtende marktkeuze voor macro-triggers komende week. Fed-verwachtingen en economische data kunnen de consolidatie doorbreken.",
-  "whale_flows": "XRP toont de meeste momentum met 1.92% winst op $1.42 en $1.44B volume, wat duidt op selectieve accumulation. Wallets verzamelen altcoins terwijl BTC-volume dominant blijft op $23.07B.",
-  "funding_oi": "Long funding rates liggen dicht bij evenwicht, wat wijst op voorzichtigheid onder traders. Verwacht geen extreme liquidaties en eerder consolidatie dan uitbreking.",
-  "volatility_outlook": "Impliciete volatiliteit blijft laag met alle majors tussen 0.83-1.92% dagbewegingen. Verwacht stilte tot maandag wanneer macro-catalysatoren toetreden.",
-  "full_report": "De crypto markt opent zondag 15 maart in rustige consolidatiefase met Bitcoin stevig rond $71,467 (+0.99%), Ethereum op $2,093.39 (+0.83%), en selectieve outperformance in altcoins zoals XRP (+1.92% op $1.42). BTC volume van $23.07B getuigt van voortdurende institutionele belangstelling, terwijl Ethereum en kleinere assets zoals SOL ($87.71, +0.88%) lateraal blijven bewegen. De lage volatiliteit geeft aan dat traders op het weekend wachten op macro-verwachtingen; geen liquidatiedruck zichtbaar en funding rates neutraal. Verwacht een ruhtig weekeinde met mogelijke volatiliteitsdoorbraak maandagochtend bij economische kalenderdata."
+  "macro_impact": "Zondag handelsdag met verwacht laag volume vanuit institutionele zijde. Macro-catalysts volgende week verwacht, momenteel wacht markt op rentebeslissingen en inflatiedata. Risk-off sentiment blijft subtiel aanwezig.",
+  "whale_flows": "Totaal 24h volume van $36.60B spreidt zich over BTC-dominante coins. XRP toont sterkte met +1.96% en $1.46B volume, wat duidt op selectieve accumulation. BNB volume zwak op $0.60B, signalaal voor afgenomen institutional interest.",
+  "funding_oi": "Funding rates blijven genormaliseerd op alle major pairs. Open interest stabiel zonder extreme positioning. Verwachting is dat markt voorzichtig blijft zonder leverage-spikes in komende 48 uur.",
+  "volatility_outlook": "Impliciete volatiliteit beperkt door weekend-effect en lage volume. Volatiliteit naar schatting onder de 30-day MA. Breakout expected na macro-releases in week van 17 maart.",
+  "full_report": "CryptoMarketz marktbrief voor zondag 15 maart 2026 toont een gematigd bullish sentiment met Bitcoin op $71,496 (+1.14%) en Ethereum op $2,093.11 (+0.77%). De altcoin sector vertoont selectieve sterkte via XRP op $1.42 (+1.96%), terwijl BNB en SOL respectievelijk $660.25 en $87.95 noteren met modest gains. Totaal 24h volume van $36.60B is consistent met weekend-verwachtingen. Technisch blijft markt in consolidatie zonder duidelijke directie, met institutionele actoren afwachtend voor macro-catalysts volgende week. Risk regime blijft laag met verwachte volatiliteit onder drempels."
 }
