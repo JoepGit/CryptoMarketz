@@ -1,18 +1,18 @@
 {
   "date": "zondag 15 maart 2026",
-  "focus": "Bitcoin stabiliseert rond $71,284 terwijl marktbreedte voorzichtig positief blijft met minimale 24h-bewegingen.",
-  "risk": "Lage volatiliteit, consolidatie fase",
-  "btc_structure": "Bitcoin noteert op $71,284 met bescheiden +0.67% in 24 uur en een handelsvolume van $22.46B. De stabiliteit suggereert steun op dit niveau, met afwezigheid van sterke directionaliteit in het weekend.",
-  "eth_flows": "Ethereum ligt vrijwel vlak op $2,094.15 met slechts +0.15% dagelijkse winst en $8.97B volume. De lage volatiliteit wijst op afwachting van institutionele positionering in de komende handelssessie.",
+  "focus": "Lichte groenmarkt met stabiele dominantie van Bitcoin op $71,533 terwijl altcoins bescheiden winsten boeken.",
+  "risk": "Laag volatiliteit, weekend consolidatie",
+  "btc_structure": "Bitcoin handelt stabiel rond $71,533 met slechts 0.60% winst in 24 uur, ondersteund door gezonde volume van $22.27B. De technische positie suggereert laterale beweging zonder duidelijke directie in het weekeinde.",
+  "eth_flows": "Ethereum volgt Bitcoin voorzichtig omhoog naar $2,103.51 met 0.52% dagwinst en $8.87B volume. De consolidatie duidt op voorzichtige beleggers die wachten op maandag voor hernieuwde directionaliteit.",
   "top_narratives": [
-    "Weekend consolidatie na matige macro-signalen",
-    "XRP outperformt met +1.10% - altcoin rotatie in gang",
-    "Lage Bitcoin volume ($22.46B) duidt op positiebuilding",
-    "Stablecoin dominantie suggereert voorzichtige houding"
+    "Weekend consolidatie zonder volatiliteit",
+    "XRP outperformance met 1.33% dagwinst",
+    "SOL stabiliteit op $88.25 ondanks platte markt",
+    "Volume concentratie in top 3 assets"
   ],
-  "macro_impact": "Zondag marktomgeving met beperkte macro-triggers; geen centrale bankmededelingen verwacht. Fed-beleid blijft cruciaal voor komende week.",
-  "whale_flows": "XRP leidt altcoins met +1.10% winst op $1.23B volume, terwijl BTC-volume met $22.46B stabiel blijft. Whales lijken positions te consolideren voor maandagse volatiliteit.",
-  "funding_oi": "Funding rates stabiel rond historische gemiddelden; perpetual futures open interest onveranderd. Geen excessieve leverage waargenomen.",
-  "volatility_outlook": "Impliciete volatiliteit aan lage kant, typisch voor weekenden. Monday-opening zal waarschijnlijk meer directionaliteit brengen. Technische supports intact onder $70,000.",
-  "full_report": "Bitcoin stabiliseert op $71,284 (+0.67%, vol $22.46B) in een rustige zondagse sessie, terwijl Ethereum op $2,094.15 vrijwel vlak blijft (+0.15%, vol $8.97B). XRP outperformt de markt met +1.10% tot $1.42, wat wijst op begin altcoin-rotatie. SOL ($88.18, +0.03%) en BNB ($657.78, +0.25%) vertonen minimale beweging. Het lage weekend-volume en afwezigheid van sterke directionele impulsen suggereren dat beleggers voorzichtig posities opstellen voordat macro-triggers en Fed-signalen de week domineren. Technische steuns op $70k voor BTC blijven robuust."
+  "macro_impact": "De weekend-settling van markten suggereert afwachting richting volgende macro-triggers. Lage volatiliteit wijst op gemis aan frisse catalysts voor weekendhandel.",
+  "whale_flows": "Volume concentreert zich in BTC ($22.27B) en ETH ($8.87B), terwijl altcoins zwakker volume tonen. Whale-activiteit blijft minimaal in weekendperiode met geen significante grote transacties.",
+  "funding_oi": "Verwachting voor stabiele funding rates door lage volatiliteit en weekend-trading. Open Interest-positie wellicht gesloten voor risicomijdende traders tot maandag.",
+  "volatility_outlook": "Volatiliteit blijft laag in weekendperiode met verwacht bereik tussen $70,000-$73,000 voor Bitcoin. Hernieuwde movimento waarschijnlijk maandagmorgen bij institutionele opening.",
+  "full_report": "CryptoMarketz dagelijkse brief toon zacht bullish sentiment met Bitcoin op $71,533 (+0.60%), Ethereum op $2,103.51 (+0.52%) en sterkste performer XRP op $1.42 (+1.33%). Totale volume in top assets bedraagt $32.84B met gezonde spreiding, terwijl Solana stabiliteit handhaaft op $88.25. De weekendconsolidatie suggereert afwachting van nieuwe impulsen, met primaire support zones rond $70,500 voor BTC en verwachte breakout boven $73,000 indien bulls maandag momentum hervatten. Risk-averse positionering dominant in laagvolume weekend-sessie."
 }
