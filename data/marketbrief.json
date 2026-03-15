@@ -1,18 +1,18 @@
 {
   "date": "zondag 15 maart 2026",
-  "focus": "Lichte groenmarkt met stabiele dominantie van Bitcoin op $71,533 terwijl altcoins bescheiden winsten boeken.",
-  "risk": "Laag volatiliteit, weekend consolidatie",
-  "btc_structure": "Bitcoin handelt stabiel rond $71,533 met slechts 0.60% winst in 24 uur, ondersteund door gezonde volume van $22.27B. De technische positie suggereert laterale beweging zonder duidelijke directie in het weekeinde.",
-  "eth_flows": "Ethereum volgt Bitcoin voorzichtig omhoog naar $2,103.51 met 0.52% dagwinst en $8.87B volume. De consolidatie duidt op voorzichtige beleggers die wachten op maandag voor hernieuwde directionaliteit.",
+  "focus": "Gegeven stijgende volumes en positieve momentum blijven altcoins uitperformen terwijl Bitcoin consolidatie vertoont.",
+  "risk": "Moderate opwaarts risico, consolidatie fase",
+  "btc_structure": "Bitcoin handelt op $71,450 met bescheiden +1.13% dagwinst en $22.21B volume. De sterke standaard volumes wijzen op institutionele interesse, terwijl de prijsactie een gezonde consolidatiepatroon vormt boven kritieke steunniveaus.",
+  "eth_flows": "Ethereum leidt de markt aan met +1.39% tot $2,107.55 en $8.46B dagvolume. Dit sterke relatieve momentum suggereert hernieuwde belangstelling voor DeFi en smart contract activiteiten.",
   "top_narratives": [
-    "Weekend consolidatie zonder volatiliteit",
-    "XRP outperformance met 1.33% dagwinst",
-    "SOL stabiliteit op $88.25 ondanks platte markt",
-    "Volume concentratie in top 3 assets"
+    "Altcoin outperformance versus Bitcoin dominantie",
+    "Institutionele accumulation in consolidatieperiodes",
+    "DeFi protocol renaissance na regulatory clarity",
+    "Layer-2 scaling adoption acceleratie"
   ],
-  "macro_impact": "De weekend-settling van markten suggereert afwachting richting volgende macro-triggers. Lage volatiliteit wijst op gemis aan frisse catalysts voor weekendhandel.",
-  "whale_flows": "Volume concentreert zich in BTC ($22.27B) en ETH ($8.87B), terwijl altcoins zwakker volume tonen. Whale-activiteit blijft minimaal in weekendperiode met geen significante grote transacties.",
-  "funding_oi": "Verwachting voor stabiele funding rates door lage volatiliteit en weekend-trading. Open Interest-positie wellicht gesloten voor risicomijdende traders tot maandag.",
-  "volatility_outlook": "Volatiliteit blijft laag in weekendperiode met verwacht bereik tussen $70,000-$73,000 voor Bitcoin. Hernieuwde movimento waarschijnlijk maandagmorgen bij institutionele opening.",
-  "full_report": "CryptoMarketz dagelijkse brief toon zacht bullish sentiment met Bitcoin op $71,533 (+0.60%), Ethereum op $2,103.51 (+0.52%) en sterkste performer XRP op $1.42 (+1.33%). Totale volume in top assets bedraagt $32.84B met gezonde spreiding, terwijl Solana stabiliteit handhaaft op $88.25. De weekendconsolidatie suggereert afwachting van nieuwe impulsen, met primaire support zones rond $70,500 voor BTC en verwachte breakout boven $73,000 indien bulls maandag momentum hervatten. Risk-averse positionering dominant in laagvolume weekend-sessie."
+  "macro_impact": "Zondag's lagere volumes reflecteren weekendhandel, maar de positieve sentiment overdag wijst op voorbereiding voor de komende handelsweek. Macro-onzekerheden blijven beperkt impact hebben op crypto-prijzen.",
+  "whale_flows": "ETH's disproportioneel hoge volume ($8.46B) ten opzichte van BTC suggereert strategische whale accumulation in altcoins. XRP ($1.25B) en SOL ($1.89B) volumes duiden op gediversifieerde institutionele inflows.",
+  "funding_oi": "De consistente 1%+ dagwinsten suggereren longs voorbij hun equilibrium zonder extreme leverage. Funding rates zouden neutral tot licht positief moeten blijven met beperkte liquidatierisico's.",
+  "volatility_outlook": "Laag weekendvolume resulteert in gedempte intraday volatiliteit, maar de uniform positieve 24h-range (+0.75% tot +1.39%) wijst op geordende hausse sentiment. Maandag kan verhoogde volatiliteit brengen met institutiële orderflow.",
+  "full_report": "De crypto-markt opent zondag 15 maart in positief territory met breed gespreid momentum: Bitcoin consolideert op $71,450 (+1.13%, $22.21B vol), terwijl Ethereum het leaderboard aanvoert op $2,107.55 (+1.39%, $8.46B vol). Altcoins vertonen sterke relatieve kracht met XRP (+1.28%, $1.41), SOL (+1.16%, $88.31) en BNB (+0.75%, $658.29) allen in de groen. De volume verdeling—dominantie van ETH en altcoin volume—suggereert dat whale positioning verschuift naar smart contract ecosystemen. Zonder significante macro-catalysatoren op zondag, schrijven we dit momentum toe aan technische opstellingen en voorbereiding op institutionele maandag-inflows."
 }
