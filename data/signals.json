@@ -12,18 +12,6 @@
     "source": "claude-bot"
   },
   {
-    "id": 1773600027840,
-    "coin": "SOL/USD",
-    "type": "BUY",
-    "entry": "88.58",
-    "tp": "96.50",
-    "sl": "86.00",
-    "note": "7d +8.72% bullish trend. 24h +1.83% sterke momentum. 1h +0.80% positief zonder overbought signalen. Breakout setup met duidelijke uptrend.",
-    "timestamp": "2026-03-15T18:40:23.942Z",
-    "generated_at": "Sun, 15 Mar 2026 18:40:23 GMT",
-    "source": "claude-bot"
-  },
-  {
     "id": 1773320490461,
     "coin": "BNB/USD",
     "type": "BUY",
