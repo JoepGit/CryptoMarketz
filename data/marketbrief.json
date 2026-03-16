@@ -1,18 +1,18 @@
 {
-  "date": "2026-03-16",
-  "focus": "Brede crypto-rally met Bitcoin boven $73.6K en Ethereum +6.96%, ondersteund door regelgevingspositief nieuws uit Australi\u00eb.",
-  "risk": "Extreme Fear met hersteltendens, liquidatiedruk onbekend",
-  "btc_structure": "Bitcoin handelt op $73,667 met +3.00% in 24h en +9.07% weekly, boven de 50-day moving average en recent kortstondig boven $74,000. Sterke momentum ondersteund door brede marktbijdrage met $36.51B volume. Technische positie blijft bullish zolang support rond $71K intact blijft.",
-  "eth_flows": "Ethereum presteert sterk op $2,254.71 met +6.96% dagelijks en +13.67% wekelijks, outperforming Bitcoin. Volume van $25.92B ondersteunt de momentum, met ADA en SOL vergelijkbare 6%+ dagwinsten die brede altcoin-rotatie suggereren.",
+  "date": "maandag 16 maart 2026",
+  "focus": "Altcoin-rally steelt schijnwerpers van Bitcoin terwijl institutionele vraag blijft twijfelen.",
+  "risk": "Volatiliteit hoog, korting verwacht",
+  "btc_structure": "Bitcoin consolidateert rond $73.159 met bescheiden 2.13% dagwinst, terwijl volume met $42.12B aan de zwakke kant blijft. Technisch duidt dit op voorzichtige positionering voor een maandag.",
+  "eth_flows": "Ethereum springt uit met 6.31% winst naar $2.244,80, aangedreven door $26.77B volume dat duidt op hernieuwde institutionele interesse in DeFi. Dit outperformance ten opzichte van Bitcoin suggereert rotatie naar risico-on altcoin-sentiment.",
   "top_narratives": [
-    "Regelgeving: Australische Senaat steunt crypto-regelgevingskader, marktsentiment verbeterend",
-    "XRP-breuk: Ripple stijgt >5% dagelijks na technische breakout op $1.49, momentum-driven",
-    "Altcoin-rotatie: DOT +11.80%, ADA +9.75%, AVAX +14.46% \u2013 growth assets outperformen defensief BTC",
-    "Geopolitieke spanningen: Balaji roept crypto-tools op voor vluchtelingen, narrative-gedreven"
+    "Altcoin-dominantie neemt toe terwijl Bitcoin consolidateert",
+    "Ethereum DeFi-recovery drijft volumerotatie",
+    "Solana volumepiek duidt op retail-respons op rallies",
+    "XRP-momentum blijft steady op regulatorische optimisme"
   ],
-  "macro_impact": "Australische regelgeving-steun vormt positieve catalysator voor institutionele inflow, terwijl SEC-retoriek (BitClout-zaak ingetrokken) regelgevingsrisico's vermindert. Gen Z crypto-eigendom stijgt naar 23% in Australi\u00eb, wat langetermijn-adoptieversnelling aangeeft ondanks waarschuwingen over AI-finfluencers.",
-  "whale_flows": "Liquidatiedata niet beschikbaar, maar totale marktcap +3.02% ($2.59T) en gecombineerde 24h-volume van $105.9B suggereert gezonde liquiditeitsomstandigheden zonder massale afsluiting-events. Blockfills-faillissement heeft marginale impact op marktbrede likwiditeit.",
-  "funding_oi": "Funding rates en open interest data niet beschikbaar voor leveraged posities. Zonder deze signalen blijft technische positie afhankelijk van spot-volume ($36.51B BTC, $25.92B ETH) als proxy voor sentiment \u2013 beide robuust op huidige niveaus.",
-  "volatility_outlook": "Fear & Greed Index op 23 (Extreme Fear, verbeterd van 15) suggereert oversold-conditions met opwaarts potentieel op sentiment-reset. Afwezigheid van grote liquidatie-cascade gecombineerd met momentum-stijging wijst op voorzichtige volatiliteitsafname indien $73.5K support standhoud.",
-  "full_report": "Crypto-markten tonen brede rally op 2026-03-16 met Bitcoin op $73,667 (+3.00% dag, +9.07% week) en Ethereum op $2,254.71 (+6.96% dag, +13.67% week), ondersteund door Australische regelgeving-goedkeuring en verbeterd Fear & Greed Index (23, Extreme Fear). Totale marktcap bereikt $2.59T (+3.02%) op $105.9B dagelijks volume. Altcoins outperformen met DOT +11.80%, ADA +9.75%, AVAX +14.46%, aangevend growth-rotatie vanuit risk-off positioning. Funding rates en OI-data niet beschikbaar, maar spot-liquiditeitsomstandigheden blijven gezond zonder grote liquidatie-signalen. Regelgevingssentiment en institutionele aandacht (Gen Z 23% penetratie) vormen lange-termijn supports ondanks macro-spanningen en miningdebat rond AI-datacenters."
+  "macro_impact": "Maandagochtendmarkt toont voorzichtige optimisme zonder major macro-catalysators. De brede volume-distributie suggereert dat markt wacht op duidelijk beleidssignalen of economische data later in de week.",
+  "whale_flows": "Grote concentratie volume in Ethereum ($26.77B) wijst op institutionele accumulatie, terwijl Bitcoin ($42.12B) breder gedistribueerd volume suggereert. Solana ($4.75B) en XRP ($2.93B) tonen retail-gedreven participatie.",
+  "funding_oi": "Verwacht langposities verder op te bouwen gegeven altcoin-outperformance, met Ethereum als primaire accumulatie-voertuig. Funding rates zullen waarschijnlijk moderaat stijgen indien momentum aanhoudt.",
+  "volatility_outlook": "Verwachte volatiliteit neemt toe na weekend; Ethereum's 6.31% winst wijst op hogere intraday-ranges. Belangrijk support- en resistanceniveaus volgen technische patterns op 4H-charts.",
+  "full_report": "De cryptomarkt opent maandag met gemengd sentiment: Bitcoin ($73.159) conserveert winsten met +2.13% maar volume voelt licht aan ($42.12B). Het echte verhaal speelt zich af in altcoins, waarbij Ethereum sterk uitblinkt op +6.31% naar $2.244,80 met robuuste $26.77B volume-opbouw. Solana volgt met +5.08% naar $92,93 en XRP houdt zich staande op +4.03% naar $1,47. Dit patroon suggereert rotatie van Bitcoin naar risico-on altcoin-plays, mogelijk gedreven door DeFi-activiteit en oplopende speculatie. Institutionele interesse in Ethereum blijft manifest via volumepiek, terwijl retail via Solana en XRP participeert. Macro-context bevat geen major Friday-news, dus markt wacht op deze week's economische agenda. Volatiliteitsverwachting stijgt; traders moeten helderheid verwachten rond dinsdag/woensdag beleidscommunicatie."
 }
