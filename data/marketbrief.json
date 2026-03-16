@@ -1,18 +1,18 @@
 {
-  "date": "zondag 15 maart 2026",
-  "focus": "Solana leidt marktmomentum met 4.98% gain terwijl Bitcoin stabiliseert rond $72.599.",
-  "risk": "Elevated volatility, accumulatie fase",
-  "btc_structure": "Bitcoin noteert op $72.599 met bescheiden 2.17% dagwinst en volume van $27.94B. De prijs behoudt steun boven $72k in een laterale consolidatiefase. Geen duidelijke breakout naar hogere niveaus waarneembaar.",
-  "eth_flows": "Ether toont relatieve sterkte met 3.84% groei tot $2.176.02 en $13.78B dagvolume. Ethflow signalen duiden op institutionele interest, al blijft uitbraakbevestiging uit.",
+  "date": "maandag 16 maart 2026",
+  "focus": "Altcoin recovery domineert markt terwijl Bitcoin consolidatie handhaaft rond $72.4k.",
+  "risk": "Moderate risk, vol normalisatie",
+  "btc_structure": "Bitcoin noteert $72,431 met slechts 1.72% 24h-winst, wat wijst op consolidatie na recent rally. Het volume van $27.15B ondersteunt deze steady-state dynamiek zonder explosieve bewegingen.",
+  "eth_flows": "Ethereum toont relatieve sterkte met 3.89% 24h-groei naar $2,173.05, terwijl het volume van $16.57B aangeeft dat institutional inflow aanhoudend is. Dit outperformance-scenario suggereert rotatie van BTC naar smart contract platforms.",
   "top_narratives": [
-    "Solana momentum: sterke 4.98% dagprestatie suggereert herstel in altcoin sentiment",
-    "Ripple stabiliteit: XRP stijgt 2.86% tot $1.44 op hernieuwde integratie verwachtingen",
-    "BNB consolidatie: Binance token +2.62% maar laag volume ($0.82B) wijst op voorzichtigheid",
-    "Macro wachtstand: Weekendhandel beperkt; institutionele positionering volgt maandag"
+    "Altcoin season versnelling met Solana +3.79% en ETH +3.89%",
+    "Bitcoin consolidatie vóór macro-catalysts",
+    "Layer 2 en derivative platform momentum",
+    "Institutionele positionering in ethereum-futures"
   ],
-  "macro_impact": "Zaterdagavond handel toont minimale macro-triggers; markten wachten op maandagse economische updates. Fed-beleidssentiment blijft kritieke factor voor risk-on bewegingen.",
-  "whale_flows": "BTC volumeconcentratie ($27.94B) sterker dan ETH ($13.78B), duidt op whale accumulatie in dominante asset. Solana volume ($3.00B) significant gegeven marktcap, suggereert gerichte institutiële rentes.",
-  "funding_oi": "Zondagavond funding rates stabiel; lage liquiditeit voorafgaand maandag. Open Interest daling suggereert voorzichtige positionering voor volatiele weekstart.",
-  "volatility_outlook": "Impliciete volatiliteit gedrukt op weekendtiming; verwachting van stijging maandag bij US-sessie opening. Solana en altcoins tonen hoger risico-profiel dan BTC.",
-  "full_report": "CryptoMarketz dagbrief — Bitcoin stabiliseert op $72.599 (+2.17%) met $27.94B volume in typische zondagse laterale beweging, terwijl Ethereum $2.176.02 (+3.84%, $13.78B vol) bereikt en institutionele interesse aantoont. Solana leidt met indrukwekkende 4.98% gain tot $92.27 ondanks weekend-timing. XRP (+2.86% naar $1.44) en BNB (+2.62% naar $673.48) volgen, doch met significante volumeverschillen. Weekend-handelsvolumes blijven geconcentreerd in top-assets; maandagochtend wereldwijde opening kritiek voor trendbevestiging. Technische positionering neutraal tot licht bullish, risicofactoren blijven geopolitiek en macro-surprises."
+  "macro_impact": "De geleidelijke Bitcoin appreciatie zonder volatiliteit suggereert macro-klimaat ondersteunend maar voorzichtig. Markt wacht waarschijnlijk op centrale bank-signalen of geopolitieke updates.",
+  "whale_flows": "Totaal spotvolume $50.09B verdeeld, met Ethereum en Bitcoin dominant. XRP-volume van $2.10B duidt op selective altcoin-accumulatie door grotere partijen.",
+  "funding_oi": "Moderate funding-rates verwacht gegeven Bitcoin-calme en altcoin-outperformance. Leveraged posities blijven beheerst zonder extreem sentiment.",
+  "volatility_outlook": "Verwacht geringe volatiliteit in Bitcoin rond $72.4k, terwijl altcoins mogelijk 3-5% intraday swings vertonen. VIX-equivalenten crypto duiden op rustige marktomstandigheden.",
+  "full_report": "CryptoMarketz rapporteert een gedifferentieerde markt op maandag 16 maart 2026. Bitcoin stabiliseert rond $72,431 met slechts 1.72% 24h-beweging en $27.15B volume, wat consolidatie aangeeft. Ethereum leidt altcoin-herstel met +3.89% naar $2,173.05 en $16.57B volume, terwijl Solana (+3.79%, $91.52) en BNB (+2.12%, $671.36) volgen. Dit rotatie-patroon van BTC naar L1/L2 tokens suggereert beleggers posities herschikken. XRP's bescheiden 1.55% +3.89% wijst op selectieve accumulation. Macro-backdrop blijft ondersteunend maar voorzichtig; markt wacht op centrale bank-signalen."
 }
