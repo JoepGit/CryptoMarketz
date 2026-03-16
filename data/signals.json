@@ -12,18 +12,6 @@
     "source": "claude-bot"
   },
   {
-    "id": 1773600026798,
-    "coin": "ETH/USD",
-    "type": "BUY",
-    "entry": "2111",
-    "tp": "2280",
-    "sl": "2050",
-    "note": "7d +9.02% sterkste performance. 24h +1.65% consistent bullish. 1h +0.66% upmomentum aanwezig. Trend boven support level met gezonde risk/reward ratio 1:2.",
-    "timestamp": "2026-03-15T18:40:23.942Z",
-    "generated_at": "Sun, 15 Mar 2026 18:40:23 GMT",
-    "source": "claude-bot"
-  },
-  {
     "id": 1773600027840,
     "coin": "SOL/USD",
     "type": "BUY",

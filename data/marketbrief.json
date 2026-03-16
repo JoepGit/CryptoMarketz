@@ -1,18 +1,18 @@
 {
   "date": "maandag 16 maart 2026",
-  "focus": "Altcoins outperformen Bitcoin met sterke inflows terwijl macro-onzekerheid de volatiliteit aanzwengelt.",
-  "risk": "Verhoogd risico, vluchtige markt",
-  "btc_structure": "Bitcoin staat op $73,907 met een bescheiden 24h-stijging van 3.47% en volume van $43.57B. De prijsformatie blijft in een consolidatiezone en geeft geen duidelijk directional momentum af. Deze relatief zwakke performance versus altcoins duidt op risicorotatie uit de marktleider.",
-  "eth_flows": "Ethereum noteert $2,277.24 met een indrukwekkende 24h-gain van 8.56% en $29.76B volume. Deze outperformance suggereert substantiële institutionele inflows richting de tweede laag, mogelijk aangetrokken door DeFi- en NFT-gerelateerde activiteit.",
+  "focus": "Ethereum's sterke dagwinst van 8.99% domineert de markt terwijl Bitcoin consolidateert rond $73,495.",
+  "risk": "Gemiddeld volatiel, opwaartse druk",
+  "btc_structure": "Bitcoin noteert op $73,495 met een bescheiden dagwinst van 2.64%, wat wijst op voorzichtige consolidatie na recent sterke moves. De $49.51B handelsvolume is substantieel maar niet extreem, wat suggereert dat grote institutionele posities zich voorlopig aan de zijlijn bevinden.",
+  "eth_flows": "Ethereum steekt er met een indrukwekkende 8.99% dagwinst uit en wisselt $33.53B handen, waarmee het op $2,283.66 noteert. Dit duidt op significante accumulation en mogelijke institutionele herbalancering tussen Ethereum-gerelateerde derivaten.",
   "top_narratives": [
-    "Altcoin rally: SOL (+6.51%) en XRP (+3.52%) tonen sterke technische kracht",
-    "Ethereum dominance: ETH's 8.56% gain benadrukt rotatie naar scaling solutions",
-    "Macro headwinds: Onzekere renteverwachtingen drukken Bitcoin's leiderschap",
-    "Liquidity surge: $43.57B BTC-volume en $29.76B ETH-volume duiden op grote institutionele interesse"
+    "Ethereum outperformance suggereert shift naar Layer-2 adoption en DeFi recovery",
+    "Bitcoin consolidatie rond $73.5K geeft steun voor orderly uptrend",
+    "Solana's 6.01% stijging wijst op continued strength in high-speed blockchain sector",
+    "XRP's 5.26% winst reflecteert mogelijke regulatory clarity sentiment"
   ],
-  "macro_impact": "Macro-factoren continue ondersteunend met mogelijke renteverlagingen op de agenda. De relatief lage rente-omgeving stimuleert risicoappetijt en altcoin-allocatie.",
-  "whale_flows": "Volume-analyse toont $43.57B in BTC en $29.76B in ETH; whales lijken zich te concentreren op Ethereum en mid-cap altcoins. BNB's $1.40B volume suggereert consolidatie op dit niveau.",
-  "funding_oi": "Funding rates naar verwachting stijgend gegeven de sterke inflows in ETH en altcoins. Long-posities tonen winstneming-druk na de recente rallies.",
-  "volatility_outlook": "Verwachting: volatiliteit blijft verhoogd in 15-25% range. Technische support op BTC $72.5K en weerstand $75.5K. Altcoins tonen hoger volatiliteitsprofile.",
-  "full_report": "De cryptomarkt vertoont op maandag 16 maart 2026 een klassiek risk-on scenario met altcoins in de lead. Bitcoin ($73,907, +3.47%) presteert bescheiden terwijl Ethereum explosief stijgt naar $2,277.24 (+8.56% in 24h). SOL (+6.51%) en XRP (+3.52%) demonstreren brede altcoin-sterkte, ondersteund door gezonde volumes ($43.57B BTC, $29.76B ETH). De macro-omgeving blijft gunstig voor risicoactiva, maar technische weerstandsstructuren vragen om voorzichtigheid. Traders dienen alert te blijven op volatiliteitspieken in het $15-25% range en potentiële winstnemingen na deze rallyperiode."
+  "macro_impact": "Geen acute macro-triggers zichtbaar, maar de brede marktbreedte (vier van vijf top assets in groen) duidt op gezonde risicobereidheid. De volatiliteit blijft beheerst zonder liquidatiecascades.",
+  "whale_flows": "Het volume van $123.71B cumulatief over top-5 assets wijst op orderly price discovery zonder paniekverkopen. Ethereum's $33.53B volume suggereert dat grote portefeuilles actief rebalanceren naar altcoins.",
+  "funding_oi": "Funding rates zullen waarschijnlijk licht stijgen gezien de brede long-bias, maar geen excessieve leverage is waarneembaar aan de handelsvolumes. Verwachting: gematigde long-positioning zonder overextension.",
+  "volatility_outlook": "Impliciete volatiliteit blijft laag tot normaal gegeven de stabiele prijsschommelingen. Verwacht worden beperkte swings rond technische niveaus; geen volatility-spike-scenario lijkt waarschijnlijk zonder exogene schokken.",
+  "full_report": "De cryptomarkt opent maandag 16 maart 2026 in een positieve stemming met Bitcoin steady op $73,495 (+2.64%) en ethereum als performance-leader op $2,283.66 (+8.99%). Het totale 24-uurs volume van $123.71B over de top-5 assets geeft aan dat liquiditeit goed is en grote moves kunnen worden opgenomen. Secundaire assets zoals Solana (+6.01%), XRP (+5.26%) en BNB (+2.14%) volgen overtuigend, wat wijst op een brede marktbreedte zonder concentratie van risico. Technisch blijft Bitcoin in zijn vaste consolidatiepatroon zonder duidelijke directionale bias, terwijl Ethereum zich positioneert voor mogelijk hoger-naar-aanzienlijke volumetoename. Macro-gerelateerd zien we geen acuut risico; de situatie blijft stabiel en gunstig voor geleidelijke appreciation."
 }
