@@ -1,18 +1,18 @@
 {
   "date": "maandag 16 maart 2026",
-  "focus": "Altcoin-rally steelt aandacht van Bitcoin terwijl ETH sterk uitbreekt naar $2,265.85",
-  "risk": "Overextended rally, correctierisico",
-  "btc_structure": "Bitcoin consolideert rond $73,993 met bescheiden 3.20% 24h-winst en $37.21B volume. Structuur blijft intact maar momentum verflauwd terwijl altcoins domineren.",
-  "eth_flows": "Ethereum outperformt met robuuste 7.32% stijging naar $2,265.85 en $22.79B volume. DeFi-inflows en staking-interesse lijken te ondersteunen.",
+  "focus": "Altcoin-outperformance signaleert risicoappetijt terwijl Bitcoin consolidateert rond $73.770.",
+  "risk": "Elevated risk, momentum-driven",
+  "btc_structure": "Bitcoin handelt op $73.770 met bescheiden gain van 2.94% in 24h. De consolidatie wijst op voorzichtige accumulatie na recente bewegingen, terwijl volume van $39.88B stabiel blijft.",
+  "eth_flows": "Ethereum leidt de markt met sterke 7.17% stijging naar $2.263,36 en volume van $25.03B. Dit duidt op sterke inflows richting altcoins en mogelijke derivaten positioning.",
   "top_narratives": [
-    "Altseason-rally breekt door",
-    "ETH dominantie neemt toe versus BTC",
-    "Institutionele liquiditeitstoevoer",
-    "On-chain momentum-divergentie"
+    "Altcoin-outperformance vs Bitcoin dominantie",
+    "Layer-2 en smart contract optimisme",
+    "Institutionele Ethereum akkumulatie",
+    "Risk-on sentiment na macro stabilisatie"
   ],
-  "macro_impact": "Weekstart toont aanhoudende risicobereidheid na vorig weekend. Geen significante macro-releases op agenda; markt focust volledig op interne crypto-dynamieken.",
-  "whale_flows": "Concentratie van volume in altcoins (SOL +6.19%, XRP +4.57%) suggereert bewuste portfolio-herbalancering. BTC-volume relatief bescheiden op $37.21B.",
-  "funding_oi": "Positief sentiment met longs dominant. Verwacht milde funding-rate compressie als rally-vorming doorzet.",
-  "volatility_outlook": "Volatiliteit blijft gemiddeld maar kan toenemen bij breuken buiten BTC-consolidatie. Altcoin-bèta's hoog; selectiviteit nodig.",
-  "full_report": "Maandag opent bullish met brede marktwinsten, vooral in altcoins. Bitcoin staat op $73,993 (+3.20%, $37.21B vol) in steady consolidatie, terwijl Ethereum ($2,265.85, +7.32%) en Solana ($93.65, +6.19%) significant outperformen. XRP (+4.57%, $2.57B vol) en BNB (+3.76%, $1.15B vol) volgen in het zog. Volume-spreiding suggereert professionele herbewegingen naar growthwaarden. Risk/reward verschuift naar altcoins; momentum-traders moeten alert blijven op correctiescenario's."
+  "macro_impact": "Macro-omgeving lijkt stabiel zonder acute stress signals. De brede altcoin-rally suggereert dat beleggers voorbij Bitcoin-core exposure zoeken naar rendement.",
+  "whale_flows": "Aanzienlijke volume concentratie in altcoins (ETH $25.03B, SOL $4.51B, XRP $2.74B) duidt op whale rotation naar speculatievere assets. BTC-volume van $39.88B blijft dominant maar relatief proporcioneel.",
+  "funding_oi": "Verwacht stijgende funding rates op altcoin-derivaten gegeven momentum. Long-posities domineren naar verwachting, maar risico op liquidaties bij plotselinge correcties.",
+  "volatility_outlook": "Volatiliteit stijgt gegeven brede positieve moves (ETH +7.17%, SOL +5.94%). Verwacht hogere intraday swings totdat BTC duidelijke directie vastlegt.",
+  "full_report": "CryptoMarketz monitort een klassieke risk-on scenario op maandag 16 maart 2026. Bitcoin consolideert defensief op $73.770 (+2.94%), terwijl Ethereum spektaculair uitbreekt naar $2.263,36 (+7.17%) met $25.03B volume. De altcoin-rally (SOL +5.94% naar $93,66, XRP +5.30% naar $1,49, BNB +2.87% naar $679,33) signaleert rotatiehandel naar rendementssterkere assets. Totaal marktvolume van $73.51B concentreert zich in ETH en derivaten, wat duidt op intensieve positioning. Macro-bedreigingen lijken minimaal, wat beleggers moed geeft voor risk-assets. Echter: momentum-gedreven rallies zijn volatiel; verwacht sterkere pullback-risico's indien BTC momentum breekt."
 }
