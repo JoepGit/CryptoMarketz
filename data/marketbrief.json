@@ -1,18 +1,18 @@
 {
   "date": "2026-03-17",
-  "focus": "Ethereum outperformance tegen Bitcoin terwijl institutionele adoptie versnelt via stablecoin en derivative regelgeving.",
-  "risk": "Lage volatiliteit met fear-bias",
-  "btc_structure": "Bitcoin noteert op $74.091 met bescheiden +0,44% per uur en +5,96% wekelijks, wat voorzichtig optimisme suggereert. Het 7-daagse momentum blijft positief ondanks flatheid vandaag, met volume van $55,87B dominant in de markt. Kritische weerstandslevel ligt boven de huidige prijsactie gezien de dominantie op 56,7%.",
-  "eth_flows": "Ethereum toont sterkere relatieve performance met +1,47% in 24h en +14,37% wekelijks, tegen $2.325,66, en domineert top gainers-lijst samen met DOT en AVAX. Dit duidt op shift van waarde naar smart contract platforms en application layer tokens.",
+  "focus": "Ethereum outperformance met +14.40% weekwinst temidden van institutionele stablecoin-adopties en regulatorische doorbraken voor crypto-derivatives.",
+  "risk": "Gemengd sentiment, Fear index stabiliserend",
+  "btc_structure": "Bitcoin handelt rond $74.090 met bescheiden +0.44% intradag en +5.96% weekwinst, wat wijst op consolidatie rond deze weerstandszone. BTC dominantie blijft stevig op 56.7%, ondersteund door volume van $54.44B.",
+  "eth_flows": "Ethereum ($2.326,34) toont relatieve sterkte met +1.50% daagse winst en indrukwekkende +14.40% weekprestatie, gedreven door stablecoinsector-initiatieven. ETH dominantie van 10.8% reflecteert blijvende vraag naar Layer-1 infrastruktuur.",
   "top_narratives": [
-    "Institutionele adoptie versnelt: Phantom CFTC-relief en Mastercard BVNK-acquisitie ($1,8B) signaleren mainstream derivatives market integratie",
-    "Stablecoin proliferatie: PayPal PYUSD-expansie naar 70 landen plus Maestro mining-backed Bitcoin credit markets normaliseren digitale settlements",
-    "Regulatory clarity als bullish katalysator: VS-beleid onder nieuwe administratie cre\u00ebert gunstig framework versus vorig regime",
-    "Asian market expansion: Vietnam's lokale exchange-push en groeiend XRP-holder base (7,7M records) tonen geografische diversificatie"
+    "Institutionele stablecoin-expansie: Mastercard acquires BVNK ($1.8B) en PayPal breidt PYUSD naar 70 landen uit",
+    "Regulatorische normalisering: Phantom ontvangt CFTC no-action relief voor derivative-marktacces",
+    "RWA en mining-backed kredietmarkten: Maestro lanceert Bitcoin-gesteunde kredietoplossingen voor institutional",
+    "Geopolitieke crypto-adopties: Vietnam localiseert crypto-exchanges terwijl offshore-trading wordt beperkt"
   ],
-  "macro_impact": "Regulatory tailwinds uit de VS en institutionele infra-ontwikkeling (Phantom, Mastercard, PayPal) bevestigen enterprise-grade adoption trajectory. Vietnam's lokale exchange-strategie illustreert geopolitieke shift waar crypto als financieel gereedschap wordt genormaliseerd. Fear & Greed Index van 28 (Fear) duidt op onderwaardering ondanks deze fundamentele catalysts.",
-  "whale_flows": "Liquidatiedata niet beschikbaar, maar totale marktcap +1,23% in 24h met $137B dagvolume suggereert gezonde accumulation zonder excessieve leverage. BTC dominantie stabiel op 56,7% wijst op disciplineerde risicomanagement.",
-  "funding_oi": "Funding rates en open interest data niet beschikbaar voor vandaag. Zonder duidelijke leverage-metingen blijft sentiment-analyse beperkt tot Fear & Greed Index (28, Fear) wat hersteloverwaarschijnlijkheid aangeeft vanuit extremer fear-regime gisteren (23).",
-  "volatility_outlook": "Lage intraday volatiliteit (meeste coins \u00b10,5% per uur) gecombineerd met Fear-sentiment suggereert geleidelijke climb uit extremer pessimisme. Het ontbreken van grote liquidaties en relatief stabiele dominantie wijzen op voorzichtig optimisme met gedempte bewegingen.",
-  "full_report": "De cryptomarkt opent 2026-03-17 in herstelstand met totale cap op $2.62T (+1,23% 24h) en gemengde maar positieve prijsactie. Bitcoin handelt op $74.091 (+5,96% w/w) met sterke 7-daagse momentum, terwijl Ethereum op $2.325,66 (+14,37% w/w) relatieve outperformance laat zien. Institutionele adoptie accelereert via Phantom's CFTC-relief, Mastercard's $1,8B BVNK-acquisitie en PayPal's PYUSD-expansie naar 70 landen. Fear & Greed Index staat op 28 (Fear) versus 23 gisteren, wat aanzienlijke onderwaarderingsmogelijkheden suggereert gezien de positieve macro-catalysts. Volume en funding-metriek zijn stabiel zonder extreme leverage, wat wijst op gezonde marktdynamica zonder speculatieve tops."
+  "macro_impact": "Mastercard's BVNK-acquisitie en PayPal's PYUSD-expansie naar 70 landen signaleren acceleratie van traditionele financi\u00eble instellingen in stablecoin-infrastruktuur, wat bullish is voor Ethereum-gebaseerde DeFi. Phantom's CFTC-clearance opent institutionele derivativen-channels die crypto-marktdiepte kunnen vergroten.",
+  "whale_flows": "Liquidatiegegevens zijn niet beschikbaar, maar 24h volume van $137.0B (+1.23% marktcap groei) toont gezonde kapitaalcirculatie zonder signalen van massale liquidaties. BTC volume ($54.44B) domineert, wat institutionele deelname suggereert.",
+  "funding_oi": "Funding rates en open interest data zijn momenteel niet beschikbaar, wat volatiliteitsmetingen bemoeilijkt. Dit vereis voorzichtige positiegrootte gegeven de afwezigheid van leverage-sentiment indicators.",
+  "volatility_outlook": "Fear & Greed Index stijgt van Extreme Fear (23) naar Fear (28), wat modest risico-appetijt-verbetering suggereert. Afwezigheid van grote liquidaties en stabiele volume-spreads wijzen op ondersteunende volatiliteit in komende 48 uur.",
+  "full_report": "De cryptomarkt ($2.62T) vertoont voorzichtig herstel met BTC ($74.090, +5.96% 7d) en ETH ($2.326,34, +14.40% 7d) aan kop van momentum. Fear & Greed verbetert naar 28 (Fear), ondersteund door regulatorische wins (Phantom CFTC-relief) en institutionele stablecoin-groei (Mastercard-BVNK, PayPal PYUSD). XRP ($1.51) bereikt record 7.7M holders, terwijl sector-divergentie optreedt met UNI (-3.46%) tegenover ETH's bullcase. Totaal 24h volume ($137.0B) ondersteunt stelling dat kapitaal georganiseerd hergroeppeert rond mainstream-integratie-narratieven in plaats van speculatieve positie-accumulation."
 }
