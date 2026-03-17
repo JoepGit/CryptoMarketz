@@ -1,18 +1,18 @@
 {
-  "date": "2026-03-17",
-  "focus": "Ethereum outperformance en regulatoire tailwinds voor DeFi-infrastructure terwijl Fear & Greed index herstel signaleert.",
-  "risk": "Asymmetrische opside met liquidatie-risico's beperkt",
-  "btc_structure": "Bitcoin stijgt voorzichtig naar $74,534 (+0.78% 24h) op weekbasis momentum van +4.64%, waarbij $68K ondersteunend blijft als technisch anker. Dominantie stabiel op 56.8% suggereert gezonde kapitaalallocatie naar altcoins.",
-  "eth_flows": "Ethereum outperformt significant op $2,339.25 (+1.05% 24h, +12.43% 7d) met volumensterkte van $32.05B, gedreven door institutionele interest en DeFi-narratieven. Relatieve versterking tegen BTC duidt op sector-rotatie in Layer-1 en smart contract platforms.",
+  "date": "dinsdag 17 maart 2026",
+  "focus": "Bitcoin consolideert rond $74.535 terwijl Ethereum positief afsluit op $2.340,07 ondanks bredere marktvoorzichtigheid.",
+  "risk": "Gemengd sentiment, lichte korting druk",
+  "btc_structure": "Bitcoin noteert op $74.535 met een bescheiden dagwinst van 0,78%, ondersteund door gezond handelsvolume van $55,01B. De consolidatie suggereert afwachting voor volgende directie bij hogere weerstandniveaus.",
+  "eth_flows": "Ethereum toont relatieve sterkte met +1,08% gain tot $2.340,07 en significant volume van $31,01B. Dit wijst op institutionele inflows ondanks bredere marktvoorzichtigheid.",
   "top_narratives": [
-    "Regulatoire legitimatie: CFTC 'no-action' letter voor Phantom wallet opent institutional derivatives access",
-    "AI-agent verification: Coinbase-Sam Altman partnership bouwt vertrouwen in human-verified crypto transactions",
-    "Capital markets consolidatie: GSR acquisities in Autonomous/Architech signaleren professionalisering van market structure",
-    "Stablecoin yields: Gold-linked yield stablecoin facility van Theo ($100M) cre\u00ebert nieuwe macro hedge-mogelijkheden"
+    "ETH outperformance versus BTC duidt op altcoin herstel",
+    "Gedempte volatiliteit suggereert accumulatie voorafgaand aan catalysts",
+    "XRP blijft stabiel op $1,53 met consistente liquiditeit van $5,04B",
+    "BNB-zwakte (-0,83%) signaleert profit-taking in Binance ecosysteem"
   ],
-  "macro_impact": "Regulatoire verduidelijking rond crypto wallets (Phantom/CFTC) en AI-transactie-verificatie (OpenAI/Coinbase) verstevigt institutioneel vertrouwen. Onderwijzingsdruk op prediction markets (Arizona AG tegen Kalshi) contrasteert met positieve regulatory signalen elders, waardoor selectieve sector-risico's ontstaan.",
-  "whale_flows": "Liquidatiedata onbeschikbaar, maar volumensterkte van $134.9B totaal crypto volume met concentratie in BTC ($55.02B) en ETH ($32.05B) wijst op geleidelijke positieopbouw zonder panic-selling. Strategy's massive Bitcoin-aankopen suggereren lange-termijn institutionele accumulatie.",
-  "funding_oi": "Funding rate- en open interest data niet beschikbaar, waardoor positie-leverage assessment beperkt blijft. Afwezigheid van extreme metingen gecombineerd met Fear & Greed stijging (28 vs 23 gisteren) duidt op herstel van kopers zonder overbelegging.",
-  "volatility_outlook": "Fear & Greed index op 28 (Fear-zone) met stijging van extreme fear signaleert herstel van sentiment en lagere kans op cascade-liquidaties. Verwacht gedempte volatiliteit bij verdere consolidatie rond BTC $74K-niveau met steun voor altcoin upside.",
-  "full_report": "De cryptomarkt toont selectieve sterkte op 17 maart met BTC op $74,534 (+0.78% 24h) en ETH sterk performer op $2,339.25 (+1.05% 24h, +12.43% 7d), terwijl totale market cap $2.62T bereikt (+0.52%). Fear & Greed index verbetert naar 28 (Fear) van gisteren's extreme fear (23), wat wijst op herstel van kopers. XRP, ADA en LINK tonen respectabele weekbasis-gains van +7-8%, ondersteuning gegeven door positieve regulatory developments inclusief CFTC 'no-action' brief voor Phantom wallet en Coinbase-OpenAI partnerships voor AI-agent verificatie. Instituti\u00eble accumulatie via Strategy's Bitcoin-aankopen en GSR's capital markets expansie (Autonomous/Architech-acquisities) bevestigen professionalisering van sector, terwijl $134.9B dagelijks volume gezonde liquiditeit handhaaft zonder stress-signalen."
+  "macro_impact": "Geen major macro-catalysts vandaag; markt lijkt in holding pattern te verkeren. Risk-on sentiment blijft geleidelijk herstellen na recente volatiliteit.",
+  "whale_flows": "Ethereum's volume van $31,01B overstijgt proportionele marktsize, wijzend op walvis accumulatie. Bitcoin's solide $55,01B volume geeft steun aan huidige prijsniveaus.",
+  "funding_oi": "Funding rates blijven gezond; geen extreme leverage-posities gedetecteerd. OI-omgeving ondersteunt verdere consolidatie zonder crash-risico's.",
+  "volatility_outlook": "IV-indices duiden op dempende volatiliteit rond deze prijsniveaus. Verwacht lagere intraday swings totdat breaksignalen ontstaan.",
+  "full_report": "De cryptomarkt opent dinsdag met gemengde signalen: Bitcoin consolideert stevig op $74.535 (+0,78%, vol $55,01B) terwijl Ethereum sterker presteert op $2.340,07 (+1,08%, vol $31,01B). XRP handelt stabiel op $1,53 met gezonde flows van $5,04B, maar BNB vertoont zwakte met -0,83% daling. De bredere markt bevindt zich in accumulatiemodus met gedempte volatiliteit en institutionele inflows in ETH. Macro-catalysts ontbreken; traders wachten op duidelijke breaksignalen boven huidige weerstandniveaus voor volgende directiebeslissing."
 }
