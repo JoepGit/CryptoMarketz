@@ -1,18 +1,18 @@
 {
-  "date": "2026-03-17",
-  "focus": "Voorzichtig herstel met risico op regelgeving terwijl Fear & Greed index stijgt van extreme angst naar voorzichtigheid.",
-  "risk": "Gemengd bullish, regelgevingsdruk stijgend",
-  "btc_structure": "Bitcoin noteert op $74.553 met bescheiden dagwinst van +0.50% en sterkere weekperformance van +4.66%. Technisch ondersteund door $68K-niveau als kritieke support, met volume van $54.66B die institutionele interesse onderstreept.",
-  "eth_flows": "Ethereum outperformt op $2.338,77 met indrukwekkende +12.40% weekwinst, hoewel dagelijks slechts +0.43% stijgt. Dit suggereert meer langetermijnposities dan daghandel activiteit met $30.87B volume.",
+  "date": "dinsdag 17 maart 2026",
+  "focus": "Bitcoin consolideert rond $74.776 terwijl Ethereum minimale beweging toont op $2.338,22.",
+  "risk": "Lage volatiliteit, consolidatie fase",
+  "btc_structure": "Bitcoin noteert op $74.776 met een bescheiden dagwinst van 0,83%, ondersteund door een dagvolume van $53,94B. De positieve dagmove suggereert voorzichtige koopkracht na recente stabilisering.",
+  "eth_flows": "Ethereum vertoont vrijwel geen beweging op $2.338,22 met een dagverandering van slechts 0,10% en een dagvolume van $30,05B. Dit duidt op afwachtende sentiment bij institutionele spelers.",
   "top_narratives": [
-    "Regelgeving: Arizona AG criminal charges tegen Kalshi; CFTC geeft groene licht aan Phantom wallet voor derivatives",
-    "AI-integratie: Sam Altman's World + Coinbase voor human-verified AI agents versnelt adoptiepropositie",
-    "Stablecoin innovatie: Theo sluit $100M facility voor gold-linked yield stablecoin",
-    "Instituties: Strategy voert massale Bitcoin-aankoop door terwijl treasury companies pivots zoeken"
+    "Bitcoin stabilisering aan sterke steun rond $74k niveau",
+    "Ethereum stagnatie wijst op winstnemingen na eerdere rally",
+    "Altcoin underperformance met XRP en BNB in rood",
+    "Volume concentratie in top-3 assets duidt op risicoaversie"
   ],
-  "macro_impact": "Regelgevingsspanning neemt toe (Arizona charges tegen Kalshi) maar tegelijk breidt CFTC handelen toe (Phantom approval). Dit cre\u00ebert onzekerheidsmix waarin innovatieve projecten groeien ondanks juridische obstakels. Institutionele Bitcoin-acquisities blijven steunen, terwijl AI-narratief nieuwe retail-aandacht trekt.",
-  "whale_flows": "Liquidatiegegevens niet beschikbaar, maar totaal marktvolume van $134.5B met BTC dominant op $54.66B en ETH op $30.87B duidt op gezonde liquiditeit. ADA (+1.15%), LINK (+0.59%) en AVAX (+0.57%) tonen selectieve allocatieshifts van grotere spelers.",
-  "funding_oi": "Funding rates en Open Interest gegevens momenteel niet beschikbaar voor verdere analyse van futures marktsentiment en leverage-posities, wat risicobeoordeling beperk.",
-  "volatility_outlook": "Fear & Greed Index gestegen van 23 (Extreme Fear gisteren) naar 28 (Fear vandaag), wat duidt op geleidelijke stemming-herstel. Beperkte intraday moves (BTC +0.46% 1h) suggereren lage volatiliteit in afwachting van macro-triggers rond regelgeving.",
-  "full_report": "De cryptomarkt toont voorzichtig herstel op 17 maart 2026 met totale markcap van $2.63T (+0.65% 24h) en Bitcoin stable op $74.553 (+0.50% dagelijks, +4.66% wekelijks). Ethereum outperformt significant met +12.40% weekwinst op $2.338,77. De Fear & Greed Index verbetert naar 28 (Fear) van gisteren's 23 (Extreme Fear), wat aangeeft dat paniek vermindert. Regelgeving blijft volatieliteit driver met Arizona charges tegen Kalshi tegenover CFTC approval voor Phantom wallet, terwijl institutionele Bitcoin-aankopen en AI-agent integratie positieve narratieven ondersteunen. BTC dominantie stabiliseert op 56.8%, wat gezonde marktstructuur aangeeft ondanks onzekerheden."
+  "macro_impact": "De brede markt refleert voorzichtigheid tegen de achtergrond van macro-onzekerheden. Lage volatiliteit en consolidatie suggereren wachten op katalysatoren voor directionale beweging.",
+  "whale_flows": "Bitcoin domineert het volume met $53,94B tegen $30,05B voor Ethereum, wat op institutionele steun wijst. Altcoin-volumes (BNB $1,30B, SOL $4,73B) blijven ondermaats, suggererend geldstroom naar grotere assets.",
+  "funding_oi": "De minimale dagbewegingen en consolidatie duiden op gesloten posities. Verwacht wordt dat funding rates laag blijven tot een meer directionale impuls ontstaat.",
+  "volatility_outlook": "Volatiliteit blijft laag met gemiddelde dagveranderingen onder 1% voor top-5 assets. Verwacht wordt dat deze rustige periode aanhoudt tot macro of technische triggers.",
+  "full_report": "De cryptomarkt vertoont stabilisering op dinsdag 17 maart met Bitcoin op $74.776 (+0,83%) en Ethereum op $2.338,22 (+0,10%). Het dominante volume van $53,94B in Bitcoin suggereert institutionele ankering op dit niveau. XRP daalt naar $1,54 (-0,19%), BNB naar $674,38 (-0,88%), terwijl SOL licht stijgt op $95,45 (+0,51%). De breed lage volatiliteit en concentratie van volume in top-2 assets wijzen op risicoaversie en wachten op katalysatoren voor verdere koersaanpassingen."
 }
