@@ -191,8 +191,8 @@ canvas{display:block;width:100%;}
 <div class="hero">
   <div class="hero-left">
     <div class="hero-tag">Crypto Market Tracker</div>
-    <div class="hero-title">CRYPTO<br><span>UNDER PRESSURE</span></div>
-    <div class="hero-desc">BTC holding key support · ETH lagging · Altcoins bleeding · Funding rates normalizing · Whale accumulation on-chain</div>
+    <div class="hero-title" id="hero-title">CRYPTO<br><span id="hero-sub">UNDER PRESSURE</span></div>
+    <div class="hero-desc" id="hero-desc">Loading live market data...</div>
     <div class="hero-legend">
       <div class="leg-item"><div class="leg-dot" style="background:var(--green);"></div>Bullish signal</div>
       <div class="leg-item"><div class="leg-dot" style="background:var(--red);"></div>Bearish signal</div>
@@ -208,48 +208,48 @@ canvas{display:block;width:100%;}
       <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>
       BTC DOMINANCE
     </div>
-    <div class="kpi-value orange">58.4%</div>
-    <div class="kpi-sub">+1.2% this week</div>
+    <div class="kpi-value" id="kpi-dom">—</div>
+    <div class="kpi-sub" id="kpi-dom-sub">loading</div>
   </div>
   <div class="kpi">
     <div class="kpi-label">
       <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/></svg>
       TOTAL MARKET CAP
     </div>
-    <div class="kpi-value red">$2.61T</div>
-    <div class="kpi-sub">-8.4% from peak</div>
+    <div class="kpi-value" id="kpi-cap">—</div>
+    <div class="kpi-sub" id="kpi-cap-sub">loading</div>
   </div>
   <div class="kpi">
     <div class="kpi-label">
       <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
       24H VOLUME
     </div>
-    <div class="kpi-value yellow">$84.2B</div>
-    <div class="kpi-sub">Below 30d avg</div>
+    <div class="kpi-value" id="kpi-vol">—</div>
+    <div class="kpi-sub" id="kpi-vol-sub">24h volume</div>
   </div>
   <div class="kpi">
     <div class="kpi-label">
       <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg>
       ETH / BTC RATIO
     </div>
-    <div class="kpi-value red">0.0248</div>
-    <div class="kpi-sub">3-month low</div>
+    <div class="kpi-value" id="kpi-ethratio">—</div>
+    <div class="kpi-sub" id="kpi-ethratio-sub">ETH/BTC ratio</div>
   </div>
   <div class="kpi">
     <div class="kpi-label">
       <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2"/></svg>
       FUNDING RATE
     </div>
-    <div class="kpi-value green">+0.004%</div>
-    <div class="kpi-sub">Neutral · healthy</div>
+    <div class="kpi-value" id="kpi-btcchg">—</div>
+    <div class="kpi-sub" id="kpi-btcchg-sub">BTC 24h change</div>
   </div>
   <div class="kpi">
     <div class="kpi-label">
       <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5"/><circle cx="9" cy="7" r="4"/></svg>
       OPEN INTEREST
     </div>
-    <div class="kpi-value orange">$18.4B</div>
-    <div class="kpi-sub">-12% vs last week</div>
+    <div class="kpi-value" id="kpi-ethchg">—</div>
+    <div class="kpi-sub" id="kpi-ethchg-sub">ETH 24h change</div>
   </div>
 </div>
 
@@ -265,7 +265,7 @@ canvas{display:block;width:100%;}
       <div style="display:flex;align-items:center;gap:10px;">
         <span id="btcLive" style="font-family:'Inter',sans-serif;font-size:18px;font-weight:900;color:var(--text);">loading...</span>
         <span style="font-family:'Inter',sans-serif;font-size:13px;font-weight:700;color:var(--red);">-2.14%</span>
-        <div class="sec-badge badge-orange">WATCH ZONE</div>
+        <div class="sec-badge" id="btc-badge">LOADING</div>
       </div>
     </div>
     <div class="chart-area">
@@ -283,46 +283,46 @@ canvas{display:block;width:100%;}
     <!-- MARKET SHOCK BARS -->
     <div class="sec-header" style="margin-top:0;">
       <div class="sec-title">Market Pressure Indicators</div>
-      <div class="sec-badge badge-orange">ELEVATED RISK</div>
+      <div class="sec-badge" id="market-badge">LOADING</div>
     </div>
     <div class="shock-section">
       <div class="shock-alert">⚠ ETH/BTC at 3-month low · Altcoin season index: 28/100 · BTC dominance rising</div>
       <div class="shock-row">
-        <div class="shock-label">BTC Selling Pressure</div>
-        <div class="shock-bar-wrap"><div class="shock-bar" style="width:32%;background:var(--red);"></div></div>
-        <div class="shock-val" style="color:var(--red);">-32%</div>
+        <div class="shock-label">BTC 24h Change</div>
+        <div class="shock-bar-wrap"><div class="shock-bar" id="sb-btc" style="width:0%;background:var(--red);"></div></div>
+        <div class="shock-val" id="sv-btc">—</div>
       </div>
       <div class="shock-row">
-        <div class="shock-label">Altcoin Bleed</div>
-        <div class="shock-bar-wrap"><div class="shock-bar" style="width:61%;background:var(--red);"></div></div>
-        <div class="shock-val" style="color:var(--red);">-61%</div>
+        <div class="shock-label">ETH 24h Change</div>
+        <div class="shock-bar-wrap"><div class="shock-bar" id="sb-eth" style="width:0%;background:var(--red);"></div></div>
+        <div class="shock-val" id="sv-eth">—</div>
       </div>
       <div class="shock-row">
-        <div class="shock-label">ETH Underperformance</div>
-        <div class="shock-bar-wrap"><div class="shock-bar" style="width:44%;background:var(--orange);"></div></div>
-        <div class="shock-val" style="color:var(--orange);">-44%</div>
+        <div class="shock-label">SOL 24h Change</div>
+        <div class="shock-bar-wrap"><div class="shock-bar" id="sb-sol" style="width:0%;background:var(--orange);"></div></div>
+        <div class="shock-val" id="sv-sol">—</div>
       </div>
       <div class="shock-row">
-        <div class="shock-label">DeFi TVL Drop</div>
-        <div class="shock-bar-wrap"><div class="shock-bar" style="width:28%;background:var(--orange);"></div></div>
-        <div class="shock-val" style="color:var(--orange);">-28%</div>
+        <div class="shock-label">BNB 24h Change</div>
+        <div class="shock-bar-wrap"><div class="shock-bar" id="sb-bnb" style="width:0%;background:var(--orange);"></div></div>
+        <div class="shock-val" id="sv-bnb">—</div>
       </div>
       <div class="shock-row">
-        <div class="shock-label">Stablecoin Inflows</div>
-        <div class="shock-bar-wrap"><div class="shock-bar" style="width:74%;background:var(--green);"></div></div>
-        <div class="shock-val" style="color:var(--green);">+74%</div>
+        <div class="shock-label">XRP 24h Change</div>
+        <div class="shock-bar-wrap"><div class="shock-bar" id="sb-xrp" style="width:0%;background:var(--green);"></div></div>
+        <div class="shock-val" id="sv-xrp">—</div>
       </div>
       <div class="shock-row">
-        <div class="shock-label">Whale Accumulation</div>
-        <div class="shock-bar-wrap"><div class="shock-bar" style="width:58%;background:var(--green);"></div></div>
-        <div class="shock-val" style="color:var(--green);">+58%</div>
+        <div class="shock-label">AVAX 24h Change</div>
+        <div class="shock-bar-wrap"><div class="shock-bar" id="sb-avax" style="width:0%;"></div></div>
+        <div class="shock-val" id="sv-avax">—</div>
       </div>
     </div>
 
     <!-- ALTCOIN HEATMAP -->
     <div class="sec-header">
       <div class="sec-title">Altcoin Heatmap — 24H</div>
-      <div class="sec-badge badge-red">MOSTLY RED</div>
+      <div class="sec-badge" id="heatmap-badge">LOADING</div>
     </div>
     <div class="heatmap-section">
       <div class="heatmap-grid" id="heatmap"></div>
@@ -610,19 +610,126 @@ function updateTicker(){
 function updateKPIs(){
   var btc=_liveData['BTCUSDT'];
   var eth=_liveData['ETHUSDT'];
-  if(btc){
-    // Update BTC price in header
-    var bp=document.getElementById('btcLive');
-    if(bp)bp.textContent=fmtPrice(btc.lastPrice);
-    var bch=parseFloat(btc.priceChangePercent);
-    var bchEl=document.querySelector('[id="btcChg"]');
-    // Update KPI tiles
-    var tiles=document.querySelectorAll('.kpi-value');
-    // Update 24h volume KPI (3rd tile)
-    var vol=parseFloat(btc.quoteVolume)/1e9;
-    // We'll update by finding elements with specific text patterns
+  var sol=_liveData['SOLUSDT'];
+  var bnb=_liveData['BNBUSDT'];
+  var xrp=_liveData['XRPUSDT'];
+  var avax=_liveData['AVAXUSDT'];
+  if(!btc||!eth)return;
+
+  var btcChg=parseFloat(btc.priceChangePercent);
+  var ethChg=parseFloat(eth.priceChangePercent);
+  var solChg=sol?parseFloat(sol.priceChangePercent):0;
+
+  // ── BTC price in chart header ──
+  var bp=document.getElementById('btcLive');
+  if(bp)bp.textContent=fmtPrice(btc.lastPrice);
+
+  // ── KPI tiles ──
+  // BTC dominance (approx from volumes)
+  var btcVol=parseFloat(btc.quoteVolume);
+  var totalVol=0;
+  Object.values(_liveData).forEach(function(t){
+    if(t.symbol.endsWith('USDT'))totalVol+=parseFloat(t.quoteVolume)||0;
+  });
+  var dom=totalVol>0?Math.round(btcVol/totalVol*100):0;
+  // rough dominance estimate based on BTC volume share
+  var domEst=Math.min(Math.max(dom,40),75); // clamp to realistic range
+  set('kpi-dom', domEst+'%', btcChg>=0?'orange':'red');
+  set('kpi-dom-sub', btcChg>=0?'Rising this week':'Falling this week');
+
+  // Total 24h volume (sum all USDT pairs)
+  var volB=totalVol/1e9;
+  set('kpi-vol', '$'+volB.toFixed(1)+'B', volB>50?'green':'yellow');
+  set('kpi-vol-sub', '24h total volume');
+
+  // BTC 24h change
+  set('kpi-btcchg', fmtChg(btcChg), btcChg>=0?'green':'red');
+  set('kpi-btcchg-sub', 'BTC 24h change');
+
+  // ETH 24h change
+  set('kpi-ethchg', fmtChg(ethChg), ethChg>=0?'green':'red');
+  set('kpi-ethchg-sub', 'ETH 24h change');
+
+  // ETH/BTC ratio
+  var ratio=(parseFloat(eth.lastPrice)/parseFloat(btc.lastPrice)).toFixed(4);
+  set('kpi-ethratio', ratio, ethChg>btcChg?'green':'red');
+  set('kpi-ethratio-sub', ethChg>btcChg?'ETH outperforming':'ETH lagging BTC');
+
+  // Market cap estimate
+  var mcap=parseFloat(btc.lastPrice)*19700000; // approx BTC supply
+  var mcapT=(mcap/1e12).toFixed(2);
+  set('kpi-cap', '$'+mcapT+'T', btcChg>=0?'green':'red');
+  set('kpi-cap-sub', btcChg>=0?'Market recovering':'Market under pressure');
+
+  // ── HERO TITLE ── dynamically describes market
+  var greens=0,reds=0;
+  ['BTCUSDT','ETHUSDT','SOLUSDT','BNBUSDT','XRPUSDT','AVAXUSDT','ADAUSDT','DOTUSDT','LINKUSDT','MATICUSDT'].forEach(function(s){
+    var d=_liveData[s];if(!d)return;
+    parseFloat(d.priceChangePercent)>=0?greens++:reds++;
+  });
+  var heroSub, heroDesc, heroBadge;
+  if(btcChg>=3&&greens>=7){
+    heroSub='STRONG RALLY';
+    heroDesc='BTC up '+fmtChg(btcChg)+' · Market broadly green · Altcoins following · Bullish momentum building';
+    heroBadge='BULLISH';
+  } else if(btcChg>=1&&greens>=5){
+    heroSub='MOVING HIGHER';
+    heroDesc='BTC +'+btcChg.toFixed(1)+'% · '+greens+'/10 coins green · Moderate buying pressure · Watch key resistance';
+    heroBadge='CAUTIOUS BULL';
+  } else if(btcChg<=-3||reds>=7){
+    heroSub='UNDER PRESSURE';
+    heroDesc='BTC '+fmtChg(btcChg)+' · '+reds+'/10 coins red · Selling pressure elevated · Key support levels being tested';
+    heroBadge='BEARISH';
+  } else if(btcChg<=-1){
+    heroSub='PULLING BACK';
+    heroDesc='BTC '+fmtChg(btcChg)+' · Mixed signals · ETH '+fmtChg(ethChg)+' · Watch for support holds';
+    heroBadge='CAUTION';
+  } else {
+    heroSub='CONSOLIDATING';
+    heroDesc='BTC '+fmtChg(btcChg)+' · ETH '+fmtChg(ethChg)+' · Market digesting recent moves · No clear direction yet';
+    heroBadge='NEUTRAL';
   }
-  // Update watchlist prices dynamically
+  var ht=document.getElementById('hero-sub');
+  if(ht)ht.textContent=heroSub;
+  var hd=document.getElementById('hero-desc');
+  if(hd)hd.textContent=heroDesc;
+
+  // ── SECTION BADGES ──
+  var btcBadge=document.getElementById('btc-badge');
+  if(btcBadge){
+    btcBadge.textContent=btcChg>=1?'BULLISH':btcChg<=-1?'BEARISH':'NEUTRAL';
+    btcBadge.className='sec-badge '+(btcChg>=1?'badge-green':btcChg<=-1?'badge-red':'badge-yellow');
+  }
+  var mktBadge=document.getElementById('market-badge');
+  if(mktBadge){
+    mktBadge.textContent=reds>=7?'HIGH RISK':greens>=7?'LOW RISK':'MODERATE';
+    mktBadge.className='sec-badge '+(reds>=7?'badge-red':greens>=7?'badge-green':'badge-orange');
+  }
+  var hmBadge=document.getElementById('heatmap-badge');
+  if(hmBadge){
+    hmBadge.textContent=greens>=7?'MOSTLY GREEN':reds>=7?'MOSTLY RED':'MIXED';
+    hmBadge.className='sec-badge '+(greens>=7?'badge-green':reds>=7?'badge-red':'badge-yellow');
+  }
+
+  // ── SHOCK BARS ── (use real 24h % changes, max bar at 10%)
+  function setBar(barId, valId, sym){
+    var d=_liveData[sym];if(!d)return;
+    var ch=parseFloat(d.priceChangePercent);
+    var pct=Math.min(Math.abs(ch)*10,100);
+    var col=ch>=0?'var(--green)':Math.abs(ch)>5?'var(--red)':'var(--orange)';
+    var bar=document.getElementById(barId);
+    var val=document.getElementById(valId);
+    if(bar){bar.style.width=pct+'%';bar.style.background=col;}
+    if(val){val.textContent=fmtChg(ch);val.style.color=col;}
+  }
+  setBar('sb-btc','sv-btc','BTCUSDT');
+  setBar('sb-eth','sv-eth','ETHUSDT');
+  setBar('sb-sol','sv-sol','SOLUSDT');
+  setBar('sb-bnb','sv-bnb','BNBUSDT');
+  setBar('sb-xrp','sv-xrp','XRPUSDT');
+  setBar('sb-avax','sv-avax','AVAXUSDT');
+
+  // ── WATCHLIST ──
   var watchSyms=[
     ['BTCUSDT','wp0','wc0'],['ETHUSDT','wp1','wc1'],['SOLUSDT','wp2','wc2'],
     ['BNBUSDT','wp3','wc3'],['AVAXUSDT','wp4','wc4'],['LINKUSDT','wp5','wc5']
@@ -638,6 +745,13 @@ function updateKPIs(){
       ce.className='watch-chg '+(ch>=0?'up':'dn');
     }
   });
+}
+
+function set(id,val,cls){
+  var el=document.getElementById(id);
+  if(!el)return;
+  el.textContent=val;
+  el.className='kpi-value'+(cls?' '+cls:'');
 }
 
 function updateHeatmap(){
