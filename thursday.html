@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Thursday Update — CryptoMarketz</title>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
@@ -22,46 +22,31 @@
 }
 body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--cream);overflow-x:hidden;cursor:none;}
 a{text-decoration:none;color:inherit;}
-
-/* CURSOR */
 .cursor{position:fixed;width:10px;height:10px;background:var(--accent);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform .1s;}
-.cursor-ring{position:fixed;width:32px;height:32px;border:1.5px solid rgba(232,120,32,.5);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .2s,height .2s,border-color .2s;}
-.cursor-ring.hov{width:46px;height:46px;border-color:var(--accent);}
-
-/* NAV */
+.cursor-ring{position:fixed;width:32px;height:32px;border:1.5px solid rgba(232,120,32,.5);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);}
 nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 52px;height:68px;background:rgba(10,10,10,.95);backdrop-filter:blur(18px);border-bottom:1px solid var(--bdr);}
 .brand{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:900;letter-spacing:.04em;}
-.brand span{background:linear-gradient(120deg,var(--accent2),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.brand span{color:#0055ff;-webkit-text-fill-color:#0055ff;}
 .nav-links{display:flex;gap:34px;}
 .nav-links a{font-family:'Barlow Condensed',sans-serif;font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:var(--sub);text-decoration:none;transition:color .2s;}
 .nav-links a:hover,.nav-links a.active{color:var(--cream);}
 .nav-links a.active{color:var(--accent);}
 .back-btn{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:11px 24px;border-radius:8px;border:1.5px solid rgba(232,120,32,.5);color:var(--accent);text-decoration:none;transition:all .2s;background:rgba(232,120,32,.05);}
 .back-btn:hover{background:var(--accent);color:#0d0d0d;border-color:var(--accent);}
-
-/* PAGE HEADER */
 .page-header{padding:120px 52px 52px;max-width:1400px;margin:0 auto;}
 .page-tag{font-family:'Barlow Condensed',sans-serif;font-size:8px;letter-spacing:.3em;color:var(--accent);margin-bottom:20px;display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(232,120,32,.2);padding:8px 18px;border-radius:40px;background:rgba(232,120,32,.05);}
 .page-tag-dot{width:5px;height:5px;border-radius:50%;background:var(--accent);animation:bl 2s infinite;}
 @keyframes bl{0%,100%{opacity:1;}50%{opacity:.25;}}
 .page-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(32px,4.5vw,58px);font-weight:900;line-height:1.05;margin-bottom:16px;}
-.page-title span{background:linear-gradient(120deg,var(--accent2),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.page-title span{color:#0055ff;-webkit-text-fill-color:#0055ff;}
 .page-sub{font-size:16px;color:var(--sub);max-width:560px;line-height:1.7;}
-
-/* WEEK TABS */
 .week-bar{background:var(--bg2);border-bottom:1px solid var(--bdr);padding:0 52px;position:sticky;top:68px;z-index:100;}
 .week-inner{max-width:1400px;margin:0 auto;display:flex;gap:0;overflow-x:auto;}
-.week-tab{font-family:'Barlow Condensed',sans-serif;font-size:9px;letter-spacing:.15em;text-transform:uppercase;padding:18px 26px;color:var(--sub);cursor:none;border-bottom:2px solid transparent;white-space:nowrap;transition:color .2s,border-color .2s;}
+.week-tab{font-family:'Barlow Condensed',sans-serif;font-size:9px;letter-spacing:.15em;text-transform:uppercase;padding:18px 26px;color:var(--sub);cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap;transition:color .2s,border-color .2s;}
 .week-tab:hover{color:var(--cream);}
 .week-tab.active{color:var(--accent);border-bottom-color:var(--accent);}
-
-/* MAIN LAYOUT */
 .main{max-width:1400px;margin:0 auto;padding:48px 52px 80px;display:grid;grid-template-columns:1fr 340px;gap:32px;align-items:start;}
-
-/* LEFT CONTENT */
 .content-area{display:flex;flex-direction:column;gap:24px;}
-
-/* TEAM INTRO CARD */
 .team-card{background:var(--card);border:1px solid var(--bdr);border-radius:20px;padding:28px 32px;box-shadow:0 4px 24px rgba(0,0,0,.35);display:flex;align-items:flex-start;gap:20px;}
 .team-avatar{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--accent2),var(--accent));display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;color:#0d0d0d;flex-shrink:0;}
 .team-meta{flex:1;}
@@ -69,8 +54,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .team-role{font-size:12px;color:var(--sub);margin-bottom:12px;}
 .team-message{font-size:15px;color:var(--cream);line-height:1.7;}
 .team-date{font-family:'Barlow Condensed',sans-serif;font-size:8px;letter-spacing:.15em;color:var(--sub);margin-top:12px;text-transform:uppercase;}
-
-/* ANALYSIS CARD */
 .analysis-card{background:var(--card);border:1px solid var(--bdr);border-radius:20px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.35);}
 .card-header{padding:22px 28px;border-bottom:1px solid var(--bdr);display:flex;align-items:center;justify-content:space-between;}
 .card-title{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.08em;}
@@ -79,27 +62,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .badge-bear{background:rgba(255,77,109,.12);border:1px solid rgba(255,77,109,.3);color:var(--red);}
 .badge-neutral{background:rgba(255,140,66,.12);border:1px solid rgba(255,140,66,.3);color:var(--orange);}
 .card-body{padding:24px 28px;}
-
-/* CHART CANVAS */
 .chart-wrap{position:relative;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.08);margin-bottom:20px;}
 .chart-label{position:absolute;top:12px;left:14px;font-family:'Barlow Condensed',sans-serif;font-size:9px;color:rgba(255,255,255,.4);letter-spacing:.1em;}
 .chart-price{position:absolute;top:10px;right:14px;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;}
-
-/* ANALYSIS TEXT */
 .analysis-text{font-size:14px;color:var(--sub);line-height:1.75;}
 .analysis-text strong{color:var(--cream);}
-
-/* KEY LEVELS */
 .levels{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:16px;}
 .level-box{background:rgba(255,255,255,.04);border-radius:10px;padding:12px 14px;border:1px solid rgba(255,255,255,.07);}
 .level-lbl{font-family:'Barlow Condensed',sans-serif;font-size:7px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px;}
-.level-lbl.res{color:var(--red);}
-.level-lbl.sup{color:var(--accent);}
-.level-lbl.entry{color:var(--accent2);}
+.level-lbl.res{color:var(--red);}.level-lbl.sup{color:var(--accent);}.level-lbl.entry{color:var(--accent2);}
 .level-val{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:var(--cream);}
 .level-note{font-size:11px;color:var(--sub);margin-top:3px;}
-
-/* SIGNAL CARD */
 .signal-card{background:var(--card);border:1px solid var(--bdr);border-radius:20px;padding:24px 28px;box-shadow:0 4px 24px rgba(0,0,0,.35);}
 .sig-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;}
 .sig-coin{display:flex;align-items:center;gap:12px;}
@@ -115,49 +88,33 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .sig-stat-lbl{font-family:'Barlow Condensed',sans-serif;font-size:6px;letter-spacing:.15em;color:var(--sub);text-transform:uppercase;margin-bottom:5px;}
 .sig-stat-val{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;color:var(--cream);}
 .sig-note{font-size:13px;color:var(--sub);line-height:1.6;padding:12px 14px;background:rgba(255,255,255,.03);border-radius:10px;border-left:3px solid var(--accent2);}
-
-/* INSIGHT CARD */
 .insight-card{background:var(--card);border:1px solid var(--bdr);border-radius:20px;padding:24px 28px;box-shadow:0 4px 24px rgba(0,0,0,.35);}
 .insight-row{display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.06);}
 .insight-row:last-child{border-bottom:none;padding-bottom:0;}
 .insight-icon{width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.insight-body{}
 .insight-label{font-family:'Barlow Condensed',sans-serif;font-size:9px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px;}
 .insight-text{font-size:13px;color:var(--sub);line-height:1.6;}
 .insight-text strong{color:var(--cream);}
-
-/* RIGHT SIDEBAR */
 .sidebar{display:flex;flex-direction:column;gap:20px;}
 .sidebar-card{background:var(--card);border:1px solid var(--bdr);border-radius:18px;padding:22px;box-shadow:0 4px 24px rgba(0,0,0,.35);}
 .sidebar-title{font-family:'Barlow Condensed',sans-serif;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--sub);margin-bottom:16px;}
-
-/* SENTIMENT METER */
 .sentiment-bar{height:8px;border-radius:4px;background:linear-gradient(to right,var(--red),var(--orange),#f4d03f,#2ecc71,var(--accent));margin-bottom:8px;position:relative;}
 .sentiment-needle{position:absolute;top:-4px;width:2px;height:16px;background:white;border-radius:2px;box-shadow:0 0 6px white;}
 .sentiment-labels{display:flex;justify-content:space-between;font-family:'Barlow Condensed',sans-serif;font-size:7px;color:var(--sub);}
-
-/* WATCHLIST */
 .watch-row{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.06);}
 .watch-row:last-child{border-bottom:none;}
 .watch-coin{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;}
 .watch-price{font-size:12px;color:var(--sub);}
 .watch-chg{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;}
-.watch-chg.up{color:var(--accent);}
-.watch-chg.dn{color:var(--red);}
-
-/* ARCHIVE */
-.archive-row{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.06);cursor:none;transition:opacity .2s;}
+.watch-chg.up{color:var(--accent);}.watch-chg.dn{color:var(--red);}
+.archive-row{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.06);cursor:pointer;transition:opacity .2s;}
 .archive-row:last-child{border-bottom:none;}
 .archive-row:hover{opacity:.7;}
 .archive-date{font-family:'Barlow Condensed',sans-serif;font-size:9px;color:var(--sub);}
 .archive-title{font-size:12px;color:var(--cream);}
 .archive-arrow{color:var(--accent);font-size:12px;}
-
-/* FEAR GREED */
 .fg-number{font-family:'Barlow Condensed',sans-serif;font-size:42px;font-weight:900;color:var(--orange);text-align:center;margin:8px 0 4px;}
 .fg-label{font-family:'Barlow Condensed',sans-serif;font-size:8px;letter-spacing:.2em;color:var(--orange);text-align:center;text-transform:uppercase;}
-
-/* RESPONSIVE */
 @media(max-width:900px){
   .main{grid-template-columns:1fr;}
   nav{padding:0 20px;}
@@ -166,36 +123,83 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
   .week-bar{padding:0 24px;}
   .main{padding:32px 24px 60px;}
 }
-
-/* REVEAL */
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;}
 .reveal.v{opacity:1;transform:translateY(0);}
+
+  /* ═══ LIGHT THEME — matches dashboard ═══ */
+  :root{
+    --accent:#0055ff !important;--accent2:#00d4aa !important;
+    --red:#e53e3e !important;--orange:#0055ff !important;
+    --bg:#eef2f7 !important;--bg2:#f4f7fb !important;--bg3:#ffffff !important;
+    --border:rgba(15,40,80,.11) !important;--bdr:rgba(15,40,80,.11) !important;
+    --cream:#0a1929 !important;--sub:#5f7494 !important;--card:#ffffff !important;
+  }
+  *{font-family:'Plus Jakarta Sans',-apple-system,sans-serif !important;}
+  html,body{background:#eef2f7 !important;color:#0a1929 !important;cursor:default !important;}
+  .cursor,.cursor-ring{display:none !important;}
+  nav{background:rgba(238,242,247,.97) !important;border-color:rgba(15,40,80,.09) !important;backdrop-filter:blur(12px) !important;}
+  .brand{color:#0a1929 !important;}
+  .brand span{color:#0055ff !important;-webkit-text-fill-color:#0055ff !important;background:none !important;}
+  .nav-links a{color:#5f7494 !important;}.nav-links a:hover{color:#0a1929 !important;}.nav-links a.active{color:#0055ff !important;}
+  .back-btn{color:#0055ff !important;border-color:rgba(0,85,255,.25) !important;background:rgba(0,85,255,.04) !important;}
+  .back-btn:hover{background:#0055ff !important;color:#fff !important;border-color:#0055ff !important;}
+  .page-tag{border-color:rgba(0,85,255,.18) !important;background:rgba(0,85,255,.04) !important;color:#0055ff !important;}
+  .page-tag-dot{background:#0055ff !important;}
+  .page-title{color:#0a1929 !important;}
+  .page-title span{color:#0055ff !important;-webkit-text-fill-color:#0055ff !important;background:none !important;}
+  .page-sub{color:#5f7494 !important;}
+  .week-bar{background:#f4f7fb !important;border-color:rgba(15,40,80,.09) !important;}
+  .week-tab{color:#5f7494 !important;}.week-tab:hover{color:#0a1929 !important;}.week-tab.active{color:#0055ff !important;border-color:#0055ff !important;}
+  .analysis-card,.signal-card,.team-card,.sidebar-card,.insight-card{background:#ffffff !important;border-color:rgba(15,40,80,.09) !important;box-shadow:0 1px 4px rgba(15,40,80,.06),0 4px 14px rgba(15,40,80,.04) !important;}
+  .card-header{background:#f4f7fb !important;border-color:rgba(15,40,80,.09) !important;}
+  .card-title{color:#5f7494 !important;}
+  .badge-bull{background:rgba(0,85,255,.07) !important;border-color:rgba(0,85,255,.18) !important;color:#0055ff !important;}
+  .badge-bear{background:rgba(229,62,62,.07) !important;border-color:rgba(229,62,62,.18) !important;color:#e53e3e !important;}
+  .badge-neutral{background:rgba(0,212,170,.07) !important;border-color:rgba(0,212,170,.18) !important;color:#007a60 !important;}
+  .team-avatar{background:linear-gradient(135deg,#0055ff,#00d4aa) !important;color:#fff !important;}
+  .team-name,.team-message{color:#0a1929 !important;}.team-role,.team-date{color:#5f7494 !important;}
+  .analysis-text{color:#5f7494 !important;}.analysis-text strong{color:#0a1929 !important;}
+  .level-box{background:#f4f7fb !important;border-color:rgba(15,40,80,.08) !important;}
+  .level-lbl.res{color:#e53e3e !important;}.level-lbl.sup,.level-lbl.entry{color:#0055ff !important;}
+  .level-val{color:#0a1929 !important;}.level-note{color:#5f7494 !important;}
+  .sig-type.buy{background:rgba(0,85,255,.07) !important;border-color:rgba(0,85,255,.2) !important;color:#0055ff !important;}
+  .sig-type.sell{background:rgba(229,62,62,.07) !important;border-color:rgba(229,62,62,.2) !important;color:#e53e3e !important;}
+  .sig-type.watch{background:rgba(0,212,170,.07) !important;border-color:rgba(0,212,170,.2) !important;color:#007a60 !important;}
+  .sig-stat{background:#f4f7fb !important;border-color:rgba(15,40,80,.08) !important;}
+  .sig-stat-lbl{color:#5f7494 !important;}.sig-stat-val{color:#0a1929 !important;}
+  .sig-name{color:#0a1929 !important;}.sig-tf{color:#5f7494 !important;}
+  .sig-note{background:rgba(0,85,255,.03) !important;border-left-color:#0055ff !important;color:#5f7494 !important;}
+  .insight-row{border-color:rgba(15,40,80,.07) !important;}
+  .insight-text{color:#5f7494 !important;}.insight-text strong{color:#0a1929 !important;}
+  .sidebar-title{color:#5f7494 !important;}
+  .watch-row{border-color:rgba(15,40,80,.07) !important;}
+  .watch-coin{color:#0a1929 !important;font-weight:700 !important;}.watch-price{color:#5f7494 !important;}
+  .watch-chg.up{color:#00c48c !important;}.watch-chg.dn{color:#e53e3e !important;}
+  .fg-number{color:#0055ff !important;}.fg-label{color:#0055ff !important;}
+  .sentiment-needle{background:#0a1929 !important;box-shadow:none !important;}
+  .archive-row{border-color:rgba(15,40,80,.07) !important;}
+  .archive-date{color:#5f7494 !important;}.archive-title{color:#0a1929 !important;}.archive-arrow{color:#0055ff !important;}
+  .chart-label{color:rgba(15,40,80,.4) !important;}.chart-price{color:#0055ff !important;}
+  ::-webkit-scrollbar{width:5px;height:5px;}::-webkit-scrollbar-track{background:#eef2f7;}::-webkit-scrollbar-thumb{background:rgba(15,40,80,.13);border-radius:3px;}
+
 </style>
 </head>
 <body>
-
-<div class="cursor" id="cur"></div>
-<div class="cursor-ring" id="cr"></div>
-
 <nav>
   <a href="index.html" class="brand">Crypto<span>Marketz</span></a>
   <div class="nav-links">
-    <a href="landing.html#signals">Signals</a>
+    <a href="index.html#features">Signals</a>
     <a href="market-tracker.html">Market Tracker</a>
     <a href="thursday.html" class="active">Thursday Update</a>
-    <a href="landing.html#education">Education</a>
+    <a href="index.html#education">Education</a>
   </div>
   <a class="back-btn" href="dashboard.html">Dashboard →</a>
 </nav>
-
-<!-- PAGE HEADER -->
 <div class="page-header">
   <div class="page-tag reveal"><div class="page-tag-dot"></div>Weekly Team Update</div>
   <h1 class="page-title reveal">Thursday<br><span>Analysis.</span></h1>
   <p class="page-sub reveal">Every Thursday the team drops a full market update. Charts, signals, levels, and what we're actually watching. No fluff.</p>
 </div>
-
-<!-- WEEK TABS -->
 <div class="week-bar">
   <div class="week-inner">
     <div class="week-tab active" onclick="showWeek(0,this)">Week 11 — Latest</div>
@@ -205,27 +209,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
     <div class="week-tab" onclick="showWeek(4,this)">Week 07</div>
   </div>
 </div>
-
-<!-- MAIN -->
 <div class="main">
-
-  <!-- LEFT CONTENT -->
   <div class="content-area" id="weekContent">
-
-    <!-- TEAM MESSAGE -->
     <div class="team-card reveal">
       <div class="team-avatar">CM</div>
       <div class="team-meta">
         <div class="team-name">CryptoMarketz Team</div>
         <div class="team-role">Lead Analyst</div>
-        <div class="team-message">
-          "BTC is sitting right at a key decision point. We saw heavy whale accumulation this week on the 4H — on-chain data is looking clean. ETH still lagging but the setup is developing. SOL had a clean breakout above the range, we called that one Wednesday. Full breakdown below."
-        </div>
+        <div class="team-message">"BTC is sitting right at a key decision point. We saw heavy whale accumulation this week on the 4H — on-chain data is looking clean. ETH still lagging but the setup is developing. SOL had a clean breakout above the range, we called that one Wednesday. Full breakdown below."</div>
         <div class="team-date">Thursday, 13 March 2025 — Week 11</div>
       </div>
     </div>
-
-    <!-- BTC ANALYSIS -->
     <div class="analysis-card reveal">
       <div class="card-header">
         <div class="card-title">BTC / USDT — 4H Analysis</div>
@@ -233,107 +227,71 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
       </div>
       <div class="card-body">
         <div class="chart-wrap">
-          <canvas id="btcChart" width="780" height="260" style="display:block;width:100%;background:#0f1923;"></canvas>
+          <canvas id="btcChart" width="780" height="260" style="display:block;width:100%;background:#f0f5ff;"></canvas>
           <div class="chart-label">BTC/USDT · 4H</div>
           <div class="chart-price" id="btcPrice" style="color:var(--accent);">$83,240</div>
         </div>
-        <p class="analysis-text">
-          BTC is consolidating between <strong>$81,400 and $84,800</strong> after last week's impulse move. The 4H EMA stack is still bullish — price is holding above the 50 EMA cleanly. Volume on the recent pullbacks has been low, which is a positive sign.
-          <br><br>
-          The key level to watch is <strong>$84,800</strong>. A clean break and close above that opens the door to <strong>$88,500</strong>. On the downside, <strong>$81,000</strong> is the last major support. Below that and we'd reassess.
-        </p>
+        <p class="analysis-text">BTC is consolidating between <strong>$81,400 and $84,800</strong> after last week's impulse move. The 4H EMA stack is still bullish — price is holding above the 50 EMA cleanly. Volume on the recent pullbacks has been low, which is a positive sign.<br><br>The key level to watch is <strong>$84,800</strong>. A clean break and close above that opens the door to <strong>$88,500</strong>. On the downside, <strong>$81,000</strong> is the last major support.</p>
         <div class="levels">
-          <div class="level-box">
-            <div class="level-lbl res">Resistance</div>
-            <div class="level-val">$84,800</div>
-            <div class="level-note">4H supply zone</div>
-          </div>
-          <div class="level-box">
-            <div class="level-lbl entry">Entry Zone</div>
-            <div class="level-val">$82,200</div>
-            <div class="level-note">Retest area</div>
-          </div>
-          <div class="level-box">
-            <div class="level-lbl sup">Support</div>
-            <div class="level-val">$81,000</div>
-            <div class="level-note">Strong demand</div>
-          </div>
+          <div class="level-box"><div class="level-lbl res">Resistance</div><div class="level-val">$84,800</div><div class="level-note">4H supply zone</div></div>
+          <div class="level-box"><div class="level-lbl entry">Entry Zone</div><div class="level-val">$82,200</div><div class="level-note">Retest area</div></div>
+          <div class="level-box"><div class="level-lbl sup">Support</div><div class="level-val">$81,000</div><div class="level-note">Strong demand</div></div>
         </div>
       </div>
     </div>
-
-    <!-- WEEKLY SIGNALS -->
     <div class="analysis-card reveal">
       <div class="card-header">
         <div class="card-title">Thursday Signals</div>
         <div class="card-badge badge-bull">3 ACTIVE</div>
       </div>
       <div class="card-body" style="display:flex;flex-direction:column;gap:16px;">
-
-        <!-- Signal 1 -->
-        <div class="signal-card" style="background:rgba(232,120,32,.04);border-color:rgba(232,120,32,.25);">
+        <div class="signal-card" style="background:rgba(0,85,255,.03);border-color:rgba(0,85,255,.15);">
           <div class="sig-header">
             <div class="sig-coin">
               <div class="sig-icon" style="background:rgba(247,147,26,.18);border:1.5px solid rgba(247,147,26,.4);color:#f7931a;">BTC</div>
-              <div>
-                <div class="sig-name">Bitcoin</div>
-                <div class="sig-tf">4H · Swing</div>
-              </div>
+              <div><div class="sig-name">Bitcoin</div><div class="sig-tf">4H · Swing</div></div>
             </div>
             <div class="sig-type buy">BUY</div>
           </div>
           <div class="sig-grid">
             <div class="sig-stat"><div class="sig-stat-lbl">Entry</div><div class="sig-stat-val">$82,200</div></div>
-            <div class="sig-stat"><div class="sig-stat-lbl">Take Profit</div><div class="sig-stat-val" style="color:var(--accent);">$87,500</div></div>
-            <div class="sig-stat"><div class="sig-stat-lbl">Stop Loss</div><div class="sig-stat-val" style="color:var(--red);">$80,200</div></div>
+            <div class="sig-stat"><div class="sig-stat-lbl">Take Profit</div><div class="sig-stat-val" style="color:#0055ff;">$87,500</div></div>
+            <div class="sig-stat"><div class="sig-stat-lbl">Stop Loss</div><div class="sig-stat-val" style="color:#e53e3e;">$80,200</div></div>
           </div>
           <div class="sig-note">Consolidation breakout play. Entry on retest of $82,200 support. R/R 2.6:1. Reduce size if BTC dominance drops below 58%.</div>
         </div>
-
-        <!-- Signal 2 -->
         <div class="signal-card">
           <div class="sig-header">
             <div class="sig-coin">
               <div class="sig-icon" style="background:rgba(98,126,234,.18);border:1.5px solid rgba(98,126,234,.4);color:#627eea;">ETH</div>
-              <div>
-                <div class="sig-name">Ethereum</div>
-                <div class="sig-tf">1D · Swing</div>
-              </div>
+              <div><div class="sig-name">Ethereum</div><div class="sig-tf">1D · Swing</div></div>
             </div>
             <div class="sig-type watch">WATCH</div>
           </div>
           <div class="sig-grid">
             <div class="sig-stat"><div class="sig-stat-lbl">Watch</div><div class="sig-stat-val">$2,180</div></div>
-            <div class="sig-stat"><div class="sig-stat-lbl">Target</div><div class="sig-stat-val" style="color:var(--accent);">$2,450</div></div>
-            <div class="sig-stat"><div class="sig-stat-lbl">Invalidate</div><div class="sig-stat-val" style="color:var(--red);">$1,980</div></div>
+            <div class="sig-stat"><div class="sig-stat-lbl">Target</div><div class="sig-stat-val" style="color:#0055ff;">$2,450</div></div>
+            <div class="sig-stat"><div class="sig-stat-lbl">Invalidate</div><div class="sig-stat-val" style="color:#e53e3e;">$1,980</div></div>
           </div>
           <div class="sig-note">ETH lagging BTC hard. Wait for confirmed breakout above $2,180 daily close before entering. Setup not confirmed yet.</div>
         </div>
-
-        <!-- Signal 3 -->
-        <div class="signal-card" style="background:rgba(232,120,32,.04);border-color:rgba(232,120,32,.25);">
+        <div class="signal-card" style="background:rgba(0,85,255,.03);border-color:rgba(0,85,255,.15);">
           <div class="sig-header">
             <div class="sig-coin">
               <div class="sig-icon" style="background:rgba(153,69,255,.18);border:1.5px solid rgba(153,69,255,.4);color:#9945ff;">SOL</div>
-              <div>
-                <div class="sig-name">Solana</div>
-                <div class="sig-tf">4H · Breakout</div>
-              </div>
+              <div><div class="sig-name">Solana</div><div class="sig-tf">4H · Breakout</div></div>
             </div>
             <div class="sig-type buy">BUY</div>
           </div>
           <div class="sig-grid">
             <div class="sig-stat"><div class="sig-stat-lbl">Entry</div><div class="sig-stat-val">$87.40</div></div>
-            <div class="sig-stat"><div class="sig-stat-lbl">Take Profit</div><div class="sig-stat-val" style="color:var(--accent);">$98.00</div></div>
-            <div class="sig-stat"><div class="sig-stat-lbl">Stop Loss</div><div class="sig-stat-val" style="color:var(--red);">$83.50</div></div>
+            <div class="sig-stat"><div class="sig-stat-lbl">Take Profit</div><div class="sig-stat-val" style="color:#0055ff;">$98.00</div></div>
+            <div class="sig-stat"><div class="sig-stat-lbl">Stop Loss</div><div class="sig-stat-val" style="color:#e53e3e;">$83.50</div></div>
           </div>
           <div class="sig-note">Clean breakout above 3-week range. Volume confirmed. Already running — partial entry still valid up to $89. R/R 2.8:1.</div>
         </div>
-
       </div>
     </div>
-
-    <!-- ETH ANALYSIS -->
     <div class="analysis-card reveal">
       <div class="card-header">
         <div class="card-title">ETH / USDT — 1D Analysis</div>
@@ -341,36 +299,18 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
       </div>
       <div class="card-body">
         <div class="chart-wrap">
-          <canvas id="ethChart" width="780" height="220" style="display:block;width:100%;background:#0f1923;"></canvas>
+          <canvas id="ethChart" width="780" height="220" style="display:block;width:100%;background:#f0f5ff;"></canvas>
           <div class="chart-label">ETH/USDT · 1D</div>
           <div class="chart-price" id="ethPrice" style="color:var(--accent2);">$2,065</div>
         </div>
-        <p class="analysis-text">
-          ETH is clearly underperforming BTC this cycle so far. The daily structure is <strong>still bearish</strong> — lower highs, lower lows since the February peak. Key level to flip the bias is <strong>$2,180</strong>.
-          <br><br>
-          Until we get a daily close above $2,180 we're not touching ETH with a long. The market is telling us something about rotation — either into BTC or alts. Keep watching the ETH/BTC pair.
-        </p>
+        <p class="analysis-text">ETH is clearly underperforming BTC this cycle so far. The daily structure is <strong>still bearish</strong> — lower highs, lower lows since the February peak. Key level to flip the bias is <strong>$2,180</strong>.<br><br>Until we get a daily close above $2,180 we're not touching ETH with a long. Keep watching the ETH/BTC pair.</p>
         <div class="levels">
-          <div class="level-box">
-            <div class="level-lbl res">Flip Level</div>
-            <div class="level-val">$2,180</div>
-            <div class="level-note">Daily close needed</div>
-          </div>
-          <div class="level-box">
-            <div class="level-lbl entry">Current</div>
-            <div class="level-val">$2,065</div>
-            <div class="level-note">Below flip</div>
-          </div>
-          <div class="level-box">
-            <div class="level-lbl sup">Support</div>
-            <div class="level-val">$1,980</div>
-            <div class="level-note">Last demand</div>
-          </div>
+          <div class="level-box"><div class="level-lbl res">Flip Level</div><div class="level-val">$2,180</div><div class="level-note">Daily close needed</div></div>
+          <div class="level-box"><div class="level-lbl entry">Current</div><div class="level-val">$2,065</div><div class="level-note">Below flip</div></div>
+          <div class="level-box"><div class="level-lbl sup">Support</div><div class="level-val">$1,980</div><div class="level-note">Last demand</div></div>
         </div>
       </div>
     </div>
-
-    <!-- INSIDE INFO -->
     <div class="analysis-card reveal">
       <div class="card-header">
         <div class="card-title">Inside Info — This Week</div>
@@ -379,65 +319,36 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
       <div class="card-body">
         <div class="insight-card" style="background:transparent;border:none;padding:0;box-shadow:none;">
           <div class="insight-row">
-            <div class="insight-icon" style="background:rgba(255,140,66,.12);border:1px solid rgba(255,140,66,.25);">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e87820" stroke-width="2.2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-            </div>
-            <div class="insight-body">
-              <div class="insight-label" style="color:var(--orange);">Whale Movement</div>
-              <div class="insight-text">On-chain data shows <strong>3 wallets holding 2,400+ BTC</strong> moved funds from exchanges to cold wallets this week. Historically this is an accumulation signal, not distribution.</div>
-            </div>
+            <div class="insight-icon" style="background:rgba(0,85,255,.08);border:1px solid rgba(0,85,255,.15);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0055ff" stroke-width="2.2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+            <div class="insight-body"><div class="insight-label" style="color:#0055ff;">Whale Movement</div><div class="insight-text">On-chain data shows <strong>3 wallets holding 2,400+ BTC</strong> moved funds from exchanges to cold wallets this week. Historically this is an accumulation signal, not distribution.</div></div>
           </div>
           <div class="insight-row">
-            <div class="insight-icon" style="background:rgba(232,120,32,.1);border:1px solid rgba(232,120,32,.22);">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e87820" stroke-width="2.2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-            </div>
-            <div class="insight-body">
-              <div class="insight-label" style="color:var(--accent);">Funding Rates</div>
-              <div class="insight-text">Funding rates across major perp exchanges are <strong>slightly negative to neutral</strong>. This means the market isn't overleveraged long. Healthy setup for continuation upward without a heavy liquidation cascade below.</div>
-            </div>
+            <div class="insight-icon" style="background:rgba(0,85,255,.08);border:1px solid rgba(0,85,255,.15);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0055ff" stroke-width="2.2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <div class="insight-body"><div class="insight-label" style="color:#0055ff;">Funding Rates</div><div class="insight-text">Funding rates across major perp exchanges are <strong>slightly negative to neutral</strong>. Healthy setup for continuation upward without a heavy liquidation cascade below.</div></div>
           </div>
           <div class="insight-row">
-            <div class="insight-icon" style="background:rgba(77,184,255,.1);border:1px solid rgba(77,184,255,.22);">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e8b020" stroke-width="2.2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-            </div>
-            <div class="insight-body">
-              <div class="insight-label" style="color:var(--accent2);">Macro Context</div>
-              <div class="insight-text"><strong>US CPI data drops next Tuesday.</strong> We're not holding heavy positions into that. If CPI comes in hotter than expected, expect a quick dip that gets bought. If cooler — risk-on. Position accordingly.</div>
-            </div>
+            <div class="insight-icon" style="background:rgba(0,212,170,.08);border:1px solid rgba(0,212,170,.15);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="2.2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+            <div class="insight-body"><div class="insight-label" style="color:#00d4aa;">Macro Context</div><div class="insight-text"><strong>US CPI data drops next Tuesday.</strong> We're not holding heavy positions into that. If CPI comes in hotter than expected, expect a quick dip that gets bought. If cooler — risk-on.</div></div>
           </div>
           <div class="insight-row">
-            <div class="insight-icon" style="background:rgba(255,77,109,.1);border:1px solid rgba(255,77,109,.22);">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e8392a" stroke-width="2.2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-            </div>
-            <div class="insight-body">
-              <div class="insight-label" style="color:var(--red);">Watch Out</div>
-              <div class="insight-text"><strong>SOL ecosystem tokens</strong> (JTO, PYTH, JUP) showing signs of weakness despite SOL strength. If you're in those — tighten stops. SOL can run while ecosystem tokens dump. Don't assume correlation.</div>
-            </div>
+            <div class="insight-icon" style="background:rgba(229,62,62,.08);border:1px solid rgba(229,62,62,.15);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e53e3e" stroke-width="2.2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+            <div class="insight-body"><div class="insight-label" style="color:#e53e3e;">Watch Out</div><div class="insight-text"><strong>SOL ecosystem tokens</strong> (JTO, PYTH, JUP) showing signs of weakness despite SOL strength. If you're in those — tighten stops.</div></div>
           </div>
         </div>
       </div>
     </div>
-
-  </div><!-- end content-area -->
-
-  <!-- RIGHT SIDEBAR -->
+  </div>
   <div class="sidebar">
-
-    <!-- FEAR & GREED -->
     <div class="sidebar-card reveal">
       <div class="sidebar-title">Fear &amp; Greed Index</div>
       <div class="fg-number">41</div>
       <div class="fg-label">Fear</div>
       <div style="margin-top:16px;">
-        <div class="sentiment-bar">
-          <div class="sentiment-needle" style="left:38%;"></div>
-        </div>
+        <div class="sentiment-bar"><div class="sentiment-needle" style="left:38%;"></div></div>
         <div class="sentiment-labels"><span>Fear</span><span>Neutral</span><span>Greed</span></div>
       </div>
       <p style="font-size:12px;color:var(--sub);margin-top:14px;line-height:1.6;">Market is in fear. Historically a zone where smart money accumulates. Don't panic sell here.</p>
     </div>
-
-    <!-- WATCHLIST -->
     <div class="sidebar-card reveal">
       <div class="sidebar-title">Team Watchlist</div>
       <div class="watch-row"><span class="watch-coin">BTC</span><span class="watch-price">$83,240</span><span class="watch-chg up">+2.14%</span></div>
@@ -447,215 +358,57 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
       <div class="watch-row"><span class="watch-coin">AVAX</span><span class="watch-price">$28.40</span><span class="watch-chg up">+3.20%</span></div>
       <div class="watch-row"><span class="watch-coin">LINK</span><span class="watch-price">$13.88</span><span class="watch-chg dn">-1.05%</span></div>
     </div>
-
-    <!-- WEEK SUMMARY -->
     <div class="sidebar-card reveal">
       <div class="sidebar-title">Week 11 Summary</div>
       <div style="display:flex;flex-direction:column;gap:10px;">
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:rgba(232,120,32,.06);border-radius:10px;border:1px solid rgba(232,120,32,.15);">
-          <span style="font-size:13px;">Signals given</span>
-          <span style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;color:var(--accent);">3</span>
-        </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:rgba(232,120,32,.06);border-radius:10px;border:1px solid rgba(232,120,32,.15);">
-          <span style="font-size:13px;">Coins analysed</span>
-          <span style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;color:var(--accent);">5</span>
-        </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:rgba(255,140,66,.06);border-radius:10px;border:1px solid rgba(255,140,66,.15);">
-          <span style="font-size:13px;">Market bias</span>
-          <span style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;color:var(--orange);">Cautious Bull</span>
-        </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:rgba(255,255,255,.04);border-radius:10px;border:1px solid rgba(255,255,255,.07);">
-          <span style="font-size:13px;">Next update</span>
-          <span style="font-family:'Barlow Condensed',sans-serif;font-size:10px;color:var(--sub);">Thu 20 Mar</span>
-        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:rgba(0,85,255,.05);border-radius:10px;border:1px solid rgba(0,85,255,.12);"><span style="font-size:13px;">Signals given</span><span style="font-size:13px;font-weight:700;color:#0055ff;">3</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:rgba(0,85,255,.05);border-radius:10px;border:1px solid rgba(0,85,255,.12);"><span style="font-size:13px;">Coins analysed</span><span style="font-size:13px;font-weight:700;color:#0055ff;">5</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:rgba(0,212,170,.05);border-radius:10px;border:1px solid rgba(0,212,170,.12);"><span style="font-size:13px;">Market bias</span><span style="font-size:11px;font-weight:700;color:#007a60;">Cautious Bull</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:rgba(15,40,80,.03);border-radius:10px;border:1px solid rgba(15,40,80,.09);"><span style="font-size:13px;">Next update</span><span style="font-size:10px;color:#5f7494;">Thu 20 Mar</span></div>
       </div>
     </div>
-
-    <!-- ARCHIVE -->
     <div class="sidebar-card reveal">
       <div class="sidebar-title">Previous Updates</div>
-      <div class="archive-row">
-        <div><div class="archive-date">06 Mar — Week 10</div><div class="archive-title">BTC breakout above $81K</div></div>
-        <span class="archive-arrow">→</span>
-      </div>
-      <div class="archive-row">
-        <div><div class="archive-date">27 Feb — Week 09</div><div class="archive-title">ETH rejected at $2,400</div></div>
-        <span class="archive-arrow">→</span>
-      </div>
-      <div class="archive-row">
-        <div><div class="archive-date">20 Feb — Week 08</div><div class="archive-title">SOL range breakdown</div></div>
-        <span class="archive-arrow">→</span>
-      </div>
-      <div class="archive-row">
-        <div><div class="archive-date">13 Feb — Week 07</div><div class="archive-title">BTC dominance rising</div></div>
-        <span class="archive-arrow">→</span>
-      </div>
+      <div class="archive-row"><div><div class="archive-date">06 Mar — Week 10</div><div class="archive-title">BTC breakout above $81K</div></div><span class="archive-arrow">→</span></div>
+      <div class="archive-row"><div><div class="archive-date">27 Feb — Week 09</div><div class="archive-title">ETH rejected at $2,400</div></div><span class="archive-arrow">→</span></div>
+      <div class="archive-row"><div><div class="archive-date">20 Feb — Week 08</div><div class="archive-title">SOL range breakdown</div></div><span class="archive-arrow">→</span></div>
+      <div class="archive-row"><div><div class="archive-date">13 Feb — Week 07</div><div class="archive-title">BTC dominance rising</div></div><span class="archive-arrow">→</span></div>
     </div>
-
-  </div><!-- end sidebar -->
-
-</div><!-- end main -->
-
+  </div>
+</div>
 <script>
-// CURSOR
-var cur=document.getElementById('cur'),cr=document.getElementById('cr');
-var mx=window.innerWidth/2,my=window.innerHeight/2,rx=mx,ry=my;
-document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
-(function loop(){rx+=(mx-rx)*.13;ry+=(my-ry)*.13;cr.style.left=rx+'px';cr.style.top=ry+'px';requestAnimationFrame(loop);})();
-document.querySelectorAll('a,button,.week-tab,.archive-row').forEach(function(el){
-  el.addEventListener('mouseenter',function(){cr.classList.add('hov');});
-  el.addEventListener('mouseleave',function(){cr.classList.remove('hov');});
-});
-
-// WEEK TABS
-function showWeek(idx, el){
-  document.querySelectorAll('.week-tab').forEach(function(t){t.classList.remove('active');});
-  el.classList.add('active');
-}
-
-// REVEAL
-var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('v');}});},{threshold:.08});
+function showWeek(idx,el){document.querySelectorAll('.week-tab').forEach(function(t){t.classList.remove('active');});el.classList.add('active');}
+var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('v');});},{threshold:.08});
 document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el);});
-// Trigger visible on load
 setTimeout(function(){document.querySelectorAll('.reveal').forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight)el.classList.add('v');});},100);
-
-// DRAW CHART FUNCTION
-function drawCandleChart(canvasId, startPrice, color, bullColor, bearColor){
-  var canvas=document.getElementById(canvasId);
-  if(!canvas)return;
-  var W=canvas.offsetWidth||780;
-  var H=canvas.height||260;
-  canvas.width=W;
+function drawCandleChart(canvasId,startPrice,color,bullColor,bearColor){
+  var canvas=document.getElementById(canvasId);if(!canvas)return;
+  var W=canvas.offsetWidth||780,H=canvas.height||260;canvas.width=W;
   var ctx=canvas.getContext('2d');
-
-  var N=32;
-  var candles=[];
-  var price=startPrice;
-  for(var i=0;i<N;i++){
-    var open=price;
-    var change=(Math.random()-.44)*(startPrice*.018);
-    var close=open+change;
-    var high=Math.max(open,close)+(Math.random()*(startPrice*.006));
-    var low=Math.min(open,close)-(Math.random()*(startPrice*.006));
-    candles.push({open:open,close:close,high:high,low:low});
-    price=close;
-  }
-
-  var liveClose=candles[N-1].close;
-  var liveTarget=liveClose+(Math.random()-.44)*(startPrice*.015);
-  var animP=0;
-
-  var PAD={l:58,r:20,t:20,b:36};
-  var CW=W-PAD.l-PAD.r;
-  var CH=H-PAD.t-PAD.b;
-  var cw=(CW/N)*.58;
-  var gap=(CW/N)*.42;
-
-  function minmax(){
-    var mn=Infinity,mx=-Infinity;
-    candles.forEach(function(c){mn=Math.min(mn,c.low);mx=Math.max(mx,c.high);});
-    var lv=liveClose+(liveTarget-liveClose)*animP;
-    mn=Math.min(mn,lv-(startPrice*.008));
-    mx=Math.max(mx,lv+(startPrice*.008));
-    var pad=(mx-mn)*.1;
-    return{min:mn-pad,max:mx+pad};
-  }
+  var N=32,candles=[],price=startPrice;
+  for(var i=0;i<N;i++){var open=price,change=(Math.random()-.44)*(startPrice*.018),close=open+change,high=Math.max(open,close)+(Math.random()*(startPrice*.006)),low=Math.min(open,close)-(Math.random()*(startPrice*.006));candles.push({open:open,close:close,high:high,low:low});price=close;}
+  var liveClose=candles[N-1].close,liveTarget=liveClose+(Math.random()-.44)*(startPrice*.015),animP=0;
+  var PAD={l:58,r:20,t:20,b:36},CW=W-PAD.l-PAD.r,CH=H-PAD.t-PAD.b,cw=(CW/N)*.58,gap=(CW/N)*.42;
+  function minmax(){var mn=Infinity,mx=-Infinity;candles.forEach(function(c){mn=Math.min(mn,c.low);mx=Math.max(mx,c.high);});var lv=liveClose+(liveTarget-liveClose)*animP;mn=Math.min(mn,lv-(startPrice*.008));mx=Math.max(mx,lv+(startPrice*.008));var pad=(mx-mn)*.1;return{min:mn-pad,max:mx+pad};}
   function toY(p,mm){return PAD.t+CH-(p-mm.min)/(mm.max-mm.min)*CH;}
-
   function draw(){
-    ctx.clearRect(0,0,W,H);
-    ctx.fillStyle='#0d0d0d';
-    ctx.fillRect(0,0,W,H);
+    ctx.clearRect(0,0,W,H);ctx.fillStyle='#f0f5ff';ctx.fillRect(0,0,W,H);
     var mm=minmax();
-
-    // Grid
-    for(var g=0;g<=4;g++){
-      var gy=PAD.t+CH*(g/4);
-      ctx.strokeStyle='rgba(255,255,255,.04)';
-      ctx.lineWidth=1;
-      ctx.beginPath();ctx.moveTo(PAD.l,gy);ctx.lineTo(W-PAD.r,gy);ctx.stroke();
-      var lp=mm.max-(mm.max-mm.min)*(g/4);
-      ctx.fillStyle='rgba(255,255,255,.22)';
-      ctx.font='9px "Orbitron",monospace';
-      ctx.textAlign='right';
-      var fmt=startPrice>1000?'$'+Math.round(lp/100)*100:'$'+lp.toFixed(2);
-      ctx.fillText(fmt,PAD.l-5,gy+3);
-    }
-
-    // EMA
-    ctx.beginPath();
-    ctx.strokeStyle='rgba(77,184,255,.45)';
-    ctx.lineWidth=1.5;
-    ctx.setLineDash([4,3]);
-    var ema=candles[0].close,k=2/(8+1);
-    candles.forEach(function(c,i){
-      ema=c.close*k+ema*(1-k);
-      var x=PAD.l+i*(CW/N)+gap/2+cw/2;
-      if(i===0)ctx.moveTo(x,toY(ema,mm));else ctx.lineTo(x,toY(ema,mm));
-    });
-    ctx.stroke();ctx.setLineDash([]);
-
-    // Candles
-    candles.forEach(function(c,i){
-      var x=PAD.l+i*(CW/N)+gap/2;
-      var xc=x+cw/2;
-      var isG=c.close>=c.open;
-      var col=isG?bullColor:bearColor;
-      ctx.strokeStyle=col;ctx.lineWidth=1;
-      ctx.beginPath();ctx.moveTo(xc,toY(c.high,mm));ctx.lineTo(xc,toY(c.low,mm));ctx.stroke();
-      var bT=Math.min(toY(c.open,mm),toY(c.close,mm));
-      var bH=Math.max(Math.abs(toY(c.open,mm)-toY(c.close,mm)),2);
-      ctx.globalAlpha=.82;ctx.fillStyle=col;
-      ctx.fillRect(x,bT,cw,bH);ctx.globalAlpha=1;
-    });
-
-    // Live candle
-    var lv=liveClose+(liveTarget-liveClose)*animP;
-    var lx=PAD.l+(N-1)*(CW/N)+gap/2;
-    var lxc=lx+cw/2;
-    var isG=lv>=candles[N-1].open;
-    var lc=isG?bullColor:bearColor;
-    ctx.strokeStyle=lc;ctx.lineWidth=1.5;
-    ctx.beginPath();ctx.moveTo(lxc,toY(lv+(startPrice*.004),mm));ctx.lineTo(lxc,toY(lv-(startPrice*.004),mm));ctx.stroke();
-    var lbT=Math.min(toY(candles[N-1].open,mm),toY(lv,mm));
-    var lbH=Math.max(Math.abs(toY(candles[N-1].open,mm)-toY(lv,mm)),3);
-    ctx.shadowColor=lc;ctx.shadowBlur=10;
-    ctx.fillStyle=lc;ctx.fillRect(lx,lbT,cw,lbH);
-    ctx.shadowBlur=0;
-
-    // Price line blink
-    if(Math.floor(Date.now()/600)%2===0){
-      ctx.strokeStyle='rgba(232,120,32,.35)';ctx.lineWidth=1;ctx.setLineDash([3,3]);
-      ctx.beginPath();ctx.moveTo(PAD.l,toY(lv,mm));ctx.lineTo(W-PAD.r,toY(lv,mm));ctx.stroke();
-      ctx.setLineDash([]);
-    }
+    for(var g=0;g<=4;g++){var gy=PAD.t+CH*(g/4);ctx.strokeStyle='rgba(15,40,80,.07)';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(PAD.l,gy);ctx.lineTo(W-PAD.r,gy);ctx.stroke();var lp=mm.max-(mm.max-mm.min)*(g/4);ctx.fillStyle='rgba(15,40,80,.4)';ctx.font='9px "Plus Jakarta Sans",sans-serif';ctx.textAlign='right';ctx.fillText(startPrice>1000?'$'+Math.round(lp/100)*100:'$'+lp.toFixed(2),PAD.l-5,gy+3);}
+    ctx.beginPath();ctx.strokeStyle='rgba(0,85,255,.4)';ctx.lineWidth=1.5;ctx.setLineDash([4,3]);var ema=candles[0].close,k=2/(8+1);
+    candles.forEach(function(c,i){ema=c.close*k+ema*(1-k);var x=PAD.l+i*(CW/N)+gap/2+cw/2;if(i===0)ctx.moveTo(x,toY(ema,mm));else ctx.lineTo(x,toY(ema,mm));});ctx.stroke();ctx.setLineDash([]);
+    candles.forEach(function(c,i){var x=PAD.l+i*(CW/N)+gap/2,xc=x+cw/2,isG=c.close>=c.open,col=isG?'#00c48c':'#e53e3e';ctx.strokeStyle=col;ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(xc,toY(c.high,mm));ctx.lineTo(xc,toY(c.low,mm));ctx.stroke();var bT=Math.min(toY(c.open,mm),toY(c.close,mm)),bH=Math.max(Math.abs(toY(c.open,mm)-toY(c.close,mm)),2);ctx.globalAlpha=.8;ctx.fillStyle=col;ctx.fillRect(x,bT,cw,bH);ctx.globalAlpha=1;});
+    var lv=liveClose+(liveTarget-liveClose)*animP,lx=PAD.l+(N-1)*(CW/N)+gap/2,lxc=lx+cw/2,isG=lv>=candles[N-1].open,lc=isG?'#00c48c':'#e53e3e';
+    ctx.strokeStyle=lc;ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(lxc,toY(lv+(startPrice*.004),mm));ctx.lineTo(lxc,toY(lv-(startPrice*.004),mm));ctx.stroke();
+    var lbT=Math.min(toY(candles[N-1].open,mm),toY(lv,mm)),lbH=Math.max(Math.abs(toY(candles[N-1].open,mm)-toY(lv,mm)),3);
+    ctx.shadowColor=lc;ctx.shadowBlur=8;ctx.fillStyle=lc;ctx.fillRect(lx,lbT,cw,lbH);ctx.shadowBlur=0;
+    if(Math.floor(Date.now()/600)%2===0){ctx.strokeStyle='rgba(0,85,255,.25)';ctx.lineWidth=1;ctx.setLineDash([3,3]);ctx.beginPath();ctx.moveTo(PAD.l,toY(lv,mm));ctx.lineTo(W-PAD.r,toY(lv,mm));ctx.stroke();ctx.setLineDash([]);}
   }
-
-  var last=0;
-  function tick(ts){
-    requestAnimationFrame(tick);
-    if(ts-last<40)return;last=ts;
-    animP+=.003;
-    if(animP>=1){
-      candles.push({open:liveClose,close:liveTarget,high:liveTarget+(startPrice*.005),low:liveClose-(startPrice*.005)});
-      if(candles.length>N)candles.shift();
-      liveClose=liveTarget;
-      liveTarget=liveClose+(Math.random()-.44)*(startPrice*.015);
-      animP=0;
-    }
-    draw();
-  }
+  var last=0;function tick(ts){requestAnimationFrame(tick);if(ts-last<40)return;last=ts;animP+=.003;if(animP>=1){candles.push({open:liveClose,close:liveTarget,high:liveTarget+(startPrice*.005),low:liveClose-(startPrice*.005)});if(candles.length>N)candles.shift();liveClose=liveTarget;liveTarget=liveClose+(Math.random()-.44)*(startPrice*.015);animP=0;}draw();}
   requestAnimationFrame(tick);
 }
-
-window.addEventListener('load',function(){
-  drawCandleChart('btcChart',83240,'#e87820','#e87820','#e8392a');
-  drawCandleChart('ethChart',2065,'#e8b020','#e8b020','#e8392a');
-});
-window.addEventListener('resize',function(){
-  drawCandleChart('btcChart',83240,'#e87820','#e87820','#e8392a');
-  drawCandleChart('ethChart',2065,'#e8b020','#e8b020','#e8392a');
-});
+window.addEventListener('load',function(){drawCandleChart('btcChart',83240,'#0055ff','#00c48c','#e53e3e');drawCandleChart('ethChart',2065,'#00d4aa','#00c48c','#e53e3e');});
+window.addEventListener('resize',function(){drawCandleChart('btcChart',83240,'#0055ff','#00c48c','#e53e3e');drawCandleChart('ethChart',2065,'#00d4aa','#00c48c','#e53e3e');});
 </script>
 </body>
 </html>
