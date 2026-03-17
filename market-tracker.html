@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Crypto Market Tracker — CryptoMarketz</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --red:#e8392a;
+  --red2:#c0281b;
+  --orange:#e87820;
+  --yellow:#e8b020;
+  --green:#27ae60;
+  --bg:#0d0d0d;
+  --bg2:#141414;
+  --bg3:#1a1a1a;
+  --border:#2a2a2a;
+  --text:#e8e0d8;
+  --sub:#8a8078;
+  --dim:#3a3530;
+}
+html,body{height:100%;font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;}
+
+/* TOP BAR */
+.topbar{display:flex;align-items:center;gap:18px;padding:10px 20px;background:var(--bg2);border-bottom:1px solid var(--border);font-family:'Barlow Condensed',sans-serif;}
+.live-badge{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--red);text-transform:uppercase;}
+.live-dot{width:7px;height:7px;border-radius:50%;background:var(--red);animation:pulse-dot 1.2s ease-in-out infinite;}
+@keyframes pulse-dot{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(232,57,42,.6);}50%{opacity:.8;box-shadow:0 0 0 5px rgba(232,57,42,0);}}
+.topbar-title{font-size:13px;font-weight:600;color:var(--sub);letter-spacing:.04em;}
+.topbar-date{margin-left:auto;font-size:11px;color:var(--sub);letter-spacing:.06em;}
+.back-link{font-size:11px;color:var(--sub);text-decoration:none;letter-spacing:.06em;transition:color .2s;}
+.back-link:hover{color:var(--text);}
+
+/* HERO HEADER */
+.hero{padding:20px 20px 16px;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;justify-content:space-between;gap:20px;background:var(--bg2);}
+.hero-left{}
+.hero-tag{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.2em;color:var(--red);text-transform:uppercase;margin-bottom:6px;}
+.hero-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(36px,5vw,64px);font-weight:900;line-height:.95;letter-spacing:-.01em;color:var(--text);text-transform:uppercase;}
+.hero-title span{color:var(--red);}
+.hero-desc{font-size:13px;color:var(--sub);margin-top:10px;max-width:500px;line-height:1.5;}
+.hero-legend{display:flex;align-items:center;gap:18px;margin-top:14px;}
+.leg-item{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--sub);font-family:'Barlow Condensed',sans-serif;letter-spacing:.08em;}
+.leg-dot{width:8px;height:8px;border-radius:50%;}
+
+/* KPI STRIP */
+.kpi-strip{display:grid;grid-template-columns:repeat(6,1fr);border-bottom:1px solid var(--border);}
+.kpi{padding:14px 16px;border-right:1px solid var(--border);}
+.kpi:last-child{border-right:none;}
+.kpi-label{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--sub);margin-bottom:5px;display:flex;align-items:center;gap:5px;}
+.kpi-label svg{opacity:.6;}
+.kpi-value{font-family:'Barlow Condensed',sans-serif;font-size:clamp(22px,2.5vw,32px);font-weight:900;line-height:1;letter-spacing:-.01em;}
+.kpi-value.red{color:var(--red);}
+.kpi-value.orange{color:var(--orange);}
+.kpi-value.yellow{color:var(--yellow);}
+.kpi-value.green{color:var(--green);}
+.kpi-sub{font-size:10px;color:var(--sub);margin-top:4px;}
+
+/* MAIN GRID */
+.main{display:grid;grid-template-columns:1fr 380px;gap:0;border-bottom:1px solid var(--border);}
+.left-col{border-right:1px solid var(--border);}
+.right-col{}
+
+/* SECTION HEADERS */
+.sec-header{padding:12px 18px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
+.sec-title{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--sub);}
+.sec-badge{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:.1em;padding:3px 10px;border-radius:3px;}
+.badge-red{background:rgba(232,57,42,.2);border:1px solid rgba(232,57,42,.4);color:var(--red);}
+.badge-orange{background:rgba(232,120,32,.15);border:1px solid rgba(232,120,32,.35);color:var(--orange);}
+.badge-green{background:rgba(39,174,96,.15);border:1px solid rgba(39,174,96,.35);color:var(--green);}
+.badge-yellow{background:rgba(232,176,32,.15);border:1px solid rgba(232,176,32,.35);color:var(--yellow);}
+
+/* CHART AREA */
+.chart-area{padding:16px 18px;}
+.chart-meta{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
+.chart-current{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;color:var(--text);}
+.chart-change{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;color:var(--red);margin-left:10px;}
+.chart-wrap{position:relative;border-radius:4px;overflow:hidden;}
+canvas{display:block;width:100%;}
+.chart-timeframe{display:flex;gap:0;margin-top:10px;}
+.tf-btn{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:.1em;padding:4px 10px;border:1px solid var(--border);cursor:pointer;color:var(--sub);background:transparent;transition:all .15s;}
+.tf-btn:first-child{border-radius:3px 0 0 3px;}
+.tf-btn:last-child{border-radius:0 3px 3px 0;}
+.tf-btn.active{background:var(--red);border-color:var(--red);color:white;}
+.tf-btn:hover:not(.active){color:var(--text);}
+
+/* MARKET SHOCK BARS */
+.shock-section{padding:14px 18px;}
+.shock-alert{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;background:rgba(232,120,32,.12);border:1px solid rgba(232,120,32,.3);border-radius:3px;color:var(--orange);margin-bottom:14px;display:inline-block;}
+.shock-row{display:grid;grid-template-columns:130px 1fr 70px;align-items:center;gap:12px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.04);}
+.shock-row:last-child{border-bottom:none;}
+.shock-label{font-size:12px;color:var(--sub);}
+.shock-bar-wrap{height:8px;background:rgba(255,255,255,.06);border-radius:2px;overflow:hidden;}
+.shock-bar{height:100%;border-radius:2px;transition:width 1.5s ease;}
+.shock-val{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;text-align:right;}
+
+/* DOMINANCE RINGS */
+.rings-section{padding:16px 18px;}
+.rings-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.ring-card{background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:16px;display:flex;align-items:center;gap:14px;}
+.ring-wrap{position:relative;width:70px;height:70px;flex-shrink:0;}
+.ring-wrap svg{transform:rotate(-90deg);}
+.ring-center{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;}
+.ring-info{}
+.ring-name{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;margin-bottom:2px;}
+.ring-stat1{font-size:11px;margin-bottom:1px;}
+.ring-stat2{font-size:11px;}
+
+/* WATCHLIST */
+.watchlist{padding:0;}
+.watch-row{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:12px;padding:11px 18px;border-bottom:1px solid rgba(255,255,255,.04);transition:background .15s;}
+.watch-row:hover{background:rgba(255,255,255,.02);}
+.watch-coin{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:.03em;}
+.watch-price{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:600;color:var(--sub);}
+.watch-chg{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;min-width:58px;text-align:right;}
+.watch-chg.up{color:var(--green);}
+.watch-chg.dn{color:var(--red);}
+.sparkline{width:60px;height:24px;}
+
+/* HEATMAP */
+.heatmap-section{padding:14px 18px;}
+.heatmap-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;}
+.hm-cell{border-radius:4px;padding:8px 6px;text-align:center;position:relative;overflow:hidden;}
+.hm-coin{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;display:block;}
+.hm-chg{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:800;display:block;margin-top:1px;}
+
+/* FEAR GREED */
+.fg-section{padding:14px 18px;border-top:1px solid var(--border);}
+.fg-gauge{position:relative;margin:10px auto;width:180px;height:90px;}
+.fg-number{font-family:'Barlow Condensed',sans-serif;font-size:52px;font-weight:900;text-align:center;line-height:1;margin-top:4px;}
+.fg-label{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:.15em;text-align:center;text-transform:uppercase;margin-top:2px;}
+.fg-desc{font-size:11px;color:var(--sub);text-align:center;margin-top:8px;line-height:1.5;}
+
+/* SIGNAL STRIP */
+.signal-strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border);}
+.sig-cell{padding:14px 16px;border-right:1px solid var(--border);}
+.sig-cell:last-child{border-right:none;}
+.sig-coin{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--sub);margin-bottom:4px;}
+.sig-type{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;letter-spacing:.02em;}
+.sig-type.buy{color:var(--green);}
+.sig-type.sell{color:var(--red);}
+.sig-type.watch{color:var(--orange);}
+.sig-entry{font-size:11px;color:var(--sub);margin-top:3px;}
+.sig-entry span{color:var(--text);font-weight:600;}
+
+/* BOTTOM BAR */
+.bottombar{padding:10px 20px;background:var(--bg2);border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;font-size:10px;color:var(--sub);font-family:'Barlow Condensed',sans-serif;letter-spacing:.06em;}
+.ticker-scroll{overflow:hidden;flex:1;margin:0 20px;}
+.ticker-inner{display:flex;gap:28px;animation:tick 28s linear infinite;white-space:nowrap;}
+@keyframes tick{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.tick-item{display:flex;align-items:center;gap:7px;}
+.tick-sym{font-weight:700;color:var(--text);}
+.tick-up{color:var(--green);}
+.tick-dn{color:var(--red);}
+
+/* ANIM */
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+.kpi,.ring-card,.watch-row,.hm-cell{animation:fadeUp .5s ease both;}
+.kpi:nth-child(1){animation-delay:.05s;} .kpi:nth-child(2){animation-delay:.1s;} .kpi:nth-child(3){animation-delay:.15s;}
+.kpi:nth-child(4){animation-delay:.2s;} .kpi:nth-child(5){animation-delay:.25s;} .kpi:nth-child(6){animation-delay:.3s;}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .kpi-strip{grid-template-columns:repeat(3,1fr);}
+  .main{grid-template-columns:1fr;}
+  .left-col{border-right:none;border-bottom:1px solid var(--border);}
+  .signal-strip{grid-template-columns:repeat(2,1fr);}
+  .heatmap-grid{grid-template-columns:repeat(4,1fr);}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="live-badge"><div class="live-dot"></div>Live Tracker</div>
+  <a href="index.html" style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:800;letter-spacing:.06em;color:#e8e0d8;text-decoration:none;">CRYPTO<span style="color:#e8392a;">MARKETZ</span></a>
+  <div style="width:1px;height:16px;background:#2a2a2a;"></div>
+  <div class="topbar-title">Market Overview</div>
+  <div style="display:flex;gap:18px;margin-left:12px;">
+    <a href="landing.html#signals" style="font-size:11px;color:#8a8078;text-decoration:none;letter-spacing:.06em;font-family:'Barlow Condensed',sans-serif;">SIGNALS</a>
+    <a href="thursday.html" style="font-size:11px;color:#8a8078;text-decoration:none;letter-spacing:.06em;font-family:'Barlow Condensed',sans-serif;">THURSDAY</a>
+    <a href="landing.html#education" style="font-size:11px;color:#8a8078;text-decoration:none;letter-spacing:.06em;font-family:'Barlow Condensed',sans-serif;">EDUCATION</a>
+  </div>
+  <div class="topbar-date" id="liveTime"></div>
+  <a href="dashboard.html" class="back-link">← Dashboard</a>
+</div>
+
+<!-- HERO HEADER -->
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-tag">Crypto Market Tracker</div>
+    <div class="hero-title">CRYPTO<br><span>UNDER PRESSURE</span></div>
+    <div class="hero-desc">BTC holding key support · ETH lagging · Altcoins bleeding · Funding rates normalizing · Whale accumulation on-chain</div>
+    <div class="hero-legend">
+      <div class="leg-item"><div class="leg-dot" style="background:var(--green);"></div>Bullish signal</div>
+      <div class="leg-item"><div class="leg-dot" style="background:var(--red);"></div>Bearish signal</div>
+      <div class="leg-item"><div class="leg-dot" style="background:var(--orange);"></div>Watch zone</div>
+    </div>
+  </div>
+</div>
+
+<!-- KPI STRIP -->
+<div class="kpi-strip">
+  <div class="kpi">
+    <div class="kpi-label">
+      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>
+      BTC DOMINANCE
+    </div>
+    <div class="kpi-value orange">58.4%</div>
+    <div class="kpi-sub">+1.2% this week</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">
+      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/></svg>
+      TOTAL MARKET CAP
+    </div>
+    <div class="kpi-value red">$2.61T</div>
+    <div class="kpi-sub">-8.4% from peak</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">
+      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      24H VOLUME
+    </div>
+    <div class="kpi-value yellow">$84.2B</div>
+    <div class="kpi-sub">Below 30d avg</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">
+      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg>
+      ETH / BTC RATIO
+    </div>
+    <div class="kpi-value red">0.0248</div>
+    <div class="kpi-sub">3-month low</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">
+      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2"/></svg>
+      FUNDING RATE
+    </div>
+    <div class="kpi-value green">+0.004%</div>
+    <div class="kpi-sub">Neutral · healthy</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">
+      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5"/><circle cx="9" cy="7" r="4"/></svg>
+      OPEN INTEREST
+    </div>
+    <div class="kpi-value orange">$18.4B</div>
+    <div class="kpi-sub">-12% vs last week</div>
+  </div>
+</div>
+
+<!-- MAIN GRID -->
+<div class="main">
+
+  <!-- LEFT COL -->
+  <div class="left-col">
+
+    <!-- BTC CHART -->
+    <div class="sec-header">
+      <div class="sec-title">BTC / USDT — 4H</div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span id="btcLive" style="font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;color:var(--text);">$83,240</span>
+        <span style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;color:var(--red);">-2.14%</span>
+        <div class="sec-badge badge-orange">WATCH ZONE</div>
+      </div>
+    </div>
+    <div class="chart-area">
+      <div class="chart-wrap">
+        <canvas id="btcChart" height="220" style="background:#0d0d0d;border-radius:4px;"></canvas>
+      </div>
+      <div class="chart-timeframe">
+        <button class="tf-btn">1H</button>
+        <button class="tf-btn active">4H</button>
+        <button class="tf-btn">1D</button>
+        <button class="tf-btn">1W</button>
+      </div>
+    </div>
+
+    <!-- MARKET SHOCK BARS -->
+    <div class="sec-header" style="margin-top:0;">
+      <div class="sec-title">Market Pressure Indicators</div>
+      <div class="sec-badge badge-orange">ELEVATED RISK</div>
+    </div>
+    <div class="shock-section">
+      <div class="shock-alert">⚠ ETH/BTC at 3-month low · Altcoin season index: 28/100 · BTC dominance rising</div>
+      <div class="shock-row">
+        <div class="shock-label">BTC Selling Pressure</div>
+        <div class="shock-bar-wrap"><div class="shock-bar" style="width:32%;background:var(--red);"></div></div>
+        <div class="shock-val" style="color:var(--red);">-32%</div>
+      </div>
+      <div class="shock-row">
+        <div class="shock-label">Altcoin Bleed</div>
+        <div class="shock-bar-wrap"><div class="shock-bar" style="width:61%;background:var(--red);"></div></div>
+        <div class="shock-val" style="color:var(--red);">-61%</div>
+      </div>
+      <div class="shock-row">
+        <div class="shock-label">ETH Underperformance</div>
+        <div class="shock-bar-wrap"><div class="shock-bar" style="width:44%;background:var(--orange);"></div></div>
+        <div class="shock-val" style="color:var(--orange);">-44%</div>
+      </div>
+      <div class="shock-row">
+        <div class="shock-label">DeFi TVL Drop</div>
+        <div class="shock-bar-wrap"><div class="shock-bar" style="width:28%;background:var(--orange);"></div></div>
+        <div class="shock-val" style="color:var(--orange);">-28%</div>
+      </div>
+      <div class="shock-row">
+        <div class="shock-label">Stablecoin Inflows</div>
+        <div class="shock-bar-wrap"><div class="shock-bar" style="width:74%;background:var(--green);"></div></div>
+        <div class="shock-val" style="color:var(--green);">+74%</div>
+      </div>
+      <div class="shock-row">
+        <div class="shock-label">Whale Accumulation</div>
+        <div class="shock-bar-wrap"><div class="shock-bar" style="width:58%;background:var(--green);"></div></div>
+        <div class="shock-val" style="color:var(--green);">+58%</div>
+      </div>
+    </div>
+
+    <!-- ALTCOIN HEATMAP -->
+    <div class="sec-header">
+      <div class="sec-title">Altcoin Heatmap — 24H</div>
+      <div class="sec-badge badge-red">MOSTLY RED</div>
+    </div>
+    <div class="heatmap-section">
+      <div class="heatmap-grid" id="heatmap"></div>
+    </div>
+
+  </div><!-- end left -->
+
+  <!-- RIGHT COL -->
+  <div class="right-col">
+
+    <!-- FEAR & GREED -->
+    <div class="sec-header">
+      <div class="sec-title">Fear &amp; Greed Index</div>
+    </div>
+    <div class="fg-section">
+      <div class="fg-gauge">
+        <svg width="180" height="90" viewBox="0 0 180 90">
+          <defs>
+            <linearGradient id="gaugeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#e8392a"/>
+              <stop offset="40%" stop-color="#e87820"/>
+              <stop offset="65%" stop-color="#e8b020"/>
+              <stop offset="100%" stop-color="#27ae60"/>
+            </linearGradient>
+          </defs>
+          <!-- Track -->
+          <path d="M 15 85 A 75 75 0 0 1 165 85" fill="none" stroke="#2a2a2a" stroke-width="12" stroke-linecap="round"/>
+          <!-- Fill -->
+          <path d="M 15 85 A 75 75 0 0 1 165 85" fill="none" stroke="url(#gaugeGrad)" stroke-width="12" stroke-linecap="round" stroke-dasharray="236" stroke-dashoffset="153"/>
+          <!-- Needle at 35 (fear) -->
+          <line x1="90" y1="85" x2="32" y2="38" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="90" cy="85" r="5" fill="white"/>
+        </svg>
+      </div>
+      <div class="fg-number" style="color:var(--red);">35</div>
+      <div class="fg-label" style="color:var(--red);">Fear</div>
+      <div class="fg-desc">Market is fearful. Historically a buying opportunity for smart money. Retail is selling — institutions are loading.</div>
+    </div>
+
+    <!-- DOMINANCE RINGS -->
+    <div class="sec-header" style="border-top:1px solid var(--border);">
+      <div class="sec-title">Coin Metrics</div>
+      <div class="sec-badge badge-orange">LIVE</div>
+    </div>
+    <div class="rings-section">
+      <div class="rings-grid">
+        <!-- BTC ring -->
+        <div class="ring-card">
+          <div class="ring-wrap">
+            <svg width="70" height="70" viewBox="0 0 70 70">
+              <circle cx="35" cy="35" r="28" fill="none" stroke="#2a2a2a" stroke-width="7"/>
+              <circle cx="35" cy="35" r="28" fill="none" stroke="#e87820" stroke-width="7" stroke-linecap="round"
+                stroke-dasharray="175.9" stroke-dashoffset="73"/>
+            </svg>
+            <div class="ring-center" style="color:var(--orange);">58%</div>
+          </div>
+          <div class="ring-info">
+            <div class="ring-name">BTC DOM</div>
+            <div class="ring-stat1" style="color:var(--orange);">Dominance</div>
+            <div class="ring-stat2" style="color:var(--sub);font-size:11px;">Rising ↑</div>
+          </div>
+        </div>
+        <!-- ETH ring -->
+        <div class="ring-card">
+          <div class="ring-wrap">
+            <svg width="70" height="70" viewBox="0 0 70 70">
+              <circle cx="35" cy="35" r="28" fill="none" stroke="#2a2a2a" stroke-width="7"/>
+              <circle cx="35" cy="35" r="28" fill="none" stroke="#e8392a" stroke-width="7" stroke-linecap="round"
+                stroke-dasharray="175.9" stroke-dashoffset="123"/>
+            </svg>
+            <div class="ring-center" style="color:var(--red);">30%</div>
+          </div>
+          <div class="ring-info">
+            <div class="ring-name">ETH DOM</div>
+            <div class="ring-stat1" style="color:var(--red);">Falling ↓</div>
+            <div class="ring-stat2" style="color:var(--sub);font-size:11px;">3-mo low</div>
+          </div>
+        </div>
+        <!-- Stables ring -->
+        <div class="ring-card">
+          <div class="ring-wrap">
+            <svg width="70" height="70" viewBox="0 0 70 70">
+              <circle cx="35" cy="35" r="28" fill="none" stroke="#2a2a2a" stroke-width="7"/>
+              <circle cx="35" cy="35" r="28" fill="none" stroke="#27ae60" stroke-width="7" stroke-linecap="round"
+                stroke-dasharray="175.9" stroke-dashoffset="140"/>
+            </svg>
+            <div class="ring-center" style="color:var(--green);">21%</div>
+          </div>
+          <div class="ring-info">
+            <div class="ring-name">STABLES</div>
+            <div class="ring-stat1" style="color:var(--green);">Growing ↑</div>
+            <div class="ring-stat2" style="color:var(--sub);font-size:11px;">Inflows +74%</div>
+          </div>
+        </div>
+        <!-- Alts ring -->
+        <div class="ring-card">
+          <div class="ring-wrap">
+            <svg width="70" height="70" viewBox="0 0 70 70">
+              <circle cx="35" cy="35" r="28" fill="none" stroke="#2a2a2a" stroke-width="7"/>
+              <circle cx="35" cy="35" r="28" fill="none" stroke="#e8b020" stroke-width="7" stroke-linecap="round"
+                stroke-dasharray="175.9" stroke-dashoffset="149"/>
+            </svg>
+            <div class="ring-center" style="color:var(--yellow);">15%</div>
+          </div>
+          <div class="ring-info">
+            <div class="ring-name">ALTS</div>
+            <div class="ring-stat1" style="color:var(--yellow);">Bleeding</div>
+            <div class="ring-stat2" style="color:var(--sub);font-size:11px;">Season: 28/100</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WATCHLIST -->
+    <div class="sec-header" style="border-top:1px solid var(--border);">
+      <div class="sec-title">Top Movers</div>
+      <div class="sec-badge badge-red">24H</div>
+    </div>
+    <div class="watchlist">
+      <div class="watch-row">
+        <div>
+          <div class="watch-coin">BTC</div>
+          <div style="font-size:10px;color:var(--sub);">$83,240</div>
+        </div>
+        <canvas class="sparkline" id="sp0"></canvas>
+        <div class="watch-chg dn">-2.14%</div>
+      </div>
+      <div class="watch-row">
+        <div>
+          <div class="watch-coin">ETH</div>
+          <div style="font-size:10px;color:var(--sub);">$2,065</div>
+        </div>
+        <canvas class="sparkline" id="sp1"></canvas>
+        <div class="watch-chg dn">-3.82%</div>
+      </div>
+      <div class="watch-row">
+        <div>
+          <div class="watch-coin">SOL</div>
+          <div style="font-size:10px;color:var(--sub);">$87.40</div>
+        </div>
+        <canvas class="sparkline" id="sp2"></canvas>
+        <div class="watch-chg up">+4.31%</div>
+      </div>
+      <div class="watch-row">
+        <div>
+          <div class="watch-coin">BNB</div>
+          <div style="font-size:10px;color:var(--sub);">$652</div>
+        </div>
+        <canvas class="sparkline" id="sp3"></canvas>
+        <div class="watch-chg dn">-1.14%</div>
+      </div>
+      <div class="watch-row">
+        <div>
+          <div class="watch-coin">AVAX</div>
+          <div style="font-size:10px;color:var(--sub);">$28.40</div>
+        </div>
+        <canvas class="sparkline" id="sp4"></canvas>
+        <div class="watch-chg up">+3.20%</div>
+      </div>
+      <div class="watch-row">
+        <div>
+          <div class="watch-coin">LINK</div>
+          <div style="font-size:10px;color:var(--sub);">$13.88</div>
+        </div>
+        <canvas class="sparkline" id="sp5"></canvas>
+        <div class="watch-chg dn">-5.41%</div>
+      </div>
+    </div>
+
+  </div><!-- end right -->
+
+</div><!-- end main -->
+
+<!-- SIGNAL STRIP -->
+<div class="signal-strip">
+  <div class="sig-cell">
+    <div class="sig-coin">BTC/USDT · 4H</div>
+    <div class="sig-type watch">WATCH</div>
+    <div class="sig-entry">Entry: <span>$82,200</span> · TP: <span>$87,500</span></div>
+  </div>
+  <div class="sig-cell">
+    <div class="sig-coin">SOL/USDT · 4H</div>
+    <div class="sig-type buy">BUY</div>
+    <div class="sig-entry">Entry: <span>$87.40</span> · TP: <span>$98.00</span></div>
+  </div>
+  <div class="sig-cell">
+    <div class="sig-coin">ETH/USDT · 1D</div>
+    <div class="sig-type sell">AVOID</div>
+    <div class="sig-entry">Wait for: <span>$2,180</span> break</div>
+  </div>
+  <div class="sig-cell">
+    <div class="sig-coin">LINK/USDT · 4H</div>
+    <div class="sig-type buy">BUY</div>
+    <div class="sig-entry">Entry: <span>$13.20</span> · TP: <span>$15.80</span></div>
+  </div>
+</div>
+
+<!-- BOTTOM BAR -->
+<div class="bottombar">
+  <span>CRYPTOMARKETZ · MARKET TRACKER</span>
+  <div class="ticker-scroll">
+    <div class="ticker-inner" id="tickerInner"></div>
+  </div>
+  <span id="updateTime"></span>
+</div>
+
+<script>
+// LIVE CLOCK
+function updateClock(){
+  var n=new Date();
+  var t=n.toUTCString().replace('GMT','UTC');
+  document.getElementById('liveTime').textContent=t;
+  document.getElementById('updateTime').textContent='Updated: '+n.toLocaleTimeString();
+}
+updateClock();setInterval(updateClock,1000);
+
+// TICKER
+var tickers=[
+  {s:'BTC',p:'$83,240',c:'-2.14%',u:false},{s:'ETH',p:'$2,065',c:'-3.82%',u:false},
+  {s:'SOL',p:'$87.40',c:'+4.31%',u:true},{s:'BNB',p:'$652',c:'-1.14%',u:false},
+  {s:'XRP',p:'$2.14',c:'-0.55%',u:false},{s:'AVAX',p:'$28.40',c:'+3.20%',u:true},
+  {s:'LINK',p:'$13.88',c:'-5.41%',u:false},{s:'ADA',p:'$0.712',c:'-4.20%',u:false},
+  {s:'DOT',p:'$6.82',c:'-2.88%',u:false},{s:'MATIC',p:'$0.48',c:'-6.11%',u:false},
+  {s:'DOGE',p:'$0.168',c:'-3.40%',u:false},{s:'ATOM',p:'$8.20',c:'+1.14%',u:true},
+];
+var th='';
+for(var k=0;k<3;k++) tickers.forEach(function(t){
+  th+='<div class="tick-item"><span class="tick-sym">'+t.s+'</span><span style="color:var(--sub)">'+t.p+'</span><span class="'+(t.u?'tick-up':'tick-dn')+'">'+t.c+'</span></div>';
+});
+document.getElementById('tickerInner').innerHTML=th;
+
+// HEATMAP
+var hmCoins=[
+  {s:'SOL',c:'+4.3%',v:.43},{s:'AVAX',c:'+3.2%',v:.32},{s:'ATOM',c:'+1.1%',v:.11},
+  {s:'BTC',c:'-2.1%',v:-.21},{s:'BNB',c:'-1.1%',v:-.11},
+  {s:'XRP',c:'-0.6%',v:-.06},{s:'ETH',c:'-3.8%',v:-.38},{s:'ADA',c:'-4.2%',v:-.42},
+  {s:'DOT',c:'-2.9%',v:-.29},{s:'MATIC',c:'-6.1%',v:-.61},
+  {s:'LINK',c:'-5.4%',v:-.54},{s:'LTC',c:'-3.1%',v:-.31},{s:'UNI',c:'-4.8%',v:-.48},
+  {s:'AAVE',c:'-7.2%',v:-.72},{s:'INJ',c:'+2.1%',v:.21},
+];
+var hm=document.getElementById('heatmap');
+hmCoins.forEach(function(c){
+  var intensity=Math.min(Math.abs(c.v)*2,1);
+  var bg=c.v>0
+    ?'rgba(39,174,96,'+(.12+intensity*.22)+')'
+    :'rgba(232,57,42,'+(.12+intensity*.28)+')';
+  var col=c.v>0?'#27ae60':'#e8392a';
+  var d=document.createElement('div');
+  d.className='hm-cell';
+  d.style.background=bg;
+  d.style.border='1px solid '+(c.v>0?'rgba(39,174,96,.25)':'rgba(232,57,42,.25)');
+  d.innerHTML='<span class="hm-coin">'+c.s+'</span><span class="hm-chg" style="color:'+col+'">'+c.c+'</span>';
+  hm.appendChild(d);
+});
+
+// SPARKLINES
+function drawSparkline(id, up){
+  var canvas=document.getElementById(id);
+  if(!canvas)return;
+  canvas.width=60;canvas.height=24;
+  var ctx=canvas.getContext('2d');
+  var pts=[];
+  var v=0;
+  for(var i=0;i<16;i++){
+    v+=((Math.random()-.5+(up?.1:-.1))*2);
+    pts.push(v);
+  }
+  var mn=Math.min.apply(null,pts),mx=Math.max.apply(null,pts);
+  var rng=mx-mn||1;
+  ctx.beginPath();
+  pts.forEach(function(p,i){
+    var x=i*(60/15),y=24-(p-mn)/rng*20-2;
+    if(i===0)ctx.moveTo(x,y);else ctx.lineTo(x,y);
+  });
+  ctx.strokeStyle=up?'#27ae60':'#e8392a';
+  ctx.lineWidth=1.5;ctx.stroke();
+}
+[false,false,true,false,true,false].forEach(function(u,i){drawSparkline('sp'+i,u);});
+
+// BTC CHART
+function drawBTCChart(){
+  var canvas=document.getElementById('btcChart');
+  if(!canvas)return;
+  var W=canvas.parentElement.offsetWidth||700;
+  canvas.width=W;
+  var H=220;
+  var ctx=canvas.getContext('2d');
+
+  var N=38,candles=[],price=85400;
+  for(var i=0;i<N;i++){
+    var open=price;
+    var change=(Math.random()-.52)*1600;
+    var close=open+change;
+    var high=Math.max(open,close)+Math.random()*700;
+    var low=Math.min(open,close)-Math.random()*700;
+    candles.push({open,close,high,low});
+    price=close;
+  }
+
+  var liveClose=candles[N-1].close;
+  var liveTarget=liveClose+(Math.random()-.52)*1200;
+  var animP=0;
+  var lastT=0;
+
+  var PAD={l:62,r:18,t:16,b:32};
+  var CW=W-PAD.l-PAD.r,CH=H-PAD.t-PAD.b;
+  var cw=(CW/N)*.6,gap=(CW/N)*.4;
+
+  function mm(){
+    var mn=Infinity,mx=-Infinity;
+    candles.forEach(function(c){mn=Math.min(mn,c.low);mx=Math.max(mx,c.high);});
+    var lv=liveClose+(liveTarget-liveClose)*animP;
+    mn=Math.min(mn,lv-800);mx=Math.max(mx,lv+800);
+    var p=(mx-mn)*.08;return{min:mn-p,max:mx+p};
+  }
+  function toY(p,m){return PAD.t+CH-(p-m.min)/(m.max-m.min)*CH;}
+
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    ctx.fillStyle='#0d0d0d';ctx.fillRect(0,0,W,H);
+    var m=mm();
+
+    // Grid
+    for(var g=0;g<=4;g++){
+      var gy=PAD.t+CH*(g/4);
+      ctx.strokeStyle='rgba(255,255,255,.05)';ctx.lineWidth=1;
+      ctx.beginPath();ctx.moveTo(PAD.l,gy);ctx.lineTo(W-PAD.r,gy);ctx.stroke();
+      var lp=m.max-(m.max-m.min)*(g/4);
+      ctx.fillStyle='rgba(255,255,255,.25)';
+      ctx.font='9px "Barlow Condensed",sans-serif';ctx.textAlign='right';
+      ctx.fillText('$'+Math.round(lp/100)*100,PAD.l-5,gy+3);
+    }
+
+    // EMA
+    var ema=candles[0].close,k=2/(12+1);
+    ctx.beginPath();ctx.strokeStyle='rgba(232,120,32,.5)';ctx.lineWidth=1.5;ctx.setLineDash([3,3]);
+    candles.forEach(function(c,i){
+      ema=c.close*k+ema*(1-k);
+      var x=PAD.l+i*(CW/N)+gap/2+cw/2;
+      if(i===0)ctx.moveTo(x,toY(ema,m));else ctx.lineTo(x,toY(ema,m));
+    });
+    ctx.stroke();ctx.setLineDash([]);
+
+    // Candles
+    candles.forEach(function(c,i){
+      var x=PAD.l+i*(CW/N)+gap/2,xc=x+cw/2;
+      var isG=c.close>=c.open;
+      var col=isG?'#27ae60':'#e8392a';
+      ctx.strokeStyle=col;ctx.lineWidth=1;
+      ctx.beginPath();ctx.moveTo(xc,toY(c.high,m));ctx.lineTo(xc,toY(c.low,m));ctx.stroke();
+      var bT=Math.min(toY(c.open,m),toY(c.close,m));
+      var bH=Math.max(Math.abs(toY(c.open,m)-toY(c.close,m)),2);
+      ctx.globalAlpha=.85;ctx.fillStyle=col;ctx.fillRect(x,bT,cw,bH);ctx.globalAlpha=1;
+    });
+
+    // Live candle
+    var lv=liveClose+(liveTarget-liveClose)*animP;
+    var lx=PAD.l+(N-1)*(CW/N)+gap/2,lxc=lx+cw/2;
+    var isG=lv>=candles[N-1].open;
+    var lc=isG?'#27ae60':'#e8392a';
+    ctx.shadowColor=lc;ctx.shadowBlur=8;
+    ctx.strokeStyle=lc;ctx.lineWidth=1.5;
+    ctx.beginPath();ctx.moveTo(lxc,toY(lv+500,m));ctx.lineTo(lxc,toY(lv-500,m));ctx.stroke();
+    var lbT=Math.min(toY(candles[N-1].open,m),toY(lv,m));
+    var lbH=Math.max(Math.abs(toY(candles[N-1].open,m)-toY(lv,m)),3);
+    ctx.fillStyle=lc;ctx.fillRect(lx,lbT,cw,lbH);ctx.shadowBlur=0;
+
+    // Price dash line
+    if(Math.floor(Date.now()/500)%2===0){
+      ctx.strokeStyle='rgba(232,57,42,.4)';ctx.lineWidth=1;ctx.setLineDash([3,4]);
+      ctx.beginPath();ctx.moveTo(PAD.l,toY(lv,m));ctx.lineTo(W-PAD.r,toY(lv,m));ctx.stroke();
+      ctx.setLineDash([]);
+    }
+
+    // Live price tag
+    var py=toY(lv,m);
+    ctx.fillStyle='#e8392a';ctx.beginPath();
+    ctx.roundRect(W-PAD.r+1,py-8,54,16,3);ctx.fill();
+    ctx.fillStyle='white';ctx.font='bold 9px "Barlow Condensed",sans-serif';ctx.textAlign='left';
+    ctx.fillText('$'+Math.round(lv).toLocaleString(),W-PAD.r+5,py+3);
+
+    document.getElementById('btcLive').textContent='$'+Math.round(lv).toLocaleString();
+  }
+
+  function tick(ts){
+    requestAnimationFrame(tick);
+    if(ts-lastT<40)return;lastT=ts;
+    animP+=.0025;
+    if(animP>=1){
+      candles.push({open:liveClose,close:liveTarget,high:liveTarget+600,low:liveClose-600});
+      if(candles.length>N)candles.shift();
+      liveClose=liveTarget;liveTarget=liveClose+(Math.random()-.52)*1600;animP=0;
+    }
+    draw();
+  }
+  requestAnimationFrame(tick);
+}
+
+window.addEventListener('load',function(){
+  drawBTCChart();
+  // Animate shock bars
+  document.querySelectorAll('.shock-bar').forEach(function(b){
+    var w=b.style.width;b.style.width='0';
+    setTimeout(function(){b.style.width=w;},300);
+  });
+});
+window.addEventListener('resize',drawBTCChart);
+</script>
+</body>
+</html>
