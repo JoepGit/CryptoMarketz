@@ -1,18 +1,18 @@
 {
-  "date": "2026-03-17",
-  "focus": "Bitcoin stabiliseert rond $74.5K na weekelijkse stijging van 6.4%, terwijl Ethereum onderperformt ondanks 13.93% weekwinst.",
-  "risk": "Moderate, Fear dominant, korte-termijn consolidatie",
-  "btc_structure": "BTC noteert op $74,499 met minimale intraday beweging (-0.28% 1h) maar solide weekperformance (+6.40%). Resistentie ligt rond $75.5K, steun op $73.0K na deze wekelijkse rally. Volume van $53.21B duidt op gezonde liquiditeit ondanks consolidatie.",
-  "eth_flows": "Ethereum staat op $2,323.81 met zwakke intraday actie (-0.52% 1h, -0.24% 24h) ondanks sterke 7-daags opbrengst van +13.93%. De underperformance tegenover BTC suggereert voorzichtigheid in altcoin-sentiment, hoewel $29.82B volume solide blijft.",
+  "date": "dinsdag 17 maart 2026",
+  "focus": "Bitcoin stabiliteit rond $74.564 ondanks gemengde altcoin-performance; marktbrede consolidatie voor Fed-beslissing.",
+  "risk": "Moderate volatiliteit, macro-afhankelijk",
+  "btc_structure": "Bitcoin noteert op $74.564 met bescheiden +0.65% daytrading-winst en robuust volume van $53.18B. De technische positie blijft steun vinden boven de 72k-zone, echter afwachtende houding voorheen Fed-communicatie.",
+  "eth_flows": "Ethereum onder lichte verkopsdruk op $2.327,91 (-0.54%) met volume van $28.87B. De afname duidt op voorzichtigheid na recentelijk hawkish sentiment; ondersteuning bij $2.250 blijft cruciaal.",
   "top_narratives": [
-    "Institutionele bitcoin-adoptie: Strategy voert massale BTC-aankopen door via nieuw fundingmodel",
-    "Regelgeving onder druk: Arizona AG vervolgt prediction market Kalshi op 'illegaal gokken'",
-    "Solana-momentum herpakt: Phantom-wallet krijgt CFTC-goedkeuring voor derivaten; bullish signaal keert terug",
-    "Tokenisering accelereert: Tether AI-framework en VersaBank cross-border deposities schalen snel"
+    "Fed-beleidsrisico's domineren sentiment",
+    "Institutionele accumulatie in BTC ondanks macro-onzekerheid",
+    "Altcoin-relatieve underperformance (XRP +0.28%, SOL -1.05%)",
+    "Liquiditeitsconcentratie in hoofd-paren"
   ],
-  "macro_impact": "Mastercard's $1.8B betalingsdeal signaleert institutionele verschuiving naar crypto-infrastructure, terwijl regelgevingsdruk (Kalshi-zaak in Arizona) beleggers voorzichtiger stemt. Solana's terugkeer naar bullish signalen en Phantom's CFTC-goedkeuring bieden tegenkracht tegen risico-aversie.",
-  "whale_flows": "Liquidi\u00adteitsgegevens niet beschikbaar, maar $129.2B totaal 24h-volume op $2.62T markt duidt op normale handelsactiviteit. BTC's $53.21B volume en ETH's $29.82B volume behouden gezond liquiditeitsprofiel zonder extreem katten-muis-gedrag.",
-  "funding_oi": "Binance Futures funding rates en open interest gegevens niet beschikbaar voor vandaag, wat analyse van leverage-positie\u00adring en sentiment-extremen beperkt. Dit vergt voorzichtigheid bij short-termijn directionale bets totdat data beschikbaar is.",
-  "volatility_outlook": "Fear & Greed Index stijgt van 23 (Extreme Fear gisteren) naar 28 (Fear vandaag), wat voorzichtig herstel van panic-stemming aanduidt. Verwacht gematigde volatiliteit rond support/resistance-niveaus; bullish technische setups (7d +6-14% voor top alts) kunnen uitbraken catalyseren.",
-  "full_report": "Bitcoin koersvoering op $74,499 (+0.73% 24h, +6.40% 7d) met $53.21B volume toont institutionele inkoopkracht na Mastercard-deal. Ethereum volgt op $2,323.81 (-0.24% 24h) met sterke 13.93% weekwinst, maar underperformance versus BTC weerspiegelt voorzichtig altcoin-sentiment. XRP (+10.76% 7d), ADA (+9.93% 7d) en SOL (+9.66% 7d) behouden bullish momentum ondanks korte-termijn consolidatie. Fear & Greed verbetert van 23 naar 28, wat stabilisering van extremen panic aanduidt. Regelgeving (Arizona vs. Kalshi) vormt downside-risico, terwijl Solana's CFTC-goedkeuring (Phantom) en tokenisatie-expansie (Tether, VersaBank) bullish fundamentals ondersteunen. Totale markt cap: $2.62T op $129.2B volume."
+  "macro_impact": "Renteverwachtingen vormen primaire katalysator; beleggers wachten op rentebeslissingen. Geopolitieke spanning blijft achtergrondrisico met effecten op risk-appetite.",
+  "whale_flows": "Volume-concentratie in BTC ($53.18B) versus altcoins suggereert flight-to-safety gedrag. ETH's $28.87B volume toont institutionele hedging-activiteit.",
+  "funding_oi": "Funding rates slecht positief; long-posities voorzichtig opgebouwd. Verwacht gemengde OI-bewegingen hangende macro-catalysatoren.",
+  "volatility_outlook": "IV-compressie verwacht vóór Fed; uitbraak-potentieel naar beide zijden. Wacht rekening houdend met FOMC-timing voor gedefinieerde posities.",
+  "full_report": "Dinsdag 17 maart 2026: Bitcoin handelt op $74.564 (+0.65%, $53.18B volume) met stabiele technische positie, terwijl Ethereum onder druk staat op $2.327,91 (-0.54%, $28.87B volume). Altcoins presteren zwakker: XRP +0.28% op $1.53, SOL -1.05% op $94.86, en BNB -0.65% op $672.09. De markt vertoont klassieke consolidatie-karakteristieken voor macro-catalysatoren, met volume-concentratie in hoofd-paren duiding op institutioneel hedging. Beleggers monitoren Fed-communicatie; geen significante whale-accumulation waargenomen buiten standaard market-making. Aanbeveling: wacht op verdere macro-helderheid alvorens grote posities op te bouwen."
 }
