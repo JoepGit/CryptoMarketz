@@ -1,18 +1,18 @@
 {
   "date": "2026-03-17",
-  "focus": "Bitcoin consolidatie boven $74.7K terwijl Ethereum sterke weekwinst van +12.76% behoudt; Fear Index stijgt naar 28 na extreme panic.",
-  "risk": "Laag-matig, consolidatiefase met voorzichtig sentiment",
-  "btc_structure": "Bitcoin noteert $74,707 met bescheiden intradag winst (+0.35% 1h) maar solide weekperformance van +5.41%. Prijs handelt in smalle range wat consolidatieprijzing suggereert na recente rallies; directe support rond $74K-$74.5K kritiek voor marktstructuur.",
-  "eth_flows": "Ethereum outperformt op $2,336.08 met imponerende 7-daagse winst van +12.76% ondanks minimale 24h beweging (+0.34%). Volume van $29.1B duidt op sterke participatie; technisch gezien is dit wekelijks momentum bepalend voor verdere upside.",
+  "focus": "Bitcoin stabiliseert rond $74.570 terwijl Ethereum sterke weekperformance (+12.52%) aanhoudt ondanks intraday zwakte.",
+  "risk": "Gemengd: Fear sentiment stijgt, maar markt cap groeit",
+  "btc_structure": "Bitcoin noteert $74.570 met minimale intraday beweging (-0.08% 1h) maar solide weekwinst van +5.21%. De 7-daagse opwaartse trend blijft intact ondanks voorzichtige korte-termijn positiering. Sleutelweerstandsniveaus blijven cruciaal gezien de verminderde intraday momentum.",
+  "eth_flows": "Ethereum ($2.331,22) vertoont sterke fundamentals met +12.52% weekwinst, maar wordt vandaag geremd door -0.36% intraday daling. Volume van $29.03B ondersteunt de 7-daagse rally ondanks korte-termijn profit-taking signalen.",
   "top_narratives": [
-    "Mastercard's $1.8B acquisition duidt op institutionele crypto-acceptatie in betalingen",
-    "Kalshi-aanklacht in Arizona signaleert regelgevingsrisico voor prediction markets",
-    "Solana Phantom wallet krijgt CFTC-goedkeuring voor derivatives access",
-    "Tether's AI training framework breidt use-cases uit naar decentralized compute"
+    "Institutionele Bitcoin-accumulatie: Strategy's massieve aankopen signaleren vertrouwen in lange-termijn waardeproposities",
+    "Solana-momentum terugkeer: Technische signalen gekoppeld aan vorige 142% rally duiden op mogelijke bullish fase",
+    "Stablecoin innovatie & AI: Tether's AI-framework en VersaBank's tokenized deposits verbreden use-cases buiten tradingcyclus",
+    "Regulatorische turbulentie: Arizona AG charges tegen Kalshi vs. Phantom's CFTC derivatives-goedkeuring tonen onzekere regelgeving"
   ],
-  "macro_impact": "Institutionele activiteiten (Mastercard, Strategy's treasury aankopen, VersaBank tokenisatie) tonen diepe marktintegratietend ondanks regelgevingsspanning. Kalshi-aanklacht benadrukt juridische onzekerheid in bepaalde crypto-segmenten, terwijl Phantom-goedkeuring door CFTC positief signaal is voor gemainstreame derivaten.",
-  "whale_flows": "Liquidatiegegevens niet beschikbaar; totale 24h volume van $130.6B suggereert gezonde liquiditeit ondanks consolidatie. BTC dominantie stijgt naar 56.8% wat wijst op institutionele bid onder grotere cap assets.",
-  "funding_oi": "Funding rates en Open Interest data niet beschikbaar uit feed; zonder deze metreken is sentiment moeilijk in te schatten, doch positieve Fear & Greed-stijging (van 23 naar 28) suggereert langzaam afnemende panik.",
-  "volatility_outlook": "Fear & Greed Index op 28 (Fear) duidt op voorzichtigheid maar herstel van extreme angst (gisteren 23). Consolidatieprijzing in BTC/ETH suggereert lage verwachte volatiliteit komende 24-48 uur; breakout momentum afwachten.",
-  "full_report": "CryptoMarketz marktbrief 2026-03-17: Bitcoin consolideert rond $74,707 (+0.92% 24h, +5.41% 7d) met volume van $53.95B; Ethereum outperformt op $2,336.08 met sterke 7-daagswi (+12.76%). XRP leidt altseason momentum aan (+8.60%), terwijl UNI zwak blijft (-3.75%). Totale marktcap stijgt bescheiden naar $2.63T (+0.75% 24h) met BTC dominantie op 56.8%. Fear & Greed Index herstelt naar 28 (Fear) van extreme 23 gisteren, wat geleidelijke stabilisering suggereert. Institutioneelnieuws (Mastercard $1.8B, Phantom CFTC-goedkeuring) ondersteunt langtermin-bullcase, terwijl Kalshi-aanklacht juridische risico's benadrukt. Geen funding rate/OI-data beschikbaar voor afgeleide analyse; markt lijkt in veilige consolidatiestand te wachten op volgende catalysten."
+  "macro_impact": "Mastercard's $1.8B deal signaleert institutionele acceptatie van cryptobetalingen, maar Arizona AG's handhaving tegen prediction markets contrasteert deze groei. Tether's AI-framework en VersaBank's cross-border tokenized deposits versterken fundamentele adoptienarratieven buiten speculatieve kringen.",
+  "whale_flows": "Liquidatiegegevens ontbreken, maar $49.32B BTC-volume en sterke 7-daagse performance (+5.21%) suggereren institutionele accumulation in plaats van panic-selling. UNI's 24h-verlies (-3.67%) duidt op selectieve profit-taking in DeFi-tokens zonder systemische druk.",
+  "funding_oi": "Funding rates en Open Interest data zijn momenteel niet beschikbaar, wat onzekerheid cre\u00ebert over leverage-positionering. Dit gebrek aan zichtbaarheid onderstreept het belang van voorzichtigheid rond weerstandsniveaus totdat marktstructuurdata normaliseert.",
+  "volatility_outlook": "Fear & Greed Index stijgt van 23 (Extreme Fear) naar 28 (Fear), wat duidt op voorzichtig herstel van vertrouwen. Gemengde intraday action (-0.08% tot -0.36% 1h) geeft aan dat consolidatie waarschijnlijker is dan grote breakouts in komende uren.",
+  "full_report": "Op 17 maart 2026 handelt Bitcoin op $74.570 (+5.21% wekelijks, +0.53% 24h) met volume van $49.32B, terwijl Ethereum op $2.331,22 staat met indrukwekkende +12.52% weekperformance ondanks -0.36% intraday zwakte. De totale marktcap bereikt $2.63T (+0.58%), ondersteund door breed gebaseerde Alt-rally (XRP +8.57%, SOL +8%, ADA +9.56%). Fear & Greed Index herstelt naar 28 van extreem laag niveau, wat geleidelijk optimisme weerspiegelt. Institutionele drivers (Strategy's Bitcoin-aankopen, Mastercard's $1.8B deal) tegenover regelgevingsrisico's (Arizona AG vs. Kalshi) cre\u00ebren onzekere marktomgeving; focus verschuift naar fundamentale adoptiepilaren zoals Tether's AI en VersaBank's tokenized deposits naast korte-termijn consolidatiepatronen."
 }
