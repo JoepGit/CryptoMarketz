@@ -1,18 +1,18 @@
 {
-  "date": "maandag 16 maart 2026",
-  "focus": "Ethereum outperformt Bitcoin met 8.34% stijging terwijl altseason momentum toeneemt",
-  "risk": "Verhoogde volatiliteit, liquidatie risico",
-  "btc_structure": "Bitcoin consolideert rond $74,623 met een bescheiden +2.94% dagwinst en $56.71B volume. De grootste asset handelt zonder duidelijke directie na het recente rallyfase, wat duidt op consolidatie voordat de volgende beweging.",
-  "eth_flows": "Ethereum toont significant outperformance met +8.34% naar $2,352.1 en robuust volume van $38.60B. Dit dubbele cijfer rendement suggereert sterke institutionele inflows richting smart contract platforms.",
+  "date": "dinsdag 17 maart 2026",
+  "focus": "Altseason-momentum accelereert met ETH +7.67% terwijl BTC consolidateert rond $75.347",
+  "risk": "Overbought conditions, correctierisico",
+  "btc_structure": "Bitcoin handelt op $75.347 met +3.52% dagwinst en blijft in consolidatiefase onder recente toppen. Het volume van $62.09B suggereert voorzichtige accumulatie zonder explosieve breakout. Structureel blijft support rond $73k kritiek.",
+  "eth_flows": "Ether leidt de markt met sterke +7.67% stijging naar $2.351,66 en trekt massale inflows aan met $41.87B volume. Dit duidt op hernieuwde altseason-dynamiek en institutionele interesse in layer-1 assets. ETH/BTC ratio versterkt bovenmatig.",
   "top_narratives": [
-    "Altseason acceleration met Ethereum leading",
-    "Macro policy shifts ondersteunen risicoactiva",
-    "Layer-2 adoption thema herleeft",
-    "Volatiliteit als momentum indicator"
+    "Altseason acceleratie met Ether voorkant",
+    "Macro-tailwinds en lagere renteverwachtingen",
+    "Solana's +3.69% overeenkomstig met ecosysteemmomentum",
+    "Liquiditeit-injectie vanuit TradFi naar digitale assets"
   ],
-  "macro_impact": "Marktbrede risk-on sentiment ondersteunt alts; macro omgeving blijft ondersteunend voor crypto-assets. Renteverwachtingen en centrale bankbeleid blijven kapitaalaantrekkingsvector.",
-  "whale_flows": "Ethereum volumes ($38.60B) domineren relatief gezien; BTC volume ($56.71B) wijst op profit-taking uit majors. XRP stijging (+7.02%) en SOL (+4.25%) duiden op brede herdistributie naar secundaire chains.",
-  "funding_oi": "Stijgende funding rates verwacht gegeven momentum; long positioning in altcoins waarschijnlijk versterkt. OI uitbreiding op leverage-markten ondersteunt verdere volatielebeweging.",
-  "volatility_outlook": "Volatiliteit zal waarschijnlijk toenemen gegeven het outperformance-patroon; ATM options premies wijzen op 45-55% IV range. Breakout boven $2,400 ETH zou verdere squeeze-dynamiek kunnen triggeren.",
-  "full_report": "Bitcoin opent maandag op $74,623 (+2.94%, vol $56.71B) in consolidatiepatroon, terwijl Ethereum explosief naar $2,352.1 stijgt met +8.34% en marktleiding claimit. Altseason dynamiek versnelt met XRP +7.02% ($1.54) en SOL +4.25% ($95.88), terwijl BNB modest +0.94% op $679 aangeeft selectieve rotatie. Macro omgeving blijft supportief; whale-activity verschuift naar high-volume alts ($38.60B ETH). Risico's: liquidaties bij verdere volatiliteit, policy shifts. Outlook: Ethereum potenzieel voor $2,500 break; Bitcoin verdedigt consolidatiegebied."
+  "macro_impact": "Marktsignalen duiden op afnemende rente-angst en risk-on sentiment wereldwijd. De brede altcoin rally (+7.67% ETH, +8.43% XRP) reflecteert verwachtingen van accommodatief monetair beleid. Fed-communicatie deze week blijft cruciaal.",
+  "whale_flows": "Extreme volume concentratie in ETH ($41.87B) en BTC ($62.09B) suggereert gestructureerde positieaufbouw door grote spelers. XRP's +8.43% met $5.10B volume duidt op speculatieve retail-inflows naar smaller caps.",
+  "funding_oi": "Long-posities lopen significant uit gegeven de altcoin-momentum. Verwachting is dat funding rates oplopen naar 0.08-0.10% op Ether komende 24h. Voorzichtigheid geboden bij extreme leverage.",
+  "volatility_outlook": "Implied volatility stijgt met altseason-acceleratie; expect 4-6% swings per sessie. Support/resistance zones vernauwing suggereert opstelling voor grotere move; directionaal onduidelijk.",
+  "full_report": "Dinsdag 17 maart brengt duidelijk risk-on sentiment met Bitcoin op $75.347 (+3.52%) en Ether explosief naar $2.351,66 (+7.67%), aangestuurd door macro-tailwinds en afnemende rente-angst. Het volume-profiel—BTC $62.09B en ETH $41.87B—getuigt van institutionele participatie. XRP en SOL stijgen respectievelijk +8.43% naar $1.57 en +3.69% naar $95.58, waarmee altseason-dynamiek bevestigd wordt. Risico's concentreren zich rond overbought readings; pullbacks naar $2.250 (ETH) en $73.500 (BTC) zijn technisch waarschijnlijk. Macro-agenda deze week (Fed-rentebesluit) blijft domineerder dan technische levels."
 }
