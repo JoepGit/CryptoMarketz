@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CryptoMarketz AI Trading Intelligence</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --accent:#e87820;
+  --accent2:#e8b020;
+  --red:#e8392a;
+  --grn:#27ae60;
+  --bg:#0d0d0d;
+  --bg2:#141414;
+  --bg3:#1a1a1a;
+  --cream:#e8e0d8;
+  --sub:#8a8078;
+  --bdr:rgba(255,255,255,.12);
+  --card:#1a1a1a;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--cream);overflow-x:hidden;cursor:none;}
+
+/* CURSOR */
+.cursor{position:fixed;width:10px;height:10px;background:var(--red);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);}
+.cursor-ring{position:fixed;width:38px;height:38px;border:1.5px solid rgba(232,57,42,.5);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .15s,height .15s,border-color .15s;}
+.cursor-ring.hov{width:56px;height:56px;border-color:rgba(232,57,42,.9);}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 52px;height:68px;background:rgba(10,10,10,.95);backdrop-filter:blur(18px);border-bottom:1px solid var(--bdr);}
+.brand{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;letter-spacing:.04em;}
+.brand span{background:linear-gradient(120deg,var(--accent2),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.nav-links{display:flex;gap:34px;}
+.nav-links a{font-family:'Barlow Condensed',sans-serif;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--sub);text-decoration:none;transition:color .2s;}
+.nav-links a:hover{color:var(--cream);}
+.login-btn{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:13px 28px;border-radius:8px;border:1.5px solid rgba(232,57,42,.5);color:var(--accent);text-decoration:none;transition:all .2s;background:rgba(232,120,32,.05);}
+.login-btn:hover{background:var(--accent);color:#0d0d0d;border-color:var(--accent);}
+
+/* ── HERO REDESIGN ── */
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;text-align:center;padding:120px 40px 80px;}
+
+/* Noise grain overlay */
+.hero::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");opacity:.4;pointer-events:none;z-index:1;}
+
+.hero-content{position:relative;z-index:10;max-width:900px;margin:0 auto;}
+
+.h-tag{font-family:'Barlow Condensed',sans-serif;font-size:13px;letter-spacing:.18em;color:var(--accent);margin-bottom:32px;display:inline-flex;align-items:center;gap:10px;opacity:0;animation:up .8s ease .1s forwards;border:1px solid rgba(232,120,32,.2);padding:8px 18px;border-radius:40px;background:rgba(232,120,32,.05);}
+.h-dot{width:5px;height:5px;border-radius:50%;background:var(--accent);animation:bl 2s infinite;}
+@keyframes bl{0%,100%{opacity:1;}50%{opacity:.25;}}
+
+.h-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(42px,7vw,96px);font-weight:900;line-height:.97;letter-spacing:-.03em;margin-bottom:0;opacity:0;animation:up .9s ease .25s forwards;}
+.h-title .line1{display:block;color:var(--cream);}
+.h-title .line2{display:block;color:var(--cream);}
+.h-title .line3{display:block;background:linear-gradient(120deg,var(--accent2),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+
+/* Big visual centerpiece */
+.hero-visual{position:relative;width:480px;height:340px;margin:40px auto;opacity:0;animation:up 1s ease .5s forwards;flex-shrink:0;}
+.hv-glow{position:absolute;inset:-60px;background:radial-gradient(ellipse,rgba(232,120,32,.12) 0%,transparent 65%);pointer-events:none;animation:pulse 4s ease-in-out infinite;z-index:0;}
+@keyframes pulse{0%,100%{opacity:.7;transform:scale(1);}50%{opacity:1;transform:scale(1.06);}}
+.chart-frame{position:relative;width:480px;height:340px;border-radius:10px;overflow:hidden;border:1px solid rgba(232,57,42,.25);box-shadow:0 0 60px rgba(232,57,42,.08),inset 0 0 40px rgba(0,0,0,.5);background:#0d0d0d;}
+#chartCanvas{display:block;width:480px;height:340px;}
+/* Floating data chips around visual */
+.chip{position:absolute;background:rgba(8,18,30,.95);border:1px solid rgba(232,120,32,.28);border-radius:12px;padding:10px 16px;backdrop-filter:blur(16px);white-space:nowrap;animation:float 6s ease-in-out infinite;z-index:5;}
+.chip-lbl{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:.1em;color:var(--sub);margin-bottom:4px;text-transform:uppercase;}
+.chip-val{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;}
+.chip-val.g{color:var(--accent);}
+.chip-val.r{color:var(--red);}
+.chip1{top:-10px;left:-100px;animation-delay:0s;}
+.chip2{top:40px;right:-105px;animation-delay:1.5s;}
+.chip3{bottom:30px;left:-90px;animation-delay:3s;}
+.chip4{bottom:-5px;right:-80px;animation-delay:4.5s;}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+
+.h-sub{font-size:22px;color:var(--sub);line-height:1.7;max-width:460px;margin:0 auto 44px;opacity:0;animation:up .8s ease .7s forwards;font-weight:400;}
+
+.h-btns{display:flex;gap:14px;justify-content:center;opacity:0;animation:up .8s ease .9s forwards;flex-wrap:wrap;}
+.btn-main{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:20px 48px;border-radius:12px;background:var(--red);color:#0d0d0d;border:none;cursor:none;transition:opacity .2s,transform .2s;text-decoration:none;display:inline-block;}
+.btn-main:hover{opacity:.85;transform:translateY(-3px);}
+.btn-out{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:20px 48px;border-radius:12px;background:transparent;color:var(--cream);border:1.5px solid rgba(255,255,255,.15);cursor:none;transition:border-color .2s,transform .2s;text-decoration:none;display:inline-block;}
+.btn-out:hover{border-color:rgba(255,255,255,.3);transform:translateY(-3px);}
+
+/* Scroll hint */
+.s-hint{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);z-index:10;display:flex;flex-direction:column;align-items:center;gap:8px;opacity:0;animation:up .8s ease 1.2s forwards;}
+.s-line{width:1px;height:50px;background:linear-gradient(to bottom,var(--accent),transparent);animation:sp 2.2s ease-in-out infinite;}
+@keyframes sp{0%,100%{opacity:1;transform:scaleY(1);}50%{opacity:.3;transform:scaleY(.55);}}
+.s-txt{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.18em;color:var(--sub);}
+@keyframes up{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
+
+/* TICKER */
+.ticker-bar{overflow:hidden;height:40px;background:rgba(8,8,8,.98);border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr);}
+.ticker-inner{display:flex;animation:tick 28s linear infinite;white-space:nowrap;height:100%;align-items:center;}
+.ti{display:flex;align-items:center;gap:9px;padding:0 28px;font-family:'Barlow Condensed',sans-serif;font-size:13px;}
+.ti-s{color:var(--sub);letter-spacing:.1em;}
+.ti-p{color:var(--cream);font-weight:700;}
+.ti-c.up{color:var(--grn);}
+.ti-c.dn{color:var(--red);}
+.ti-div{width:1px;height:15px;background:var(--bdr);flex-shrink:0;}
+@keyframes tick{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+/* SECTION BASE */
+.sec{padding:130px 60px;}
+.si{max-width:1400px;margin:0 auto;}
+.s-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:13px;letter-spacing:.18em;color:var(--accent);text-transform:uppercase;margin-bottom:14px;}
+.s-h{font-family:'Barlow Condensed',sans-serif;font-size:clamp(32px,4.8vw,62px);font-weight:900;line-height:1.06;margin-bottom:70px;}
+.s-h span{background:linear-gradient(120deg,var(--accent2),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+
+/* ── SIGNALS SECTION ── */
+.signals-hero{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;}
+@media(max-width:1000px){.signals-hero{grid-template-columns:1fr;}}
+
+.sig-left{display:flex;flex-direction:column;gap:18px;}
+.sig-card{background:#1e1a16;border:1px solid rgba(255,255,255,.18);border-radius:20px;padding:28px 32px;display:flex;align-items:center;justify-content:space-between;transition:border-color .2s,transform .2s;box-shadow:0 4px 24px rgba(0,0,0,.35);}
+.sig-card:hover{border-color:rgba(232,57,42,.5);transform:translateX(5px);}
+.sig-coin-info{display:flex;align-items:center;gap:20px;}
+.coin-icon{width:58px;height:58px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;flex-shrink:0;}
+.coin-icon.btc{background:rgba(247,147,26,.28);color:#f7931a;border:1.5px solid rgba(247,147,26,.6);}
+.coin-icon.eth{background:rgba(98,126,234,.28);color:#8fa8ff;border:1.5px solid rgba(98,126,234,.6);}
+.coin-icon.sol{background:rgba(153,69,255,.28);color:#c084ff;border:1.5px solid rgba(153,69,255,.6);}
+.coin-icon.bnb{background:rgba(240,185,11,.28);color:#f0b90b;border:1.5px solid rgba(240,185,11,.6);}
+.coin-name{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;color:var(--cream);}
+.coin-entry{font-family:'Barlow Condensed',sans-serif;font-size:14px;color:var(--sub);letter-spacing:.1em;margin-top:5px;}
+.sig-right{display:flex;flex-direction:column;align-items:flex-end;gap:8px;}
+.sig-badge{font-family:'Barlow Condensed',sans-serif;font-size:14px;padding:8px 18px;border-radius:6px;letter-spacing:.1em;font-weight:700;}
+.sig-badge.buy{background:rgba(232,120,32,.2);color:#e87820;border:1.5px solid rgba(232,120,32,.6);}
+.sig-badge.sell{background:rgba(255,107,122,.2);color:#e8392a;border:1.5px solid rgba(255,107,122,.6);}
+.sig-tp{font-family:'Barlow Condensed',sans-serif;font-size:16px;color:var(--grn);}
+.sig-sl{font-family:'Barlow Condensed',sans-serif;font-size:16px;color:var(--red);}
+
+.sig-right-panel{display:flex;flex-direction:column;gap:18px;}
+.stat-row{background:#1a1a1a;border:1px solid var(--bdr);border-radius:20px;display:grid;grid-template-columns:1fr 1fr 1fr;}
+.stat-cell{padding:32px 28px;text-align:center;border-right:1px solid var(--bdr);}
+.stat-cell:last-child{border-right:none;}
+.stat-num{font-family:'Barlow Condensed',sans-serif;font-size:40px;font-weight:900;line-height:1;}
+.stat-num.g{background:linear-gradient(120deg,var(--accent2),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.stat-lbl{font-family:'Barlow Condensed',sans-serif;font-size:13px;letter-spacing:.1em;color:var(--sub);margin-top:8px;text-transform:uppercase;}
+
+.reasoning-box{background:#1a1a1a;border:1px solid var(--bdr);border-radius:20px;padding:28px 30px;}
+.rb-head{font-family:'Barlow Condensed',sans-serif;font-size:13px;letter-spacing:.1em;color:var(--accent);margin-bottom:16px;}
+.rb-text{font-size:16px;color:var(--sub);line-height:1.8;padding:16px 18px;background:rgba(232,120,32,.08);border-left:3px solid rgba(232,120,32,.7);border-radius:0 10px 10px 0;}
+
+/* ── MARKET BRIEF ── */
+.brief-layout{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;}
+@media(max-width:1000px){.brief-layout{grid-template-columns:1fr;}}
+.brief-main{background:#1a1a1a;border:1px solid var(--bdr);border-radius:22px;padding:40px;display:flex;flex-direction:column;gap:0;}
+.brief-date{font-family:'Barlow Condensed',sans-serif;font-size:13px;letter-spacing:.12em;color:var(--sub);margin-bottom:16px;}
+.brief-focus{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:700;color:var(--cream);line-height:1.55;margin-bottom:22px;}
+.risk-pill{display:inline-flex;align-items:center;gap:7px;font-family:'Barlow Condensed',sans-serif;font-size:14px;padding:10px 18px;border-radius:7px;background:rgba(255,107,122,.15);border:1.5px solid rgba(255,107,122,.5);color:#e8392a;margin-bottom:26px;}
+.brief-divider{height:1px;background:var(--bdr);margin-bottom:26px;}
+.brief-field{margin-bottom:20px;}
+.brief-field:last-child{margin-bottom:0;}
+.bf-lbl{font-family:'Barlow Condensed',sans-serif;font-size:13px;letter-spacing:.1em;color:var(--accent);margin-bottom:9px;text-transform:uppercase;}
+.bf-txt{font-size:16px;color:var(--sub);line-height:1.8;}
+.brief-side{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-content:start;}
+.brief-stat{background:#1a1a1a;border:1px solid var(--bdr);border-radius:18px;padding:26px 20px;text-align:center;}
+.bs-val{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;margin-bottom:7px;}
+.bs-val.g{background:linear-gradient(120deg,var(--accent2),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.bs-val.r{color:var(--red);}
+.bs-lbl{font-family:'Barlow Condensed',sans-serif;font-size:13px;letter-spacing:.08em;color:var(--sub);text-transform:uppercase;}
+.ntags{display:flex;flex-wrap:wrap;gap:7px;margin-top:4px;}
+.ntag{font-family:'Barlow Condensed',sans-serif;font-size:12px;padding:6px 14px;border-radius:4px;background:rgba(232,120,32,.15);border:1px solid rgba(232,120,32,.4);color:#e87820;}
+
+/* ── EDUCATION ── */
+.edu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;}
+@media(max-width:700px){.edu-grid{grid-template-columns:1fr;}}
+.edu-card{background:#1e1a16;border:1px solid rgba(255,255,255,.18);border-radius:20px;overflow:hidden;transition:border-color .25s,transform .25s;box-shadow:0 4px 24px rgba(0,0,0,.35);}
+.edu-card:hover{border-color:rgba(232,57,42,.4);transform:translateY(-5px);}
+.edu-visual{height:220px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.edu-num-bg{position:absolute;font-family:'Barlow Condensed',sans-serif;font-size:120px;font-weight:900;opacity:.04;color:var(--accent);line-height:1;pointer-events:none;}
+.edu-icon{font-size:52px;position:relative;z-index:1;}
+.edu-body{padding:32px 34px;}
+.edu-mod{font-family:'Barlow Condensed',sans-serif;font-size:13px;color:rgba(232,120,32,.7);letter-spacing:.18em;margin-bottom:10px;}
+.edu-title{font-size:26px;font-weight:700;color:var(--cream);margin-bottom:11px;line-height:1.3;}
+.edu-desc{font-size:16px;color:var(--sub);line-height:1.75;}
+.edu-foot{display:flex;gap:7px;margin-top:16px;flex-wrap:wrap;}
+.edu-chip{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.06em;padding:6px 14px;border-radius:4px;background:rgba(232,120,32,.15);border:1px solid rgba(232,120,32,.4);color:#e87820;}
+.edu-chip.b{background:rgba(74,222,128,.15);border-color:rgba(74,222,128,.45);color:#4ade80;}
+
+/* edu visual backgrounds */
+.ev1{background:linear-gradient(135deg,#0d2040,#1a3a6a);}
+.ev2{background:linear-gradient(135deg,#2a0d20,#3a1a08);}
+.ev3{background:linear-gradient(135deg,#0d2a20,#0d3a18);}
+.ev4{background:linear-gradient(135deg,#1a1a08,#2a0820);}
+.ev5{background:linear-gradient(135deg,#0d0d40,#160d3a);}
+.ev6{background:linear-gradient(135deg,#0d3a3a,#0d1a3a);}
+
+/* ── CTA ── */
+.cta-box{background:linear-gradient(145deg,var(--bg2),var(--bg3));border:1.5px solid rgba(232,120,32,.2);border-radius:24px;padding:90px 48px;text-align:center;position:relative;overflow:hidden;}
+.cta-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:400px;background:radial-gradient(ellipse,rgba(232,120,32,.12),transparent 65%);pointer-events:none;}
+.cta-h{font-family:'Barlow Condensed',sans-serif;font-size:clamp(26px,4.5vw,52px);font-weight:900;line-height:1.06;margin-bottom:18px;position:relative;}
+.cta-h span{background:linear-gradient(120deg,var(--accent2),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.cta-sub{font-size:20px;color:var(--sub);max-width:400px;margin:0 auto 40px;line-height:1.7;position:relative;}
+
+/* FOOTER */
+footer{border-top:1px solid var(--bdr);padding:30px 52px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.f-brand{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;}
+.f-brand span{color:var(--accent);}
+.f-note{font-family:'Barlow Condensed',sans-serif;font-size:12px;color:rgba(139,149,167,.35);letter-spacing:.1em;}
+
+/* ── FEATURES ── */
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+@media(max-width:1000px){.feat-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:620px){.feat-grid{grid-template-columns:1fr;}}
+.feat-card{background:#1e1a16;border:1px solid rgba(255,255,255,.18);border-radius:20px;padding:30px;transition:border-color .25s,transform .25s;box-shadow:0 4px 24px rgba(0,0,0,.35);}
+.feat-card:hover{border-color:rgba(232,57,42,.35);transform:translateY(-4px);}
+.feat-icon-wrap{width:58px;height:58px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;}
+.feat-title{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;color:var(--cream);margin-bottom:10px;letter-spacing:.02em;}
+.feat-desc{font-size:16px;color:var(--sub);line-height:1.78;margin-bottom:16px;}
+.feat-tags{display:flex;flex-wrap:wrap;gap:6px;}
+.ftag{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.06em;padding:6px 14px;border-radius:4px;background:rgba(232,120,32,.07);border:1px solid rgba(232,120,32,.18);color:rgba(232,120,32,.8);}
+
+/* ── HOW IT WORKS ── */
+.steps-wrap{display:flex;flex-direction:column;gap:0;position:relative;margin-bottom:60px;}
+.step-connector{position:absolute;left:28px;top:60px;bottom:60px;width:2px;background:linear-gradient(to bottom,rgba(232,120,32,.4),rgba(77,184,255,.2));z-index:0;}
+@media(max-width:700px){.step-connector{left:22px;}}
+.step-card{background:#1e1a16;border:1px solid rgba(255,255,255,.18);border-radius:20px;padding:32px 36px;margin-bottom:18px;position:relative;z-index:1;transition:border-color .25s;box-shadow:0 4px 24px rgba(0,0,0,.35);}
+.step-card:hover{border-color:rgba(232,120,32,.28);}
+.step-num{font-family:'Barlow Condensed',sans-serif;font-size:56px;font-weight:900;color:rgba(232,120,32,.06);position:absolute;top:16px;right:28px;line-height:1;}
+.step-body{display:flex;align-items:flex-start;gap:24px;}
+.step-icon-wrap{width:64px;height:64px;border-radius:16px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.step-title{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:var(--cream);margin-bottom:10px;letter-spacing:.02em;}
+.step-desc{font-size:14px;color:var(--sub);line-height:1.78;}
+
+/* Stats bar */
+.stats-bar{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr auto 1fr;align-items:center;background:#1a1a1a;border:1px solid rgba(255,255,255,.13);border-radius:20px;padding:36px 48px;gap:0;}
+@media(max-width:900px){.stats-bar{grid-template-columns:1fr 1fr;gap:28px;padding:28px;}.sbar-div{display:none;}}
+@media(max-width:500px){.stats-bar{grid-template-columns:1fr;}}
+.sbar-item{text-align:center;}
+.sbar-num{font-family:'Barlow Condensed',sans-serif;font-size:38px;font-weight:900;background:linear-gradient(120deg,var(--accent2),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:8px;}
+.sbar-lbl{font-family:'Barlow Condensed',sans-serif;font-size:7px;letter-spacing:.18em;color:var(--sub);text-transform:uppercase;}
+.sbar-div{width:1px;height:50px;background:rgba(255,255,255,.1);}
+
+/* ── REVEAL ── */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .75s ease,transform .75s ease;}
+.reveal.v{opacity:1;transform:translateY(0);}
+
+@media(max-width:700px){
+  nav{padding:0 20px;}
+  .nav-links{display:none;}
+  .hero-left{padding-left:24px;padding-right:24px;}
+  .h-badges{display:none;}
+  .sec{padding:80px 24px;}
+  footer{padding:24px;}
+}
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cur"></div>
+<div class="cursor-ring" id="cr"></div>
+
+<nav>
+  <div class="brand">Crypto<span>Marketz</span></div>
+  <div class="nav-links">
+    <a href="#signals">Signals</a>
+    <a href="market-tracker.html">Market Tracker</a>
+    <a href="#live" style="color:#e8392a;">● Thursday</a>
+    <a href="#education">Education</a>
+  </div>
+  <a class="login-btn" href="dashboard.html">Login →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="h-tag"><div class="h-dot"></div>Built for traders who are serious</div>
+
+    <h1 class="h-title">
+      <span class="line1">The market</span>
+      <span class="line2">rewards the</span>
+      <span class="line3">prepared.</span>
+    </h1>
+
+    <!-- Matrix centerpiece -->
+    <div class="hero-visual">
+      <div class="hv-glow"></div>
+      <div class="chart-frame">
+        <canvas id="chartCanvas"></canvas>
+      </div>
+      <div class="chip chip1">
+        <div class="chip-lbl">BTC / USD</div>
+        <div class="chip-val g">$83,240</div>
+      </div>
+      <div class="chip chip2">
+        <div class="chip-lbl">Win Rate</div>
+        <div class="chip-val g">74%</div>
+      </div>
+      <div class="chip chip3">
+        <div class="chip-lbl">Signal</div>
+        <div class="chip-val g">BUY</div>
+      </div>
+      <div class="chip chip4">
+        <div class="chip-lbl">P&amp;L</div>
+        <div class="chip-val g">+38%</div>
+      </div>
+    </div>
+
+    <p class="h-sub">AI signals. Daily briefs. Real education.<br>Everything you need. Nothing you don't.</p>
+
+    <div class="h-btns">
+      <a class="btn-main" href="dashboard.html">Get Access Now</a>
+      <a class="btn-out" href="#features">See What's Inside</a>
+    </div>
+  </div>
+
+  <div class="s-hint">
+    <span class="s-txt">Scroll</span>
+    <div class="s-line"></div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-bar"><div class="ticker-inner" id="tk"></div></div>
+
+<!-- ── FEATURES ── -->
+<section class="sec" id="features" style="background:var(--bg2);">
+  <div class="si">
+    <div class="reveal">
+      <div class="s-eyebrow">What you get</div>
+      <h2 class="s-h">Everything you need.<br><span>Nothing you do not.</span></h2>
+    </div>
+    <div class="feat-grid reveal">
+
+      <div class="feat-card">
+        <div class="feat-icon-wrap" style="background:rgba(232,120,32,.08);border:1px solid rgba(232,120,32,.2);">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M4 24 L10 16 L15 20 L21 10 L28 14" stroke="#e87820" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="28" cy="14" r="2.5" fill="#e87820"/>
+            <rect x="4" y="26" width="24" height="1.5" rx=".75" fill="rgba(232,120,32,.25)"/>
+          </svg>
+        </div>
+        <div class="feat-title">AI Signals</div>
+        <div class="feat-desc">Every hour the bot generates new BUY/SELL signals using live Binance data. EMA, RSI, volume analysis fully automated.</div>
+        <div class="feat-tags"><span class="ftag">Live data</span><span class="ftag">Max 5 actief</span><span class="ftag">TP & SL</span></div>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon-wrap" style="background:rgba(77,184,255,.08);border:1px solid rgba(77,184,255,.2);">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect x="4" y="6" width="24" height="20" rx="3" stroke="#e8b020" stroke-width="2"/>
+            <line x1="4" y1="12" x2="28" y2="12" stroke="#e8b020" stroke-width="1.5" opacity=".5"/>
+            <line x1="10" y1="18" x2="22" y2="18" stroke="#e8b020" stroke-width="1.5" opacity=".6"/>
+            <line x1="10" y1="22" x2="18" y2="22" stroke="#e8b020" stroke-width="1.5" opacity=".4"/>
+            <circle cx="7" cy="9" r="1.2" fill="#e8b020"/>
+          </svg>
+        </div>
+        <div class="feat-title">Daily Market Brief</div>
+        <div class="feat-desc">Every morning an AI-generated analysis. BTC structure, altcoin sentiment, Fear and Greed, whale flows up to speed in 30 seconds.</div>
+        <div class="feat-tags"><span class="ftag">Daily</span><span class="ftag">7 data sources</span><span class="ftag">AI analysis</span></div>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon-wrap" style="background:rgba(153,69,255,.08);border:1px solid rgba(153,69,255,.3);">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M16 4 L19 12 L28 12 L21 17 L24 26 L16 21 L8 26 L11 17 L4 12 L13 12 Z" stroke="#9945ff" stroke-width="2" fill="rgba(153,69,255,.15)" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="feat-title">Win/Loss Tracking</div>
+        <div class="feat-desc">Every signal is tracked. Win rate, P&L per trade, total performance fully transparent so you see exactly how the bot performs.</div>
+        <div class="feat-tags"><span class="ftag">Live stats</span><span class="ftag">Transparant</span><span class="ftag">Historiek</span></div>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon-wrap" style="background:rgba(240,185,11,.08);border:1px solid rgba(240,185,11,.25);">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="10" stroke="#f0b90b" stroke-width="2"/>
+            <path d="M16 8 L16 16 L21 21" stroke="#f0b90b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="16" cy="16" r="1.5" fill="#f0b90b"/>
+          </svg>
+        </div>
+        <div class="feat-title">Real-time Updates</div>
+        <div class="feat-desc">Data refreshes every hour via GitHub Actions. No manual work the bot runs 24/7 in the background and pushes new signals automatically.</div>
+        <div class="feat-tags"><span class="ftag">24/7 actief</span><span class="ftag">Automatisch</span><span class="ftag">GitHub Actions</span></div>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon-wrap" style="background:rgba(232,120,32,.08);border:1px solid rgba(232,120,32,.2);">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect x="5" y="14" width="6" height="13" rx="1.5" fill="rgba(232,120,32,.2)" stroke="#e87820" stroke-width="1.5"/>
+            <rect x="13" y="9" width="6" height="18" rx="1.5" fill="rgba(232,120,32,.3)" stroke="#e87820" stroke-width="1.5"/>
+            <rect x="21" y="4" width="6" height="23" rx="1.5" fill="rgba(232,120,32,.4)" stroke="#e87820" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="feat-title">Education Center</div>
+        <div class="feat-desc">6 modules, 36 lessons. From candlesticks to market structure. Learn at your own pace with animated video lessons built for real traders.</div>
+        <div class="feat-tags"><span class="ftag">6 modules</span><span class="ftag">36 lessons</span><span class="ftag">Video</span></div>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon-wrap" style="background:rgba(77,184,255,.08);border:1px solid rgba(77,184,255,.2);">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="10" r="4" stroke="#e8b020" stroke-width="2"/>
+            <circle cx="7" cy="22" r="3" stroke="#e8b020" stroke-width="1.8" opacity=".6"/>
+            <circle cx="25" cy="22" r="3" stroke="#e8b020" stroke-width="1.8" opacity=".6"/>
+            <line x1="12" y1="13" x2="9" y2="19" stroke="#e8b020" stroke-width="1.5" opacity=".5"/>
+            <line x1="20" y1="13" x2="23" y2="19" stroke="#e8b020" stroke-width="1.5" opacity=".5"/>
+            <line x1="10" y1="22" x2="22" y2="22" stroke="#e8b020" stroke-width="1.5" opacity=".3" stroke-dasharray="2,2"/>
+          </svg>
+        </div>
+        <div class="feat-title">Community & Support</div>
+        <div class="feat-desc">Access to a community of traders. Share ideas, discuss signals and learn from others. Plus direct support whenever you need it.</div>
+        <div class="feat-tags"><span class="ftag">Community</span><span class="ftag">Support</span><span class="ftag">Discord</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── MARKET TRACKER TEASER ── -->
+<section style="background:#141414;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);">
+  <div style="max-width:1400px;margin:0 auto;padding:52px 52px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
+    <div class="reveal">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:.3em;color:var(--red);text-transform:uppercase;margin-bottom:16px;display:inline-flex;align-items:center;gap:8px;">
+        <div style="width:6px;height:6px;border-radius:50%;background:var(--red);animation:bl 1.2s infinite;"></div>
+        Live Market Data
+      </div>
+      <h2 style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(32px,4vw,56px);font-weight:900;line-height:1;text-transform:uppercase;margin-bottom:20px;">
+        CRYPTO<br><span style="color:var(--red);">UNDER PRESSURE</span>
+      </h2>
+      <p style="font-size:15px;color:var(--sub);line-height:1.7;max-width:420px;margin-bottom:32px;">Full market overview — BTC dominance, altcoin heatmap, fear & greed, pressure indicators and live signals. Everything in one screen.</p>
+      <a href="market-tracker.html" style="font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:16px 36px;border-radius:6px;background:var(--red);color:#0d0d0d;text-decoration:none;display:inline-block;transition:opacity .2s;" onmouseenter="this.style.opacity='.8'" onmouseleave="this.style.opacity='1'">Open Market Tracker →</a>
+    </div>
+    <!-- Mini preview cards -->
+    <div class="reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+      <div style="background:#1a1a1a;border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:16px;">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:.15em;color:var(--sub);text-transform:uppercase;margin-bottom:8px;">BTC Dominance</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;color:var(--accent);">58.4%</div>
+        <div style="font-size:15px;color:var(--sub);margin-top:4px;">↑ Rising this week</div>
+      </div>
+      <div style="background:#1a1a1a;border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:16px;">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:.15em;color:var(--sub);text-transform:uppercase;margin-bottom:8px;">Fear & Greed</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;color:var(--red);">35</div>
+        <div style="font-size:15px;color:var(--red);margin-top:4px;">Fear zone</div>
+      </div>
+      <div style="background:#1a1a1a;border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:16px;">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:.15em;color:var(--sub);text-transform:uppercase;margin-bottom:8px;">Market Cap</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;color:var(--red);">$2.61T</div>
+        <div style="font-size:15px;color:var(--red);margin-top:4px;">-8.4% from peak</div>
+      </div>
+      <div style="background:#1a1a1a;border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:16px;">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:.15em;color:var(--sub);text-transform:uppercase;margin-bottom:8px;">Funding Rate</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;color:var(--grn);">+0.004%</div>
+        <div style="font-size:15px;color:var(--grn);margin-top:4px;">Healthy · neutral</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SIGNALS ── -->
+<section class="sec" id="signals">
+  <div class="si">
+    <div class="reveal">
+      <div class="s-eyebrow">AI Bot Signals</div>
+      <h2 class="s-h">5 live signals.<br><span>Every hour.</span></h2>
+    </div>
+    <div class="signals-hero reveal">
+      <div class="sig-left">
+        <div class="sig-card">
+          <div class="sig-coin-info">
+            <div class="coin-icon btc">BTC</div>
+            <div><div class="coin-name">Bitcoin</div><div class="coin-entry">Entry: $83,240</div></div>
+          </div>
+          <div class="sig-right">
+            <span class="sig-badge buy">BUY</span>
+            <div class="sig-tp">↑ TP $88,500</div>
+            <div class="sig-sl">↓ SL $81,200</div>
+          </div>
+        </div>
+        <div class="sig-card">
+          <div class="sig-coin-info">
+            <div class="coin-icon eth">ETH</div>
+            <div><div class="coin-name">Ethereum</div><div class="coin-entry">Entry: $2,065</div></div>
+          </div>
+          <div class="sig-right">
+            <span class="sig-badge buy">BUY</span>
+            <div class="sig-tp">↑ TP $2,200</div>
+            <div class="sig-sl">↓ SL $1,980</div>
+          </div>
+        </div>
+        <div class="sig-card">
+          <div class="sig-coin-info">
+            <div class="coin-icon sol">SOL</div>
+            <div><div class="coin-name">Solana</div><div class="coin-entry">Entry: $87.40</div></div>
+          </div>
+          <div class="sig-right">
+            <span class="sig-badge sell">SELL</span>
+            <div class="sig-tp">↓ TP $81.00</div>
+            <div class="sig-sl">↑ SL $91.50</div>
+          </div>
+        </div>
+        <div class="sig-card">
+          <div class="sig-coin-info">
+            <div class="coin-icon bnb">BNB</div>
+            <div><div class="coin-name">BNB</div><div class="coin-entry">Entry: $652</div></div>
+          </div>
+          <div class="sig-right">
+            <span class="sig-badge buy">BUY</span>
+            <div class="sig-tp">↑ TP $700</div>
+            <div class="sig-sl">↓ SL $630</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sig-right-panel">
+        <div class="stat-row">
+          <div class="stat-cell"><div class="stat-num g">74%</div><div class="stat-lbl">Win Rate</div></div>
+          <div class="stat-cell"><div class="stat-num g">+38%</div><div class="stat-lbl">Total P&L</div></div>
+          <div class="stat-cell"><div class="stat-num" style="color:var(--cream);">30</div><div class="stat-lbl">Signals</div></div>
+        </div>
+        <div class="reasoning-box">
+          <div class="rb-head">Latest AI Reasoning</div>
+          <div class="rb-text">BTC above EMA20 + EMA50 on 4H. RSI at 54 room to run. Volume 1.4x above average. Strong setup toward $88,500.</div>
+        </div>
+        <!-- mini chart visual -->
+        <div style="background:#1a1a1a;border:1px solid var(--bdr);border-radius:16px;padding:20px;overflow:hidden;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:14px;color:var(--sub);letter-spacing:.16em;margin-bottom:14px;">BTC PRICE ACTION 4H</div>
+          <svg width="100%" height="90" viewBox="0 0 400 90" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="cg" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#e87820" stop-opacity=".18"/>
+                <stop offset="100%" stop-color="#e87820" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <path d="M0,70 L30,65 L55,68 L80,58 L105,62 L130,52 L155,55 L180,42 L205,46 L230,35 L255,38 L280,28 L305,32 L330,22 L355,18 L380,12 L400,8" fill="none" stroke="#e87820" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M0,70 L30,65 L55,68 L80,58 L105,62 L130,52 L155,55 L180,42 L205,46 L230,35 L255,38 L280,28 L305,32 L330,22 L355,18 L380,12 L400,8 L400,90 L0,90Z" fill="url(#cg)"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOE HET WERKT ── -->
+<section class="sec" id="howto" style="background:var(--bg2);">
+  <div class="si">
+    <div class="reveal">
+      <div class="s-eyebrow">How it works</div>
+      <h2 class="s-h">3 steps.<br><span>Ready to trade.</span></h2>
+    </div>
+    <div class="steps-wrap reveal">
+
+      <div class="step-connector"></div>
+
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <div class="step-body">
+          <div class="step-icon-wrap" style="background:rgba(232,120,32,.08);border:1px solid rgba(232,120,32,.2);">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <rect x="6" y="8" width="24" height="20" rx="3" stroke="#e87820" stroke-width="2"/>
+              <circle cx="18" cy="18" r="5" stroke="#e87820" stroke-width="2"/>
+              <circle cx="18" cy="18" r="2" fill="#e87820"/>
+            </svg>
+          </div>
+          <div>
+            <div class="step-title">Log in to the platform</div>
+            <div class="step-desc">Create an account and get instant access to the full dashboard. Signals, market brief and education all in one place.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <div class="step-body">
+          <div class="step-icon-wrap" style="background:rgba(77,184,255,.08);border:1px solid rgba(77,184,255,.2);">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <path d="M6 28 L12 20 L17 24 L23 12 L30 17" stroke="#e8b020" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="30" cy="17" r="2.5" fill="#e8b020"/>
+              <rect x="6" y="30" width="24" height="1.5" rx=".75" fill="rgba(77,184,255,.3)"/>
+              <path d="M9 10 L14 10 M11.5 7.5 L11.5 12.5" stroke="#e8b020" stroke-width="1.8" stroke-linecap="round" opacity=".6"/>
+            </svg>
+          </div>
+          <div>
+            <div class="step-title">Check the AI signals</div>
+            <div class="step-desc">The bot analyses the market every hour and generates up to 5 active signals with entry, take profit and stop loss. You just decide if you want in.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <div class="step-body">
+          <div class="step-icon-wrap" style="background:rgba(232,120,32,.08);border:1px solid rgba(232,120,32,.2);">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <circle cx="18" cy="18" r="11" stroke="#e87820" stroke-width="2"/>
+              <path d="M12 18 L16 22 L24 14" stroke="#e87820" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="step-title">Trade and learn</div>
+            <div class="step-desc">Follow the signals, read the daily brief every morning and build your knowledge through the education modules. The system grows with you as a trader.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Stats bar -->
+    <div class="stats-bar reveal">
+      <div class="sbar-item">
+        <div class="sbar-num">74<span style="font-size:.5em;color:var(--sub);">%</span></div>
+        <div class="sbar-lbl">Win Rate</div>
+      </div>
+      <div class="sbar-div"></div>
+      <div class="sbar-item">
+        <div class="sbar-num">5</div>
+        <div class="sbar-lbl">Max active signals</div>
+      </div>
+      <div class="sbar-div"></div>
+      <div class="sbar-item">
+        <div class="sbar-num">1H</div>
+        <div class="sbar-lbl">Update interval</div>
+      </div>
+      <div class="sbar-div"></div>
+      <div class="sbar-item">
+        <div class="sbar-num">7</div>
+        <div class="sbar-lbl">Data sources</div>
+      </div>
+      <div class="sbar-div"></div>
+      <div class="sbar-item">
+        <div class="sbar-num">36</div>
+        <div class="sbar-lbl">Lessen</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── MARKET BRIEF ── -->
+<section class="sec" id="brief" style="background:var(--bg2);">
+  <div class="si">
+    <div class="reveal">
+      <div class="s-eyebrow">Daily Market Brief</div>
+      <h2 class="s-h">Wake up knowing<br><span>what matters.</span></h2>
+    </div>
+    <div class="brief-layout reveal">
+      <div class="brief-main">
+        <div class="brief-date">Friday · March 13 · 2026</div>
+        <div class="brief-focus">BTC holds $83K support altcoins cautiously follow as funding rates cool down</div>
+        <div class="risk-pill">
+          <div style="width:6px;height:6px;border-radius:50%;background:var(--red);animation:bl 2s infinite;"></div>
+          Risk: Moderate
+        </div>
+        <div class="brief-divider"></div>
+        <div class="brief-field">
+          <div class="bf-lbl">BTC Structure</div>
+          <div class="bf-txt">Holding above $82,800. EMA20 on 4H acting as support. Close above $85,500 confirms continuation.</div>
+        </div>
+        <div class="brief-field">
+          <div class="bf-lbl">ETH</div>
+          <div class="bf-txt">Relative strength at $2,065. Watch $2,150 resistance break opens $2,300.</div>
+        </div>
+        <div class="brief-field">
+          <div class="bf-lbl">Narratives</div>
+          <div class="ntags">
+            <span class="ntag">BTC Dominance</span>
+            <span class="ntag">ETH Breakout</span>
+            <span class="ntag">Altseason</span>
+            <span class="ntag">Macro Risk</span>
+            <span class="ntag">Whale Activity</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="brief-side">
+        <!-- Fear & Greed: gauge -->
+        <div class="brief-stat">
+          <svg width="80" height="50" viewBox="0 0 80 50" style="margin-bottom:10px;">
+            <!-- gauge arc background -->
+            <path d="M8 46 A34 34 0 0 1 72 46" fill="none" stroke="rgba(255,255,255,.06)" stroke-width="7" stroke-linecap="round"/>
+            <!-- fear zone red -->
+            <path d="M8 46 A34 34 0 0 1 28 16" fill="none" stroke="#e8392a" stroke-width="7" stroke-linecap="round" opacity=".7"/>
+            <!-- neutral zone -->
+            <path d="M28 16 A34 34 0 0 1 52 16" fill="none" stroke="#f0b90b" stroke-width="7" stroke-linecap="round" opacity=".4"/>
+            <!-- greed zone -->
+            <path d="M52 16 A34 34 0 0 1 72 46" fill="none" stroke="#e87820" stroke-width="7" stroke-linecap="round" opacity=".3"/>
+            <!-- needle at ~41 (fear zone) -->
+            <line x1="40" y1="44" x2="19" y2="22" stroke="#e8392a" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="40" cy="44" r="4" fill="#e8392a"/>
+            <circle cx="40" cy="44" r="2" fill="#162236"/>
+            <!-- labels -->
+            <text x="6" y="48" style="fill:#e8392a;font-size:13px;font-family:'Barlow Condensed',sans-serif;">FEAR</text>
+            <text x="56" y="14" style="fill:#e87820;font-size:13px;font-family:'Barlow Condensed',sans-serif;">GREED</text>
+          </svg>
+          <div class="bs-val r">41</div>
+          <div class="bs-lbl">Fear &amp; Greed Index</div>
+        </div>
+
+        <!-- BTC 24h: mini sparkline -->
+        <div class="brief-stat">
+          <svg width="80" height="44" viewBox="0 0 80 44" style="margin-bottom:10px;">
+            <defs>
+              <linearGradient id="sg" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#e87820" stop-opacity=".25"/>
+                <stop offset="100%" stop-color="#e87820" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <!-- sparkline area -->
+            <path d="M4,36 L14,30 L22,33 L30,24 L38,26 L46,18 L54,20 L62,12 L70,8 L78,4 L78,44 L4,44Z" fill="url(#sg)"/>
+            <polyline points="4,36 14,30 22,33 30,24 38,26 46,18 54,20 62,12 70,8 78,4" fill="none" stroke="#e87820" stroke-width="2.2" stroke-linecap="round"/>
+            <!-- dot at end -->
+            <circle cx="78" cy="4" r="3" fill="#e87820"/>
+            <!-- baseline -->
+            <line x1="4" y1="40" x2="78" y2="40" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
+          </svg>
+          <div class="bs-val g">+2.14%</div>
+          <div class="bs-lbl">BTC 24h Change</div>
+        </div>
+
+        <!-- Whale Flows: bar chart -->
+        <div class="brief-stat">
+          <svg width="80" height="44" viewBox="0 0 80 44" style="margin-bottom:10px;">
+            <!-- outflow bars (red, left) -->
+            <rect x="4"  y="28" width="8" height="12" fill="#e8392a" rx="2" opacity=".5"/>
+            <rect x="14" y="22" width="8" height="18" fill="#e8392a" rx="2" opacity=".4"/>
+            <rect x="24" y="30" width="8" height="10" fill="#e8392a" rx="2" opacity=".35"/>
+            <!-- divider -->
+            <line x1="40" y1="6" x2="40" y2="40" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+            <!-- inflow bars (green, right) taller = buying -->
+            <rect x="44" y="16" width="8" height="24" fill="#e87820" rx="2" opacity=".5"/>
+            <rect x="54" y="10" width="8" height="30" fill="#e87820" rx="2" opacity=".6"/>
+            <rect x="64" y="6"  width="8" height="34" fill="#e87820" rx="2" opacity=".7"/>
+            <!-- baseline -->
+            <line x1="4" y1="40" x2="76" y2="40" stroke="rgba(255,255,255,.06)" stroke-width="1"/>
+            <text x="18" y="10" text-anchor="middle" style="fill:#e8392a;font-size:13px;font-family:'Barlow Condensed',sans-serif;">OUT</text>
+            <text x="60" y="4"  text-anchor="middle" style="fill:#e87820;font-size:13px;font-family:'Barlow Condensed',sans-serif;">IN</text>
+          </svg>
+          <div class="bs-val g">Buying</div>
+          <div class="bs-lbl">Whale Flows</div>
+        </div>
+
+        <!-- Funding Rates: thermometer -->
+        <div class="brief-stat">
+          <svg width="80" height="44" viewBox="0 0 80 44" style="margin-bottom:10px;">
+            <!-- horizontal rate bar background -->
+            <rect x="4" y="18" width="72" height="8" rx="4" fill="rgba(255,255,255,.06)"/>
+            <!-- zones: negative | neutral | positive -->
+            <rect x="4"  y="18" width="24" height="8" rx="4" fill="rgba(77,184,255,.25)"/>
+            <rect x="28" y="18" width="24" height="8" fill="rgba(232,120,32,.15)"/>
+            <rect x="52" y="18" width="24" height="8" rx="4" fill="rgba(255,107,122,.2)"/>
+            <!-- indicator needle sits in low/neutral zone -->
+            <rect x="30" y="14" width="3" height="16" rx="1.5" fill="#e87820"/>
+            <!-- labels -->
+            <text x="4"  y="12" style="fill:#e8b020;font-size:13px;font-family:'Barlow Condensed',sans-serif;">NEG</text>
+            <text x="31" y="12" style="fill:#e87820;font-size:13px;font-family:'Barlow Condensed',sans-serif;">LOW</text>
+            <text x="57" y="12" style="fill:#e8392a;font-size:13px;font-family:'Barlow Condensed',sans-serif;">HIGH</text>
+            <!-- tick marks -->
+            <line x1="28" y1="14" x2="28" y2="28" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
+            <line x1="52" y1="14" x2="52" y2="28" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
+            <!-- value label -->
+            <text x="40" y="40" text-anchor="middle" style="fill:#e87820;font-size:14px;font-family:'Barlow Condensed',sans-serif;font-weight:700;">0.004%</text>
+          </svg>
+          <div class="bs-val g">Low</div>
+          <div class="bs-lbl">Funding Rates</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── THURSDAY LIVE ── -->
+<section class="sec" id="live" style="background:var(--bg2);">
+  <div class="si">
+    <div class="reveal" style="display:flex;align-items:center;gap:16px;margin-bottom:48px;">
+      <div style="width:10px;height:10px;border-radius:50%;background:#e8392a;animation:bl 1.2s infinite;flex-shrink:0;box-shadow:0 0 12px #e8392a;"></div>
+      <span style="font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:.3em;color:#e8392a;text-transform:uppercase;">Every Thursday — Team Update</span>
+    </div>
+
+    <div class="reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
+
+      <!-- Left: text -->
+      <div>
+        <h2 style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(28px,3.5vw,48px);font-weight:900;line-height:1.08;margin-bottom:24px;">
+          Every Thursday.<br><span style="background:linear-gradient(120deg,#e8392a,#ff8c42);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">The team updates.</span>
+        </h2>
+        <p style="font-size:17px;color:var(--sub);line-height:1.75;max-width:480px;margin-bottom:36px;">
+          Every week the team drops a full trading update. Real chart analysis, live signals, inside info on what we're watching and why. No filler, no theory — just what actually matters that week.
+        </p>
+
+        <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:40px;">
+          <div style="display:flex;align-items:flex-start;gap:16px;">
+            <div style="width:36px;height:36px;border-radius:10px;background:rgba(255,77,109,.12);border:1px solid rgba(255,77,109,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e8392a" stroke-width="2.2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div>
+              <div style="font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;color:var(--cream);margin-bottom:4px;">Live Signals</div>
+              <div style="font-size:14px;color:var(--sub);line-height:1.6;">The team calls out real entries live during the session. Entry, TP, SL — explained step by step while the chart moves.</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:16px;">
+            <div style="width:36px;height:36px;border-radius:10px;background:rgba(232,120,32,.1);border:1px solid rgba(232,120,32,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e87820" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <div>
+              <div style="font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;color:var(--cream);margin-bottom:4px;">Inside Information</div>
+              <div style="font-size:14px;color:var(--sub);line-height:1.6;">What's moving, what's being watched, what the AI flagged that week. Context you won't find on Twitter or YouTube.</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:16px;">
+            <div style="width:36px;height:36px;border-radius:10px;background:rgba(77,184,255,.1);border:1px solid rgba(77,184,255,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e8b020" stroke-width="2.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div>
+              <div style="font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;color:var(--cream);margin-bottom:4px;">Market Updates</div>
+              <div style="font-size:14px;color:var(--sub);line-height:1.6;">Weekly recap of what happened and what to expect. Macro, on-chain, sentiment — all covered in plain language.</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:16px;">
+            <div style="width:36px;height:36px;border-radius:10px;background:rgba(255,140,66,.1);border:1px solid rgba(255,140,66,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff8c42" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div>
+              <div style="font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;color:var(--cream);margin-bottom:4px;">Open Q&amp;A</div>
+              <div style="font-size:14px;color:var(--sub);line-height:1.6;">Ask anything directly to the team. Charts reviewed live, trades discussed, no question is too basic.</div>
+            </div>
+          </div>
+        </div>
+
+        <a class="btn-main" href="thursday.html" style="display:inline-block;">Read This Week's Update →</a>
+      </div>
+
+      <!-- Right: visual card -->
+      <div style="position:relative;">
+        <div style="background:#1e1a16;border:1px solid rgba(255,77,109,.25);border-radius:24px;padding:36px;box-shadow:0 0 60px rgba(232,57,42,.08),0 4px 32px rgba(0,0,0,.4);">
+
+          <!-- Live badge -->
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;">
+            <div style="font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:var(--cream);">Weekly Session</div>
+            <div style="display:flex;align-items:center;gap:7px;background:rgba(255,77,109,.15);border:1px solid rgba(255,77,109,.4);border-radius:20px;padding:5px 12px;">
+              <div style="width:6px;height:6px;border-radius:50%;background:#e8392a;animation:bl 1.2s infinite;"></div>
+              <span style="font-family:'Barlow Condensed',sans-serif;font-size:14px;color:#e8392a;letter-spacing:.15em;">LIVE THURSDAYS</span>
+            </div>
+          </div>
+
+          <!-- Schedule -->
+          <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:28px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;background:rgba(255,255,255,.04);border-radius:12px;border:1px solid rgba(255,255,255,.07);">
+              <span style="font-size:13px;color:var(--sub);">Market recap</span>
+              <span style="font-family:'Barlow Condensed',sans-serif;font-size:15px;color:var(--accent);">20:00</span>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;background:rgba(255,77,109,.06);border-radius:12px;border:1px solid rgba(255,77,109,.15);">
+              <span style="font-size:13px;color:var(--cream);font-weight:600;">Live signals</span>
+              <span style="font-family:'Barlow Condensed',sans-serif;font-size:15px;color:#e8392a;">20:20</span>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;background:rgba(255,255,255,.04);border-radius:12px;border:1px solid rgba(255,255,255,.07);">
+              <span style="font-size:13px;color:var(--sub);">Inside info &amp; charts</span>
+              <span style="font-family:'Barlow Condensed',sans-serif;font-size:15px;color:var(--accent2);">20:40</span>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;background:rgba(255,255,255,.04);border-radius:12px;border:1px solid rgba(255,255,255,.07);">
+              <span style="font-size:13px;color:var(--sub);">Open Q&amp;A</span>
+              <span style="font-family:'Barlow Condensed',sans-serif;font-size:15px;color:var(--accent2);">21:00</span>
+            </div>
+          </div>
+
+          <!-- Next session -->
+          <div style="background:rgba(232,120,32,.06);border:1px solid rgba(232,120,32,.18);border-radius:14px;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;">
+            <div>
+              <div style="font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:.18em;color:var(--sub);margin-bottom:5px;text-transform:uppercase;">Next session</div>
+              <div style="font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:900;color:var(--accent);">Thursday 20:00</div>
+            </div>
+            <div style="text-align:right;">
+              <div style="font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:.15em;color:var(--sub);margin-bottom:5px;text-transform:uppercase;">Members only</div>
+              <div style="font-size:16px;color:var(--cream);">Free with access</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── EDUCATION ── -->
+<section class="sec" id="education">
+  <div class="si">
+    <div class="reveal">
+      <div class="s-eyebrow">Education Center</div>
+      <h2 class="s-h">6 modules.<br><span>36 lessons.</span></h2>
+    </div>
+    <div class="edu-grid reveal">
+      <div class="edu-card">
+        <!-- MODULE 01: Technical Analysis candlestick chart -->
+        <div class="edu-visual ev1">
+          <div class="edu-num-bg">01</div>
+          <svg width="180" height="120" viewBox="0 0 180 120" style="position:relative;z-index:1;">
+            <!-- grid lines -->
+            <line x1="20" y1="20" x2="170" y2="20" stroke="rgba(232,120,32,.16)" stroke-width="1"/>
+            <line x1="20" y1="45" x2="170" y2="45" stroke="rgba(232,120,32,.16)" stroke-width="1"/>
+            <line x1="20" y1="70" x2="170" y2="70" stroke="rgba(232,120,32,.16)" stroke-width="1"/>
+            <line x1="20" y1="95" x2="170" y2="95" stroke="rgba(232,120,32,.16)" stroke-width="1"/>
+            <!-- red candles -->
+            <line x1="35" y1="30" x2="35" y2="90" stroke="#e8392a" stroke-width="1.5"/>
+            <rect x="29" y="48" width="12" height="32" fill="#e8392a" rx="1"/>
+            <line x1="60" y1="38" x2="60" y2="88" stroke="#e8392a" stroke-width="1.5"/>
+            <rect x="54" y="52" width="12" height="26" fill="#e8392a" rx="1"/>
+            <!-- green candles -->
+            <line x1="85" y1="55" x2="85" y2="100" stroke="#e87820" stroke-width="1.5"/>
+            <rect x="79" y="58" width="12" height="30" fill="#e87820" rx="1"/>
+            <line x1="110" y1="32" x2="110" y2="80" stroke="#e87820" stroke-width="1.5"/>
+            <rect x="104" y="35" width="12" height="36" fill="#e87820" rx="1"/>
+            <line x1="135" y1="22" x2="135" y2="65" stroke="#e87820" stroke-width="1.5"/>
+            <rect x="129" y="25" width="12" height="30" fill="#e87820" rx="1"/>
+            <line x1="160" y1="15" x2="160" y2="55" stroke="#e87820" stroke-width="1.5"/>
+            <rect x="154" y="18" width="12" height="28" fill="#e87820" rx="1"/>
+            <!-- EMA line -->
+            <polyline points="20,85 35,78 60,72 85,65 110,52 135,38 160,26" fill="none" stroke="#e8b020" stroke-width="1.8" stroke-dasharray="4,2" opacity=".8"/>
+          </svg>
+        </div>
+        <div class="edu-body">
+          <div class="edu-mod">Module 01</div>
+          <div class="edu-title">Technical Analysis</div>
+          <div class="edu-desc">Charts, indicators, candlestick patterns. The tools pro traders use every day.</div>
+          <div class="edu-foot"><span class="edu-chip b">Beginner</span><span class="edu-chip">6 Lessons</span><span class="edu-chip">Video</span></div>
+        </div>
+      </div>
+
+      <!-- MODULE 02: Risk Management shield + balance scale -->
+      <div class="edu-card">
+        <div class="edu-visual ev2">
+          <div class="edu-num-bg">02</div>
+          <svg width="180" height="120" viewBox="0 0 180 120" style="position:relative;z-index:1;">
+            <!-- Shield -->
+            <path d="M90 18 L120 30 L120 62 Q120 85 90 100 Q60 85 60 62 L60 30 Z" fill="none" stroke="#e87820" stroke-width="2" opacity=".7"/>
+            <path d="M90 28 L112 37 L112 62 Q112 78 90 90 Q68 78 68 62 L68 37 Z" fill="rgba(232,120,32,.14)"/>
+            <!-- checkmark inside -->
+            <polyline points="78,60 87,70 104,48" fill="none" stroke="#e87820" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- risk / reward bars -->
+            <rect x="20" y="85" width="16" height="22" fill="#e8392a" rx="2" opacity=".7"/>
+            <rect x="42" y="75" width="16" height="32" fill="#e8392a" rx="2" opacity=".5"/>
+            <rect x="122" y="70" width="16" height="37" fill="#e87820" rx="2" opacity=".7"/>
+            <rect x="144" y="58" width="16" height="49" fill="#e87820" rx="2" opacity=".5"/>
+            <text x="28" y="115" text-anchor="middle" style="fill:#e8392a;font-size:14px;font-family:'Courier New';">Risk</text>
+            <text x="138" y="115" text-anchor="middle" style="fill:#e87820;font-size:14px;font-family:'Courier New';">Reward</text>
+          </svg>
+        </div>
+        <div class="edu-body">
+          <div class="edu-mod">Module 02</div>
+          <div class="edu-title">Risk Management</div>
+          <div class="edu-desc">Position sizing, stop losses, risk-reward. The skill that keeps you in the game.</div>
+          <div class="edu-foot"><span class="edu-chip b">Essential</span><span class="edu-chip">6 Lessons</span></div>
+        </div>
+      </div>
+
+      <!-- MODULE 03: Psychology brain waves / emotional chart -->
+      <div class="edu-card">
+        <div class="edu-visual ev3">
+          <div class="edu-num-bg">03</div>
+          <svg width="180" height="120" viewBox="0 0 180 120" style="position:relative;z-index:1;">
+            <!-- brain outline simplified -->
+            <path d="M70 35 Q60 25 55 35 Q48 32 48 42 Q44 45 46 55 Q44 65 52 68 Q55 78 65 76 L90 76 L115 76 Q125 78 128 68 Q136 65 134 55 Q136 45 132 42 Q132 32 125 35 Q120 25 110 35 Q105 22 90 22 Q75 22 70 35Z" fill="none" stroke="#e87820" stroke-width="1.8" opacity=".65"/>
+            <line x1="90" y1="22" x2="90" y2="76" stroke="rgba(232,120,32,.15)" stroke-width="1"/>
+            <!-- brain waves / emotional spikes -->
+            <polyline points="20,100 40,100 50,72 58,100 70,100 80,60 88,100 100,100 108,45 116,100 128,100 138,78 148,100 160,100" fill="none" stroke="#e87820" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/>
+            <!-- FOMO label -->
+            <text x="108" y="42" style="fill:#e8392a;font-size:14px;font-family:'Barlow Condensed',sans-serif;">FOMO</text>
+            <line x1="108" y1="45" x2="108" y2="100" stroke="#e8392a" stroke-width="1" stroke-dasharray="2,2" opacity=".4"/>
+          </svg>
+        </div>
+        <div class="edu-body">
+          <div class="edu-mod">Module 03</div>
+          <div class="edu-title">Trading Psychology</div>
+          <div class="edu-desc">FOMO, discipline, mindset. Why most traders blow up and how to not be one of them.</div>
+          <div class="edu-foot"><span class="edu-chip">All Levels</span><span class="edu-chip">6 Lessons</span></div>
+        </div>
+      </div>
+
+      <!-- MODULE 04: Crypto Fundamentals blockchain nodes -->
+      <div class="edu-card">
+        <div class="edu-visual ev4">
+          <div class="edu-num-bg">04</div>
+          <svg width="180" height="120" viewBox="0 0 180 120" style="position:relative;z-index:1;">
+            <!-- blockchain blocks -->
+            <rect x="14" y="48" width="34" height="24" rx="4" fill="none" stroke="#e87820" stroke-width="1.8" opacity=".7"/>
+            <rect x="73" y="48" width="34" height="24" rx="4" fill="rgba(232,120,32,.16)" stroke="#e87820" stroke-width="1.8"/>
+            <rect x="132" y="48" width="34" height="24" rx="4" fill="none" stroke="#e87820" stroke-width="1.8" opacity=".7"/>
+            <!-- chain links -->
+            <line x1="48" y1="60" x2="73" y2="60" stroke="#e87820" stroke-width="2" stroke-dasharray="3,2"/>
+            <line x1="107" y1="60" x2="132" y2="60" stroke="#e87820" stroke-width="2" stroke-dasharray="3,2"/>
+            <!-- hash text inside blocks -->
+            <text x="31" y="63" text-anchor="middle" style="fill:#e87820;font-size:13px;font-family:'Courier New';">0xA3F</text>
+            <text x="90" y="58" text-anchor="middle" style="fill:#e87820;font-size:13px;font-family:'Courier New';">0xB7C</text>
+            <text x="90" y="68" text-anchor="middle" style="fill:#e8b020;font-size:13px;font-family:'Courier New';">BLOCK</text>
+            <text x="149" y="63" text-anchor="middle" style="fill:#e87820;font-size:13px;font-family:'Courier New';">0xD2E</text>
+            <!-- nodes connecting up/down -->
+            <circle cx="31" cy="32" r="5" fill="rgba(232,120,32,.15)" stroke="#e87820" stroke-width="1.5"/>
+            <circle cx="90" cy="28" r="6" fill="rgba(77,184,255,.15)" stroke="#e8b020" stroke-width="1.5"/>
+            <circle cx="149" cy="32" r="5" fill="rgba(232,120,32,.15)" stroke="#e87820" stroke-width="1.5"/>
+            <line x1="31" y1="37" x2="31" y2="48" stroke="rgba(232,120,32,.4)" stroke-width="1"/>
+            <line x1="90" y1="34" x2="90" y2="48" stroke="rgba(77,184,255,.4)" stroke-width="1"/>
+            <line x1="149" y1="37" x2="149" y2="48" stroke="rgba(232,120,32,.4)" stroke-width="1"/>
+            <!-- bottom connections -->
+            <circle cx="31" cy="90" r="4" fill="rgba(232,120,32,.1)" stroke="#e87820" stroke-width="1.2" opacity=".6"/>
+            <circle cx="90" cy="94" r="4" fill="rgba(77,184,255,.1)" stroke="#e8b020" stroke-width="1.2" opacity=".6"/>
+            <circle cx="149" cy="90" r="4" fill="rgba(232,120,32,.1)" stroke="#e87820" stroke-width="1.2" opacity=".6"/>
+            <line x1="31" y1="72" x2="31" y2="86" stroke="rgba(232,120,32,.3)" stroke-width="1"/>
+            <line x1="90" y1="72" x2="90" y2="90" stroke="rgba(77,184,255,.3)" stroke-width="1"/>
+            <line x1="149" y1="72" x2="149" y2="86" stroke="rgba(232,120,32,.3)" stroke-width="1"/>
+          </svg>
+        </div>
+        <div class="edu-body">
+          <div class="edu-mod">Module 04</div>
+          <div class="edu-title">Crypto Fundamentals</div>
+          <div class="edu-desc">Blockchain, tokenomics, market cycles, on-chain data. Know what drives the price.</div>
+          <div class="edu-foot"><span class="edu-chip b">Beginner</span><span class="edu-chip">6 Lessons</span></div>
+        </div>
+      </div>
+
+      <!-- MODULE 05: Market Structure order blocks / liquidity zones -->
+      <div class="edu-card">
+        <div class="edu-visual ev5">
+          <div class="edu-num-bg">05</div>
+          <svg width="180" height="120" viewBox="0 0 180 120" style="position:relative;z-index:1;">
+            <!-- price line with structure -->
+            <polyline points="15,90 35,85 50,88 65,72 80,75 95,55 105,58 115,40 125,43 140,25 160,20" fill="none" stroke="#e87820" stroke-width="2" stroke-linecap="round"/>
+            <!-- support zone shaded -->
+            <rect x="15" y="78" width="55" height="14" fill="rgba(232,120,32,.14)" rx="2"/>
+            <line x1="15" y1="78" x2="70" y2="78" stroke="#e87820" stroke-width="1" stroke-dasharray="3,2" opacity=".5"/>
+            <line x1="15" y1="92" x2="70" y2="92" stroke="#e87820" stroke-width="1" stroke-dasharray="3,2" opacity=".3"/>
+            <text x="17" y="87" style="fill:#e87820;font-size:13px;font-family:'Barlow Condensed',sans-serif;" opacity=".7">SUPPORT</text>
+            <!-- resistance zone -->
+            <rect x="110" y="22" width="55" height="14" fill="rgba(255,107,122,.06)" rx="2"/>
+            <line x1="110" y1="22" x2="165" y2="22" stroke="#e8392a" stroke-width="1" stroke-dasharray="3,2" opacity=".5"/>
+            <line x1="110" y1="36" x2="165" y2="36" stroke="#e8392a" stroke-width="1" stroke-dasharray="3,2" opacity=".3"/>
+            <text x="112" y="31" style="fill:#e8392a;font-size:13px;font-family:'Barlow Condensed',sans-serif;" opacity=".7">RESIST</text>
+            <!-- breakout arrow -->
+            <line x1="140" y1="36" x2="140" y2="22" stroke="#e8b020" stroke-width="2"/>
+            <polyline points="136,26 140,20 144,26" fill="none" stroke="#e8b020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- volume bars at bottom -->
+            <rect x="15" y="105" width="6" height="8" fill="rgba(232,120,32,.3)" rx="1"/>
+            <rect x="28" y="103" width="6" height="10" fill="rgba(232,120,32,.25)" rx="1"/>
+            <rect x="41" y="106" width="6" height="7" fill="rgba(232,120,32,.3)" rx="1"/>
+            <rect x="54" y="102" width="6" height="11" fill="rgba(232,120,32,.4)" rx="1"/>
+            <rect x="67" y="100" width="6" height="13" fill="rgba(232,120,32,.5)" rx="1"/>
+            <rect x="80" y="104" width="6" height="9" fill="rgba(232,120,32,.3)" rx="1"/>
+            <rect x="93" y="105" width="6" height="8" fill="rgba(232,120,32,.25)" rx="1"/>
+            <rect x="106" y="101" width="6" height="12" fill="rgba(77,184,255,.5)" rx="1"/>
+            <rect x="119" y="98" width="6" height="15" fill="rgba(77,184,255,.6)" rx="1"/>
+            <rect x="132" y="96" width="6" height="17" fill="rgba(77,184,255,.7)" rx="1"/>
+            <rect x="145" y="103" width="6" height="10" fill="rgba(232,120,32,.3)" rx="1"/>
+            <rect x="158" y="106" width="6" height="7" fill="rgba(232,120,32,.25)" rx="1"/>
+          </svg>
+        </div>
+        <div class="edu-body">
+          <div class="edu-mod">Module 05</div>
+          <div class="edu-title">Market Structure</div>
+          <div class="edu-desc">Order flow, liquidity zones, smart money. See the market the way institutions do.</div>
+          <div class="edu-foot"><span class="edu-chip">Advanced</span><span class="edu-chip">6 Lessons</span></div>
+        </div>
+      </div>
+
+      <!-- MODULE 06: Portfolio pie chart + growth -->
+      <div class="edu-card">
+        <div class="edu-visual ev6">
+          <div class="edu-num-bg">06</div>
+          <svg width="180" height="120" viewBox="0 0 180 120" style="position:relative;z-index:1;">
+            <!-- Pie chart slices -->
+            <!-- BTC slice ~40% -->
+            <path d="M90 60 L90 20 A40 40 0 0 1 115 27 Z" fill="rgba(247,147,26,.5)" stroke="rgba(247,147,26,.3)" stroke-width="1"/>
+            <!-- ETH slice ~25% -->
+            <path d="M90 60 L115 27 A40 40 0 0 1 124 55 Z" fill="rgba(98,126,234,.5)" stroke="rgba(98,126,234,.3)" stroke-width="1"/>
+            <!-- SOL slice ~15% -->
+            <path d="M90 60 L124 55 A40 40 0 0 1 112 90 Z" fill="rgba(153,69,255,.4)" stroke="rgba(153,69,255,.3)" stroke-width="1"/>
+            <!-- Other slice ~20% -->
+            <path d="M90 60 L112 90 A40 40 0 0 1 90 100 L90 60 Z" fill="rgba(232,120,32,.35)" stroke="rgba(232,120,32,.3)" stroke-width="1"/>
+            <path d="M90 60 L90 100 A40 40 0 1 1 90 20 Z" fill="rgba(77,184,255,.2)" stroke="rgba(77,184,255,.2)" stroke-width="1"/>
+            <!-- center hole -->
+            <circle cx="90" cy="60" r="18" fill="#0d0d30"/>
+            <text x="90" y="57" text-anchor="middle" style="fill:#e87820;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;">PORT</text>
+            <text x="90" y="67" text-anchor="middle" style="fill:#e87820;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;">FOLIO</text>
+            <!-- legend -->
+            <rect x="140" y="28" width="7" height="7" fill="rgba(247,147,26,.6)" rx="1"/>
+            <text x="151" y="35" style="fill:#8b95a7;font-size:14px;font-family:'Courier New';">BTC 40%</text>
+            <rect x="140" y="42" width="7" height="7" fill="rgba(98,126,234,.6)" rx="1"/>
+            <text x="151" y="49" style="fill:#8b95a7;font-size:14px;font-family:'Courier New';">ETH 25%</text>
+            <rect x="140" y="56" width="7" height="7" fill="rgba(153,69,255,.5)" rx="1"/>
+            <text x="151" y="63" style="fill:#8b95a7;font-size:14px;font-family:'Courier New';">SOL 15%</text>
+            <rect x="140" y="70" width="7" height="7" fill="rgba(232,120,32,.5)" rx="1"/>
+            <text x="151" y="77" style="fill:#8b95a7;font-size:14px;font-family:'Courier New';">Other 20%</text>
+            <!-- DCA line at bottom -->
+            <polyline points="18,110 34,106 50,108 66,102 82,104 98,97 114,99 130,92 146,88 162,82" fill="none" stroke="#e87820" stroke-width="1.8" stroke-linecap="round" opacity=".6"/>
+          </svg>
+        </div>
+        <div class="edu-body">
+          <div class="edu-mod">Module 06</div>
+          <div class="edu-title">Portfolio Building</div>
+          <div class="edu-desc">DCA, diversification, rebalancing. Build something that survives bear markets.</div>
+          <div class="edu-foot"><span class="edu-chip">All Levels</span><span class="edu-chip">6 Lessons</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sec" style="background:var(--bg2);">
+  <div class="si">
+    <div class="cta-box reveal">
+      <div class="cta-glow"></div>
+      <div class="h-tag" style="justify-content:center;margin-bottom:20px;position:relative;"><div class="h-dot"></div>Built for traders who are serious</div>
+      <h2 class="cta-h">Most traders fail<br>because they're <span>unprepared.</span></h2>
+      <p class="cta-sub">Signals, briefs, education the unfair advantage. All in one place.</p>
+      <a class="btn-main" href="dashboard.html" style="position:relative;">Get Access Now</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-brand">Crypto<span>Marketz</span></div>
+  <div class="f-note">AI-Powered · cryptomarketz.xyz</div>
+  <div class="f-note">Not financial advice</div>
+</footer>
+
+
+<script>
+// CURSOR
+var cur=document.getElementById('cur'),cr=document.getElementById('cr');
+var mx=window.innerWidth/2,my=window.innerHeight/2,rx=mx,ry=my;
+document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
+(function loop(){rx+=(mx-rx)*.13;ry+=(my-ry)*.13;cr.style.left=rx+'px';cr.style.top=ry+'px';requestAnimationFrame(loop);})();
+document.querySelectorAll('a,button').forEach(function(el){
+  el.addEventListener('mouseenter',function(){cr.classList.add('hov');});
+  el.addEventListener('mouseleave',function(){cr.classList.remove('hov');});
+});
+
+// CANDLESTICK CHART
+(function(){
+  var cc=document.getElementById('chartCanvas');
+  if(!cc)return;
+  var W=480,H=340;
+  cc.width=W;cc.height=H;
+  var ctx=cc.getContext('2d');
+
+  // Generate realistic-looking candles
+  var candles=[];
+  var price=83240;
+  var N=28;
+  for(var i=0;i<N;i++){
+    var open=price;
+    var change=(Math.random()-.46)*1800;
+    var close=open+change;
+    var high=Math.max(open,close)+(Math.random()*800);
+    var low=Math.min(open,close)-(Math.random()*800);
+    candles.push({open:open,close:close,high:high,low:low});
+    price=close;
+  }
+
+  // Animate: one new candle forming live
+  var liveClose=candles[N-1].close;
+  var liveTarget=liveClose+(Math.random()-.45)*1200;
+  var animProgress=0;
+
+  var PAD_L=52,PAD_R=16,PAD_T=24,PAD_B=52;
+  var CW=W-PAD_L-PAD_R;
+  var CH=H-PAD_T-PAD_B;
+  var cw=(CW/N)*0.62;
+  var gap=(CW/N)*(1-0.62);
+
+  function getMinMax(){
+    var mn=Infinity,mx=-Infinity;
+    candles.forEach(function(c){mn=Math.min(mn,c.low);mx=Math.max(mx,c.high);});
+    var live=liveClose+(liveTarget-liveClose)*animProgress;
+    mn=Math.min(mn,live-600);mx=Math.max(mx,live+600);
+    return{min:mn,max:mx};
+  }
+
+  function toY(price,mn,mx){return PAD_T+CH-(price-mn)/(mx-mn)*CH;}
+
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+
+    // Background
+    ctx.fillStyle='#0d0d0d';
+    ctx.fillRect(0,0,W,H);
+
+    var mm=getMinMax();
+
+    // Grid lines
+    ctx.strokeStyle='rgba(255,255,255,.04)';
+    ctx.lineWidth=1;
+    for(var g=0;g<5;g++){
+      var gy=PAD_T+CH*(g/4);
+      ctx.beginPath();ctx.moveTo(PAD_L,gy);ctx.lineTo(W-PAD_R,gy);ctx.stroke();
+      var priceLabel=mm.max-(mm.max-mm.min)*(g/4);
+      ctx.fillStyle='rgba(255,255,255,.2)';
+      ctx.font='9px "Orbitron",monospace';
+      ctx.textAlign='right';
+      ctx.fillText('$'+Math.round(priceLabel/100)*100,PAD_L-6,gy+3);
+    }
+
+    // EMA line (smooth curve through closes)
+    ctx.beginPath();
+    ctx.strokeStyle='rgba(77,184,255,.6)';
+    ctx.lineWidth=1.5;
+    ctx.setLineDash([4,3]);
+    candles.forEach(function(c,i){
+      var x=PAD_L+(i+.5)*(CW/N);
+      var y=toY(c.close,mm.min,mm.max);
+      if(i===0)ctx.moveTo(x,y);else ctx.lineTo(x,y);
+    });
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Draw candles
+    candles.forEach(function(c,i){
+      var x=PAD_L+i*(CW/N)+gap/2;
+      var xc=x+cw/2;
+      var isGreen=c.close>=c.open;
+      var col=isGreen?'#e87820':'#e8392a';
+      var colFade=isGreen?'rgba(232,120,32,.15)':'rgba(255,77,109,.15)';
+
+      var yH=toY(c.high,mm.min,mm.max);
+      var yL=toY(c.low,mm.min,mm.max);
+      var yO=toY(c.open,mm.min,mm.max);
+      var yC=toY(c.close,mm.min,mm.max);
+
+      // Wick
+      ctx.strokeStyle=col;ctx.lineWidth=1.2;
+      ctx.beginPath();ctx.moveTo(xc,yH);ctx.lineTo(xc,yL);ctx.stroke();
+
+      // Body
+      var bodyTop=Math.min(yO,yC);
+      var bodyH=Math.max(Math.abs(yO-yC),2);
+      ctx.fillStyle=isGreen?col:col;
+      ctx.globalAlpha=i===N-1?0.5:0.85;
+      ctx.fillRect(x,bodyTop,cw,bodyH);
+      ctx.globalAlpha=1;
+    });
+
+    // Live candle forming
+    var lc=candles[N-1];
+    var liveNow=liveClose+(liveTarget-liveClose)*animProgress;
+    var xi=PAD_L+(N-1)*(CW/N)+gap/2;
+    var xci=xi+cw/2;
+    var isGreen=liveNow>=lc.open;
+    var col=isGreen?'#e87820':'#e8392a';
+
+    var yH2=toY(Math.max(lc.open,liveNow)+300,mm.min,mm.max);
+    var yL2=toY(Math.min(lc.open,liveNow)-300,mm.min,mm.max);
+    var yO2=toY(lc.open,mm.min,mm.max);
+    var yC2=toY(liveNow,mm.min,mm.max);
+
+    ctx.strokeStyle=col;ctx.lineWidth=1.5;
+    ctx.beginPath();ctx.moveTo(xci,yH2);ctx.lineTo(xci,yL2);ctx.stroke();
+    var bodyT=Math.min(yO2,yC2);
+    var bodyH2=Math.max(Math.abs(yO2-yC2),3);
+
+    // Glow on live candle
+    ctx.shadowColor=col;ctx.shadowBlur=12;
+    ctx.fillStyle=col;
+    ctx.globalAlpha=0.95;
+    ctx.fillRect(xi,bodyT,cw,bodyH2);
+    ctx.globalAlpha=1;ctx.shadowBlur=0;
+
+    // Blinking price line
+    if(Math.floor(Date.now()/500)%2===0){
+      ctx.strokeStyle='rgba(232,120,32,.5)';
+      ctx.lineWidth=1;
+      ctx.setLineDash([3,3]);
+      ctx.beginPath();ctx.moveTo(PAD_L,yC2);ctx.lineTo(W-PAD_R,yC2);ctx.stroke();
+      ctx.setLineDash([]);
+    }
+
+    // Live price label
+    ctx.fillStyle='#e87820';
+    ctx.font='bold 10px "Orbitron",monospace';
+    ctx.textAlign='left';
+    ctx.fillText('$'+Math.round(liveNow).toLocaleString(),W-PAD_R+2,yC2+4);
+
+    // Bottom labels
+    ctx.fillStyle='rgba(255,255,255,.18)';
+    ctx.font='8px "Orbitron",monospace';
+    ctx.textAlign='center';
+    ['1H','2H','4H','8H','12H'].forEach(function(lbl,i){
+      ctx.fillText(lbl, PAD_L+(i+1)*(CW/6), H-18);
+    });
+
+    // Watermark
+    ctx.fillStyle='rgba(232,120,32,.06)';
+    ctx.font='bold 22px "Orbitron",monospace';
+    ctx.textAlign='center';
+    ctx.fillText('BTC/USDT',W/2,H/2+8);
+  }
+
+  // Animate live candle
+  var lastTime=0;
+  function tick(ts){
+    requestAnimationFrame(tick);
+    if(ts-lastTime<33)return; // ~30fps
+    lastTime=ts;
+    animProgress+=0.004;
+    if(animProgress>=1){
+      // Shift candles
+      candles.push({open:liveClose,close:liveTarget,high:liveTarget+(Math.random()*600),low:liveClose-(Math.random()*600)});
+      if(candles.length>N)candles.shift();
+      liveClose=liveTarget;
+      liveTarget=liveClose+(Math.random()-.46)*1600;
+      animProgress=0;
+    }
+    draw();
+  }
+  requestAnimationFrame(tick);
+})();
+
+// TICKER
+var coins=[
+  {s:'BTC',p:'$83,240',c:'+2.14%',u:true},{s:'ETH',p:'$2,065',c:'+1.87%',u:true},
+  {s:'SOL',p:'$87.40',c:'-0.92%',u:false},{s:'BNB',p:'$652',c:'+2.31%',u:true},
+  {s:'XRP',p:'$2.14',c:'+0.55%',u:true},{s:'ADA',p:'$0.712',c:'-1.23%',u:false},
+  {s:'AVAX',p:'$28.40',c:'+3.12%',u:true},{s:'LINK',p:'$13.88',c:'+1.44%',u:true},
+  {s:'DOT',p:'$6.82',c:'+0.78%',u:true},{s:'MATIC',p:'$0.48',c:'-2.11%',u:false},
+];
+var tk=document.getElementById('tk'),h='';
+for(var k=0;k<4;k++) coins.forEach(function(c){h+='<div class="ti"><span class="ti-s">'+c.s+'</span><span class="ti-p">'+c.p+'</span><span class="ti-c '+(c.u?'up':'dn')+'">'+c.c+'</span></div><div class="ti-div"></div>';});
+tk.innerHTML=h;
+
+// REVEAL
+var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('v');});},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el);});
+</script>
+</body>
+</html>
