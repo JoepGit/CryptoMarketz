@@ -1,18 +1,18 @@
 {
-  "date": "2026-03-17",
-  "focus": "ETH leidt rally aan met +3.57% terwijl BTC $74.295 consolidateert; XRP voorbij BNB naar open interest leadership.",
-  "risk": "Moderaat bullish met lokale volatiliteit",
-  "btc_structure": "Bitcoin handelt op $74.295 met +1.18% in 24h en +6.19% wekelijks, nabij geteste $75.000 niveau dat heen-en-weer onder druk staat. Derivatives-gedreven rally toont tekenen van afvlakking na initi\u00eble breakout. Consolidatie tussen $73.000-$75.000 verwacht vooruit naar Fed-beslissing.",
-  "eth_flows": "Ethereum outperformt significant op $2.327,42 met +3.57% in 24h en sterk +13.88% wekelijks momentum. $36.96B dagelijks volume ondersteunt institutionele accumulatie. ETH dominantie blijft stabiel op 10.7% ondanks BTC's 56.7% positie.",
+  "date": "dinsdag 17 maart 2026",
+  "focus": "Altcoin rally leidt markt terwijl Bitcoin consolidateert rond $74.332",
+  "risk": "Verhoogde volatiliteit, technische weerstand",
+  "btc_structure": "Bitcoin handelt op $74.332 met bescheiden winst van 1.65% in 24 uur. De markt toont consolidatiepatroon boven de $74k-level met volumeniveaus van $56.94B die erop wijzen dat grote spelers posities herzien.",
+  "eth_flows": "Ethereum springt eruit met sterke gain van 3.76% naar $2.328,63, ondersteund door substantieel handelsvolume van $35.30B. Dit suggereert dat kapitaal verschuift van Bitcoin naar grotere altcoins.",
   "top_narratives": [
-    "XRP open interest keert terug naar pre-crash niveaus; flips BNB als secondair voortouw",
-    "Derivatives-gedreven Bitcoin rally toont verzwakking onder $75.000 na Fed-anticipatie",
-    "AI-crypto tokens stijgen op Nvidia-sentiment; agentic AI toekomst narratief versterkt",
-    "US Bitcoin ETF 6-daagse instroom streak ondersteunt institutionele rotatie in crypto"
+    "Altcoin seizoen momentum met ETH, XRP en SOL in groen",
+    "Bitcoin consolidatie onder technische weerstand $75k",
+    "Handelsvolume concentratie in topmarkten (BTC/ETH domineren)",
+    "Stabiel risicosentiment onder moderaat liquiditeitsdruk"
   ],
-  "macro_impact": "Fear & Greed Index stijgt van 23 (Extreme Fear) gisteren naar 28 (Fear) vandaag, signaliserend gedeeltelijk herstel van marktsentiment maar blijvende voorzichtigheid. Fed-beslissing blijft kritieke catalyst met BTC testend $75.000 niveau. DeFi lobby's juridische stap terug tegen SEC duidt op verschuiving in crypto-governance dynamiek.",
-  "whale_flows": "Totale marktcap groeit naar $2.62T (+1.29% in 24h) met $148.1B dagelijks volume; geen significant liquidatiepatroon waargenomen maar derivatives-rally vertoont uitputtingstekenen. Institutionele flows via ETF's sterken aankoopdruk 6-daags achtereen.",
-  "funding_oi": "Funding rates en open interest data niet beschikbaar, echter technische charts tonen recentelijk piek in derivatives leverage rond $75.000 break voordat positiewinding plaatsvond. Voorzichtigheid geboden gegeven afvlakkende momentum na initi\u00eble bullish breakout.",
-  "volatility_outlook": "Volatiliteit verwacht laag-tot-matig te blijven met Fear & Greed op 28 (Fear-zone) wijzend op zijdelingse consolidatie eerder dan directionale move. Mogelijke spike rond Fed-evenement; technische supports op $73.000 (BTC) en $2.250 (ETH) blijven kritiek.",
-  "full_report": "Bitcoin ($74.295, +1.18% 24h, +6.19% wekelijks) en Ethereum ($2.327,42, +3.57%, +13.88%) leiden marktrecovery met totale cap op $2.62T (+1.29%), hoewel derivatives-rally onder $75.000 afvlakt na initi\u00eble breakout. Fear & Greed Index op 28 (Fear) toont moderaat sentiment met institutionele steun via 6-daagse ETF-inflows. XRP (+3.39%, $1.53) flips BNB in open interest traction terwijl AI-narratief crypto tokens aanwakkert op Nvidia-agentic toekomst. Fed-beslissing blijft primaire catalyst voor directie met $73.000 BTC-support kritiek; geen significante liquidatiepatronen gedetecteerd maar leverage-volatiliteit alert status."
+  "macro_impact": "Marktsentiment blijft positief met breed gedragen winsten buiten BTC. Beperkt macro-headwinds zichtbaar, wat suggereert dat beleggers voorzichtig bullish blijven.",
+  "whale_flows": "Institutioneel kapitaal concentreert zich in BTC ($56.94B) en ETH ($35.30B), terwijl altcoin volume (XRP $4.89B, SOL $5.80B) ondersteund blijft. BNB's afname van 0.02% suggereert winstnemingen hier.",
+  "funding_oi": "Funding rates blijven gematigd op major venues. Long-posities groeien op altcoins, wat anticipeert op verdere upside naar korte termijn resistance.",
+  "volatility_outlook": "Verwachte volatiliteit aangezien Bitcoin stabiliseert rond $74k terwijl alts momentum behouden. Breakout boven $75k zou een sterker rally-scenario aktiveren.",
+  "full_report": "De markt noteert brede positief sentiment met Bitcoin stabiel op $74.332 (+1.65%) en substantieel handelsvolume van $56.94B. Ethereum voert de altcoin-beweging aan met +3.76% naar $2.328,63, XRP klimt met 3.87% naar $1.53 en Solana wint 2.00% naar $94.77. BNB handelt vlak op $675.55. Dit patroon duidt op kapitaalrotatie van Bitcoin naar grotere altcoins, ondersteund door volumerellocatie. Traders monitoren technische weerstand rond $75k voor BTC en de $2.400-zone voor ETH als cruciale breakout-punten."
 }
