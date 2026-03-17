@@ -614,7 +614,7 @@ function updateKPIs(){
   var bnb=_liveData['BNBUSDT'];
   var xrp=_liveData['XRPUSDT'];
   var avax=_liveData['AVAXUSDT'];
-  if(!btc||!eth)return;
+  if(!btc||!eth){console.log('BTC/ETH not in liveData yet');return;}
 
   var btcChg=parseFloat(btc.priceChangePercent);
   var ethChg=parseFloat(eth.priceChangePercent);
@@ -628,9 +628,10 @@ function updateKPIs(){
   // BTC dominance (approx from volumes)
   var btcVol=parseFloat(btc.quoteVolume);
   var totalVol=0;
-  Object.values(_liveData).forEach(function(t){
-    if(t.symbol.endsWith('USDT'))totalVol+=parseFloat(t.quoteVolume)||0;
-  });
+  for(var k in _liveData){
+    var t=_liveData[k];
+    if(k.slice(-4)==='USDT')totalVol+=parseFloat(t.quoteVolume)||0;
+  }
   var dom=totalVol>0?Math.round(btcVol/totalVol*100):0;
   // rough dominance estimate based on BTC volume share
   var domEst=Math.min(Math.max(dom,40),75); // clamp to realistic range
@@ -783,11 +784,13 @@ function updateWatchlist(){
   // Handled inside updateKPIs via IDs
 }
 
-// Initial load + refresh every 15 seconds
-fetchAllLive();
-fetchFNG();
-setInterval(fetchAllLive,15000);
-setInterval(fetchFNG,300000);
+// Wait for DOM then start live data
+document.addEventListener('DOMContentLoaded', function(){
+  fetchAllLive();
+  fetchFNG();
+  setInterval(fetchAllLive, 15000);
+  setInterval(fetchFNG, 300000);
+});
 
 // SPARKLINES
 function drawSparkline(id, up){
@@ -934,11 +937,6 @@ function drawBTCChart(){
 
 window.addEventListener('load',function(){
   drawBTCChart();
-  // Animate shock bars
-  document.querySelectorAll('.shock-bar').forEach(function(b){
-    var w=b.style.width;b.style.width='0';
-    setTimeout(function(){b.style.width=w;},300);
-  });
 });
 window.addEventListener('resize',drawBTCChart);
 </script>
