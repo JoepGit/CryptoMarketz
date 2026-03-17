@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior:smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -102,6 +102,7 @@
 
     /* ── BUTTONS — matches dashboard .lbtn ── */
     .btn-primary {
+      display: inline-block;
       background: #0055ff;
       color: #ffffff;
       font-weight: 700;
@@ -110,14 +111,18 @@
       box-shadow: 0 3px 10px rgba(0,85,255,.28);
       transition: background .15s, box-shadow .15s;
       cursor: pointer;
+      text-decoration: none;
     }
     .btn-primary:hover {
       background: #0044dd;
       box-shadow: 0 5px 16px rgba(0,85,255,.38);
+      color: #ffffff;
+      text-decoration: none;
     }
 
     /* Secondary button */
     .btn-secondary {
+      display: inline-block;
       background: transparent;
       color: #3d556e;
       font-weight: 600;
@@ -125,11 +130,13 @@
       border-radius: 8px;
       transition: all .15s;
       cursor: pointer;
+      text-decoration: none;
     }
     .btn-secondary:hover {
       background: #f4f7fb;
       border-color: rgba(0,85,255,.2);
       color: #0a1929;
+      text-decoration: none;
     }
 
     /* ── SECTION BACKGROUNDS — alternating like dashboard pages ── */
@@ -186,25 +193,56 @@
   <canvas id="lp-stars"></canvas>
 
   <!-- Navbar -->
-  <nav class="lp-nav fixed top-0 left-0 right-0 z-50">
+  <nav class="lp-nav fixed top-0 left-0 right-0 z-50" id="main-nav">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
+
+        <!-- Logo -->
         <a href="/" class="flex items-center gap-2">
           <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background:#0055ff">
             <span class="font-bold text-sm" style="color:#fff">CM</span>
           </div>
           <span class="text-lg font-semibold" style="color:#0a1929">CryptoMarketz</span>
         </a>
+
+        <!-- Desktop nav links -->
         <div class="hidden md:flex items-center gap-8">
           <a href="#features" class="text-sm text-muted-foreground hover:text-foreground transition-colors">Features</a>
           <a href="#education" class="text-sm text-muted-foreground hover:text-foreground transition-colors">Education</a>
           <a href="#live" class="text-sm text-muted-foreground hover:text-foreground transition-colors">Live Sessions</a>
           <a href="#pricing" class="text-sm text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
+          <a href="#faq" class="text-sm text-muted-foreground hover:text-foreground transition-colors">FAQ</a>
         </div>
+
+        <!-- Desktop CTA buttons -->
         <div class="hidden md:flex items-center gap-3">
-          <a href="dashboard-light__6_.html" class="btn-secondary text-sm px-4 py-2">Sign in</a>
-          <a href="dashboard-light__6_.html" class="btn-primary text-sm px-4 py-2">Get Started</a>
+          <!-- Sign in: existing members go straight to dashboard -->
+          <a href="dashboard.html" class="btn-secondary text-sm px-4 py-2" title="Already a member? Sign in here">Sign in</a>
+          <!-- Get Started: new members — also goes to dashboard login/register -->
+          <a href="dashboard.html" class="btn-primary text-sm px-4 py-2">Get Started</a>
         </div>
+
+        <!-- Mobile hamburger -->
+        <button id="mob-menu-btn" onclick="toggleMobileMenu()" class="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-lg transition-colors" style="background:#f4f7fb" aria-label="Open menu">
+          <span class="mob-bar block w-5 h-0.5 mb-1 transition-all" style="background:#0a1929"></span>
+          <span class="mob-bar block w-5 h-0.5 mb-1 transition-all" style="background:#0a1929"></span>
+          <span class="mob-bar block w-5 h-0.5 transition-all" style="background:#0a1929"></span>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile menu panel -->
+    <div id="mob-menu" class="hidden md:hidden border-t border-border" style="background:rgba(238,242,247,.98);backdrop-filter:blur(12px)">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-1">
+        <a href="#features"      onclick="closeMobileMenu()" class="px-3 py-3 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors">Features</a>
+        <a href="#education"     onclick="closeMobileMenu()" class="px-3 py-3 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors">Education</a>
+        <a href="#live"          onclick="closeMobileMenu()" class="px-3 py-3 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors">Live Sessions</a>
+        <a href="#pricing"       onclick="closeMobileMenu()" class="px-3 py-3 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors">Pricing</a>
+        <a href="#faq"           onclick="closeMobileMenu()" class="px-3 py-3 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors">FAQ</a>
+        <div class="h-px bg-border my-2"></div>
+        <a href="dashboard.html" class="btn-secondary text-sm font-semibold px-4 py-3 rounded-xl text-center">Sign in</a>
+        <a href="dashboard.html" class="btn-primary text-sm font-semibold px-4 py-3 rounded-xl text-center mt-1">Get Started</a>
       </div>
     </div>
   </nav>
@@ -233,7 +271,7 @@
           </p>
 
           <div class="flex flex-wrap items-center gap-4 mb-12">
-            <a href="dashboard-light__6_.html" class="btn-primary font-medium px-6 py-3 rounded-xl text-base inline-flex items-center gap-2">
+            <a href="dashboard.html" class="btn-primary font-medium px-6 py-3 rounded-xl text-base inline-flex items-center gap-2">
               Get Started
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </a>
@@ -377,33 +415,7 @@
     </div>
   </section>
 
-  <!-- Stats Section -->
-  <section class="py-16 lg:py-20 px-6 lg:px-8 border-y border-border bg-section-c">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-        <div class="text-center">
-          <div class="text-3xl sm:text-4xl lg:text-5xl font-bold stat-num mb-2">74%</div>
-          <div class="text-base font-medium text-foreground mb-1">Average Win Rate</div>
-          <div class="text-sm text-muted-foreground">Across all signals</div>
-        </div>
-        <div class="text-center">
-          <div class="text-3xl sm:text-4xl lg:text-5xl font-bold stat-num mb-2">10K+</div>
-          <div class="text-base font-medium text-foreground mb-1">Active Traders</div>
-          <div class="text-sm text-muted-foreground">Using our platform</div>
-        </div>
-        <div class="text-center">
-          <div class="text-3xl sm:text-4xl lg:text-5xl font-bold stat-num mb-2">24/7</div>
-          <div class="text-base font-medium text-foreground mb-1">Market Coverage</div>
-          <div class="text-sm text-muted-foreground">Real-time analysis</div>
-        </div>
-        <div class="text-center">
-          <div class="text-3xl sm:text-4xl lg:text-5xl font-bold stat-num mb-2">$2.5M+</div>
-          <div class="text-base font-medium text-foreground mb-1">Total Volume</div>
-          <div class="text-sm text-muted-foreground">Monthly trades</div>
-        </div>
-      </div>
-    </div>
-  </section>
+
 
   <!-- Features Section -->
   <section class="py-24 lg:py-32 px-6 lg:px-8 bg-section-b" id="features">
@@ -712,7 +724,7 @@
             </div>
           </div>
 
-          <a href="dashboard-light__6_.html" class="btn-primary font-medium px-6 py-3 rounded-xl text-base inline-flex items-center gap-2">
+          <a href="dashboard.html" class="btn-primary font-medium px-6 py-3 rounded-xl text-base inline-flex items-center gap-2">
             Join Next Session
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </a>
@@ -828,6 +840,189 @@
     </div>
   </section>
 
+
+  <!-- Pricing Section -->
+  <section class="py-24 lg:py-32 px-6 lg:px-8 bg-section-a" id="pricing">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="lp-kicker mb-4 block">Pricing</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-4">
+          Choose your plan.<br>
+          <span class="text-primary">Cancel anytime.</span>
+        </h2>
+        <p class="text-lg text-muted-foreground">Start free, upgrade when you're ready. All plans include full dashboard access.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 items-start">
+
+        <!-- Starter -->
+        <div class="lp-card rounded-2xl p-7 flex flex-col gap-4">
+          <div>
+            <div class="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-3">Starter</div>
+            <div class="flex items-end gap-1 mb-1">
+              <span class="text-4xl font-bold text-foreground">$0</span>
+            </div>
+            <div class="text-sm text-muted-foreground">free forever</div>
+          </div>
+          <div class="h-px bg-border"></div>
+          <ul class="flex flex-col gap-3 text-sm flex-1">
+            <li class="flex items-center gap-2 text-foreground"><svg class="w-4 h-4 flex-shrink-0" style="color:#00c48c" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Dashboard access</li>
+            <li class="flex items-center gap-2 text-foreground"><svg class="w-4 h-4 flex-shrink-0" style="color:#00c48c" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Crypto markets live</li>
+            <li class="flex items-center gap-2 text-foreground"><svg class="w-4 h-4 flex-shrink-0" style="color:#00c48c" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Crypto news feed</li>
+            <li class="flex items-center gap-2 text-foreground"><svg class="w-4 h-4 flex-shrink-0" style="color:#00c48c" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Education library</li>
+            <li class="flex items-center gap-2 text-foreground"><svg class="w-4 h-4 flex-shrink-0" style="color:#00c48c" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Basic signals (3/week)</li>
+          </ul>
+          <a href="dashboard.html" class="btn-secondary text-sm font-semibold px-5 py-3 rounded-xl text-center">Get Started</a>
+        </div>
+
+        <!-- Pro -->
+        <div class="lp-card rounded-2xl p-7 flex flex-col gap-4">
+          <div>
+            <div class="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-3">Pro</div>
+            <div class="flex items-end gap-1 mb-1">
+              <span class="text-4xl font-bold text-foreground">$29</span>
+              <span class="text-muted-foreground mb-1">/mo</span>
+            </div>
+            <div class="text-sm text-muted-foreground">billed monthly</div>
+          </div>
+          <div class="h-px bg-border"></div>
+          <ul class="flex flex-col gap-3 text-sm flex-1">
+            <li class="flex items-center gap-2 text-foreground"><svg class="w-4 h-4 flex-shrink-0" style="color:#0055ff" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Unlimited signals</li>
+            <li class="flex items-center gap-2 text-foreground"><svg class="w-4 h-4 flex-shrink-0" style="color:#0055ff" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Daily market analysis</li>
+            <li class="flex items-center gap-2 text-foreground"><svg class="w-4 h-4 flex-shrink-0" style="color:#0055ff" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Premium alerts</li>
+            <li class="flex items-center gap-2 text-foreground"><svg class="w-4 h-4 flex-shrink-0" style="color:#0055ff" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>VIP Telegram</li>
+            <li class="flex items-center gap-2 text-foreground"><svg class="w-4 h-4 flex-shrink-0" style="color:#0055ff" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Weekly live session</li>
+            <li class="flex items-center gap-2 text-foreground"><svg class="w-4 h-4 flex-shrink-0" style="color:#0055ff" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Heatmap &amp; liquidity tools</li>
+          </ul>
+          <a href="dashboard.html" class="btn-secondary text-sm font-semibold px-5 py-3 rounded-xl text-center">Join Pro</a>
+        </div>
+
+        <!-- AI Analyst — Featured -->
+        <div class="lp-card-ft rounded-2xl p-7 flex flex-col gap-4 relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+            <span class="btn-primary text-xs font-bold px-4 py-1 rounded-full">⭐ Favorite</span>
+          </div>
+          <div>
+            <div class="text-xs font-bold uppercase tracking-widest text-primary mb-3">AI Analyst</div>
+            <div class="flex items-end gap-1 mb-1">
+              <span class="text-4xl font-bold text-foreground">$49</span>
+              <span class="text-muted-foreground mb-1">/mo</span>
+            </div>
+            <div class="text-sm text-muted-foreground">billed monthly</div>
+          </div>
+          <div class="h-px" style="background:rgba(0,85,255,.15)"></div>
+          <ul class="flex flex-col gap-3 text-sm flex-1">
+            <li class="flex items-center gap-2 text-foreground"><svg class="w-4 h-4 flex-shrink-0" style="color:#0055ff" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Everything in Starter + Pro</li>
+            <li class="flex items-center gap-2 text-foreground"><svg class="w-4 h-4 flex-shrink-0" style="color:#0055ff" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>AI market analyst</li>
+            <li class="flex items-center gap-2 text-foreground"><svg class="w-4 h-4 flex-shrink-0" style="color:#0055ff" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>BTC / ETH deep dive</li>
+            <li class="flex items-center gap-2 text-foreground"><svg class="w-4 h-4 flex-shrink-0" style="color:#0055ff" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Narrative tracking</li>
+            <li class="flex items-center gap-2 text-foreground"><svg class="w-4 h-4 flex-shrink-0" style="color:#0055ff" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Whale alerts advanced</li>
+            <li class="flex items-center gap-2 text-foreground"><svg class="w-4 h-4 flex-shrink-0" style="color:#0055ff" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Smart money flows</li>
+            <li class="flex items-center gap-2 text-foreground"><svg class="w-4 h-4 flex-shrink-0" style="color:#0055ff" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>AI trade ideas</li>
+          </ul>
+          <a href="dashboard.html" class="btn-primary text-sm font-semibold px-5 py-3 rounded-xl text-center">Start AI Plan</a>
+        </div>
+
+        <!-- Elite -->
+        <div class="lp-card rounded-2xl p-7 flex flex-col gap-4">
+          <div>
+            <div class="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-3">Elite</div>
+            <div class="flex items-end gap-1 mb-1">
+              <span class="text-4xl font-bold text-foreground">$149</span>
+              <span class="text-muted-foreground mb-1">/mo</span>
+            </div>
+            <div class="text-sm text-muted-foreground">billed monthly</div>
+          </div>
+          <div class="h-px bg-border"></div>
+          <ul class="flex flex-col gap-3 text-sm flex-1">
+            <li class="flex items-center gap-2 text-foreground"><svg class="w-4 h-4 flex-shrink-0" style="color:#0055ff" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Everything in AI plan</li>
+            <li class="flex items-center gap-2 text-foreground"><svg class="w-4 h-4 flex-shrink-0" style="color:#0055ff" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Private trading group</li>
+            <li class="flex items-center gap-2 text-foreground"><svg class="w-4 h-4 flex-shrink-0" style="color:#0055ff" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>1-on-1 sessions</li>
+            <li class="flex items-center gap-2 text-foreground"><svg class="w-4 h-4 flex-shrink-0" style="color:#0055ff" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Personal trading plan</li>
+            <li class="flex items-center gap-2 text-foreground"><svg class="w-4 h-4 flex-shrink-0" style="color:#0055ff" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Priority signals</li>
+          </ul>
+          <a href="dashboard.html" class="btn-secondary text-sm font-semibold px-5 py-3 rounded-xl text-center">Go Elite</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-24 lg:py-32 px-6 lg:px-8 bg-section-b" id="faq">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="lp-kicker mb-4 block">FAQ</span>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-4">
+          Frequently asked<br><span class="text-primary">questions</span>
+        </h2>
+      </div>
+      <div class="flex flex-col gap-3" id="faq-list">
+
+        <div class="lp-card rounded-xl overflow-hidden">
+          <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-muted/30 transition-colors">
+            <span class="font-semibold text-foreground">Does this work on all exchanges?</span>
+            <svg class="w-5 h-5 text-muted-foreground flex-shrink-0 faq-icon transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-body hidden px-6 pb-5">
+            <p class="text-muted-foreground leading-relaxed">Yes. The signals and analysis are exchange-independent — use them on Binance, Coinbase, Kraken, KuCoin, OKX or any other exchange you prefer. You trade yourself, we give you the edge.</p>
+          </div>
+        </div>
+
+        <div class="lp-card rounded-xl overflow-hidden">
+          <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-muted/30 transition-colors">
+            <span class="font-semibold text-foreground">Is it automated or do I trade myself?</span>
+            <svg class="w-5 h-5 text-muted-foreground flex-shrink-0 faq-icon transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-body hidden px-6 pb-5">
+            <p class="text-muted-foreground leading-relaxed">You always trade yourself. Our bot generates signals with exact entry, take-profit and stop-loss levels — you decide whether to act on them. No direct connection to your exchange, full control stays with you.</p>
+          </div>
+        </div>
+
+        <div class="lp-card rounded-xl overflow-hidden">
+          <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-muted/30 transition-colors">
+            <span class="font-semibold text-foreground">Can I cancel at any time?</span>
+            <svg class="w-5 h-5 text-muted-foreground flex-shrink-0 faq-icon transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-body hidden px-6 pb-5">
+            <p class="text-muted-foreground leading-relaxed">Yes, no commitments. You can cancel monthly and retain access until the end of your billing period. No hidden fees.</p>
+          </div>
+        </div>
+
+        <div class="lp-card rounded-xl overflow-hidden">
+          <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-muted/30 transition-colors">
+            <span class="font-semibold text-foreground">How often are signals posted?</span>
+            <svg class="w-5 h-5 text-muted-foreground flex-shrink-0 faq-icon transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-body hidden px-6 pb-5">
+            <p class="text-muted-foreground leading-relaxed">The bot scans the market 24/7 and posts automatically the moment a setup triggers — on average multiple times per day. On top of that, our analysts post manual signals for key setups. Pro members see everything in real-time.</p>
+          </div>
+        </div>
+
+        <div class="lp-card rounded-xl overflow-hidden">
+          <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-muted/30 transition-colors">
+            <span class="font-semibold text-foreground">Do I need experience to get started?</span>
+            <svg class="w-5 h-5 text-muted-foreground flex-shrink-0 faq-icon transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-body hidden px-6 pb-5">
+            <p class="text-muted-foreground leading-relaxed">No. The Education Center starts from the absolute basics and builds step by step. You can follow signals while you learn. Most members start with zero experience.</p>
+          </div>
+        </div>
+
+        <div class="lp-card rounded-xl overflow-hidden">
+          <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-muted/30 transition-colors">
+            <span class="font-semibold text-foreground">Is this financial advice?</span>
+            <svg class="w-5 h-5 text-muted-foreground flex-shrink-0 faq-icon transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-body hidden px-6 pb-5">
+            <p class="text-muted-foreground leading-relaxed">No. Everything on CryptoMarketz is purely educational and informational. Trading crypto carries risk. Never trade with money you cannot afford to lose.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- CTA Section -->
   <section class="py-24 lg:py-32 px-6 lg:px-8 bg-section-b">
     <div class="max-w-7xl mx-auto">
@@ -845,11 +1040,11 @@
           </p>
 
           <div class="flex flex-wrap items-center justify-center gap-4 mb-8">
-            <a href="dashboard-light__6_.html" class="btn-primary font-medium px-8 py-3 rounded-xl text-base inline-flex items-center gap-2">
+            <a href="dashboard.html" class="btn-primary font-medium px-8 py-3 rounded-xl text-base inline-flex items-center gap-2">
               Get Started Free
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </a>
-            <a href="dashboard-light__6_.html" class="btn-secondary font-medium px-8 py-3 rounded-xl text-base">
+            <a href="dashboard.html" class="btn-secondary font-medium px-8 py-3 rounded-xl text-base">
               Schedule Demo
             </a>
           </div>
@@ -976,6 +1171,43 @@
       requestAnimationFrame(draw);
     })();
   })();
+  </script>
+
+  <script>
+  /* ── Mobile menu ── */
+  function toggleMobileMenu(){
+    var m = document.getElementById('mob-menu');
+    var open = !m.classList.contains('hidden');
+    if(open){ closeMobileMenu(); }
+    else {
+      m.classList.remove('hidden');
+      document.getElementById('mob-menu-btn').setAttribute('aria-expanded','true');
+    }
+  }
+  function closeMobileMenu(){
+    document.getElementById('mob-menu').classList.add('hidden');
+    document.getElementById('mob-menu-btn').setAttribute('aria-expanded','false');
+  }
+  // Close on outside click
+  document.addEventListener('click', function(e){
+    var nav = document.getElementById('main-nav');
+    if(nav && !nav.contains(e.target)){ closeMobileMenu(); }
+  });
+
+  /* ── FAQ accordion ── */
+  function toggleFaq(btn){
+    var body = btn.nextElementSibling;
+    var icon = btn.querySelector('.faq-icon');
+    var isOpen = !body.classList.contains('hidden');
+    // Close all
+    document.querySelectorAll('.faq-body').forEach(function(b){ b.classList.add('hidden'); });
+    document.querySelectorAll('.faq-icon').forEach(function(i){ i.style.transform = ''; });
+    // Open clicked (unless it was already open)
+    if(!isOpen){
+      body.classList.remove('hidden');
+      icon.style.transform = 'rotate(180deg)';
+    }
+  }
   </script>
 </body>
 </html>
