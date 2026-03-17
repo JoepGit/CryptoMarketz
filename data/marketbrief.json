@@ -1,18 +1,18 @@
 {
-  "date": "dinsdag 17 maart 2026",
-  "focus": "Bitcoin consolidateert rond $74.324 terwijl Ethereum sterke momentum toont met +2.61% dagwinst.",
-  "risk": "Verhoogde volatiliteit, gemengde signalen",
-  "btc_structure": "Bitcoin handelt op $74.324 met een bescheiden +1.20% dagwinst. De markt vertoont consolidatiepatronen na recente bewegingen, met dagelijks volume van $50.74B dat solide vraag aangeeft.",
-  "eth_flows": "Ethereum leidt de rally aan met $2.342,22 en imponante +2.61% dagwinst op $33.12B volume. Dit outperformance suggereert sterkere institutionele interesse in de tweede laag.",
+  "date": "2026-03-17",
+  "focus": "Institutionele crypto-adoptie versnelt terwijl Fear & Greed Index stijgt van extreme angst naar voorzichtige grond.",
+  "risk": "Laag-tot-gemiddeld, voorzichtige stabilisatie",
+  "btc_structure": "Bitcoin handelt op $74.091 met solide weekwinst van +5,96%, ondersteund door voorzichtige herstelsignalen. Momentumwinsten zijn beperkt op korte termijn met slechts +0,44% in de afgelopen uur, wat duidt op consolidatie rond huidige niveaus. Verwacht weerstand boven $75.000 en ondersteuning rond $72.000.",
+  "eth_flows": "Ethereum presteert sterker op $2.325,66 met opmerkelijke weekprestatie van +14,37%, wat outperformance versus Bitcoin bewijst. De 24u-stijging van +1,47% plaatst ETH in top gainers, ondersteund door institutionele interesse via Mastercard's $1,8B BVNK-overname.",
   "top_narratives": [
-    "Ethereum outperformance versus Bitcoin",
-    "Consolidatie rond $74k BTC-support",
-    "Altcoin seasonaliteit teruggekeerd",
-    "Volume-driven rally's in mid-cap tokens"
+    "Mastercard's $1,8B stablecoin-acquisitie signaleert mainstream fintech-integratie van crypto",
+    "Phantom's CFTC no-action relief opent deur voor gedecentraliseerde wallets in regulated derivatives",
+    "PayPal's PYUSD-expansie naar 70 landen accelereert stablecoin-adoptie globaal",
+    "Vietnam's lokale exchange-promotie markeert shift naar regulated crypto-ecosystemen in Azi\u00eb"
   ],
-  "macro_impact": "Marktbrede risico-sentiment blijft voorzichtig door geopolitieke onzekerheden. Bitcoin's defensieve positie onder $75k wijst op voorzichtigheid van beleggers.",
-  "whale_flows": "BTC-volume van $50.74B suggereert distributoractiviteit, terwijl ETH's $33.12B hogere concentratie van retail-interest aangeeft. Altcoin-volumes (XRP, SOL) blijven bescheiden.",
-  "funding_oi": "Ethereum's sterke dagwinst kan short-squeeze-dynamieken aanwakkeren. Long-posities in BTC lijken voorzichtig gesloten te worden rond huidige niveaus.",
-  "volatility_outlook": "Verwacht 3-5% intraday-ranges terwijl markt zoekt naar nieuwe directie. Ethereum volatiliteit kan toenemen gegeven huidige momentum, terwijl Bitcoin relatief stabiel blijft.",
-  "full_report": "De cryptomarkt vertoont gemengde signalen op dinsdag 17 maart 2026 met Bitcoin stationair op $74.324 (+1.20%) en Ethereum als outperformer op $2.342,22 (+2.61%). BTC-volume van $50.74B en ETH-volume van $33.12B duiden op gezonde liquiditeit maar voorzichtige institutionele positionering. Altcoins tonen lichte herstel met SOL op $94,37 (+1.22%) en XRP stabiel op $1,51, hoewel BNB terugtrekker met -0,62%. Dit patroon suggereert rotatieactiviteit vanuit defensieve posities naar growth-assets, mogelijk aangewakkerd door verbeterde risicosentiment. Monitor support-niveaus in BTC rond $72k voor bredere marktgezondheid."
+  "macro_impact": "Regelgevingswinsten domineren sentiment met CFTC-relief voor Phantom en Mastercard's strategische stablecoin-move, wat institutionele vertrouwen ondersteunt. PayPal's globale PYUSD-uitrol en Vietnam's pro-crypto-standpunt suggereren versnelde mainstream-integratie. Deze positieve macro-trends verklaren geleidelijke verschuiving van Extreme Fear (23) naar Fear (28) in Fear & Greed Index.",
+  "whale_flows": "Totale marktcap groeit +1,23% naar $2,62T met gezond 24u-volume van $137,0B, wat wijst op stabiele institutionele kapitaalinflow. BTC blijft dominant op 56,7% marktaandeel, terwijl ETH sterke 10,8% weging behoudt. Geen extreme liquidaties gedetecteerd, duiding op gedisciplineerde marktstructuur.",
+  "funding_oi": "Funding rate- en open interest-data niet beschikbaar vandaag, maar afwezigheid van extreme liquidaties in combinatie met stijgende Fear & Greed (van 23 naar 28) suggereert gezond evenwicht tussen long/short-posities. Verwacht voorzichtige leverage-afbouw na extreme fear-periode.",
+  "volatility_outlook": "Volatiliteit naar verwachting laag-tot-gemiddeld gegeven Fear & Greed stijging van extreme naar voorzichtige niveaus; historisch duiden dergelijke overgangen op consolidatie. Institutionele macro-nieuws (CFTC, Mastercard, PayPal) ondersteunt eerder fundamentele beweging dan technische volatiliteitsspikes.",
+  "full_report": "Bitcoin ($74.091, +5,96% wekelijks) en Ethereum ($2.325,66, +14,37% wekelijks) consolideren na sterke weekprestaties in een markt van $2,62T met gezonde $137,0B dagvolume. Fear & Greed Index verbetert van Extreme Fear (23) naar Fear (28), signaliserend voorzichtige recovery in marktsentiment. Regelgevingsbreakthroughs\u2014Phantom's CFTC-relief, Mastercard's $1,8B BVNK-acquisition, PayPal's 70-landen PYUSD-rollout\u2014cre\u00ebren macro-tailwinds voor institutionele adoptie. BTC-dominantie blijft stevig op 56,7% terwijl ETH-outperformance (+1,47% 24u, top gainer) reflectie is van stablecoin- en DeFi-momentum. Technisch signaleren afwezigheid van grote liquidaties en stabiele open interest gezonde lange-termijn accumulatie zonder gevaarlijke leverage-posities."
 }
