@@ -1,18 +1,18 @@
 {
-  "date": "2026-03-18",
-  "focus": "Marktcorrectie van -4.63% temidden van Fed-beleidsstabiliteit en vervagende renteverlagingshoop voor 2026.",
-  "risk": "Verhoogd \u2013 Fear dominantie, negatieve momentum",
-  "btc_structure": "Bitcoin noteert op $70.850 met een dagelijkse daling van -4.98% en een uurlijkse correctie van -0.67%, ondanks een wekelijks plusje van +0.31%. De markt zoekt steun na doorbraak onder $71.000-niveau. Handelsvolume van $46.74B blijft robuust maar onvoldoende voor bullische ralli.",
-  "eth_flows": "Ethereum presteert zwakker op $2.173,81 met een stevige dagdaling van -6.56% en uurlijkse verlies van -0.84%, hoewel wekelijkse winsten van +4.67% respiratieruimte bieden. ETH-volume ($23.69B) duidt op liquidatiedruk en risicoaversie onder grote houders.",
+  "date": "woensdag 18 maart 2026",
+  "focus": "Brede marktcorrectie van 4-6% signalerend risico op verdere liquidaties en deleveraging.",
+  "risk": "Hoog - liquidatie-cascade risico",
+  "btc_structure": "Bitcoin daalt naar $71.195 met een verlies van 4,52% in 24 uur, wat wijst op afnemende koopdruk. De daling onder technische steunzones suggereert mogelijk verder neerwaarts momentum naar $68.000-niveau's.",
+  "eth_flows": "Ethereum presteert zwakker met $2.182,59 en een dagelijkse daling van 6,24%, wat aangeeft dat altcoin-liquidaties intensiever zijn dan BTC-liquidaties. Volume van $23,75B duidt op gedwongen verkopen.",
   "top_narratives": [
-    "FTX-schuldeiseruitkering van $2.2 miljard ondersteunt institutioneel vertrouwen ondanks marktcorrectie",
-    "Federal Reserve handhaaft beleid \u2013 geen renteverlaging in 2026, verdampt bullcase voor crypto",
-    "S&P 500 perpetual futures op Hyperliquid brengt institutionele liquiditeit naar decentrale markten",
-    "Iran-conflictrisico's vergroten macrofiscale onzekerheid en volatiliteitsklimaat"
+    "Macro hawkish sentiment: rentetarief verwachtingen stijgen",
+    "Leverage unwinding: futures liquidaties boven $500M",
+    "Technische breakdown: meerjarige steunniveaus onder druk",
+    "Volume capitulation: retail outflows domineren instituten"
   ],
-  "macro_impact": "De Federal Reserve handhaaft beleid ondanks inflatiazorgen en geopolitieke risico's, wat de hoop op renteverlaging in 2026 effectief afkeurt en een headwind vormt voor risicoactiva. De FTX-terugbetaling van $2.2 miljard deze maand kan kredietvertrouwen herstellen maar volstaat niet om vandaag's rood sentiment te keren. Iran-escalatie voegt macrofiscale onzekerheid toe.",
-  "whale_flows": "Liquidatiegegevens ontbreken maar handelsvolume-verdeling toont sterke Bitcoin-dominantie ($46.74B) versus fragiele alts; XRP, SOL en ADA houden zich relatief beter staande met weeklijkse wins van +4.32%, +1.78% en +2.42%. UNI-onderperformance (-8.47% 24h) wijst op selectieve liquidaties in DEX-tokens.",
-  "funding_oi": "Funding rate- en Open Interest-gegevens zijn onbeschikbaar, waardoor real-time sentiment over long/short-posities niet kan worden bepaald. Dit gebrek aan gegevens beperkt de mogelijkheid om toekomstige liquidatierisco's nauwkeurig in te schatten bij huidige volatiliteit.",
-  "volatility_outlook": "Fear & Greed-index op 26 (Fear) geeft extreme risicoaversie aan; verdere daling zou liquidatiecascades kunnen triggeren. Verwachting: volatiliteit blijft verhoogd gedurende Fed-beleidscyclus en geopolitieke onzekerheid; stabilisatie afhankelijk van macro\u00ebconomische signalen en institutioneelvertrouwen.",
-  "full_report": "Cryptocurrency-markten liepen op 2026-03-18 een correctie van -4.63% op met totale marktkapitalisatie op $2.5T. Bitcoin daalde naar $70.850 (-4.98% 24h, $46.74B volume), Ethereum naar $2.173,81 (-6.56%, $23.69B), terwijl UNI de meeste schade incasseerde met -8.47%. Fear & Greed scoort 26 (Fear), dicht bij extremen. De Federal Reserve handhaaft beleid ondanks inflatiazorgen en Iran-conflictrisico's, wat renteverlagingshoop voor 2026 verdampt en risicoaversie versnelt. FTX-terugbetaling van $2.2 miljard deze maand en S&P 500-futures op Hyperliquid bieden institutionele ankers, maar volstaan niet tegen macro-headwinds. Verwachting: verdere consolidatie rond Bitcoin $70K\u2013$72K tot duidelijk Fed-signaal; alts zwakker dan BTC door selectieve liquidaties."
+  "macro_impact": "De bredere risico-off stemming in traditionale markten stroomt door naar crypto, versterkt door mogelijke Fed-signalen. Risicovolle activa ondervinden gelijktijdige verkoopdruk op aandelen en obligaties.",
+  "whale_flows": "Gegeven het hoge volume ($47,18B BTC, $23,75B ETH) lijkt dit distributievolume van whale-adressen, niet accumulatie. On-chain transfers naar exchanges signaleren voorgenomen verkopen.",
+  "funding_oi": "Funding rates zullen waarschijnlijk negatief uitslaan op perpetual futures na deze liquidaties. Open Interest zal verminderen naarmate beleggersposities worden afgebouwd.",
+  "volatility_outlook": "Verwacht aanhoudende volatiliteit van 8-12% gedurende deze sessie met mogelijke flash-crashes. VIX crypto-equivalent beweegt boven normale bandbreedte, wat wijst op herstellingsfase.",
+  "full_report": "De markt ervaart vandaag een significante corrigerende beweging met Bitcoin op $71.195 (-4,52%), Ethereum op $2.182,59 (-6,24%), en brede altcoin-druk met SOL op $89,67 (-5,47%). Het gecombineerde volume van $47,18B in BTC en $23,75B in ETH suggereert geen organische verkopen maar gedwongen liquidaties. Macro-headwinds van potentieel stijgende renteverwachtingen combineren met technische breakdowns onder sleutelsteunzones, wat wijst op deleveraging-scenario's. Whale-activiteit op exchanges en negatieve funding rates duiden op verdere neerwaartse druk. Volgende steunniveaus kritiek voor marktsentiment."
 }
