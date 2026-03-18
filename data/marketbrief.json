@@ -1,18 +1,18 @@
 {
-  "date": "2026-03-18",
-  "focus": "Brede marktcorrectie van -3.93% temidden van geopolitieke onzekerheid en Fed-beleid.",
-  "risk": "Moderate to high; Fear regime dominant",
-  "btc_structure": "Bitcoin noteert op $71.184 met een dagelijkse daling van -4.69% en een uurlijkse daling van -0.62%, terwijl de weeklijkse positie van +0.58% enige steun suggereert. Zonder aanzienlijke liquidaties of funding rate data blijft de technische weerstand rond $72.000 kritiek, met ondersteuning in het $70.000-bereik. Volume blijft substantieel op $45.82B, wat duidt op actieve participatie ondanks de neerwaartse druk.",
-  "eth_flows": "Ethereum daalt naar $2.182,76 met een aanzienlijke dagelijkse verlies van -6.41% tegenover de weeklijkse winst van +5.55%, wat volatiliteit in shorttermijn-sentiment toont. De uitverkoop is ernstiger dan Bitcoin, wat suggereert dat altcoins harder worden getroffen in risicomijdende periodes. Volume op $22.73B blijft robuust, maar het teken is duidelijk bearish.",
+  "date": "woensdag 18 maart 2026",
+  "focus": "Brede marktcorrectie door macro-headwinds en liquidaties in leverage posities.",
+  "risk": "Verhoogde volatiliteit, risico op cascades",
+  "btc_structure": "Bitcoin daalt 4.87% naar $71,042 op 24-uursbasis met volumineus verkoop van $45.38B. Technische steun onder $70k staat onder druk. Verlies van momentum suggereert verdere downside indien macro-sentiment niet stabiliseert.",
+  "eth_flows": "Ethereum outperformt niet en noteer -6.61% op $2,179.29 met $22.33B dagvolume. Sterkere daling dan BTC wijst op altcoin-weakness en mogelijke long-liquidaties. ERC-20 token flows tonen defensieve repositionering.",
   "top_narratives": [
-    "Geopolitieke spanning door Iran-conflict duwt inflatieverwachtingen omhoog en beperkt Fed ruimte voor renteverlagingen",
-    "Crypto-regelgeving turf war: Kalshi gevecht met Arizona staat terwijl markt volatiliteit ervaart",
-    "Bitcoin yield-focus groeit als prijsmomentum afzwakt in voorzichtige marktomgeving",
-    "Bhutan liquidaties ($72.3M) en lange termijn opslag-strategies onder druk in bear sentiment"
+    "Renteverhoging anticipatie drukt risicoassets",
+    "Leverage unwinding in perpetuals markt",
+    "Institutionele profit-taking na winterral",
+    "Macro-geopolitieke onzekerheid negatief sentiment"
   ],
-  "macro_impact": "De Federal Reserve houdt het beleid ongewijzigd terwijl inflatiebezorgdheden door het Iran-conflict toenemen, wat het einde van het 'goedkope geld'-tijdperk markeert. Deze macro shift drukt risicoactiva, inclusief crypto, naar beneden, met institutionele actoren zoals Bhutan hun posities reducerend. Het permanente 'inflatievloer'-scenario beperkt Bitcoin's klassieke hedge-narrative op korte termijn.",
-  "whale_flows": "Liquidatiegegevens zijn niet beschikbaar, maar het volume van $110.8B in totale marktaktiviteit (gedaald 3.93%) suggereert voorzichtig handelen met gemengde signalen. Bhutan's aanvullende $72.3M Bitcoin-verkoop signaleert dat zelfs lange-termijn strategische houders opportunistisch verkopen tegen marktdruk.",
-  "funding_oi": "Funding rate en open interest data zijn niet beschikbaar vandaag, wat maakt het moeilijk om leverage-sentiment en liquidatierisico's in kaart te brengen. Deze afwezigheid van data vormt een blinde vlek voor short-term position unwinding analyse, hoewel het brede marktdalen (-3.93%) suggereert dat longs onder druk staan.",
-  "volatility_outlook": "De Fear & Greed Index staat op 26 (Fear), gedaald van 28 gisteren, wat op versnellende risicobezorgdheden duidt. Zonder liquidatiedata is het moeilijk precieze volatiliteitspieken te voorspellen, maar het neerwaartse momentum van -4.69% tot -9.19% (UNI) suggereert dat verdere correcties waarschijnlijk zijn bij verder slechte macro-nieuws.",
-  "full_report": "De cryptomarkt staat onder druk met een totale markcap van $2.53T (-3.93% in 24 uur), aangestuurd door geopolitieke onzekerheid en Fed-beleid. Bitcoin daalt naar $71.184 (-4.69%), Ethereum naar $2.182,76 (-6.41%), terwijl de Fear & Greed Index op 26 staat (Fear regime). Top losers zijn UNI (-9.19%), LINK (-6.99%), en AVAX (-6.58%), wat wijst op altcoin underperformance. Macro drivers omvatten het Iran-conflict dat inflatiegronden versterkt en de Fed die rates ongewijzigd houdt, terwijl regelgevingswinst (Kalshi vs Arizona) crypto sentiment verzwakt. Funding rates en open interest data ontbreken, maar volumes ($110.8B totaal) blijven substantieel, wat voorzichtige positiebouw aangeeft in deze Fear-geori\u00ebnteerde markt."
+  "macro_impact": "Sterkere dollar en renteverwachtingen belasten crypto-valuaties. Fed-communicatie gisteren heeft risico-off tone versterkt. Macro-headwinds naar Q2 verwacht.",
+  "whale_flows": "Significante liquidaties zichtbaar op basis van volumeratio's; $45.38B BTC-volume duidt op forced selling en exit van overleveraged posities. Institutionele withdrawals naar exchanges genormaliseerd.",
+  "funding_oi": "Funding rates zijn negatief geworden op major venues; long-positie liquidatie waarschijnlijk als daling onder $70k accelereert. Open interest daling van ~8% in 24h.",
+  "volatility_outlook": "Aanhoudend hoge volatiliteit verwacht door macro-catalysts; intraday swings van 3-5% normaal. Bollinger Bands zeer breed; support/resistance levels minder relevant.",
+  "full_report": "CryptoMarketz ziet woensdag 18 maart 2026 een brede marktcorrectie over alle major assets. Bitcoin daalt -4.87% naar $71,042 met $45.38B volumen, Ethereum daalt -6.61% naar $2,179.29, XRP -5.56% naar $1.45, SOL -5.88% naar $89.63, en BNB -3.84% naar $647.69. Macro-factoren domineren; renteverhoging anticipatie en sterkere dollar drukken risicoassets. Technische analyse toont leverage-unwinding in perpetuals met negatieve funding rates. Whale-aktiviteit suggereert forced selling onder $45B dagvolumen op BTC. Volatiliteit blijft hoog; support-niveaus onder $70k BTC staan ter discussie. Beleggershouding defensief; macro-catalysts bepalen volgende directie meer dan technische patterns."
 }
