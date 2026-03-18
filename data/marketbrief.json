@@ -1,18 +1,18 @@
 {
   "date": "2026-03-18",
-  "focus": "Crypto markt onderuit op Fed rate cut uitzicht terwijl SEC tokenized securities goedkeurt en FTX creditors $2.2B tegemoet zien.",
-  "risk": "Rood: Deflationair, liquidatie-risico",
-  "btc_structure": "Bitcoin staat onder druk op $71.217 met een 24h daling van -4.48%, terwijl de 7d +0.83% toont dat onderliggende steun intact blijft. BTC dominantie van 56.5% beweert marktleiderschap, maar de -4.48% dagverlies duidt op voorzichtige sentiment na Federal Reserve-signalen.",
-  "eth_flows": "Ethereum onder-presteren met -6.14% in 24h op $2.187,34, sterker dan BTC's daling, wat liquidaties in leveraged positions suggereert. De 7d +5.38% toont recovery vanaf lagere niveaus, maar de $23.56B volume weerspiegelt voorzichtige intraday flows.",
+  "focus": "Markt onder druk door Fed-renteverhoging en afnemende rate-cut-verwachtingen, waarbij BTC onder $71.5K vecht en brede liquidaties plaatsvinden.",
+  "risk": "Elevated - Risk-off sentiment dominant",
+  "btc_structure": "Bitcoin noteert op $71,303 met een dagverlies van -4.36%, terwijl de 1h winst van +0.48% slechts beperkte herstelpoging aanduidt. De sleutelweerstand ligt rond $72K op basis van Fed-sentiment, met steun verwacht rond $70K indien macrovoeten verder stijgen.",
+  "eth_flows": "Ethereum daalt -5.96% naar $2,191.63 en onderperformt Bitcoin met een 7d-winst van +5.59% die nu onder druk staat. De negatieve 24h-performance en volumeweakness ($23.95B) duiden op institutionele exit-druk.",
   "top_narratives": [
-    "SEC goedkeuring Nasdaq tokenized securities: regulatoire katalysator voor institutionele adoption",
-    "FTX creditor repayment: $2.2B maart distributie stabiliseert concessiefonds sentiment",
-    "Fed rate cut uitzicht vervalt: macro headwind drukt correlatie crypto-obligaties op",
-    "Crypto politieke momentum: Fairshake $10M Illinois verlies signaleert volatiliteit in policy agenda"
+    "Fed halteert rate-cut-cyclus: inflatie-outlook verscherpt, bearish voor risk assets",
+    "FTX creditor-restitutie van $2.2B in maart stimuleert potenti\u00eble liquiditeitsdruk",
+    "SEC tokenized securities-goedkeuring (Nasdaq) biedt lange-termijn on-chain groei-narratief",
+    "Crypto political capital-setback: Fairshake Illinois-mislukking verzwakt lobbying-momentum"
   ],
-  "macro_impact": "Federal Reserve rate cut verwachtingen voor 2026 zijn verslechterd, hetgeen de correlatie tussen crypto en obligatiemarkten verscherpt; Bitcoin is onder $71K gezakt bij sluitingskansen. SEC's goedkeuring voor Nasdaq tokenized securities biedt echter tegenwicht, stellig institutionele steun signaliserend voor blockchain-infra.",
-  "whale_flows": "Liquidatiegegevens ontbreken, maar het $114.3B totale 24h volume en -4.07% marktcap daling wijzen op gedistribueerde selling pressure eerder dan geconcentreerde whale-dumps. ETH's -6.14% underperformance tegen BTC's -4.48% suggereert DeFi/contract positioning blootstelling.",
-  "funding_oi": "Funding rates en Open Interest data zijn momenteel niet beschikbaar; zonder deze metriek kan leveraged positioning niet direct worden gekwantificeerd. Historisch zou long dominantie bij dit daalmoment liquidaties triggeren; monitoring blijft essentieel bij volgende update.",
-  "volatility_outlook": "Fear & Greed Index van 26 (Fear, daling van gisteren's 28) signaleert extreme onzekerheid en potenti\u00eble capitulation-opportuniteiten. Gegeven de macro headwinds (Fed pivot) \u00e9n positieve nieuws (SEC-goedkeuring, FTX repayments), voorspellen we voortdurende intraday volatiliteit met ondersteuning mogelijk rond sub-$70K BTC levels.",
-  "full_report": "De crypto markt bevindt zich in een correctief regime op 18 maart 2026, met Bitcoin op $71.217 (-4.48% 24h) en Ethereum op $2.187,34 (-6.14% 24h) onder druk van vervagde Fed rate-cut-verwachtingen. De totale marktcap bedraagt $2.52T met een daling van -4.07%, terwijl Fear & Greed naar 26 daalt, wat extreme bearish sentiment aangeeft. Echter, regulatoire katalysatoren\u2014met name de SEC-goedkeuring voor Nasdaq tokenized securities en aanstaande FTX creditor repayment van $2.2B\u2014bieden ondersteuning voor institutioneel vertrouwen. Met BTC dominantie op 56.5% en totaal 24h volume van $114.3B, blijft de markt volatiel maar potentieel nabij lokale bodems; traders dienen liquidatiegegevens en Fed-verklaringen nauw in de gaten te houden."
+  "macro_impact": "Fed-besluit om rentes vast te houden tegen inflatie-opwaartse revisie heeft risicoactiva wereldwijd onder druk gezet, inclusief crypto. FTX's $2.2B maart-uitbetaling aan creditors cre\u00ebert liquiditeitsrisico en potenti\u00eble sell-druk op grote beleggers.",
+  "whale_flows": "Grote liquidaties zijn niet gerapporteerd, maar dagvolume ($114.6B totaal) en de 4.15% marktcap-daling suggereren voorzichtige positionering. BTC-dominantie op 56.5% stabiliseert, wat aangeeft dat kapitaal niet massaal naar alts vlucht ondanks rood.",
+  "funding_oi": "Funding rates en open interest data niet beschikbaar; echter, het Fear & Greed Index van 26 (Fear) suggereert overwegend short-positioning en voorzichtigheid onder leveraged traders, terwijl extreme fear-lectuur potenti\u00eble liquidatie-cascade's kan triggeren.",
+  "volatility_outlook": "Volatiliteit zal waarschijnlijk elevated blijven gegeven Fear & Greed-score van 26 en Fed-onzekerheid. Dagelijkse schommelingen van 4-6% in topcoins wijzen op reactieve markt; technische steun rond $70K voor BTC en $2,100 voor ETH zal kritisch zijn.",
+  "full_report": "De cryptomarkt verliest terrein op 18 maart met BTC op $71,303 (-4.36% 24h), ETH op $2,191.63 (-5.96%) en totale marktcap gedaald naar $2.52T (-4.15%). Het Fear & Greed Index staat op 26 (Fear), reflecterend gisteren's 28, terwijl het Fed-rentebesluit de rate-cut-verwachtingen voor 2026 verder uitstelt. Macrowinderosion, gecombineerd met FTX-creditor-restitutie van $2.2B deze maand, cre\u00ebert zowel sentiment- als liquiditeitsdruk. Positieve catalysts zoals SEC's tokenized securities-goedkeuring voor Nasdaq bieden lange-termijn perspectieven, maar zijn gedrukt door korte-termijn policy-tegenwind."
 }
