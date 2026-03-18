@@ -5,10 +5,10 @@
 <link rel="icon" type="image/svg+xml" href="logo_blauw.svg">
 <link rel="shortcut icon" href="logo_blauw.svg">
 <link rel="apple-touch-icon" href="logo_blauw.svg">
-<meta name="description" content="YONA Capital — Professional crypto trading signals, real-time market data and education for serious traders.">
+<meta name="description" content="YONA Capital Professional crypto trading signals, real-time market data and education for serious traders.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="YONA Capital">
-<meta property="og:title" content="YONA Capital — Professional Crypto Trading">
+<meta property="og:title" content="YONA Capital Professional Crypto Trading">
 <meta property="og:description" content="Professional crypto trading signals, real-time market data and education for serious traders.">
 <meta property="og:image" content="logo_blauw.svg">
 <meta name="twitter:card" content="summary">
@@ -16,7 +16,7 @@
 <meta name="twitter:title" content="YONA Capital">
 <meta name="twitter:description" content="Professional crypto trading signals, real-time market data and education for serious traders.">
 <meta name="twitter:image" content="logo_blauw.svg">
-<meta name="description" content="YONA Capital — Professional crypto trading signals, real-time data and education for serious traders.">
+<meta name="description" content="YONA Capital Professional crypto trading signals, real-time data and education for serious traders.">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>YONA Capital</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -209,7 +209,7 @@ body{font-family:'Inter',sans-serif;background:#0d0d0d;color:var(--cream);overfl
 .fsh-counter{font-family:'Inter',sans-serif;font-size:15px;color:rgba(232,120,32,.3);margin-left:12px;white-space:nowrap}
 .fsh-playbtn{background:none;border:1px solid rgba(232,120,32,.18);color:rgba(232,120,32,.5);padding:6px 14px;font-family:'Inter',sans-serif;font-size:15px;cursor:pointer;border-radius:2px;margin-left:8px;transition:all .18s;letter-spacing:.08em}
 .fsh-playbtn:hover{border-color:rgba(232,120,32,.4);color:var(--accent)}
-/* Legacy slide/pill still used for nothing — keep .pill for any other usage */
+/* Legacy slide/pill still used for nothing keep .pill for any other usage */
 .pill{border:1px solid rgba(245,240,232,.22);background:rgba(0,0,0,.28);border-radius:999px;padding:7px 13px;font-family:'Inter',sans-serif;font-size:15px;color:rgba(245,240,232,.9);letter-spacing:.06em}
 .dot{width:6px;height:6px;border-radius:50%;background:rgba(245,240,232,.2);border:1px solid rgba(232,120,32,.12);cursor:pointer}
 .dot.on{background:rgba(232,120,32,.65)}
@@ -816,7 +816,7 @@ body::before{background:radial-gradient(circle at 18% 0%, rgba(232,120,32,.12), 
 
 <style id="light-theme">
 /* ═══════════════════════════════════════════════════════
-   STRIPE-EXACT THEME — Plus Jakarta Sans, rich color
+   STRIPE-EXACT THEME Plus Jakarta Sans, rich color
    ═══════════════════════════════════════════════════════ */
 
 /* FONTS */
@@ -1232,7 +1232,7 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
 .brief-stat-label, .brief-mini-label, .brief-side-label { color: #7a90b0 !important; }
 .brief-stat, .brief-mini { background: #f7fafd !important; border-color: rgba(15,40,80,.08) !important; }
 
-/* ── LOGIN — matches light dashboard ── */
+/* ── LOGIN matches light dashboard ── */
 #login-screen { background: #eef2f7 !important; position: fixed !important; }
 .lcard { background: #ffffff !important; border: 1px solid rgba(15,40,80,.09) !important; box-shadow: 0 2px 8px rgba(15,40,80,.06), 0 8px 24px rgba(15,40,80,.05) !important; }
 .ll { color: #7a90b0 !important; font-size: 10.5px !important; font-weight: 700 !important; }
@@ -1341,22 +1341,77 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
 <body>
 <canvas id="stars" style="display:none;position:fixed;inset:0;width:100%;height:100%;z-index:1;pointer-events:none;"></canvas>
 <!-- LOGIN -->
-<div id="login-screen">
-  <div class="lw">
-    <div class="ltag">Private Terminal Access</div>
-    <div class="ltitle">YONA<span> Capital</span></div>
-    <div class="lsub">Digital Asset Terminal · Real-time pricing · Signals · Analysis · Risk tools</div>
-    <div class="lcard">
-      <label class="ll">Your Name</label>
-      <input class="li" id="inp-name" placeholder="e.g. Joep" autocomplete="off">
-      <div class="ldiv"><span>and your</span></div>
-      <label class="ll">Access Code</label>
-      <input class="li" id="inp-code" type="password" placeholder="Enter your access code">
-      <div id="lerr"></div>
-      <button class="lbtn" id="loginBtn" type="button">Enter Platform →</button>
-      <div class="lfoot">No code yet? <a onclick="guestPricing()">View pricing →</a></div>
+<div id="login-screen" style="position:fixed;inset:0;z-index:900;display:flex;align-items:center;justify-content:center;background:#0d0d0d;">
+  <!-- Sterren canvas (hergebruikt van de app) -->
+  <canvas id="login-stars" style="position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;"></canvas>
+
+  <div style="position:relative;z-index:1;display:flex;gap:0;width:min(820px,95vw);background:rgba(20,20,20,0.85);border:1px solid rgba(255,255,255,.08);border-radius:20px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.6);">
+
+    <!-- Links: branding -->
+    <div style="flex:1;padding:52px 40px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid rgba(255,255,255,.06);">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:32px;">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgNTIwIiB3aWR0aD0iNTIwIiBoZWlnaHQ9IjUyMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM0ZDdmZmYiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAzM2RkIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJkb3QiIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzMzNTVlZSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxMTIyYmIiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI1MjAiIGhlaWdodD0iNTIwIiByeD0iMTEwIiBmaWxsPSJ1cmwoI2JnKSIvPgogIDxjaXJjbGUgY3g9IjIxNSIgY3k9IjMwNSIgcj0iMTU1IiBmaWxsPSIjZmZmZmZmIi8+CiAgPGNpcmNsZSBjeD0iMzM1IiBjeT0iMTk1IiByPSIxMDUiIGZpbGw9IiNmZmZmZmYiLz4KICA8Y2lyY2xlIGN4PSIyODgiIGN5PSIyNTIiIHI9IjQ4IiBmaWxsPSJ1cmwoI2RvdCkiLz4KPC9zdmc+" style="width:52px;height:52px;border-radius:12px;flex-shrink:0;">
+        <div>
+          <div style="font-size:20px;font-weight:800;color:#fff;letter-spacing:-.01em;">YONA <span style="color:#0055ff;">Capital</span></div>
+          <div style="font-size:11px;color:rgba(255,255,255,.4);letter-spacing:.08em;text-transform:uppercase;margin-top:2px;">Digital Asset Terminal</div>
+        </div>
+      </div>
+      <h2 style="font-size:clamp(28px,4vw,38px);font-weight:800;color:#fff;line-height:1.15;margin-bottom:16px;">Welcome,<br><span style="color:#0055ff;">Trader.</span></h2>
+      <p style="font-size:14px;color:rgba(255,255,255,.45);line-height:1.7;max-width:280px;">Real-time signals, AI analysis and education everything you need to trade with confidence.</p>
+      <div style="margin-top:40px;display:flex;flex-direction:column;gap:12px;">
+        <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:rgba(255,255,255,.5);">
+          <span style="width:6px;height:6px;border-radius:50%;background:#0055ff;flex-shrink:0;"></span>Live market data & signals
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:rgba(255,255,255,.5);">
+          <span style="width:6px;height:6px;border-radius:50%;background:#0055ff;flex-shrink:0;"></span>AI-powered market analysis
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:rgba(255,255,255,.5);">
+          <span style="width:6px;height:6px;border-radius:50%;background:#0055ff;flex-shrink:0;"></span>Professional trading education
+        </div>
+      </div>
+    </div>
+
+    <!-- Rechts: login form -->
+    <div style="flex:1;padding:52px 40px;display:flex;flex-direction:column;justify-content:center;">
+      <div style="font-size:11px;font-weight:700;letter-spacing:.1em;color:#0055ff;text-transform:uppercase;margin-bottom:24px;">Private Access</div>
+      <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,.5);letter-spacing:.05em;text-transform:uppercase;margin-bottom:8px;display:block;">Your Name</label>
+      <input id="inp-name" placeholder="e.g. Joep" autocomplete="off" style="width:100%;padding:14px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:10px;color:#fff;font-size:15px;outline:none;margin-bottom:20px;transition:border .2s;" onfocus="this.style.borderColor='#0055ff'" onblur="this.style.borderColor='rgba(255,255,255,.1)'">
+      <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,.5);letter-spacing:.05em;text-transform:uppercase;margin-bottom:8px;display:block;">Access Code</label>
+      <input id="inp-code" type="password" placeholder="Enter your access code" style="width:100%;padding:14px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:10px;color:#fff;font-size:15px;outline:none;margin-bottom:12px;transition:border .2s;" onfocus="this.style.borderColor='#0055ff'" onblur="this.style.borderColor='rgba(255,255,255,.1)'">
+      <div id="lerr" style="font-size:13px;color:#e53e3e;min-height:20px;margin-bottom:12px;font-weight:500;"></div>
+      <button id="loginBtn" type="button" style="width:100%;padding:15px;background:#0055ff;color:#fff;font-size:15px;font-weight:700;border:none;border-radius:10px;cursor:pointer;transition:background .15s,box-shadow .15s;letter-spacing:.02em;" onmouseover="this.style.background='#0044dd';this.style.boxShadow='0 6px 20px rgba(0,85,255,.4)'" onmouseout="this.style.background='#0055ff';this.style.boxShadow='none'">Enter Platform →</button>
+      <div style="text-align:center;margin-top:16px;font-size:13px;color:rgba(255,255,255,.35);">No code yet? <a onclick="guestPricing()" style="color:#0055ff;cursor:pointer;text-decoration:underline;">View pricing →</a></div>
     </div>
   </div>
+
+  <script>
+  (function(){
+    var c=document.getElementById('login-stars');
+    if(!c)return;
+    var ctx=c.getContext('2d');
+    var stars=[];
+    function resize(){c.width=innerWidth;c.height=innerHeight;}
+    resize();
+    window.addEventListener('resize',resize);
+    for(var i=0;i<160;i++){
+      stars.push({x:Math.random(),y:Math.random(),r:Math.random()*1.2+.2,o:Math.random()*.7+.1,s:Math.random()*.3+.05});
+    }
+    function draw(){
+      ctx.clearRect(0,0,c.width,c.height);
+      stars.forEach(function(s){
+        s.o+=s.s*(Math.random()>.5?1:-1);
+        if(s.o>0.8)s.o=0.8;
+        if(s.o<0.05)s.o=0.05;
+        ctx.beginPath();
+        ctx.arc(s.x*c.width,s.y*c.height,s.r,0,Math.PI*2);
+        ctx.fillStyle='rgba(255,255,255,'+s.o+')';
+        ctx.fill();
+      });
+      requestAnimationFrame(draw);
+    }
+    draw();
+  })();
+  </script>
 </div>
 
 <div id="app">
@@ -1421,7 +1476,7 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
     <div class="sb-foot">
       <div class="sb-user">
         <div class="sb-av" id="sb-av">J</div>
-        <div><div class="sb-uname" id="sb-name">—</div><div class="sb-urole" id="sb-role">Member</div></div>
+        <div><div class="sb-uname" id="sb-name"> </div><div class="sb-urole" id="sb-role">Member</div></div>
       </div>
     </div>
   </aside>
@@ -1446,7 +1501,7 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
 
       <div class="dashboard-hero">
         <div class="greet">
-          <h1>Good <em id="g-pt">Day</em>, <em id="g-nm">—</em>. <span id="clock" style="margin-left:16px;font-size:28px;color:var(--accent);font-family:'Inter',sans-serif;font-weight:600"></span></h1>
+          <h1>Good <em id="g-pt">Day</em>, <em id="g-nm"> </em>. <span id="clock" style="margin-left:16px;font-size:28px;color:var(--accent);font-family:'Inter',sans-serif;font-weight:600"></span></h1>
           <p id="g-dt"></p>
           <div id="clock-d"></div>
         </div>
@@ -1532,7 +1587,7 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
                   <div class="fsh-panel-tag free">FREE · LIVE DATA</div>
                   <div class="fsh-panel-h" style="font-size:36px;margin-bottom:8px">Crypto Markets</div>
                   <div style="font-size:14px;color:var(--accent);margin-bottom:16px;letter-spacing:.02em">Real-time prices for 100+ coins</div>
-                  <div style="font-size:13px;color:var(--sub);line-height:1.8;margin-bottom:24px">Track price, market cap, volume and 24h movement for the top 100 coins — all in one clean live overview. No noise, just signal.</div>
+                  <div style="font-size:13px;color:var(--sub);line-height:1.8;margin-bottom:24px">Track price, market cap, volume and 24h movement for the top 100 coins all in one clean live overview. No noise, just signal.</div>
                   <div style="display:flex;gap:16px;margin-bottom:28px">
                     <div style="text-align:center"><div style="font-family:'Inter',sans-serif;font-size:22px;font-weight:700;color:var(--cream)">100+</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:var(--sub);letter-spacing:.02em;margin-top:2px">COINS TRACKED</div></div>
                     <div style="width:1px;background:var(--bdr)"></div>
@@ -1600,7 +1655,7 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
                   <div class="fsh-panel-tag free">FREE · CHARTING</div>
                   <div class="fsh-panel-h" style="font-size:36px;margin-bottom:8px">BTC Chart</div>
                   <div style="font-size:14px;color:var(--accent);margin-bottom:16px">Full TradingView integration</div>
-                  <div style="font-size:13px;color:var(--sub);line-height:1.8;margin-bottom:24px">Draw support &amp; resistance, switch timeframes from 1m to 1W, use all TradingView indicators — without ever leaving YONA Capital.</div>
+                  <div style="font-size:13px;color:var(--sub);line-height:1.8;margin-bottom:24px">Draw support &amp; resistance, switch timeframes from 1m to 1W, use all TradingView indicators without ever leaving YONA Capital.</div>
                   <div style="display:flex;gap:16px;margin-bottom:28px">
                     <div style="text-align:center"><div style="font-family:'Inter',sans-serif;font-size:22px;font-weight:700;color:var(--cream)">100+</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:var(--sub);letter-spacing:.02em;margin-top:2px">INDICATORS</div></div>
                     <div style="width:1px;background:var(--bdr)"></div>
@@ -1643,7 +1698,7 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
                   <div class="fsh-panel-tag free">FREE · LIVE FEED</div>
                   <div class="fsh-panel-h" style="font-size:36px;margin-bottom:8px">Crypto News</div>
                   <div style="font-size:14px;color:var(--accent);margin-bottom:16px">CoinTelegraph &amp; CoinDesk live</div>
-                  <div style="font-size:13px;color:var(--sub);line-height:1.8;margin-bottom:24px">Stay ahead of the market with live news straight in your terminal. No tab-switching, no distractions — the news comes to you, updated every 5 minutes.</div>
+                  <div style="font-size:13px;color:var(--sub);line-height:1.8;margin-bottom:24px">Stay ahead of the market with live news straight in your terminal. No tab-switching, no distractions the news comes to you, updated every 5 minutes.</div>
                   <div style="display:flex;gap:16px;margin-bottom:28px">
                     <div style="text-align:center"><div style="font-family:'Inter',sans-serif;font-size:22px;font-weight:700;color:var(--cream)">2</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:var(--sub);letter-spacing:.02em;margin-top:2px">NEWS SOURCES</div></div>
                     <div style="width:1px;background:var(--bdr)"></div>
@@ -1657,7 +1712,7 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
                   <div style="font-family:'Inter',sans-serif;font-size:7.5px;color:var(--sub);letter-spacing:.02em;margin-bottom:4px">LIVE FEED PREVIEW</div>
                   <div style="padding:9px 0;border-bottom:1px solid rgba(232,120,32,.05)"><div style="font-size:11px;font-weight:500;line-height:1.4;margin-bottom:4px;color:var(--cream)">Bitcoin breaks $72K resistance as institutional buying accelerates</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:var(--sub)"><span style="color:var(--accent)">CT</span> · 3m ago</div></div>
                   <div style="padding:9px 0;border-bottom:1px solid rgba(232,120,32,.05)"><div style="font-size:11px;font-weight:500;line-height:1.4;margin-bottom:4px;color:var(--cream)">Ethereum ETF sees record $420M inflow in single day</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:var(--sub)"><span style="color:var(--accent)">CD</span> · 11m ago</div></div>
-                  <div style="padding:9px 0;border-bottom:1px solid rgba(232,120,32,.05)"><div style="font-size:11px;font-weight:500;line-height:1.4;margin-bottom:4px;color:var(--cream)">Fed signals rate cut delay — crypto markets react with caution</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:var(--sub)"><span style="color:var(--accent)">CT</span> · 24m ago</div></div>
+                  <div style="padding:9px 0;border-bottom:1px solid rgba(232,120,32,.05)"><div style="font-size:11px;font-weight:500;line-height:1.4;margin-bottom:4px;color:var(--cream)">Fed signals rate cut delay crypto markets react with caution</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:var(--sub)"><span style="color:var(--accent)">CT</span> · 24m ago</div></div>
                   <div style="padding:9px 0"><div style="font-size:11px;font-weight:500;line-height:1.4;margin-bottom:4px;color:var(--cream)">Solana DeFi TVL hits all-time high of $8.2B amid altcoin surge</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:var(--sub)"><span style="color:var(--accent)">CD</span> · 38m ago</div></div>
                 </div>
               </div>
@@ -1703,7 +1758,7 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
                   <div class="fsh-panel-tag pro">MEMBERS ONLY</div>
                   <div class="fsh-panel-h" style="font-size:36px;margin-bottom:8px">Market Analysis</div>
                   <div style="font-size:14px;color:var(--accent);margin-bottom:16px">Deep-dives written by our team</div>
-                  <div style="font-size:13px;color:var(--sub);line-height:1.8;margin-bottom:24px">Weekly breakdowns of key levels, market structure and what to watch next. Written by experienced analysts — so you always know the bigger picture before you trade.</div>
+                  <div style="font-size:13px;color:var(--sub);line-height:1.8;margin-bottom:24px">Weekly breakdowns of key levels, market structure and what to watch next. Written by experienced analysts so you always know the bigger picture before you trade.</div>
                   <div style="display:flex;gap:16px;margin-bottom:20px">
                     <div style="text-align:center"><div style="font-family:'Inter',sans-serif;font-size:22px;font-weight:700;color:var(--accent)">Weekly</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:var(--sub);letter-spacing:.02em;margin-top:2px">UPDATES</div></div>
                     <div style="width:1px;background:var(--bdr)"></div>
@@ -1716,7 +1771,7 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
                 <div style="border-left:1px solid var(--bdr);padding:24px 20px;display:flex;flex-direction:column;justify-content:center;background:rgba(0,0,0,.15)">
                   <div style="font-family:'Inter',sans-serif;font-size:7.5px;color:var(--sub);letter-spacing:.02em;margin-bottom:12px">ANALYSIS PREVIEW</div>
                   <div style="background:rgba(232,120,32,.04);border:1px solid var(--bdr);border-radius:8px;padding:14px">
-                    <div style="font-family:'Inter',sans-serif;font-size:9px;font-weight:700;color:var(--accent);margin-bottom:8px">WEEKLY OUTLOOK — BTC</div>
+                    <div style="font-family:'Inter',sans-serif;font-size:9px;font-weight:700;color:var(--accent);margin-bottom:8px">WEEKLY OUTLOOK BTC</div>
                     <div style="font-size:11px;color:var(--sub);line-height:1.7;margin-bottom:10px">Bitcoin is currently testing the $72K resistance zone with strong momentum. A confirmed break above opens a run to $76-78K. Key support remains at $69.8K...</div>
                     <div style="font-family:'Inter',sans-serif;font-size:7.5px;color:var(--sub);letter-spacing:.01em;margin-bottom:6px">KEY LEVELS</div>
                     <div style="font-family:'Inter',sans-serif;font-size:8px;color:var(--cream);padding:3px 0;border-bottom:1px solid rgba(232,120,32,.06)"><span style="color:var(--accent)">BTC:</span> Support $69.8K / Resistance $76K</div>
@@ -1733,7 +1788,7 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
                   <div class="fsh-panel-tag pro">MEMBERS ONLY</div>
                   <div class="fsh-panel-h" style="font-size:36px;margin-bottom:8px">Risk Management</div>
                   <div style="font-size:14px;color:var(--accent);margin-bottom:16px">Trade with discipline, protect capital</div>
-                  <div style="font-size:13px;color:var(--sub);line-height:1.8;margin-bottom:24px">Position sizing tools, R:R calculators and proven frameworks — built into the platform. One bad trade should never blow your account. This module prevents that.</div>
+                  <div style="font-size:13px;color:var(--sub);line-height:1.8;margin-bottom:24px">Position sizing tools, R:R calculators and proven frameworks built into the platform. One bad trade should never blow your account. This module prevents that.</div>
                   <div style="display:flex;gap:16px;margin-bottom:20px">
                     <div style="text-align:center"><div style="font-family:'Inter',sans-serif;font-size:22px;font-weight:700;color:var(--cream)">1-2%</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:var(--sub);letter-spacing:.02em;margin-top:2px">MAX RISK/TRADE</div></div>
                     <div style="width:1px;background:var(--bdr)"></div>
@@ -1765,7 +1820,7 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
                   <div class="fsh-panel-tag pro">MEMBERS ONLY</div>
                   <div class="fsh-panel-h" style="font-size:36px;margin-bottom:8px">Education &amp; Books</div>
                   <div style="font-size:14px;color:var(--accent);margin-bottom:16px">From beginner to serious trader</div>
-                  <div style="font-size:13px;color:var(--sub);line-height:1.8;margin-bottom:24px">6 modules, 36 lessons covering TA, risk, psychology, fundamentals and portfolio building. Plus a full book library with flipbook reader — all inside the platform.</div>
+                  <div style="font-size:13px;color:var(--sub);line-height:1.8;margin-bottom:24px">6 modules, 36 lessons covering TA, risk, psychology, fundamentals and portfolio building. Plus a full book library with flipbook reader all inside the platform.</div>
                   <div style="display:flex;gap:16px;margin-bottom:20px">
                     <div style="text-align:center"><div style="font-family:'Inter',sans-serif;font-size:22px;font-weight:700;color:var(--accent)">36</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:var(--sub);letter-spacing:.02em;margin-top:2px">LESSONS</div></div>
                     <div style="width:1px;background:var(--bdr)"></div>
@@ -1794,7 +1849,7 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
                   <div class="fsh-panel-tag pro">MEMBERS ONLY</div>
                   <div class="fsh-panel-h" style="font-size:36px;margin-bottom:8px">Portfolio Tracker</div>
                   <div style="font-size:14px;color:var(--accent);margin-bottom:16px">Live PnL on every position</div>
-                  <div style="font-size:13px;color:var(--sub);line-height:1.8;margin-bottom:24px">Add your trades and watch unrealized PnL update in real time. Automatic R:R calculation, full portfolio summary — no spreadsheet needed.</div>
+                  <div style="font-size:13px;color:var(--sub);line-height:1.8;margin-bottom:24px">Add your trades and watch unrealized PnL update in real time. Automatic R:R calculation, full portfolio summary no spreadsheet needed.</div>
                   <div style="display:flex;gap:16px;margin-bottom:20px">
                     <div style="text-align:center"><div style="font-family:'Inter',sans-serif;font-size:22px;font-weight:700;color:#e87820">Live</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:var(--sub);letter-spacing:.02em;margin-top:2px">PNL UPDATES</div></div>
                     <div style="width:1px;background:var(--bdr)"></div>
@@ -1827,7 +1882,7 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
                   <div class="fsh-panel-tag pro">MEMBERS ONLY</div>
                   <div class="fsh-panel-h" style="font-size:36px;margin-bottom:8px">Whale Tracker</div>
                   <div style="font-size:14px;color:var(--accent);margin-bottom:16px">Follow the smart money on-chain</div>
-                  <div style="font-size:13px;color:var(--sub);line-height:1.8;margin-bottom:24px">Monitor large transfers across BTC, ETH, SOL and more in real time. See exchange inflows vs outflows and get instant signal interpretation — know what the whales are doing before the crowd notices.</div>
+                  <div style="font-size:13px;color:var(--sub);line-height:1.8;margin-bottom:24px">Monitor large transfers across BTC, ETH, SOL and more in real time. See exchange inflows vs outflows and get instant signal interpretation know what the whales are doing before the crowd notices.</div>
                   <div style="display:flex;gap:16px;margin-bottom:20px">
                     <div style="text-align:center"><div style="font-family:'Inter',sans-serif;font-size:22px;font-weight:700;color:var(--cream)">$1M+</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:var(--sub);letter-spacing:.02em;margin-top:2px">MIN TRANSFER</div></div>
                     <div style="width:1px;background:var(--bdr)"></div>
@@ -1855,7 +1910,7 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
                   <div class="fsh-panel-tag pro">AI · POWERED</div>
                   <div class="fsh-panel-h" style="font-size:36px;margin-bottom:8px">AI Analyst</div>
                   <div style="font-size:14px;color:var(--accent);margin-bottom:16px">Professional analysis, instantly</div>
-                  <div style="font-size:13px;color:var(--sub);line-height:1.8;margin-bottom:24px">Ask anything — trade setups, on-chain signals, macro outlook, coin breakdowns. Powered by Claude AI and trained to think like a professional crypto analyst. Available 24/7.</div>
+                  <div style="font-size:13px;color:var(--sub);line-height:1.8;margin-bottom:24px">Ask anything trade setups, on-chain signals, macro outlook, coin breakdowns. Powered by Claude AI and trained to think like a professional crypto analyst. Available 24/7.</div>
                   <div style="display:flex;gap:16px;margin-bottom:20px">
                     <div style="text-align:center"><div style="font-family:'Inter',sans-serif;font-size:22px;font-weight:700;color:#e87820">24/7</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:var(--sub);letter-spacing:.02em;margin-top:2px">ALWAYS ONLINE</div></div>
                     <div style="width:1px;background:var(--bdr)"></div>
@@ -1869,7 +1924,7 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
                   <div style="font-family:'Inter',sans-serif;font-size:7.5px;color:var(--sub);letter-spacing:.02em;margin-bottom:12px">AI CHAT PREVIEW</div>
                   <div style="display:flex;flex-direction:column;gap:8px">
                     <div style="display:flex;justify-content:flex-end"><div style="background:rgba(232,120,32,.08);border:1px solid rgba(232,120,32,.2);border-radius:8px 8px 2px 8px;padding:9px 12px;max-width:80%;font-size:11px;color:var(--cream);line-height:1.5">What's the BTC market structure right now?</div></div>
-                    <div style="display:flex;gap:8px;align-items:flex-start"><div style="width:24px;height:24px;border-radius:6px;background:rgba(232,120,32,.1);border:1px solid rgba(232,120,32,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Inter',sans-serif;font-size:7px;color:var(--accent);font-weight:700">AI</div><div style="background:rgba(232,120,32,.05);border:1px solid var(--bdr);border-radius:2px 8px 8px 8px;padding:9px 12px;font-size:11px;color:var(--sub);line-height:1.6"><strong style="color:var(--cream)">BTC is in a bullish continuation pattern.</strong> Price is holding above the $70K macro support with strong volume. Key resistance at $73.8K — a break above targets $76–78K. Momentum indicators are bullish on the 4H and daily.</div></div>
+                    <div style="display:flex;gap:8px;align-items:flex-start"><div style="width:24px;height:24px;border-radius:6px;background:rgba(232,120,32,.1);border:1px solid rgba(232,120,32,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Inter',sans-serif;font-size:7px;color:var(--accent);font-weight:700">AI</div><div style="background:rgba(232,120,32,.05);border:1px solid var(--bdr);border-radius:2px 8px 8px 8px;padding:9px 12px;font-size:11px;color:var(--sub);line-height:1.6"><strong style="color:var(--cream)">BTC is in a bullish continuation pattern.</strong> Price is holding above the $70K macro support with strong volume. Key resistance at $73.8K a break above targets $76–78K. Momentum indicators are bullish on the 4H and daily.</div></div>
                     <div style="display:flex;justify-content:flex-end"><div style="background:rgba(232,120,32,.08);border:1px solid rgba(232,120,32,.2);border-radius:8px 8px 2px 8px;padding:9px 12px;max-width:80%;font-size:11px;color:var(--cream);line-height:1.5">Should I enter now or wait for a dip?</div></div>
                   </div>
                 </div>
@@ -2124,7 +2179,7 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
             <div class="edu-lesson">
               <div class="edu-lesson-num">LESSON 3.2</div>
               <div class="edu-lesson-title">Revenge Trading &amp; Loss Spirals</div>
-              <div class="edu-lesson-desc">After a loss, the brain craves immediate recovery — leading to oversized trades and poor setups. Identify your revenge trading triggers and implement hard stops on your trading day.</div>
+              <div class="edu-lesson-desc">After a loss, the brain craves immediate recovery leading to oversized trades and poor setups. Identify your revenge trading triggers and implement hard stops on your trading day.</div>
               <div class="edu-lesson-tags"><span class="edu-lesson-tag">Revenge Trading</span><span class="edu-lesson-tag">Loss Response</span></div>
             </div>
             <div class="edu-lesson">
@@ -2136,7 +2191,7 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
             <div class="edu-lesson">
               <div class="edu-lesson-num">LESSON 3.4</div>
               <div class="edu-lesson-title">Detaching from P&amp;L</div>
-              <div class="edu-lesson-desc">Watching your P&amp;L in real-time distorts decision-making. Learn to evaluate trades by process quality, not outcome. Focus on executing your system perfectly — results follow consistency.</div>
+              <div class="edu-lesson-desc">Watching your P&amp;L in real-time distorts decision-making. Learn to evaluate trades by process quality, not outcome. Focus on executing your system perfectly results follow consistency.</div>
               <div class="edu-lesson-tags"><span class="edu-lesson-tag">Process Focus</span><span class="edu-lesson-tag">P&amp;L</span></div>
             </div>
             <div class="edu-lesson">
@@ -2165,7 +2220,7 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
             <div>
               <div class="edu-hero-num">MODULE 04</div>
               <div class="edu-hero-title">Crypto Fundamentals</div>
-              <div class="edu-hero-sub">Understand what actually drives crypto value. From blockchain mechanics and tokenomics to on-chain data and macro cycles — know what you're buying and why.</div>
+              <div class="edu-hero-sub">Understand what actually drives crypto value. From blockchain mechanics and tokenomics to on-chain data and macro cycles know what you're buying and why.</div>
               <div class="edu-hero-pills">
                 <span class="edu-hero-pill">6 LESSONS</span><span class="edu-hero-pill">BLOCKCHAIN</span><span class="edu-hero-pill">TOKENOMICS</span><span class="edu-hero-pill">ON-CHAIN</span>
               </div>
@@ -2228,7 +2283,7 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
             <div>
               <div class="edu-hero-num">MODULE 05</div>
               <div class="edu-hero-title">Market Structure</div>
-              <div class="edu-hero-sub">Understand how markets move. Learn to identify trends, ranges and reversals using pure price structure — the foundation of smart money and institutional trading.</div>
+              <div class="edu-hero-sub">Understand how markets move. Learn to identify trends, ranges and reversals using pure price structure the foundation of smart money and institutional trading.</div>
               <div class="edu-hero-pills">
                 <span class="edu-hero-pill">6 LESSONS</span><span class="edu-hero-pill">SMART MONEY</span><span class="edu-hero-pill">PRICE ACTION</span><span class="edu-hero-pill">INTERMEDIATE</span>
               </div>
@@ -2256,7 +2311,7 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
             <div class="edu-lesson">
               <div class="edu-lesson-num">LESSON 5.3</div>
               <div class="edu-lesson-title">Order Blocks &amp; Institutional Zones</div>
-              <div class="edu-lesson-desc">Order blocks are the last candle before a significant move — representing institutional buy/sell orders. Learn to identify, draw and trade from these high-probability demand and supply zones.</div>
+              <div class="edu-lesson-desc">Order blocks are the last candle before a significant move representing institutional buy/sell orders. Learn to identify, draw and trade from these high-probability demand and supply zones.</div>
               <div class="edu-lesson-tags"><span class="edu-lesson-tag adv">Advanced</span><span class="edu-lesson-tag">Order Blocks</span><span class="edu-lesson-tag">SMC</span></div>
             </div>
             <div class="edu-lesson">
@@ -2319,7 +2374,7 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
             <div class="edu-lesson">
               <div class="edu-lesson-num">LESSON 6.3</div>
               <div class="edu-lesson-title">Profit Taking Frameworks</div>
-              <div class="edu-lesson-desc">Take profits systematically — not emotionally. Learn ladder selling (e.g. 25% at 2x, 25% at 3x, 25% at 5x, keep 25% long-term) and target-based exits tied to market cycle indicators.</div>
+              <div class="edu-lesson-desc">Take profits systematically not emotionally. Learn ladder selling (e.g. 25% at 2x, 25% at 3x, 25% at 5x, keep 25% long-term) and target-based exits tied to market cycle indicators.</div>
               <div class="edu-lesson-tags"><span class="edu-lesson-tag">Take Profit</span><span class="edu-lesson-tag">Ladder Selling</span></div>
             </div>
             <div class="edu-lesson">
@@ -2401,7 +2456,7 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
 
     <!-- ═══ RISK ═══ -->
     <div class="page" id="page-risk">
-      <div class="ph"><h1>Risk Management</h1><p>Protect your capital — the golden rule of trading.</p></div>
+      <div class="ph"><h1>Risk Management</h1><p>Protect your capital the golden rule of trading.</p></div>
       <div id="ab-risk"></div>
       <div class="lkd">
         <div id="lko-risk" class="lko"><div class="lkb">
@@ -2413,7 +2468,7 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
         </div></div>
         <div class="rg">
           <div class="card rc"><h3>The 1–2% Rule</h3><p>Never risk more than 1–2% of your total account on a single trade. $5,000 account = max $100 risk per trade.</p></div>
-          <div class="card rc"><h3>Stop Losses — Always</h3><p>A stop loss closes your trade automatically at a set price. Never enter a trade without one.</p></div>
+          <div class="card rc"><h3>Stop Losses Always</h3><p>A stop loss closes your trade automatically at a set price. Never enter a trade without one.</p></div>
           <div class="card rc"><h3>Risk/Reward Ratio</h3><p>Only take trades where potential profit is at least 2–3× your potential loss. 50% win rate is profitable at 2:1.</p></div>
           <div class="card rc"><h3>Diversification</h3><p>Spread your risk across positions. One bad trade should never be able to wipe your account.</p></div>
         </div>
@@ -2447,12 +2502,12 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
         </div>
         <div class="card ps-card">
           <div class="ps-label">Best Position</div>
-          <div class="ps-val" id="pt-best-val" style="font-size:14px">—</div>
-          <div class="ps-sub" id="pt-best-sub">—</div>
+          <div class="ps-val" id="pt-best-val" style="font-size:14px"> </div>
+          <div class="ps-sub" id="pt-best-sub"> </div>
         </div>
         <div class="card ps-card">
           <div class="ps-label">Avg R:R Ratio</div>
-          <div class="ps-val" id="pt-rr-val">—</div>
+          <div class="ps-val" id="pt-rr-val"> </div>
           <div class="ps-sub" id="pt-rr-sub">across positions</div>
         </div>
       </div>
@@ -2502,7 +2557,7 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
           <span>R:R</span>
           <span></span>
         </div>
-        <div id="pt-rows"><div class="pt-empty">No positions yet — add your first trade above.</div></div>
+        <div id="pt-rows"><div class="pt-empty">No positions yet add your first trade above.</div></div>
       </div>
       </div><!-- end lkd portfolio -->
     </div>
@@ -2525,7 +2580,7 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
         <div class="ws-head">
           <div class="ws-title"><span class="ws-live"></span>LIVE FEED</div>
           <div style="display:flex;align-items:center;gap:10px">
-            <span id="wh-last-refresh" style="font-family:'Inter',sans-serif;font-size:8px;color:var(--sub)">—</span>
+            <span id="wh-last-refresh" style="font-family:'Inter',sans-serif;font-size:8px;color:var(--sub)"> </span>
             <button class="ws-refresh" onclick="refreshWhales()">&#8635; Refresh</button>
           </div>
         </div>
@@ -2536,22 +2591,22 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
       <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:11px;margin-bottom:14px">
         <div class="card wstat">
           <div class="wstat-label">24h Volume</div>
-          <div class="wstat-val" id="wh-vol24">—</div>
+          <div class="wstat-val" id="wh-vol24"> </div>
           <div class="wstat-sub" id="wh-vol-sub">tracked transfers</div>
         </div>
         <div class="card wstat">
           <div class="wstat-label">Largest Transfer</div>
-          <div class="wstat-val" id="wh-largest">—</div>
-          <div class="wstat-sub" id="wh-largest-sub">—</div>
+          <div class="wstat-val" id="wh-largest"> </div>
+          <div class="wstat-sub" id="wh-largest-sub"> </div>
         </div>
         <div class="card wstat">
           <div class="wstat-label">Exchange Inflow</div>
-          <div class="wstat-val" id="wh-inflow" style="color:var(--red)">—</div>
+          <div class="wstat-val" id="wh-inflow" style="color:var(--red)"> </div>
           <div class="wstat-sub">into exchanges (bearish)</div>
         </div>
         <div class="card wstat">
           <div class="wstat-label">Exchange Outflow</div>
-          <div class="wstat-val" id="wh-outflow" style="color:var(--grn)">—</div>
+          <div class="wstat-val" id="wh-outflow" style="color:var(--grn)"> </div>
           <div class="wstat-sub">from exchanges (bullish)</div>
         </div>
       </div>
@@ -2595,7 +2650,7 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
     <div class="page" id="page-ai">
       <div class="ph">
         <h1>AI Analyst</h1>
-        <p>Deep dive on any coin, setup or market question — powered by Claude AI</p>
+        <p>Deep dive on any coin, setup or market question powered by Claude AI</p>
       </div>
       <div class="ai-wrap">
         <!-- LEFT: prompts + settings -->
@@ -2895,7 +2950,7 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
           <div class="card" style="padding:22px 24px;position:relative;overflow:hidden;cursor:pointer;border-color:rgba(232,120,32,.25)" onclick="showBotHistory('win')">
             <div style="position:absolute;inset:0;background:radial-gradient(circle at 30% 50%,rgba(232,120,32,.08),transparent 65%);pointer-events:none"></div>
             <div style="font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.2em;color:rgba(232,120,32,.6);text-transform:uppercase;margin-bottom:8px">WIN RATE</div>
-            <div style="font-family:'Inter',sans-serif;font-size:48px;font-weight:900;line-height:1;color:#e87820" id="bot-win-pct">—</div>
+            <div style="font-family:'Inter',sans-serif;font-size:48px;font-weight:900;line-height:1;color:#e87820" id="bot-win-pct"> </div>
             <div style="font-family:'Inter',sans-serif;font-size:11px;color:rgba(232,120,32,.7);margin-top:6px" id="bot-win-count">0 wins</div>
             <div style="height:4px;background:rgba(255,255,255,.06);border-radius:999px;overflow:hidden;margin-top:10px">
               <div id="bot-win-bar" style="height:100%;background:linear-gradient(90deg,#e87820,#e87820);border-radius:999px;width:0%;transition:width .8s ease"></div>
@@ -2907,7 +2962,7 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
           <div class="card" style="padding:22px 24px;position:relative;overflow:hidden;cursor:pointer;border-color:rgba(255,77,77,.25)" onclick="showBotHistory('loss')">
             <div style="position:absolute;inset:0;background:radial-gradient(circle at 70% 50%,rgba(255,77,77,.08),transparent 65%);pointer-events:none"></div>
             <div style="font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.2em;color:rgba(255,77,77,.6);text-transform:uppercase;margin-bottom:8px">VERLIES RATE</div>
-            <div style="font-family:'Inter',sans-serif;font-size:48px;font-weight:900;line-height:1;color:var(--red)" id="bot-loss-pct">—</div>
+            <div style="font-family:'Inter',sans-serif;font-size:48px;font-weight:900;line-height:1;color:var(--red)" id="bot-loss-pct"> </div>
             <div style="font-family:'Inter',sans-serif;font-size:11px;color:rgba(255,77,77,.7);margin-top:6px" id="bot-loss-count">0 losses</div>
             <div style="height:4px;background:rgba(255,255,255,.06);border-radius:999px;overflow:hidden;margin-top:10px">
               <div id="bot-loss-bar" style="height:100%;background:linear-gradient(90deg,#e8392a,#e8392a);border-radius:999px;width:0%;transition:width .8s ease"></div>
@@ -2919,7 +2974,7 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
           <div class="card" style="padding:22px 24px;position:relative;overflow:hidden;cursor:pointer;border-color:rgba(232,120,32,.2)" onclick="showBotHistory('all')">
             <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(232,120,32,.06),transparent 65%);pointer-events:none"></div>
             <div style="font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.2em;color:rgba(232,120,32,.6);text-transform:uppercase;margin-bottom:8px">TOTALE P&amp;L</div>
-            <div style="font-family:'Inter',sans-serif;font-size:36px;font-weight:900;line-height:1" id="bot-total-pnl">—</div>
+            <div style="font-family:'Inter',sans-serif;font-size:36px;font-weight:900;line-height:1" id="bot-total-pnl"> </div>
             <div style="font-family:'Inter',sans-serif;font-size:11px;color:var(--sub);margin-top:6px" id="bot-total-trades">0 afgesloten trades</div>
             <div style="height:4px;background:rgba(255,255,255,.06);border-radius:999px;overflow:hidden;margin-top:10px">
               <div id="bot-pnl-bar" style="height:100%;border-radius:999px;width:50%;transition:width .8s ease"></div>
@@ -3254,13 +3309,13 @@ function startTimezones(){
 
 /* ── PRICES ── */
 function fP(p){return p>=1000?'$'+p.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}):p>=1?'$'+p.toFixed(4):'$'+p.toFixed(6);}
-function fM(n){return n>=1e12?'$'+(n/1e12).toFixed(2)+'T':n>=1e9?'$'+(n/1e9).toFixed(1)+'B':n>=1e6?'$'+(n/1e6).toFixed(0)+'M':'—';}
+function fM(n){return n>=1e12?'$'+(n/1e12).toFixed(2)+'T':n>=1e9?'$'+(n/1e9).toFixed(1)+'B':n>=1e6?'$'+(n/1e6).toFixed(0)+'M':' ';}
 function spark(ch){var v=17,pts=[];for(var i=0;i<=10;i++){v+=(Math.random()-(ch<0?.55:.45))*4.5;v=Math.max(3,Math.min(31,v));pts.push(i*12+','+v);}return pts.join(' ');}
 
 var _cache={};
 function cGet(k){var e=_cache[k];if(!e||Date.now()>e.x){delete _cache[k];return null;}return e.d;}
 function cSet(k,d,t){_cache[k]={d:d,x:Date.now()+t*1000};}
-// ── BINANCE API — fast live data ──
+// ── BINANCE API fast live data ──
 var BINANCE='https://api.binance.com/api/v3';
 var BINANCE_TICKER=BINANCE+'/ticker/24hr';
 
@@ -3307,10 +3362,10 @@ function fetchPrices(){
     var el=document.getElementById('tkr-t');if(el)el.innerHTML=t+t;
   }).catch(function(){});
 }
-setInterval(fetchPrices,15000); // every 15s — Binance can handle it
+setInterval(fetchPrices,15000); // every 15s Binance can handle it
 
 function fetchTotalMarketCap(){
-  // Binance doesn't have global market cap — use CoinGecko just for this one call (cached 5 min)
+  // Binance doesn't have global market cap use CoinGecko just for this one call (cached 5 min)
   var hit=cGet('global');if(hit){applyMarketCap(hit);return;}
   fetch('https://api.coingecko.com/api/v3/global')
     .then(function(r){return r.json();})
@@ -3325,7 +3380,7 @@ function applyMarketCap(d){
   var ce=document.getElementById('c-total');if(ce){ce.textContent=(ch>=0?'+':'')+Number(ch).toFixed(2)+'%';ce.className='pc-chg '+(ch>=0?'chg-up':'chg-dn');}
   var sp=document.getElementById('sp-total');if(sp)sp.innerHTML='<polyline points="'+spark(ch)+'" fill="none" stroke="'+(ch>=0?'#e87820':'var(--red)')+'" stroke-width="1.8" stroke-linecap="round"/>';
 }
-setInterval(fetchTotalMarketCap,300000); // every 5 min — only for total market cap
+setInterval(fetchTotalMarketCap,300000); // every 5 min only for total market cap
 
 // Keep cgFetch for heatmap/markets (CoinGecko still used there, cached aggressively)
 function cgFetch(url,key,ttl){var hit=cGet(key);if(hit)return Promise.resolve(hit);return fetch(url).then(function(r){return r.json();}).then(function(d){cSet(key,d,ttl);return d;});}
@@ -3363,7 +3418,7 @@ function fetchMarkets(){
           '<div class="mkt-mc">'+fM(c.market_cap)+'</div>'+
           '<div class="mkt-vl">'+fM(c.total_volume)+'</div></div>';
       }).join('');
-    }).catch(function(){document.getElementById('mkt-rows').innerHTML='<div class="mkt-mt">Rate limited — retry in a moment.</div>';});
+    }).catch(function(){document.getElementById('mkt-rows').innerHTML='<div class="mkt-mt">Rate limited retry in a moment.</div>';});
 }
 
 
@@ -3416,7 +3471,7 @@ function fetchNews(){
       all.sort(function(a,b){return b.date-a.date;});
       if(all.length>0){renderNews(all);}
       else{
-        /* All proxies failed — show clickable links as fallback */
+        /* All proxies failed show clickable links as fallback */
         var fallback=[
           {title:'Open CoinTelegraph for the latest crypto news →',url:'https://cointelegraph.com',src:'CoinTelegraph',date:new Date()},
           {title:'Open CoinDesk for market updates and analysis →',url:'https://coindesk.com',src:'CoinDesk',date:new Date()}
@@ -3428,7 +3483,7 @@ function fetchNews(){
 setInterval(fetchNews,300000);
 
 /* ═══════════════════════════════════════════
-   HEATMAP PAGE — loads only when tab opened
+   HEATMAP PAGE loads only when tab opened
    Three parallel calls, renders as each arrives
 ═══════════════════════════════════════════ */
 function loadHeatmapPage(){
@@ -3444,13 +3499,13 @@ function fetchFNG(){
     var v=Math.max(0,Math.min(100,Number(x.value)));
     var col=v<=25?'var(--red)':v<=45?'#e87820':v<=55?'var(--accent)':v<=75?'#e87820':'var(--grn)';
     var sc=document.getElementById('fng-n');if(sc){sc.textContent=v;sc.style.color=col;}
-    var lb=document.getElementById('fng-l');if(lb)lb.textContent=x.value_classification||'—';
+    var lb=document.getElementById('fng-l');if(lb)lb.textContent=x.value_classification||' ';
     var mk=document.getElementById('fng-mk');if(mk)mk.style.left='calc('+v+'% - 1.5px)';
     var up=document.getElementById('fng-u');if(up&&x.timestamp){var ts=new Date(Number(x.timestamp)*1000);up.textContent='Updated '+ts.toLocaleDateString('en-US',{month:'short',day:'numeric'});}
   }).catch(function(){});
 }
 
-/* HEATMAP — uses Binance 24hr ticker */
+/* HEATMAP uses Binance 24hr ticker */
 function fetchHeatmapData(){
   var box=document.getElementById('hm-wrap');
   getMarketsData().then(function(allCoins){var coins=allCoins.slice(0,50);
@@ -3479,14 +3534,14 @@ function fetchHeatmapData(){
     }).catch(function(){box.innerHTML='<div style="font-family:\'Orbitron\',monospace;font-size:9px;color:var(--sub)">Rate limited. Try refresh.</div>';});
 }
 
-/* GAINERS + LIQUIDITY — single call, split result */
+/* GAINERS + LIQUIDITY single call, split result */
 function fetchGainersAndLiquidity(){
   var gBox=document.getElementById('gainers-hl');
   var lBox=document.getElementById('liq-list');
   getMarketsData().then(function(data){
       if(!Array.isArray(data)){throw new Error('bad data');}
 
-      /* TOP GAINERS — top 10 sorted by 24h % */
+      /* TOP GAINERS top 10 sorted by 24h % */
       var gainers=data.filter(function(x){return typeof x.price_change_percentage_24h_in_currency==='number';})
         .sort(function(a,b){return b.price_change_percentage_24h_in_currency-a.price_change_percentage_24h_in_currency;})
         .slice(0,10);
@@ -3500,7 +3555,7 @@ function fetchGainersAndLiquidity(){
           '</div></div>';
       }).join('');
 
-      /* LIQUIDITY — top 15 by 24h volume */
+      /* LIQUIDITY top 15 by 24h volume */
       var byVol=data.slice().sort(function(a,b){return(b.total_volume||0)-(a.total_volume||0);}).slice(0,15);
       var maxVol=byVol[0]&&byVol[0].total_volume||1;
       lBox.innerHTML=byVol.map(function(c){
@@ -3524,7 +3579,7 @@ function sSigs(a){localStorage.setItem('jcm_sigs',JSON.stringify(a));}
 function tMs(ts){var s=Math.floor((Date.now()-ts)/1000);if(s<60)return'Just now';if(s<3600)return Math.floor(s/60)+'m ago';if(s<86400)return Math.floor(s/3600)+'h ago';return Math.floor(s/86400)+'d ago';}
 function sCl(t){return(t==='BUY'||t==='WATCH')?'buy':t==='SELL'?'sell':'news';}
 function sIco(t){if(t==='BUY')return'<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>';if(t==='SELL')return'<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></svg>';return'<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/></svg>';}
-function sigHtml(s,del){var cl=sCl(s.type);var sub=[s.entry&&'Entry: '+s.entry,s.tp&&'TP: '+s.tp,s.sl&&'SL: '+s.sl].filter(Boolean).join(' · ');var d=(del&&isAdm())?'<button style="background:none;border:none;color:rgba(244,63,94,.3);cursor:pointer;font-size:14px;float:right;padding:0 3px" onclick="delSig('+s.id+')">×</button>':'';return'<div style="padding:8px 0;border-bottom:1px solid rgba(232,120,32,.05);display:flex;gap:8px;align-items:flex-start"><div style="width:27px;height:27px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11px;background:'+(cl==='buy'?'rgba(232,120,32,.1)':cl==='sell'?'rgba(244,63,94,.1)':'rgba(232,120,32,.1)')+';color:'+(cl==='buy'?'var(--grn)':cl==='sell'?'var(--red)':'var(--accent)')+'">'+sIco(s.type)+'</div><div style="flex:1">'+d+'<div style="font-size:15px;font-weight:600;margin-bottom:1px">'+s.coin+(s.type!=='NEWS'?' — '+s.type:'')+'</div>'+(sub?'<div style="font-size:10px;color:var(--sub);line-height:1.4">'+sub+'</div>':'')+(s.note?'<div style="font-size:10px;color:var(--sub);line-height:1.4;font-style:italic;margin-top:2px">'+s.note+'</div>':'')+'<span style="font-family:\'Orbitron\',monospace;font-size:8px;padding:1px 6px;border-radius:100px;font-weight:700;margin-top:2px;display:inline-block;background:'+(cl==='buy'?'rgba(232,120,32,.1)':cl==='sell'?'rgba(244,63,94,.1)':'rgba(232,120,32,.1)')+';color:'+(cl==='buy'?'var(--grn)':cl==='sell'?'var(--red)':'var(--accent)')+'">'+s.type+'</span><div style="font-family:\'Orbitron\',monospace;font-size:7.5px;color:rgba(138,128,120,.4);margin-top:2px">'+tMs(s.id)+'</div></div></div>';}
+function sigHtml(s,del){var cl=sCl(s.type);var sub=[s.entry&&'Entry: '+s.entry,s.tp&&'TP: '+s.tp,s.sl&&'SL: '+s.sl].filter(Boolean).join(' · ');var d=(del&&isAdm())?'<button style="background:none;border:none;color:rgba(244,63,94,.3);cursor:pointer;font-size:14px;float:right;padding:0 3px" onclick="delSig('+s.id+')">×</button>':'';return'<div style="padding:8px 0;border-bottom:1px solid rgba(232,120,32,.05);display:flex;gap:8px;align-items:flex-start"><div style="width:27px;height:27px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11px;background:'+(cl==='buy'?'rgba(232,120,32,.1)':cl==='sell'?'rgba(244,63,94,.1)':'rgba(232,120,32,.1)')+';color:'+(cl==='buy'?'var(--grn)':cl==='sell'?'var(--red)':'var(--accent)')+'">'+sIco(s.type)+'</div><div style="flex:1">'+d+'<div style="font-size:15px;font-weight:600;margin-bottom:1px">'+s.coin+(s.type!=='NEWS'?' '+s.type:'')+'</div>'+(sub?'<div style="font-size:10px;color:var(--sub);line-height:1.4">'+sub+'</div>':'')+(s.note?'<div style="font-size:10px;color:var(--sub);line-height:1.4;font-style:italic;margin-top:2px">'+s.note+'</div>':'')+'<span style="font-family:\'Orbitron\',monospace;font-size:8px;padding:1px 6px;border-radius:100px;font-weight:700;margin-top:2px;display:inline-block;background:'+(cl==='buy'?'rgba(232,120,32,.1)':cl==='sell'?'rgba(244,63,94,.1)':'rgba(232,120,32,.1)')+';color:'+(cl==='buy'?'var(--grn)':cl==='sell'?'var(--red)':'var(--accent)')+'">'+s.type+'</span><div style="font-family:\'Orbitron\',monospace;font-size:7.5px;color:rgba(138,128,120,.4);margin-top:2px">'+tMs(s.id)+'</div></div></div>';}
 /* ── BOT SIGNALS: laadt data/signals.json en combineert met handmatige signalen ── */
 async function loadBotSignals(){
   try{
@@ -3535,7 +3590,7 @@ async function loadBotSignals(){
     return data.map(function(s){
       return{
         id:s.id||Date.now()+Math.random(),
-        coin:s.coin||'—',
+        coin:s.coin||' ',
         type:s.type||'WATCH',
         entry:s.entry||'',
         tp:s.tp||'',
@@ -3551,7 +3606,7 @@ async function loadBotSignals(){
 async function renderSignals(){
   var manualSigs=gSigs();
   var botSigs=await loadBotSignals();
-  /* Combineer: handmatig bovenaan, dan bot — geen duplicaten op coin+type */
+  /* Combineer: handmatig bovenaan, dan bot geen duplicaten op coin+type */
   var seen=new Set();
   var combined=[];
   manualSigs.forEach(function(s){combined.push(s);seen.add(s.coin+'_'+s.type);});
@@ -3576,7 +3631,7 @@ function sigHtmlFull(s,del){
   return'<div style="padding:8px 0;border-bottom:1px solid rgba(232,120,32,.05);display:flex;gap:8px;align-items:flex-start">'
     +'<div style="width:27px;height:27px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11px;background:'+bgCol+';color:'+fgCol+'">'+sIco(s.type)+'</div>'
     +'<div style="flex:1">'+d
-    +'<div style="font-size:15px;font-weight:600;margin-bottom:1px">'+escapeHtml(s.coin)+(s.type!=='NEWS'?' — '+s.type:'')+botBadge+'</div>'
+    +'<div style="font-size:15px;font-weight:600;margin-bottom:1px">'+escapeHtml(s.coin)+(s.type!=='NEWS'?' '+s.type:'')+botBadge+'</div>'
     +(sub?'<div style="font-size:10px;color:var(--sub);line-height:1.4">'+escapeHtml(sub)+'</div>':'')
     +(s.note?'<div style="font-size:10px;color:var(--sub);line-height:1.4;font-style:italic;margin-top:2px">'+escapeHtml(s.note)+'</div>':'')
     +'<span style="font-family:\'Orbitron\',monospace;font-size:8px;padding:1px 6px;border-radius:100px;font-weight:700;margin-top:2px;display:inline-block;background:'+bgCol+';color:'+fgCol+'">'+s.type+'</span>'
@@ -3605,7 +3660,7 @@ function setBookPage(id,page){var n=parseInt(page,10);if(!isFinite(n)||n<1)retur
 function clearBookPage(id){var p=getBooksProgress();delete p[id];setBooksProgress(p);}
 function buildBooksGrid(){var grid=document.getElementById('books-grid');if(!grid)return;grid.innerHTML='';for(var i=0;i<BOOKS.length;i++){(function(b){var page=getBookPage(b.id),tile=document.createElement('div');tile.className='card btile';tile.tabIndex=0;tile.setAttribute('role','button');tile.onkeydown=function(e){if(e.key==='Enter')openBookModal(b.id);};tile.innerHTML='<div class="btag">'+(page?'Continue: p'+page:'New')+'</div><div class="btile-top"><div class="bcov"><span>'+(b.title||'Book').split(' ').slice(0,2).map(function(w){return w[0]||'';}).join('')+'</span></div><div class="bmeta"><div class="bttl">'+escapeHtml(b.title)+'</div><div class="bsub">'+escapeHtml(b.subtitle||'')+'</div></div></div><div class="bactions"><button class="bbtn fill" type="button">'+(page?'Continue reading':'Open')+'</button>'+(page?'<button class="bbtn" type="button">Start over</button>':'')+'</div>';var btns=tile.querySelectorAll('button');btns[0].onclick=function(ev){ev.stopPropagation();openBookModal(b.id);};if(page&&btns[1])btns[1].onclick=function(ev){ev.stopPropagation();clearBookPage(b.id);refreshBooksUI();};tile.onclick=function(){openBookModal(b.id);};grid.appendChild(tile);})(BOOKS[i]);}if(!BOOKS.length)grid.innerHTML='<div style="font-family:Orbitron,monospace;font-size:9px;color:var(--sub)">No books yet.</div>';}
 function refreshBooksUI(){buildBooksGrid();}
-function openBookModal(bookId){var b=null;for(var i=0;i<BOOKS.length;i++){if(BOOKS[i].id===bookId){b=BOOKS[i];break;}}if(!b)return;var modal=document.getElementById('booksModal'),frame=document.getElementById('bmFrame'),load=document.getElementById('bmLoad');var page=getBookPage(bookId)||1;document.getElementById('bmTitle').textContent=b.title||'Book';document.getElementById('bmSub').textContent='Reading · saved page: '+page;load.style.display='flex';frame.onload=function(){load.style.display='none';};var src=(b.srcBase?b.srcBase+page:b.src);frame.src=src;document.getElementById('bmExt').onclick=function(){try{window.open(src,'_blank','noopener');}catch(e){window.open(src,'_blank');}};var pageInput=document.getElementById('bmPage');pageInput.value=page;document.getElementById('bmSave').onclick=function(){if(setBookPage(bookId,pageInput.value)){document.getElementById('bmSub').textContent='Reading · saved page: '+getBookPage(bookId);refreshBooksUI();}};document.getElementById('bmClear').onclick=function(){clearBookPage(bookId);pageInput.value='';document.getElementById('bmSub').textContent='Reading · saved page: —';refreshBooksUI();};document.getElementById('bmClose').onclick=closeBookModal;modal.onclick=function(e){if(e.target===modal)closeBookModal();};document.addEventListener('keydown',escCloseOnce);modal.classList.add('show');modal.setAttribute('aria-hidden','false');}
+function openBookModal(bookId){var b=null;for(var i=0;i<BOOKS.length;i++){if(BOOKS[i].id===bookId){b=BOOKS[i];break;}}if(!b)return;var modal=document.getElementById('booksModal'),frame=document.getElementById('bmFrame'),load=document.getElementById('bmLoad');var page=getBookPage(bookId)||1;document.getElementById('bmTitle').textContent=b.title||'Book';document.getElementById('bmSub').textContent='Reading · saved page: '+page;load.style.display='flex';frame.onload=function(){load.style.display='none';};var src=(b.srcBase?b.srcBase+page:b.src);frame.src=src;document.getElementById('bmExt').onclick=function(){try{window.open(src,'_blank','noopener');}catch(e){window.open(src,'_blank');}};var pageInput=document.getElementById('bmPage');pageInput.value=page;document.getElementById('bmSave').onclick=function(){if(setBookPage(bookId,pageInput.value)){document.getElementById('bmSub').textContent='Reading · saved page: '+getBookPage(bookId);refreshBooksUI();}};document.getElementById('bmClear').onclick=function(){clearBookPage(bookId);pageInput.value='';document.getElementById('bmSub').textContent='Reading · saved page:  ';refreshBooksUI();};document.getElementById('bmClose').onclick=closeBookModal;modal.onclick=function(e){if(e.target===modal)closeBookModal();};document.addEventListener('keydown',escCloseOnce);modal.classList.add('show');modal.setAttribute('aria-hidden','false');}
 function escCloseOnce(e){if(e.key==='Escape')closeBookModal();}
 function closeBookModal(){var modal=document.getElementById('booksModal'),frame=document.getElementById('bmFrame'),load=document.getElementById('bmLoad');if(!modal)return;modal.classList.remove('show');modal.setAttribute('aria-hidden','true');document.removeEventListener('keydown',escCloseOnce);try{frame.src='about:blank';}catch(e){}load.style.display='flex';}
 function initBooks(){refreshBooksUI();}
@@ -3647,7 +3702,7 @@ function ptSymToId(sym){
 }
 
 function fUSD(n){if(!n||isNaN(n))return'$0.00';if(Math.abs(n)>=1e9)return'$'+(n/1e9).toFixed(2)+'B';if(Math.abs(n)>=1e6)return'$'+(n/1e6).toFixed(2)+'M';if(Math.abs(n)>=1000)return'$'+n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});return'$'+n.toFixed(2);}
-function fPrice(p){if(!p||isNaN(p))return'—';if(p>=1000)return'$'+p.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});if(p>=1)return'$'+p.toFixed(4);return'$'+p.toFixed(6);}
+function fPrice(p){if(!p||isNaN(p))return' ';if(p>=1000)return'$'+p.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});if(p>=1)return'$'+p.toFixed(4);return'$'+p.toFixed(6);}
 
 function addPosition(){
   var coin=document.getElementById('pf-coin').value.trim().toUpperCase();
@@ -3668,7 +3723,7 @@ function renderPortfolio(){
   var positions=getPt();
   var tbody=document.getElementById('pt-rows');
   if(!positions.length){
-    tbody.innerHTML='<div class="pt-empty">No positions yet — add your first trade above.</div>';
+    tbody.innerHTML='<div class="pt-empty">No positions yet add your first trade above.</div>';
     renderPortfolioSummary([]);
     return;
   }
@@ -3693,7 +3748,7 @@ function buildPortfolioTable(results){
     var curVal=cur>0?coins*cur:0;
     var pnl=curVal-pos.size;
     var pnlPct=pos.size>0?(pnl/pos.size)*100:0;
-    var rrStr='—';
+    var rrStr=' ';
     var rrClass='rr-ok';
     if(pos.tp&&pos.sl&&pos.entry){
       var reward=Math.abs(pos.tp-pos.entry);
@@ -3702,7 +3757,7 @@ function buildPortfolioTable(results){
     }
     var pnlClass=pnl>=0?'pt-pnl-pos':'pt-pnl-neg';
     var curStr=cur>0?fPrice(cur):'<span style="color:var(--sub)">Fetching...</span>';
-    var curValStr=cur>0?fUSD(curVal):'—';
+    var curValStr=cur>0?fUSD(curVal):' ';
     var row=document.createElement('div');
     row.className='pt-row';
     row.innerHTML='<div class="pt-coin"><div><div class="pt-coin-sym">'+escapeHtml(pos.coin)+'</div><div class="pt-coin-name">'+fUSD(pos.size)+' invested</div></div></div>'
@@ -3718,7 +3773,7 @@ function buildPortfolioTable(results){
 }
 
 function renderPortfolioSummary(results){
-  var totalInv=0,totalCur=0,bestPnlPct=-Infinity,bestCoin='—',bestStr='—',rrSum=0,rrCount=0;
+  var totalInv=0,totalCur=0,bestPnlPct=-Infinity,bestCoin=' ',bestStr=' ',rrSum=0,rrCount=0;
   results.forEach(function(item){
     var pos=item.pos,cur=item.cur;
     var coins=pos.size/pos.entry;
@@ -3737,10 +3792,10 @@ function renderPortfolioSummary(results){
   document.getElementById('pt-pnl-val').style.color=pnlColor;
   document.getElementById('pt-pnl-val').textContent=(totalPnl>=0?'+':'')+fUSD(totalPnl);
   document.getElementById('pt-pnl-pct').textContent=(totalPnlPct>=0?'+':'')+totalPnlPct.toFixed(2)+'%';
-  document.getElementById('pt-best-val').textContent=results.length?bestCoin:'—';
+  document.getElementById('pt-best-val').textContent=results.length?bestCoin:' ';
   document.getElementById('pt-best-val').style.color=bestPnlPct>0?'var(--grn)':bestPnlPct<0?'var(--red)':'var(--cream)';
-  document.getElementById('pt-best-sub').textContent=results.length?bestStr:'—';
-  document.getElementById('pt-rr-val').textContent=rrCount>0?avgRr.toFixed(2)+'R':'—';
+  document.getElementById('pt-best-sub').textContent=results.length?bestStr:' ';
+  document.getElementById('pt-rr-val').textContent=rrCount>0?avgRr.toFixed(2)+'R':' ';
   document.getElementById('pt-rr-val').style.color=avgRr>=2?'var(--grn)':avgRr>=1?'var(--accent)':'var(--sub)';
 }
 
@@ -3920,8 +3975,8 @@ function buildWhaleStats(data){
   var outflow=data.filter(function(w){return w.isExchOut;}).reduce(function(s,w){return s+w.usd;},0);
   document.getElementById('wh-vol24').textContent=fWhaleUSD(total);
   document.getElementById('wh-vol-sub').textContent=data.length+' transfers tracked';
-  document.getElementById('wh-largest').textContent=largest?fWhaleUSD(largest.usd):'—';
-  document.getElementById('wh-largest-sub').textContent=largest?fWhaleCoins(largest.coin,largest.usd):'—';
+  document.getElementById('wh-largest').textContent=largest?fWhaleUSD(largest.usd):' ';
+  document.getElementById('wh-largest-sub').textContent=largest?fWhaleCoins(largest.coin,largest.usd):' ';
   document.getElementById('wh-inflow').textContent=fWhaleUSD(inflow);
   document.getElementById('wh-outflow').textContent=fWhaleUSD(outflow);
 }
@@ -3975,7 +4030,7 @@ function aiGetSystemPrompt(){
     beginner:'Explain everything in a beginner-friendly way, avoid jargon or always explain it clearly.'
   };
   var langInstr=lang==='en'?'Respond in English.':'Respond in Dutch (Nederlands).';
-  return 'You are an experienced crypto market analyst for the YONA Capital platform. You provide in-depth analyses of the crypto market based on technical analysis, on-chain data, macro economics and market sentiment. Always give concrete, well-substantiated analyses — no vague answers. Use markdown-style formatting: use **bold** for important terms and short ALL-CAPS headings for sections. Be direct and professional. '+focusMap[focus]+' '+langInstr;
+  return 'You are an experienced crypto market analyst for the YONA Capital platform. You provide in-depth analyses of the crypto market based on technical analysis, on-chain data, macro economics and market sentiment. Always give concrete, well-substantiated analyses no vague answers. Use markdown-style formatting: use **bold** for important terms and short ALL-CAPS headings for sections. Be direct and professional. '+focusMap[focus]+' '+langInstr;
 }
 
 function aiAddMessage(role,text){
@@ -4094,7 +4149,7 @@ async function aiSend(){
     aiAddMessage('ai',reply);
   } catch(e){
     aiRemoveThinking();
-    aiAddMessage('ai','**Connection error** — Could not reach the AI. Check your internet connection and try again.');
+    aiAddMessage('ai','**Connection error** Could not reach the AI. Check your internet connection and try again.');
   }
 
   aiTyping=false;
@@ -4336,13 +4391,13 @@ async function renderBotWL() {
   var tt  = document.getElementById('bot-total-trades');
   var pb  = document.getElementById('bot-pnl-bar');
 
-  if(wp) wp.textContent = total > 0 ? winPct + '%' : '—';
-  if(lp) lp.textContent = total > 0 ? lossPct + '%' : '—';
+  if(wp) wp.textContent = total > 0 ? winPct + '%' : ' ';
+  if(lp) lp.textContent = total > 0 ? lossPct + '%' : ' ';
   if(wc) wc.textContent = wins.length + ' win' + (wins.length !== 1 ? 's' : '');
   if(lc) lc.textContent = losses.length + ' loss' + (losses.length !== 1 ? 'es' : '');
   if(tt) tt.textContent = total + ' afgesloten trade' + (total !== 1 ? 's' : '');
   if(tp) {
-    tp.textContent = total > 0 ? (pnlPositive ? '+' : '') + totalPnl.toFixed(2) + '%' : '—';
+    tp.textContent = total > 0 ? (pnlPositive ? '+' : '') + totalPnl.toFixed(2) + '%' : ' ';
     tp.style.color = total > 0 ? (pnlPositive ? '#e87820' : 'var(--red)') : 'var(--sub)';
   }
   if(pb) {
@@ -4394,7 +4449,7 @@ function showBotHistory(filter) {
   }
 
   if(!filtered.length){
-    list.innerHTML = '<div style="padding:32px;text-align:center;font-family:\'Orbitron\',monospace;font-size:9px;color:var(--sub)">Nog geen '+(filter==='win'?'wins':filter==='loss'?'losses':'afgesloten trades')+' — de bot checkt elk uur TP/SL.</div>';
+    list.innerHTML = '<div style="padding:32px;text-align:center;font-family:\'Orbitron\',monospace;font-size:9px;color:var(--sub)">Nog geen '+(filter==='win'?'wins':filter==='loss'?'losses':'afgesloten trades')+' de bot checkt elk uur TP/SL.</div>';
   } else {
     list.innerHTML = filtered.map(function(r, i){
       var isWin = r.result === 'win';
