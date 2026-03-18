@@ -1,18 +1,18 @@
 {
   "date": "2026-03-18",
-  "focus": "Brede marktcorrectie met -3.31% op totale cap; Fear Index daalt naar 26 terwijl macro headwinds vanuit energiekosten en inflatiedata toenemen.",
-  "risk": "Heightened: risk-off, liquidatie-gevoelig",
-  "btc_structure": "Bitcoin handelt op $71.253 met een dagelijkse daling van -4.32% en uurlijkse druk van -1.20%. De wekelijkse winst van +1.53% suggereert weerlei, maar huidige prijsactie wijst op testen van lagere ondersteuning voor mean reversion.",
-  "eth_flows": "Ethereum staat op $2.185,83 en vertoont relatief zwakkere technische positie met -6.70% in 24h en -2.09% per uur, terwijl de 7d gain van +6.58% momentum erosie aantoont. Volume van $21.84B blijft solide ondanks de neerwaartse druk.",
+  "focus": "Markt glijdt verder af met crypto marktkapitalisatie -3.56% in 24h; Fear & Greed blijft in Fear-zone (26) terwijl liquidaties en yield-narratieven domineren.",
+  "risk": "Rood: Technisch zwak, sentiment fragiel",
+  "btc_structure": "Bitcoin handelt op $71,329 met -3.99% verlies in 24h en -0.16% op 1h; weeklijks nog positief op +1.52% maar dagelijkse structuur blijft onder druk. Totale volume van $44.31B geeft ondersteuning maar breektests onder 70k-niveau zijn risico.",
+  "eth_flows": "Ethereum zwaarder getroffen op -6.46% in 24h tot $2,181.96, terwijl 7d-performance positief blijft (+5.71%); volume van $21.31B suggereert liquidatie-druk eerder dan institutionele accumulation.",
   "top_narratives": [
-    "Energiekosten stijgen door Iran-escalatie, druk op Bitcoin hash rate en mining winstgevendheid",
-    "Fed FOMC meeting vandaag met hot US PPI data vooraf; inflatiesorgen benadrukken macro onzekerheid",
-    "Centrale banken accelereren CBDC-implementatie (Korea, Japan); institutionele selectiviteit neemt toe",
-    "Stablecoin beleid fragmentatie tussen MiCA en VS; Stripe-Tempo AI agent protocol live"
+    "Yield-materie krijgt meer focus naarmate prijzen consolideren; SBI VC Trade retail USDC lending toont groeiende stablecoin-utiliteit",
+    "Bitcoin decoupling van tech-correlaties bereikt 2018-lows terwijl Trump-linked American Bitcoin Holdings Galaxy Digital voorbijstreeft",
+    "Regulatory momentum groeit: Senator Lummis 'zo dicht als ooit' op market structure bill; CZ geconfronteerd met Iran/terror-beschuldigingen",
+    "Institutionele terugtrekking: Kraken stopt multimiljard IPO-plan door moeilijke marktomstandigheden; Bhutan verkoopt nog $72.3M BTC"
   ],
-  "macro_impact": "De aanstaande Fed FOMC-vergadering en inflatiedata zorgen voor macro volatiliteit; energieprijsstijging door geopolitieke spanningen drukt op miningeconomie en BTC hash rate. Institutionele capitaal selecteert risico-assets voorzichtiger, wat marktbreedheid belast.",
-  "whale_flows": "Liquidatiegegevens ontbreken, maar volume-analyse toont $103.3B totaal 24h volume met leidersposities in BTC ($42.48B) en ETH ($21.84B). De brede daling van 3.31% suggereert gedwongen verkopen in leverage-posities.",
-  "funding_oi": "Funding rate en open interest data zijn momenteel niet beschikbaar. Zonder deze real-time signalen blijft de mate van leverage onzeker, hoewel de brede liquidatiestroom aangeeft dat overleveraging bestond.",
-  "volatility_outlook": "Fear Index op 26 toont intensieve vrees; daling van 28 naar 26 suggereert versnelde sentiment-erosie. Verwacht verdere volatiliteit rond FOMC-timing; technische setup wijst op fase van consolidatie of verdere correctie voordat reversal-setup zich vormt.",
-  "full_report": "De cryptomarkt vertoont brede correctie met totale cap daling van 3.31% naar $2.52T. Bitcoin noteert $71.253 (-4.32% 24h), Ethereum $2.185,83 (-6.70% 24h), terwijl XRP, BNB en SOL gelijkwaardige druk ervaren. Fear & Greed Index staat op 26 (Fear) versus 28 gisteren, wijzend op accelererende sentiment-erosie. Macro headwinds uit Fed FOMC vandaag, inflatiedata en Iran-gerelateerde energieprijsstijging oefenen druk uit op miningeconomie en risk appetite. Institutionele beleggers tonen groeiende selectiviteit ondanks overall bullish langetermijnpositionering; CBDC-expansie en stablecoin regelgeving bieden parallelle growth narratieven."
+  "macro_impact": "Ethereum-gemeenschap debatteert foundation-mandaat terwijl regulatoire vraagstukken rondom CZ en Binance-geschiedenis druk op sentiment plaatsen. Kraken's IPO-stopzetting en Bhutan's BTC-verkoopdruk suggereren voorzichtigheid onder institutionele spelers en soevereine fondsen.",
+  "whale_flows": "Liquidatiegegevens niet beschikbaar, maar sterke daling in altcoin-volume (LINK -6.91%, AVAX -7.19%, UNI -8.56%) duidt op gerichte uitstroom naar stablecoins; Bhutan's $72.3M BTC-verkoop zet druk op prijsvorming.",
+  "funding_oi": "Funding rates en Open Interest data niet beschikbaar vandaag, wat liquiditeitsrisico's vermoeilijkt in te schatten; marktstilte in derivatives kan wijzen op afwachting na de afgelopen 24h-verkoopdruk.",
+  "volatility_outlook": "Fear & Greed duit naar 26 (Fear, -2 van gisteren) met -3.56% marktcapverlies verwacht hogere volatiliteit morgenvroeg; technische zwakte in altcoins (+UNI -8.56%) suggereert panic-liquidaties blijven risico.",
+  "full_report": "De cryptomarkt handelt onder druk met totale marktkapitalisatie van $2.52T (-3.56% in 24h) en Fear & Greed Index op 26 (Fear-zone). Bitcoin blijft $71,329 houden (-3.99% dag, +1.52% week) terwijl Ethereum harder zakt naar $2,181.96 (-6.46% dag) op $21.31B volume. Altcoins leiden verliezen aan: UNI -8.56%, AVAX -7.19%, LINK -6.91%. Institutioneel momentum verslapt\u2014Kraken stopt IPO, Bhutan verkoopt $72.3M BTC, Senator Lummis nadert market structure bill. Ethereum-gemeenschap debatteert foundation-mandaat. Bitcoin toont decoupling van tech (2018-lows correlatie). Yield en stablecoin-narratieven (SBI VC USDC-lending) winnen aan belang naarmate prijsvolatiliteit en regulatoire onzekerheid toenemen."
 }
