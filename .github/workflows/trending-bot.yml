@@ -2,10 +2,9 @@ name: Update Trending Intelligence
 
 on:
   schedule:
-    # Runs Monday and Thursday at 07:00 UTC
-    - cron: '0 7 * * 1'
-    - cron: '0 7 * * 4'
-  workflow_dispatch:  # also allow manual trigger
+    - cron: '0 7 * * 1'   # Monday 07:00 UTC
+    - cron: '0 7 * * 4'   # Thursday 07:00 UTC
+  workflow_dispatch:        # manual trigger
 
 permissions:
   contents: write
@@ -31,6 +30,7 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main
           git add data/trending.json
           git diff --staged --quiet && echo "No changes" || \
           git commit -m "Update trending intelligence $(date -u '+%Y-%m-%d %H:%M UTC')" && \
