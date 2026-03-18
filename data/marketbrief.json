@@ -1,18 +1,18 @@
 {
   "date": "2026-03-18",
-  "focus": "Markt corrigeert op geopolitieke spanning en inflatiedruk terwijl Fed steady blijft; BTC houdt zich staande op $71,778 ondanks 24h -3.83% daling.",
-  "risk": "Moderate risk, correctieve fase",
-  "btc_structure": "Bitcoin noteert $71,778 met intraday +0.48% maar 24h -3.83% verlies. Weekrendement +1.42% toont beperkte directe impact van Iran-risico's. Dominantie stabiel op 56.6% wijst op relatieve stabiliteit in marktstructuur ondanks 110.1B volume.",
-  "eth_flows": "Ethereum daalt naar $2,205.17 (-5.75% 24h) terwijl wekelijks +6.63% rendement positieve sentiment reflecteert. 22.76B volume suggereert consistente liquiditeit ondanks de correctie in hoofd-altcoins.",
+  "focus": "Crypto markt onder druk door geopolitieke spanningen en inflatie-zorgen; BTC houdt $71.5K aan terwijl Fear & Greed naar 26 daalt.",
+  "risk": "Deflatair, hogere risico's, capitulation",
+  "btc_structure": "Bitcoin noteert op $71,561 met -4.19% 24h-verlies, maar +1.11% weekly gain duidt op relatieve stabiliteit. Steun rondom $70K-niveau blijft cruciaal; brekende 7d-winst zou hernieuwd downside kunnen activeren.",
+  "eth_flows": "Ethereum zwakker dan BTC met $2,198.42 (-5.99% 24h), maar +6.30% weekly toont onderliggende strength. Volume van $22.62B blijft robuust ondanks kortstondige pullback.",
   "top_narratives": [
-    "Iran-conflict cre\u00ebert permanente inflatievloer; Fed handhaaft beleid en signaleert langdurig hoger renteniveau",
-    "Bhutan dumpt extra $72.3M Bitcoin te midden van marktdaling; staatactoren herpositioneren reserves",
-    "Senator Lummis duwt marktstructuurwetgeving vooruit; regelgeving katalisator voor institutionele inflow",
-    "Yield-rotatie wint aan belang: structurele overgang van price-focus naar rendementsgeneratie in crypto"
+    "Geopolitieke inflatie-vloer: Iran-crisis cre\u00ebert permanente macro-headwinds en tilt voorkeur naar hard assets",
+    "Regulatory arbitrage: Kalshi vs Arizona-strijd signaleert federaal-staatsconflict in crypto-regelgeving",
+    "On-chain yield focus: ETH/alt-narratief verschuift van prijswaardering naar rendementsgeneratie",
+    "Institutionele accumulatie: S&P 500 perpetuals op Hyperliquid duidt mainstream adoption onder beleggingsplatforms"
   ],
-  "macro_impact": "Federal Reserve handhaaft beleid ondanks hoger inflatierisico door Iran-escalatie, wat een permanente inflatievloer cre\u00ebert en rentetarieven hoger houdt dan vorig jaar. Dit limiteert de 'cheap money'-rally die crypto in 2024-2025 duidde en dwingt beleggers naar yield-genererende strategie\u00ebn. Institutionele aandacht verschuift van speculatieve prijsgoeien naar DeFi-rendementen en gestructureerde producten.",
-  "whale_flows": "Bhutans $72.3M Bitcoin-verkoopstroom in correctieve markt signaleert staatsaktueren nemen winsten; geen enkele massaliqu\u00eddatie-piek waargenomen in BTC/ETH. Volume op 110.1B 24h suggereert ordelijke herverdeling zonder paniekaflossing.",
-  "funding_oi": "Funding rates data onbeschikbaar vandaag; historisch lage Fear & Greed (26, Fear-regime) duidt op verhoogde korte posities en weigerachtigheid van longs. Open Interest metriek ontbreekt; verwacht wordt dat bears opportunistisch accumuleren bij huidige correctie-niveaus.",
-  "volatility_outlook": "Fear & Greed-index op 26 (Fear) en daling van 28 gisteren markeert dieper sentiment-erosie; verwacht hogere vluchtigheid rond inflatieaankondigingen en geopolitieke updates. Correctie op -3% tot -6% range (BTC, ETH, altcoins) suggereert 2-3 dagen handelherstel voordat nieuwe support zoeken.",
-  "full_report": "CryptoMarketz Marktbrief | 18-03-2026: Bitcoin (BTC) $71,778 | -3.83% 24h, +1.42% 7d | Ethereum (ETH) $2,205.17 | -5.75% 24h, +6.63% 7d | Marktcap $2.53T (-3.74% 24h) | 24h volume $110.1B. Fed houdt rente steady ondanks Iran-conflictrisico; permanente inflatievloer reduceert kans op renteverlaging. Fear & Greed index 26 (Fear) \u2014 laagste niveau in 2 dagen \u2014 wijst op verhoogde kortsheid en zijdelingse sentiment. Bhutans extra $72.3M Bitcoin-verkoop in correctieve markt markeert staatsaktuele kapitaalomlei; geen grote whale-liquidaties zichtbaar. Verwacht 2-3 dagen volatiliteit rond macro-catalysts en regelgevingsnieuws rond Senator Lummis' marktstructuurwetgeving, die institutionele inflow kan versnellen."
+  "macro_impact": "Federal Reserve houdt beleid ongewijzigd terwijl Iran-zorgen inflatie-outlook verhogen; dit cre\u00ebert langetermijn-druk op risk assets maar ondersteunt BTC-defensieve status. Bhutan's $72.3M Bitcoin-verkoop reflecteert nervositeit onder on-chain actoren, ondanks optimisme van Senator Lummis over marktstructuur-wetgeving.",
+  "whale_flows": "Liquidatie-data niet beschikbaar, maar Bhutan's aanzienlijke dump ($72.3M) en volume-contractie naar $110.6B totaal duiden op voorzichtigheid onder majors. ADA en DOT tonen kleine stabiliteit (-5.92% resp. -1.99%), wat suggereert dat liquidaties meer selectief dan massaal zijn.",
+  "funding_oi": "Funding rates en Open Interest data niet beschikbaar vandaag; zonder deze inzichten kunnen we geen eenduidige stance van longs vs shorts bepalen. Historisch zou hoger OI in bearish omgeving toenemende liquidatierisico's signaleren.",
+  "volatility_outlook": "Fear & Greed Index daalt naar 26 (Fear) van gisteren 28, wat verdere downside-momentum suggereert. Verwacht 5-8% intraday-oscillaties gegeven geopolitieke onzekerheid en Fed-communicatie; brak onder $72K-niveau kan 10%+ correctie activeren.",
+  "full_report": "De crypto-markt vertoont structurele zwakte op 2026-03-18 met totale cap van $2.53T (-3.77% 24h) terwijl BTC $71,561 handelt en ETH $2,198.42 noteert. Fear & Greed staat op 26 (Fear), ondersteund door geopolitieke spanningen (Iran-crisis), Fed-hawkish stance en Bhutan's $72.3M Bitcoin-verkoop. Ondanks 24h-verliezen tonen BTC (+1.11% 7d) en ETH (+6.30% 7d) weekly resilience. Funding rates zijn vandaag niet beschikbaar, waardoor technische setup moeilijk interpreteerbaar is, maar $110.6B totaal volume en 56.6% BTC-dominantie duiden op voorzichtig kapitalverloop. Narrative's verschuiving naar on-chain yield en institutionele structuren (S&P 500-perpetuals op Hyperliquid) geeft long-term support, maar korttermijn-risico blijft verhoogd zolang Fear & Greed onder 30 blijft."
 }
