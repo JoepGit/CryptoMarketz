@@ -1,18 +1,18 @@
 {
   "date": "2026-03-18",
-  "focus": "Markt in correctie met Fear Index dalend naar 26; institutionele beleggers blijven optimistisch ondanks 24h verliezen.",
-  "risk": "Gemiddeld risico, voorzichtige liquidaties",
-  "btc_structure": "Bitcoin noteert op $71.795, met een 24h verlies van -3,15% maar weeklijkse winst van +3,52%. Support blijft intact rond $71k-niveau terwijl technische weerstand zich vormt rond de $73k-area. De 1h daling van -0,86% suggereert korte-termijn consolidatie na gisteren's PPI-ge\u00efnduceerde dip.",
-  "eth_flows": "Ethereum daalt naar $2.222,36 met een 24h verlies van -5,11%, maar impressionant weeklijks rendement van +9,83% onderstreept onderliggende kracht. Volume van $20,53B duidt op actieve positieveranderin\u00adgen onder institutionele spelers.",
+  "focus": "Brede marktcorrectie van -3.26% temidden van stijgende risicoaversie en Fed-onzekerheid voorafgaand aan FOMC-bijeenkomst.",
+  "risk": "Elevated fear regime, correctie fase",
+  "btc_structure": "Bitcoin daalt naar $71,720 met een -3.39% 24h-verlies en -0.92% in het afgelopen uur, ondanks weeklijkse winst van +3.42%. De dominantie blijft robuust op 56.6%, wat wijst op het behoud van kapitaal in Bitcoin tijdens risico-off sentiment.",
+  "eth_flows": "Ethereum vertoont grotere zwakte op $2,221.61 met -5.15% 24h-verlies, hoewel +9.79% weeklijkse gainindicatoren eerdere momentum aantonen. Volume blijft substantieel op $20.9B, wat volatiliteit rond macro-triggers weerspiegelt.",
   "top_narratives": [
-    "Centrale banken onderzoeken digitale valuta's: Bank of Korea voegt twee banken toe aan digitale won-proeven",
-    "AI-gedreven blockchain-adoptie accelereert via Tempo's protocol voor AI-agenten",
-    "Institutionele risk-appetite: 74% van institutionele beleggers verwacht stijging in 12 maanden ondanks huidige correctie",
-    "Regelgeving en compliance: Circle pleit voor harmonisatie tussen MiCA en Amerikaanse stabielmuunt-regels"
+    "Fed FOMC-vergadering vandaag als primaire volatiliteitscatalysator voor risicobeheer",
+    "Institutionele beleggers dubbelen in op crypto ondanks prijsdruk, maar worden selectiever op risico",
+    "AI-agent betalingsprotocollen winnen terrein (Tempo-lancering)",
+    "Centrale banken versnellen digitale munt-initiatieven (Bank of Korea pilots)"
   ],
-  "macro_impact": "Fed FOMC-meeting vandaag vormt kernkatalisator; gisteren's hete Amerikaanse PPI-data drukte Bitcoin naar $72k, wat inflationaire zorgen weerspiegelt. Institutionele survey toont dat grote spelers crypto als langetermijn-groeimotor blijven zien ondanks korte-termijn volatiliteit. Regelgeving-geneurie in Illinois en crypto IPO-turbulentie (RedotPay) bieden tegenwind.",
-  "whale_flows": "Liquidatiedata niet beschikbaar, maar $101B totaal 24h-volume en gespreide negatieve prijsbewegingen suggereren verspreid profit-taking in plaats van kapitaalvlucht. Kleinere altcoins (UNI -6,54%, AVAX -6,05%) vertonen selectieve liquidaties onder lagere risk-appetite.",
-  "funding_oi": "Funding rates en open interest data niet beschikbaar voor analyse, waardoor re\u00eble sentimentmeting van leveraged posities beperkt is. Gebrek aan data bemoeilijkt het bepalen van short-squeeze risico's of long-accumulation patronen.",
-  "volatility_outlook": "Fear & Greed Index daling naar 26 (van 28) geeft aan dat marktangst licht toeneemt maar niet extreem is; dit profiel suggereert verdere consolidatie in plaats van vrije val. Het brede 24h-verlies (alle top 10 coins negatief) kan verdere daling katalyseren als Fed dovish signalen uitblijven.",
-  "full_report": "De cryptomarkt vertoont klassieke correctiekenmerken op 2026-03-18 met totale cap op $2,54T (-3,19% 24h) en Fear & Greed Index gedaald naar 26. Bitcoin ($71.795, -3,15% 24h) en Ethereum ($2.222,36, -5,11% 24h) leiden neergaande beweging aan, terwijl alle top 10 altcoins (van XRP tot UNI) verliezen melden. Ondanks korte-termijndruk rapporteren 74% van institutionele beleggers optimisme voor 12-maanden horizon, ondersteund door centrale bankinitiatieven (Bank of Korea, digitale won) en innovatiecatalysatoren (Tempo AI-protocol). Fed FOMC vandaag bepaalt of correctie diepte blijft beperkt of accelereert; gisteren's PPI-schrik naar $72k wijst op inflatie-gevoeligheid. Volume van $101B 24h en afwezigheid van extreme liquidaties duidt op ordelijke marktherallocatie in plaats van paniek."
+  "macro_impact": "Fed FOMC-bijeenkomst vandaag en sterke Amerikaanse PPI-gegevens hebben risicoactiva onder druk gezet, met Bitcoin daarom dalend naar $72K. Het Fear & Greed Index op 26 (Fear) suggereert dat beleggers defensief zijn gepositioneerd, wat de brede -3.26% marktcap-verlies verklaart.",
+  "whale_flows": "Liquidatiegegevens niet beschikbaar, maar het volume pattern ($102.0B 24h totaal) en brede gelijkheid in negatieve prestaties duidt op gedisciplineerde positieafbouw in plaats van paniekverkopen. Alle top-10 activa handelen lager, wat institutionele risico-hedging aantoont.",
+  "funding_oi": "Funding rate- en open interest-gegevens niet beschikbaar vandaag, wat waarschijnlijk leveraged positie-herbalancering weerspiegelt rond macro-events. Afwezigheid van explosieve liquidaties duidt op voorzichtig geleide positiebeheer voorafgaand aan Fed-aankondiging.",
+  "volatility_outlook": "Fear Index op 26 en stijgende macro-onzekerheid wijzen op aanhoudende volatiliteit in de komende uren rond FOMC. Ethereum's -5.15% 24h-verlies versus Bitcoin's -3.39% suggereert dat altcoins gevoeliger zijn voor risico-off rotatiepatronen.",
+  "full_report": "De cryptomarkt handelt vandaag in een geduidelijk correctiescenario met totale marktcap op $2.54T (-3.26% 24h), aangedreven door Fed FOMC-onzekerheid en hete Amerikaanse inflatiegegevens. Bitcoin staat op $71,720 (-3.39% 24h, +3.42% 7d) met 56.6% dominantie, terwijl Ethereum zwakker presteert op $2,221.61 (-5.15% 24h, +9.79% 7d). Het Fear & Greed Index staat op 26 (Fear), wat wijst op voorzichtige institutionele houding ondanks surveys die aantonen dat 74% van instellingen crypto-stijging verwacht in 12 maanden. Volume blijft gezond op $102.0B 24h, wat discipline in positieafbouw aantoont. Narrative verschuiving naar centrale bankcryptografie en AI-agentbetalingen biedt langetermijnsteun, maar korttermijnmacro risico's domineren vandaag's handelsdynamica."
 }
