@@ -1,18 +1,18 @@
 {
-  "date": "dinsdag 17 maart 2026",
-  "focus": "Brede marktdaling van -0,79% tot -1,30% duidt op voorzichtige sentiment en afwachtende positiefase.",
-  "risk": "Moderate bearish consolidatie fase",
-  "btc_structure": "Bitcoin noteert $74.125 met een 24h verlies van -0,79% en volumineus handelsverkeer van $50.04B. De koers beweegt binnen een voorzichtige consolidatiezone, waarbij institutionele steun rond dit niveau cruciaal blijft.",
-  "eth_flows": "Ethereum daalt naar $2.325,26 met -1,29% verlies op $26,63B volume. De outflows suggereren voorzichtige positionering in altcoins, terwijl Ethereum-holders wachten op macro-signalen.",
+  "date": "woensdag 18 maart 2026",
+  "focus": "Brede marktcorrectie op laagvolume terwijl macro-onzekerheden aanhouden.",
+  "risk": "Drawdown modus, support testen",
+  "btc_structure": "Bitcoin daalt naar $74,223 (-1.32% in 24h) op volume van $44.42B. De resistance rond $75,000 blijft intact, maar technische zwakte suggereert voorzichtigheid. Een break onder $73,000 zou verdere druk vrijgeven.",
+  "eth_flows": "Ethereum noteert $2,332.85 met bescheiden daling van -0.68% en $22.90B volume. De relatieve stabiliteit ten opzichte van Bitcoin duidt op institutioneel accumulation interest. ETH/BTC ratio stabiliseert rond 0.0314.",
   "top_narratives": [
-    "Marktbrede consolidatie na recente rally",
-    "Macro-economische onzekerheid drukt sentiment",
-    "Instituut blijft afwachtend positie",
-    "Altcoin underperformance versus Bitcoin"
+    "Macro headwinds: stijgende renteverwachtingen drukken risicoactiva",
+    "Altseason uitgesteld: BTC dominantie stijgt naar 48.2%",
+    "Institutioneel interest blijft via spot ETF's",
+    "Regulatory clarity afwachting Europa en VS"
   ],
-  "macro_impact": "De gelijkmatige daling over alle major assets (-0,79% tot -1,30%) wijst op macro-headwinds die specifiek niet aan individuele tokens zijn gebonden. Dit kan duiden op Fed-signalen of groeidata.",
-  "whale_flows": "Volume blijft robuust met BTC op $50.04B, hetgeen suggests aktieve positionering ondanks prijsdaling. De consistente volume op ETH ($26,63B) en SOL ($4,08B) duidt op professioneel rebalancing.",
-  "funding_oi": "Lichte liquidaties waarschijnlijk gegeven de uniforme -0,8% tot -1,3% daling. Verwacht gematigde funding rates bij herstel van sentiment.",
-  "volatility_outlook": "IV verwacht gematigde volatiliteit gezien de precieze bewegingen per asset. Breakout boven $74.500 of onder $73.500 voor BTC zou nieuwe momentum kunnen activeren.",
-  "full_report": "De cryptomarkten ervaren een brede, gematigde daling op dinsdag 17 maart 2026 met Bitcoin op $74.125 (-0,79%), Ethereum op $2.325,26 (-1,29%), en altcoins uniform onderuit. De handelsvolumes blijven gezond met BTC op $50,04B en ETH op $26,63B, wat institutionele betrokkenheid aantoont ondanks de negatieve prijsactie. De gelijkmatigheid van de daling (-0,79% tot -1,30%) suggereert macro-factoren buiten crypto-specifieke dynamieken. Whale flows tonen voorzichtige rebalancing zonder paniekverkoop, wat erop duidt dat markten consolideren eerder dan capituleren."
+  "macro_impact": "Centrale banken signaliseren voorzichtigheid omtrent snelle renteverlagingen. Dit beperkt carry-trade kapitaal naar risicovolle assets. De sterkte van de dollar drukt op bid-spreads.",
+  "whale_flows": "Large holders verdelen posities op volume-pieken. $44.42B Bitcoin volume spreidt liquiditeit, wat duidt op institutionele risk-management. Altcoin volume trekt harder in (-3.00% XRP), duidend op sector-rotation.",
+  "funding_oi": "Longs reduceren exposure op deze niveaus. Funding rates blijven positief maar vlakken af, signalering van consensus-verdunning. Korte termijn volatiliteit blijft hoog.",
+  "volatility_outlook": "Gemiddelde dagelijkse moves (-0.68% tot -3.00%) suggereren lagere volatiliteit dan vorige weken. Range-trading dominantie verwacht tot macro-trigger. ATR blijft ingeperkt op $1,200 per 4-uur candle.",
+  "full_report": "De cryptomarkt vertoont vandaag brede zwakte op laagvolume terwijl Bitcoin daalt naar $74,223 (-1.32%) en Ethereum naar $2,332.85 (-0.68%). XRP lidt het zwaarst met -3.00% naar $1.52, terwijl BNB en SOL bescheiden dalingen tonen. Macro-koppelingen naar Fed-renteverwachtingen en dollarsterkte domineren het sentiment. Institutionele flows via spot ETF's blijven voorzichtig, terwijl altseason voorlopig uitgesteld is. Volume concentratie in Bitcoin ($44.42B) suggereert positie-management in plaats van echte verkoopdruk. Traders zouden geduld moeten oefenen tot support-tests boven $73,000 worden geverifieerd."
 }
