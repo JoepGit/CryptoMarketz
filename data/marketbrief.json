@@ -1,18 +1,18 @@
 {
   "date": "2026-03-18",
-  "focus": "Markt herstelt voorzichtig na gisteren's daling terwijl geopolitieke spanningen en Fed-beleid inflatiedruk blijven uitoefenen.",
-  "risk": "Moderate to High - Geopolitieke onzekerheid",
-  "btc_structure": "Bitcoin staat op $71,909 met +0.84% per uur maar -3.63% in 24h, wat duidt op herstelpoging na weekdaling. Het $70k-niveau blijft kritieke steun gezien de marktbrede liquidaties. 24h volume van $43.34B geeft voldoende liquiditeit voor consolidatie rond huidige niveaus.",
-  "eth_flows": "Ethereum noteert $2,215.52 met +1.48% per uur maar -5.32% in 24h, onderperformend versus Bitcoin. De 7d gain van +7.13% wordt tenietgedaan door recente verkoopdruk, wat suggereert dat altcoin-positief sentiment kwetsbaar is.",
+  "focus": "Markt corrigeert op geopolitieke spanning en inflatiedruk terwijl Fed steady blijft; BTC houdt zich staande op $71,778 ondanks 24h -3.83% daling.",
+  "risk": "Moderate risk, correctieve fase",
+  "btc_structure": "Bitcoin noteert $71,778 met intraday +0.48% maar 24h -3.83% verlies. Weekrendement +1.42% toont beperkte directe impact van Iran-risico's. Dominantie stabiel op 56.6% wijst op relatieve stabiliteit in marktstructuur ondanks 110.1B volume.",
+  "eth_flows": "Ethereum daalt naar $2,205.17 (-5.75% 24h) terwijl wekelijks +6.63% rendement positieve sentiment reflecteert. 22.76B volume suggereert consistente liquiditeit ondanks de correctie in hoofd-altcoins.",
   "top_narratives": [
-    "Geopolitieke risico's (Iran-conflict) cre\u00ebren permanente inflatievloer en drukken risico-appetite",
-    "Fed houdt beleid steady terwijl groei- en inflatiebezorgdheden toenemen",
-    "Ethereum-gemeenschap debatteert foundation-mandaat terwijl L1 momentum afneemt",
-    "Macro-decoupling: Bitcoin toont 2018-lage correlatie met tech terwijl traditionele fintech S&P-futures lancering doet"
+    "Iran-conflict cre\u00ebert permanente inflatievloer; Fed handhaaft beleid en signaleert langdurig hoger renteniveau",
+    "Bhutan dumpt extra $72.3M Bitcoin te midden van marktdaling; staatactoren herpositioneren reserves",
+    "Senator Lummis duwt marktstructuurwetgeving vooruit; regelgeving katalisator voor institutionele inflow",
+    "Yield-rotatie wint aan belang: structurele overgang van price-focus naar rendementsgeneratie in crypto"
   ],
-  "macro_impact": "De Federal Reserve handhaaft geldpolitiek ondanks Iran-gerelateerde spanningen; markt anticipeert op permanente inflatieplafond door geopolitieke onzekerheid. Dit verklaart de risico-aversie in crypto met -3.37% marktcap-daling, gezien traditionele beleggers uit riskante assets vluchten.",
-  "whale_flows": "Bhutan verkoopt additioneel $72.3M Bitcoin te midden van marktdaling, wat institutionele acceptatie van volatiliteit aangeeft. De $109.5B totaal 24h-volume suggereert herverdelingsactiviteit tussen lange en korte posities tijdens de consolidatiefase.",
-  "funding_oi": "Geen funding rate- en open interest-data beschikbaar; historische positieve rates zouden langzijdige dominantie aanduiden, maar huidige prijsdruk suggereert recent momentum-shift naar neutrale/voorzichtige positionering onder traders.",
-  "volatility_outlook": "Fear & Greed Index op 26 (Fear, gedaald van 28) wijst op aanhoudende angst ondanks 1h-herstel. Gegeven geopolitieke onzekerheid en liquidatiedruk verwachten we volatiele trading met hogere kansen op korte liquidaties boven $72.5k dan lange boven $70k.",
-  "full_report": "Crypto-markten herstellen voorzichtig op 18 maart met BTC op $71,909 (+0.84% 1h, -3.63% 24h) en ETH op $2,215.52 (+1.48% 1h, -5.32% 24h), terwijl totale marktcap 3.37% daalt naar $2.54T. Fear & Greed Index staat op 26 (Fear-regime), gereflecteerd door Bhutan's additionele Bitcoin-verkoop van $72.3M midden in marktdaling. De Federal Reserve houdt beleid steady maar Iran-gerelateerde geopolitieke spanningen cre\u00ebren permanente inflatiedruk; CoinDesk analysten benadrukken einde 'goedkope geld'-era. Bitcoin vertoont 2018-lage correlatie met technologie-aandelen terwijl Ethereum-gemeenschap intern debatteert over foundation-mandaat, wat suggereert dat altcoin-momentum fragiel blijft bij macro-druk. $109.5B 24h-volume geeft liquiditeit maar top losers (UNI -7.94%, LINK -6.13%, AVAX -5.84%) duiden op risk-off selectief gedrag."
+  "macro_impact": "Federal Reserve handhaaft beleid ondanks hoger inflatierisico door Iran-escalatie, wat een permanente inflatievloer cre\u00ebert en rentetarieven hoger houdt dan vorig jaar. Dit limiteert de 'cheap money'-rally die crypto in 2024-2025 duidde en dwingt beleggers naar yield-genererende strategie\u00ebn. Institutionele aandacht verschuift van speculatieve prijsgoeien naar DeFi-rendementen en gestructureerde producten.",
+  "whale_flows": "Bhutans $72.3M Bitcoin-verkoopstroom in correctieve markt signaleert staatsaktueren nemen winsten; geen enkele massaliqu\u00eddatie-piek waargenomen in BTC/ETH. Volume op 110.1B 24h suggereert ordelijke herverdeling zonder paniekaflossing.",
+  "funding_oi": "Funding rates data onbeschikbaar vandaag; historisch lage Fear & Greed (26, Fear-regime) duidt op verhoogde korte posities en weigerachtigheid van longs. Open Interest metriek ontbreekt; verwacht wordt dat bears opportunistisch accumuleren bij huidige correctie-niveaus.",
+  "volatility_outlook": "Fear & Greed-index op 26 (Fear) en daling van 28 gisteren markeert dieper sentiment-erosie; verwacht hogere vluchtigheid rond inflatieaankondigingen en geopolitieke updates. Correctie op -3% tot -6% range (BTC, ETH, altcoins) suggereert 2-3 dagen handelherstel voordat nieuwe support zoeken.",
+  "full_report": "CryptoMarketz Marktbrief | 18-03-2026: Bitcoin (BTC) $71,778 | -3.83% 24h, +1.42% 7d | Ethereum (ETH) $2,205.17 | -5.75% 24h, +6.63% 7d | Marktcap $2.53T (-3.74% 24h) | 24h volume $110.1B. Fed houdt rente steady ondanks Iran-conflictrisico; permanente inflatievloer reduceert kans op renteverlaging. Fear & Greed index 26 (Fear) \u2014 laagste niveau in 2 dagen \u2014 wijst op verhoogde kortsheid en zijdelingse sentiment. Bhutans extra $72.3M Bitcoin-verkoop in correctieve markt markeert staatsaktuele kapitaalomlei; geen grote whale-liquidaties zichtbaar. Verwacht 2-3 dagen volatiliteit rond macro-catalysts en regelgevingsnieuws rond Senator Lummis' marktstructuurwetgeving, die institutionele inflow kan versnellen."
 }
