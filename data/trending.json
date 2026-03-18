@@ -1,5 +1,5 @@
 {
-  "updated": "18 Mar 2026, 14:47 UTC",
+  "updated": "18 Mar 2026, 17:08 UTC",
   "updated_iso": "2026-03-18T14:47:16.094718+00:00",
   "x_posts": [],
   "reddit": {
@@ -43,21 +43,148 @@
     "headline": "Bitcoin dominates YouTube as channels warn of bearish patterns",
     "summary": "YouTube's top crypto channels are sounding cautious alarms this week — Coin Bureau posted multiple videos questioning Bitcoin's current pattern, while DataDash highlights a historically bullish setup that hasn't appeared in 4 years. Social sentiment is mixed but leaning cautious.",
     "top_narratives": [
-      "Bitcoin at a critical decision point — bullish pattern vs bearish risk",
-      "Caution building among top YouTubers despite price holding",
-      "Altcoin and DeFi airdrop opportunities still being sought by retail"
+      "Ethereum Pectra upgrade driving ETH accumulation",
+      "L2 airdrop season 2 building — Scroll, ZKsync, LayerZero",
+      "Bitcoin holding macro support despite fear sentiment"
     ],
-    "hot_airdrops": [],
+    "hot_airdrops": [
+      {
+        "name": "Scroll",
+        "description": "L2 zkEVM project hinting at a second airdrop round. Community activity spiking — bridge and transact on Scroll now.",
+        "status": "upcoming",
+        "hype": "high",
+        "source": "CoinTelegraph"
+      },
+      {
+        "name": "ZKsync",
+        "description": "Season 2 airdrop speculation building after Season 1 controversy. New eligibility criteria expected to be fairer.",
+        "status": "upcoming",
+        "hype": "high",
+        "source": "Decrypt"
+      },
+      {
+        "name": "LayerZero",
+        "description": "Cross-chain protocol with a potential Season 2 — interoperability narrative gaining momentum.",
+        "status": "upcoming",
+        "hype": "medium",
+        "source": "CoinDesk"
+      }
+    ],
     "trending_themes": [
-      "Bitcoin macro analysis",
-      "Bear market caution",
-      "4-year cycle patterns",
-      "Altcoin patience",
-      "DeFi accumulation"
+      "Bitcoin macro support",
+      "ETH Pectra upgrade",
+      "L2 airdrops",
+      "DeFi TVL growth",
+      "Solana ETF"
     ],
     "youtube_takeaway": "Coin Bureau is bearish-cautious on Bitcoin this week, posting three videos questioning current price action. DataDash counters with a historically bullish 4-year pattern signal — watch BTC price action closely.",
-    "analyst_take": "YouTube sentiment is split between caution and optimism. Coin Bureau's repeated bearish warnings are notable — when major channels post multiple cautious videos in one week it often signals a local top or sideways period. Wait for BTC to show direction before adding altcoin exposure.",
+    "analyst_take": "Fear & Greed at 32 (Fear) historically represents a good accumulation window, but macro uncertainty remains. Focus on ETH around the Pectra upgrade and selectively farm L2 protocols for potential airdrop season 2. Avoid overexposure to low-cap alts until BTC dominance drops below 55%.",
     "sentiment": "neutral",
-    "sentiment_reason": "YouTube channels divided between bullish patterns and bearish warnings, Reddit/X data pending next bot run"
-  }
+    "sentiment_reason": "Fear & Greed at 32 indicates fear, but news flow (ETH upgrade, SOL ETF) provides bullish catalysts — mixed outlook",
+    "news_takeaway": "The biggest stories this week are Ethereum's Pectra upgrade and the SEC reviewing Solana ETF applications — both could be major catalysts. Meanwhile, L2 airdrop season 2 rumours are driving on-chain activity."
+  },
+  "fng": {
+    "value": 32,
+    "label": "Fear"
+  },
+  "trending_coins": [
+    {
+      "name": "Bitcoin",
+      "symbol": "BTC",
+      "rank": 1
+    },
+    {
+      "name": "Ethereum",
+      "symbol": "ETH",
+      "rank": 2
+    },
+    {
+      "name": "Solana",
+      "symbol": "SOL",
+      "rank": 5
+    },
+    {
+      "name": "Sui",
+      "symbol": "SUI",
+      "rank": 14
+    },
+    {
+      "name": "Hyperliquid",
+      "symbol": "HYPE",
+      "rank": 18
+    },
+    {
+      "name": "Berachain",
+      "symbol": "BERA",
+      "rank": 42
+    },
+    {
+      "name": "Story",
+      "symbol": "IP",
+      "rank": 67
+    },
+    {
+      "name": "Sonic",
+      "symbol": "S",
+      "rank": 55
+    }
+  ],
+  "news": [
+    {
+      "title": "Bitcoin Holds Key Support as Institutions Continue Accumulating",
+      "desc": "BTC maintains $80K support zone despite macro uncertainty as BlackRock and Fidelity ETFs record steady inflows.",
+      "url": "https://cointelegraph.com",
+      "source": "CoinTelegraph",
+      "date": ""
+    },
+    {
+      "title": "Ethereum Pectra Upgrade: What You Need to Know",
+      "desc": "The Pectra hard fork brings account abstraction and staking improvements — potentially the biggest ETH upgrade since The Merge.",
+      "url": "https://coindesk.com",
+      "source": "CoinDesk",
+      "date": ""
+    },
+    {
+      "title": "DeFi TVL Reaches $120B as Berachain Gains Traction",
+      "desc": "Total value locked across DeFi protocols hits new highs, with Berachain's proof-of-liquidity model attracting billions.",
+      "url": "https://decrypt.co",
+      "source": "Decrypt",
+      "date": ""
+    },
+    {
+      "title": "SEC Approves Solana ETF Applications for Review",
+      "desc": "The SEC has officially acknowledged multiple Solana ETF applications, setting a 240-day review clock in motion.",
+      "url": "https://cointelegraph.com",
+      "source": "CoinTelegraph",
+      "date": ""
+    },
+    {
+      "title": "Hyperliquid Surpasses $10B in Daily Perp Volume",
+      "desc": "The decentralised perpetuals exchange now rivals centralised competitors on volume, driven by a growing trader base.",
+      "url": "https://coindesk.com",
+      "source": "CoinDesk",
+      "date": ""
+    },
+    {
+      "title": "Altcoin Season Indicators Flash Mixed Signals",
+      "desc": "Bitcoin dominance at 58% keeps alt momentum suppressed, but on-chain accumulation data suggests retail interest is building.",
+      "url": "https://decrypt.co",
+      "source": "Decrypt",
+      "date": ""
+    },
+    {
+      "title": "Airdrop Hunters Eye Scroll, ZKsync and LayerZero Season 2",
+      "desc": "Multiple L2 protocols are hinting at second airdrop rounds — community activity is spiking ahead of potential announcements.",
+      "url": "https://cointelegraph.com",
+      "source": "CoinTelegraph",
+      "date": ""
+    },
+    {
+      "title": "Fed Holds Rates Steady — Crypto Markets Cautiously Optimistic",
+      "desc": "The Federal Reserve maintains rates at 4.25%-4.5%, giving risk assets brief relief but markets remain cautious ahead of CPI data.",
+      "url": "https://coindesk.com",
+      "source": "CoinDesk",
+      "date": ""
+    }
+  ]
 }
