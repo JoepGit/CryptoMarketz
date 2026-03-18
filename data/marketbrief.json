@@ -1,18 +1,18 @@
 {
   "date": "woensdag 18 maart 2026",
-  "focus": "Bitcoin consolidateert rond $73.924 terwijl marktbreedte zwak blijft en risicoassets voorzichtig zijn.",
-  "risk": "Moderaat risico, lage volatiliteit",
-  "btc_structure": "Bitcoin noteert op $73.924 met slechts +0.27% dagelijkse winst, wat wijst op consolidatie in een kritieke zone. Het handelsvolume van $35.92B blijft sterk, maar de bescheiden koersbeweging suggereert onzekerheid over de volgende richting.",
-  "eth_flows": "Ethereum vertaalt slechts -0.06% verlies tegen $2.311,29, wat duidt op sterke steun op dit niveau. Het volume van $17.90B geeft aan dat grote spelers voorzichtig posities behouden zonder aggressieve verkoop.",
+  "focus": "Brede marktcorrectie met ETH als relatieve zwakkeling terwijl BTC structureel onder druk blijft.",
+  "risk": "Risicovolle marktomgeving, voorzichtig",
+  "btc_structure": "Bitcoin noteert op $73,060 met een verlies van 1,47% in 24 uur, signaliserend dat de steun onder druk staat. Het volume van $37,15B blijft substantieel maar onvoldoende om de negatieve momentum om te buigen. Een consolidatiepatroon duidt op onzekerheid rond verdere prijsbewegingen.",
+  "eth_flows": "Ethereum onderperformt met $2,272,75 en een dagverlies van 2,50%, wat wijst op selectieve verkoopdruk in altcoins. Het volume van $18,46B suggereert dat institutionele flows zich voorzichtiger opstellen. Deze underperformance ten opzichte van BTC duidt op risicovermijding onder traders.",
   "top_narratives": [
-    "Macro-onzekerheid remt risicoassets af",
-    "Stabilisering rond steunniveaus",
-    "Altcoin-underperformance versus BTC",
-    "Volume-concentratie in topmarkt-caps"
+    "Regelgeving: voortschrijdende compliance-eisen drukken altcoin sentiment",
+    "Macro headwinds: onzekere rentebeslissingen beïnvloeden risicobeleggingen",
+    "Tekort aan bullish catalysts: afwezigheid van positieve triggers sustained selling",
+    "Liquiditeitsvoorbereiding: volume-patroon suggereert voorzichtigheid voor opschalingsgebeurtenissen"
   ],
-  "macro_impact": "Wereldwijde renteverwachtingen en inflatiegeruchten drukken op risicodrang. De recente economische data lijken marktdeelnemers voorzichtig te stemmen, wat zich vertaalt in lage volatiliteit en consolidatie.",
-  "whale_flows": "BTC volume van $35.92B en ETH volume van $17.90B duiden op aanzienlijke institutionele activiteit, maar zonder directionaliteit. Altcoins (SOL $93.77, XRP $1.51, BNB $672.50) lopen achter met laagre volumes, wat profittaking van retail suggereert.",
-  "funding_oi": "Verwachting van stabiele tot licht dalende funding rates gegeven de zijwaartse prijsactie. Open interest zal waarschijnlijk consolideren zonder grote long/short liquidaties.",
-  "volatility_outlook": "Volatiliteit blijft laag met verwachting van range-trading tussen steun- en weerstandsniveaus. Breuk boven $74.500 of onder $73.000 voor BTC zal volatiliteit opnieuw aanwakkeren.",
-  "full_report": "De cryptocurrency-markt vertoont voorzichtige consolidatie op woensdag 18 maart 2026. Bitcoin staat op $73.924 (+0.27%), Ethereum op $2.311,29 (-0.06%), terwijl altcoins zoals SOL ($93.77), BNB ($672.50) en XRP ($1.51) marginaal bewegen. Het volume in BTC/USD ($35.92B) en ETH/USD ($17.90B) blijft substantieel, maar prijsbewegingen zijn gedempst door macro-onzekerheid en afwachtende beleggershouding. De markt lijkt gefixeerd op kritieke steunniveaus zonder duidelijke directionaliteit. Technisch gezien zijn we in een consolidatiefase; een duidelijke doorbraak wordt verwacht zodra macro-catalysatoren zich voordoen."
+  "macro_impact": "De bredere economische onzekerheid, inclusief rentebeslissingen en inflatievoorzienigheden, weegt zwaar op risicobeleggingen. Crypto's gevoeligheid voor macro-factoren manifesteert zich in de huidige correctie. Beleggers herwegen blootstelling in afwachting van duidelijker signalen.",
+  "whale_flows": "Whale-activiteit concentreert zich rond consolidatieniveaus, met BTC-volume ($37,15B) die stabiel maar niet accelererend blijft. Grote houders vermijden agressieve accumulatie, wat wijst op voorzichtige positionering. SOL ($3,22B volume) en ETH ($18,46B volume) tonen verdeelde flows.",
+  "funding_oi": "Funding rates vertonen matiging druk met verwachting van range-bound bewegingen. Long-posities nemen af naarmate de korting toeneemt, wat duidt op deleveraging. Open interest consolidatie suggereert voorbereiding op volatieler markt.",
+  "volatility_outlook": "Volatiliteit blijft verhoogd maar niet extreem, met verwachting van 3-5% dagelijkse bewegingen. Technische ondersteunings- en weerstandsniveaus bepalen korte-termijn trajectory. De afwezigheid van extreme volume-spikes suggereert geen immediatere liquidatiecascade.",
+  "full_report": "De cryptomarkt staat woensdag 18 maart onder druk met Bitcoin op $73,060 (-1,47%), Ethereum op $2,272,75 (-2,50%), en brede altcoin-zwakte inclusief XRP ($1,49, -1,68%) en SOL ($92,11, -1,78%). Het totale volume van $37,15B in BTC en $18,46B in ETH geeft aan dat verkopers initiatiefnemen zonder echter extreem liquiditeitsdruk op te bouwen. De selectieve underperformance van Ethereum en altcoins wijst op risicovermijding in het allocatie-landschap. Whale-flows consolideren rond steunniveaus terwijl macro-onzekerheden continue druk uitoefenen. Traders dienen voorzichtig te navigeren in deze omgeving met focus op technische steun en vermijding van excessieve leverage."
 }
