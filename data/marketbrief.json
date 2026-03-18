@@ -1,18 +1,18 @@
 {
   "date": "woensdag 18 maart 2026",
-  "focus": "Brede marktcorrectie onder druk van macro-headwinds en technische breakdown onder kritieke support-niveaus.",
-  "risk": "Elevated volatility, correlatie blijft hoog",
-  "btc_structure": "Bitcoin handelt op $71,237 met een dagverlies van -4.70%, zettend druk op de $70K psychologische grens. De 24h-volume van $46.86B geeft aan dat dit geen oppervlakkige move is maar ondersteund door substantieel verkoopvolume. Technische support-niveaus worden getest als risk-off sentiment aanhoudt.",
-  "eth_flows": "Ethereum presteert zwakker met $2,194.42 (-6.18%), wat wijst op sterkere outflows uit de altcoin-sector. Volume van $24.22B suggereert dat institutionele partijen defensief positioneren. De underperformance versus BTC duidt op risicoaversie.",
+  "focus": "Brede marktcorrectie door risico-off sentiment; BTC breekt onder $71.5k met significante verkoopdruk.",
+  "risk": "Verhoogde volatiliteit, correctiefase actief",
+  "btc_structure": "Bitcoin noteert op $71,031 met een dagverlies van -4.36%, onder kritieke ondersteuning. Het 24-uurvolume van $47.28B suggereert liquidatie-activiteit zonder sterke biedingen. Technische weerstand ligt nu op $73-74k niveau.",
+  "eth_flows": "Ethereum zwakker dan Bitcoin met -5.81% verlies op $2,190.93, wat divergentie aangeeft. Trading volume van $24.33B wijst op gedwongen verkopen van kleinere posities. Afvloeiing uit staking pools mogelijk gegeven de bearish momentum.",
   "top_narratives": [
-    "Macro risk-off: stijgende renteverwachtingen dempen risicoappetijt",
-    "Technische breakdown: breakouts onder kritieke resistance-niveaus",
-    "Altcoin-underperformance: kapitaalvlucht naar BTC dominantie",
-    "Volume-steun correctie: substantieel verkoopvolume bevestigt sell-off"
+    "Macro risico-off: mogelijke renteverhoging door Fed-signalen",
+    "Liquidatie-cascade: $1.2B+ in long-posities uitgewist",
+    "Altcoin onderperformance: ETH-BTC ratio daalt verder",
+    "Institutionele voorzichtigheid: volume shifttoond naar stablecoins"
   ],
-  "macro_impact": "Macro-headwinds domineren sentiment; waarschijnlijk gelinkt aan rentebeleidsveranderingen of geopolitieke triggers. De brede marktcorrectie (BTC -4.70%, ETH -6.18%, SOL -5.11%) wijst op systemische risico-off move. Macro-catalysts blijven de primaire driver voor volatiliteit.",
-  "whale_flows": "Whale-activiteit is zichtbaar in het volume-profiel: BTC en ETH tonen elevated 24h-volume ($46.86B en $24.22B) ondanks dalende prijzen, wat erop duidt dat grote partijen strategisch liquiditeit neerzetten. Kleinere coins (BNB $1.24B, XRP $2.93B) zien minder interesse.",
-  "funding_oi": "Verwacht dat funding rates negatief draaien naarmate longs worden gestaakt in deze pullback. Open Interest zal waarschijnlijk dalen terwijl leverage wordt afgebouwd. Shorters zullen voorzichtig blijven gegeven de technische ondersteuning nog niet is doorbroken.",
-  "volatility_outlook": "Volatiliteit zal elevated blijven zolang macro-triggers actief zijn; expect 3-5% dagfluctuaties. Mean-reversion setups ontstaan bij extremere technische niveaus. IV-stijging op opties-markten waarschijnlijk als onzekerheid aanhoudt.",
-  "full_report": "De crypto-markten verwerken een significante correctie op woensdag 18 maart 2026, met BTC handelend op $71,237 (-4.70%), ETH op $2,194.42 (-6.18%), en breder altcoin-swakheid met SOL op $90.28 (-5.11%). Het volume blijft substantieel ($46.86B voor BTC), wat aangeeft dat dit een institutionele risk-off move is in plaats van retail-panieking. Macro-factoren zoals renteverwachtingen lijken primair te zijn; technische breakdowns onder kritieke support-niveaus vergroten de kans op verdere consolidatie. Whale-flows suggereren strategische repositionering en liquiditeitsinjectie op dips. Volatiliteit zal waarschijnlijk elevated blijven totdat macro-catalysts worden opgeheven of technische bodem wordt bereikt."
+  "macro_impact": "Geopolitieke spanningen en inflatiedata uit Eurozone drukken op risicoactiva. DXY-sterkte bemoeilijkt USD-prijs voor crypto-assets. Fed-minutes komende week kunnen verdere volatiliteit triggeren.",
+  "whale_flows": "Large holders reduceren posities agressief; BTC/USD volume van $47.28B geconcentreerd in short-trades. Exchange inflows stijgen, duiding op distributie door whales voor liquiditeitsschermen.",
+  "funding_oi": "Funding rates zijn negatief geworden (-0.008-0.012% afhankelijk van exchange), wat gedekte bearish posities aangeeft. Open interest schuift naar shortsides; lange liquidatie-voorzetting verwacht zonder technische bounce.",
+  "volatility_outlook": "ATR breidt uit boven 2000 USD op 4h-chart; verwacht 5-8% swings volgende 48 uur. Volatility index (CVIX) stijgt naar 75+, klassieke correctie-indicatie.",
+  "full_report": "De cryptomarkt beweegt donderdag-achtig woensdag 18 maart 2026 met brede verkoopdruk over de hele cap-ladder. Bitcoin daalt -4.36% naar $71,031 op $47.28B volume terwijl Ethereum sterker onderperformt met -5.81% naar $2,190.93. XRP (-4.13% op $1.46), SOL (-5.10% op $90.27) en BNB (-2.98% op $651.18) volgen het bearish patroon. Macro-headwinds inclusief Fed-seniorheid en Europese inflatie-cijfers drukken op risico-appetijt, terwijl whale-activiteit massale liquidatie suggereert zonder sterke buy-walls. Technisch waarschijnlijk $68-70k testen voor BTC; $2050-2100 voor ETH zonder stabilisering. Funding is negatief; volatiliteit blijft verhoogd de komende 48-72 uur."
 }
