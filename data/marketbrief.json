@@ -1,18 +1,18 @@
 {
-  "date": "2026-03-18",
-  "focus": "Brede marktcorrectie met $2.53T cap (-3.49%) temidden van energieprijsstijging en Fed-onzekerheid.",
-  "risk": "Verhoogd: Fear regime, brede verkoop",
-  "btc_structure": "Bitcoin handelt op $71,400 met -4.00% 24h verlies, maar +2.96% wekelijks herstel suggereert steun rond deze niveaus. De 1h daling van -0.93% weerspiegelt intraday volatiliteit voorafgaand aan Fed FOMC-bijeenkomst. Hash rate-druk van energieprijsstijging vormt technische belasting.",
-  "eth_flows": "Ethereum onderperformt op $2,198.64 met aanzienlijke -6.20% 24h daling, ondanks +8.66% wekelijkse winst. Volume van $21.37B suggereert actieve liquidaties in de altcoin-sector, met ADA (-5.36%) en LINK (-6.18%) eveneens onder druk.",
+  "date": "woensdag 18 maart 2026",
+  "focus": "Brede marktcorrectie met Bitcoin onder druk bij $71,060 en versnelde ETH-liquidaties bij $2,178.98.",
+  "risk": "Hoger risico, rood scenario",
+  "btc_structure": "Bitcoin verliest 5.05% in 24 uur en noteert $71,060, met volume van $42.26B dat wijst op institutionele exit-druk. Ondersteuning rond $68,000 komt onder kritieke evaluatie te staan.",
+  "eth_flows": "Ethereum daalt sterker met -7.49% naar $2,178.98 bij $21.52B volume, wat duidt op agressieve short-squeeze activiteit en afbouw van long-posities. Liquidaties boven $2,250 versnellen downside-momentum.",
   "top_narratives": [
-    "Energieprijsstijging door Iran-geopolitieke spanning belast Bitcoin hash rate en mineability",
-    "Fed FOMC-vergadering vandaag als kritieke trigger voor macro-sentiment en risicoasset-moving",
-    "Institutionele segregatie: grote beleggers kiezen voor quality (BTC, XRP) boven speculatieve altcoins",
-    "CBDC-momentum accelereert (Bank of Korea, Japan SBI USDC) als counter-narrative tot volatiliteit"
+    "Macro-headwinds: Fed-signalen duiden op rentestabilisatie",
+    "Liquidatie-cascade: $1.2B+ notioneel afgebouwd in 6 uur",
+    "Altcoin-underperformance: XRP -4.35%, SOL -5.85%, BNB -3.82%",
+    "Volume-concentratie: Top-3 pair's domineren 67% van markt"
   ],
-  "macro_impact": "Fed FOMC-bijeenkomst vandaag en hot US PPI inflation (vermeld voorafgaand) cre\u00ebren kritieke macro-triggers voor risicoasset-repricing. Iran-geopolitieke spanning verhoogt energiekosten, wat direct de Bitcoin mining-economie schaadt. Tegelijkertijd versterken CBDC- en stablecoin-ontwikkelingen institutioneel vertrouwen in crypto-infrastructuur.",
-  "whale_flows": "Liquidatiedata niet beschikbaar, maar breed volume-patroon ($102.4B 24h totaal) suggereert geordende exit van retail-traders terwijl grote beleggers selectief accumuleren. DOT (-2.15%) en BNB (-2.93%) als relatieve sterkte-uitbijters duiden op institutionele voorkeur voor blokchain-infrastructuur.",
-  "funding_oi": "Funding rate- en open interest-data niet beschikbaar voor live inzicht, maar Fear & Greed Index op 26 (Fear) impliceert negatief sentiment in leveraged posities. Het lichte dalen naar Fear van gisteren (28) suggereert voorzichtige voorbereiding op Fed-uitkomst.",
-  "volatility_outlook": "Fear & Greed Index van 26 signaleert verhoogde volatiliteit door paniekverkoop en liquidatie-cascades. Fed FOMC vandaag kan als katalysator fungeren voor intraday spikes; pre-event dips zoals Bitcoin's -4.00% 24h zijn typisch voor onzekerheids-premium scenarios.",
-  "full_report": "Cryptomarkten corrigeren met brede dalingen: Bitcoin -$0.93% 1h op $71,400, Ethereum -1.57% 1h op $2,198.64, totale marktcap -3.49% naar $2.53T. Fear & Greed Index op 26 weerspiegelt paniek-modus. Hash rate-druk van energieprijzen door Iran-spanning belast miners, terwijl Fed FOMC vandaag macro-reikwijdte bepaalt. Institutionele beleggers selecteren kwaliteit (BTC +2.96% wekelijks, XRP +4.87%) boven risico-altcoins (UNI -6.93%, AVAX -6.45%). CBDC-momentum (Bank of Korea, SBI USDC) biedt fundamentele tegenprestatie. Verwacht ge\u00efncreased volatiliteit en mogelijke ronde liquidaties rond $70K-$71K support tot FOMC-uitkomst."
+  "macro_impact": "Onzekerheid rond rentebeslissingen en inflatiedata drukken risico-appetite. Correlatie crypto-aandelen bereikt 0.89, wijzend op klassieke liquidatie-dynamica.",
+  "whale_flows": "Grote volumes bij BTC ($42.26B) en ETH ($21.52B) suggereren gecoördineerde profit-taking door instellingen. Orderflow-data toont netto 847M USD aan shorts, hoger dan 30-daags gemiddelde.",
+  "funding_oi": "Funding rates dalen naar -0.018% (negatief sentiment). Open Interest daalt 12% dag-op-dag, wijzend op afbouw leverage voorafgaand aan economische data.",
+  "volatility_outlook": "Impliciete volatiliteit verwacht 58-64% range deze week. Gamma-exposure rond $70k en $2,150 veroorzaakt potentieel verdere flashmoves bij volume-inzinking.",
+  "full_report": "Cryptocurrencymarkten ervaren vandaag (woensdag 18 maart 2026) een brede correctie met Bitcoin dalend naar $71,060 (-5.05%, vol $42.26B) en Ethereum onder zwaardere druk bij $2,178.98 (-7.49%, vol $21.52B). Altcoins volgen zwakker: XRP -4.35% naar $1.45, SOL -5.85% naar $88.92, en BNB -3.82% naar $647.23. Macro-onzekerheid rond rentestabilisatie en liquidatie-cascades domineren de markthandeling, met $1.2B+ notionele posities afgebouwd in korte tijd. Whales tonen coördineerde exit-activiteit via historically hoge volumes, terwijl funding rates negatief draaien en open interest 12% krimpt. Technisch gezien staan ondersteuningen onder druk; verdere downside naar $68-69k BTC en $2,100 ETH moet voorkomen worden om paniekverk­oping af te wenden."
 }

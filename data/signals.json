@@ -1,41 +1,5 @@
 [
   {
-    "id": 1773827778541,
-    "coin": "XRP/USD",
-    "type": "BUY",
-    "entry": "1.52",
-    "tp": "1.68",
-    "sl": "1.46",
-    "note": "7d uptrend +10.87%, 24h positief momentum +0.86%, technische setup ondersteunt verdere rally naar hogere levels.",
-    "timestamp": "2026-03-18T09:56:16.605Z",
-    "generated_at": "Wed, 18 Mar 2026 09:56:16 GMT",
-    "source": "claude-bot"
-  },
-  {
-    "id": 1773786845994,
-    "coin": "ETH/USD",
-    "type": "SELL",
-    "entry": "2326.79",
-    "tp": "2250",
-    "sl": "2380",
-    "note": "24h -1.45% en 1h -0.41% toont aanhoudende bearish druk ondanks 7d +14.64%. Momentum verzwakt, prijs potentieel onder EMA20. Correcter na sterke weekstijging waarschijnlijk.",
-    "timestamp": "2026-03-17T22:34:02.613Z",
-    "generated_at": "Tue, 17 Mar 2026 22:34:02 GMT",
-    "source": "claude-bot"
-  },
-  {
-    "id": 1773786846885,
-    "coin": "SOL/USD",
-    "type": "BUY",
-    "entry": "95.22",
-    "tp": "105.50",
-    "sl": "91.00",
-    "note": "Enige coin met positieve 1h momentum (+0.07%) en sterke 7d +10.47%. Ondanks 24h -1.46% suggereert 1h herstel begin uptrend. RSI waarschijnlijk onder 70, bullish setup voor korte termijn.",
-    "timestamp": "2026-03-17T22:34:02.613Z",
-    "generated_at": "Tue, 17 Mar 2026 22:34:02 GMT",
-    "source": "claude-bot"
-  },
-  {
     "id": 1773600027832,
     "coin": "BTC/USD",
     "type": "BUY",
