@@ -1,18 +1,18 @@
 {
   "date": "2026-03-18",
-  "focus": "Marktcorrectie van -3.59% met Fear-index op 26 terwijl Bitcoin zich stabiliseert rond $71.561 en Ethereum -5.61% daalt.",
-  "risk": "Elev\u00e9 correctie, liquidatierisico beperkt",
-  "btc_structure": "Bitcoin handelt op $71.561 met intradag +0.40% tegenover 24h -3.87%, wat duidt op stabilisatie na correctie. De 7d performance van +1.85% wijst op weerstand tegen verder verval. Weekly levels kritiek onder deze range.",
-  "eth_flows": "Ethereum onder druk op $2.202,80 met 24h verlies van -5.61%, ondanks intradag bounce van +1.12%. De 7d gain van +7.43% suggereert voortbestaande fundamentele vraag ondanks huidige weakness. Volume van $22,72B blijft significant.",
+  "focus": "Markt herstelt voorzichtig na gisteren's daling terwijl geopolitieke spanningen en Fed-beleid inflatiedruk blijven uitoefenen.",
+  "risk": "Moderate to High - Geopolitieke onzekerheid",
+  "btc_structure": "Bitcoin staat op $71,909 met +0.84% per uur maar -3.63% in 24h, wat duidt op herstelpoging na weekdaling. Het $70k-niveau blijft kritieke steun gezien de marktbrede liquidaties. 24h volume van $43.34B geeft voldoende liquiditeit voor consolidatie rond huidige niveaus.",
+  "eth_flows": "Ethereum noteert $2,215.52 met +1.48% per uur maar -5.32% in 24h, onderperformend versus Bitcoin. De 7d gain van +7.13% wordt tenietgedaan door recente verkoopdruk, wat suggereert dat altcoin-positief sentiment kwetsbaar is.",
   "top_narratives": [
-    "Inflatieverdieping door Iran-crisis cre\u00ebert permanent floor voor rentevoeten en kostenverhogingen",
-    "Yield-fokus verschuift van pure prijsappreciatie naar rendementgeneratie in stablecoin-producten",
-    "Bitcoin decoupling van tech-sector bereikt 2018-niveau's\u2014macro herori\u00ebntatie in gang",
-    "Bhutan en institutionele actoren liquideren posities w\u00e4hrend dips, signalering van profit-taking"
+    "Geopolitieke risico's (Iran-conflict) cre\u00ebren permanente inflatievloer en drukken risico-appetite",
+    "Fed houdt beleid steady terwijl groei- en inflatiebezorgdheden toenemen",
+    "Ethereum-gemeenschap debatteert foundation-mandaat terwijl L1 momentum afneemt",
+    "Macro-decoupling: Bitcoin toont 2018-lage correlatie met tech terwijl traditionele fintech S&P-futures lancering doet"
   ],
-  "macro_impact": "De Iran-crisis etablisheert structureel hogere inflatiaverwachtingen, wat crypto's narratief als inflatiehedge versterkt maar kortterm liquidatiepressie veroorzaakt. Trump-linked entities vergroten Bitcoin-accumulatie terwijl traditionele finance onder herstructureringsdruck staat, ondersteunend voor long-term bullcase maar destabiliserend voor sentiment.",
-  "whale_flows": "Bhutan's verkoopdruk van $72,3M tegen marktachtergrond duidt op institutioneel risico-afbouwen. De beperkte liquidatiegegevens suggereren disciplinaire positionering zonder cascade-effecten, hoewel volume van $44,52B in BTC futures volatiliteit kan intensiveren.",
-  "funding_oi": "Funding rates en Open Interest data ontbreken; zonder deze indicatoren blijft leverage-exposure onduidelijk, maar marktbreedte -3.59% en Fear-score 26 duiden op voorzichtig geleveraged long-posities eerder dan aggressive shorting.",
-  "volatility_outlook": "Fear & Greed Index op 26 (Fear) voorspelt aanhoudende nervositeit en potenti\u00eble verdere dumpingsfases op macro-triggers. De intradag bounce-signalen (+0.40% tot +1.12%) suggereren dip-buying, maar zonder liquidatie-data blijft reversal-sterkte onbepaald.",
-  "full_report": "Cryptomarkt corrigeert -3.59% met Bitcoin op $71.561 (+0.40% 1h, -3.87% 24h) en Ethereum op $2.202,80 (-5.61% 24h). Fear & Greed-index zakt naar 26 (Fear) op macro-onzekerheden rond Iran-crisis en permanente inflatiavloer. Bhutan's $72,3M-verkoop en institutionele profit-taking intensiveren correctiedynamiek, terwijl Bitcoin-decoupling van tech naar 2018-niveau's suggereert herpositionering. Intraday bounces in BTC/ETH tonen dip-buying, maar afwezigheid van funding rate-support en OI-data maakt verdere momentum onzeker. Focus blijft op $71K-verdediging en Ethereum-stabilisatie rond $2.2K."
+  "macro_impact": "De Federal Reserve handhaaft geldpolitiek ondanks Iran-gerelateerde spanningen; markt anticipeert op permanente inflatieplafond door geopolitieke onzekerheid. Dit verklaart de risico-aversie in crypto met -3.37% marktcap-daling, gezien traditionele beleggers uit riskante assets vluchten.",
+  "whale_flows": "Bhutan verkoopt additioneel $72.3M Bitcoin te midden van marktdaling, wat institutionele acceptatie van volatiliteit aangeeft. De $109.5B totaal 24h-volume suggereert herverdelingsactiviteit tussen lange en korte posities tijdens de consolidatiefase.",
+  "funding_oi": "Geen funding rate- en open interest-data beschikbaar; historische positieve rates zouden langzijdige dominantie aanduiden, maar huidige prijsdruk suggereert recent momentum-shift naar neutrale/voorzichtige positionering onder traders.",
+  "volatility_outlook": "Fear & Greed Index op 26 (Fear, gedaald van 28) wijst op aanhoudende angst ondanks 1h-herstel. Gegeven geopolitieke onzekerheid en liquidatiedruk verwachten we volatiele trading met hogere kansen op korte liquidaties boven $72.5k dan lange boven $70k.",
+  "full_report": "Crypto-markten herstellen voorzichtig op 18 maart met BTC op $71,909 (+0.84% 1h, -3.63% 24h) en ETH op $2,215.52 (+1.48% 1h, -5.32% 24h), terwijl totale marktcap 3.37% daalt naar $2.54T. Fear & Greed Index staat op 26 (Fear-regime), gereflecteerd door Bhutan's additionele Bitcoin-verkoop van $72.3M midden in marktdaling. De Federal Reserve houdt beleid steady maar Iran-gerelateerde geopolitieke spanningen cre\u00ebren permanente inflatiedruk; CoinDesk analysten benadrukken einde 'goedkope geld'-era. Bitcoin vertoont 2018-lage correlatie met technologie-aandelen terwijl Ethereum-gemeenschap intern debatteert over foundation-mandaat, wat suggereert dat altcoin-momentum fragiel blijft bij macro-druk. $109.5B 24h-volume geeft liquiditeit maar top losers (UNI -7.94%, LINK -6.13%, AVAX -5.84%) duiden op risk-off selectief gedrag."
 }
