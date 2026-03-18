@@ -1,6 +1,6 @@
 {
-  "updated": "18 Mar 2026, 17:43 UTC",
-  "updated_iso": "2026-03-18T17:43:16.329025+00:00",
+  "updated": "18 Mar 2026, 18:09 UTC",
+  "updated_iso": "2026-03-18T18:09:35.518576+00:00",
   "x_posts": [],
   "reddit": {
     "airdrops": [],
@@ -63,5 +63,25 @@
       "date": "2026-03-17T12:00:00+00:00"
     }
   ],
-  "analysis": null
+  "analysis": {
+    "headline": "YouTube Crypto Channels Split on Bitcoin's Future Amid Regulatory Optimism",
+    "summary": "This week's crypto discourse is dominated by conflicting Bitcoin price predictions and analysis, ranging from extremely bullish trillion-dollar projections to bearish pattern warnings. Simultaneously, there's growing excitement around potential regulatory shifts favoring crypto, with particular focus on SEC developments and stablecoin evolution.",
+    "top_narratives": [
+      "Bitcoin price uncertainty with conflicting bullish and bearish signals",
+      "Regulatory landscape shifting in favor of crypto markets",
+      "Stablecoin sector facing major structural changes"
+    ],
+    "hot_airdrops": [],
+    "trending_themes": [
+      "Bitcoin price predictions",
+      "SEC regulatory changes",
+      "Stablecoin evolution",
+      "HODL strategy debates",
+      "Government crypto policies"
+    ],
+    "youtube_takeaway": "Major crypto YouTubers are presenting contradictory Bitcoin outlooks, with some predicting massive gains to $35 trillion while others warn of bearish patterns and dubious speculation.",
+    "analyst_take": "The lack of social media data from X and Reddit creates an incomplete picture, but YouTube content suggests high uncertainty in the market. Watch for regulatory developments around stablecoins and SEC policy shifts, but be cautious of conflicting price predictions indicating market indecision.",
+    "sentiment": "neutral",
+    "sentiment_reason": "YouTube content shows mixed bullish regulatory news offset by bearish Bitcoin technical analysis."
+  }
 }
