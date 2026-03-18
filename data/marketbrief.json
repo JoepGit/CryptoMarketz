@@ -1,18 +1,18 @@
 {
-  "date": "2026-03-18",
-  "focus": "Markt onder druk door Fed rate cut optimisme dat vervliegtterwijl Fear & Greed index dieper in fearzone zaktzonder heftige liquidaties.",
-  "risk": "Gematigde bearish correctie met volatiliteit",
-  "btc_structure": "Bitcoin handelt op $71,354 met verlies van 4.53% in 24h, terwijl positief uurmomentum (+0.92%) duidt op lokale steun. Key support niveau's komen onder druk nu 2026 Fed rate cut verwachtingen aan het vervagen zijn, wat macro headwind veroorzaakt.",
-  "eth_flows": "Ethereum onderperformt BTC met 6.33% verlies in 24h op $2,192.37, ondanks week-to-date recovery van 5.63%. Volume blijft gezond op $23.96B, maar intraday weakness suggereert dat altcoins gevoeliger zijn voor macrobias.",
+  "date": "woensdag 18 maart 2026",
+  "focus": "Brede marktcorrectie onder druk van macro-headwinds en technische breakdown onder kritieke support-niveaus.",
+  "risk": "Elevated volatility, correlatie blijft hoog",
+  "btc_structure": "Bitcoin handelt op $71,237 met een dagverlies van -4.70%, zettend druk op de $70K psychologische grens. De 24h-volume van $46.86B geeft aan dat dit geen oppervlakkige move is maar ondersteund door substantieel verkoopvolume. Technische support-niveaus worden getest als risk-off sentiment aanhoudt.",
+  "eth_flows": "Ethereum presteert zwakker met $2,194.42 (-6.18%), wat wijst op sterkere outflows uit de altcoin-sector. Volume van $24.22B suggereert dat institutionele partijen defensief positioneren. De underperformance versus BTC duidt op risicoaversie.",
   "top_narratives": [
-    "SEC goedkeuring van Nasdaq's tokenized securities trading schept institutionele infrastruktureel momentum",
-    "FTX creditor payout van $2.2B in maart catalysator voor marktsentiment normalisering",
-    "Fed rate cut hopes faden verder uit, tighte macro backdrop drukt risicoassets",
-    "Crypto political surge blijft krachtig ondanks Fairshake Illinois setback"
+    "Macro risk-off: stijgende renteverwachtingen dempen risicoappetijt",
+    "Technische breakdown: breakouts onder kritieke resistance-niveaus",
+    "Altcoin-underperformance: kapitaalvlucht naar BTC dominantie",
+    "Volume-steun correctie: substantieel verkoopvolume bevestigt sell-off"
   ],
-  "macro_impact": "Afnemende Fed rate cut verwachtingen domineren sentiment negatief; obligatiemarkten sluiten op session lows wat risk-off dynamiek versterkt. SEC's positieve stance op tokenized securities en NFT-duidelijkheid biedt fundamentele steun, maar macroheadwind zwaarder weegt.",
-  "whale_flows": "Liquidatiedata niet beschikbaar, maar totaal 24h volume van $114.5B met BTC dominantie op 56.5% suggereert gedisciplineerde positionering zonder paniekverkoopgedrag. Biggest losers (UNI -8.32%, ETH -6.33%) wijzen op geordende rebalancing in plaats van forced liquidaties.",
-  "funding_oi": "Funding rates en open interest data niet beschikbaar vandaag, maar afwezigheid van massale liquidaties in beide richtingen suggereert gematigde leverage exposure. Gebrek aan extreme positional crowding werkt stabiliserend op marktstructuur.",
-  "volatility_outlook": "Fear & Greed index op 26 (extreme fear) met slechts 2-punts daling van gisteren duidt op stabilisatie van bearish sentiment zonder verdere erosie. Verwachting: beperkte volatiliteit mits geen macro schokken; technische steun rond BTC $71K biedt potentieel bounce-grond.",
-  "full_report": "Cryptomarkt terug in correctiemodus met totale market cap dalend 4.01% naar $2.53T. Bitcoin staat op $71,354 (-4.53% in 24h) met uurmomentum positief op +0.92%, terwijl Ethereum onder druk blijft op $2,192.37 (-6.33% 24h). Fear & Greed index blijft op extreme level (26), maar daling van slechts 2 punten sinds gisteren wijst op sentimentstabilisatie. De primaire headwind: vervagend Fed rate cut optimisme drukt macro-gevoelige assets. Positief: SEC goedkeurt Nasdaq's tokenized securities trading en FTX distribueert $2.2B aan creditors in maart, wat institutionele steun \u00e9n schuldenafbouw signaleert. Volume van $114.5B en afwezigheid van massale liquidaties deuten op ordelijke marktdynamiek zonder paniekgedrag."
+  "macro_impact": "Macro-headwinds domineren sentiment; waarschijnlijk gelinkt aan rentebeleidsveranderingen of geopolitieke triggers. De brede marktcorrectie (BTC -4.70%, ETH -6.18%, SOL -5.11%) wijst op systemische risico-off move. Macro-catalysts blijven de primaire driver voor volatiliteit.",
+  "whale_flows": "Whale-activiteit is zichtbaar in het volume-profiel: BTC en ETH tonen elevated 24h-volume ($46.86B en $24.22B) ondanks dalende prijzen, wat erop duidt dat grote partijen strategisch liquiditeit neerzetten. Kleinere coins (BNB $1.24B, XRP $2.93B) zien minder interesse.",
+  "funding_oi": "Verwacht dat funding rates negatief draaien naarmate longs worden gestaakt in deze pullback. Open Interest zal waarschijnlijk dalen terwijl leverage wordt afgebouwd. Shorters zullen voorzichtig blijven gegeven de technische ondersteuning nog niet is doorbroken.",
+  "volatility_outlook": "Volatiliteit zal elevated blijven zolang macro-triggers actief zijn; expect 3-5% dagfluctuaties. Mean-reversion setups ontstaan bij extremere technische niveaus. IV-stijging op opties-markten waarschijnlijk als onzekerheid aanhoudt.",
+  "full_report": "De crypto-markten verwerken een significante correctie op woensdag 18 maart 2026, met BTC handelend op $71,237 (-4.70%), ETH op $2,194.42 (-6.18%), en breder altcoin-swakheid met SOL op $90.28 (-5.11%). Het volume blijft substantieel ($46.86B voor BTC), wat aangeeft dat dit een institutionele risk-off move is in plaats van retail-panieking. Macro-factoren zoals renteverwachtingen lijken primair te zijn; technische breakdowns onder kritieke support-niveaus vergroten de kans op verdere consolidatie. Whale-flows suggereren strategische repositionering en liquiditeitsinjectie op dips. Volatiliteit zal waarschijnlijk elevated blijven totdat macro-catalysts worden opgeheven of technische bodem wordt bereikt."
 }
