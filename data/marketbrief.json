@@ -1,18 +1,18 @@
 {
   "date": "2026-03-18",
-  "focus": "Markt in correctie op macro-onzekerheid, Fear & Greed Index daalt naar 26 terwijl institutionele beleggers voorzichtig blijven.",
-  "risk": "Rood: correctie in gang, volatiel sentiment",
-  "btc_structure": "Bitcoin noteert op $71.643, met een dagelijkse daling van -3.50% en weeklijkse winst van +3.31%. De 1-uur candle toont -1.02% wat wijst op consolidatie na technische afverkoop, met volume van $41.7B ondersteunend maar geen imminent bullish breakout zichtbaar.",
-  "eth_flows": "Ether onderperformt met -5.24% in 24 uur bij $2.219,51, ondanks weeklijkse +9.69% gain. De sterkere wekelijkse performance staat in scherp contrast met huidige dagelijkse druk, wat volatiliteit in de korte termijn suggereert.",
+  "focus": "Marktbrede correctie van 3,26% terwijl institutionele vraag aanhoudt ondanks Fed FOMC-onzekerheid.",
+  "risk": "Erhoog risico, Fear dominantie",
+  "btc_structure": "Bitcoin noteert op $71.529 met een dagelijkse daling van -3,83% en weeklijkse winst van +3,14%. De weerstand rond $72.000 wordt onder druk gezet na het hete PPI-rapport, terwijl de $70.000-steun kritisch blijft voor handhaving van de weektrend.",
+  "eth_flows": "Ethereum daalt harder met -5,95% naar $2.205,78 op dagbasis, ondanks +9,01% weeklijkse groei. Het volume van $17,93B suggereert liquidaties onder retail-positieve sentiment.",
   "top_narratives": [
-    "Institutionele kapitaalvlucht: grote beleggers selectiever in risicovoorkeur ondanks 74% optimisme op 12-maands horizon",
-    "Centrale banken: Bank of Korea breidt CBDC-tests uit, Fed FOMC-vergadering vandaag potentieel marktbeweging",
-    "AI & Blockchain: Tempo-protocol live voor AI-agents, Stripe-partnership marktstructuur aan het veranderen",
-    "Regelgeving: Circle pleit voor UK-US harmonisatie stablecoin regels, crypto-lobbying onder druk in VS"
+    "Institutionele crypto-adoptie versnelt: 74% van grote beleggers verwacht prijsstijging binnen 12 maanden",
+    "Centrale bank digitale valuta-trials accelereren: Bank of Korea breidt CBDC-testfase uit met twee nieuwe banken",
+    "Regelgevingsconvergentie: Circle dringt aan op UK-US harmonisatie tussen MiCA en stablecoin-regels",
+    "AI-agent ecosysteem groei: Tempo-protocol (Stripe-backed) gaat live voor autonome blockchain-transacties"
   ],
-  "macro_impact": "De markt reageert voorzichtig op Fed FOMC-vergadering later vandaag en eerdere hete US PPI-gegevens die inflatiebezorgdheden aanscherpten. Institutionele kapitaalstromen blijven positief op lange termijn (74% verwacht prijsstijging), maar korte-termijn risico-off sentiment domineert door macro-onzekerheid en regelgevingsoverwegingen.",
-  "whale_flows": "Liquidatiedata niet beschikbaar, maar het volumenpatroon ($102.0B 24h totaal) suggereert gedisciplineerde afbouw zonder massieve paniek-liquidaties. Top losers UNI (-6.62%) en AVAX (-6.19%) tonen selectieve verkoop in volatiele altcoins, terwijl majors (BTC, ETH, BNB) meer weerbarstig blijken.",
-  "funding_oi": "Funding rates en Open Interest data niet beschikbaar voor vandaag, waardoor we geen directe sentiment-meting kunnen afleiden uit leverage-posities. Dit maakt het moeilijker om bull/bear dominantie in futures-markt in te schatten; handelen dus voorzichtig tot data beschikbaar is.",
-  "volatility_outlook": "Fear & Greed Index op 26 (Fear, daling van 28) duidt op verhoogde onzekerheid en potentie voor bredere range-uitbreidingen. Komende Fed-besluiten kunnen volatiliteit aanscherpen; verwacht +/- 4-6% swings in BTC en grotere moves in altcoins tot sentiment normaliseerde.",
-  "full_report": "Bitcoin (BTC) handelt op $71.643 met -3.50% in 24 uur, maar behoudt +3.31% weeklijks, terwijl Ethereum (ETH) harder getroffen wordt met -5.24% dagelijks tegen $2.219,51. De brede markt daalt 3.26% naar $2.54T marktcap, met CoinDesk 20 index -3.1% en alle constituenten in het rood. Fear & Greed Index staat op 26 (Fear-fase, dalend van 28 gisteren) wat wijst op erhoogde risicoaversie ondanks institutionele optimisme op 12-maands horizont (74% verwacht stijging). Macro-triggers vandaag zijn Fed FOMC-vergadering en vorige hete inflatielezing; institutionele beleggers 'doubling down' maar blijven selectief. Regelgevingsvooruitgang (Korea CBDC, Stripe/Tempo AI-protocol) en harmonisatieperikelen (Circle/UK-US stablecoin-talk) vormen lange-termijn drivers. Liquidatiedata ontbreekt, maar volumensterkte ($41.7B BTC, $20.88B ETH) suggereert geen paniek-cascade."
+  "macro_impact": "De Fed FOMC-vergadering vandaag bepaalt de koersrichting na het beter-dan-verwacht PPI-rapport, wat renteverhoging-verwachtingen heeft opgejaagd. Institutionele selectiviteit neemt toe: grote spelers diversifi\u00ebren uit risicovolle altcoins terwijl Bitcoin dominantie op 56,6% stabiel blijft.",
+  "whale_flows": "Het totale volume van $102,0B geeft aan dat positie-herpositionering plaatsvindt zonder paniekaflossing. De gelijkmatige daling over alle top-10 activa suggests index-rebalancing in plaats van gerichte kapitaalvlucht.",
+  "funding_oi": "Funding rate- en open interest-gegevens zijn niet beschikbaar, maar de -3,26% marktdaling zonder massale liquidaties duidt op een voorzichtige long-positie-bouw onder institutioneel dekking.",
+  "volatility_outlook": "Fear & Greed-index daalde van 28 naar 26 (Fear-regime), wat verdere consolidatie suggereert voordat Fed-beslissing plaatsvindt. Verwacht u elastische reacties rond $71.500 (BTC) met mogelijk hogere volatiliteit post-FOMC.",
+  "full_report": "De crypto-markt handelt in correctie-modus met een totale marktcap van $2,54T (-3,26% in 24h) en verspreid negatief momentum: Bitcoin verliest -3,83% naar $71.529, Ethereum daalt harder met -5,95% naar $2.205,78, terwijl XRP ($1,45) en BNB ($651,23) bescheidener verliezen van -3,77% en -2,81% tonen. De Fear & Greed-index staat op 26 (Fear), wat past bij het Fed FOMC-moment en inflatiegegevens. Ondanks dagelijkse zwakte meldt onderzoek dat 74% van institutionele beleggers bullish-sentiment voor 12 maanden handhaaft, wat wijst op strategische accumulatie onder druk. Regelgeving accelereert: CBDC-trials van Bank of Korea en Stripe's Tempo-protocol gaan live, wat de structurele groei-narrative ondersteunt buiten cyclische prijsbewegingen."
 }
