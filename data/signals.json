@@ -1,5 +1,17 @@
 [
   {
+    "id": 1773827778541,
+    "coin": "XRP/USD",
+    "type": "BUY",
+    "entry": "1.52",
+    "tp": "1.68",
+    "sl": "1.46",
+    "note": "7d uptrend +10.87%, 24h positief momentum +0.86%, technische setup ondersteunt verdere rally naar hogere levels.",
+    "timestamp": "2026-03-18T09:56:16.605Z",
+    "generated_at": "Wed, 18 Mar 2026 09:56:16 GMT",
+    "source": "claude-bot"
+  },
+  {
     "id": 1773786845994,
     "coin": "ETH/USD",
     "type": "SELL",

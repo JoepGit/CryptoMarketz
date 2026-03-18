@@ -1,18 +1,18 @@
 {
   "date": "woensdag 18 maart 2026",
-  "focus": "Lichte correctie over brede markt met BTC stabiel rond $74.089 ondanks dalende momentum.",
-  "risk": "Gedempte volatiliteit, voorzichtig sentiment",
-  "btc_structure": "Bitcoin noteert op $74.089 met een bescheiden verlies van -0.33% in 24 uur. De markt toont lichte verkoopdynamiek zonder dramatische neerwaartse beweging, waarschijnlijk consolidatie voor volgende impuls.",
-  "eth_flows": "Ethereum handelt op $2.323,37 met minimale daling van -0.23%, waarbij institutioneel volume van $19.47B suggereert voorzichtig defensieve positionering. Stablecoins blijven relatief neutraal verdeeld.",
+  "focus": "Lichte consolidatie in topmunten met gedempte volume signalen na recente rallies.",
+  "risk": "Lage volatiliteit, range-bound sentiment",
+  "btc_structure": "Bitcoin noteert op $74.147 met minimale 24h-beweging van +0,29%, wat duidt op stabilisatie na eerdere momentum. De $34,73B volume blijft matig, wat suggereert afwachting van institutionele inflows.",
+  "eth_flows": "Ethereum ligt op $2.328,6 met +0,58% dagwinst en $17,73B handelsvolume, wat aantoonbaar sterker is dan Bitcoin relatief gezien. Het volume naar volume-ratio wijst op groeiende ETH-interesse ondanks de compacte prijsbeweging.",
   "top_narratives": [
-    "Macro-geïnduceerde consolidatie in aantocht",
-    "ETH's relatieve sterkte versus BTC",
-    "Altcoin-underperformance (SOL -0.65%)",
-    "Volume-stabiliteit op kernparen"
+    "Institutionele accumulatie in low-volatility omgeving",
+    "Alt-seizoen potentieel met XRP +0,86% dagelijks",
+    "Macro-onzekerheid duwt naar stablecoins en consolidatie",
+    "Layer-2 bullish case ondersteund door ETH fundamentals"
   ],
-  "macro_impact": "Rentemarktbewegingen blijven kritisch; afwachtende positie voorafgaand aan Fed-communicatie. Geopolitieke onzekerheden ondersteunen defensieve cryptohandelingen.",
-  "whale_flows": "BTC volume van $35.68B geeft aan diffuse liquiditeit zonder grote concentraties. Walvisbewegingen remain dormant; markt toont geen urgente exit- of entry-signals op topniveaus.",
-  "funding_oi": "Perpetual funding rates blijven modest; geen extremen geobserveerd. Longs en shorts zijn evenwichtig verdeeld, wat wijst op voorzichtige marktdeelnemers.",
-  "volatility_outlook": "Impliciete volatiliteit blijft gematigd; verwacht wordt dat technische consolidatie aanhoudend is totdat macro-katalysatoren verschijnen. Breakout-kansen remain asymmetrisch tot volgende data-release.",
-  "full_report": "De cryptocurrency-markt vertoont op woensdag 18 maart 2026 gedempte activiteit met algemene dalingen onder 1%. Bitcoin staat op $74.089 (-0.33%), Ethereum op $2.323,37 (-0.23%), terwijl Solana met -0.65% het meest onder druk staat. Volume-activiteit blijft robuust op BTC/ETH ($35.68B respectievelijk $19.47B) maar lateraal georiënteerd zonder directionaliteit. Macro-onzekerheden domineren sentiment; verwacht wordt dat institutionele marktdeelnemers posities vergrendelen vóór volgende Fed-agenda. Geen significante whale-transfers waargenomen. Technisch scenario blijft bullish intact zolang $73.000 niet onder druk komt."
+  "macro_impact": "Globale renteverwachtingen en Fed-signalen bepalen break-out richting; de lage intra-dag volatiliteit duidt op afwachting tot macro-catalysatoren. Geopolitieke spanningen kunnen vluchtigheid aanwakkeren.",
+  "whale_flows": "BTC's $34,73B volume met +0,29% suggereert voorzichtige whale-accumulatie zonder aggressieve buying. Solana's dip naar -0,17% bij $94,27 kan opportunistische positie-opbouw door grote houders aanduiden.",
+  "funding_oi": "Lage funding rates verwacht gegeven de range-bound prijsactie; liquidaties zullen begrensd zijn tot $72k-$76k BTC support/resistance zones. Brede consolidatie verzwakt short-squeeze potentieel.",
+  "volatility_outlook": "Verwachte range-gebound handelen met lagere IV tot einde week; break-out boven $75.5k of onder $72.8k BTC nodig voor trend-bevestiging. ETH-sterkheid kan micro-volatiliteit drijven in altcoin-sector.",
+  "full_report": "CryptoMarketz analyseert woensdag 18 maart 2026 een consolidatief marktplaatje met Bitcoin stabiel rond $74.147 (+0,29%) en Ethereum relatief sterker op $2.328,6 (+0,58%). Het totale handelsvolume blijft matig ondanks BTC's $34,73B, wat institutionele terughoudendheid suggereert. XRP toont relatieve sterkte met +0,86% dagelijks op $1,52, terwijl Solana licht onder druk staat op $94,27 (-0,17%). Macro-onzekerheid domineert sentiment; traders wachten op duidelijke directionale catalysatoren boven $75.5k resistance of onder $72.8k support voor Bitcoin."
 }
