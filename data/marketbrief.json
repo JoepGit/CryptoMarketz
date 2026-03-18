@@ -1,18 +1,18 @@
 {
   "date": "2026-03-18",
-  "focus": "Brede marktcorrectie van -3.31% met risico-afname onder institutionele beleggers terwijl Fed FOMC-bijeenkomst nadert.",
-  "risk": "Defensief | Fear-sentiment sterk",
-  "btc_structure": "Bitcoin noteert op $71.253 met een dagverlies van -4.32%, maar behoudt weeklijks momentum van +1.53%. De intraday daling van -1.20% over het afgelopen uur suggereert stabilisering rond huidige levels, hoewel de energieprijsstijging in Iran structureel hashrate-druk cre\u00ebert.",
-  "eth_flows": "Ethereum onderperformt relatief met -6.70% in 24 uur tegen $2.185,83, terwijl het weekrendement van +6.58% vorige opstellingen aangeeft. De intradag-dip van -2.09% weerspiegelt bredere risicoaversie in alt-positions.",
+  "focus": "Brede marktcorrectie met -3.31% op totale cap; Fear Index daalt naar 26 terwijl macro headwinds vanuit energiekosten en inflatiedata toenemen.",
+  "risk": "Heightened: risk-off, liquidatie-gevoelig",
+  "btc_structure": "Bitcoin handelt op $71.253 met een dagelijkse daling van -4.32% en uurlijkse druk van -1.20%. De wekelijkse winst van +1.53% suggereert weerlei, maar huidige prijsactie wijst op testen van lagere ondersteuning voor mean reversion.",
+  "eth_flows": "Ethereum staat op $2.185,83 en vertoont relatief zwakkere technische positie met -6.70% in 24h en -2.09% per uur, terwijl de 7d gain van +6.58% momentum erosie aantoont. Volume van $21.84B blijft solide ondanks de neerwaartse druk.",
   "top_narratives": [
-    "Energieprijsstijging Iran drukt Bitcoin hashrate en mijnbouw-marginaal",
-    "Institutionele beleggers kiezen selectief: meer cryptoposities maar strenger risicofilter",
-    "CBDC-momentum: Bank of Korea breidt digitale won uit; Circle pleit voor regelharmonisatie",
-    "AI-agent payments: Stripe-led Tempo-protocol live, nieuwe use-case drivers"
+    "Energiekosten stijgen door Iran-escalatie, druk op Bitcoin hash rate en mining winstgevendheid",
+    "Fed FOMC meeting vandaag met hot US PPI data vooraf; inflatiesorgen benadrukken macro onzekerheid",
+    "Centrale banken accelereren CBDC-implementatie (Korea, Japan); institutionele selectiviteit neemt toe",
+    "Stablecoin beleid fragmentatie tussen MiCA en VS; Stripe-Tempo AI agent protocol live"
   ],
-  "macro_impact": "De aanstaande Fed FOMC-vergadering gecombineerd met hete US PPI-inflatiedata cre\u00ebert macro-onzekerheid die risicoactiva onder druk zet. Daarnaast signaleert het Iran-energieconflict potenti\u00eble structurele kostenstijgingen voor Bitcoin-mijnbouw, wat hashrate-volatiliteit kan vergroten.",
-  "whale_flows": "Liquidatiegegevens ontbreken, maar het volume-profiel ($103.3B totaal 24h) en brede marktdaling wijzen op gedwongen posities en risicobeperking. Grote beleggers herschikken naar lagere-volatiliteitsposities, zoals blijkt uit het selectieve verlies waarbij BNB (-3.39%) en DOT (-2.58%) beter presteren dan UNI (-7.92%) en LINK (-7.22%).",
-  "funding_oi": "Fundingrate- en open-interest-data zijn niet beschikbaar, maar het Fear & Greed-index op 26 (Fear) suggereert dat short-dekking kan volgen wanneer sentiment stabiliseert. Monitor deze metrics nauw na FOMC-announcement voor liquidatierisco's.",
-  "volatility_outlook": "De Fear & Greed-daling van 28 naar 26 en intraday-verliezen op alle grote posities wijzen op verhoogde volatiliteit voor korte termijn. Verwacht verdere schokken rond Fed-guidance, met mogelijke reversal-gelegenheden als macro-onzekerheid afneemt.",
-  "full_report": "De cryptomarkt handelt onder aanzienlijke druk op 18 maart 2026, met totale marktcap $2.52T (-3.31% 24h) en alle top-10 assets in het rood. Bitcoin noteert $71.253 (-4.32%), Ethereum $2.185,83 (-6.70%), terwijl UNI het hardst daalt (-7.92%) en DOT het best standhoudt (-2.58%). Fear & Greed-index op 26 (Fear) weerspiegelt voorzichtig sentiment rond de aanstaande Fed FOMC-vergadering en hete inflatiedata. Institutionele beleggers doseren risico's door selectiever in cryptoposities in te stappen, ondersteund door nieuwe CBDC-initiatieven (Bank of Korea, Circle) en AI-payment-innovaties (Stripe Tempo). Energieprijsstijging in Iran vormt structurele koppelingskost voor Bitcoin-mijnbouw en hashrate-volatiliteit."
+  "macro_impact": "De aanstaande Fed FOMC-vergadering en inflatiedata zorgen voor macro volatiliteit; energieprijsstijging door geopolitieke spanningen drukt op miningeconomie en BTC hash rate. Institutionele capitaal selecteert risico-assets voorzichtiger, wat marktbreedheid belast.",
+  "whale_flows": "Liquidatiegegevens ontbreken, maar volume-analyse toont $103.3B totaal 24h volume met leidersposities in BTC ($42.48B) en ETH ($21.84B). De brede daling van 3.31% suggereert gedwongen verkopen in leverage-posities.",
+  "funding_oi": "Funding rate en open interest data zijn momenteel niet beschikbaar. Zonder deze real-time signalen blijft de mate van leverage onzeker, hoewel de brede liquidatiestroom aangeeft dat overleveraging bestond.",
+  "volatility_outlook": "Fear Index op 26 toont intensieve vrees; daling van 28 naar 26 suggereert versnelde sentiment-erosie. Verwacht verdere volatiliteit rond FOMC-timing; technische setup wijst op fase van consolidatie of verdere correctie voordat reversal-setup zich vormt.",
+  "full_report": "De cryptomarkt vertoont brede correctie met totale cap daling van 3.31% naar $2.52T. Bitcoin noteert $71.253 (-4.32% 24h), Ethereum $2.185,83 (-6.70% 24h), terwijl XRP, BNB en SOL gelijkwaardige druk ervaren. Fear & Greed Index staat op 26 (Fear) versus 28 gisteren, wijzend op accelererende sentiment-erosie. Macro headwinds uit Fed FOMC vandaag, inflatiedata en Iran-gerelateerde energieprijsstijging oefenen druk uit op miningeconomie en risk appetite. Institutionele beleggers tonen groeiende selectiviteit ondanks overall bullish langetermijnpositionering; CBDC-expansie en stablecoin regelgeving bieden parallelle growth narratieven."
 }
