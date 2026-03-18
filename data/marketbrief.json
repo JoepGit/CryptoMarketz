@@ -1,18 +1,18 @@
 {
-  "date": "woensdag 18 maart 2026",
-  "focus": "Stabiele markt met gedempte volatiliteit terwijl BTC consolideren rond $74.031 en ETH een lichte uptrend toont.",
-  "risk": "Laag, consolidatie fase dominant",
-  "btc_structure": "Bitcoin handelt vlak op $74.031 met slechts 0.13% stijging in 24 uur, wat duidt op horizontale prijsvorming. Het volume van $38.45B blijft gezond maar geeft aan dat traders voorzichtig zijn. Dit patroon suggereert voorbereiding op de volgende impuls.",
-  "eth_flows": "Ethereum toont relatieve sterkte met +0.78% op $2.320.38 en een volume van $20.22B. De outperformance ten opzichte van Bitcoin duidt op versterkte interesse in altcoins en mogelijk DeFi-gerelateerde activiteit.",
+  "date": "2026-03-18",
+  "focus": "Bitcoin worstelt met weerstand rond $73.787 terwijl Fed-vergadering woensdag en politieke onzekerheden volatiliteit aanwakkeren.",
+  "risk": "Gematigd; Fear sentiment domineert",
+  "btc_structure": "Bitcoin noteert op $73.787 met lichte korte-termijn druk (-0.43% in 1 uur, -0.78% in 24 uur), maar weeklijks momentum blijft positief (+5.49%). Kritieke weerstand rond $75K vormt een belangrijke testzone voor verdere opmars.",
+  "eth_flows": "Ethereum staat op $2.315,59 en volgt Bitcoin's patroon (-0.45% in 1 uur, -0.67% in 24 uur), terwijl weeklijks winsten van +14.39% onderliggende kracht aantonen. Volume van $18.71B ondersteunt interest, ondanks korte-termijn correctieve druk.",
   "top_narratives": [
-    "Altcoin rotatie met ETH voorop",
-    "Bitcoin consolidatie rond $74k",
-    "Stablecoin volume signalen",
-    "Macro-onzekerheid drukt volatiliteit"
+    "Fed-beleidsvergadering woensdag bepaalt volatiliteitsrichting en rente-sentiment",
+    "Politieke ontwikkelingen (Stratton-overwinning, senator Scott's market structure onderhandelingen) cre\u00ebren regelgevingsopheldering",
+    "XRP technische battleground rond $1,52 met $14M options-expiratie als pivotpunt",
+    "Beveiligingsincidenten (Lazarus/Bitrefill) en Meta's metaverse-pivot be\u00efnvloeden institutioneel vertrouwen"
   ],
-  "macro_impact": "De gedempte prijsbewegingen duiden op voorzichtigheid van institutionele beleggers in aanloop naar mogelijke rentebeslissingen. De markt lijkt in afwachtingsstand tot duidelijkheid uit central banks.",
-  "whale_flows": "Het totale volume van $66.5B is geleidelijk verdeeld, met BTC dominant op $38.45B. De lager volume in altcoins ($3.46B XRP, $3.34B SOL) suggereert dat whales hun posities consolideren in plaats van aggressief handelen.",
-  "funding_oi": "Verwacht licht dalende funding rates gezien de flatline prijsactie. Open Interest zal waarschijnlijk gelijk blijven met miniem liquidatie-risico aan beide zijden.",
-  "volatility_outlook": "Impliciete volatiliteit blijft laag met maximale 24h-swings onder 1%. Dit kan plotseling veranderen bij macro-catalisten, dus kijk uit naar breakouts boven $75.000 of onder $73.000.",
-  "full_report": "CryptoMarketz rapporteert stabiele marktcondities op woensdag 18 maart 2026. Bitcoin consolideert rond $74.031 (+0.13%), terwijl Ethereum relatief sterker presteert op $2.320.38 (+0.78%), wat een rotatie naar altcoins suggereert. Het gecombineerde volume van $66.5B is gezond maar geconcentreerd in BTC ($38.45B), terwijl andere activa zoals XRP ($1.52, +0.85%), SOL ($94, +0.29%) en BNB ($672.27, -0.25%) minder aandacht trekken. De markt wacht op macro-catalisten en lijkt in voorbereiding voor een nieuwe impuls, met risico's naar beneden onder $73k."
+  "macro_impact": "De Fed-bijeenkomst van woensdag werkt als katalysator voor risicosentiment, terwijl recente Amerikaanse politieke vooruitgang op crypto-regelgeving (Tim Scott's onderhandelingen) marktpsychologie ondersteunt. Echter, Bitrefill's beveiligingsinbreuk en Meta's terugtocht uit VR-metaverse dempen bullish momentum.",
+  "whale_flows": "Bitcoin-instroom naar beurzen stijgt terwijl BTC tegen $75K-weerstand aanloopt, wat duidt op profit-taking voorbereiding. Cross-chain volumes in ETH ($18.71B) en SOL ($3.23B) blijven robuust, hoewel het algehele marktvolume met -0.45% daalt naar $2.61T.",
+  "funding_oi": "Funding rates en open interest data niet beschikbaar op dit moment; monitoring van deze metrieken blijft essentieel voor positioning-analyse en liquidatiepunten rond $70K (BTC) en $2.200 (ETH).",
+  "volatility_outlook": "Fear & Greed Index op 26 (Fear, -2 van gisteren) signaleert toenemende risico-aversie en impliceert volatiliteitscontratie voorafgaand aan Fed-besluit. Liquidatiedynamica zal waarschijnlijk rond sleutelniveaus ($73.787 BTC, $2.315 ETH) toenemen naarmate wednesdagse katalysator nadert.",
+  "full_report": "Op 18 maart 2026 is Bitcoin op $73.787 (-0.78% dag) en Ethereum op $2.315,59 (-0.67% dag) genoteerd, terwijl weeklijks rendement positief blijft (BTC +5.49%, ETH +14.39%). De totale marktcap bedraagt $2.61T met een Fear & Greed Index van 26, wat een defensief sentiment reflecteert. Fed-vergadering woensdag, Lazarus-beveiligingsschendingen, en Tim Scott's crypto-regelgeving onderhandelingen vormen de macro-context. Hoewel funding rates en OI niet beschikbaar zijn, wijzen exchange-instromingen en profitabiliteit-indicatoren op voorzichtig winstnemingsgedrag rond $75K-weerstand. XRP's -1.14% verlies en UNI's -2.64% onderperformance benadrukken selectieve zwakte, terwijl ADA (+0.21%) en DOT (+0.86%) betere veerkracht tonen."
 }
