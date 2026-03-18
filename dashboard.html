@@ -1504,17 +1504,18 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
 
         <div class="dashboard-feed">
           <div class="dashboard-stack">
-            <div class="morning-brief-card" onclick="goPage('ai-brief',null)">
+            <div class="morning-brief-card" onclick="briefClick()">
               <div class="db-kicker">Morning brief</div>
               <div class="db-title" id="dash-brief-title">AI Market Report</div>
-              <div class="db-sub" id="dash-brief-sub">Your daily market briefing appears here and refreshes with the AI report.</div>
               <div class="db-meta">
                 <span class="db-pill" id="dash-brief-time">08:00 daily update</span>
                 <span class="db-pill" id="dash-brief-risk">risk loading</span>
-                <span class="db-pill" id="dash-brief-focus">focus loading</span>
               </div>
-              <div class="db-copy" id="dash-brief-copy">Loading market brief.</div>
-              <div class="db-link" onclick="goPage('ai-brief',null)">Open full AI brief <span>→</span></div>
+              <div id="dash-brief-preview" style="font-size:14px;color:var(--sub);line-height:1.6;margin:10px 0;overflow:hidden;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;">Loading market brief.</div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-top:10px;">
+                <div class="db-link">Open full AI brief <span>→</span></div>
+                <span id="brief-lock-badge" style="display:none;font-size:10px;background:rgba(0,85,255,.1);color:#0055ff;border:1px solid rgba(0,85,255,.25);padding:2px 8px;border-radius:4px;font-weight:600;">Members only</span>
+              </div>
             </div>
 
             <div class="card dashboard-side-card">
@@ -1983,7 +1984,7 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
         <div class="card" style="padding:18px">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:13px">
             <div style="font-family:'Inter',sans-serif;font-size:11px;font-weight:700;color:var(--accent)">Active Signals</div>
-            <button id="clr-sig" style="display:none;background:rgba(244,63,94,.07);border:1px solid rgba(244,63,94,.16);color:var(--red);font-family:'Inter',sans-serif;font-size:8px;padding:4px 10px;border-radius:6px;cursor:pointer" onclick="clearSignals()">Clear All</button>
+            <button id="clr-sig" style="display:none;background:rgba(244,63,94,.1);border:1px solid rgba(244,63,94,.3);color:#e8392a;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;padding:8px 18px;border-radius:8px;cursor:pointer" onclick="clearSignals()">🗑 Clear all manual signals</button>
           </div>
           <div id="sig-full"></div>
         </div>
@@ -3638,6 +3639,15 @@ function sigHtmlFull(s,del){
 function delSig(id){sSigs(gSigs().filter(function(s){return s.id!==id;}));renderSignals();}
 function postSignal(){var coin=document.getElementById('sf-coin').value.trim();if(!coin){alert('Enter a pair.');return;}var sigs=gSigs();sigs.unshift({id:Date.now(),coin:coin,type:document.getElementById('sf-type').value,entry:document.getElementById('sf-entry').value.trim(),tp:document.getElementById('sf-tp').value.trim(),sl:document.getElementById('sf-sl').value.trim(),note:document.getElementById('sf-note').value.trim()});sSigs(sigs);['sf-coin','sf-entry','sf-tp','sf-sl','sf-note'].forEach(function(id){document.getElementById(id).value='';});renderSignals();}
 function postSignalAdm(){var coin=document.getElementById('adm-coin').value.trim();if(!coin){alert('Enter a pair.');return;}var sigs=gSigs();sigs.unshift({id:Date.now(),coin:coin,type:document.getElementById('adm-type').value,entry:document.getElementById('adm-entry').value.trim(),tp:document.getElementById('adm-tp').value.trim(),sl:document.getElementById('adm-sl').value.trim(),note:document.getElementById('adm-note').value.trim()});sSigs(sigs);['adm-coin','adm-entry','adm-tp','adm-sl','adm-note'].forEach(function(id){document.getElementById(id).value='';});renderSignals();alert('Signal posted!');}
+function briefClick(){
+  if(isAdm()||localStorage.getItem('jcm_name')){
+    goPage('ai-brief',null);
+  } else {
+    var badge=document.getElementById('brief-lock-badge');
+    if(badge){badge.style.display='inline-block';setTimeout(function(){badge.style.display='none';},2500);}
+    guestPricing();
+  }
+}
 function clearSignals(){if(confirm('Delete all signals?')){sSigs([]);renderSignals();}}
 setInterval(renderSignals,5*60*1000);
 
