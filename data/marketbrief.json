@@ -1,18 +1,18 @@
 {
   "date": "2026-03-18",
-  "focus": "Markt onder druk met -3.19% totale daling, Fear Index op 26 terwijl institutionele vraag aanhoudt ondanks Fed FOMC onzekerheid.",
-  "risk": "Gedurende correctie, instellingen accumuleren",
-  "btc_structure": "Bitcoin handelt op $71,732 met 24h verlies van -3.24%, maar weeklijkse winst van +3.43% toont onderliggende sterkte. Cruciale steunzone rond $71k-72k blijft intact ondanks intraday druk van -0.95% in het afgelopen uur.",
-  "eth_flows": "Ethereum onderperformt op $2,220.4 met 24h daling van -5.19%, maar weeklijkse momentum van +9.73% suggereert herstel potentieel. Volume blijft substantieel op $20.83B, wat wijst op actieve positionering ondanks korte termijn negatief sentiment.",
+  "focus": "Marktcorrectie verstevigt zich met -3.19% totale cap daling terwijl Fear & Greed index daalt naar 26, signalserend voor potenti\u00eble capitulatie of accumulatievenster.",
+  "risk": "Moderate to High | Correctie Modus",
+  "btc_structure": "Bitcoin noteert op $71,732 met -3.24% 24h verlies na -0.95% verlies afgelopen uur, maar behoudt +3.43% weekgain. Kritieke ondersteuning rond $71K blijft intact; bears testen onderste grenzen van recent range.",
+  "eth_flows": "Ethereum daalt naar $2,220.4 (-5.19% 24h) wat agressiever is dan BTC, hoewel +9.73% 7d gain alt-momentum vertoont. Volume op $20.83B duidt op actieve liquidaties in leverage-heavy posities.",
   "top_narratives": [
-    "Institutionele accumulation thema: 74% van grote beleggers verwacht prijsstijging in 12 maanden",
-    "Central Bank Digital Currency (CBDC) adoptie: Bank of Korea breidt digitale won pilots uit",
-    "AI-agent ecosysteem groei: Tempo blockchain protocol live voor autonoom trading",
-    "Regulatorische polarisatie: VS versus MiCA clarity, stablecoin frameworks divergeren"
+    "Institutionele kopers dubbelen in op crypto ondanks volatiliteit \u2013 74% verwacht prijsstijging over 12 maanden",
+    "Bank of Korea intensiveert CBDC-testen met digitale won via twee nieuwe banken",
+    "AI-agent integratie met Tempo blockchain opent nieuwe use-case voor automated transactions",
+    "RedotPay turmoil ondermijnt crypto payments sentiment vlak voor potentieel $4B IPO"
   ],
-  "macro_impact": "Fed FOMC meeting vandaag verhoogt macro volatiliteit terwijl Bitcoin eerder naar $72k dook op warme US PPI-inflatie data. Bank of Korea's CBDC uitbreiding ondersteunt langetermijn blockchain legitimiteit, terwijl regelgevingsspanning in Illinois en MiCA-discussies beleidsrisico's aantonen.",
-  "whale_flows": "Liquidatiegegevens niet beschikbaar, maar totale volume van $101.0B met concentratie in BTC ($41.06B) en ETH ($20.83B) duidt op voortzetting van instellingenpositioning. UNI's -6.51% verlies en AVAX's -5.93% daling tonen selectieve deleveraging in riskantere activa.",
-  "funding_oi": "Funding rate- en open interest-gegevens niet beschikbaar voor analyse, waardoor directe leverage en positionering sentiment niet kan worden gekwantificeerd. Dit beperkt zicht op short/long balans en liquidatierisico's op korte termijn.",
-  "volatility_outlook": "Fear & Greed Index op 26 (Fear, daling van 28 gisteren) duidt op aanhoudende voorzichtigheid maar minder extreme paniek. Met Fed FOMC vandaag en macro-onzekerheden wordt volatiliteit verwacht te blijven verhoogd, hoewel institutionele vraag potenti\u00eble kapitulatie kan verzwakken.",
-  "full_report": "De cryptomarkt handelt onder druk op 2026-03-18 met totale market cap daling naar $2.54T (-3.19% in 24h). Bitcoin ($71,732, -3.24% 24h, +3.43% 7d) en Ethereum ($2,220.4, -5.19% 24h, +9.73% 7d) tonen weeklijkse sterkte ondanks dagelijkse correctie. Fear & Greed Index staat op 26 (Fear), lagere angst dan gisteren's 28. Macro-dynamieken draaien rond Fed FOMC-vergadering vandaag en warme inflatieprijzen die Bitcoin naar $72k duwden, terwijl 74% van institutionele beleggers positief over 12-maands vooruitzichten blijft. Central Bank Digital Currency-expanties (Bank of Korea) en nieuwe AI-protocol launches (Tempo) leveren fundamentele steun op, offset door regelgevingsvoorzichtigheid in VS en EU."
+  "macro_impact": "Fed FOMC meeting staat vandaag gepland; Bitcoin dip naar $72K reflecteerde hot US PPI-data die renteverwachtingen be\u00efnvloedde. Brede institutionele interesse blijft intact ondanks korttermijn risk-off sentiment, wat duidt op strategische accumulatie in dips. Regelgeving (UK MiCA/US stablecoin alignment) ondersteunt langetermijn framework-building.",
+  "whale_flows": "Liquidatie data niet beschikbaar, maar $101B totale 24h volume op markt cap van $2.54T suggereert normale marktomvang. Concentratie van volume in BTC ($41.06B) en ETH ($20.83B) toont institutionele focus; altcoins onderpresteren signaliserend correlatie-lockdown.",
+  "funding_oi": "Funding rates en Open Interest data niet beschikbaar voor analyse vandaag. Dit beperkt capaciteit om short-term leveragepositionering in te schatten; historisch zouden positieve rates bullish bias aangeven, maar absence van data suggereert voorzichtigheid in futures markt.",
+  "volatility_outlook": "Fear & Greed Index op 26 (Fear) \u2013laagste niveau in twee dagen \u2013 suggereert potentieel voor mean-reversion bounce of verdere capitulatie. Gegeven +3.43% BTC 7d gain en +9.73% ETH 7d gain ondanks 24h daling, markt vertoont klassieke shake-out patroon; volatiliteit naar beneden verwacht als liquidaties stabiliseren.",
+  "full_report": "CryptoMarketz marktbrief voor 18 maart 2026: Totale crypto marktkapitalisatie daalde naar $2.54T (-3.19% in 24h) terwijl Bitcoin op $71,732 (-3.24% 24h, +3.43% 7d) onder druk staat na Fed-gerelateerde PPI-cijfers. Ethereum onderpresteert met -5.19% daling naar $2,220.4, terwijl het Fear & Greed Index zijn laagste punt van 26 (Fear) bereikt. Ondanks correctie-dynamica rapporteren institutionele beleggers verdubbeling van crypto-engagement met 74% optimisme voor 12-maands prijsgroei. Macro-catalisten draaien rond Fed-beleid, CBDC-voortgang (Bank of Korea), en regelgeving (MiCA-harmonisatie); whale-liquidaties en korttermijn leverage-afwinding blijken normaal gegeven marktstructuur. Met funding rates data afwezig maar 7-daagse winsten intact over meeste assets, markt gepositioneerd voor potenti\u00eble bounce als Fear-sentiment bottoms."
 }
