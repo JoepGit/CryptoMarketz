@@ -18,7 +18,7 @@
 <meta name="twitter:image" content="logo_blauw.svg">
 <meta name="description" content="ZIMR Capital Professional crypto trading signals, real-time data and education for serious traders.">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ZIMR Capital</title>
+<title>ZIMR</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -2440,7 +2440,7 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
               <div class="sf-g"><label>Title</label><input id="an-title" placeholder="Weekly Outlook"></div>
               <div class="sf-g"><label>Body</label><textarea id="an-body" rows="7" style="background:var(--c4);border:1px solid var(--bdr);border-radius:7px;padding:8px 11px;color:var(--cream);font-size:12px;outline:none;width:100%;resize:vertical;font-family:'Inter',sans-serif;line-height:1.7"></textarea></div>
               <div class="sf-g"><label>Key Levels (one per line)</label><textarea id="an-levels" rows="4" style="background:var(--c4);border:1px solid var(--bdr);border-radius:7px;padding:8px 11px;color:var(--cream);font-size:12px;outline:none;width:100%;resize:vertical;font-family:'Inter',sans-serif" placeholder="BTC: Support $80k / Resistance $88k"></textarea></div>
-              <button class="fbtn" onclick="saveAnalysis()">Save</button>
+              <button class="fbtn" onclick="saveAnalysis()">Save</button><button class="fbtn" onclick="deleteAnalysis()" style="background:rgba(244,63,94,.12);border:1px solid rgba(244,63,94,.25);color:#e8392a;margin-left:8px;">Delete</button>
             </div>
           </div>
         </div>
@@ -3098,7 +3098,7 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
           <div class="sf-g"><label>Title</label><input id="adm-an-title" placeholder="Weekly Outlook"></div>
           <div class="sf-g"><label>Body</label><textarea id="adm-an-body" rows="7" style="background:var(--c4);border:1px solid var(--bdr);border-radius:7px;padding:8px 11px;color:var(--cream);font-size:12px;outline:none;width:100%;resize:vertical;font-family:'Inter',sans-serif;line-height:1.7"></textarea></div>
           <div class="sf-g"><label>Key Levels (one per line)</label><textarea id="adm-an-levels" rows="4" style="background:var(--c4);border:1px solid var(--bdr);border-radius:7px;padding:8px 11px;color:var(--cream);font-size:12px;outline:none;width:100%;resize:vertical;font-family:'Inter',sans-serif" placeholder="BTC: Support $80k / Resistance $88k"></textarea></div>
-          <button class="fbtn" onclick="saveAnalysis()">Save Analysis</button>
+          <button class="fbtn" onclick="saveAnalysis()">Save Analysis</button><button class="fbtn" onclick="deleteAnalysis()" style="background:rgba(244,63,94,.12);border:1px solid rgba(244,63,94,.25);color:#e8392a;margin-left:8px;">Delete</button>
         </div>
       </div>
     </div>
@@ -3619,7 +3619,7 @@ async function renderSignals(){
 function sigHtmlFull(s,del){
   var cl=sCl(s.type);
   var sub=[s.entry&&'Entry: '+s.entry,s.tp&&'TP: '+s.tp,s.sl&&'SL: '+s.sl].filter(Boolean).join(' · ');
-  var d=(del&&isAdm()&&!s.bot)?'<button style="background:none;border:none;color:rgba(244,63,94,.3);cursor:pointer;font-size:14px;float:right;padding:0 3px" onclick="delSig('+s.id+')">×</button>':'';
+  var d=(del&&isAdm()&&!s.bot)?'<button style="background:rgba(244,63,94,.08);border:1px solid rgba(244,63,94,.2);color:#e8392a;cursor:pointer;font-size:11px;float:right;padding:2px 8px;border-radius:4px;font-weight:600" onclick="delSig('+s.id+')">Delete</button>':'';
   var botBadge=s.bot?'<span style="font-family:\'Orbitron\',monospace;font-size:6px;padding:1px 5px;border-radius:2px;background:rgba(0,85,255,.15);color:#0055ff;border:1px solid rgba(0,85,255,.25);margin-left:4px;letter-spacing:.06em">BOT</span>':'';
   var bgCol=cl==='buy'?'rgba(0,85,255,.1)':cl==='sell'?'rgba(244,63,94,.1)':'rgba(0,85,255,.1)';
   var fgCol=cl==='buy'?'var(--grn)':cl==='sell'?'var(--red)':'var(--accent)';
@@ -3643,6 +3643,7 @@ setInterval(renderSignals,5*60*1000);
 
 /* ── ANALYSIS ── */
 function getAnalysis(){try{return JSON.parse(localStorage.getItem('jcm_an')||'null');}catch(e){return null;}}
+function deleteAnalysis(){if(confirm('Delete this analysis?')){localStorage.removeItem('jcm_an');renderAnalysis();alert('Analysis deleted!');}}
 function saveAnalysis(){var ti=(document.getElementById('an-title')||document.getElementById('adm-an-title')).value.trim();var bo=(document.getElementById('an-body')||document.getElementById('adm-an-body')).value.trim();var lv=(document.getElementById('an-levels')||document.getElementById('adm-an-levels')).value.trim();if(!ti&&!bo){alert('Enter a title or body.');return;}localStorage.setItem('jcm_an',JSON.stringify({title:ti,body:bo,levels:lv}));renderAnalysis();alert('Saved!');}
 function renderAnalysis(){var d=getAnalysis();var aw=document.getElementById('dash-analysis-wrap');if(!d){if(aw)aw.innerHTML='<div class=\"dashboard-empty\">No analysis yet.</div>';return;}[['an-title',d.title],['an-body',d.body],['an-levels',d.levels],['adm-an-title',d.title],['adm-an-body',d.body],['adm-an-levels',d.levels]].forEach(function(pair){var el=document.getElementById(pair[0]);if(el)el.value=pair[1]||'';});var td=document.getElementById('an-title-d');if(td)td.textContent=d.title||'Analysis';var bd=document.getElementById('an-body-d');if(bd)bd.textContent=d.body||'';var lc=document.getElementById('an-lvc'),ld=document.getElementById('an-lvd');if(lc&&ld){if(d.levels&&d.levels.trim()){lc.style.display='block';ld.innerHTML=d.levels.split('\n').filter(Boolean).map(function(ln){var idx=ln.indexOf(':');return'<div class=\"lv-row\">'+(idx>-1?'<strong>'+ln.slice(0,idx)+':</strong>'+ln.slice(idx+1):ln)+'</div>';}).join('');}else{lc.style.display='none';}}if(aw){var body=(d.body||'').trim();aw.innerHTML='<div class=\"dashboard-analysis-title\">'+escapeHtml(d.title||'Analysis')+'</div>'+(body?'<div class=\"dashboard-analysis-body\">'+escapeHtml(body.length>340?body.slice(0,340).trim()+'...':body)+'</div>':'')+(d.levels&&d.levels.trim()?'<div style=\"margin-top:12px\">'+d.levels.split('\n').filter(Boolean).slice(0,3).map(function(ln){var idx=ln.indexOf(':');return'<div class=\"lv-row\">'+(idx>-1?'<strong>'+escapeHtml(ln.slice(0,idx))+':</strong>'+escapeHtml(ln.slice(idx+1)):escapeHtml(ln))+'</div>';}).join('')+'</div>':'')+'<div class=\"db-link\" style=\"margin-top:12px\" onclick=\"goPage(\'analysis\',null)\">Open full analysis <span>→</span></div>';}}
 
