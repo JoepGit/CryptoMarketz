@@ -1,6 +1,6 @@
 {
-  "updated": "18 Mar 2026, 16:21 UTC",
-  "updated_iso": "2026-03-18T16:21:02.486232+00:00",
+  "updated": "18 Mar 2026, 14:47 UTC",
+  "updated_iso": "2026-03-18T14:47:16.094718+00:00",
   "x_posts": [],
   "reddit": {
     "airdrops": [],
@@ -9,59 +9,55 @@
   },
   "youtube": [
     {
-      "title": "The End of the HODL Era",
-      "channel": "Coin Bureau",
-      "link": "https://www.youtube.com/watch?v=1U-ZgLZQLNs",
-      "date": "2026-03-18T14:29:48+00:00"
-    },
-    {
-      "title": "Stablecoins Are About To Change Forever",
-      "channel": "Coin Bureau",
-      "link": "https://www.youtube.com/watch?v=w_ebDIQ3iJc",
-      "date": "2026-03-17T14:01:27+00:00"
-    },
-    {
-      "title": "Why Governments Want to Ban Polymarket",
-      "channel": "Coin Bureau",
-      "link": "https://www.youtube.com/watch?v=UcellVvn43E",
-      "date": "2026-03-15T12:45:02+00:00"
-    },
-    {
       "title": "Bitcoin: An Unfortunate Pattern [Update]",
-      "channel": "Benjamin Cowen",
+      "channel": "Coin Bureau",
       "link": "https://www.youtube.com/watch?v=rKjce1jCxSM",
       "date": "2026-03-18T02:42:35+00:00"
     },
     {
       "title": "Bitcoin Could Go As High As...And Still Be Bearish",
-      "channel": "Benjamin Cowen",
+      "channel": "Coin Bureau",
       "link": "https://www.youtube.com/shorts/C8YTsp-T9Uk",
       "date": "2026-03-18T00:40:54+00:00"
     },
     {
       "title": "Bitcoin: Dubious Speculation",
-      "channel": "Benjamin Cowen",
+      "channel": "Coin Bureau",
       "link": "https://www.youtube.com/watch?v=W_YasiLxgJ4",
       "date": "2026-03-16T22:50:05+00:00"
     },
     {
-      "title": "Bitcoin to $35 TRILLION? He's dead serious 💀",
-      "channel": "Altcoin Daily",
-      "link": "https://www.youtube.com/shorts/Wl3GNK7iAiI",
-      "date": "2026-03-18T12:00:00+00:00"
+      "title": "This Bullish Bitcoin Pattern Hasn't Happened in 4 Years",
+      "channel": "DataDash",
+      "link": "https://www.youtube.com/watch?v=iqTKDxPYqX4",
+      "date": "2026-03-17T19:29:13+00:00"
     },
     {
-      "title": "BREAKING: The SEC just released the crypto BULLS!!",
-      "channel": "Altcoin Daily",
-      "link": "https://www.youtube.com/watch?v=IPIU9rykGm8",
-      "date": "2026-03-17T23:21:47+00:00"
-    },
-    {
-      "title": "Massive News → Bitcoin HIGHER",
-      "channel": "Altcoin Daily",
-      "link": "https://www.youtube.com/shorts/us5nLWnf2Zc",
-      "date": "2026-03-17T12:00:00+00:00"
+      "title": "DO NOT SELL YOUR CRYPTO",
+      "channel": "DataDash",
+      "link": "https://www.youtube.com/shorts/qkGd3PE--ks",
+      "date": "2026-03-15T18:29:03+00:00"
     }
   ],
-  "analysis": null
+  "analysis": {
+    "headline": "Bitcoin dominates YouTube as channels warn of bearish patterns",
+    "summary": "YouTube's top crypto channels are sounding cautious alarms this week — Coin Bureau posted multiple videos questioning Bitcoin's current pattern, while DataDash highlights a historically bullish setup that hasn't appeared in 4 years. Social sentiment is mixed but leaning cautious.",
+    "top_narratives": [
+      "Bitcoin at a critical decision point — bullish pattern vs bearish risk",
+      "Caution building among top YouTubers despite price holding",
+      "Altcoin and DeFi airdrop opportunities still being sought by retail"
+    ],
+    "hot_airdrops": [],
+    "trending_themes": [
+      "Bitcoin macro analysis",
+      "Bear market caution",
+      "4-year cycle patterns",
+      "Altcoin patience",
+      "DeFi accumulation"
+    ],
+    "youtube_takeaway": "Coin Bureau is bearish-cautious on Bitcoin this week, posting three videos questioning current price action. DataDash counters with a historically bullish 4-year pattern signal — watch BTC price action closely.",
+    "analyst_take": "YouTube sentiment is split between caution and optimism. Coin Bureau's repeated bearish warnings are notable — when major channels post multiple cautious videos in one week it often signals a local top or sideways period. Wait for BTC to show direction before adding altcoin exposure.",
+    "sentiment": "neutral",
+    "sentiment_reason": "YouTube channels divided between bullish patterns and bearish warnings, Reddit/X data pending next bot run"
+  }
 }
