@@ -1,18 +1,18 @@
 {
   "date": "2026-03-18",
-  "focus": "Markt onder druk na Fed rate outlook update; Bitcoin zakkt onder $71.5K terwijl liquidaties toenemen.",
-  "risk": "Hoog risico, recessievrees dominant",
-  "btc_structure": "Bitcoin noteert op $71.305 (-4.34% 24h) na Fed-gerelateerde correctie, met zwakke intraday momentum (+0.91% 1h). De sleutelweerstand ligt rond $72K (Fed bounce), terwijl steun op $70K cruciaal blijft voor het behoud van bullish structuur.",
-  "eth_flows": "Ethereum onder druk op $2.192.2 (-6.01% 24h), met aanzienlijke uitverkopen ondanks intraday rebound van +1.09% in het afgelopen uur. Volume blijft solide op $23.47B, maar het 7d-gain van +5.62% wordt ernstig bedreigd door marktbrede liquidaties.",
+  "focus": "Markt onder druk door Fed rate cut optimisme dat vervliegtterwijl Fear & Greed index dieper in fearzone zaktzonder heftige liquidaties.",
+  "risk": "Gematigde bearish correctie met volatiliteit",
+  "btc_structure": "Bitcoin handelt op $71,354 met verlies van 4.53% in 24h, terwijl positief uurmomentum (+0.92%) duidt op lokale steun. Key support niveau's komen onder druk nu 2026 Fed rate cut verwachtingen aan het vervagen zijn, wat macro headwind veroorzaakt.",
+  "eth_flows": "Ethereum onderperformt BTC met 6.33% verlies in 24h op $2,192.37, ondanks week-to-date recovery van 5.63%. Volume blijft gezond op $23.96B, maar intraday weakness suggereert dat altcoins gevoeliger zijn voor macrobias.",
   "top_narratives": [
-    "Fed rate cut hopes verdampen: inflatie outlook hoger, duwt crypto lager",
-    "Tokenized securities groei versnelt: SEC steunt Nasdaq's infra, regulatory tailwind",
-    "FTX krediteuren recovery: $2.2B uitgekeerd maart, sentiment lift mogelijk",
-    "Crypto lobbying: Fairshake's Illinois tegenslag markering eerste politieke moeilijkheden"
+    "SEC goedkeuring van Nasdaq's tokenized securities trading schept institutionele infrastruktureel momentum",
+    "FTX creditor payout van $2.2B in maart catalysator voor marktsentiment normalisering",
+    "Fed rate cut hopes faden verder uit, tighte macro backdrop drukt risicoassets",
+    "Crypto political surge blijft krachtig ondanks Fairshake Illinois setback"
   ],
-  "macro_impact": "Fed-besluiting om rentes vast te houden ondanks hogere inflatieverwachting heeft cryptomarkten hard geraakt, met Bitcoin gezonken onder $71K en totale marktcap -4.15% in 24h. Echter bieden tokenized securities approvals en FTX repayments structurele ondersteuning, terwijl Senator Lummis' verklaringen over market structure bill marktpartici optimisme steunen.",
-  "whale_flows": "Massale liquidaties in ETH (-6.01%) en UNI (-8.23%) deuten op agressief deleveraging bij lagere prijzen. Ondanks $114.6B totaal 24h-volume valt de activiteit van grote spelers terug, wat wijst op voorzichtigheid rond Fed-onzekerheid en rente-verwachtingen.",
-  "funding_oi": "Funding rates data niet beschikbaar, maar extreme Fear & Greed score van 26 (Fear) suggereert massale short positioning en kapitulation van longs. Hogere liquidaties op dit niveau duiden op gestapelde stop losses, wat technische weerstand kan intensiveren.",
-  "volatility_outlook": "Volatiliteit zal waarschijnlijk hoog blijven gegeven Fear & Greed dip naar 26 en aanhoudende Fed-gerelateerde onzekerheid. Technische bounce van $71K zal doorslaggevend zijn: breuk eronder kan cascading liquidaties activeren, terwijl recovery naar $72K verdere stabilisering kan bieden.",
-  "full_report": "De cryptomarkt lijdt onder Fed-gerelateerde druk met Bitcoin op $71.305 (-4.34% 24h), Ethereum op $2.192.2 (-6.01% 24h) en totale marktcap gedaald naar $2.52T (-4.15%). Fear & Greed Index staat op 26 (Fear), wat extreme liquidatierisco's aangeeft. Positieve factoren zijn onder meer SEC-goedkeuring voor tokenized securities op Nasdaq en de aanstaande FTX krediteuren-uitkering van $2.2B in maart. Funding rates data ontbreekt, maar $114.6B 24h-volume en massale UNI-dumping (-8.23%) wijzen op voortdurende deleveraging, met sleutelsteun voor BTC op $70K essentieel voor stabilisering."
+  "macro_impact": "Afnemende Fed rate cut verwachtingen domineren sentiment negatief; obligatiemarkten sluiten op session lows wat risk-off dynamiek versterkt. SEC's positieve stance op tokenized securities en NFT-duidelijkheid biedt fundamentele steun, maar macroheadwind zwaarder weegt.",
+  "whale_flows": "Liquidatiedata niet beschikbaar, maar totaal 24h volume van $114.5B met BTC dominantie op 56.5% suggereert gedisciplineerde positionering zonder paniekverkoopgedrag. Biggest losers (UNI -8.32%, ETH -6.33%) wijzen op geordende rebalancing in plaats van forced liquidaties.",
+  "funding_oi": "Funding rates en open interest data niet beschikbaar vandaag, maar afwezigheid van massale liquidaties in beide richtingen suggereert gematigde leverage exposure. Gebrek aan extreme positional crowding werkt stabiliserend op marktstructuur.",
+  "volatility_outlook": "Fear & Greed index op 26 (extreme fear) met slechts 2-punts daling van gisteren duidt op stabilisatie van bearish sentiment zonder verdere erosie. Verwachting: beperkte volatiliteit mits geen macro schokken; technische steun rond BTC $71K biedt potentieel bounce-grond.",
+  "full_report": "Cryptomarkt terug in correctiemodus met totale market cap dalend 4.01% naar $2.53T. Bitcoin staat op $71,354 (-4.53% in 24h) met uurmomentum positief op +0.92%, terwijl Ethereum onder druk blijft op $2,192.37 (-6.33% 24h). Fear & Greed index blijft op extreme level (26), maar daling van slechts 2 punten sinds gisteren wijst op sentimentstabilisatie. De primaire headwind: vervagend Fed rate cut optimisme drukt macro-gevoelige assets. Positief: SEC goedkeurt Nasdaq's tokenized securities trading en FTX distribueert $2.2B aan creditors in maart, wat institutionele steun \u00e9n schuldenafbouw signaleert. Volume van $114.5B en afwezigheid van massale liquidaties deuten op ordelijke marktdynamiek zonder paniekgedrag."
 }
