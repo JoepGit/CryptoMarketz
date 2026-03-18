@@ -1,18 +1,18 @@
 {
   "date": "2026-03-18",
-  "focus": "Markt corrigeert -4% met Fear Index op 26, terwijl macro-onzekerheid rond Iran en inflatie wegingsfactoren blijft voor risicobeleggingen.",
-  "risk": "Elevated fear, correctie-momentum",
-  "btc_structure": "Bitcoin handelt op $71,051 met -4.69% verlies over 24h en -0.38% in het huidige uur, wat duidt op aanhoudende verkoopdruk na de recente rally tot $72K. Support-niveau's rond $69,000-$70,000 worden kritisch gemonitord aangezien de dominantie stabiel blijft op 56.5%.",
-  "eth_flows": "Ethereum daalt naar $2,184.7 met een zwakker 24h-verlies van -5.87%, onderperforming ten opzichte van BTC's relatieve weerstand. ETH dominantie blijft op 10.5% terwijl institutionele interest moeizaam herstelt.",
+  "focus": "Markt onder druk met 4.20% verlies op totale cap; Fear Index op 26 wijst op paniekverkoop terwijl macro-onzekerheid (Iran-conflict, Fed-beleid) blijft hangen.",
+  "risk": "Elevated - Risk-off sentiment domineert",
+  "btc_structure": "Bitcoin onderwater op $71,044 (-4.63% 24h) na Fed-pause; weeklijks rendement van +0.58% suggereert ondersteuning, maar afname van uurrendement (-0.37%) wijst op zwakheid rond de $71k-zone.",
+  "eth_flows": "Ethereum zwaarder getroffen op $2,187.10 (-5.86% 24h) ondanks sterke weekprestatie (+5.76%); volume van $23.99B blijft solide maar momentum omgekeerd door macro-headwinds.",
   "top_narratives": [
-    "FTX krediteuring: $2.2B maart-distributie vermindert onzekerheid rond balansverhoudingen",
-    "Iran-geopolitiek cre\u00ebert permanente inflatie-floor volgens Fed, belastend voor risicoassets",
-    "Crypto regelgeving accelereert met Senator Lummis' marktstructuur-bill dicht bij passage",
-    "Hyperliquid S&P 500 perpetuals tonen institutionalisering van decentrale derivaten"
+    "FTX creditor payout van $2.2B in maart stabiliseert sentiment rond juridische hervorming",
+    "Fed houdt rates vast onder inflatie-druk door Iran-conflict; 'einde goedkope geldtijdperk' belemmert risicoactiva",
+    "Polymarket-Brahma deal signaleert consolidatie in on-chain trading infrastructure; structurele groei ondanks prijsdruk",
+    "Regulatory clarity via Lummis' marktstructuurwet dicht\u2014lang-termijn bullish offset door korte-termijn risk-off"
   ],
-  "macro_impact": "De Federal Reserve handhaaft beleid stabiel te midden van Iran-spanningen en hogere inflatieprognoses, wat crypto's 'cheap money era' definitief be\u00ebindigt. Dit macroklimaat versterkt de deflationair-verwachting op voorraad-volatiliteit en ondersteunt het 'fear floor' op index 26.",
-  "whale_flows": "Liquidatiegegevens zijn niet beschikbaar, maar het 24h-volume van $111.6B bij -4.07% marktcap-daling suggereert ordelijke outflows zonder extreme capitulatie. UNI's -8.65% verlies wijst op profit-taking in DeFi-sector.",
-  "funding_oi": "Funding rates en open interest data ontbreken voor nauwkeurige analyse, maar de afwezigheid van extreme lange-positie-liquidaties suggereert dat leverage matig bleef en short-covering voorkwam bijzondere crashes.",
-  "volatility_outlook": "Fear & Greed Index op 26 (Fear) signaleert dat markt ondergewaardeerd risico kan bieden, maar geopolitieke risico's en inflatie-onzekerheid wijzen op persistente volatiliteit. Volgende 48 uur kritisch voor stabilisering rond $70K BTC-support.",
-  "full_report": "De cryptomarkt verwerkt correctie met BTC op $71,051 (-4.69% 24h), ETH op $2,184.7 (-5.87%) en totale marktcap gedaald naar $2.52T (-4.07%), terwijl Fear & Greed Index dalende trend toont van 28 naar 26. Macro-drivers omvatten Fed's rentehoudingspolitiek en Iran-escalatie die inflatie-vloer hebben gecre\u00eberd, alsmede FTX's aankomende $2.2B krediteuring. Funding rates ontbreken uit dataset, maar volume van $111.6B en afwezigheid extreme liquidaties wijzen op gecontroleerde correctie. Regelgevings-optimisme rond marktstructuur en institutionalisering via Hyperliquid-derivaten bieden tegengewicht tegen kortetermijn-angst."
+  "macro_impact": "Federal Reserve handhaaft beleid onder toenemende inflatie-zorgen vanuit Iran-geopolitiek, cre\u00eberend een permanente 'inflatievloer' die risicorendementenjacht afremt. Dit verklaart de brede 4.20% verlies op cryptomarkt; beleggersportfolio's krimpen als gevolg van hogere re\u00eble rentetarieven.",
+  "whale_flows": "Liquidatiedata ontbreekt, maar totaal 24h-volume van $111.7B en gedaalde donominantie van BTC (56.5%) duiden op geleidelijke positieafbouw door grote spelers. BTC-dominantie-contrast met ETH (+5.76% wekelijks) suggereert selectieve allocationverschuivingen naar altcoins ondanks algehele verkoopdruk.",
+  "funding_oi": "Funding rates en Open Interest data niet beschikbaar vandaag; zonder deze metrieken blijft leverage-positie-dynamica onduidelijk, maar Fear Index op 26 impliceert minimale long-positionering en verhoogd liquidatierisico bij volgende priceshock.",
+  "volatility_outlook": "Fear & Greed Index op 26 (-2 versus gisteren) toont verdiepende paniek; verwacht blijf-volatiliteit rond $71k-$72k voor BTC en $2.15k-$2.25k voor ETH. Risico op liquidatie-cascades stijgt; breuk onder $71k zou $70.5k testen.",
+  "full_report": "CryptoMarketz observeert scenario van risico-off met totale market cap daling naar $2.52T (-4.20% 24h) en Fear Index op uiterst lage 26. BTC staat onder druk op $71,044 (-4.63% 24h), ETH zwakker op $2,187.10 (-5.86% 24h), terwijl UNI het hardst werd getroffen (-8.33%), LINK -6.39% en AVAX -6.25%. Federal Reserve's rentestabilisatie onder inflatie-context door Iran-geopolitiek cre\u00ebert permanente macro-headwind; dit verklaart de brede verkoopdruk. Positieve factoren\u2014FTX creditor payout van $2.2B, Polymarket-Brahma deal en vooruitgang op marktstructuurwet\u2014bieden structurele steun, maar korte-termijn momentum blijft negatief. Beleggersmoeten waakzaam blijven voor liquidatie-schokken; liquidatiedata ontbreekt, maar volatiliteit zal hoogstwaarschijnlijk toenemen als sentiment verder verslechtert onder de $71k-grens."
 }
