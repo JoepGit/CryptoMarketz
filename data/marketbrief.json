@@ -1,18 +1,18 @@
 {
-  "date": "woensdag 18 maart 2026",
-  "focus": "Brede marktcorrectie met ETH als relatieve zwakkeling terwijl BTC structureel onder druk blijft.",
-  "risk": "Risicovolle marktomgeving, voorzichtig",
-  "btc_structure": "Bitcoin noteert op $73,060 met een verlies van 1,47% in 24 uur, signaliserend dat de steun onder druk staat. Het volume van $37,15B blijft substantieel maar onvoldoende om de negatieve momentum om te buigen. Een consolidatiepatroon duidt op onzekerheid rond verdere prijsbewegingen.",
-  "eth_flows": "Ethereum onderperformt met $2,272,75 en een dagverlies van 2,50%, wat wijst op selectieve verkoopdruk in altcoins. Het volume van $18,46B suggereert dat institutionele flows zich voorzichtiger opstellen. Deze underperformance ten opzichte van BTC duidt op risicovermijding onder traders.",
+  "date": "2026-03-18",
+  "focus": "Markt onder druk met -3.19% kapitalisatiedaling terwijl Fear Index daalt naar 26 op anticipatie Fed FOMC-besluit.",
+  "risk": "Verhoogd liquidatierisico bij institutionele posities",
+  "btc_structure": "Bitcoin handelt op $71,727 met intradag -0.96% en 24h -3.25%, maar wekelijks +3.43% sterkte. Kritische support ligt rond $71k; dip naar $72k gerapporteerd voorafgaand aan Fed-announcement. Dominantie stabiel op 56.6% ondanks marktbreedte-verzwakking.",
+  "eth_flows": "Ethereum onderperformt op $2,219.99 met dagelijks -5.21% verlies ondanks wekelijkse +9.71% winst. Volume van $20.92B blijft robust maar zorgt voor prijsvolatiliteit. ETH dominantie gehandhaafd op 10.6%.",
   "top_narratives": [
-    "Regelgeving: voortschrijdende compliance-eisen drukken altcoin sentiment",
-    "Macro headwinds: onzekere rentebeslissingen beïnvloeden risicobeleggingen",
-    "Tekort aan bullish catalysts: afwezigheid van positieve triggers sustained selling",
-    "Liquiditeitsvoorbereiding: volume-patroon suggereert voorzichtigheid voor opschalingsgebeurtenissen"
+    "Bank of Korea breidt digitale won-proeven uit met twee grote banken",
+    "Institutionele beleggers groeiend cryptobullish: 74% verwacht prijsstijging in 12 maanden",
+    "Tempo AI-agent betalingsprotocol live: blockchain-adoptie accelereert",
+    "Fed FOMC-vergadering cre\u00ebert macro-onzekerheid; stablecoin-regelgeving in focus"
   ],
-  "macro_impact": "De bredere economische onzekerheid, inclusief rentebeslissingen en inflatievoorzienigheden, weegt zwaar op risicobeleggingen. Crypto's gevoeligheid voor macro-factoren manifesteert zich in de huidige correctie. Beleggers herwegen blootstelling in afwachting van duidelijker signalen.",
-  "whale_flows": "Whale-activiteit concentreert zich rond consolidatieniveaus, met BTC-volume ($37,15B) die stabiel maar niet accelererend blijft. Grote houders vermijden agressieve accumulatie, wat wijst op voorzichtige positionering. SOL ($3,22B volume) en ETH ($18,46B volume) tonen verdeelde flows.",
-  "funding_oi": "Funding rates vertonen matiging druk met verwachting van range-bound bewegingen. Long-posities nemen af naarmate de korting toeneemt, wat duidt op deleveraging. Open interest consolidatie suggereert voorbereiding op volatieler markt.",
-  "volatility_outlook": "Volatiliteit blijft verhoogd maar niet extreem, met verwachting van 3-5% dagelijkse bewegingen. Technische ondersteunings- en weerstandsniveaus bepalen korte-termijn trajectory. De afwezigheid van extreme volume-spikes suggereert geen immediatere liquidatiecascade.",
-  "full_report": "De cryptomarkt staat woensdag 18 maart onder druk met Bitcoin op $73,060 (-1,47%), Ethereum op $2,272,75 (-2,50%), en brede altcoin-zwakte inclusief XRP ($1,49, -1,68%) en SOL ($92,11, -1,78%). Het totale volume van $37,15B in BTC en $18,46B in ETH geeft aan dat verkopers initiatiefnemen zonder echter extreem liquiditeitsdruk op te bouwen. De selectieve underperformance van Ethereum en altcoins wijst op risicovermijding in het allocatie-landschap. Whale-flows consolideren rond steunniveaus terwijl macro-onzekerheden continue druk uitoefenen. Traders dienen voorzichtig te navigeren in deze omgeving met focus op technische steun en vermijding van excessieve leverage."
+  "macro_impact": "Fed FOMC-meeting vandaag vormt primaire risicofactor; hete PPI-inflatiedata zette eerdere druk op Bitcoin rond $72k. Circle pleit voor harmonisatie tussen MiCA en Amerikaanse stablecoin-regelgeving, wat institutionele inflows kan faciliteren. Tegenwicht: crypto-industrie-kritiek in Illinois primary-race verhoogt regelgevingsrisico.",
+  "whale_flows": "Liquidatiedata onbeschikbaar; echter, marktbreedte-verzwakking (alle top-10 in rood) duidt op gedwongen liquidaties in leverage-posities. Volume van $101.0B (24h totaal) geconcentreerd in BTC ($41.61B) en ETH ($20.92B), wat institutionele exit-druk suggereert.",
+  "funding_oi": "Funding rates en Open Interest gegevens niet beschikbaar vandaag; historisch patroon van omzetting naar negatieve rates bij 3%+ dalingen suggereert mogelijke short-cover-fase. Afwezigheid van gegevens bemoeilijkt leveragekaartlezing.",
+  "volatility_outlook": "Fear Index gedaald van 28 naar 26 ondanks -3.19% marktdaling, wat duidt op normalisatie in plaats van paniek. Verwacht volatiliteitsuitbreiding na Fed FOMC-uitkomst; $71k-72k support-zone kritisch voor BTC voorkomend van diepere correctie.",
+  "full_report": "De cryptomarkt kampte op 18 maart 2026 met bredere druk, met totale kapitalisatie dalend naar $2.54T (-3.19%). Bitcoin handelde op $71,727 (-0.96% intradag, -3.25% 24h) met wekelijks herstel van +3.43%, terwijl Ethereum op $2,219.99 (-5.21% dagelijks) onderperformde ondanks +9.71% weekwinst. Fear & Greed Index zakte naar 26 (Fear), een verslechtering van gisteren's 28, gereflecteerd door anticipatie op Fed FOMC-vergadering vandaag. Institutioneel sentiment bleef gemengd: 74% van ondervraagde investeerders verwacht 12-maands prijsstijging, maar RedotPay IPO-spanning en crypto-industrie-kritiek in politieke debatten zetten regelgevingsdruk op. Nieuwe initiatieven als Bank of Korea's digitale won-uitbreiding en Tempo AI-protocol lancering ondersteunen langetermijnnarratief; echter, korte termijn gedomineerd door macro-onzekerheid."
 }
