@@ -1,18 +1,18 @@
 {
-  "date": "woensdag 18 maart 2026",
-  "focus": "Brede marktcorrectie van 4-6% signalerend risico op verdere liquidaties en deleveraging.",
-  "risk": "Hoog - liquidatie-cascade risico",
-  "btc_structure": "Bitcoin daalt naar $71.195 met een verlies van 4,52% in 24 uur, wat wijst op afnemende koopdruk. De daling onder technische steunzones suggereert mogelijk verder neerwaarts momentum naar $68.000-niveau's.",
-  "eth_flows": "Ethereum presteert zwakker met $2.182,59 en een dagelijkse daling van 6,24%, wat aangeeft dat altcoin-liquidaties intensiever zijn dan BTC-liquidaties. Volume van $23,75B duidt op gedwongen verkopen.",
+  "date": "2026-03-18",
+  "focus": "Brede marktcorrectie van -4.24% op totale cap terwijl Fed-renteverwachtingen verzwakken en politieke crypto-momentum happeringen vertoont.",
+  "risk": "Bearish correctie met extreme fear sentiment",
+  "btc_structure": "Bitcoin handelt op $71,161 met een 24h-daling van -4.56%, ondanks een weekwinst van +0.75%. De sterke valume van $46.43B suggereert liquidaties eerder dan organische verkoopdruk, maar technische steun rond $70k wordt kritisch getest.",
+  "eth_flows": "Ethereum verliest -6.25% in 24h naar $2,182.38, aanzienlijk zwakker dan Bitcoin. De $23.76B volume geeft aan dat grote posities worden gesloten na het weeklijkse plus van +5.08%, wat een potentieel top-signaal vormt.",
   "top_narratives": [
-    "Macro hawkish sentiment: rentetarief verwachtingen stijgen",
-    "Leverage unwinding: futures liquidaties boven $500M",
-    "Technische breakdown: meerjarige steunniveaus onder druk",
-    "Volume capitulation: retail outflows domineren instituten"
+    "FTX-schuldeisers ontvangen $2.2 miljard maart-uitbetaling, wat liquidatiedruk op markt kan veroorzaken",
+    "Fed handhaaft rentes met sterkere inflatievooruitzichten \u2013 renteverlaging in 2026 lijkt nu verder weg",
+    "Politieke crypto-vooruitgang vertraagt: Fairshake's Illinois-campagne strandde, maar senator Lummis blijft optimistisch over marktstructuurwetgeving",
+    "SEC verduidelijkt dat NFTs buiten effectenlaws vallen \u2013 institutionele clarity neemt toe ondanks marktdruk"
   ],
-  "macro_impact": "De bredere risico-off stemming in traditionale markten stroomt door naar crypto, versterkt door mogelijke Fed-signalen. Risicovolle activa ondervinden gelijktijdige verkoopdruk op aandelen en obligaties.",
-  "whale_flows": "Gegeven het hoge volume ($47,18B BTC, $23,75B ETH) lijkt dit distributievolume van whale-adressen, niet accumulatie. On-chain transfers naar exchanges signaleren voorgenomen verkopen.",
-  "funding_oi": "Funding rates zullen waarschijnlijk negatief uitslaan op perpetual futures na deze liquidaties. Open Interest zal verminderen naarmate beleggersposities worden afgebouwd.",
-  "volatility_outlook": "Verwacht aanhoudende volatiliteit van 8-12% gedurende deze sessie met mogelijke flash-crashes. VIX crypto-equivalent beweegt boven normale bandbreedte, wat wijst op herstellingsfase.",
-  "full_report": "De markt ervaart vandaag een significante corrigerende beweging met Bitcoin op $71.195 (-4,52%), Ethereum op $2.182,59 (-6,24%), en brede altcoin-druk met SOL op $89,67 (-5,47%). Het gecombineerde volume van $47,18B in BTC en $23,75B in ETH suggereert geen organische verkopen maar gedwongen liquidaties. Macro-headwinds van potentieel stijgende renteverwachtingen combineren met technische breakdowns onder sleutelsteunzones, wat wijst op deleveraging-scenario's. Whale-activiteit op exchanges en negatieve funding rates duiden op verdere neerwaartse druk. Volgende steunniveaus kritiek voor marktsentiment."
+  "macro_impact": "De afnemende Fed-renteverlaging-verwachtingen werken remmend op risicoactiva; crypto volgt macro-sentiment in correctie. Tegelijkertijd vergroten FTX-terugbetalingen van $2.2B en Kalshi/Brahma-infrastructuurschaal institutionele integratie, wat langetermijn-basis steunt ondanks korttermijn-volatiliteit.",
+  "whale_flows": "Liquidatiedata niet beschikbaar, maar totaal 24h-volume van $113.5B en sterk volume op grootste coins duidt op massieve positionele uitruiming. De correlatie tussen alle top-10 coins in negatieve zone wijst op systemische deleveraging eerder dan selectieve profit-taking.",
+  "funding_oi": "Funding rates en open interest data ontbreken, maar het Fear & Greed Index op 26 (Fear, licht verbeterd van 28) signaleert extreme negatieve sentiment. Zonder beschikbare funding data is het waarschijnlijk dat shorts in voordeel zijn na deze correctie.",
+  "volatility_outlook": "Verwacht stabiel tot matig volatiel gedrag: Fear & Greed-rebound van extreme lows suggereert potenti\u00eble bodem-vorming. Echter, technische steun rond $70k (BTC) en $2,100 (ETH) zal cruciaal zijn; doorbraak lager kan volatiliteit opnieuw opschroeven.",
+  "full_report": "De cryptomarkt onderging op 18 maart 2026 een brede correctie met totale marktcap daling naar $2.52T (-4.24% in 24h), terwijl Bitcoin op $71,161 (-4.56%) en Ethereum op $2,182.38 (-6.25%) steile verliezen lieten zien. Het Fear & Greed Index stond op 26 (Fear-territorio), wat een potentieel bottom-scenario aangeeft na extreme liquidaties. Macro-drivers omvatten Fed-rentestabiliteit met sterkere inflatie-signalen, waardoor 2026-renteverlaging-hoop vervaagt. Positieve onderstroming: FTX betaalt $2.2B aan schuldeisers uit, Kalshi-Brahma-fusie versterkt infrastructuur, en SEC-duidelijkheid over NFTs ondersteunt institutioneel vertrouwen. Technische steun rond $70k-niveau kritisch; doorbraak eronder riskeert verdere deleveraging."
 }
