@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """
-CryptoMarketz Trending Intelligence Bot
-Runs Mon + Thu via GitHub Actions.
-Sources: X/Nitter, Reddit (4 subs), Google Trends RSS, YouTube RSS, GitHub Trending
-Claude analyses everything and writes a full intelligence report.
+CryptoMarketz Social Intelligence Bot
+Sources: X/Twitter (Nitter RSS) + Reddit + YouTube
+Runs Mon + Thu via GitHub Actions. Claude analyses everything.
 """
 
 import json, os, re, time, urllib.request, urllib.parse
@@ -15,42 +14,40 @@ ANTHROPIC_API_KEY = os.environ.get('ANTHROPIC_API_KEY', '')
 def fetch(url, timeout=12):
     try:
         req = urllib.request.Request(url, headers={
-            'User-Agent': 'Mozilla/5.0 (compatible; CryptoMarketz-Bot/1.0)',
+            'User-Agent': 'Mozilla/5.0 CryptoMarketz-Bot/1.0',
             'Accept': 'application/rss+xml,application/xml,application/json,text/xml,*/*'
         })
         with urllib.request.urlopen(req, timeout=timeout) as r:
             return r.read().decode('utf-8', errors='replace')
     except Exception as e:
-        print(f"  ✗ fetch {url[:55]}: {e}")
+        print(f"  fetch error {url[:55]}: {e}")
         return None
 
 def clean_html(s):
     return re.sub(r'<[^>]+>', '', s or '').strip()
 
 # ─────────────────────────────────────────────
-# SOURCE 1: X / TWITTER via Nitter RSS
+# 1. X / TWITTER via Nitter RSS
 # ─────────────────────────────────────────────
 NITTER = [
     'https://nitter.privacydev.net',
     'https://nitter.poast.org',
     'https://nitter.woodland.cafe',
     'https://nitter.mint.lgbt',
+    'https://nitter.cz',
 ]
 X_QUERIES = [
-    'airdrop crypto',
-    'crypto airdrop 2025',
+    'airdrop crypto 2026',
     'new crypto project launch',
-    'altseason 2025',
-    'crypto narrative this week',
-    'defi airdrop',
-    'web3 airdrop',
-    'crypto trending',
+    'altseason crypto',
+    'defi airdrop claim',
+    'crypto narrative 2026',
 ]
 
-def fetch_nitter(query, limit=5):
-    enc = urllib.parse.quote(query)
+def fetch_x(query, limit=5):
+    encoded = urllib.parse.quote(query)
     for instance in NITTER:
-        xml = fetch(f"{instance}/search/rss?q={enc}&f=tweets")
+        xml = fetch(f"{instance}/search/rss?q={encoded}&f=tweets")
         if not xml or '<item>' not in xml:
             continue
         try:
@@ -58,270 +55,165 @@ def fetch_nitter(query, limit=5):
             ns = {'dc': 'http://purl.org/dc/elements/1.1/'}
             posts = []
             for item in root.findall('.//item')[:limit]:
-                title   = item.findtext('title','').strip()
-                link    = item.findtext('link','').strip()
-                desc    = clean_html(item.findtext('description',''))
-                pub     = item.findtext('pubDate','').strip()
-                creator = item.findtext('dc:creator','',ns).strip()
+                title   = clean_html(item.findtext('title') or '')
+                link    = (item.findtext('link') or '').strip()
+                desc    = clean_html(item.findtext('description') or '')
+                pub     = (item.findtext('pubDate') or '').strip()
+                creator = (item.findtext('dc:creator', '', ns) or '').strip()
                 text    = desc if len(desc) > len(title) else title
-                if len(text) > 15:
-                    posts.append({'text': text[:300], 'user': creator,
-                                  'link': link, 'date': pub, 'query': query})
+                if len(text) > 20 and link:
+                    posts.append({'text': text[:280], 'user': creator, 'link': link, 'date': pub, 'query': query})
             if posts:
-                print(f"  ✓ Nitter [{instance[:28]}] '{query}' → {len(posts)}")
-                return posts
+                print(f"  ✓ X '{query[:25]}' → {len(posts)} posts via {instance[:28]}")
+                return posts[:limit]
         except Exception as e:
-            print(f"  ✗ Nitter parse: {e}")
+            print(f"  X parse error: {e}")
+    print(f"  ✗ X '{query[:25]}' → all instances down")
     return []
 
 # ─────────────────────────────────────────────
-# SOURCE 2: REDDIT (4 subreddits)
+# 2. REDDIT
 # ─────────────────────────────────────────────
 SUBREDDITS = [
     ('airdrops',        'top',  'week'),
     ('CryptoCurrency',  'hot',  'week'),
     ('CryptoMoonShots', 'top',  'week'),
-    ('defi',            'hot',  'week'),
 ]
 
-def fetch_reddit(sub, sort='hot', t='week', limit=6):
-    data = fetch(f'https://www.reddit.com/r/{sub}/{sort}.json?limit=10&t={t}')
-    if not data: return []
+def fetch_reddit(sub, sort='hot', t='week', limit=7):
+    data = fetch(f'https://www.reddit.com/r/{sub}/{sort}.json?limit={limit+3}&t={t}')
+    if not data:
+        return []
     try:
         posts = []
-        for child in json.loads(data).get('data',{}).get('children',[]):
-            p = child.get('data',{})
-            title = p.get('title','').strip()
+        for child in json.loads(data).get('data', {}).get('children', []):
+            p = child.get('data', {})
+            title = (p.get('title') or '').strip()
             score = p.get('score', 0)
-            if title and score > 5:
+            if title and score > 3:
                 posts.append({
                     'title':    title,
                     'score':    score,
                     'comments': p.get('num_comments', 0),
-                    'flair':    p.get('link_flair_text','') or '',
+                    'flair':    p.get('link_flair_text') or '',
                     'url':      'https://reddit.com' + (p.get('permalink') or ''),
                     'sub':      sub,
-                    'selftext': (p.get('selftext') or '')[:300]
                 })
-        posts.sort(key=lambda x: x['score'], reverse=True)
-        print(f"  ✓ r/{sub} {sort}/{t} → {len(posts[:limit])}")
+        print(f"  ✓ r/{sub} → {len(posts)} posts")
         return posts[:limit]
     except Exception as e:
-        print(f"  ✗ Reddit r/{sub}: {e}")
+        print(f"  Reddit r/{sub} error: {e}")
         return []
 
 # ─────────────────────────────────────────────
-# SOURCE 3: GOOGLE TRENDS RSS
-# ─────────────────────────────────────────────
-TRENDS_QUERIES = [
-    'cryptocurrency airdrop',
-    'crypto',
-    'bitcoin',
-    'defi',
-]
-
-def fetch_google_trends():
-    """Fetch Google Trends daily search trends RSS."""
-    results = []
-    # Daily trends RSS (US)
-    xml = fetch('https://trends.google.com/trends/trendingsearches/daily/rss?geo=US')
-    if xml:
-        try:
-            root = ET.fromstring(xml)
-            for item in root.findall('.//item')[:15]:
-                title       = item.findtext('title','').strip()
-                traffic     = item.findtext('{https://trends.google.com/trends/trendingsearches/daily}approx_traffic','').strip()
-                news_items  = item.findall('{https://trends.google.com/trends/trendingsearches/daily}news_item')
-                news_title  = ''
-                if news_items:
-                    news_title = news_items[0].findtext('{https://trends.google.com/trends/trendingsearches/daily}news_item_title','').strip()
-                # Only include crypto-related trends
-                combined = (title + ' ' + news_title).lower()
-                crypto_kws = ['crypto','bitcoin','btc','eth','coin','token','defi','nft','web3','blockchain','airdrop','solana','ethereum']
-                if any(kw in combined for kw in crypto_kws):
-                    results.append({
-                        'term':    title,
-                        'traffic': traffic,
-                        'context': news_title[:120] if news_title else ''
-                    })
-            print(f"  ✓ Google Trends → {len(results)} crypto-related trends")
-        except Exception as e:
-            print(f"  ✗ Google Trends parse: {e}")
-
-    # Also check specific search interest via RSS
-    for query in TRENDS_QUERIES[:2]:
-        enc = urllib.parse.quote(query)
-        xml2 = fetch(f'https://trends.google.com/trends/explore/rss?q={enc}&geo=US&date=now+7-d')
-        if xml2:
-            try:
-                root2 = ET.fromstring(xml2)
-                for item in root2.findall('.//item')[:3]:
-                    title = item.findtext('title','').strip()
-                    if title and title not in [r['term'] for r in results]:
-                        results.append({'term': title, 'traffic': '', 'context': f'Interest: {query}'})
-            except:
-                pass
-        time.sleep(0.5)
-
-    return results[:10]
-
-# ─────────────────────────────────────────────
-# SOURCE 4: YOUTUBE RSS (trending crypto channels)
+# 3. YOUTUBE via RSS (no API key needed)
 # ─────────────────────────────────────────────
 YT_CHANNELS = [
-    # Channel IDs for popular crypto channels (public RSS, no API needed)
-    ('UCRvqjQPSeaWn-uEx-w0XOIg', 'Coin Bureau'),
-    ('UCEFJVYe4ZHpc4eUFKAPeEaA', 'Benjamin Cowen'),
-    ('UCiRiQGCHGjDLT9FQXFW0I3A', 'InvestAnswers'),
-    ('UCMtJYS0PrtiUwlk6zjGDEMA', 'DataDash'),
+    ('Coin Bureau',    'UCqK_GSMbpiV8spgD3ZGloSw'),
+    ('Benjamin Cowen', 'UCRvqjQPSeaWn-uEx-w0XOIg'),
+    ('Altcoin Daily',  'UCbLhGKVY-bJPcawebgtNfbw'),
+    ('DataDash',       'UCCatR7nWbYrkVXdxXb4cGXtA'),
 ]
 
-def fetch_youtube_rss(channel_id, channel_name):
-    url = f'https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}'
-    xml = fetch(url)
-    if not xml: return []
+def fetch_youtube(channel_name, channel_id, limit=3):
+    xml = fetch(f'https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}')
+    if not xml:
+        return []
     try:
         root = ET.fromstring(xml)
         ns = {
-            'atom': 'http://www.w3.org/2005/Atom',
+            'atom':  'http://www.w3.org/2005/Atom',
             'media': 'http://search.yahoo.com/mrss/',
-            'yt': 'http://www.youtube.com/xml/schemas/2015',
         }
         videos = []
-        for entry in root.findall('atom:entry', ns)[:3]:
-            title     = entry.findtext('atom:title', '', ns).strip()
-            link_el   = entry.find('atom:link', ns)
-            link      = link_el.get('href','') if link_el is not None else ''
-            published = entry.findtext('atom:published','',ns).strip()
-            # Only include if crypto-related
-            kws = ['airdrop','crypto','bitcoin','btc','eth','altcoin','defi','nft','bull','bear','market','token','coin','solana','ethereum','web3']
-            if any(kw in title.lower() for kw in kws):
-                videos.append({
-                    'title':   title,
-                    'channel': channel_name,
-                    'link':    link,
-                    'date':    published
-                })
-        if videos:
-            print(f"  ✓ YouTube {channel_name} → {len(videos)} videos")
+        for entry in root.findall('atom:entry', ns)[:limit]:
+            title   = (entry.findtext('atom:title', '', ns) or '').strip()
+            link_el = entry.find('atom:link', ns)
+            link    = link_el.attrib.get('href', '') if link_el is not None else ''
+            pub     = (entry.findtext('atom:published', '', ns) or '').strip()
+            if title and link:
+                videos.append({'title': title, 'channel': channel_name, 'link': link, 'date': pub})
+        print(f"  ✓ YouTube {channel_name} → {len(videos)} videos")
         return videos
     except Exception as e:
-        print(f"  ✗ YouTube {channel_name}: {e}")
+        print(f"  YouTube error {channel_name}: {e}")
         return []
 
 # ─────────────────────────────────────────────
-# SOURCE 5: GITHUB TRENDING (new crypto/web3 repos)
+# 4. CLAUDE ANALYSIS
 # ─────────────────────────────────────────────
-def fetch_github_trending():
-    """Scrape GitHub trending for crypto/web3/blockchain repos."""
-    results = []
-    for topic in ['cryptocurrency', 'web3', 'defi', 'blockchain', 'airdrop']:
-        html = fetch(f'https://github.com/trending?q={topic}&since=weekly')
-        if not html: continue
-        # Parse repo names and descriptions from HTML
-        repos = re.findall(r'<h2[^>]*>\s*<a[^>]+href="(/[^"]+)"[^>]*>([\s\S]*?)</a>', html)
-        descs = re.findall(r'<p[^>]*class="[^"]*col-9[^"]*"[^>]*>([\s\S]*?)</p>', html)
-        stars = re.findall(r'aria-label="(\d[\d,]*) stars"', html)
-        for i, (path, name) in enumerate(repos[:4]):
-            name_clean = re.sub(r'\s+', ' ', name).strip()
-            desc = clean_html(descs[i]) if i < len(descs) else ''
-            star = stars[i].replace(',','') if i < len(stars) else '0'
-            results.append({
-                'repo':  name_clean,
-                'desc':  desc[:150],
-                'stars': int(star) if star.isdigit() else 0,
-                'url':   'https://github.com' + path,
-                'topic': topic
-            })
-        time.sleep(0.8)
-
-    # Sort by stars
-    results.sort(key=lambda x: x['stars'], reverse=True)
-    print(f"  ✓ GitHub Trending → {len(results[:8])} repos")
-    return results[:8]
-
-# ─────────────────────────────────────────────
-# CLAUDE ANALYSIS
-# ─────────────────────────────────────────────
-def analyse_with_claude(raw):
+def claude_analyse(data):
     if not ANTHROPIC_API_KEY:
-        print("  ✗ No ANTHROPIC_API_KEY — skipping")
+        print("  No API key — skipping Claude")
         return None
 
-    # Build rich context string
-    x_str = '\n'.join([f'- [{p["query"]}] @{p["user"]}: {p["text"][:180]}' for p in raw['x_posts'][:15]]) or 'none'
+    x_str = '\n'.join([f"- [{p['query']}] @{p.get('user','?')}: {p['text'][:140]}"
+                        for p in data.get('x_posts', [])[:12]]) or 'No X posts available (Nitter instances may be down).'
 
     reddit_str = ''
-    for sub, posts in raw['reddit'].items():
-        reddit_str += f'\nr/{sub}:\n'
-        reddit_str += '\n'.join([f'  - {p["title"][:120]} (↑{p["score"]})' for p in posts[:4]])
+    for sub, posts in data.get('reddit', {}).items():
+        if posts:
+            reddit_str += f"\nr/{sub}:\n"
+            reddit_str += '\n'.join([f"  - {p['title'][:100]} (↑{p['score']})" for p in posts[:4]])
+    if not reddit_str:
+        reddit_str = 'No Reddit posts available.'
 
-    trends_str = '\n'.join([f'- {t["term"]} ({t["traffic"]}) — {t["context"]}' for t in raw['google_trends'][:8]]) or 'none'
+    yt_str = '\n'.join([f"- [{v['channel']}] {v['title']}" for v in data.get('youtube', [])[:8]]) or 'No YouTube videos.'
 
-    yt_str = '\n'.join([f'- [{v["channel"]}] {v["title"][:100]}' for v in raw['youtube'][:8]]) or 'none'
+    prompt = f"""You are a senior crypto market analyst specialising in social sentiment and airdrop hunting.
+Today is {datetime.now(timezone.utc).strftime('%A %d %B %Y')}.
 
-    gh_str = '\n'.join([f'- {r["repo"]} ⭐{r["stars"]} [{r["topic"]}]: {r["desc"][:100]}' for r in raw['github'][:6]]) or 'none'
+Analyse the social media data below and write a structured weekly intelligence report.
 
-    prompt = f"""You are a crypto market intelligence analyst. Based on this week's data from X/Twitter, Reddit, Google Trends, YouTube and GitHub, write a structured intelligence report.
-
-DATE: {datetime.now(timezone.utc).strftime('%A %d %B %Y')}
-
-═══ X / TWITTER (what people are posting & searching) ═══
+═══ X / TWITTER ═══
 {x_str}
 
 ═══ REDDIT ═══
 {reddit_str}
 
-═══ GOOGLE TRENDS (what people are googling this week) ═══
-{trends_str}
-
-═══ YOUTUBE (what top crypto creators are covering) ═══
+═══ YOUTUBE — LATEST VIDEOS ═══
 {yt_str}
 
-═══ GITHUB TRENDING (new crypto/web3 projects blowing up) ═══
-{gh_str}
-
-Based on ALL sources above, respond with ONLY this JSON (no markdown, no explanation):
+Respond ONLY with a valid JSON object (no markdown, no code fences):
 {{
-  "headline": "One punchy headline summarising the biggest crypto theme right now (max 12 words)",
-  "summary": "2-3 sentences: what is the market narrative this week across all these sources?",
+  "headline": "One punchy headline capturing this week's biggest crypto social trend (max 12 words)",
+  "summary": "2-3 sentences: what is the market talking about this week based on the data above",
   "top_narratives": ["narrative 1", "narrative 2", "narrative 3"],
   "hot_airdrops": [
-    {{"name": "project", "description": "what it is and why people are hyped, 1 sentence", "status": "upcoming/live/ended", "hype": "high/medium/low"}}
+    {{"name": "project name", "description": "1-2 sentences what it is and why people are excited", "status": "upcoming/live/ended", "hype": "high/medium/low", "source": "X/Reddit/YouTube"}}
   ],
   "trending_themes": ["theme 1", "theme 2", "theme 3", "theme 4", "theme 5"],
-  "github_spotlight": {{"repo": "repo name", "why": "1 sentence why this is interesting for crypto traders"}},
-  "youtube_pulse": "1 sentence: what are crypto YouTubers focusing on this week?",
-  "google_signal": "1 sentence: what does Google Trends tell us about retail interest right now?",
-  "analyst_take": "2-3 sentences: your honest take — what should traders pay attention to and why?",
-  "risk_level": "low/medium/high/extreme",
-  "risk_reason": "1 sentence why"
+  "youtube_takeaway": "1-2 sentences: what are YouTube crypto channels saying this week?",
+  "analyst_take": "2-3 sentences: honest analyst take — what to watch, what to be careful of",
+  "sentiment": "bullish/neutral/bearish",
+  "sentiment_reason": "1 sentence explaining the overall social sentiment"
 }}"""
 
     try:
         body = json.dumps({
-            "model": "claude-sonnet-4-6",
+            "model": "claude-sonnet-4-20250514",
             "max_tokens": 1200,
             "messages": [{"role": "user", "content": prompt}]
-        }).encode()
+        }).encode('utf-8')
         req = urllib.request.Request(
             'https://api.anthropic.com/v1/messages',
             data=body,
             headers={
-                'x-api-key':           ANTHROPIC_API_KEY,
-                'anthropic-version':   '2023-06-01',
-                'content-type':        'application/json'
+                'x-api-key': ANTHROPIC_API_KEY,
+                'anthropic-version': '2023-06-01',
+                'content-type': 'application/json'
             }
         )
-        with urllib.request.urlopen(req, timeout=35) as r:
-            resp = json.loads(r.read().decode())
+        with urllib.request.urlopen(req, timeout=45) as r:
+            resp = json.loads(r.read().decode('utf-8'))
             text = resp['content'][0]['text'].strip()
-            text = re.sub(r'^```json\s*|\s*```$', '', text)
-            analysis = json.loads(text)
-            print(f"  ✓ Claude: \"{analysis.get('headline','')[:60]}\"")
-            return analysis
+            text = re.sub(r'^```json\s*', '', text)
+            text = re.sub(r'\s*```$', '', text)
+            result = json.loads(text)
+            print(f"  ✓ Claude: \"{result.get('headline','')[:55]}\"")
+            return result
     except Exception as e:
-        print(f"  ✗ Claude error: {e}")
+        print(f"  Claude error: {e}")
         return None
 
 # ─────────────────────────────────────────────
@@ -332,65 +224,48 @@ def main():
     print(f"CryptoMarketz Trending Bot — {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}")
     print(f"{'='*55}\n")
 
-    raw = {
+    data = {
         'updated':      datetime.now(timezone.utc).strftime('%d %b %Y, %H:%M UTC'),
         'updated_iso':  datetime.now(timezone.utc).isoformat(),
         'x_posts':      [],
         'reddit':       {},
-        'google_trends':[],
         'youtube':      [],
-        'github':       [],
-        'analysis':     None
+        'analysis':     None,
     }
 
-    # ── X / Twitter ──
     print("── X / Twitter (Nitter RSS) ──")
     seen = set()
     for query in X_QUERIES:
-        for p in fetch_nitter(query, limit=5):
-            if p['link'] not in seen:
-                seen.add(p['link'])
-                raw['x_posts'].append(p)
-        time.sleep(1.2)
-    print(f"   Total unique X posts: {len(raw['x_posts'])}")
+        for post in fetch_x(query, limit=5):
+            if post['link'] not in seen:
+                seen.add(post['link'])
+                data['x_posts'].append(post)
+        time.sleep(1.5)
+    print(f"  Total unique X posts: {len(data['x_posts'])}")
 
-    # ── Reddit ──
     print("\n── Reddit ──")
     for sub, sort, t in SUBREDDITS:
-        raw['reddit'][sub] = fetch_reddit(sub, sort, t, limit=6)
+        data['reddit'][sub] = fetch_reddit(sub, sort, t)
         time.sleep(1)
 
-    # ── Google Trends ──
-    print("\n── Google Trends ──")
-    raw['google_trends'] = fetch_google_trends()
-
-    # ── YouTube ──
     print("\n── YouTube ──")
-    for ch_id, ch_name in YT_CHANNELS:
-        raw['youtube'].extend(fetch_youtube_rss(ch_id, ch_name))
+    for name, cid in YT_CHANNELS:
+        data['youtube'].extend(fetch_youtube(name, cid, limit=3))
         time.sleep(0.8)
 
-    # ── GitHub ──
-    print("\n── GitHub Trending ──")
-    raw['github'] = fetch_github_trending()
-
-    # ── Claude ──
     print("\n── Claude Analysis ──")
-    raw['analysis'] = analyse_with_claude(raw)
+    data['analysis'] = claude_analyse(data)
 
-    # ── Write ──
     os.makedirs('data', exist_ok=True)
     with open('data/trending.json', 'w', encoding='utf-8') as f:
-        json.dump(raw, f, ensure_ascii=False, indent=2)
+        json.dump(data, f, ensure_ascii=False, indent=2)
 
-    size = os.path.getsize('data/trending.json')
-    print(f"\n✅ data/trending.json written ({size:,} bytes)")
-    print(f"   X posts:       {len(raw['x_posts'])}")
-    print(f"   Reddit posts:  {sum(len(v) for v in raw['reddit'].values())}")
-    print(f"   Google trends: {len(raw['google_trends'])}")
-    print(f"   YouTube:       {len(raw['youtube'])}")
-    print(f"   GitHub repos:  {len(raw['github'])}")
-    print(f"   Claude:        {'✓' if raw['analysis'] else '✗ skipped'}")
+    print(f"\n✅ data/trending.json written")
+    print(f"   X posts:    {len(data['x_posts'])}")
+    for sub, posts in data['reddit'].items():
+        print(f"   r/{sub}: {len(posts)}")
+    print(f"   YouTube:    {len(data['youtube'])} videos")
+    print(f"   Claude:     {'✓' if data['analysis'] else '✗ skipped'}")
 
 if __name__ == '__main__':
     main()
