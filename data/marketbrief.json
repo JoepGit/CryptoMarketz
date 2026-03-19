@@ -1,18 +1,18 @@
 {
   "date": "donderdag 19 maart 2026",
-  "focus": "Brede marktcorrectie van 4-6% duidt op risico-off sentiment en mogelijke institutionele posities liquidatie.",
-  "risk": "Hoog - volatiele correctiefase",
-  "btc_structure": "Bitcoin staat onder druk op $70,244 met een dagverlies van -4.97% en handelsvolume van $51.17B. De technische steun onder $68,000 wordt kritisch getest. Verdere daling kan kettingreacties in gehedgde posities uitlokken.",
-  "eth_flows": "Ethereum zwakker dan Bitcoin met -5.93% daling naar $2,178.29 en volume van $27.82B. De relatieve underperformance duidt op aflopende alts en mogelijk profit-taking in DeFi-posities. ETH/BTC ratio verzwakt aanzienlijk.",
+  "focus": "Brede marktcorrectie met Bitcoin onder $71k druk en risico op verdere capitulatie.",
+  "risk": "Rood — verhoogde verkoopdynamiek",
+  "btc_structure": "Bitcoin daalt 3.81% naar $70,149 op dagbasis, waarbij het belangrijke steunniveaus test. Technische breakdown onder $71k suggereert potentiële versnelling naar lagere niveaus zonder institutioneel buyvolume.",
+  "eth_flows": "Ethereum onderperformt met -4.29% verlies naar $2,171.23, wat een zwakkere instroom in alt-season wijst. Het hogere correlatie-profiel met Bitcoin duidt op systemische liquidaties in plaats van selectieve positie-afbouw.",
   "top_narratives": [
-    "Macro headwinds - verwachte rentestijging drukt risicoactiva",
-    "Alt-seizoen voorbij - BTC dominantie groeit",
-    "Liquidatiecascades - gekoppelde posities veroorzaken verliesverkoop",
-    "Institutioneel risicobeheer - hedge funds verkleinen crypto-blootstelling"
+    "Macro-rente-onzekerheid drukt op risicoactiva",
+    "Liquidatie-cascade in leverage-posities",
+    "Institutionele posities onder druk",
+    "Oversold technische levels potentieel bounce-scenario's"
   ],
-  "macro_impact": "De bredere rood-markt lijkt gestimuleerd door hawkish centrale bank-signalen en werkloosheidscijfers. Dit drukt vooral op speculatieve assets zoals altcoins. BTC's digitale-goud status biedt beperkte bescherming in de huidige omgeving.",
-  "whale_flows": "Whale-activiteit blijft significant op $51.17B BTC-volume, hoewel concentratie in selling-druk wijst op institutionele exit-strategieën. XRP en SOL tonen zwakkere volumes ($3.08B en $4.39B), wat duidt op minder steun voor alternative narratieven.",
-  "funding_oi": "Negatieve funding rates op leverage-markten suggereren dat shorted posities winstgevend worden. Dit kan een korte termijn steunvlak creëren rond $68,000 voor BTC, maar bredere oi-daling duidt op gedwongen deleveraging.",
-  "volatility_outlook": "VIX-achtige crypto-volatiliteit zal waarschijnlijk toenemen als macrodata verslechtert. Verwacht bereiken van $60,000 Bitcoin-niveaus binnen 2-3 weken als sentiment niet herstelt. Opties-volume geconcentreerd op downside-bescherming.",
-  "full_report": "Cryptomarkten verkeren in een significante correctiefase met Bitcoin op $70,244 (-4.97%), Ethereum op $2,178.29 (-5.93%), terwijl BNB ($646.87, -3.86%), SOL ($90.06, -4.36%) en XRP ($1.46, -3.36%) meedalend. Het totale handelsvolume blijft robuust met $51.17B voor BTC, maar het patroon duidt op risico-off reallocatie. Macro-headwinds van centrale bankbeleid drukken speculatieve posities, met name alts die achterblijven in relatieve waarde. Whale-flows tonen uitgangsdruk op middelgrote volumes in alternative chains. Tenzij technische steun rond $68,000 standhoudt, riskeert de markt verdere cascade naar $60,000. Voorzichtig sentiment aanbevolen."
+  "macro_impact": "Marktbrede risicoaversie lijkt te domineren, mogelijk veroorzaakt door renteverwachtingen of macro-gegevens. De gelijktijdige daling over alle top-5 assets wijst op externe factoren buiten crypto-specifieke dynamiek.",
+  "whale_flows": "Bitcoin volume ($51.27B) blijft substantieel maar stijgt niet proportioneel aan volatiliteit, wat duidt op voorzichtige whale-activiteit. Ethereum-volume ($27.58B) toont geen accumulatie-signalen op deze prisniveaus.",
+  "funding_oi": "Verwachting van verdere deleveraging totdat macro-signalen stabiliseren. Perpetual-funding rates zullen waarschijnlijk negatief blijven totdat kopers hernieuwde vertrouwen tonen.",
+  "volatility_outlook": "Volatiliteit geeft signalen van verdere beweging; $70k-$72k zone vormt kritieke support voor Bitcoin. Doorbraak hieronder kan 5-10% verdere correctie activeren in komende handelssessies.",
+  "full_report": "De cryptomarkt ondervindt donderdag 19 maart 2026 brede verkoopdruk met Bitcoin dalend 3.81% naar $70,149 en Ethereum -4.29% naar $2,171.23. Alle top-5 assets vertonen rode candles, met XRP -2.35% ($1.46), BNB -2.67% ($645) en Solana -2.62% ($89.88). De gecombineerde volumedruk ($51.27B BTC, $27.58B ETH) reflecteert systematische liquidaties zonder duidelijke institutionele steun. Technische niveaus onder $71k voor Bitcoin markeren kritieke support; doorbraak zou verdere capitulatie kunnen catalyseren. Marktdeelnemers dienen voorzichtigheid in acht te nemen totdat macro-factoren stabiliseren en whale-accumulation-signalen opnieuw verschijnen."
 }
