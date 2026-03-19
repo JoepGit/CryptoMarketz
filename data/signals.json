@@ -1,5 +1,29 @@
 [
   {
+    "id": 1773952739986,
+    "coin": "XRP/USD",
+    "type": "BUY",
+    "entry": "1.45",
+    "tp": "1.53",
+    "sl": "1.41",
+    "note": "7d sterke stijging +5.65%, 1h +0.29% momentum. 24h lage volatiliteit suggereert uitbraak. Risk/Reward 1:2",
+    "timestamp": "2026-03-19T20:38:52.203Z",
+    "generated_at": "Thu, 19 Mar 2026 20:38:52 GMT",
+    "source": "claude-bot"
+  },
+  {
+    "id": 1773952741938,
+    "coin": "SOL/USD",
+    "type": "BUY",
+    "entry": "88.9",
+    "tp": "92.5",
+    "sl": "86.2",
+    "note": "7d bullish trend +3.43%, 1h +0.11% positief momentum. Support rond $86. Risk/Reward 1:2.04",
+    "timestamp": "2026-03-19T20:38:52.203Z",
+    "generated_at": "Thu, 19 Mar 2026 20:38:52 GMT",
+    "source": "claude-bot"
+  },
+  {
     "id": 1773949624661,
     "coin": "BTC/USD",
     "type": "SELL",
