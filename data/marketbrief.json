@@ -1,18 +1,18 @@
 {
-  "date": "2026-03-19",
-  "focus": "Fed-hawkishness triggert massive liquidaties en risk-off sentiment; BTC onder $71k druk terwijl extreme fear index (23) potentieel reversals signaleert.",
-  "risk": "Extreme Fear, liquidatie cascade, Fed hawkish",
-  "btc_structure": "Bitcoin handelt op $70,131 met dagelijks verlies van -4.96% en uurlijks -0.74%, onder kritieke $71k support na Fed-gerelateerde selling door whales (>$100M dumps). Weekly technische ondersteuning blijft intact op +0.97% weeklijks, maar intraday momentum is negatief.",
-  "eth_flows": "Ethereum zwakker dan BTC met -6.34% in 24h op $2,168.78, terwijl weekly bullish trend (+6.84% 7d) onder druk staat. Volume van $26.41B suggereert distribution in hogere bands voordat verdere negatieve moves.",
+  "date": "donderdag 19 maart 2026",
+  "focus": "Brede marktcorrectie met significante verkoopdruck over alle major assets.",
+  "risk": "Hoog risico, verkoopcascade actief",
+  "btc_structure": "Bitcoin daalt naar $70,095 met een verlies van -5.36% in 24 uur, ondersteund door volume van $50.59B. De struktuurfracturering duidt op een mogelijke hertest van lagere steun-niveaus.",
+  "eth_flows": "Ethereum underperformt met een daling van -6.75% naar $2,164.07, terwijl handelsvolume stabiel blijft op $26.93B. De grotere procentuele verlies suggereert selectieve defensieve positionering uit altcoin exposure.",
   "top_narratives": [
-    "Federal Reserve rate cut hopes vervaagd - hawkish forward guidance triggert $100M+ BTC selling door early adopters",
-    "SEC-goedkeuring tokenized securities trading (Nasdaq) vs. crypto crackdown in Canada (47 firmen shutdown) - regulatory mixed signals",
-    "24/7 ETP-liquiditeit voor tokenized assets en goud - tradionele finance absorbeert crypto infrastrukture",
-    "Block-massale layoffs (4K) samen met Dorsey-ecosysteem instabiliteit - macro headwinds voor bitcoin adoption narrative"
+    "Macro verkoopdruck en risico-off sentiment",
+    "Ethereum relatieve weakness versus Bitcoin",
+    "Volume concentratie in majors ondanks dalende prijzen",
+    "Possible forced liquidations in leveraged posities"
   ],
-  "macro_impact": "Fed-hawkishness vernietigt rate-cut verwachtingen en activeert risk-off rotatie uit crypto naar traditionele safe havens (goud ziet 6-maandse retail surge). Tegelijkertijd legitimeren SEC-goedkeuringen en ETP-expansie crypto als asset class, maar overheersen nu door negatieve Fed-forward guidance en Canadian crackdown (47 firmen).",
-  "whale_flows": "Massive BTC accumulation dumps (>$100M) door OGs na hawkish Fed signalen veroorzaken liquidatie cascades; volumes ($49.7B BTC, $120.6B totaal 24h) blijven robuust maar directionaliteit is naar beneden. Retail goud-buying (3x hoger in 6 maanden) signaleert systematische flight-to-safety.",
-  "funding_oi": "Funding rates en Open Interest data niet beschikbaar (n/a), maar Fear & Greed Index daling van 26 naar 23 (Extreme Fear) suggereert long liquidaties en short squeeze potentieel. Absence van extreme positive funding duidt op afwezigheid van leveraged bullish overshoot.",
-  "volatility_outlook": "Extreme Fear regime (23) historisch voorspellend voor 24-48h relief rallies; however liquidatie momentum en uurlijkse negatieve candles (-0.74% BTC, -0.72% ETH) suggereren verdere downside risk. Verwacht stochastische rebound naar $72-73k voor BTC v\u00f3\u00f3r verdere macro-driven capitulation.",
-  "full_report": "Bitcoin opent op $70,131 met -4.96% dagelijks verlies en -0.74% per uur, gedrukt door Fed-hawkishness die >$100M OG-selling activeert. Ethereum (-6.34% 24h op $2,168.78) en risicoassets (UNI -8.16%, LINK -6.82%) voeren liquidatie cascade aan; total crypto market cap daalt 4.29% naar $2.5T. Fear & Greed Index crasht naar 23 (Extreme Fear, vorig 26), klassiek setup voor mean-reversion, maar macro backdrop (Fed rate cut hopes vervaagd, Canadian crackdown 47 firmen, Block/Dorsey layoffs) ondersteunt verdere neerwaartse druk. SEC-goedkeuring Nasdaq tokenized trading en 24/7 ETP-liquiditeit biedt structurele bullish long-term, maar overheersen vandaag door immediate Fed-gerelateerde risk-off en whale distribution."
+  "macro_impact": "De brede marktcorrectie wijst op mogelijke macro-onzekerheden of risico-off bewegingen in bredere actievenmarkten. Volume-concentratie in Bitcoin ($50.59B) duidt op institutionele deleveraging.",
+  "whale_flows": "Grote volume migration naar Bitcoin ondanks prijsdaling suggereert akkumulatie op lager niveau door whales. Ethereum volume ($26.93B) blijft significant maar relatief zwakker dan Bitcoin proportioneel.",
+  "funding_oi": "Verwacht hogere liquidatiedruk in komende uren gegeven huidige downtrend momentum. Funding rates zullen waarschijnlijk negatief draaien naarmate short-positie-groei accelereert.",
+  "volatility_outlook": "Volatiliteit blijft elevated met -5% tot -6.75% moves across majors. Verwacht verdere range-expansion naar beneden tenzij steun wordt vastgesteld rond $68,000 voor Bitcoin.",
+  "full_report": "De cryptomarkt vertoont donderdag 19 maart 2026 een brede correctiefase met Bitcoin handelend op $70,095 (-5.36%) en Ethereum op $2,164.07 (-6.75%), ondersteund door substantieel volume van respectievelijk $50.59B en $26.93B. Ethereum underperformt Bitcoin significant, wat duidt op selectieve altcoin-liquidaties en risico-off positionering. XRP (-4.41%), BNB (-4.33%) en SOL (-5.20%) volgen het neerwaartse momentum, wat bevestigt dat macro-factoren eerder dan asset-specifieke events de huidige verkoopcascade drijven. Whale-accumulatie in Bitcoin op lagere prijzen suggereert institutionele steun, terwijl de concentratie van volume in majors verder deleveraging aangeeft. Volatiliteit wordt verwacht elevated te blijven zolang sleutelsteun onder druk blijft."
 }

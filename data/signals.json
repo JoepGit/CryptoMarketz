@@ -1,17 +1,5 @@
 [
   {
-    "id": 1773600027832,
-    "coin": "BTC/USD",
-    "type": "BUY",
-    "entry": "71737",
-    "tp": "76800",
-    "sl": "70200",
-    "note": "7d +7.28% sterke uptrend. 24h +1.51% continuering bullish momentum. Huidige prijs dicht bij 1h +0.28% beweging wijst op stable consolidatie zonder overbought RSI signaal.",
-    "timestamp": "2026-03-15T18:40:23.942Z",
-    "generated_at": "Sun, 15 Mar 2026 18:40:23 GMT",
-    "source": "claude-bot"
-  },
-  {
     "id": 1773320490461,
     "coin": "BNB/USD",
     "type": "BUY",
