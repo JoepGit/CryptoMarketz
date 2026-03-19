@@ -1,6 +1,6 @@
 // bot/signal-bot.js — CryptoMarketz Smart Signal Bot
 // - Max 5 actieve trades tegelijk
-// - Gebruikt 1h + 4h Binance candles voor analyse
+// - Gebruikt 1h + 4h CoinGecko OHLC candles voor analyse
 // - Checkt elk uur of TP/SL geraakt is
 // - Schrijft signals.json, results.json, marketbrief.json
 
@@ -15,10 +15,6 @@ const COINS = ['bitcoin','ethereum','solana','binancecoin','ripple'];
 const COIN_SYMBOLS = {
   bitcoin:'BTC/USD', ethereum:'ETH/USD', solana:'SOL/USD',
   binancecoin:'BNB/USD', ripple:'XRP/USD'
-};
-const BINANCE_PAIRS = {
-  'BTC/USD':'BTCUSDT', 'ETH/USD':'ETHUSDT', 'SOL/USD':'SOLUSDT',
-  'BNB/USD':'BNBUSDT', 'XRP/USD':'XRPUSDT'
 };
 
 // ── Helpers ────────────────────────────────────────────────────────────────
@@ -43,24 +39,31 @@ async function fetchMarketData() {
   return res.json();
 }
 
-// ── 2. Binance: 1h en 4h candles ──────────────────────────────────────────
-async function fetchCandles(pair, interval, limit = 50) {
-  const symbol = BINANCE_PAIRS[pair];
-  if (!symbol) return [];
+// ── 2. CoinGecko: OHLC candles (werkt vanuit GitHub Actions) ──────────────
+// days=1 → ~1h candles, days=7 → ~4h candles
+async function fetchCandles(coinId, intervalLabel) {
+  const days = intervalLabel === '1h' ? 1 : 7;
   try {
-    const url = `https://api.binance.com/api/v3/klines?symbol=${symbol}&interval=${interval}&limit=${limit}`;
+    const url = `https://api.coingecko.com/api/v3/coins/${coinId}/ohlc?vs_currency=usd&days=${days}`;
     const res = await fetch(url);
-    if (!res.ok) return [];
+    if (!res.ok) {
+      console.warn(`  ⚠️  CoinGecko OHLC fout voor ${coinId} (${intervalLabel}): ${res.status}`);
+      return [];
+    }
     const raw = await res.json();
+    // CoinGecko OHLC: [timestamp, open, high, low, close]
     return raw.map(c => ({
-      time: c[0], open: parseFloat(c[1]), high: parseFloat(c[2]),
-      low: parseFloat(c[3]), close: parseFloat(c[4]), volume: parseFloat(c[5])
+      time: c[0], open: c[1], high: c[2], low: c[3], close: c[4], volume: 0
     }));
-  } catch { return []; }
+  } catch (e) {
+    console.warn(`  ⚠️  OHLC fetch fout ${coinId}: ${e.message}`);
+    return [];
+  }
 }
 
 // ── 3. Technische indicatoren berekenen ───────────────────────────────────
 function calcEMA(closes, period) {
+  if (closes.length < period) return closes[closes.length - 1];
   const k = 2 / (period + 1);
   let ema = closes[0];
   for (let i = 1; i < closes.length; i++) ema = closes[i] * k + ema * (1 - k);
@@ -85,16 +88,13 @@ function summarizeCandles(candles, label) {
   const lows   = candles.map(c => c.low);
   const last   = closes[closes.length - 1];
   const ema20  = calcEMA(closes, 20);
-  const ema50  = calcEMA(closes, 50);
+  const ema50  = calcEMA(closes, Math.min(50, closes.length));
   const rsi    = calcRSI(closes);
-  const high24 = Math.max(...highs.slice(-24));
-  const low24  = Math.min(...lows.slice(-24));
-  const volAvg = candles.slice(-10).reduce((s,c) => s + c.volume, 0) / 10;
-  const volLast = candles[candles.length-1].volume;
-  const volRatio = (volLast / volAvg).toFixed(2);
-  const trend = last > ema20 && ema20 > ema50 ? 'BULLISH' : last < ema20 && ema20 < ema50 ? 'BEARISH' : 'SIDEWAYS';
+  const high24 = Math.max(...highs.slice(-Math.min(24, highs.length)));
+  const low24  = Math.min(...lows.slice(-Math.min(24, lows.length)));
+  const trend  = last > ema20 && ema20 > ema50 ? 'BULLISH' : last < ema20 && ema20 < ema50 ? 'BEARISH' : 'SIDEWAYS';
 
-  return `${label}: prijs $${last.toFixed(2)} | EMA20 $${ema20.toFixed(2)} | EMA50 $${ema50.toFixed(2)} | RSI ${rsi.toFixed(1)} | trend ${trend} | 24h high $${high24.toFixed(2)} | 24h low $${low24.toFixed(2)} | vol ratio ${volRatio}x`;
+  return `${label}: prijs $${last.toFixed(2)} | EMA20 $${ema20.toFixed(2)} | EMA50 $${ema50.toFixed(2)} | RSI ${rsi.toFixed(1)} | trend ${trend} | 24h high $${high24.toFixed(2)} | 24h low $${low24.toFixed(2)}`;
 }
 
 // ── 4. Check actieve trades op TP/SL ──────────────────────────────────────
@@ -105,10 +105,9 @@ function checkAndResolveSignals(signals, priceMap) {
   const newResults = [];
   const stillActive = [];
   const now = Date.now();
-  const WATCH_EXPIRY_MS = 24 * 60 * 60 * 1000; // WATCH signals vervallen na 24h
+  const WATCH_EXPIRY_MS = 24 * 60 * 60 * 1000;
 
   for (const sig of signals) {
-    // WATCH signals: verwijder na 24h
     if (sig.type === 'WATCH') {
       const sigAge = now - (sig.id || 0);
       if (sigAge < WATCH_EXPIRY_MS) {
@@ -119,10 +118,7 @@ function checkAndResolveSignals(signals, priceMap) {
       continue;
     }
 
-    if (resolvedIds.has(sig.id)) {
-      // Al afgesloten, niet meer tonen
-      continue;
-    }
+    if (resolvedIds.has(sig.id)) continue;
 
     const coinKey = Object.keys(COIN_SYMBOLS).find(k => COIN_SYMBOLS[k] === sig.coin);
     const price = priceMap[coinKey];
@@ -157,7 +153,7 @@ function checkAndResolveSignals(signals, priceMap) {
       });
       console.log(`  📊 ${sig.coin} ${sig.type} → ${outcome.toUpperCase()} (${pnlFormatted})`);
     } else {
-      stillActive.push(sig); // nog actief
+      stillActive.push(sig);
     }
   }
 
@@ -196,18 +192,17 @@ REGELS:
 - Gebruik ALLEEN de exacte prijzen uit de data hierboven
 - Geef ZOWEL BUY als SELL signalen op basis van de technische analyse:
   * BUY als: uptrend op 4H, prijs boven EMA20/EMA50, RSI < 70, bullish momentum
-  * SELL als: downtrend op 4H, prijs onder EMA20/EMA50, RSI > 60, bearish momentum, of RSI overbought (>70)
+  * SELL als: downtrend op 4H, prijs onder EMA20/EMA50, RSI > 60, bearish momentum
 - Forceer een eerlijke mix: als meerdere coins bearish zijn, geef SELL — niet alleen BUY
-- Alleen signalen met duidelijke technische setup op zowel 1H als 4H
 - Type: "BUY" of "SELL" (geen WATCH)
 - Entry: dichtbij huidige prijs
 - TP en SL gebaseerd op technische levels (EMA, 24h high/low)
 - Risk/Reward minimaal 1:2
 - Maximaal 1 signaal per coin
-- Note: Nederlandse uitleg met exacte technische reden (vermeld RSI waarde, trend richting, EMA positie)
+- Note: Nederlandse uitleg met exacte technische reden
 
-Geef ALLEEN een geldige JSON array terug, niets anders:
-[{"coin":"BTC/USD","type":"BUY","entry":"83200","tp":"88000","sl":"81500","note":"4H trend bullish boven EMA50, RSI 52 niet overbought."},{"coin":"ETH/USD","type":"SELL","entry":"2050","tp":"1900","sl":"2120","note":"4H bearish onder EMA20, RSI 72 overbought, volume dalend."}]`;
+BELANGRIJK: Geef ALLEEN een geldige JSON array terug, NIETS anders, geen uitleg, geen markdown:
+[{"coin":"BTC/USD","type":"BUY","entry":"83200","tp":"88000","sl":"81500","note":"4H trend bullish boven EMA50, RSI 52."},{"coin":"ETH/USD","type":"SELL","entry":"2050","tp":"1900","sl":"2120","note":"4H bearish onder EMA20, RSI 72 overbought."}]`;
 
   const res = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
@@ -228,8 +223,7 @@ Geef ALLEEN een geldige JSON array terug, niets anders:
     console.error(`❌ Claude API HTTP fout: ${res.status} ${res.statusText}`);
     console.error(`   Response body: ${errBody.slice(0, 500)}`);
     if (res.status === 401) console.error('   → CLAUDE_API_KEY is ongeldig of verlopen!');
-    if (res.status === 429) console.error('   → Rate limit bereikt. Probeer later opnieuw.');
-    if (res.status === 400) console.error('   → Slecht verzoek, controleer model naam en parameters.');
+    if (res.status === 429) console.error('   → Rate limit bereikt.');
     throw new Error(`Claude API error: ${res.status}`);
   }
 
@@ -239,26 +233,31 @@ Geef ALLEEN een geldige JSON array terug, niets anders:
 
   const raw = data?.content?.[0]?.text || '';
   if (!raw) {
-    console.error('❌ Claude gaf een lege response terug!');
-    console.error('   Volledige API response:', JSON.stringify(data, null, 2).slice(0, 1000));
+    console.error('❌ Claude gaf lege response terug');
     return [];
   }
 
   console.log(`   Claude raw output (eerste 300 tekens): ${raw.slice(0, 300)}`);
-  const cleaned = raw.replace(/```json/gi, '').replace(/```/g, '').trim();
+
+  // Robuuste JSON extractie: pak alleen het JSON array gedeelte
+  const jsonMatch = raw.match(/\[[\s\S]*\]/);
+  if (!jsonMatch) {
+    console.error('❌ Geen JSON array gevonden in Claude output');
+    console.error('   Volledige output:', raw.slice(0, 500));
+    return [];
+  }
 
   try {
-    const signals = JSON.parse(cleaned);
+    const signals = JSON.parse(jsonMatch[0]);
     if (!Array.isArray(signals)) {
-      console.error('❌ Claude gaf geen array terug, maar:', typeof signals);
-      console.error('   Volledige output:', cleaned.slice(0, 500));
+      console.error('❌ Claude gaf geen array terug');
       return [];
     }
     console.log(`✅ Claude genereerde ${signals.length} signalen`);
     return signals.slice(0, 5);
   } catch (parseErr) {
     console.error('❌ JSON parse fout:', parseErr.message);
-    console.error('   Volledige ruwe output:', cleaned.slice(0, 800));
+    console.error('   Geëxtraheerde JSON:', jsonMatch[0].slice(0, 500));
     return [];
   }
 }
@@ -279,7 +278,7 @@ async function generateMarketBrief(marketData) {
 LIVE MARKTDATA — gebruik UITSLUITEND deze prijzen, verzin niets:
 ${summary}
 
-Geef ALLEEN een geldig JSON object terug, geen markdown:
+Geef ALLEEN een geldig JSON object terug, geen markdown, geen uitleg:
 {"date":"${dateStr}","focus":"één zin primaire focus","risk":"risk regime 3-5 woorden","btc_structure":"2-3 zinnen BTC met exacte prijs","eth_flows":"2-3 zinnen ETH met exacte prijs","top_narratives":["n1","n2","n3","n4"],"macro_impact":"2-3 zinnen macro","whale_flows":"2-3 zinnen whale flows op basis van volume","funding_oi":"2-3 zinnen funding verwachting","volatility_outlook":"2-3 zinnen volatiliteit","full_report":"4-6 zinnen volledig overzicht met exacte prijzen"}`;
 
   const res = await fetch('https://api.anthropic.com/v1/messages', {
@@ -293,27 +292,23 @@ Geef ALLEEN een geldig JSON object terug, geen markdown:
   });
 
   if (!res.ok) {
-    const errBody = await res.text().catch(() => '(geen body)');
-    console.error(`❌ Claude brief HTTP fout: ${res.status} ${res.statusText}`);
-    console.error(`   Response body: ${errBody.slice(0, 300)}`);
+    console.error(`❌ Claude brief HTTP fout: ${res.status}`);
     throw new Error(`Claude brief error: ${res.status}`);
   }
 
   const data = await res.json();
   const raw = data?.content?.[0]?.text || '';
-  if (!raw) {
-    console.error('❌ Claude brief gaf lege response terug');
-    return { date: dateStr, focus: 'Marktupdate', risk: 'Neutraal', btc_structure: summary.split('\n')[0], eth_flows: '', top_narratives: ['BTC','ETH','Alts','Macro'], macro_impact: '', whale_flows: '', funding_oi: '', volatility_outlook: '', full_report: summary };
-  }
 
-  const cleaned = raw.replace(/```json/gi, '').replace(/```/g, '').trim();
-  try {
-    return JSON.parse(cleaned);
-  } catch (parseErr) {
-    console.error('❌ Market brief JSON parse fout:', parseErr.message);
-    console.error('   Ruwe output:', cleaned.slice(0, 400));
-    return { date: dateStr, focus: 'Marktupdate', risk: 'Neutraal', btc_structure: summary.split('\n')[0], eth_flows: '', top_narratives: ['BTC','ETH','Alts','Macro'], macro_impact: '', whale_flows: '', funding_oi: '', volatility_outlook: '', full_report: summary };
+  // Robuuste JSON extractie voor brief
+  const jsonMatch = raw.match(/\{[\s\S]*\}/);
+  if (jsonMatch) {
+    try {
+      return JSON.parse(jsonMatch[0]);
+    } catch (e) {
+      console.error('❌ Market brief JSON parse fout:', e.message);
+    }
   }
+  return { date: dateStr, focus: 'Marktupdate', risk: 'Neutraal', btc_structure: summary.split('\n')[0], eth_flows: '', top_narratives: ['BTC','ETH','Alts','Macro'], macro_impact: '', whale_flows: '', funding_oi: '', volatility_outlook: '', full_report: summary };
 }
 
 // ── MAIN ───────────────────────────────────────────────────────────────────
@@ -323,11 +318,9 @@ Geef ALLEEN een geldig JSON object terug, geen markdown:
 
     if (!CLAUDE_API_KEY) {
       console.error('❌ CLAUDE_API_KEY is niet ingesteld als GitHub Secret!');
-      console.error('   Ga naar: GitHub → Settings → Secrets → New secret → naam: CLAUDE_API_KEY');
       throw new Error('CLAUDE_API_KEY niet ingesteld');
     }
     console.log(`✅ CLAUDE_API_KEY aanwezig (eerste 8 tekens: ${CLAUDE_API_KEY.slice(0, 8)}...)`);
-
 
     const signalsPath = path.join(process.cwd(), 'data', 'signals.json');
 
@@ -346,14 +339,12 @@ Geef ALLEEN een geldig JSON object terug, geen markdown:
     }
     const priceMap = {};
     for (const c of marketData) priceMap[c.id] = c.current_price;
-    console.log(`✅ Prijzen opgehaald: BTC $${priceMap['bitcoin']?.toLocaleString()} | ETH $${priceMap['ethereum']?.toLocaleString()} | SOL $${priceMap['solana']?.toLocaleString()}`);
+    console.log(`✅ Prijzen: BTC $${priceMap['bitcoin']?.toLocaleString()} | ETH $${priceMap['ethereum']?.toLocaleString()} | SOL $${priceMap['solana']?.toLocaleString()}`);
 
     // 3. Check bestaande trades op TP/SL
     console.log('📊 Actieve trades checken op TP/SL...');
     const activeSignals = checkAndResolveSignals(existingSignals, priceMap);
     const activeTrades  = activeSignals.filter(s => s.type !== 'WATCH');
-    console.log(`✅ ${activeTrades.length} trades nog actief`);
-
     console.log(`📊 Actieve trades: ${activeTrades.length}/${MAX_ACTIVE_TRADES} slots bezet`);
 
     // 4. Alleen nieuwe signalen als er ruimte is
@@ -361,28 +352,27 @@ Geef ALLEEN een geldig JSON object terug, geen markdown:
     const slotsOpen = MAX_ACTIVE_TRADES - activeTrades.length;
 
     if (slotsOpen > 0) {
-      console.log(`🆓 ${slotsOpen} slot(s) vrij — 1H/4H charts ophalen...`);
+      console.log(`🆓 ${slotsOpen} slot(s) vrij — CoinGecko OHLC candles ophalen...`);
 
-      // Haal candles op voor alle coins
       const candleData = {};
       for (const c of marketData) {
         const sym = COIN_SYMBOLS[c.id];
         if (!sym) continue;
+        // Gebruik coinId voor CoinGecko OHLC
         const [c1h, c4h] = await Promise.all([
-          fetchCandles(sym, '1h', 50),
-          fetchCandles(sym, '4h', 50),
+          fetchCandles(c.id, '1h'),
+          fetchCandles(c.id, '4h'),
         ]);
         candleData[sym] = {
           '1h': summarizeCandles(c1h, '1H'),
           '4h': summarizeCandles(c4h, '4H'),
         };
-        console.log(`  📈 ${sym}: ${candleData[sym]['1h'].split('|')[2]?.trim()} | ${candleData[sym]['4h'].split('|')[2]?.trim()}`);
+        console.log(`  📈 ${sym} — 1H: ${c1h.length} candles | 4H: ${c4h.length} candles | trend: ${candleData[sym]['4h'].includes('BULLISH') ? '🟢 BULLISH' : candleData[sym]['4h'].includes('BEARISH') ? '🔴 BEARISH' : '🟡 SIDEWAYS'}`);
       }
 
       console.log('🤖 Claude analyseert setups...');
       const newSignals = await generateSignals(marketData, candleData);
 
-      // Dedupliceer: geen nieuwe trade voor coin die al actief is
       const activeCoins = new Set(activeTrades.map(s => s.coin));
       const filteredNew = newSignals
         .filter(s => !activeCoins.has(s.coin))
@@ -403,12 +393,12 @@ Geef ALLEEN een geldig JSON object terug, geen markdown:
       console.log(`⏸️  Alle ${MAX_ACTIVE_TRADES} slots bezet — geen nieuwe signalen`);
     }
 
-    // 5. Bewaar ALLEEN actieve signalen (max MAX_ACTIVE_TRADES)
+    // 5. Bewaar actieve signalen
     const toSave = finalSignals.slice(0, MAX_ACTIVE_TRADES);
     writeJson(signalsPath, toSave);
-    console.log(`💾 ${toSave.length} actieve signalen opgeslagen → signals.json`);
+    console.log(`💾 ${toSave.length} actieve signalen → signals.json`);
     if (toSave.length === 0) {
-      console.warn('⚠️  signals.json is leeg opgeslagen! Controleer de logs hierboven voor de oorzaak.');
+      console.warn('⚠️  signals.json is leeg opgeslagen! Controleer de logs hierboven.');
     }
 
     // 6. Market brief genereren
