@@ -223,16 +223,42 @@ Geef ALLEEN een geldige JSON array terug, niets anders:
     }),
   });
 
-  if (!res.ok) throw new Error(`Claude API error: ${res.status}`);
+  if (!res.ok) {
+    const errBody = await res.text().catch(() => '(geen body)');
+    console.error(`❌ Claude API HTTP fout: ${res.status} ${res.statusText}`);
+    console.error(`   Response body: ${errBody.slice(0, 500)}`);
+    if (res.status === 401) console.error('   → CLAUDE_API_KEY is ongeldig of verlopen!');
+    if (res.status === 429) console.error('   → Rate limit bereikt. Probeer later opnieuw.');
+    if (res.status === 400) console.error('   → Slecht verzoek, controleer model naam en parameters.');
+    throw new Error(`Claude API error: ${res.status}`);
+  }
+
   const data = await res.json();
-  const raw = data?.content?.[0]?.text || '[]';
+  console.log(`   Claude stop_reason: ${data?.stop_reason}`);
+  console.log(`   Claude usage: input=${data?.usage?.input_tokens} output=${data?.usage?.output_tokens} tokens`);
+
+  const raw = data?.content?.[0]?.text || '';
+  if (!raw) {
+    console.error('❌ Claude gaf een lege response terug!');
+    console.error('   Volledige API response:', JSON.stringify(data, null, 2).slice(0, 1000));
+    return [];
+  }
+
+  console.log(`   Claude raw output (eerste 300 tekens): ${raw.slice(0, 300)}`);
   const cleaned = raw.replace(/```json/gi, '').replace(/```/g, '').trim();
+
   try {
     const signals = JSON.parse(cleaned);
-    if (!Array.isArray(signals)) throw new Error('Geen array');
-    return signals.slice(0, 5); // nooit meer dan 5
-  } catch {
-    console.warn('Parse fout:', cleaned.slice(0, 200));
+    if (!Array.isArray(signals)) {
+      console.error('❌ Claude gaf geen array terug, maar:', typeof signals);
+      console.error('   Volledige output:', cleaned.slice(0, 500));
+      return [];
+    }
+    console.log(`✅ Claude genereerde ${signals.length} signalen`);
+    return signals.slice(0, 5);
+  } catch (parseErr) {
+    console.error('❌ JSON parse fout:', parseErr.message);
+    console.error('   Volledige ruwe output:', cleaned.slice(0, 800));
     return [];
   }
 }
@@ -266,13 +292,26 @@ Geef ALLEEN een geldig JSON object terug, geen markdown:
     body: JSON.stringify({ model: 'claude-haiku-4-5-20251001', max_tokens: 2048, messages: [{ role: 'user', content: prompt }] }),
   });
 
-  if (!res.ok) throw new Error(`Claude brief error: ${res.status}`);
+  if (!res.ok) {
+    const errBody = await res.text().catch(() => '(geen body)');
+    console.error(`❌ Claude brief HTTP fout: ${res.status} ${res.statusText}`);
+    console.error(`   Response body: ${errBody.slice(0, 300)}`);
+    throw new Error(`Claude brief error: ${res.status}`);
+  }
+
   const data = await res.json();
-  const raw = data?.content?.[0]?.text || '{}';
+  const raw = data?.content?.[0]?.text || '';
+  if (!raw) {
+    console.error('❌ Claude brief gaf lege response terug');
+    return { date: dateStr, focus: 'Marktupdate', risk: 'Neutraal', btc_structure: summary.split('\n')[0], eth_flows: '', top_narratives: ['BTC','ETH','Alts','Macro'], macro_impact: '', whale_flows: '', funding_oi: '', volatility_outlook: '', full_report: summary };
+  }
+
   const cleaned = raw.replace(/```json/gi, '').replace(/```/g, '').trim();
   try {
     return JSON.parse(cleaned);
-  } catch {
+  } catch (parseErr) {
+    console.error('❌ Market brief JSON parse fout:', parseErr.message);
+    console.error('   Ruwe output:', cleaned.slice(0, 400));
     return { date: dateStr, focus: 'Marktupdate', risk: 'Neutraal', btc_structure: summary.split('\n')[0], eth_flows: '', top_narratives: ['BTC','ETH','Alts','Macro'], macro_impact: '', whale_flows: '', funding_oi: '', volatility_outlook: '', full_report: summary };
   }
 }
@@ -280,7 +319,15 @@ Geef ALLEEN een geldig JSON object terug, geen markdown:
 // ── MAIN ───────────────────────────────────────────────────────────────────
 (async () => {
   try {
-    if (!CLAUDE_API_KEY) throw new Error('CLAUDE_API_KEY niet ingesteld');
+    console.log('🚀 Signal Bot gestart —', new Date().toUTCString());
+
+    if (!CLAUDE_API_KEY) {
+      console.error('❌ CLAUDE_API_KEY is niet ingesteld als GitHub Secret!');
+      console.error('   Ga naar: GitHub → Settings → Secrets → New secret → naam: CLAUDE_API_KEY');
+      throw new Error('CLAUDE_API_KEY niet ingesteld');
+    }
+    console.log(`✅ CLAUDE_API_KEY aanwezig (eerste 8 tekens: ${CLAUDE_API_KEY.slice(0, 8)}...)`);
+
 
     const signalsPath = path.join(process.cwd(), 'data', 'signals.json');
 
@@ -290,16 +337,24 @@ Geef ALLEEN een geldig JSON object terug, geen markdown:
 
     // 2. Haal live prijzen op
     console.log('🔍 CoinGecko prijzen ophalen...');
-    const marketData = await fetchMarketData();
+    let marketData;
+    try {
+      marketData = await fetchMarketData();
+    } catch (cgErr) {
+      console.error('❌ CoinGecko fetch mislukt:', cgErr.message);
+      throw cgErr;
+    }
     const priceMap = {};
     for (const c of marketData) priceMap[c.id] = c.current_price;
-    console.log(`✅ Prijzen: BTC $${priceMap['bitcoin']?.toLocaleString()}`);
+    console.log(`✅ Prijzen opgehaald: BTC $${priceMap['bitcoin']?.toLocaleString()} | ETH $${priceMap['ethereum']?.toLocaleString()} | SOL $${priceMap['solana']?.toLocaleString()}`);
 
     // 3. Check bestaande trades op TP/SL
     console.log('📊 Actieve trades checken op TP/SL...');
     const activeSignals = checkAndResolveSignals(existingSignals, priceMap);
     const activeTrades  = activeSignals.filter(s => s.type !== 'WATCH');
     console.log(`✅ ${activeTrades.length} trades nog actief`);
+
+    console.log(`📊 Actieve trades: ${activeTrades.length}/${MAX_ACTIVE_TRADES} slots bezet`);
 
     // 4. Alleen nieuwe signalen als er ruimte is
     let finalSignals = activeSignals;
@@ -351,7 +406,10 @@ Geef ALLEEN een geldig JSON object terug, geen markdown:
     // 5. Bewaar ALLEEN actieve signalen (max MAX_ACTIVE_TRADES)
     const toSave = finalSignals.slice(0, MAX_ACTIVE_TRADES);
     writeJson(signalsPath, toSave);
-    console.log(`💾 ${toSave.length} actieve signalen → signals.json`);
+    console.log(`💾 ${toSave.length} actieve signalen opgeslagen → signals.json`);
+    if (toSave.length === 0) {
+      console.warn('⚠️  signals.json is leeg opgeslagen! Controleer de logs hierboven voor de oorzaak.');
+    }
 
     // 6. Market brief genereren
     console.log('📝 Market brief genereren...');
