@@ -1,18 +1,18 @@
 {
   "date": "donderdag 19 maart 2026",
-  "focus": "Brede marktcorrectie met Bitcoin onder druk bij $70,472 terwijl institutionele liquiditeit afneemt.",
-  "risk": "Rood: Dalende momentum",
-  "btc_structure": "Bitcoin noteert op $70,472 met een dagverlies van -1.03%, wat wijst op aanhoudende verkoopdruk. Het 24h volume van $45.73B geeft aan dat verkopingen worden ondersteund door redelijk handelsvolume, wat suggereren duidt op voorzichtigheid van grote spelers.",
-  "eth_flows": "Ethereum staat onder meer druk dan Bitcoin met -1.78% verlies op $2,145.57, terwijl het volume met $24.32B relatief sterk blijft. Dit asymmetrische verlies duidt op selectieve liquidaties in altcoin-posities.",
+  "focus": "Brede marktcorrectie met alle major assets in rood na overnight selloff.",
+  "risk": "Stijgende liquidatiedruk detectie",
+  "btc_structure": "Bitcoin daalt naar $70,484 met een verlies van 1.17% in 24 uur. Het volume van $45.92B suggereert gedwongen liquidaties in leverage-posities. Technische support niveau's vormen zich rond $70k.",
+  "eth_flows": "Ethereum noteert $2,147.91 met een sterkere daling van -2.36%, wat wijst op relatieve underperformance tegenover Bitcoin. Het volume van $24.08B blijft solide maar de uitverkoop duidt op institutionele risicoreductie.",
   "top_narratives": [
-    "Risk-off sentiment in de bredere markt",
-    "Institutionele posities onder herziening",
-    "Macro-onzekerheid domineert cryptotrading",
-    "Altcoins onderperformen Bitcoin relatief"
+    "Liquidatiecascade in leverage-markets",
+    "Macro-koppelingen domineren sentiment",
+    "Institutionele derisking modus",
+    "ETH underperformance versus BTC"
   ],
-  "macro_impact": "Stijgende rentes en risicoaversie wereldwijd slepen crypto mee omlaag. Dit patroon suggereert dat cryptomarkten nog steeds sterk gecorreleerd zijn met traditionele financiële markten.",
-  "whale_flows": "Het flinke volume op BTC ($45.73B) en ETH ($24.32B) duidt op significant handelsaktiviteit van grote portefeuilles. De gespreide verliezen wijzen op gedoseerde positieverkleining eerder dan panische verkoop.",
-  "funding_oi": "Met brede liquidaties in altcoins kunnen we stijgende funding rates verwachten als traders houdingen verdedigen. Short-rentes zullen waarschijnlijk oplopen als de markt zich consolidateert.",
-  "volatility_outlook": "De huidige -1% tot -1.8% daling suggereert geringe tot matige volatiliteit. Echter, bij doorbreking van $70k support op Bitcoin kan de volatiliteit flink toenemen.",
-  "full_report": "CryptoMarketz registreert een voorzichtige donderdag met brede verliezen. Bitcoin daalt -1.03% naar $70,472 bij $45.73B volume, terwijl Ethereum sterker lijdt met -1.78% op $2,145.57 en $24.32B volume. Kleinere assets als XRP (-0.44%), BNB (-1.20%) en SOL (-0.93%) vertonen meer stabiliteit. Het risicoprofiel is negatief met institutioneel risicobeheer als primaire driver. Macro-onzekerheid blijft de voornaamste factor. We monitoren de $70k support voor Bitcoin nauw, aangezien doorbreking meer liquidaties zou kunnen triggeren."
+  "macro_impact": "De brede marktcorrectie lijkt gekoppeld aan macro-onzekerheid en mogelijk renteverwachtingen. Deze daling valt samen met herpositionering in risicoactiva.",
+  "whale_flows": "Whale-verkopen domineren met stijgende volumes op alle major pairs. De verdeling van volume suggereert gecoördineerde derisking eerder dan panic selling.",
+  "funding_oi": "Funding rates staan onder druk met negatieve signalen voor leveraged longs. Open interest verwachting staat op herbalancering door liquidaties.",
+  "volatility_outlook": "Volatiliteit stijgt met eenzijdige marktdynamiek naar beneden. Verwacht technische rebounds tegen key levels maar geen trend-reversal op korte termijn.",
+  "full_report": "Donderdag 19 maart 2026 markeert een brede correctie met Bitcoin op $70,484 (-1.17%) en Ethereum op $2,147.91 (-2.36%). Het totale volume van ruim $76 miljard duidt op significante liquidatiedruk. Alle major altcoins volgen met vergelijkbare declines: XRP -1.09% op $1.45, BNB -1.44% op $642.61 en SOL -1.43% op $88.99. De marktstructuur toont klassieke derisking-dynamiek zonder extreem panic-scenario. Focus ligt op technische support-houding en macro-koppelingen."
 }
