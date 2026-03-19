@@ -3312,54 +3312,54 @@ function spark(ch){var v=17,pts=[];for(var i=0;i<=10;i++){v+=(Math.random()-(ch<
 var _cache={};
 function cGet(k){var e=_cache[k];if(!e||Date.now()>e.x){delete _cache[k];return null;}return e.d;}
 function cSet(k,d,t){_cache[k]={d:d,x:Date.now()+t*1000};}
-// ── BINANCE API fast live data ──
-var BINANCE='https://api.binance.com/api/v3';
-var BINANCE_TICKER=BINANCE+'/ticker/24hr';
-
-// Binance symbol map
-var BN_SYMBOLS=['BTCUSDT','ETHUSDT','LTCUSDT','SOLUSDT','XRPUSDT','BNBUSDT','ADAUSDT','AVAXUSDT','DOGEUSDT','DOTUSDT','LINKUSDT','MATICUSDT','UNIUSDT','ATOMUSDT','NEARUSDT'];
-var BN_LABELS={BTCUSDT:'BTC',ETHUSDT:'ETH',LTCUSDT:'LTC',SOLUSDT:'SOL',XRPUSDT:'XRP',BNBUSDT:'BNB',ADAUSDT:'ADA',AVAXUSDT:'AVAX',DOGEUSDT:'DOGE',DOTUSDT:'DOT',LINKUSDT:'LINK',MATICUSDT:'MATIC',UNIUSDT:'UNI',ATOMUSDT:'ATOM',NEARUSDT:'NEAR'};
-var BN_DASH=['BTCUSDT','ETHUSDT','LTCUSDT']; // dashboard price cards use btc/eth/ltc
+// ── COINGECKO API — vervangt Binance (werkt in alle regio's inclusief NL) ──
+var CG_IDS='bitcoin,ethereum,litecoin,solana,ripple,binancecoin,cardano,avalanche-2,dogecoin,polkadot,chainlink,matic-network,uniswap,cosmos,near';
+var CG_LABELS={
+  bitcoin:'BTC',ethereum:'ETH',litecoin:'LTC',solana:'SOL',ripple:'XRP',
+  binancecoin:'BNB',cardano:'ADA','avalanche-2':'AVAX',dogecoin:'DOGE',
+  polkadot:'DOT',chainlink:'LINK','matic-network':'MATIC',uniswap:'UNI',
+  cosmos:'ATOM',near:'NEAR'
+};
 
 // Cache
-var _bnCache=null,_bnCacheTime=0;
-function bnFetch(){
-  if(_bnCache&&Date.now()-_bnCacheTime<15000)return Promise.resolve(_bnCache);
-  return fetch('https://api.binance.com/api/v3/ticker/24hr')
+var _cgPriceCache=null,_cgPriceCacheTime=0;
+function cgPriceFetch(){
+  if(_cgPriceCache&&Date.now()-_cgPriceCacheTime<60000)return Promise.resolve(_cgPriceCache);
+  var url='https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids='+CG_IDS+'&order=market_cap_desc&per_page=15&page=1&sparkline=false&price_change_percentage=24h';
+  return fetch(url)
     .then(function(r){return r.json();})
     .then(function(d){
-      var map={};
-      d.forEach(function(t){map[t.symbol]=t;});
-      _bnCache=map;_bnCacheTime=Date.now();
-      return map;
+      _cgPriceCache=d;_cgPriceCacheTime=Date.now();
+      return d;
     });
 }
 
 function fetchPrices(){
-  bnFetch().then(function(map){
+  cgPriceFetch().then(function(coins){
     // Update dashboard price cards (BTC/ETH/LTC)
-    var pairs=[['BTCUSDT','btc'],['ETHUSDT','eth'],['LTCUSDT','ltc']];
-    pairs.forEach(function(pair){
-      var t=map[pair[0]];if(!t)return;
-      var price=parseFloat(t.lastPrice);
-      var ch=parseFloat(t.priceChangePercent);
-      var pe=document.getElementById('p-'+pair[1]);if(pe)pe.textContent=fP(price);
-      var ce=document.getElementById('c-'+pair[1]);if(ce){ce.textContent=(ch>=0?'+':'')+ch.toFixed(2)+'%';ce.className='pc-chg '+(ch>=0?'chg-up':'chg-dn');}
-      var se=document.getElementById('sp-'+pair[1]);if(se)se.innerHTML='<polyline points="'+spark(ch)+'" fill="none" stroke="'+(ch>=0?'#0055ff':'var(--red)')+'" stroke-width="1.8" stroke-linecap="round"/>';
+    var cardMap={bitcoin:'btc',ethereum:'eth',litecoin:'ltc'};
+    coins.forEach(function(c){
+      var cardId=cardMap[c.id];
+      if(cardId){
+        var price=c.current_price;
+        var ch=c.price_change_percentage_24h||0;
+        var pe=document.getElementById('p-'+cardId);if(pe)pe.textContent=fP(price);
+        var ce=document.getElementById('c-'+cardId);if(ce){ce.textContent=(ch>=0?'+':'')+ch.toFixed(2)+'%';ce.className='pc-chg '+(ch>=0?'chg-up':'chg-dn');}
+        var se=document.getElementById('sp-'+cardId);if(se)se.innerHTML='<polyline points="'+spark(ch)+'" fill="none" stroke="'+(ch>=0?'#0055ff':'var(--red)')+'" stroke-width="1.8" stroke-linecap="round"/>';
+      }
     });
     // Update top ticker bar
     var t='';
-    BN_SYMBOLS.forEach(function(sym){
-      var d=map[sym];if(!d)return;
-      var price=parseFloat(d.lastPrice);
-      var ch=parseFloat(d.priceChangePercent);
-      var lbl=BN_LABELS[sym]||sym.replace('USDT','');
+    coins.forEach(function(c){
+      var lbl=CG_LABELS[c.id]||c.symbol.toUpperCase();
+      var price=c.current_price;
+      var ch=c.price_change_percentage_24h||0;
       t+='<div class="ti"><span class="ti-s">'+lbl+'/USDT</span><span class="ti-v">'+fP(price)+'</span><span class="'+(ch>=0?'ti-u':'ti-d')+'">'+(ch>=0?'▲':'▼')+' '+Math.abs(ch).toFixed(2)+'%</span></div>';
     });
     var el=document.getElementById('tkr-t');if(el)el.innerHTML=t+t;
   }).catch(function(){});
 }
-setInterval(fetchPrices,15000); // every 15s Binance can handle it
+setInterval(fetchPrices,60000); // elke 60s (CoinGecko rate limit is strenger dan Binance)
 
 function fetchTotalMarketCap(){
   // Binance doesn't have global market cap use CoinGecko just for this one call (cached 5 min)
@@ -3685,21 +3685,17 @@ var ptPriceCache={};
 
 function ptFetchPrice(sym,cb){
   sym=sym.toUpperCase();
-  if(ptPriceCache[sym]&&(Date.now()-ptPriceCache[sym].t)<20000){cb(ptPriceCache[sym].p);return;}
-  var pair=sym+'USDT';
-  fetch('https://api.binance.com/api/v3/ticker/price?symbol='+pair)
+  if(ptPriceCache[sym]&&(Date.now()-ptPriceCache[sym].t)<60000){cb(ptPriceCache[sym].p);return;}
+  // Gebruik CoinGecko ipv Binance (Binance geblokkeerd in NL)
+  var idMap={BTC:'bitcoin',ETH:'ethereum',SOL:'solana',BNB:'binancecoin',XRP:'ripple',ADA:'cardano',AVAX:'avalanche-2',DOT:'polkadot',LINK:'chainlink',LTC:'litecoin',DOGE:'dogecoin',MATIC:'matic-network',UNI:'uniswap',ATOM:'cosmos',NEAR:'near'};
+  var coinId=idMap[sym]||sym.toLowerCase();
+  fetch('https://api.coingecko.com/api/v3/simple/price?ids='+coinId+'&vs_currencies=usd')
     .then(function(r){return r.json();})
     .then(function(d){
-      var p=d&&d.price?parseFloat(d.price):0;
+      var p=d&&d[coinId]&&d[coinId].usd?d[coinId].usd:0;
       ptPriceCache[sym]={p:p,t:Date.now()};
       cb(p);
-    }).catch(function(){
-      // fallback: try BUSD pair
-      fetch('https://api.binance.com/api/v3/ticker/price?symbol='+sym+'BUSD')
-        .then(function(r){return r.json();})
-        .then(function(d){cb(d&&d.price?parseFloat(d.price):0);})
-        .catch(function(){cb(0);});
-    });
+    }).catch(function(){cb(0);});
 }
 
 function ptSymToId(sym){
