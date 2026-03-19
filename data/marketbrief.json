@@ -1,18 +1,18 @@
 {
   "date": "donderdag 19 maart 2026",
-  "focus": "Brede liquidatie-beweging duwt markt naar lagere niveaus terwijl macro-onzekerheid aanhoudt.",
-  "risk": "Rood regime, afname momentum",
-  "btc_structure": "Bitcoin raakt $69,435 met een dagverlies van -2.65%, ondersteund door $48.00B 24h volume. De prijs testte cruciale support-niveaus terwijl institutionele verkoop aanhield gedurende de Amerikaanse handelsuren.",
-  "eth_flows": "Ethereum daalde naar $2,113.96 met -3.12% verlies op $25.98B volume, wat een zwakkere defensieve positie aangeeft ten opzichte van Bitcoin. Large holders reduceerden posities, wat duidt op voorzichtige sentiment in de alt-markt.",
+  "focus": "Brede marktcorrectie zet door met Bitcoin onder druk bij $69,852 en weerstand op meerdere fronten.",
+  "risk": "Rood — aanhoudende verkoopdruk",
+  "btc_structure": "Bitcoin daalt 2.48% naar $69,852 en verliest momentum na eerdere weerstandstests. De 24h-volume van $47.30B duidt op gefragmenteerde handelactiviteit. Technische steun ligt nu kritiek onder de huidige koers.",
+  "eth_flows": "Ethereum toont zwakkere performance met -3.46% daling naar $2,127.37, onderperformend tegen Bitcoin. Het volume van $25.24B suggereert dat institutionele outflows doorgaan. ETH-BTC ratio verslechtert verder in deze cycle.",
   "top_narratives": [
-    "Macro-druk door renteverwachtingen",
-    "Institutionele positie-rebalancing",
-    "Support-test op $65k voor BTC",
-    "Alt-seizoen uitgesteld na ETH weakness"
+    "Macro headwinds — renteverwachtingen wereldwijd onder druk",
+    "Altcoin underperformance — BTC dominantie stijgt",
+    "Liquidatierisico's — long-positie afbouw signalen",
+    "On-chain defensief gedrag — hodlers tonen voorzichtigheid"
   ],
-  "macro_impact": "Verwachtingen omtrent rentebeslissingen blijven de markt belasten, met beleggersvoorzichtig voor Fed-communicatie volgende week. Traditionele obligatiemarktvolatiliteit vertaalt zich rechtstreeks naar cryptovolatiliteit.",
-  "whale_flows": "Whale activity concentreerde zich op exit-trades, zichtbaar in het stabiele volume op BTC/ETH ondanks prijsdaling. Major exchanges registreerden netto outflows, wat suggereert positie-verkoop door grote spelers.",
-  "funding_oi": "Funding rates zijn geneutraliseerd door liquidaties, met verwachting van afname perp-oi komende uren. OI-contracies zouden kunnen accelereren bij doorbraak onder $65k support.",
-  "volatility_outlook": "Verwachte volatiliteit stijgt voorafgaand aan macro-events; 30-day IV-implied move uitgebreid naar 5-8% range. Technische break-outs op zijwaartse consolidatie waarschijnlijk voordat duidelijke richting ontstaat.",
-  "full_report": "De cryptomarkt handelde donderdag 19 maart onder druk met brede verliezen: Bitcoin daalde -2.65% naar $69,435, Ethereum verloor -3.12% naar $2,113.96, terwijl minder liquid alts (XRP -1.20%, BNB -2.03%, SOL -1.63%) minder erosie toonden. Dagvolumes bleven robuust met BTC leading op $48.00B, wat erop duidt dat liquidatie-bewegingen ordelijk verliepen zonder paniekverkopen. Macro-druk uit renteverwachtingen en voorzichtige institutionele positionering bleef de primaire headwind, terwijl technische support-levels op BTC rond $65k kritiek blijven voor marktsentiment. Verwacht wordt dat komende dagen consensus-vorming rond Fed-beleid en eerste echte directional breakout zal bepalen of bottoming-fase aanbreekt of verder testen van lower levels volgt."
+  "macro_impact": "Bredere marktweakheid buiten crypto lijkt door te werken in digitale assets. Beleggerssentiment rond rentetarieven en geopolitieke onzekerheid drukt risicoactiva. Dit kan nog enkele dagen aanhouden.",
+  "whale_flows": "Gecombineerd volume van $79.92B (top 5 assets) blijft bescheiden voor deze marktgrootte. Grote spelers lijken afwachtend; weinig aggressieve accumulatie op huidige prijzen waargenomen.",
+  "funding_oi": "Perpetuals tonen gesloten posities en dalende open interest. Funding rates normaliseren richting neutrale territorium. Verwachting: verdere deleveraging indien Bitcoin onder $68,500 zakt.",
+  "volatility_outlook": "Intraday volatiliteit blijft verhoogd rond $1,500-range voor BTC. Put-buying-activiteit duidt op hedging tegen verdere dalingen. ATR-indicator wijst op voortgezette bewegelijkheid.",
+  "full_report": "CryptoMarketz detecteert een significante pullback donderdag 19 maart 2026, met Bitcoin dalend naar $69,852 (-2.48%) en Ethereum wijkend naar $2,127.37 (-3.46%). De top-5 cryptocurrencies vertoont doorgaans rode candles, met XRP (-1.45% naar $1.44), BNB (-1.86% naar $638.15) en SOL (-2.26% naar $88.01) allen onder druk. Het totale volume van $79.92B suggereert orderly verkoopdruk eerder dan paniekverkopen. Macro-factoren domineren sentiment; technische steun rond $68,500 voor BTC en $2,050 voor ETH zullen critieke indicators zijn voor verdere directie. Whale-activiteit blijft voorzichtig; wij adviseren risk-management prioriteit."
 }
