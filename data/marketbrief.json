@@ -1,18 +1,18 @@
 {
   "date": "donderdag 19 maart 2026",
-  "focus": "Brede marktcorrectie met BTC onder $71k wegens risico-off sentiment en technische verkoopdruk.",
-  "risk": "Verhoogde volatiliteit, bearish technisch",
-  "btc_structure": "Bitcoin daalt 4.54% naar $70,813 op dagbasis, verwerkt hogere rentetarieven en liquiditeitsafname. De 24h volume van $44.76B duidt op gedwongen verkopen waarbij institutionele posities worden afgebouwd.",
-  "eth_flows": "Ether onderperformt met -5.74% naar $2,194.35, een sterker drawdown dan BTC, wat wijst op flight-to-safety uit risicovolle altcoin-posities. Volume van $25.08B is robust maar momentum is negatief.",
+  "focus": "Brede marktcorrectie over alle major assets met BTC dominantie onder druk.",
+  "risk": "Rood: verhoogde verkoopdruk",
+  "btc_structure": "Bitcoin daalt naar $70,819 met een verlies van -4.23% in 24 uur, ondersteund door volumineus verkoopvolume van $45.90B. De kritische steunzone rond $70k wordt nu getest met risico op verdere consolidatie.",
+  "eth_flows": "Ethereum underperformt met -5.54% naar $2,190.01 en volgt een zwakker patroon dan BTC. Het volume van $24.74B suggereert liquiditeitsafvloeiing uit alt-posities richting stablecoins.",
   "top_narratives": [
-    "Macro risico-off: rentemarktspanningen",
-    "Technische breakdown onder sleutelsteun",
-    "Institutionele posities worden geliquideerd",
-    "Altcoin underperformance vs BTC dominantie"
+    "Macro headwinds: mogelijke renteverhoging in de komende kwartalen",
+    "Altseason-rallybreuk: sterke relatieve underperformance van L1-tokens",
+    "Leverage-liquidaties: futures volumes suggereren positie-afbouw",
+    "Institutionele positie-herbepaling rond Q1-afsluiting"
   ],
-  "macro_impact": "Fed-gerelateerde onzekerheden en hogere reële rendement-verwachtingen drukken risico-activa. Aandelen- en obligatiemarkten ervaren parallelle verkoopdynamica die crypto-volatiliteit versterkt.",
-  "whale_flows": "Walvis-activity in $44.76B BTC-volume suggereert positie-afbouw; XRP ($2.86B) en SOL ($4.13B) tonen disproportionele afvloeiing naar cash, signaliserend risicovermindering.",
-  "funding_oi": "Funding rates zullen waarschijnlijk negatief blijven gezien de liquidatie-cascade. Open Interest verwacht af te nemen naarmate short-positiegroei afvlakt.",
-  "volatility_outlook": "Verwachting van aanhoudende intraday swings tot 6-8% op basis van macro-kalender. Steun/weerstandniveaus zeer gevoelig; breakdowns kunnen verdere verkoopdruk catalyseren.",
-  "full_report": "De cryptomarkt verwerkt op donderdag 19 maart 2026 een brede risico-off correctie met Bitcoin daalde naar $70,813 (-4.54%), Ethereum naar $2,194.35 (-5.74%), en altcoins evenredig onder druk. BTC-volume van $44.76B en ETH-volume van $25.08B duiden op substantiële liquidatie-activiteit, terwijl XRP, BNB en SOL respectievelijk 3.41-5.74% dalen. De onderliggende oorzaak ligt in macro-onzekerheden rond rentarief-dynamiek en risico-afbouw door institutionele beleggers. Technische steun-niveaus worden getest; volhoudende breaks zullen verdere downside cataliseren. Whale-flows tonen positionele afbouw, funding rates negatief, volatiliteit verwacht 6-8% intraday swings."
+  "macro_impact": "Vooruitlopende economische signalen en renteverwachtingen veroorzaken risicomijding in risk-assets. De USD-sterkte werkt negatief op crypto-valuaties en buit technische zwakheden uit.",
+  "whale_flows": "Whale-activiteit toont gedifferentieerde verkoop: BTC vol $45.90B dominant, terwijl smaller caps (BNB -3.24%, SOL -4.59%) minder volume trekken. Dit duidt op strategisch profit-taking in top-tier assets.",
+  "funding_oi": "Verwacht lagere funding rates en mogelijke short-compressie als markt bodem raakt rond $69-70k. Open Interest zou kunnen consolideren bij aanhoudende verkoopdruk.",
+  "volatility_outlook": "Volatiliteit blijft verhoogd; verwacht trading bands van $68-72k voor BTC. Downside-swings kunnen meer getest worden zonder sterke support clusters.",
+  "full_report": "De crypto-markt noteert brede verliezen op donderdag 19 maart 2026 met BTC op $70,819 (-4.23%), ETH op $2,190.01 (-5.54%), XRP op $1.47 (-4.05%), BNB op $649.49 (-3.24%) en SOL op $89.78 (-4.59%). Het gecombineerde 24h-volume van $78.67B wijst op actieve liquidatie-cascades. Macro-headwinds en risico-off sentiment domineren handelsdynamiek. Technisch gezien testen we kritische support-zones; een break onder $70k zou voor BTC verdere capitulatie kunnen betekenen. Altcoins tonen relatieve zwakte tegenover BTC. Traders moeten waakzaam blijven voor verder downside-potentieel tot steunzones rond $68-69k voor BTC."
 }
