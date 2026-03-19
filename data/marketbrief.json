@@ -1,18 +1,18 @@
 {
-  "date": "donderdag 19 maart 2026",
-  "focus": "Brede marktcorrectie met Bitcoin onder druk na intraday verlies van 0.90%.",
-  "risk": "Elevated, rood vlaggen",
-  "btc_structure": "Bitcoin daalt naar $70,417 met een dagverlies van 0.90% en volume van $46.51B. De weerstand rond $71k-$72k lijkt onder druk; een sluit onder $70k zou technische breuk signaleren.",
-  "eth_flows": "Ethereum onderperformt met -1.97% naar $2,145.30 en blijft achter op Bitcoin momentum. Het volume van $23.96B duidt op gedistribueerde verkopen zonder duidelijke koopsteun.",
+  "date": "2026-03-19",
+  "focus": "Crypto markt in extreme angst (Fear & Greed 23) terwijl quadruple witching morgen potenti\u00eble volatiliteit aankondigt en Wall Street institutionele inflows signaliseert.",
+  "risk": "Extreme Fear, liquidatie-vatbaar, pre-volatility setup",
+  "btc_structure": "Bitcoin noteert $70.223 met een dagelijkse daling van -1.05% en week-stijging van +0.56%, wat wijst op weerstand rond huidige niveaus. Technische ondersteuning wordt getest terwijl marktanalisten waarschuwen voor potenti\u00eble hertest van onbetrouwbare support zones. Het uurrendement van +0.58% duidt op voorzichtige stabilisatie na recente druk.",
+  "eth_flows": "Ethereum staat op $2.140,64 met een steviger weekprestatie van +4.47% ondanks een dagverlies van -1.97%. Het uurrendement van +0.75% suggereert dat kopers stap voor stap terugkeren, met volume van $24.18B die aanzienlijke liquiditeitsactiviteit bewijst.",
   "top_narratives": [
-    "FED-rentebesluit verwachtingen verscherpen correctie",
-    "Bitcoin weekly close kritiek voor trend-intact",
-    "Ethereum underperformance versus BTC dominantie",
-    "Altcoin liquidatie cascades op leverage-afbouw"
+    "Institutionele doorbraak: Cantor en andere Wall Street spelers pitch FalconX IPO terwijl crypto professionalisering versnelt",
+    "RWA expansie: Bybit lanceert yield-dragende tokenized goud, market verticalisering in real-world assets neemt toe",
+    "AI agent race: Trading platforms implementeren AI-agenten zoals Nasdaq observeert, automatisering in crypto accelereert",
+    "Extreme Fear sentiment: Fear & Greed Index op 23 suggereert overwerkverkochte markt met potentieel for bounce-back"
   ],
-  "macro_impact": "Stijgende rentetarieven en inflatiedata verscherpen risk-off sentiment. Traditionele markten signaleren voorzichtigheid die in crypto doorsijpelt.",
-  "whale_flows": "BTC volume van $46.51B suggereert geordende exit; ETH volume-daling naar $23.96B wijst op minder agressieve accumulatie. Kleinere caps (SOL -0.81%, XRP -0.39%) tonen weerstand tegen liquidaties.",
-  "funding_oi": "Funding rates dalen naar negatief terrein; long liquidaties domineren intraday. Short-covering verwacht bij $69k break, maar weerstand valt samen met macro headwinds.",
-  "volatility_outlook": "Impliciete volatiliteit stijgt naar 18-maands highs op rentevoet-onzekerheid. ATR breidt uit; verwacht 2-3% daily swings.",
-  "full_report": "De cryptomarkt ondervindt brede druk donderdag 19 maart met Bitcoin op $70,417 (-0.90%, vol $46.51B), Ethereum op $2,145.30 (-1.97%, vol $23.96B) en secundaire tokens in rode cijfers (SOL $88.94 -0.81%, XRP $1.45 -0.39%, BNB $640.95 -1.03%). Macro headwinds rond FED-beleid en inflatieverwachtingen overheersen spot- en derivatenactiviteit. Bitcoin's wekelijkse close onder $71k zou technische breuk betekenen; Ethereum's relatie underperformance signaleert dalende altcoin-rotatie. Volume-patronen en daling in funding rates wijzen op liquidatie-druk. Positie voor hogere volatiliteit en test naar $68.5k-$69k support volgende dagen."
+  "macro_impact": "Wall Street heavyweight inflows via FalconX IPO-plannen en IMC Trading's commerci\u00eble uitbreiding signaleren institutionele verankering in crypto. Goud-dalende/olie-stijgende dynamiek cre\u00ebert macro-onzekerheid, terwijl Glassnode waarschuwt dat bull-markt vibes ontbreken aan confirmation ondanks institutionele interesse.",
+  "whale_flows": "Liquidatiegegevens niet beschikbaar, echter dagelijkse volume van $111.9B met BTC dominantie van 56.5% toont gezonde marktdiffusie. ETH-volume van $24.18B en XRP-volume van $2.61B wijzen op voorzichtige herwaardering onder premium-posities.",
+  "funding_oi": "Funding rates en open interest data niet beschikbaar vandaag; dit vergt voorzichtigheid bij leverage-positie-evaluatie. Gebrek aan long-bias in funding duidt mogelijk op voorzichtige houding van traders voorafgaand aan morgen's quadruple witching event.",
+  "volatility_outlook": "Fear & Greed Index op 23 (Extreme Fear, daling van 26) duidt op potentieel washout scenario met mogelijke reactie-opwaarts. Quadruple witching morgen zal waarschijnlijk intraday volatiliteit aanwakkeren; traders moeten stop-losses optimaliseren rond support-niveaus.",
+  "full_report": "De cryptomarkt opent 2026-03-19 in Extreme Fear (Fear & Greed 23) terwijl Bitcoin op $70.223 (dagelijks -1.05%) en Ethereum op $2.140,64 (dagelijks -1.97%) stabiliseren ondanks marktdaling. Totale market cap gedaald naar $2.49T (-1.24%), echter XRP toont weerstand met weekwinst +5.31% en ETH herstelt met weekwinst +4.47%. Wall Street institutionele bewegingen (Cantor IPO-pitch, IMC Trading-expansie, Bybit RWA-lanceringen) signaleren langdurige structurele ondersteuning onder korttermijn sentimentdruk. Quadruple witching morgen waarschuwt voor technische volatiliteit; traders navigeren oversold condities in extreme fear-regime met voorzichtige long-bias waar institutionele kwaliteit (BTC dominantie 56.5%, volume $111.9B) fundament biedt."
 }
