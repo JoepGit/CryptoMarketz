@@ -1,6 +1,6 @@
 {
-  "updated": "18 Mar 2026, 18:09 UTC",
-  "updated_iso": "2026-03-18T18:09:35.518576+00:00",
+  "updated": "19 Mar 2026, 07:47 UTC",
+  "updated_iso": "2026-03-19T07:47:14.328523+00:00",
   "x_posts": [],
   "reddit": {
     "airdrops": [],
@@ -27,6 +27,12 @@
       "date": "2026-03-15T12:45:02+00:00"
     },
     {
+      "title": "Bitcoin: Post-FOMC",
+      "channel": "Benjamin Cowen",
+      "link": "https://www.youtube.com/watch?v=Kx7F_EL9ocI",
+      "date": "2026-03-19T04:26:26+00:00"
+    },
+    {
       "title": "Bitcoin: An Unfortunate Pattern [Update]",
       "channel": "Benjamin Cowen",
       "link": "https://www.youtube.com/watch?v=rKjce1jCxSM",
@@ -39,49 +45,43 @@
       "date": "2026-03-18T00:40:54+00:00"
     },
     {
-      "title": "Bitcoin: Dubious Speculation",
-      "channel": "Benjamin Cowen",
-      "link": "https://www.youtube.com/watch?v=W_YasiLxgJ4",
-      "date": "2026-03-16T22:50:05+00:00"
+      "title": "Crypto Holders Can’t Believe.. It’s Actually Happening",
+      "channel": "Altcoin Daily",
+      "link": "https://www.youtube.com/watch?v=coGc_pNFCQU",
+      "date": "2026-03-18T22:21:08+00:00"
+    },
+    {
+      "title": "The SEC just started altcoin season 👀",
+      "channel": "Altcoin Daily",
+      "link": "https://www.youtube.com/shorts/e0LLWL3FH7s",
+      "date": "2026-03-18T19:43:04+00:00"
     },
     {
       "title": "Bitcoin to $35 TRILLION? He's dead serious 💀",
       "channel": "Altcoin Daily",
       "link": "https://www.youtube.com/shorts/Wl3GNK7iAiI",
       "date": "2026-03-18T12:00:00+00:00"
-    },
-    {
-      "title": "BREAKING: The SEC just released the crypto BULLS!!",
-      "channel": "Altcoin Daily",
-      "link": "https://www.youtube.com/watch?v=IPIU9rykGm8",
-      "date": "2026-03-17T23:21:47+00:00"
-    },
-    {
-      "title": "Massive News → Bitcoin HIGHER",
-      "channel": "Altcoin Daily",
-      "link": "https://www.youtube.com/shorts/us5nLWnf2Zc",
-      "date": "2026-03-17T12:00:00+00:00"
     }
   ],
   "analysis": {
-    "headline": "YouTube Crypto Channels Split on Bitcoin's Future Amid Regulatory Optimism",
-    "summary": "This week's crypto discourse is dominated by conflicting Bitcoin price predictions and analysis, ranging from extremely bullish trillion-dollar projections to bearish pattern warnings. Simultaneously, there's growing excitement around potential regulatory shifts favoring crypto, with particular focus on SEC developments and stablecoin evolution.",
+    "headline": "YouTube Analysts Split on Bitcoin Bearish Patterns vs Altcoin Season Hype",
+    "summary": "With X and Reddit data unavailable, YouTube crypto channels dominate discussion this week. Content creators are divided between Bitcoin bearish warnings and altcoin season optimism, while major regulatory and structural changes loom over stablecoins and prediction markets.",
     "top_narratives": [
-      "Bitcoin price uncertainty with conflicting bullish and bearish signals",
-      "Regulatory landscape shifting in favor of crypto markets",
-      "Stablecoin sector facing major structural changes"
+      "Bitcoin showing bearish technical patterns despite potential upside",
+      "SEC actions potentially triggering altcoin season",
+      "Major stablecoin regulatory changes approaching"
     ],
     "hot_airdrops": [],
     "trending_themes": [
-      "Bitcoin price predictions",
-      "SEC regulatory changes",
-      "Stablecoin evolution",
-      "HODL strategy debates",
-      "Government crypto policies"
+      "Bitcoin technical analysis",
+      "Altcoin season speculation",
+      "Stablecoin regulation",
+      "Government vs DeFi",
+      "HODL strategy evolution"
     ],
-    "youtube_takeaway": "Major crypto YouTubers are presenting contradictory Bitcoin outlooks, with some predicting massive gains to $35 trillion while others warn of bearish patterns and dubious speculation.",
-    "analyst_take": "The lack of social media data from X and Reddit creates an incomplete picture, but YouTube content suggests high uncertainty in the market. Watch for regulatory developments around stablecoins and SEC policy shifts, but be cautious of conflicting price predictions indicating market indecision.",
+    "youtube_takeaway": "Top crypto YouTubers are cautiously optimistic about altcoins while warning of Bitcoin's bearish technical setup. Regulatory developments around stablecoins and prediction markets are creating both concern and opportunity.",
+    "analyst_take": "Limited social data creates information asymmetry - monitor on-chain metrics and alternative data sources closely. The divergence between Bitcoin pessimism and altcoin optimism suggests selective positioning rather than broad market confidence.",
     "sentiment": "neutral",
-    "sentiment_reason": "YouTube content shows mixed bullish regulatory news offset by bearish Bitcoin technical analysis."
+    "sentiment_reason": "Mixed signals from YouTube analysts show uncertainty with both bearish Bitcoin warnings and altcoin season excitement."
   }
 }
