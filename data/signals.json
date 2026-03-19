@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "id": 1773949624661,
+    "coin": "BTC/USD",
+    "type": "SELL",
+    "entry": "70417",
+    "tp": "68934",
+    "sl": "71960",
+    "note": "4H trend BEARISH met RSI 17.1 (oversold), prijs $69381 onder beide EMA's ($71920.86 en $71960.48). Daling van 24h high $75937 naar current price. Risk/Reward 1:1.5",
+    "timestamp": "2026-03-19T19:47:04.486Z",
+    "generated_at": "Thu, 19 Mar 2026 19:47:04 GMT",
+    "source": "claude-bot"
+  },
+  {
+    "id": 1773949626839,
+    "coin": "ETH/USD",
+    "type": "SELL",
+    "entry": "2145",
+    "tp": "2104",
+    "sl": "2194",
+    "note": "4H trend SIDEWAYS met RSI 18.0 (oversold), prijs $2120.37 onder EMA20 $2217.85. Grote daling van 24h high $2377.64. Risk/Reward 1:2.2",
+    "timestamp": "2026-03-19T19:47:04.486Z",
+    "generated_at": "Thu, 19 Mar 2026 19:47:04 GMT",
+    "source": "claude-bot"
+  },
+  {
+    "id": 1773949631199,
+    "coin": "BTC/USD",
+    "type": "BUY",
+    "entry": "70220",
+    "tp": "70540",
+    "sl": "68934",
+    "note": "1H trend SIDEWAYS, prijs $70540 boven EMA50 $70220.17, RSI 61.7 niet overbought, momentum positief +1.08% in 1h. 24h range support intact.",
+    "timestamp": "2026-03-19T19:47:04.486Z",
+    "generated_at": "Thu, 19 Mar 2026 19:47:04 GMT",
+    "source": "claude-bot"
+  }
+]
