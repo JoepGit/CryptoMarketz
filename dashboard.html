@@ -215,35 +215,38 @@ body{font-family:'Inter',sans-serif;background:#0d0d0d;color:var(--cream);overfl
 .dot.on{background:rgba(0,85,255,.65)}
 
 
-.greet{position:relative;margin-bottom:24px;padding:22px 24px 18px;border-bottom:1px solid rgba(255,255,255,.05);overflow:hidden}
-.greet::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 18% 28%, rgba(45,212,191,.10), transparent 58%);pointer-events:none}
-.greet h1{position:relative;font-family:'Inter',sans-serif;font-size:48px;font-weight:700;letter-spacing:.01em;line-height:1.1;margin-bottom:8px;color:var(--cream)}
+.greet{position:relative;padding:40px 40px 0;overflow:hidden}
+.greet::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 0% 0%, rgba(0,85,255,.07), transparent 60%);pointer-events:none}
+.greet h1{position:relative;font-family:'Inter',sans-serif;font-size:38px;font-weight:700;letter-spacing:-.01em;line-height:1.15;margin-bottom:4px;color:var(--cream)}
 .greet h1 em{font-style:normal;color:var(--accent)}
-.greet p{position:relative;font-size:18px;color:#8a8078;margin-bottom:4px}
-#clock-d{position:relative !important;margin-top:6px !important;font-size:17px !important;color:#8a8078 !important;letter-spacing:.04em !important;font-family:'Inter',sans-serif !important}
-.dashboard-hero{min-height:calc(100vh - 155px);display:flex;flex-direction:column;justify-content:center;padding:10px 0 90px}
-.dashboard-feed{margin-top:42px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:14px;align-items:start;width:100%;max-width:1180px}
-.dashboard-stack{display:flex;flex-direction:column;gap:14px}
-.morning-brief-card{padding:18px 20px;background:linear-gradient(145deg,#181818,#111111);border:1px solid rgba(255,255,255,.05);border-radius:16px;box-shadow:0 10px 24px rgba(0,0,0,.34), inset 0 1px 0 rgba(255,255,255,.02);cursor:pointer;transition:border-color .18s,transform .18s,box-shadow .18s}
-.morning-brief-card:hover{border-color:rgba(0,85,255,.18);transform:translateY(-3px);box-shadow:0 14px 28px rgba(0,0,0,.42)}
-.db-kicker{font-family:'Inter',sans-serif;font-size:15px;letter-spacing:.02em;color:rgba(0,85,255,.76);text-transform:uppercase;margin-bottom:10px}
-.db-title{font-family:'Inter',sans-serif;font-size:24px;font-weight:800;line-height:1.15;color:var(--cream);margin-bottom:8px}
-.db-sub{font-size:16px;color:#8a8078;line-height:1.7;margin-bottom:14px}
-.db-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
-.db-pill{font-family:'Inter',sans-serif;font-size:15px;letter-spacing:.06em;padding:6px 12px;border:1px solid rgba(0,85,255,.14);border-radius:4px;color:rgba(245,240,232,.5)}
-.db-copy{font-size:16px;color:var(--sub);line-height:1.85;white-space:pre-wrap}
-.db-link{display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-family:'Inter',sans-serif;font-size:14px;letter-spacing:.08em;color:var(--accent);cursor:pointer;text-transform:uppercase}
-.db-link:hover{opacity:.82}
-.dashboard-side-card{padding:18px 20px;border-radius:16px}
-.dash-section-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
-.dash-section-title{font-family:'Inter',sans-serif;font-size:14px;font-weight:700;letter-spacing:.06em;color:var(--accent)}
-.dash-section-note{font-family:'Inter',sans-serif;font-size:15px;letter-spacing:.08em;color:rgba(0,85,255,.38);text-transform:uppercase}
-.dashboard-analysis-title{font-size:18px;font-weight:600;color:var(--cream);margin-bottom:8px;line-height:1.45}
-.dashboard-analysis-body{font-size:15px;color:var(--sub);line-height:1.8;white-space:pre-wrap}
-.dashboard-signal-list{display:flex;flex-direction:column;gap:10px}
-.dashboard-empty{font-family:'Inter',sans-serif;font-size:14px;color:var(--sub)}
-.dashboard-mini{padding:14px 16px;border-radius:12px;background:rgba(0,85,255,.04);border:1px solid rgba(0,85,255,.09)}
-@media(max-width:980px){.dashboard-hero{min-height:auto;padding:10px 0 34px}.dashboard-feed{grid-template-columns:1fr}.db-title{font-size:24px}}
+.greet p{position:relative;font-size:14px;color:#5a6070;margin-bottom:0}
+#clock-d{display:none!important}
+.dashboard-hero{padding:0 0 60px}
+
+.dashboard-feed{display:grid;grid-template-columns:1fr 380px;gap:24px;padding:32px 40px;align-items:start;max-width:100%}
+.dashboard-stack{display:flex;flex-direction:column;gap:20px}
+.morning-brief-card{padding:32px 36px;background:#111214;border:1px solid rgba(255,255,255,.06);border-radius:20px;cursor:pointer;transition:border-color .2s,box-shadow .2s;position:relative;overflow:hidden}
+.morning-brief-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(0,85,255,.4),transparent)}
+.morning-brief-card:hover{border-color:rgba(0,85,255,.25);box-shadow:0 0 0 1px rgba(0,85,255,.1),0 20px 40px rgba(0,0,0,.3)}
+.db-kicker{font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;color:rgba(0,85,255,.6);text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.db-kicker::before{content:'';width:18px;height:1px;background:rgba(0,85,255,.4)}
+.db-title{font-family:'Inter',sans-serif;font-size:28px;font-weight:800;line-height:1.2;color:var(--cream);margin-bottom:16px;letter-spacing:-.02em}
+.db-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.db-pill{font-family:'Inter',sans-serif;font-size:10px;font-weight:600;letter-spacing:.06em;padding:5px 12px;border:1px solid rgba(0,85,255,.15);border-radius:100px;color:rgba(245,240,232,.45);background:rgba(0,85,255,.04)}
+.db-copy{font-size:15px;color:#6b7280;line-height:1.9;white-space:pre-wrap}
+.db-link{display:inline-flex;align-items:center;gap:8px;margin-top:20px;font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--accent);cursor:pointer;text-transform:uppercase;padding:10px 20px;border:1px solid rgba(0,85,255,.25);border-radius:8px;background:rgba(0,85,255,.06);transition:all .18s}
+.db-link:hover{background:rgba(0,85,255,.12);border-color:rgba(0,85,255,.45)}
+.dashboard-side-card{padding:24px 28px;border-radius:20px;background:#111214;border:1px solid rgba(255,255,255,.06)}
+.dash-section-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:18px}
+.dash-section-title{font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:.12em;color:rgba(0,85,255,.7);text-transform:uppercase}
+.dash-section-note{font-family:'Inter',sans-serif;font-size:10px;font-weight:600;letter-spacing:.1em;color:rgba(255,255,255,.15);text-transform:uppercase}
+.dashboard-analysis-title{font-size:16px;font-weight:600;color:var(--cream);margin-bottom:8px;line-height:1.45}
+.dashboard-analysis-body{font-size:14px;color:#6b7280;line-height:1.8;white-space:pre-wrap}
+.dashboard-signal-list{display:flex;flex-direction:column;gap:12px}
+.dashboard-empty{font-family:'Inter',sans-serif;font-size:13px;color:#4a5568;padding:8px 0}
+.dashboard-mini{display:none}
+@media(max-width:1100px){.dashboard-feed{grid-template-columns:1fr}}
+@media(max-width:680px){.dashboard-feed{padding:20px}.greet{padding:24px 20px 0}.db-title{font-size:22px}}
 .terminal-boot{position:fixed;inset:35px 0 0 var(--sb);z-index:38;display:flex;align-items:center;justify-content:center;background:rgba(13,13,13,.96);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .45s ease,visibility .45s ease}
 .terminal-boot.show{opacity:1;visibility:visible}
 .terminal-boot.hide{opacity:0;visibility:hidden}
@@ -1497,7 +1500,7 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
 
       <div class="dashboard-hero">
         <div class="greet">
-          <h1>Good <em id="g-pt">Day</em>, <em id="g-nm"> </em>. <span id="clock" style="margin-left:16px;font-size:28px;color:var(--accent);font-family:'Inter',sans-serif;font-weight:600"></span></h1>
+          <h1>Good <em id="g-pt">Day</em>, <em id="g-nm">&nbsp;</em>.<span id="clock" style="margin-left:20px;font-size:24px;color:rgba(0,85,255,.45);font-family:'Inter',sans-serif;font-weight:500;letter-spacing:.02em"></span></h1>
           <p id="g-dt"></p>
           <div id="clock-d"></div>
         </div>
@@ -1511,17 +1514,17 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
                 <span class="db-pill" id="dash-brief-time">08:00 daily update</span>
                 <span class="db-pill" id="dash-brief-risk">risk loading</span>
               </div>
-              <div id="dash-brief-copy" style="font-size:14px;color:var(--sub);line-height:1.6;margin:10px 0;overflow:hidden;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;">Loading market brief.</div>
-              <div style="display:flex;align-items:center;justify-content:space-between;margin-top:10px;">
+              <div id="dash-brief-copy" class="db-copy">Loading market brief...</div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-top:4px;">
                 <div class="db-link">Open full AI brief <span>→</span></div>
-                <span id="brief-lock-badge" style="display:none;font-size:10px;background:rgba(0,85,255,.1);color:#0055ff;border:1px solid rgba(0,85,255,.25);padding:2px 8px;border-radius:4px;font-weight:600;">Members only</span>
+                <span id="brief-lock-badge" style="display:none;font-size:10px;background:rgba(0,85,255,.1);color:#0055ff;border:1px solid rgba(0,85,255,.25);padding:4px 10px;border-radius:100px;font-weight:700;letter-spacing:.06em;">MEMBERS ONLY</span>
               </div>
             </div>
 
-            <div class="card dashboard-side-card">
+            <div class="dashboard-side-card">
               <div class="dash-section-head">
                 <div class="dash-section-title">Latest analysis</div>
-                <div class="dash-section-note">admin editable</div>
+                <div class="dash-section-note">Admin editable</div>
               </div>
               <div id="dash-analysis-wrap">
                 <div class="dashboard-empty">No analysis yet.</div>
@@ -1530,22 +1533,14 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
           </div>
 
           <div class="dashboard-stack">
-            <div class="card dashboard-side-card">
+            <div class="dashboard-side-card">
               <div class="dash-section-head">
                 <div class="dash-section-title">Active signals</div>
-                <div class="dash-section-note">latest calls</div>
+                <div class="dash-section-note">Latest calls</div>
               </div>
               <div id="dash-signals" class="dashboard-signal-list">
                 <div class="dashboard-empty">No signals yet.</div>
               </div>
-            </div>
-
-            <div class="dashboard-mini">
-              <div class="dash-section-head" style="margin-bottom:8px">
-                <div class="dash-section-title">Dashboard flow</div>
-                <div class="dash-section-note">08:00 routine</div>
-              </div>
-              <div class="dashboard-analysis-body">Every morning the AI market report lands here first. Analysis and fresh signals follow underneath so the dashboard feels alive the moment members log in.</div>
             </div>
           </div>
         </div>
@@ -3370,15 +3365,21 @@ function coincapFetch(){
 
 function fetchPrices(){
   coincapFetch().then(function(coins){
-    // Update dashboard price cards (BTC/ETH/LTC)
+    // Update dashboard stat bar + price cards
     coins.forEach(function(c){
       var cardId=COINCAP_CARD_MAP[c.id];
+      var price=c.current_price;
+      var ch=c.price_change_percentage_24h||0;
+      var chStr=(ch>=0?'+':'')+ch.toFixed(2)+'%';
+      var chClass=ch>=0?'db-stat-up':'db-stat-dn';
       if(cardId){
-        var price=c.current_price;
-        var ch=c.price_change_percentage_24h||0;
         var pe=document.getElementById('p-'+cardId);if(pe)pe.textContent=fP(price);
-        var ce=document.getElementById('c-'+cardId);if(ce){ce.textContent=(ch>=0?'+':'')+ch.toFixed(2)+'%';ce.className='pc-chg '+(ch>=0?'chg-up':'chg-dn');}
+        var ce=document.getElementById('c-'+cardId);if(ce){ce.textContent=chStr;ce.className='db-stat-sub '+chClass;}
         var se=document.getElementById('sp-'+cardId);if(se)se.innerHTML='<polyline points="'+spark(ch)+'" fill="none" stroke="'+(ch>=0?'#0055ff':'var(--red)')+'" stroke-width="1.8" stroke-linecap="round"/>';
+      }
+      if(c.id==='solana'){
+        var solv=document.getElementById('p-sol-db');if(solv)solv.textContent=fP(price);
+        var solc=document.getElementById('c-sol-db');if(solc){solc.textContent=chStr;solc.className='db-stat-sub '+chClass;}
       }
     });
     // Update top ticker bar met live data
