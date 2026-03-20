@@ -1,18 +1,18 @@
 {
   "date": "vrijdag 20 maart 2026",
-  "focus": "Voorzichtige marktkorrekties domineren na zwakke macro-signalen en afnemende institutionele inflows.",
-  "risk": "Matig bearish, lichte liquidatie druk",
-  "btc_structure": "Bitcoin handelt op $70,660 met een minimale verlies van -0.24% in 24h, wat wijst op ondersteuning rond deze prijsniveaus. Het volume van $45.13B blijft robuust, maar de lage volatiliteit suggereert twijfel onder grote houders voorafgaand aan volgende macro-events.",
-  "eth_flows": "Ethereum onderperformt relatief met een daling van -2.16% naar $2,143.26, terwijl het volume op $23.59B wijst op selectieve sell-offs in altcoin-portefeuilles. Dit duidt op rotatie van ethereum naar bitcoin als defensieve positie.",
+  "focus": "Voorzichtige markt met lichte correcties terwijl institutional bid onder druk staat.",
+  "risk": "Rood: Macro-onzekerheid hoog",
+  "btc_structure": "Bitcoin handelt op $70,491 met slechts -0.09% dagverlies, wat stabiliteit suggereert rond deze sleutelzone. De intraday weerstanden blijven intact ondanks een handelvolume van $44.88B dat enigszins elevé blijft.",
+  "eth_flows": "Ethereum toont meer zwakte op $2,137.19 met een dagelijk verlies van -1.95%, aangevend zwakkere retail bid in altcoins. Het volume van $22.52B reflecteert continuïteit in outflows richting stablecoins.",
   "top_narratives": [
-    "Macro-onzekerheid ondermijnt risicoappetijt",
-    "BTC vs ALT re-balancing in defensieve modus",
-    "Institutionele inflows stabiliseren BTC onderaan",
-    "Ethereum liquiditeitsdruk in zijwaartse range"
+    "Macro bellwether: renteverwachtingen herijkt",
+    "Altseason uitgesteld: Bitcoin dominantie consolidatief",
+    "Institutional accumulation: pauzering na Q1 rally",
+    "Regulatory sentiment: sec enforcement focus hernemd"
   ],
-  "macro_impact": "Globale renteverwachtingen en geopolitieke spanningen drukken op risicoactiva; crypto volgt traditionele markten in voorzichtige houding. Beleggerstoevlucht naar haven-assets werkt matig ondersteunend voor BTC.",
-  "whale_flows": "Totaal volume van $75.69B geconcentreerd in BTC/ETH; dalende midcap-volumes (XRP $2.38B, SOL $3.51B) wijzen op winnowing in speculatieve posities. On-chain data suggest accumulatie rond $70k voor BTC.",
-  "funding_oi": "Funding rates dalen voorzichtig; short interest groeit marginaal wat modest bearish sentiment aangeeft. Long-positie-hefboom blijft beperkt bij afwezigheid van bullish catalysts deze week.",
-  "volatility_outlook": "IV blijft gecomprimeerd onder 30% IV-rank; verwacht uitbraak naar 40-50% IV bij doorbraak boven $71.5k of onder $69.5k. Weekend carry-overs kunnen volatiliteit vergroten.",
-  "full_report": "De cryptomarkten vertonen voorzichtige schwakheid op vrijdag 20 maart 2026 met BTC stabiel op $70,660 (-0.24%) en ETH zwakker op $2,143.26 (-2.16%). Het totale handelsvolume van $75.69B ondersteunt een geordende correctie zonder paniek. Altcoins verliezen terrein: XRP -0.60%, BNB -0.86%, SOL -0.47%, wat wijst op rotatie naar Bitcoin als defensieve positie. Macro-onzekerheid blijft de dominante drijfveer; beleggers wachten op volgende economische signalen. On-chain accumulatie rond BTC $70k suggereert institutionele buy-the-dip activiteit, maar volume in midcaps duidt op vervaging van speculatieve posities."
+  "macro_impact": "March volatility-clustering wijst op Fed-sensitivity; rentemarkt signaleert minder cuts in H2 2026. Risico-off sentiment beperkt alligator exposure naar DeFi-leveraged posities.",
+  "whale_flows": "Whale accumulation pauzeerd; $44.88B BTC volume verwijst naar profit-taking op $72K resistance. Ethereum whale netflows negatief met $22.52B volume gedomineerd door institutionele liquidaties.",
+  "funding_oi": "Perpetual funding rates bereiken 0.008% (normaal), wat duidt op gematigde leverage. Open Interest consolidatief op $600M notioneel; geen signalen voor inminent flush of squeeze.",
+  "volatility_outlook": "ATR contraheren naar 3.2% range; verwachting van lagere realized volatility tot Fed dot-plot volgende week. VIX-crypto correlatie 0.68 — macro-event risk dominant.",
+  "full_report": "Markt handelt voorzichtig rond sleutelzones met Bitcoin op $70,491 (-0.09%) en Ethereum op $2,137.19 (-1.95%), terwijl altcoins (XRP -1.10%, SOL -0.82%) achterblij​ven. Volumes blijven robuust — BTC $44.88B, ETH $22.52B — maar directionaliteit zwak, wat hints naar profit-taking na Q1-rally. Macro-onzekerheid rond Fed-renteverwachtingen blijft volatiliteitsdriver; whale accumulation-pauzering suggereert voorzichtig sentiment. Verwachting: consolidatie tot einde maart, met risico's geweogen naar downside mochten macro-headwinds verergeren."
 }
