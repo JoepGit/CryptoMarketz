@@ -3312,34 +3312,67 @@ function spark(ch){var v=17,pts=[];for(var i=0;i<=10;i++){v+=(Math.random()-(ch<
 var _cache={};
 function cGet(k){var e=_cache[k];if(!e||Date.now()>e.x){delete _cache[k];return null;}return e.d;}
 function cSet(k,d,t){_cache[k]={d:d,x:Date.now()+t*1000};}
-// ── COINGECKO API — vervangt Binance (werkt in alle regio's inclusief NL) ──
-var CG_IDS='bitcoin,ethereum,litecoin,solana,ripple,binancecoin,cardano,avalanche-2,dogecoin,polkadot,chainlink,matic-network,uniswap,cosmos,near';
+// ── COINCAP API — gratis, geen key nodig, werkt in NL zonder blokkade ──
 var CG_LABELS={
   bitcoin:'BTC',ethereum:'ETH',litecoin:'LTC',solana:'SOL',ripple:'XRP',
   binancecoin:'BNB',cardano:'ADA','avalanche-2':'AVAX',dogecoin:'DOGE',
   polkadot:'DOT',chainlink:'LINK','matic-network':'MATIC',uniswap:'UNI',
   cosmos:'ATOM',near:'NEAR'
 };
+// CoinCap gebruikt andere IDs
+var COINCAP_IDS=['bitcoin','ethereum','solana','ripple','binance-coin','cardano','avalanche','dogecoin','polkadot','chainlink','polygon','uniswap','cosmos','near-protocol','litecoin'];
+var COINCAP_LABEL_MAP={
+  'bitcoin':'BTC','ethereum':'ETH','solana':'SOL','ripple':'XRP',
+  'binance-coin':'BNB','cardano':'ADA','avalanche':'AVAX','dogecoin':'DOGE',
+  'polkadot':'DOT','chainlink':'LINK','polygon':'MATIC','uniswap':'UNI',
+  'cosmos':'ATOM','near-protocol':'NEAR','litecoin':'LTC'
+};
+// CoinCap ID → intern card-ID mapping
+var COINCAP_CARD_MAP={'bitcoin':'btc','ethereum':'eth','litecoin':'ltc'};
 
 // Cache
-var _cgPriceCache=null,_cgPriceCacheTime=0;
-function cgPriceFetch(){
-  if(_cgPriceCache&&Date.now()-_cgPriceCacheTime<60000)return Promise.resolve(_cgPriceCache);
-  var url='https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids='+CG_IDS+'&order=market_cap_desc&per_page=15&page=1&sparkline=false&price_change_percentage=24h';
-  return fetch(url)
-    .then(function(r){return r.json();})
+var _priceCache=null,_priceCacheTime=0;
+
+function renderTicker(coins){
+  var t='';
+  coins.forEach(function(c){
+    var lbl=c.ticker||c.symbol.toUpperCase();
+    var price=c.current_price;
+    var ch=c.price_change_percentage_24h||0;
+    t+='<div class="ti"><span class="ti-s">'+lbl+'/USDT</span><span class="ti-v">'+fP(price)+'</span><span class="'+(ch>=0?'ti-u':'ti-d')+'">'+(ch>=0?'▲':'▼')+' '+Math.abs(ch).toFixed(2)+'%</span></div>';
+  });
+  var el=document.getElementById('tkr-t');if(el)el.innerHTML=t+t;
+}
+
+function coincapFetch(){
+  if(_priceCache&&Date.now()-_priceCacheTime<30000)return Promise.resolve(_priceCache);
+  var url='https://api.coincap.io/v2/assets?ids='+COINCAP_IDS.join(',')+'&limit=15';
+  return fetch(url,{headers:{'Accept-Encoding':'gzip,deflate,br'}})
+    .then(function(r){
+      if(!r.ok) throw new Error('CoinCap HTTP '+r.status);
+      return r.json();
+    })
     .then(function(d){
-      _cgPriceCache=d;_cgPriceCacheTime=Date.now();
-      return d;
+      if(!d||!d.data) throw new Error('CoinCap lege response');
+      var coins=d.data.map(function(a){
+        return{
+          id:a.id,
+          ticker:COINCAP_LABEL_MAP[a.id]||a.symbol,
+          symbol:a.symbol.toLowerCase(),
+          current_price:parseFloat(a.priceUsd)||0,
+          price_change_percentage_24h:parseFloat(a.changePercent24Hr)||0
+        };
+      });
+      _priceCache=coins;_priceCacheTime=Date.now();
+      return coins;
     });
 }
 
 function fetchPrices(){
-  cgPriceFetch().then(function(coins){
+  coincapFetch().then(function(coins){
     // Update dashboard price cards (BTC/ETH/LTC)
-    var cardMap={bitcoin:'btc',ethereum:'eth',litecoin:'ltc'};
     coins.forEach(function(c){
-      var cardId=cardMap[c.id];
+      var cardId=COINCAP_CARD_MAP[c.id];
       if(cardId){
         var price=c.current_price;
         var ch=c.price_change_percentage_24h||0;
@@ -3348,18 +3381,21 @@ function fetchPrices(){
         var se=document.getElementById('sp-'+cardId);if(se)se.innerHTML='<polyline points="'+spark(ch)+'" fill="none" stroke="'+(ch>=0?'#0055ff':'var(--red)')+'" stroke-width="1.8" stroke-linecap="round"/>';
       }
     });
-    // Update top ticker bar
-    var t='';
-    coins.forEach(function(c){
-      var lbl=CG_LABELS[c.id]||c.symbol.toUpperCase();
-      var price=c.current_price;
-      var ch=c.price_change_percentage_24h||0;
-      t+='<div class="ti"><span class="ti-s">'+lbl+'/USDT</span><span class="ti-v">'+fP(price)+'</span><span class="'+(ch>=0?'ti-u':'ti-d')+'">'+(ch>=0?'▲':'▼')+' '+Math.abs(ch).toFixed(2)+'%</span></div>';
-    });
-    var el=document.getElementById('tkr-t');if(el)el.innerHTML=t+t;
-  }).catch(function(){});
+    // Update top ticker bar met live data
+    renderTicker(coins);
+  }).catch(function(err){
+    console.warn('[ZIMR] CoinCap fetch mislukt:', err);
+    // Probeer CoinGecko als fallback
+    var cgUrl='https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana,ripple,dogecoin,cardano,chainlink&vs_currencies=usd&include_24hr_change=true';
+    fetch(cgUrl).then(function(r){return r.json();}).then(function(d){
+      var coins=Object.keys(d).map(function(id){
+        return{id:id,ticker:CG_LABELS[id]||(id.slice(0,4).toUpperCase()),symbol:id,current_price:d[id].usd||0,price_change_percentage_24h:d[id].usd_24h_change||0};
+      });
+      renderTicker(coins);
+    }).catch(function(){});
+  });
 }
-setInterval(fetchPrices,60000); // elke 60s (CoinGecko rate limit is strenger dan Binance)
+setInterval(fetchPrices,30000); // elke 30s — CoinCap heeft ruimere rate limits
 
 function fetchTotalMarketCap(){
   // Binance doesn't have global market cap use CoinGecko just for this one call (cached 5 min)
