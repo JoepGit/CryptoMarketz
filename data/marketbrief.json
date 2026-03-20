@@ -1,18 +1,18 @@
 {
-  "date": "vrijdag 20 maart 2026",
-  "focus": "Crypto markt vertoont stabiliteit met minimale bewegingen terwijl macro-economische factoren de tonaliteit bepalen.",
-  "risk": "Laag volatiliteit, macro-afhankelijk",
-  "btc_structure": "Bitcoin handelt vlak op $69,734 met slechts 0.07% stijging in 24 uur, wat duidt op consolidatie rond deze steunzone. Het volume van $40.39B blijft solide, wat erop wijst dat grote spelers voorzichtig blijven.",
-  "eth_flows": "Ethereum toont iets meer sterkte met +0.20% naar $2,122.93, terwijl volumes van $18.37B stabiliteit ondersteunen. De positieve momentum suggereert voorzichtige long-posities onder DeFi participants.",
+  "date": "2026-03-20",
+  "focus": "Extreme Fear-sentiment (11) drukt markt omlaag terwijl renteverhogingsverwachtingen Bitcoin onder druk zetten.",
+  "risk": "Acute liquidatierisico bij $60K support",
+  "btc_structure": "Bitcoin noteert op $69.775, met intraday -0.26% en weeklijks -1.83%. Technische druk concentreert zich rond $60K als kritieke ondersteuningsniveau, zoals aangeduid door marktanalisten die verdere neerwaartse beweging signaleren. De dalende 24h-volume ($40.02B) suggereert voorzichtig handelen in deze extreme fear-omgeving.",
+  "eth_flows": "Ethereum staat op $2.122,90 met -0.56% intradag en -0.81% in 24h, maar toont weeklijkse veerkracht met +1.08%. De taker volume bereikt 3-jaarhoogtepunten, wat mogelijke verdeling onder grote houders aangeeft voordat verdere consolidatie.",
   "top_narratives": [
-    "Macro-rentevoet verwachtingen domineren sentiment",
-    "Institutionele accumulatie in lage volatiliteit",
-    "Altseason momentum in Solana (SOL +0.74%)",
-    "Stablecoin reserves stabiliseren"
+    "Renteverhoging-verwachtingen destabiliseren risk assets; obligatiemarkten onder druk",
+    "Wall Street integratie accelereert via Nasdaq blockchain-goedkeuring; institutionele legitimiteit neemt toe",
+    "Extreme Fear-index (11) schept potentieel bottom-scenario; kapitulatie-signaal in vorm",
+    "Ledger IPO-voorbereiding en crypto-infrastructuur-versterking ondanks marktvolatiliteit"
   ],
-  "macro_impact": "Geopolitieke spanningen en Federal Reserve-signalen blijven marktdynamiek bepalen. Beleggers wachten op volgende rente-indicatoren voordat zij grotere posities opbouwen.",
-  "whale_flows": "Bitcoin volume van $40.39B domineert markt, terwijl Ethereum ($18.37B) en Solana ($3.09B) secundair zijn. De verdeling suggereert voorzichtige whale-positie-opbouw zonder agressieve accumulation.",
-  "funding_oi": "Funding rates zijn licht positief maar niet exuberant, wat duidt op gebalanceerde long/short verhoudingen. Openstaande posities groeien traag, wat wijst op risico-averzend sentiment.",
-  "volatility_outlook": "Verwacht lage volatiliteit van 8-12% annualized, typisch voor consolidatie-fase. Breakout-potentieel komt wanneer macro-catalisten helderheid bieden.",
-  "full_report": "De cryptomarkt handelt vrijdag 20 maart in consolidatie: Bitcoin stabiel op $69,734 (+0.07%), Ethereum stijgt licht naar $2,122.93 (+0.20%), terwijl Solana uitblinkt met +0.74% naar $88.46. Bitcoin volume van $40.39B domineerde, ondersteund door Ethereum volumes van $18.37B. Het sentiment blijft voorzichtig positief, met whale-activiteit die eerder accumuleert dan pusht. Macroeconomische factoren, met name Fed-renteverwachtingen en geopolitieke risico's, bepalen de tonaliteit. Geen significante liquidaties waargenomen, wat duidt op gezonde marktstructuur. Traders monitoren support rond $69k Bitcoin en $2,100 Ethereum voor volgende move."
+  "macro_impact": "Stijgende renteverhogingsverwachtingen en obligatiemarktkrach vormen primaire exogene risico's voor cryptomarkten. Het White House AI-framework en Nasdaq's blockchain-goedkeuring bieden institutionele tegenwind, maar deze positieve signalen worden overshaduwad door macrovolatiliteit. Olieprijzen boven $180/barrel zouden verdere deflatoire druk kunnen cre\u00ebren.",
+  "whale_flows": "Open Interest en Funding Rates zijn niet beschikbaar, maar de gestegen taker volume op Ethereum duidt op concentratie van grote verkooporders. Lage 24h-marktcapverandering (-0.41%) wijst op voorzichtig positie-management in deze extreme fear-fase zonder massale liquidaties.",
+  "funding_oi": "Funding rate- en Open Interest-data zijn vandaag niet beschikbaar voor sleutelparen (BTC, ETH, SOL, BNB, XRP), wat monitoring van sentiment-shifts bemoeilijkt. Deze dataverbinding zou normaal kritieke inzichten bieden in long/short-balans onder extreme marktomstandigheden.",
+  "volatility_outlook": "Het Fear & Greed Index-dip van 23 naar 11 (Extreme Fear) signaleert kapitulatie-dynamieken die historisch bottoms aankondigen. Verwacht volatiele bounces richting $72K-$73K weerstand in BTC mocht sentiment verschuiven, maar $60K blijft kritieke liquidatie-barri\u00e8re.",
+  "full_report": "Op 20 maart 2026 ondervindt de cryptomarkt aanzienlijke druk met Bitcoin op $69.775 (-0.75% 24h), Ethereum op $2.122,90 (-0.81% 24h) en totale marktcap van $2.48T (-0.41%). Het Fear & Greed Index staat op kritieke 11 (Extreme Fear), fors gedaald van 23 gisteren, gedreven door renteverhoging-verwachtingen en obligatiemarktkrach. Wall Street-integratie (Nasdaq blockchain-goedkeuring) en Ledger IPO-voorbereiding bieden institutionele steun, maar macro-turbulentie domineert. Funding rate- en OI-data ontbreken vandaag, waardoor dynamische sentiment-monitoring beperkt is. $60K-support in Bitcoin vormt kritieke liquidatie-drempel; markt staat op potentieel capitulation-bottom gegeven extreme fear-niveaus."
 }
