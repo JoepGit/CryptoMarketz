@@ -1,18 +1,18 @@
 {
   "date": "vrijdag 20 maart 2026",
-  "focus": "Gedempte marktbeweging met SOL als enige sterke performer terwijl BTC consolidatie voltooit.",
-  "risk": "Lage volatiliteit, brede consolidatie",
-  "btc_structure": "Bitcoin noteert stabiel rond $69,763 met minimale dagelijkse beweging van +0.34%. De prijs handelt binnen een nauwe range wat duidt op evenwicht tussen koop- en verkoopdruk met substantieel volume van $39.56B.",
-  "eth_flows": "Ethereum volgt met $2,134.99 en toont iets meer kracht met +0.85% dagwinst. Handelsvolume van $18.46B blijft gezond en suggereert geleidelijke institutionele accumulation.",
+  "focus": "Crypto-markten consolideren rond kritieke steunsniveaus met minimale volatiliteit op meerdere activa klassen.",
+  "risk": "lage volatiliteit, consolidatie fase",
+  "btc_structure": "Bitcoin handelt stabiel rond $69,550 met slechts 0.02% 24h beweging, wat duidt op sterke institutionele steun op huidige niveaus. Het volumeniveau van $36.04B blijft gezond maar geeft geen duidelijke directie aan.",
+  "eth_flows": "Ethereum toont relatieve sterkte met +0.44% gain naar $2,126.14 en een substantieel 24h volume van $17.35B. Dit suggereert voorzichtige optimisme onder Ethereum-houders ondanks bredere markttraagheden.",
   "top_narratives": [
-    "SOL's outperformance (+1.75%) tegenover peers",
-    "BTC consolidatie rond $69.7K support niveau",
-    "Lage volatiliteit marktbrede beweging",
-    "Institutionele flows in top-4 assets"
+    "Institutionele consolidatie rond ronde niveaus",
+    "Ethereum outperformance versus Bitcoin momentum",
+    "Altcoin-stabiliteit (XRP -0.03%, BNB +0.24%)",
+    "Solana recovery-poging met +0.84% dag-beweging"
   ],
-  "macro_impact": "Gedempte macroeconomische signalen leiden tot risk-off sentiment in traditionele markten, wat reflecteert in crypto's lage volatiliteit. Beleggers wachten op duidelijkere directie van centrale banken.",
-  "whale_flows": "BTC volume ($39.56B) domineert het handelsverkeer terwijl altcoins meer ingetogen blijven. SOL's +1.75% stijging met $3.09B volume suggereert gerichte institutionele interesse in high-performance assets.",
-  "funding_oi": "Funding rates blijven neutraal gegeven de lage volatiliteit, met minimale lange-positie opbouw. Open interest wijst op voorzichtig sentiment zonder duidelijke directie.",
-  "volatility_outlook": "Verwacht lage volatiliteit zolang BTC boven $69.7K blijft. Doorbraak boven $70K of daling onder $69K zou eerst monitoringstrigger zijn voor hogere volatiliteit.",
-  "full_report": "De cryptomarkt sluit vrijdag in een gedempte consolidatiefase met BTC op $69,763 (+0.34%), ETH op $2,134.99 (+0.85%), en XRP op $1.44 (+0.23%). SOL steekt eruit met +1.75% naar $88.93 terwijl BNB marginaal stijgt naar $640.05 (+0.62%). Totaal handelsvolume blikt sterk met $39.56B in BTC futures, maar altcoins tonen minder dynamiek. Macro-headwinds en afwachtende institutionele positievorming bepalen het sentiment, met consolidatie als baseline scenario."
+  "macro_impact": "De lage intraday volatiliteit duidt op afwachting van macro-katalysatoren en mogelijke rentebeslissingen. Marktdeelnemers lijken in holding-patroon zonder sterke risk-on of risk-off sentiment.",
+  "whale_flows": "Spotvolume aan dominante zijde (BTC $36.04B) suggereert dat grote portefeuilles voorzichtig positioneren zonder aggressieve entries. ETH volume ($17.35B) toont relatieve rotatie naar Ethereum-gerelateerde activa.",
+  "funding_oi": "Met minimale 24h prijs-beweging verwachten we dat perpetual futures funding rates vlak blijven. Open interest zal waarschijnlijk consolideren zonder significante liquidatie-cascade risico's.",
+  "volatility_outlook": "Verwacht lage realized volatiliteit in komende 48 uur gegeven huidige movement-patronen. Breekout-potentieel naar boven of beneden afhankelijk van externe macro-signalen.",
+  "full_report": "CryptoMarketz rapporteert een vrijdag-sessie met uitgesproken consolidatie-characteristics. Bitcoin blijft robuust op $69,550 met minimale beweging (0.02%), terwijl Ethereum ($2,126.14, +0.44%) beter presteert. Altcoin-segment vertoont stabiliteit met XRP op $1.43 (-0.03%), BNB op $638.27 (+0.24%) en SOL op $88.58 (+0.84%). Spot-volume blijft gezond (BTC $36.04B, ETH $17.35B) zonder duidelijk directioneel momentum. Macro-omstandigheden lijken afwachtend; marktdeelnemers nemen geen grote posities in zonder externe katalysatoren. Verwachting: verdere consolidatie tot volgende week, met mogelijke breakout afhankelijk van rentebeslissingen en macro-releases."
 }
