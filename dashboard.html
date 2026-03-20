@@ -379,6 +379,24 @@ body{font-family:'Inter',sans-serif;background:#0d0d0d;color:var(--cream);overfl
 /* ═══ EDUCATION TABBED ═══ */
 .edu-tabs{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:18px}
 .edu-tab{font-family:'Inter',sans-serif;font-size:8.5px;letter-spacing:.01em;padding:7px 14px;border-radius:6px;border:1px solid var(--bdr);background:transparent;color:var(--sub);cursor:pointer;transition:all .18s;text-transform:uppercase}
+/* ── EDUCATION MODULE CARDS ── */
+.edu-module-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:4px 0 8px}
+@media(max-width:1200px){.edu-module-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.edu-module-grid{grid-template-columns:1fr}}
+.edu-mod-card{background:#0e0f14;border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;cursor:pointer;transition:transform .2s,border-color .2s,box-shadow .2s;display:flex;flex-direction:column}
+.edu-mod-card:hover{transform:translateY(-4px);border-color:rgba(0,85,255,.3);box-shadow:0 12px 32px rgba(0,0,0,.4)}
+.edu-mod-thumb{height:140px;position:relative;overflow:hidden;flex-shrink:0}
+.edu-mod-body{padding:18px 20px;display:flex;flex-direction:column;flex:1;background:#0e0f14}
+.edu-mod-num{font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:.15em;color:rgba(180,200,255,.7) !important;text-transform:uppercase;margin-bottom:6px}
+.edu-mod-title{font-family:'Inter',sans-serif;font-size:17px;font-weight:700;color:#ffffff !important;margin-bottom:8px;letter-spacing:-.01em;text-shadow:0 1px 3px rgba(0,0,0,.4)}
+.edu-mod-desc{font-size:13px;color:#c0c8d8 !important;line-height:1.7;flex:1;margin-bottom:14px}
+.edu-mod-footer{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.edu-mod-badge{font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:.08em;padding:4px 10px;border:1px solid rgba(180,200,255,.25);border-radius:100px;color:rgba(180,210,255,.8) !important;background:rgba(0,40,120,.3)}
+.edu-mod-arrow{margin-left:auto;font-size:16px;color:rgba(0,85,255,.4);transition:transform .18s,color .18s}
+.edu-mod-card:hover .edu-mod-arrow{transform:translateX(4px);color:var(--accent)}
+.edu-detail{margin-top:4px}
+.edu-detail-back{display:inline-flex;align-items:center;gap:6px;margin-bottom:16px;font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:rgba(0,85,255,.6);cursor:pointer;letter-spacing:.04em;padding:7px 14px;border:1px solid rgba(0,85,255,.18);border-radius:8px;transition:all .18s}
+.edu-detail-back:hover{background:rgba(0,85,255,.06);color:var(--accent)}
 .edu-tab:hover{border-color:rgba(0,85,255,.3);color:var(--cream)}
 .edu-tab.on{background:rgba(0,85,255,.1);border-color:rgba(0,85,255,.4);color:var(--accent)}
 .edu-panel{display:none}.edu-panel.on{display:block}
@@ -2005,393 +2023,287 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
           <div class="lk-ft">No code? <a onclick="goPage('pricing',null)">View pricing →</a></div>
         </div></div>
 
-        <!-- TAB BAR -->
-        <div class="edu-tabs" id="edu-tabs">
-          <button class="edu-tab on" onclick="eduTab(0,this)">01 · Technical Analysis</button>
-          <button class="edu-tab" onclick="eduTab(1,this)">02 · Risk Management</button>
-          <button class="edu-tab" onclick="eduTab(2,this)">03 · Trading Psychology</button>
-          <button class="edu-tab" onclick="eduTab(3,this)">04 · Crypto Fundamentals</button>
-          <button class="edu-tab" onclick="eduTab(4,this)">05 · Market Structure</button>
-          <button class="edu-tab" onclick="eduTab(5,this)">06 · Portfolio Building</button>
-        </div>
+        <!-- Module card grid -->
+        <div class="edu-module-grid" id="edu-module-grid">
 
-        <!-- ── PANEL 1: Technical Analysis ── -->
-        <div class="edu-panel card on" id="edu-panel-0">
-          <div class="edu-hero">
-            <div class="edu-hero-icon"><svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
-            <div>
-              <div class="edu-hero-num">MODULE 01</div>
-              <div class="edu-hero-title">Technical Analysis</div>
-              <div class="edu-hero-sub">Master the art of reading price charts. Learn to identify patterns, use indicators and time entries &amp; exits with precision.</div>
-              <div class="edu-hero-pills">
-                <span class="edu-hero-pill">6 LESSONS</span><span class="edu-hero-pill">BEGINNER → ADVANCED</span><span class="edu-hero-pill">CHARTS</span><span class="edu-hero-pill">INDICATORS</span>
+          <!-- MODULE 1 -->
+          <div class="edu-mod-card" onclick="eduOpenModule(0)">
+            <div class="edu-mod-thumb" style="background:linear-gradient(135deg,#1a1a4e 0%,#0d3080 50%,#1a5fc8 100%)">
+              <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+                <rect x="10" y="15" width="60" height="50" rx="4" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.15)" stroke-width="1"/>
+                <polyline points="18,52 30,38 40,44 54,28 66,34" fill="none" stroke="#4d9fff" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="18" cy="52" r="2.5" fill="#4d9fff"/>
+                <circle cx="66" cy="34" r="2.5" fill="#4d9fff"/>
+                <line x1="18" y1="58" x2="66" y2="58" stroke="rgba(255,255,255,.2)" stroke-width="1"/>
+                <rect x="78" y="20" width="34" height="8" rx="2" fill="rgba(77,159,255,.2)" stroke="rgba(77,159,255,.4)" stroke-width="1"/>
+                <rect x="78" y="33" width="28" height="6" rx="2" fill="rgba(255,255,255,.06)"/>
+                <rect x="78" y="43" width="30" height="6" rx="2" fill="rgba(255,255,255,.06)"/>
+                <rect x="78" y="53" width="24" height="6" rx="2" fill="rgba(255,255,255,.06)"/>
+                <circle cx="100" cy="68" r="8" fill="rgba(77,159,255,.15)" stroke="rgba(77,159,255,.35)" stroke-width="1.5"/>
+                <text x="100" y="72" text-anchor="middle" fill="#4d9fff" font-size="9" font-weight="700">TA</text>
+              </svg>
+            </div>
+            <div class="edu-mod-body">
+              <div class="edu-mod-num">MODULE 01</div>
+              <div class="edu-mod-title">Technical Analysis</div>
+              <div class="edu-mod-desc">Charts, indicators, patterns. Master reading price action with RSI, MACD, Bollinger Bands and more.</div>
+              <div class="edu-mod-footer">
+                <span class="edu-mod-badge">6 LESSONS</span>
+                <span class="edu-mod-badge">BEG → ADV</span>
+                <span class="edu-mod-arrow">→</span>
               </div>
             </div>
           </div>
-          <div class="edu-stats">
-            <div class="edu-stat"><div class="edu-stat-val">6</div><div class="edu-stat-lbl">Lessons</div></div>
-            <div class="edu-stat"><div class="edu-stat-val">12+</div><div class="edu-stat-lbl">Indicators</div></div>
-            <div class="edu-stat"><div class="edu-stat-val">8</div><div class="edu-stat-lbl">Chart Patterns</div></div>
-            <div class="edu-stat"><div class="edu-stat-val">Beg–Adv</div><div class="edu-stat-lbl">Level</div></div>
-          </div>
-          <div class="edu-lessons">
-            <div class="edu-lesson has-video" onclick="openLessonVideo('Candlestick lesson 1.1.mp4','LESSON 1.1 · Reading Candlestick Charts')">
-              <div class="edu-lesson-num">LESSON 1.1</div>
-              <div class="edu-lesson-title">Reading Candlestick Charts</div>
-              <div class="edu-lesson-desc">Understand OHLC data, candle anatomy, and what each candle tells you about buyer/seller strength. Learn doji, hammer, engulfing and other single-candle signals.</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag beg">Beginner</span><span class="edu-lesson-tag">Candlesticks</span><span class="edu-lesson-tag">Price Action</span></div>
-            </div>
-            <div class="edu-lesson">
-              <div class="edu-lesson-num">LESSON 1.2</div>
-              <div class="edu-lesson-title">Support, Resistance &amp; Trendlines</div>
-              <div class="edu-lesson-desc">Draw key levels where price consistently reacts. Identify uptrends, downtrends, horizontal ranges and how to trade bounces and breakouts from these zones.</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag beg">Beginner</span><span class="edu-lesson-tag">Levels</span><span class="edu-lesson-tag">Breakouts</span></div>
-            </div>
-            <div class="edu-lesson">
-              <div class="edu-lesson-num">LESSON 1.3</div>
-              <div class="edu-lesson-title">Moving Averages: EMA &amp; SMA</div>
-              <div class="edu-lesson-desc">Use the 20, 50 and 200 EMA/SMA to identify trend direction and dynamic support. Learn golden cross, death cross and how moving averages act as lagging trend filters.</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag">Indicators</span><span class="edu-lesson-tag">Trend</span><span class="edu-lesson-tag">EMA</span></div>
-            </div>
-            <div class="edu-lesson">
-              <div class="edu-lesson-num">LESSON 1.4</div>
-              <div class="edu-lesson-title">RSI &amp; MACD Mastery</div>
-              <div class="edu-lesson-desc">Identify momentum shifts using RSI overbought/oversold zones and divergence. Use MACD histogram and signal line crossovers to confirm trend changes before they happen.</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag">RSI</span><span class="edu-lesson-tag">MACD</span><span class="edu-lesson-tag">Divergence</span></div>
-            </div>
-            <div class="edu-lesson">
-              <div class="edu-lesson-num">LESSON 1.5</div>
-              <div class="edu-lesson-title">Bollinger Bands &amp; Volatility</div>
-              <div class="edu-lesson-desc">Use Bollinger Bands to measure volatility expansion and contraction. Learn the squeeze setup, band walks during strong trends and how to combine BB with RSI for high-probability entries.</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag">Bollinger</span><span class="edu-lesson-tag">Volatility</span><span class="edu-lesson-tag adv">Advanced</span></div>
-            </div>
-            <div class="edu-lesson">
-              <div class="edu-lesson-num">LESSON 1.6</div>
-              <div class="edu-lesson-title">Chart Patterns: Flags, Wedges &amp; Head &amp; Shoulders</div>
-              <div class="edu-lesson-desc">Recognize continuation and reversal patterns with high statistical edge. Master flags, pennants, ascending/descending wedges, double tops/bottoms and the classic head &amp; shoulders.</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag adv">Advanced</span><span class="edu-lesson-tag">Patterns</span><span class="edu-lesson-tag">Reversals</span></div>
-            </div>
-          </div>
-          <div class="edu-concepts">
-            <span class="edu-concepts-label">KEY CONCEPTS →</span>
-            <span class="edu-concept">OHLC</span><span class="edu-concept">Candlestick</span><span class="edu-concept">EMA 20/50/200</span><span class="edu-concept">RSI Divergence</span><span class="edu-concept">MACD Cross</span><span class="edu-concept">BB Squeeze</span><span class="edu-concept">Golden Cross</span><span class="edu-concept">Head &amp; Shoulders</span><span class="edu-concept">Volume Profile</span>
-          </div>
-        </div>
 
-        <!-- ── PANEL 2: Risk Management ── -->
-        <div class="edu-panel card" id="edu-panel-1">
-          <div class="edu-hero">
-            <div class="edu-hero-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-            <div>
-              <div class="edu-hero-num">MODULE 02</div>
-              <div class="edu-hero-title">Risk Management</div>
-              <div class="edu-hero-sub">Protecting your capital is the #1 job of a trader. Learn position sizing, stop losses and risk/reward ratios that keep you in the game long-term.</div>
-              <div class="edu-hero-pills">
-                <span class="edu-hero-pill">6 LESSONS</span><span class="edu-hero-pill">ESSENTIAL</span><span class="edu-hero-pill">POSITION SIZING</span><span class="edu-hero-pill">STOP LOSSES</span>
+          <!-- MODULE 2 -->
+          <div class="edu-mod-card" onclick="eduOpenModule(1)">
+            <div class="edu-mod-thumb" style="background:linear-gradient(135deg,#1a3a1a 0%,#0d5c2a 50%,#1a8c45 100%)">
+              <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+                <circle cx="60" cy="40" r="28" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.12)" stroke-width="1.5"/>
+                <path d="M60 18 L60 40 L78 28" fill="none" stroke="#2ecc71" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="60" cy="40" r="3" fill="#2ecc71"/>
+                <text x="60" y="65" text-anchor="middle" fill="rgba(255,255,255,.35)" font-size="7" letter-spacing="2">RISK MGMT</text>
+                <rect x="15" y="22" width="18" height="6" rx="3" fill="rgba(46,204,113,.2)" stroke="rgba(46,204,113,.4)" stroke-width="1"/>
+                <rect x="15" y="32" width="18" height="6" rx="3" fill="rgba(46,204,113,.12)"/>
+                <rect x="15" y="42" width="18" height="6" rx="3" fill="rgba(231,76,60,.15)" stroke="rgba(231,76,60,.35)" stroke-width="1"/>
+                <rect x="90" y="22" width="16" height="6" rx="3" fill="rgba(46,204,113,.2)" stroke="rgba(46,204,113,.4)" stroke-width="1"/>
+                <rect x="90" y="32" width="16" height="6" rx="3" fill="rgba(46,204,113,.12)"/>
+                <text x="60" y="44" text-anchor="middle" fill="#2ecc71" font-size="11" font-weight="700">1%</text>
+              </svg>
+            </div>
+            <div class="edu-mod-body">
+              <div class="edu-mod-num">MODULE 02</div>
+              <div class="edu-mod-title">Risk Management</div>
+              <div class="edu-mod-desc">Protect your capital. Position sizing, stop placement, R:R ratios and drawdown control.</div>
+              <div class="edu-mod-footer">
+                <span class="edu-mod-badge">6 LESSONS</span>
+                <span class="edu-mod-badge">ALL LEVELS</span>
+                <span class="edu-mod-arrow">→</span>
               </div>
             </div>
           </div>
-          <div class="edu-stats">
-            <div class="edu-stat"><div class="edu-stat-val">6</div><div class="edu-stat-lbl">Lessons</div></div>
-            <div class="edu-stat"><div class="edu-stat-val">1–2%</div><div class="edu-stat-lbl">Max Risk/Trade</div></div>
-            <div class="edu-stat"><div class="edu-stat-val">1:3</div><div class="edu-stat-lbl">Min R:R Ratio</div></div>
-            <div class="edu-stat"><div class="edu-stat-val">Essential</div><div class="edu-stat-lbl">Level</div></div>
-          </div>
-          <div class="edu-lessons">
-            <div class="edu-lesson">
-              <div class="edu-lesson-num">LESSON 2.1</div>
-              <div class="edu-lesson-title">The 1–2% Rule: Never Blow Your Account</div>
-              <div class="edu-lesson-desc">Why professional traders never risk more than 1–2% per trade. See real examples of how this rule allows you to survive 20 consecutive losses and still be in business.</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag beg">Beginner</span><span class="edu-lesson-tag">Capital Protection</span></div>
-            </div>
-            <div class="edu-lesson">
-              <div class="edu-lesson-num">LESSON 2.2</div>
-              <div class="edu-lesson-title">Position Sizing Formula</div>
-              <div class="edu-lesson-desc">Calculate exact position sizes based on account size, entry price and stop loss distance. Learn the formula: Position Size = (Account × Risk%) ÷ (Entry − Stop Loss).</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag beg">Beginner</span><span class="edu-lesson-tag">Sizing</span><span class="edu-lesson-tag">Formula</span></div>
-            </div>
-            <div class="edu-lesson">
-              <div class="edu-lesson-num">LESSON 2.3</div>
-              <div class="edu-lesson-title">Stop Loss Placement Strategies</div>
-              <div class="edu-lesson-desc">Place stops below structure, not randomly. Learn swing low stops, ATR-based stops and volatility-adjusted stops that give trades room to breathe while cutting real losses quickly.</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag">Stop Loss</span><span class="edu-lesson-tag">ATR</span><span class="edu-lesson-tag">Structure</span></div>
-            </div>
-            <div class="edu-lesson">
-              <div class="edu-lesson-num">LESSON 2.4</div>
-              <div class="edu-lesson-title">Risk/Reward Ratios</div>
-              <div class="edu-lesson-desc">Why you can lose 60% of trades and still be profitable with a 1:3 R:R. Calculate your minimum acceptable R:R before entering any trade and learn to set realistic take-profit targets.</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag">R:R Ratio</span><span class="edu-lesson-tag">Take Profit</span></div>
-            </div>
-            <div class="edu-lesson">
-              <div class="edu-lesson-num">LESSON 2.5</div>
-              <div class="edu-lesson-title">Trailing Stops &amp; Partial Profits</div>
-              <div class="edu-lesson-desc">Lock in gains as price moves in your favour. Use trailing stop techniques and partial profit-taking strategies (e.g. close 50% at 1R, let rest run) to maximise winners.</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag">Trailing Stop</span><span class="edu-lesson-tag">Partials</span><span class="edu-lesson-tag adv">Advanced</span></div>
-            </div>
-            <div class="edu-lesson">
-              <div class="edu-lesson-num">LESSON 2.6</div>
-              <div class="edu-lesson-title">Drawdown, Recovery &amp; Tilt Control</div>
-              <div class="edu-lesson-desc">Understand max drawdown math: a 50% loss needs a 100% gain to recover. Learn daily loss limits, trading breaks and how to prevent a bad day from becoming a blown account.</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag adv">Advanced</span><span class="edu-lesson-tag">Drawdown</span><span class="edu-lesson-tag">Psychology</span></div>
-            </div>
-          </div>
-          <div class="edu-concepts">
-            <span class="edu-concepts-label">KEY CONCEPTS →</span>
-            <span class="edu-concept">1% Rule</span><span class="edu-concept">Position Size</span><span class="edu-concept">Stop Loss</span><span class="edu-concept">ATR Stop</span><span class="edu-concept">R:R Ratio</span><span class="edu-concept">Trailing Stop</span><span class="edu-concept">Partial Close</span><span class="edu-concept">Max Drawdown</span><span class="edu-concept">Daily Loss Limit</span>
-          </div>
-        </div>
 
-        <!-- ── PANEL 3: Trading Psychology ── -->
-        <div class="edu-panel card" id="edu-panel-2">
-          <div class="edu-hero">
-            <div class="edu-hero-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
-            <div>
-              <div class="edu-hero-num">MODULE 03</div>
-              <div class="edu-hero-title">Trading Psychology</div>
-              <div class="edu-hero-sub">Your biggest enemy is yourself. Build the mental discipline to follow your plan, handle losses without revenge trading and stay consistent over time.</div>
-              <div class="edu-hero-pills">
-                <span class="edu-hero-pill">6 LESSONS</span><span class="edu-hero-pill">MINDSET</span><span class="edu-hero-pill">DISCIPLINE</span><span class="edu-hero-pill">EMOTION CONTROL</span>
+          <!-- MODULE 3 -->
+          <div class="edu-mod-card" onclick="eduOpenModule(2)">
+            <div class="edu-mod-thumb" style="background:linear-gradient(135deg,#3a1a4e 0%,#6b2fa0 50%,#9b4fd4 100%)">
+              <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+                <circle cx="60" cy="35" r="22" fill="rgba(255,255,255,.07)" stroke="rgba(200,150,255,.3)" stroke-width="1.5"/>
+                <path d="M50 28 Q55 20 60 28 Q65 20 70 28" fill="none" stroke="rgba(200,150,255,.6)" stroke-width="1.5"/>
+                <ellipse cx="54" cy="33" rx="3" ry="4" fill="rgba(200,150,255,.7)"/>
+                <ellipse cx="66" cy="33" rx="3" ry="4" fill="rgba(200,150,255,.7)"/>
+                <path d="M54 42 Q60 48 66 42" fill="none" stroke="rgba(200,150,255,.6)" stroke-width="1.5" stroke-linecap="round"/>
+                <text x="60" y="67" text-anchor="middle" fill="rgba(200,150,255,.5)" font-size="6.5" letter-spacing="1.5">PSYCHOLOGY</text>
+                <circle cx="25" cy="25" r="5" fill="rgba(255,100,100,.2)" stroke="rgba(255,100,100,.4)" stroke-width="1"/>
+                <text x="25" y="28" text-anchor="middle" fill="rgba(255,100,100,.8)" font-size="7">!</text>
+                <circle cx="95" cy="25" r="5" fill="rgba(100,255,150,.2)" stroke="rgba(100,255,150,.4)" stroke-width="1"/>
+                <text x="95" y="28" text-anchor="middle" fill="rgba(100,255,150,.8)" font-size="7">✓</text>
+              </svg>
+            </div>
+            <div class="edu-mod-body">
+              <div class="edu-mod-num">MODULE 03</div>
+              <div class="edu-mod-title">Trading Psychology</div>
+              <div class="edu-mod-desc">Master your mindset. FOMO, revenge trading, discipline and thinking in probabilities.</div>
+              <div class="edu-mod-footer">
+                <span class="edu-mod-badge">6 LESSONS</span>
+                <span class="edu-mod-badge">MINDSET</span>
+                <span class="edu-mod-arrow">→</span>
               </div>
             </div>
           </div>
-          <div class="edu-stats">
-            <div class="edu-stat"><div class="edu-stat-val">6</div><div class="edu-stat-lbl">Lessons</div></div>
-            <div class="edu-stat"><div class="edu-stat-val">FOMO</div><div class="edu-stat-lbl">Biggest Enemy</div></div>
-            <div class="edu-stat"><div class="edu-stat-val">System</div><div class="edu-stat-lbl">Over Instinct</div></div>
-            <div class="edu-stat"><div class="edu-stat-val">All</div><div class="edu-stat-lbl">Levels</div></div>
-          </div>
-          <div class="edu-lessons">
-            <div class="edu-lesson">
-              <div class="edu-lesson-num">LESSON 3.1</div>
-              <div class="edu-lesson-title">FOMO: The Silent Account Killer</div>
-              <div class="edu-lesson-desc">Fear of Missing Out causes traders to chase pumps at tops and buy after 30%+ moves. Learn to recognise FOMO in real-time and build rules that stop you from acting on it.</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag beg">Beginner</span><span class="edu-lesson-tag">FOMO</span><span class="edu-lesson-tag">Discipline</span></div>
-            </div>
-            <div class="edu-lesson">
-              <div class="edu-lesson-num">LESSON 3.2</div>
-              <div class="edu-lesson-title">Revenge Trading &amp; Loss Spirals</div>
-              <div class="edu-lesson-desc">After a loss, the brain craves immediate recovery leading to oversized trades and poor setups. Identify your revenge trading triggers and implement hard stops on your trading day.</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag">Revenge Trading</span><span class="edu-lesson-tag">Loss Response</span></div>
-            </div>
-            <div class="edu-lesson">
-              <div class="edu-lesson-num">LESSON 3.3</div>
-              <div class="edu-lesson-title">Building a Trading Routine</div>
-              <div class="edu-lesson-desc">Top traders treat trading like a business. Build a daily pre-market routine, end-of-day review ritual and weekly performance journal that keeps your decision-making sharp and consistent.</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag">Routine</span><span class="edu-lesson-tag">Journal</span><span class="edu-lesson-tag beg">Beginner</span></div>
-            </div>
-            <div class="edu-lesson">
-              <div class="edu-lesson-num">LESSON 3.4</div>
-              <div class="edu-lesson-title">Detaching from P&amp;L</div>
-              <div class="edu-lesson-desc">Watching your P&amp;L in real-time distorts decision-making. Learn to evaluate trades by process quality, not outcome. Focus on executing your system perfectly results follow consistency.</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag">Process Focus</span><span class="edu-lesson-tag">P&amp;L</span></div>
-            </div>
-            <div class="edu-lesson">
-              <div class="edu-lesson-num">LESSON 3.5</div>
-              <div class="edu-lesson-title">Overconfidence &amp; Winning Streaks</div>
-              <div class="edu-lesson-desc">Winning streaks lead to inflated position sizes and skipped rules. Learn why overconfidence after wins is just as dangerous as fear after losses, and how to stay level-headed.</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag adv">Advanced</span><span class="edu-lesson-tag">Overconfidence</span></div>
-            </div>
-            <div class="edu-lesson">
-              <div class="edu-lesson-num">LESSON 3.6</div>
-              <div class="edu-lesson-title">The Trader's Mindset: Thinking in Probabilities</div>
-              <div class="edu-lesson-desc">No setup wins 100% of the time. Learn to think in distributions of outcomes, accept losses as part of the system and measure success over 50–100 trade samples, not individual results.</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag adv">Advanced</span><span class="edu-lesson-tag">Probability</span><span class="edu-lesson-tag">Mindset</span></div>
-            </div>
-          </div>
-          <div class="edu-concepts">
-            <span class="edu-concepts-label">KEY CONCEPTS →</span>
-            <span class="edu-concept">FOMO</span><span class="edu-concept">Revenge Trading</span><span class="edu-concept">Loss Spiral</span><span class="edu-concept">Trading Routine</span><span class="edu-concept">Journal</span><span class="edu-concept">P&amp;L Detachment</span><span class="edu-concept">Overconfidence</span><span class="edu-concept">Probability Thinking</span>
-          </div>
-        </div>
 
-        <!-- ── PANEL 4: Crypto Fundamentals ── -->
-        <div class="edu-panel card" id="edu-panel-3">
-          <div class="edu-hero">
-            <div class="edu-hero-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M18.36 5.64l1.41-1.41"/></svg></div>
-            <div>
-              <div class="edu-hero-num">MODULE 04</div>
-              <div class="edu-hero-title">Crypto Fundamentals</div>
-              <div class="edu-hero-sub">Understand what actually drives crypto value. From blockchain mechanics and tokenomics to on-chain data and macro cycles know what you're buying and why.</div>
-              <div class="edu-hero-pills">
-                <span class="edu-hero-pill">6 LESSONS</span><span class="edu-hero-pill">BLOCKCHAIN</span><span class="edu-hero-pill">TOKENOMICS</span><span class="edu-hero-pill">ON-CHAIN</span>
+          <!-- MODULE 4 -->
+          <div class="edu-mod-card" onclick="eduOpenModule(3)">
+            <div class="edu-mod-thumb" style="background:linear-gradient(135deg,#2a1a0a 0%,#7a4a10 50%,#e8a020 100%)">
+              <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+                <circle cx="60" cy="38" r="20" fill="rgba(255,165,0,.12)" stroke="rgba(255,165,0,.35)" stroke-width="2"/>
+                <circle cx="60" cy="38" r="13" fill="rgba(255,165,0,.08)" stroke="rgba(255,165,0,.25)" stroke-width="1.5"/>
+                <text x="60" y="43" text-anchor="middle" fill="#f5a623" font-size="14" font-weight="900">₿</text>
+                <text x="60" y="67" text-anchor="middle" fill="rgba(245,166,35,.45)" font-size="6.5" letter-spacing="1.5">FUNDAMENTALS</text>
+                <line x1="18" y1="18" x2="30" y2="18" stroke="rgba(245,166,35,.3)" stroke-width="1" stroke-dasharray="2,2"/>
+                <line x1="90" y1="18" x2="102" y2="18" stroke="rgba(245,166,35,.3)" stroke-width="1" stroke-dasharray="2,2"/>
+                <circle cx="14" cy="18" r="4" fill="rgba(245,166,35,.15)" stroke="rgba(245,166,35,.4)" stroke-width="1"/>
+                <circle cx="106" cy="18" r="4" fill="rgba(245,166,35,.15)" stroke="rgba(245,166,35,.4)" stroke-width="1"/>
+                <rect x="36" y="55" width="14" height="10" rx="2" fill="rgba(245,166,35,.15)" stroke="rgba(245,166,35,.3)" stroke-width="1"/>
+                <rect x="54" y="50" width="14" height="15" rx="2" fill="rgba(245,166,35,.2)" stroke="rgba(245,166,35,.35)" stroke-width="1"/>
+                <rect x="72" y="45" width="14" height="20" rx="2" fill="rgba(245,166,35,.25)" stroke="rgba(245,166,35,.4)" stroke-width="1"/>
+              </svg>
+            </div>
+            <div class="edu-mod-body">
+              <div class="edu-mod-num">MODULE 04</div>
+              <div class="edu-mod-title">Crypto Fundamentals</div>
+              <div class="edu-mod-desc">Blockchain, tokenomics, on-chain metrics, halvings and macro cycles explained.</div>
+              <div class="edu-mod-footer">
+                <span class="edu-mod-badge">6 LESSONS</span>
+                <span class="edu-mod-badge">ON-CHAIN</span>
+                <span class="edu-mod-arrow">→</span>
               </div>
             </div>
           </div>
-          <div class="edu-stats">
-            <div class="edu-stat"><div class="edu-stat-val">6</div><div class="edu-stat-lbl">Lessons</div></div>
-            <div class="edu-stat"><div class="edu-stat-val">On-Chain</div><div class="edu-stat-lbl">Data Focus</div></div>
-            <div class="edu-stat"><div class="edu-stat-val">4yr</div><div class="edu-stat-lbl">BTC Cycle</div></div>
-            <div class="edu-stat"><div class="edu-stat-val">All</div><div class="edu-stat-lbl">Levels</div></div>
-          </div>
-          <div class="edu-lessons">
-            <div class="edu-lesson">
-              <div class="edu-lesson-num">LESSON 4.1</div>
-              <div class="edu-lesson-title">How Blockchain Works</div>
-              <div class="edu-lesson-desc">Understand distributed ledgers, consensus mechanisms (PoW vs PoS), blocks and transaction finality. Know what gives a blockchain its security, decentralisation and value proposition.</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag beg">Beginner</span><span class="edu-lesson-tag">Blockchain</span><span class="edu-lesson-tag">PoW/PoS</span></div>
-            </div>
-            <div class="edu-lesson">
-              <div class="edu-lesson-num">LESSON 4.2</div>
-              <div class="edu-lesson-title">Tokenomics: Supply, Demand &amp; Value</div>
-              <div class="edu-lesson-desc">Analyse circulating supply, total supply, inflation schedule, vesting cliffs and token utility. Learn why a low market cap with a high FDV can be a trap, and how to spot deflationary mechanics.</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag">Tokenomics</span><span class="edu-lesson-tag">FDV</span><span class="edu-lesson-tag">Vesting</span></div>
-            </div>
-            <div class="edu-lesson">
-              <div class="edu-lesson-num">LESSON 4.3</div>
-              <div class="edu-lesson-title">Bitcoin Halving &amp; Market Cycles</div>
-              <div class="edu-lesson-desc">Bitcoin's supply halves every ~4 years. Understand how the halving affects miner revenue, supply shock and historically triggers bull cycles. Learn to position early using cycle timing.</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag">Halving</span><span class="edu-lesson-tag">Cycles</span><span class="edu-lesson-tag beg">Beginner</span></div>
-            </div>
-            <div class="edu-lesson">
-              <div class="edu-lesson-num">LESSON 4.4</div>
-              <div class="edu-lesson-title">On-Chain Metrics That Matter</div>
-              <div class="edu-lesson-desc">Track MVRV ratio, SOPR, exchange inflows/outflows, active addresses and whale accumulation wallets. These metrics reveal what large holders are doing before price reacts.</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag">MVRV</span><span class="edu-lesson-tag">SOPR</span><span class="edu-lesson-tag adv">Advanced</span></div>
-            </div>
-            <div class="edu-lesson">
-              <div class="edu-lesson-num">LESSON 4.5</div>
-              <div class="edu-lesson-title">DeFi, Layer 2s &amp; the Ecosystem</div>
-              <div class="edu-lesson-desc">Understand DEXs, liquidity pools, yield farming and impermanent loss in DeFi. Learn how Layer 2 networks (Arbitrum, Optimism, Base) scale Ethereum and where the next wave of value accrues.</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag">DeFi</span><span class="edu-lesson-tag">Layer 2</span><span class="edu-lesson-tag adv">Advanced</span></div>
-            </div>
-            <div class="edu-lesson">
-              <div class="edu-lesson-num">LESSON 4.6</div>
-              <div class="edu-lesson-title">Macro &amp; Liquidity Drivers</div>
-              <div class="edu-lesson-desc">Crypto doesn't trade in isolation. Learn how Fed rate decisions, global M2 money supply, the dollar index (DXY) and risk-on/risk-off sentiment drive Bitcoin and altcoin cycles.</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag">Macro</span><span class="edu-lesson-tag">DXY</span><span class="edu-lesson-tag">M2</span></div>
-            </div>
-          </div>
-          <div class="edu-concepts">
-            <span class="edu-concepts-label">KEY CONCEPTS →</span>
-            <span class="edu-concept">PoW / PoS</span><span class="edu-concept">Tokenomics</span><span class="edu-concept">FDV</span><span class="edu-concept">Halving</span><span class="edu-concept">MVRV</span><span class="edu-concept">SOPR</span><span class="edu-concept">DeFi</span><span class="edu-concept">Layer 2</span><span class="edu-concept">DXY</span><span class="edu-concept">M2</span>
-          </div>
-        </div>
 
-        <!-- ── PANEL 5: Market Structure ── -->
-        <div class="edu-panel card" id="edu-panel-4">
-          <div class="edu-hero">
-            <div class="edu-hero-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-            <div>
-              <div class="edu-hero-num">MODULE 05</div>
-              <div class="edu-hero-title">Market Structure</div>
-              <div class="edu-hero-sub">Understand how markets move. Learn to identify trends, ranges and reversals using pure price structure the foundation of smart money and institutional trading.</div>
-              <div class="edu-hero-pills">
-                <span class="edu-hero-pill">6 LESSONS</span><span class="edu-hero-pill">SMART MONEY</span><span class="edu-hero-pill">PRICE ACTION</span><span class="edu-hero-pill">INTERMEDIATE</span>
+          <!-- MODULE 5 -->
+          <div class="edu-mod-card" onclick="eduOpenModule(4)">
+            <div class="edu-mod-thumb" style="background:linear-gradient(135deg,#0a2a3a 0%,#0d5a7a 50%,#0ea5c8 100%)">
+              <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+                <rect x="12" y="12" width="96" height="56" rx="3" fill="rgba(255,255,255,.04)" stroke="rgba(14,165,200,.2)" stroke-width="1"/>
+                <line x1="12" y1="55" x2="108" y2="55" stroke="rgba(14,165,200,.15)" stroke-width="1"/>
+                <polyline points="20,48 32,30 44,38 56,20 68,32 80,22 92,35 104,28" fill="none" stroke="rgba(14,165,200,.8)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="42" y="35" width="10" height="20" rx="1" fill="rgba(231,76,60,.25)" stroke="rgba(231,76,60,.5)" stroke-width="1"/>
+                <rect x="56" y="15" width="10" height="40" rx="1" fill="rgba(46,204,113,.25)" stroke="rgba(46,204,113,.5)" stroke-width="1"/>
+                <rect x="70" y="28" width="10" height="27" rx="1" fill="rgba(231,76,60,.2)" stroke="rgba(231,76,60,.4)" stroke-width="1"/>
+                <text x="60" y="73" text-anchor="middle" fill="rgba(14,165,200,.4)" font-size="6" letter-spacing="2">MARKET STRUCTURE</text>
+              </svg>
+            </div>
+            <div class="edu-mod-body">
+              <div class="edu-mod-num">MODULE 05</div>
+              <div class="edu-mod-title">Market Structure</div>
+              <div class="edu-mod-desc">Smart money concepts: order blocks, BOS, ChoCH, liquidity pools and fair value gaps.</div>
+              <div class="edu-mod-footer">
+                <span class="edu-mod-badge">6 LESSONS</span>
+                <span class="edu-mod-badge">INTERMEDIATE</span>
+                <span class="edu-mod-arrow">→</span>
               </div>
             </div>
           </div>
-          <div class="edu-stats">
-            <div class="edu-stat"><div class="edu-stat-val">6</div><div class="edu-stat-lbl">Lessons</div></div>
-            <div class="edu-stat"><div class="edu-stat-val">HH/HL</div><div class="edu-stat-lbl">Bull Structure</div></div>
-            <div class="edu-stat"><div class="edu-stat-val">LH/LL</div><div class="edu-stat-lbl">Bear Structure</div></div>
-            <div class="edu-stat"><div class="edu-stat-val">Int–Adv</div><div class="edu-stat-lbl">Level</div></div>
-          </div>
-          <div class="edu-lessons">
-            <div class="edu-lesson">
-              <div class="edu-lesson-num">LESSON 5.1</div>
-              <div class="edu-lesson-title">Higher Highs, Higher Lows &amp; Trend Definition</div>
-              <div class="edu-lesson-desc">A bullish trend is defined by HH and HL. A bearish trend by LH and LL. Learn to objectively identify trend structure on any timeframe and avoid counter-trend trades.</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag">HH/HL</span><span class="edu-lesson-tag">Trend</span><span class="edu-lesson-tag beg">Beginner</span></div>
-            </div>
-            <div class="edu-lesson">
-              <div class="edu-lesson-num">LESSON 5.2</div>
-              <div class="edu-lesson-title">Break of Structure &amp; Change of Character</div>
-              <div class="edu-lesson-desc">BOS signals trend continuation; ChoCH signals a potential reversal. Learn to distinguish between a pullback and a genuine trend change before committing to a new direction.</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag">BOS</span><span class="edu-lesson-tag">ChoCH</span><span class="edu-lesson-tag">SMC</span></div>
-            </div>
-            <div class="edu-lesson">
-              <div class="edu-lesson-num">LESSON 5.3</div>
-              <div class="edu-lesson-title">Order Blocks &amp; Institutional Zones</div>
-              <div class="edu-lesson-desc">Order blocks are the last candle before a significant move representing institutional buy/sell orders. Learn to identify, draw and trade from these high-probability demand and supply zones.</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag adv">Advanced</span><span class="edu-lesson-tag">Order Blocks</span><span class="edu-lesson-tag">SMC</span></div>
-            </div>
-            <div class="edu-lesson">
-              <div class="edu-lesson-num">LESSON 5.4</div>
-              <div class="edu-lesson-title">Liquidity Pools &amp; Stop Hunts</div>
-              <div class="edu-lesson-desc">Institutions hunt retail stop losses clustered below swing lows and above swing highs. Learn to identify BSL and SSL pools, anticipate liquidity sweeps and enter after the manipulation phase.</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag adv">Advanced</span><span class="edu-lesson-tag">Liquidity</span><span class="edu-lesson-tag">Stop Hunt</span></div>
-            </div>
-            <div class="edu-lesson">
-              <div class="edu-lesson-num">LESSON 5.5</div>
-              <div class="edu-lesson-title">Fair Value Gaps &amp; Imbalance</div>
-              <div class="edu-lesson-desc">FVGs (three-candle imbalances) represent price moving so fast that inefficiency is left behind. Price often returns to fill these gaps. Learn to use FVGs as entry zones with precision.</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag adv">Advanced</span><span class="edu-lesson-tag">FVG</span><span class="edu-lesson-tag">Imbalance</span></div>
-            </div>
-            <div class="edu-lesson">
-              <div class="edu-lesson-num">LESSON 5.6</div>
-              <div class="edu-lesson-title">Multi-Timeframe Analysis</div>
-              <div class="edu-lesson-desc">Use the Weekly/Daily for bias, the 4H for structure and the 1H/15m for entry triggers. Learn the top-down approach to only trade in the direction of the higher timeframe trend.</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag">MTF</span><span class="edu-lesson-tag">Top-Down</span><span class="edu-lesson-tag">Entry Trigger</span></div>
-            </div>
-          </div>
-          <div class="edu-concepts">
-            <span class="edu-concepts-label">KEY CONCEPTS →</span>
-            <span class="edu-concept">HH/HL</span><span class="edu-concept">BOS</span><span class="edu-concept">ChoCH</span><span class="edu-concept">Order Block</span><span class="edu-concept">BSL/SSL</span><span class="edu-concept">Stop Hunt</span><span class="edu-concept">FVG</span><span class="edu-concept">MTF Analysis</span><span class="edu-concept">Smart Money</span>
-          </div>
-        </div>
 
-        <!-- ── PANEL 6: Portfolio Building ── -->
-        <div class="edu-panel card" id="edu-panel-5">
-          <div class="edu-hero">
-            <div class="edu-hero-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-            <div>
-              <div class="edu-hero-num">MODULE 06</div>
-              <div class="edu-hero-title">Portfolio Building</div>
-              <div class="edu-hero-sub">Build a crypto portfolio that compounds over time. Learn capital allocation, DCA strategies, profit-taking frameworks and how to think about your investments across market cycles.</div>
-              <div class="edu-hero-pills">
-                <span class="edu-hero-pill">6 LESSONS</span><span class="edu-hero-pill">DCA</span><span class="edu-hero-pill">ALLOCATION</span><span class="edu-hero-pill">LONG-TERM</span>
+          <!-- MODULE 6 -->
+          <div class="edu-mod-card" onclick="eduOpenModule(5)">
+            <div class="edu-mod-thumb" style="background:linear-gradient(135deg,#1a3a2a 0%,#1a6040 50%,#22c570 100%)">
+              <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+                <circle cx="60" cy="38" r="24" fill="rgba(34,197,112,.07)" stroke="rgba(34,197,112,.2)" stroke-width="1.5"/>
+                <path d="M40 38 A20 20 0 0 1 60 18" fill="none" stroke="#22c570" stroke-width="3" stroke-linecap="round"/>
+                <path d="M60 18 A20 20 0 0 1 80 38" fill="none" stroke="rgba(34,197,112,.5)" stroke-width="3" stroke-linecap="round"/>
+                <path d="M80 38 A20 20 0 0 1 60 58" fill="none" stroke="rgba(34,197,112,.3)" stroke-width="3" stroke-linecap="round"/>
+                <path d="M60 58 A20 20 0 0 1 40 38" fill="none" stroke="rgba(34,197,112,.15)" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="60" cy="38" r="10" fill="rgba(34,197,112,.12)" stroke="rgba(34,197,112,.35)" stroke-width="1.5"/>
+                <text x="60" y="42" text-anchor="middle" fill="#22c570" font-size="10" font-weight="700">%</text>
+                <text x="60" y="68" text-anchor="middle" fill="rgba(34,197,112,.4)" font-size="6.5" letter-spacing="1.5">PORTFOLIO</text>
+                <text x="39" y="36" text-anchor="middle" fill="#22c570" font-size="7" font-weight="600">BTC</text>
+                <text x="81" y="36" text-anchor="middle" fill="rgba(34,197,112,.6)" font-size="6">ALT</text>
+              </svg>
+            </div>
+            <div class="edu-mod-body">
+              <div class="edu-mod-num">MODULE 06</div>
+              <div class="edu-mod-title">Portfolio Building</div>
+              <div class="edu-mod-desc">DCA strategies, capital allocation, profit-taking frameworks and long-term cycle thinking.</div>
+              <div class="edu-mod-footer">
+                <span class="edu-mod-badge">6 LESSONS</span>
+                <span class="edu-mod-badge">LONG-TERM</span>
+                <span class="edu-mod-arrow">→</span>
               </div>
             </div>
           </div>
-          <div class="edu-stats">
-            <div class="edu-stat"><div class="edu-stat-val">6</div><div class="edu-stat-lbl">Lessons</div></div>
-            <div class="edu-stat"><div class="edu-stat-val">DCA</div><div class="edu-stat-lbl">Core Strategy</div></div>
-            <div class="edu-stat"><div class="edu-stat-val">Cycles</div><div class="edu-stat-lbl">Framework</div></div>
-            <div class="edu-stat"><div class="edu-stat-val">All</div><div class="edu-stat-lbl">Levels</div></div>
+
+        </div><!-- /edu-module-grid -->
+
+        <!-- Detail panel (shows when a module is clicked) -->
+        <div class="edu-detail" id="edu-detail" style="display:none">
+          <div class="edu-detail-back" onclick="eduCloseModule()">← Back to modules</div>
+          <div class="edu-tabs" id="edu-tabs">
+            <button class="edu-tab on" onclick="eduTab(0,this)">01 · Technical Analysis</button>
+            <button class="edu-tab" onclick="eduTab(1,this)">02 · Risk Management</button>
+            <button class="edu-tab" onclick="eduTab(2,this)">03 · Trading Psychology</button>
+            <button class="edu-tab" onclick="eduTab(3,this)">04 · Crypto Fundamentals</button>
+            <button class="edu-tab" onclick="eduTab(4,this)">05 · Market Structure</button>
+            <button class="edu-tab" onclick="eduTab(5,this)">06 · Portfolio Building</button>
           </div>
-          <div class="edu-lessons">
-            <div class="edu-lesson">
-              <div class="edu-lesson-num">LESSON 6.1</div>
-              <div class="edu-lesson-title">Core vs Speculative Allocation</div>
-              <div class="edu-lesson-desc">Split your portfolio: 60–80% in core holdings (BTC, ETH), 15–30% in mid-cap alts, and 5–10% in high-risk speculative plays. Learn why this structure protects you while capturing upside.</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag beg">Beginner</span><span class="edu-lesson-tag">Allocation</span><span class="edu-lesson-tag">BTC/ETH</span></div>
+
+          <!-- ── PANEL 1: Technical Analysis ── -->
+          <div class="edu-panel card on" id="edu-panel-0">
+            <div class="edu-hero"><div class="edu-hero-icon"><svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
+              <div><div class="edu-hero-num">MODULE 01</div><div class="edu-hero-title">Technical Analysis</div><div class="edu-hero-sub">Master the art of reading price charts. Learn to identify patterns, use indicators and time entries &amp; exits with precision.</div><div class="edu-hero-pills"><span class="edu-hero-pill">6 LESSONS</span><span class="edu-hero-pill">BEGINNER → ADVANCED</span></div></div>
             </div>
-            <div class="edu-lesson">
-              <div class="edu-lesson-num">LESSON 6.2</div>
-              <div class="edu-lesson-title">Dollar Cost Averaging (DCA)</div>
-              <div class="edu-lesson-desc">Remove emotion by buying fixed amounts at regular intervals regardless of price. Learn the math behind DCA: it lowers your average cost in bear markets and builds conviction through volatility.</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag beg">Beginner</span><span class="edu-lesson-tag">DCA</span><span class="edu-lesson-tag">Accumulation</span></div>
+            <div class="edu-lessons">
+              <div class="edu-lesson has-video" onclick="openLessonVideo('Candlestick lesson 1.1.mp4','LESSON 1.1 · Reading Candlestick Charts')"><div class="edu-lesson-num">LESSON 1.1</div><div class="edu-lesson-title">Reading Candlestick Charts</div><div class="edu-lesson-desc">Understand OHLC data, candle anatomy and what each candle tells you about buyer/seller strength.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag beg">Beginner</span><span class="edu-lesson-tag">Candlesticks</span></div></div>
+              <div class="edu-lesson"><div class="edu-lesson-num">LESSON 1.2</div><div class="edu-lesson-title">Support, Resistance &amp; Trendlines</div><div class="edu-lesson-desc">Draw key levels where price consistently reacts. Identify uptrends, downtrends and horizontal ranges.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag beg">Beginner</span><span class="edu-lesson-tag">Levels</span></div></div>
+              <div class="edu-lesson"><div class="edu-lesson-num">LESSON 1.3</div><div class="edu-lesson-title">Moving Averages: EMA &amp; SMA</div><div class="edu-lesson-desc">Use the 20, 50 and 200 EMA/SMA to identify trend direction and dynamic support.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag">Indicators</span><span class="edu-lesson-tag">EMA</span></div></div>
+              <div class="edu-lesson"><div class="edu-lesson-num">LESSON 1.4</div><div class="edu-lesson-title">RSI &amp; MACD Mastery</div><div class="edu-lesson-desc">Identify momentum shifts using RSI overbought/oversold zones and MACD crossovers.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag">RSI</span><span class="edu-lesson-tag">MACD</span></div></div>
+              <div class="edu-lesson"><div class="edu-lesson-num">LESSON 1.5</div><div class="edu-lesson-title">Bollinger Bands &amp; Volatility</div><div class="edu-lesson-desc">Use Bollinger Bands to measure volatility expansion and contraction. Learn the squeeze setup.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag">Bollinger</span><span class="edu-lesson-tag adv">Advanced</span></div></div>
+              <div class="edu-lesson"><div class="edu-lesson-num">LESSON 1.6</div><div class="edu-lesson-title">Chart Patterns: Flags, Wedges &amp; H&amp;S</div><div class="edu-lesson-desc">Recognize continuation and reversal patterns with high statistical edge.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag adv">Advanced</span><span class="edu-lesson-tag">Patterns</span></div></div>
             </div>
-            <div class="edu-lesson">
-              <div class="edu-lesson-num">LESSON 6.3</div>
-              <div class="edu-lesson-title">Profit Taking Frameworks</div>
-              <div class="edu-lesson-desc">Take profits systematically not emotionally. Learn ladder selling (e.g. 25% at 2x, 25% at 3x, 25% at 5x, keep 25% long-term) and target-based exits tied to market cycle indicators.</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag">Take Profit</span><span class="edu-lesson-tag">Ladder Selling</span></div>
-            </div>
-            <div class="edu-lesson">
-              <div class="edu-lesson-num">LESSON 6.4</div>
-              <div class="edu-lesson-title">Rebalancing &amp; Portfolio Maintenance</div>
-              <div class="edu-lesson-desc">As assets move, your allocation drifts. Learn quarterly rebalancing to maintain target weights, trim winners, add to underweight positions and reduce single-asset concentration risk.</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag">Rebalancing</span><span class="edu-lesson-tag">Maintenance</span></div>
-            </div>
-            <div class="edu-lesson">
-              <div class="edu-lesson-num">LESSON 6.5</div>
-              <div class="edu-lesson-title">Bear Market Survival Strategy</div>
-              <div class="edu-lesson-desc">Most investors lose 80–90% in bear markets. Learn to identify bear market conditions early, rotate to stablecoins, set buy targets for quality assets and use downtrends to accumulate at discounts.</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag adv">Advanced</span><span class="edu-lesson-tag">Bear Market</span><span class="edu-lesson-tag">Stables</span></div>
-            </div>
-            <div class="edu-lesson">
-              <div class="edu-lesson-num">LESSON 6.6</div>
-              <div class="edu-lesson-title">Compounding &amp; Long-Term Thinking</div>
-              <div class="edu-lesson-desc">$10,000 growing at 40% annually becomes $289,000 in 10 years. Understand the power of compounding, minimising taxes through holding periods and thinking in 4-year cycle horizons not days.</div>
-              <div class="edu-lesson-tags"><span class="edu-lesson-tag adv">Advanced</span><span class="edu-lesson-tag">Compounding</span><span class="edu-lesson-tag">Long-Term</span></div>
-            </div>
+            <div class="edu-concepts"><span class="edu-concepts-label">KEY CONCEPTS →</span><span class="edu-concept">OHLC</span><span class="edu-concept">EMA 20/50/200</span><span class="edu-concept">RSI Divergence</span><span class="edu-concept">MACD Cross</span><span class="edu-concept">BB Squeeze</span><span class="edu-concept">Head &amp; Shoulders</span></div>
           </div>
-          <div class="edu-concepts">
-            <span class="edu-concepts-label">KEY CONCEPTS →</span>
-            <span class="edu-concept">Core Allocation</span><span class="edu-concept">DCA</span><span class="edu-concept">Ladder Selling</span><span class="edu-concept">Rebalancing</span><span class="edu-concept">Bear Rotation</span><span class="edu-concept">Stablecoins</span><span class="edu-concept">Compounding</span><span class="edu-concept">4yr Cycle</span>
+
+          <!-- ── PANEL 2 ── -->
+          <div class="edu-panel card" id="edu-panel-1">
+            <div class="edu-hero"><div class="edu-hero-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+              <div><div class="edu-hero-num">MODULE 02</div><div class="edu-hero-title">Risk Management</div><div class="edu-hero-sub">Protect your capital first. Learn position sizing, stop placement and why risk control determines long-term survival.</div><div class="edu-hero-pills"><span class="edu-hero-pill">6 LESSONS</span><span class="edu-hero-pill">ALL LEVELS</span></div></div>
+            </div>
+            <div class="edu-lessons">
+              <div class="edu-lesson"><div class="edu-lesson-num">LESSON 2.1</div><div class="edu-lesson-title">The 1% Rule</div><div class="edu-lesson-desc">Never risk more than 1% of your account on a single trade. This rule alone can save your account.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag beg">Beginner</span><span class="edu-lesson-tag">Capital</span></div></div>
+              <div class="edu-lesson"><div class="edu-lesson-num">LESSON 2.2</div><div class="edu-lesson-title">Position Sizing Formula</div><div class="edu-lesson-desc">Calculate exact position size based on account size, stop distance and risk percentage.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag beg">Beginner</span><span class="edu-lesson-tag">Formula</span></div></div>
+              <div class="edu-lesson"><div class="edu-lesson-num">LESSON 2.3</div><div class="edu-lesson-title">Stop Loss Placement Strategies</div><div class="edu-lesson-desc">Place stops below structure, not randomly. ATR-based stops and volatility-adjusted stops.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag">Stop Loss</span><span class="edu-lesson-tag">ATR</span></div></div>
+              <div class="edu-lesson"><div class="edu-lesson-num">LESSON 2.4</div><div class="edu-lesson-title">Risk/Reward Ratios</div><div class="edu-lesson-desc">Why you can lose 60% of trades and still be profitable with a 1:3 R:R ratio.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag">R:R Ratio</span><span class="edu-lesson-tag">Take Profit</span></div></div>
+              <div class="edu-lesson"><div class="edu-lesson-num">LESSON 2.5</div><div class="edu-lesson-title">Trailing Stops &amp; Partial Profits</div><div class="edu-lesson-desc">Lock in gains as price moves in your favour using trailing stop techniques.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag">Trailing Stop</span><span class="edu-lesson-tag adv">Advanced</span></div></div>
+              <div class="edu-lesson"><div class="edu-lesson-num">LESSON 2.6</div><div class="edu-lesson-title">Drawdown, Recovery &amp; Tilt Control</div><div class="edu-lesson-desc">A 50% loss needs 100% to recover. Daily loss limits and how to prevent account blowups.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag adv">Advanced</span><span class="edu-lesson-tag">Drawdown</span></div></div>
+            </div>
+            <div class="edu-concepts"><span class="edu-concepts-label">KEY CONCEPTS →</span><span class="edu-concept">1% Rule</span><span class="edu-concept">Position Size</span><span class="edu-concept">ATR Stop</span><span class="edu-concept">R:R Ratio</span><span class="edu-concept">Trailing Stop</span><span class="edu-concept">Max Drawdown</span></div>
           </div>
-        </div>
+
+          <!-- ── PANEL 3 ── -->
+          <div class="edu-panel card" id="edu-panel-2">
+            <div class="edu-hero"><div class="edu-hero-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+              <div><div class="edu-hero-num">MODULE 03</div><div class="edu-hero-title">Trading Psychology</div><div class="edu-hero-sub">Your biggest enemy is yourself. Build mental discipline to follow your plan and stay consistent over time.</div><div class="edu-hero-pills"><span class="edu-hero-pill">6 LESSONS</span><span class="edu-hero-pill">MINDSET</span></div></div>
+            </div>
+            <div class="edu-lessons">
+              <div class="edu-lesson"><div class="edu-lesson-num">LESSON 3.1</div><div class="edu-lesson-title">FOMO: The Silent Account Killer</div><div class="edu-lesson-desc">Fear of Missing Out causes traders to chase pumps at tops. Build rules that stop you acting on it.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag beg">Beginner</span><span class="edu-lesson-tag">FOMO</span></div></div>
+              <div class="edu-lesson"><div class="edu-lesson-num">LESSON 3.2</div><div class="edu-lesson-title">Revenge Trading &amp; Loss Spirals</div><div class="edu-lesson-desc">After a loss the brain craves recovery, leading to oversized trades and poor setups.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag">Revenge Trading</span></div></div>
+              <div class="edu-lesson"><div class="edu-lesson-num">LESSON 3.3</div><div class="edu-lesson-title">Building a Trading Routine</div><div class="edu-lesson-desc">A daily pre-market routine, end-of-day review and weekly journal keeps decisions sharp.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag">Routine</span><span class="edu-lesson-tag beg">Beginner</span></div></div>
+              <div class="edu-lesson"><div class="edu-lesson-num">LESSON 3.4</div><div class="edu-lesson-title">Detaching from P&amp;L</div><div class="edu-lesson-desc">Watching P&amp;L in real-time distorts decisions. Evaluate trades by process quality, not outcome.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag">Process Focus</span></div></div>
+              <div class="edu-lesson"><div class="edu-lesson-num">LESSON 3.5</div><div class="edu-lesson-title">Overconfidence &amp; Winning Streaks</div><div class="edu-lesson-desc">Winning streaks lead to inflated position sizes and skipped rules. Stay level-headed.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag adv">Advanced</span></div></div>
+              <div class="edu-lesson"><div class="edu-lesson-num">LESSON 3.6</div><div class="edu-lesson-title">Thinking in Probabilities</div><div class="edu-lesson-desc">No setup wins 100%. Learn to accept losses as part of the system and measure over 50+ trades.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag adv">Advanced</span><span class="edu-lesson-tag">Mindset</span></div></div>
+            </div>
+            <div class="edu-concepts"><span class="edu-concepts-label">KEY CONCEPTS →</span><span class="edu-concept">FOMO</span><span class="edu-concept">Revenge Trading</span><span class="edu-concept">Journal</span><span class="edu-concept">P&amp;L Detachment</span><span class="edu-concept">Probability</span></div>
+          </div>
+
+          <!-- ── PANEL 4 ── -->
+          <div class="edu-panel card" id="edu-panel-3">
+            <div class="edu-hero"><div class="edu-hero-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2"/></svg></div>
+              <div><div class="edu-hero-num">MODULE 04</div><div class="edu-hero-title">Crypto Fundamentals</div><div class="edu-hero-sub">Understand what actually drives crypto value. Blockchain, tokenomics, on-chain data and macro cycles.</div><div class="edu-hero-pills"><span class="edu-hero-pill">6 LESSONS</span><span class="edu-hero-pill">ON-CHAIN</span></div></div>
+            </div>
+            <div class="edu-lessons">
+              <div class="edu-lesson"><div class="edu-lesson-num">LESSON 4.1</div><div class="edu-lesson-title">How Blockchain Works</div><div class="edu-lesson-desc">Distributed ledgers, consensus (PoW vs PoS), blocks and what gives a blockchain its value.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag beg">Beginner</span><span class="edu-lesson-tag">Blockchain</span></div></div>
+              <div class="edu-lesson"><div class="edu-lesson-num">LESSON 4.2</div><div class="edu-lesson-title">Tokenomics: Supply, Demand &amp; Value</div><div class="edu-lesson-desc">Circulating supply, vesting cliffs, inflation schedule and how to spot deflationary mechanics.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag">Tokenomics</span><span class="edu-lesson-tag">FDV</span></div></div>
+              <div class="edu-lesson"><div class="edu-lesson-num">LESSON 4.3</div><div class="edu-lesson-title">Bitcoin Halving &amp; Market Cycles</div><div class="edu-lesson-desc">How the halving affects miner revenue and historically triggers bull cycles.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag">Halving</span><span class="edu-lesson-tag beg">Beginner</span></div></div>
+              <div class="edu-lesson"><div class="edu-lesson-num">LESSON 4.4</div><div class="edu-lesson-title">On-Chain Metrics That Matter</div><div class="edu-lesson-desc">Track MVRV, SOPR, exchange flows and whale accumulation before price reacts.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag">MVRV</span><span class="edu-lesson-tag adv">Advanced</span></div></div>
+              <div class="edu-lesson"><div class="edu-lesson-num">LESSON 4.5</div><div class="edu-lesson-title">DeFi, Layer 2s &amp; the Ecosystem</div><div class="edu-lesson-desc">DEXs, liquidity pools, yield farming and how Layer 2 networks scale Ethereum.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag">DeFi</span><span class="edu-lesson-tag adv">Advanced</span></div></div>
+              <div class="edu-lesson"><div class="edu-lesson-num">LESSON 4.6</div><div class="edu-lesson-title">Macro &amp; Liquidity Drivers</div><div class="edu-lesson-desc">How Fed rate decisions, DXY and global M2 drive Bitcoin and altcoin cycles.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag">Macro</span><span class="edu-lesson-tag">DXY</span></div></div>
+            </div>
+            <div class="edu-concepts"><span class="edu-concepts-label">KEY CONCEPTS →</span><span class="edu-concept">PoW/PoS</span><span class="edu-concept">Tokenomics</span><span class="edu-concept">Halving</span><span class="edu-concept">MVRV</span><span class="edu-concept">DeFi</span><span class="edu-concept">DXY</span><span class="edu-concept">M2</span></div>
+          </div>
+
+          <!-- ── PANEL 5 ── -->
+          <div class="edu-panel card" id="edu-panel-4">
+            <div class="edu-hero"><div class="edu-hero-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+              <div><div class="edu-hero-num">MODULE 05</div><div class="edu-hero-title">Market Structure</div><div class="edu-hero-sub">Understand how markets move. Trends, ranges and reversals using smart money and institutional concepts.</div><div class="edu-hero-pills"><span class="edu-hero-pill">6 LESSONS</span><span class="edu-hero-pill">SMART MONEY</span></div></div>
+            </div>
+            <div class="edu-lessons">
+              <div class="edu-lesson"><div class="edu-lesson-num">LESSON 5.1</div><div class="edu-lesson-title">Higher Highs, Higher Lows</div><div class="edu-lesson-desc">Read trend structure using HH/HL for bulls and LH/LL for bears. The foundation of all price action.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag">HH/HL</span><span class="edu-lesson-tag beg">Beginner</span></div></div>
+              <div class="edu-lesson"><div class="edu-lesson-num">LESSON 5.2</div><div class="edu-lesson-title">Break of Structure &amp; ChoCH</div><div class="edu-lesson-desc">BOS signals continuation; ChoCH signals reversal. Distinguish pullback from genuine trend change.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag">BOS</span><span class="edu-lesson-tag">ChoCH</span></div></div>
+              <div class="edu-lesson"><div class="edu-lesson-num">LESSON 5.3</div><div class="edu-lesson-title">Order Blocks &amp; Institutional Zones</div><div class="edu-lesson-desc">The last candle before a significant move — where institutions left their orders.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag adv">Advanced</span><span class="edu-lesson-tag">SMC</span></div></div>
+              <div class="edu-lesson"><div class="edu-lesson-num">LESSON 5.4</div><div class="edu-lesson-title">Liquidity Pools &amp; Stop Hunts</div><div class="edu-lesson-desc">How institutions hunt retail stops below swing lows. Anticipate sweeps and enter after manipulation.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag adv">Advanced</span><span class="edu-lesson-tag">Liquidity</span></div></div>
+              <div class="edu-lesson"><div class="edu-lesson-num">LESSON 5.5</div><div class="edu-lesson-title">Fair Value Gaps &amp; Imbalance</div><div class="edu-lesson-desc">Three-candle imbalances price often returns to fill. Use FVGs as precision entry zones.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag adv">Advanced</span><span class="edu-lesson-tag">FVG</span></div></div>
+              <div class="edu-lesson"><div class="edu-lesson-num">LESSON 5.6</div><div class="edu-lesson-title">Multi-Timeframe Analysis</div><div class="edu-lesson-desc">Weekly/Daily for bias, 4H for structure, 1H/15m for entry. Top-down approach explained.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag">MTF</span><span class="edu-lesson-tag">Top-Down</span></div></div>
+            </div>
+            <div class="edu-concepts"><span class="edu-concepts-label">KEY CONCEPTS →</span><span class="edu-concept">HH/HL</span><span class="edu-concept">BOS</span><span class="edu-concept">ChoCH</span><span class="edu-concept">Order Block</span><span class="edu-concept">Stop Hunt</span><span class="edu-concept">FVG</span><span class="edu-concept">MTF</span></div>
+          </div>
+
+          <!-- ── PANEL 6 ── -->
+          <div class="edu-panel card" id="edu-panel-5">
+            <div class="edu-hero"><div class="edu-hero-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+              <div><div class="edu-hero-num">MODULE 06</div><div class="edu-hero-title">Portfolio Building</div><div class="edu-hero-sub">Build a crypto portfolio that compounds over time. DCA, allocation and profit-taking across market cycles.</div><div class="edu-hero-pills"><span class="edu-hero-pill">6 LESSONS</span><span class="edu-hero-pill">LONG-TERM</span></div></div>
+            </div>
+            <div class="edu-lessons">
+              <div class="edu-lesson"><div class="edu-lesson-num">LESSON 6.1</div><div class="edu-lesson-title">Core vs Speculative Allocation</div><div class="edu-lesson-desc">60–80% BTC/ETH core, 15–30% mid-caps, 5–10% speculative. Why this structure protects you.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag beg">Beginner</span><span class="edu-lesson-tag">Allocation</span></div></div>
+              <div class="edu-lesson"><div class="edu-lesson-num">LESSON 6.2</div><div class="edu-lesson-title">Dollar Cost Averaging (DCA)</div><div class="edu-lesson-desc">Buy fixed amounts at regular intervals. Removes emotion and lowers average cost in bear markets.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag beg">Beginner</span><span class="edu-lesson-tag">DCA</span></div></div>
+              <div class="edu-lesson"><div class="edu-lesson-num">LESSON 6.3</div><div class="edu-lesson-title">Profit Taking Frameworks</div><div class="edu-lesson-desc">Ladder selling: 25% at 2x, 25% at 3x, 25% at 5x. Systematic, not emotional exits.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag">Take Profit</span><span class="edu-lesson-tag">Ladder</span></div></div>
+              <div class="edu-lesson"><div class="edu-lesson-num">LESSON 6.4</div><div class="edu-lesson-title">Rebalancing &amp; Portfolio Maintenance</div><div class="edu-lesson-desc">Quarterly rebalancing to maintain target weights and reduce single-asset concentration risk.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag">Rebalancing</span></div></div>
+              <div class="edu-lesson"><div class="edu-lesson-num">LESSON 6.5</div><div class="edu-lesson-title">Bear Market Survival Strategy</div><div class="edu-lesson-desc">Identify bear conditions early, rotate to stablecoins and accumulate quality assets at discounts.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag adv">Advanced</span><span class="edu-lesson-tag">Bear Market</span></div></div>
+              <div class="edu-lesson"><div class="edu-lesson-num">LESSON 6.6</div><div class="edu-lesson-title">Compounding &amp; Long-Term Thinking</div><div class="edu-lesson-desc">$10k at 40%/yr = $289k in 10 years. Think in 4-year cycle horizons, not days.</div><div class="edu-lesson-tags"><span class="edu-lesson-tag adv">Advanced</span><span class="edu-lesson-tag">Compounding</span></div></div>
+            </div>
+            <div class="edu-concepts"><span class="edu-concepts-label">KEY CONCEPTS →</span><span class="edu-concept">Core Allocation</span><span class="edu-concept">DCA</span><span class="edu-concept">Ladder Selling</span><span class="edu-concept">Rebalancing</span><span class="edu-concept">Stablecoins</span><span class="edu-concept">Compounding</span></div>
+          </div>
+
+        </div><!-- /edu-detail -->
 
       </div><!-- end lkd education -->
     </div>
@@ -4042,6 +3954,21 @@ var whalesInited=false;
 var portfolioInited=false;
 
 /* ── EDUCATION TABS ── */
+function eduOpenModule(idx){
+  var grid=document.getElementById('edu-module-grid');
+  var detail=document.getElementById('edu-detail');
+  if(grid)grid.style.display='none';
+  if(detail){detail.style.display='block';}
+  // activate the right tab
+  document.querySelectorAll('.edu-tab').forEach(function(b,i){b.classList.toggle('on',i===idx);});
+  document.querySelectorAll('.edu-panel').forEach(function(p,i){p.classList.toggle('on',i===idx);});
+}
+function eduCloseModule(){
+  var grid=document.getElementById('edu-module-grid');
+  var detail=document.getElementById('edu-detail');
+  if(grid)grid.style.display='';
+  if(detail)detail.style.display='none';
+}
 function eduTab(idx,btn){
   document.querySelectorAll('.edu-tab').forEach(function(b){b.classList.remove('on');});
   document.querySelectorAll('.edu-panel').forEach(function(p){p.classList.remove('on');});
