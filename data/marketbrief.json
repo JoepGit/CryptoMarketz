@@ -1,18 +1,18 @@
 {
-  "date": "vrijdag 20 maart 2026",
-  "focus": "Voorzichtige markt met lichte correcties terwijl institutional bid onder druk staat.",
-  "risk": "Rood: Macro-onzekerheid hoog",
-  "btc_structure": "Bitcoin handelt op $70,491 met slechts -0.09% dagverlies, wat stabiliteit suggereert rond deze sleutelzone. De intraday weerstanden blijven intact ondanks een handelvolume van $44.88B dat enigszins elevé blijft.",
-  "eth_flows": "Ethereum toont meer zwakte op $2,137.19 met een dagelijk verlies van -1.95%, aangevend zwakkere retail bid in altcoins. Het volume van $22.52B reflecteert continuïteit in outflows richting stablecoins.",
+  "date": "2026-03-20",
+  "focus": "Bitcoin stabiliseert rond $70.803 in extreme fear regime terwijl Ethereum achterblijft; macro-catalisten rond regelgeving en institutionele inflows domineren.",
+  "risk": "Extreme fear, patroonherkenning crash-risico",
+  "btc_structure": "Bitcoin noteert op $70.803 met +0.95% in 24h, maar technische analisten waarschuwen voor gelijkenissen met vorige crash-scenario naar $60.000. De 1h-stijging van +0.51% duidt op voorzichtig herstelsentiment, maar de 7d-daling van -0.76% markeert zwakke directionaliteit in de langere termijn.",
+  "eth_flows": "Ethereum daalt naar $2.149,88 met -0.88% in 24h maar toont herstel van +2.48% over 7 dagen, wat duidt op onderliggende steun. Het volume van $21.54B blijft robuust en suggereert institutionele activiteit ondanks de dagelijkse negatieve beweging.",
   "top_narratives": [
-    "Macro bellwether: renteverwachtingen herijkt",
-    "Altseason uitgesteld: Bitcoin dominantie consolidatief",
-    "Institutional accumulation: pauzering na Q1 rally",
-    "Regulatory sentiment: sec enforcement focus hernemd"
+    "Institutionele Bitcoin-adoption via Morgan Stanley's MSBT ETF en $1M zaadkapitaal signaleert mainstream legitimatie",
+    "Regelgevingshelderheid: Crypto Clarity Act nadert Senaatshoorzitting, positief voor langetermijnbetrouwbaarheid",
+    "Technisch risico: CoinDesk waarschuwt voor crash-patroon naar $60.000 niveau",
+    "Kwantumrisico's eisen aandacht: Galaxy Analytics benadrukt differentieel walletbeveiligingsrisico"
   ],
-  "macro_impact": "March volatility-clustering wijst op Fed-sensitivity; rentemarkt signaleert minder cuts in H2 2026. Risico-off sentiment beperkt alligator exposure naar DeFi-leveraged posities.",
-  "whale_flows": "Whale accumulation pauzeerd; $44.88B BTC volume verwijst naar profit-taking op $72K resistance. Ethereum whale netflows negatief met $22.52B volume gedomineerd door institutionele liquidaties.",
-  "funding_oi": "Perpetual funding rates bereiken 0.008% (normaal), wat duidt op gematigde leverage. Open Interest consolidatief op $600M notioneel; geen signalen voor inminent flush of squeeze.",
-  "volatility_outlook": "ATR contraheren naar 3.2% range; verwachting van lagere realized volatility tot Fed dot-plot volgende week. VIX-crypto correlatie 0.68 — macro-event risk dominant.",
-  "full_report": "Markt handelt voorzichtig rond sleutelzones met Bitcoin op $70,491 (-0.09%) en Ethereum op $2,137.19 (-1.95%), terwijl altcoins (XRP -1.10%, SOL -0.82%) achterblij​ven. Volumes blijven robuust — BTC $44.88B, ETH $22.52B — maar directionaliteit zwak, wat hints naar profit-taking na Q1-rally. Macro-onzekerheid rond Fed-renteverwachtingen blijft volatiliteitsdriver; whale accumulation-pauzering suggereert voorzichtig sentiment. Verwachting: consolidatie tot einde maart, met risico's geweogen naar downside mochten macro-headwinds verergeren."
+  "macro_impact": "Morgan Stanley's formele Bitcoin ETF-lancering (MSBT-ticker) met $1M seed versterkt institutionele pijler onder markt, ondanks extreme fear-index van 11. De Crypto Clarity Act die naar Senaatshoorzitting beweegt biedt juridische duidelijkheid, maar geopolitieke spanning rond AI-chipsmokkel (Super Micro CEO arrest) en tokenisering-regelgeving (Nevada enforcement tegen Kalshi) voegt onzekerheid in.",
+  "whale_flows": "Liquidatiegegevens niet beschikbaar, maar de volumeverspreiding toont $43.24B in BTC en $21.54B in ETH, wat suggeert dat walvissen hun posities voorzichtig herbouwen ondanks extreme fear-sentiment. Gauntlet's $380M exit uit DeFi signaleert voorzichtigheid in risicobeheersperatoren.",
+  "funding_oi": "Funding rates en open interest data niet beschikbaar vandaag; zonder deze metriek blijft leveragepositie-balans onduidelijk, wat extra voorzichtigheid rechtvaardigt in de huidige extreme fear-omgeving.",
+  "volatility_outlook": "Fear & Greed Index op 11 (Extreme Fear, verslechterd van 23) voorspelt elevated volatiliteit met asymmetrisch risico naar downside. Zolang liquidatiedata afwezig is, kunnen plotselinge $2-3K Bitcoin-swingen zich voordoen; institutionele bids rond $68-69K kunnen als vloer functioneren.",
+  "full_report": "Op 2026-03-20 noteert Bitcoin op $70.803 (+0.95% 24h, -0.76% 7d) terwijl Ethereum op $2.149,88 daalt (-0.88% 24h, +2.48% 7d) in een markt met totale cap $2.5T en extreme fear-sentiment (index 11). CoinDesk waarschuwt voor technische gelijkenissen met vorige crash naar $60.000, wat risico onderstreept ondanks Morgan Stanley's bullish institutionele MSBT ETF-lancering met $1M zaad. De Crypto Clarity Act nadert Senaatshoorzitting als positieve macro-katalyst, maar crypto-wallet kwantumrisico, super Micro AI-chipsmokkel en Kalshi-enforcement cre\u00ebren geopolitieke onzekerheid. Zonder beschikbare funding rates en liquidatiegegevens blijft leverage-balans obscuur; walvissen herbouwen voorzichtig via $104B dagelijks volume terwijl Gauntlet's $380M DeFi-exit risico-aversie signaleert."
 }
