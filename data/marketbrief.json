@@ -1,18 +1,18 @@
 {
   "date": "vrijdag 20 maart 2026",
-  "focus": "Brede marktdaling met lichte correctie over alle major assets terwijl volume stabiel blijft.",
-  "risk": "Risico laag, consolidatie fase",
-  "btc_structure": "Bitcoin daalt naar $69.850 (-0.78% in 24h) met een handelsvolume van $38.84B. De prijs beweegt in een nauwe bandbreedte wat duidt op consolidatiegedrag voorafgaand aan de volgende beweging.",
-  "eth_flows": "Ethereum verliest 0.84% tot $2.124,66 met een volume van $17.62B. De daling is marginaal groter dan Bitcoin, wat suggereert dat altcoin-kapitaal voorzichtig blijft.",
+  "focus": "Bitcoin en Ethereum stabiliseren rond key levels terwijl altcoins differentieel presteren.",
+  "risk": "Lage volatiliteit, geen directe triggers",
+  "btc_structure": "Bitcoin handelt vlak op $70,477 met een minimale 24h-daling van -0.11%, wat duidt op consolidatie rond deze steunzone. Het volume van $38.20B blijft robuust ondanks de laterale beweging.",
+  "eth_flows": "Ethereum toont relatieve sterkte met +0.14% winst op $2,150.32, terwijl het volume van $17.70B aanzienlijk blijft. Dit suggereert voorzichtig institutioneel herstelinteresse.",
   "top_narratives": [
-    "Consolidatie na recente rally's",
-    "Volume-geleid handelen op slotdag week",
-    "Macro-onzekerheid drukt risicoassets",
-    "Stablecoin dominantie neemt toe"
+    "Macro-gecontroleerde risico-sentiment",
+    "Altcoin-differentiatie en herbalancing",
+    "Institutionele accumulatiefase",
+    "Verwachte Fed-beleidsstabiliteit"
   ],
-  "macro_impact": "Globale renteverwachtingen en Fed-beleid blijven het sentiment bepalen. De kleine dalingen suggereren dat macro-headwinds voorzien zijn ingeprijsd.",
-  "whale_flows": "Totaal volume van $61.37B duidt op gespreid handelen zonder grote positie-opbouw. BTC domineert volume-aandeel, wat aangeeft dat institutionele voorzichtigheid voorkoomt.",
-  "funding_oi": "Funding rates blijven stabiel met verwachting van gedempte volatiliteit. Open interest toont geen significante liquidatie-triggers op huidige niveaus.",
-  "volatility_outlook": "IV-indexen wijzen op lage verwachte volatiliteit komend weekend. SOL noteert vrijwel vlak (-0.01%), wat marktbrede stabiliteit bevestigt.",
-  "full_report": "De cryptomarkten sluiten de werkweek af met een voorzichtige correctie: BTC $69.850 (-0.78%), ETH $2.124,66 (-0.84%), XRP $1.43 (-1.32%), BNB $638,09 (-0.45%) en SOL $88,88 (-0.01%). Gecombineerd volume van $61.37B ondersteunt een consolidatiepatroon zonder duidelijke directionaliteit. De markt toont stabiliteit ondanks macro-onzekerheden, waarbij Bitcoin weerstaat biedt met dominant volume van $38.84B. Traders anticiperen op volgende week met gedempte leveraged posities, wat wijst op voorzichtigheid na recente volatiliteit. Weekend-gapping risico's blijven beperkt gezien de huidige price action."
+  "macro_impact": "Geopolitieke onzekerheden blijven aanwezig maar zijn niet direct in de prijsactie weerspiegeld. Markten wachten op volgende Fed-signalen voor richting.",
+  "whale_flows": "Mega-volumes op BTC en ETH duiden op grijze walvissen die posities evalueren. XRP en BNB zien verdunning met lagere volumes respectievelijk $1.88B en $0.98B.",
+  "funding_oi": "Langzame opbouw van funding rates verwacht bij BTC en ETH gezien hun stabiliteit. Longs voorzichtig gefinancierd zonder grote leverage.",
+  "volatility_outlook": "ATR-niveaus wijzen op verdere contractie. Volatiliteit zal waarschijnlijk onder 1.5% per uur blijven tot volgende macro-triggers.",
+  "full_report": "CryptoMarketz rapporteert een opvallend vlakke sessie op vrijdag 20 maart 2026. Bitcoin consolidateert op $70,477 (-0.11%) met massaal volume van $38.20B, Ethereum toont milde outperformance op $2,150.32 (+0.14%) en $17.70B volume, terwijl altcoins divergeren: SOL stijgt 0.66% naar $89.64, XRP daalt -0.67% naar $1.44, en BNB verzwakt -0.11% naar $642.02. Institutionele marktdeelnemers lijken geduldig te wachten op macro-triggers, wat resulteert in gedempte volatiliteit en voorzichtige positioning. Geen directe risico's waargenomen; de markt behoudt zijn neutrale stance."
 }
