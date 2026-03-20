@@ -1,18 +1,18 @@
 {
   "date": "vrijdag 20 maart 2026",
-  "focus": "Bitcoin stabiliseert rond $70.450 terwijl altcoins lichte verliezen lijden in risicoaverse marktsentiment.",
-  "risk": "Gemiddeld, voorzichtige positie",
-  "btc_structure": "Bitcoin noteert op $70.450 met bescheiden gain van 0,27% over 24 uur, ondersteund door solide handelsvolume van $42,88B. De technische ondersteuning lijkt intact bij dit niveau, hoewel volume-distributie voorzichtigheid suggereert.",
-  "eth_flows": "Ethereum zwakt af naar $2.140,18 met een verlies van -1,74% in 24 uren, bij handelsvolume van $22,20B. De underperformance ten opzichte van Bitcoin duidt op selectieve afbouwing van risicoposities in altcoin-segment.",
+  "focus": "Bitcoin stabiliseert rond $70.693 terwijl altcoins lichte verkoopdruk ervaren.",
+  "risk": "Lage volatiliteit, herstelcorrectie waarschijnlijk",
+  "btc_structure": "Bitcoin handelt op $70.693 met minimale intraday beweging van +0.72% in 24 uur. De markt toont consolidatiepatroon met volume van $42.62B, wat duidt op voorzichtige sentiment onder traders.",
+  "eth_flows": "Ethereum noteert $2.149,04 met -1.16% verlies en $21.52B volume. Uitstroom naar stablecoins suggereert winstnemingen op middelmatige niveaus.",
   "top_narratives": [
-    "Bitcoin stabiliteit vs altcoin weakness",
-    "Macro-headwinds op risicoactiva",
-    "Volume-concentratie in topmarketcaps",
-    "Liquiditeitsdynamiek onder druk"
+    "Consolidatie fase in Bitcoin boven $70K support",
+    "Altcoin underperformance tegen BTC dominantie",
+    "Institutionele inactiviteit rond kwartaaleinde",
+    "Verwachte Fed-beslissing volgende week"
   ],
-  "macro_impact": "Bredere risicomarkt vertoont voorzichtig sentiment; crypto volgt typische patroon van afbouwing in periodes van macro-onzekerheid. Fed-beleid en renteverwachtingen blijven kritieke monitorfactoren.",
-  "whale_flows": "Whale-activiteit concentreert zich op liquiditeitsrijke paren; totaal gecombineerd volume van $42,88B (BTC) suggereert institutionele positionering eerder dan speculatieve uitbraken.",
-  "funding_oi": "Funding rates trending neutraal; geen excessive leverage aangetroffen in huidige structuur. Open Interest wijst op voorzichtige positiegroottehantering door marktdeelnemers.",
-  "volatility_outlook": "Verwacht gematigd volatiliteitsniveau rond huidige niveaus; intra-day bewegingen beperkt tot 1-2% range. Potentiële catalysts komende week bepalen uitbraakrichting.",
-  "full_report": "Op vrijdag 20 maart 2026 stabiliseert de cryptomarkt op gematigd sentiment met Bitcoin stevig op $70.450 (+0,27%) en volume van $42,88B, terwijl Ethereum onder druk staat op $2.140,18 (-1,74%). Altcoins volgen downtrend: XRP daalt -1,22% naar $1,45, SOL -1,26% naar $88,93 en BNB -0,83% naar $641,68. De underperformance van altcoins wijst op risicoafbouw in marktsentiment, mogelijk gedreven door macro-onzekerheid. Institutionele whales lijken posities voorzichtig te handhaven zonder agressieve intraday-bewegingen. Volatiliteit blijft ingeperkt, funding rates neutraal, en liquiditeit concentreert zich in top-marketcaps."
+  "macro_impact": "Vooruitkijken naar Fed-rentebeslissing en economische data volgende week. Huidigeflat-to-down sessie weerspiegelt afwachting van beleggersgedrag.",
+  "whale_flows": "Whale activity gedomineerd door BTC ($42.62B volume) terwijl altcoins lagere liquiditeit tonen. Geen significante accumulatie signalen op huidigeprijs niveaus.",
+  "funding_oi": "Funding rates neutraal met voorzichtig langere positiebouw. Open interest relatief stabiel wijzend op evenwicht tussen longs en shorts.",
+  "volatility_outlook": "Verwacht lagere volatiliteit tot macro-events volgende week. Bollinger Bands verkleinen zich op alle timeframes.",
+  "full_report": "Bitcoin stabiliseert rond $70.693 met bescheiden +0.72% dagwinst en substantieel volume van $42.62B, terwijl Ethereum onder druk staat met -1.16% verlies op $2.149,04. Altcoins XRP (-1.08%), SOL (-0.54%) en BNB (-0.38%) vertonen uniforme verkoopdruk ondanks relatief hoge volumetrends. De markt positioneert zich defensief voor macro-events volgende week, met whale activity hoofdzakelijk gericht op BTC. Consolidatie wordt verwacht tot duidelijkheid over Fed-beleid en economische data."
 }
