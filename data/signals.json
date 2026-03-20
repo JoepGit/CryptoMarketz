@@ -46,17 +46,5 @@
     "timestamp": "2026-03-19T19:47:04.486Z",
     "generated_at": "Thu, 19 Mar 2026 19:47:04 GMT",
     "source": "claude-bot"
-  },
-  {
-    "id": 1773949631199,
-    "coin": "BTC/USD",
-    "type": "BUY",
-    "entry": "70220",
-    "tp": "70540",
-    "sl": "68934",
-    "note": "1H trend SIDEWAYS, prijs $70540 boven EMA50 $70220.17, RSI 61.7 niet overbought, momentum positief +1.08% in 1h. 24h range support intact.",
-    "timestamp": "2026-03-19T19:47:04.486Z",
-    "generated_at": "Thu, 19 Mar 2026 19:47:04 GMT",
-    "source": "claude-bot"
   }
 ]
