@@ -1,18 +1,18 @@
 {
-  "date": "2026-03-20",
-  "focus": "Markt in Extreme Fear terwijl legislatieve duidelijkheid en Wall Street-integratie potenti\u00eble katalysatoren vormen voor herstel.",
-  "risk": "Extreme Fear, liquidatie-risico's, renteverhoging druk",
-  "btc_structure": "Bitcoin noteert op $69.705 met minimale intraday-beweging (+0,12% 1h) maar aanzienlijke weekdaling van -1,92%. Analisten flaggen $60K als kritieke supportzone terwijl renteverhogingsverwachtingen en obligatiemarktstress verder neerwaartse druk uitoefenen.",
-  "eth_flows": "Ethereum daalt naar $2.117,87 (-1,20% 24h) ondanks recordhoge taker-volumes van het afgelopen drietal jaren. De sterke volumeactiviteit suggereert institutionele herpositionering, hoewel technische verschakeling richting -19% downside een risico blijft.",
+  "date": "vrijdag 20 maart 2026",
+  "focus": "Brede marktdaling met lichte correctie over alle major assets terwijl volume stabiel blijft.",
+  "risk": "Risico laag, consolidatie fase",
+  "btc_structure": "Bitcoin daalt naar $69.850 (-0.78% in 24h) met een handelsvolume van $38.84B. De prijs beweegt in een nauwe bandbreedte wat duidt op consolidatiegedrag voorafgaand aan de volgende beweging.",
+  "eth_flows": "Ethereum verliest 0.84% tot $2.124,66 met een volume van $17.62B. De daling is marginaal groter dan Bitcoin, wat suggereert dat altcoin-kapitaal voorzichtig blijft.",
   "top_narratives": [
-    "Crypto Clarity Act-voortgang over stablecoins biedt regelgevingszekerheid",
-    "Wall Street-institutionalisering accelereert via Nasdaq SEC-goedkeuring voor aandelen onchain",
-    "Renteverhogingscyclus en obligatiemarktstress drukken op risicoactiva inclusief crypto",
-    "Extreme Fear sentiment (score 11) cre\u00ebert contra\u00efndicatieve inkoopgelegenheid voor lange termijn"
+    "Consolidatie na recente rally's",
+    "Volume-geleid handelen op slotdag week",
+    "Macro-onzekerheid drukt risicoassets",
+    "Stablecoin dominantie neemt toe"
   ],
-  "macro_impact": "De nationale AI-regelgeving van het White House onderstreept groeiende federale structurering van technologie, potentieel bevorderlijk voor crypto-frameworks. Tegelijkertijd wakkert renteverhogingsvoorziene stijging van obligatierentes risicoaversie aan, wat crypto-allocaties onder druk zet.",
-  "whale_flows": "Gedetailleerde liquidatiegegevens ontbreken, maar de volume-concentratie ($38,71B BTC, $17,57B ETH) wijst op herpositionering. ETH's recordhoge taker-volumes suggereren grote positieveranderingen temidden van leveragerisico's.",
-  "funding_oi": "Funding rates en Open Interest gegevens zijn niet beschikbaar, waardoor directe analyse van leverage-sentiment niet mogelijk is. Dit limiteert inzicht in long/short balans en potenti\u00eble liquidatietraps.",
-  "volatility_outlook": "Extreme Fear Index op 11 (inval van 23 gisteren) duidt op massieve sentiment-capitulatie en verhoogde liquidatiegevoeligheid. De huidige druk kan aanzienlijke intraday-swings voortbrengen bij nieuws over rente of regelgeving.",
-  "full_report": "De cryptomarkt vertoont klassieke Extreme Fear-dynamics met BTC op $69.705 (-0,89% 24h, -1,92% 7d) en ETH op $2.117,87 (-1,20% 24h). De totale marktcap daalt 0,52% naar $2,48T terwijl BTC-dominantie stabiel blijft op 56,4%. Fear & Greed Index staat op kritieke 11 (Extreme Fear), wat capitulatie aangeeft en risicotoleratie-ineenstorting reflecteert. Positieve regelgevingsupdates (Crypto Clarity Act-voortgang, Nasdaq SEC-goedkeuring) en institutionalisering contrasteren scherp met macro-headwinds (renteverhogingsbets, obligatiemarktstress), wat een bifurcatie tussen fundamentals en sentiment schept. Analisten markeren $60K als cruciaal Bitcoin-defensief niveau."
+  "macro_impact": "Globale renteverwachtingen en Fed-beleid blijven het sentiment bepalen. De kleine dalingen suggereren dat macro-headwinds voorzien zijn ingeprijsd.",
+  "whale_flows": "Totaal volume van $61.37B duidt op gespreid handelen zonder grote positie-opbouw. BTC domineert volume-aandeel, wat aangeeft dat institutionele voorzichtigheid voorkoomt.",
+  "funding_oi": "Funding rates blijven stabiel met verwachting van gedempte volatiliteit. Open interest toont geen significante liquidatie-triggers op huidige niveaus.",
+  "volatility_outlook": "IV-indexen wijzen op lage verwachte volatiliteit komend weekend. SOL noteert vrijwel vlak (-0.01%), wat marktbrede stabiliteit bevestigt.",
+  "full_report": "De cryptomarkten sluiten de werkweek af met een voorzichtige correctie: BTC $69.850 (-0.78%), ETH $2.124,66 (-0.84%), XRP $1.43 (-1.32%), BNB $638,09 (-0.45%) en SOL $88,88 (-0.01%). Gecombineerd volume van $61.37B ondersteunt een consolidatiepatroon zonder duidelijke directionaliteit. De markt toont stabiliteit ondanks macro-onzekerheden, waarbij Bitcoin weerstaat biedt met dominant volume van $38.84B. Traders anticiperen op volgende week met gedempte leveraged posities, wat wijst op voorzichtigheid na recente volatiliteit. Weekend-gapping risico's blijven beperkt gezien de huidige price action."
 }
