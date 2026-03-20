@@ -1,5 +1,17 @@
 [
   {
+    "id": 1773996079442,
+    "coin": "BNB/USD",
+    "type": "SELL",
+    "entry": "646.58",
+    "tp": "633.79",
+    "sl": "658.41",
+    "note": "4H trend BEARISH, prijs onder EMA20 ($652.63), RSI 30.0 oversold maar neerwaarts. Risk/Reward 1:2.1",
+    "timestamp": "2026-03-20T08:41:13.728Z",
+    "generated_at": "Fri, 20 Mar 2026 08:41:13 GMT",
+    "source": "claude-bot"
+  },
+  {
     "id": 1773952739986,
     "coin": "XRP/USD",
     "type": "BUY",
