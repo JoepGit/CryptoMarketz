@@ -1,18 +1,18 @@
 {
-  "date": "donderdag 19 maart 2026",
-  "focus": "Brede marktcorrectie met Bitcoin onder druk terwijl institutionele volumes afnemen.",
-  "risk": "Risicovolle marktomstandigheden, winstnemingen",
-  "btc_structure": "Bitcoin noteert op $70.143 met een verlies van 1,64% in 24 uur, ondersteund door $45,98B handelsvolume. De uitbraak uit de eerdere range lijkt te stagneren en kopers trekken zich terug. Technische weerstand rond $71.500 blijft kritiek voor verdere stijging.",
-  "eth_flows": "Ethereum daalt 2,71% naar $2.142,08 met $24,22B volume, wat duidt op sterkere verkoopdruk dan bij Bitcoin. Het grotere percentage verlies suggereert dat altcoin-holders voorzichtiger worden. Deze schwakheid in ETH kan trendbreuk signaleren.",
+  "date": "vrijdag 20 maart 2026",
+  "focus": "Brede marktcorrectie zet door met Bitcoin en Ethereum onder druk na positieve risico-sentiment shift.",
+  "risk": "Gemiddeld risico, lichte neerwaartse bias",
+  "btc_structure": "Bitcoin noteert op $70,454 met een dagverlies van -0.95%, wat duidt op voorzichtige consolidatie rond de $70k-grens. Het handelsvolume van $46.19B blijft robust, maar de intraday momentum zwakt af onder toenemende liquiditeitsdruk.",
+  "eth_flows": "Ethereum vertoont zwakker relatief momentum op $2,149.72 met een verlies van -2.21% over 24 uur, wat wijst op selectieve profit-taking in altcoins. Het volume van $24.08B suggereert gebalanceerde beurs- en derivatengeldstromen, met instroom in stabiel-pools.",
   "top_narratives": [
-    "Macro-onzekerheden remmen risicoappetijt",
-    "Institutionele kapitaaluitstroom uit altcoins",
-    "Technische weerstand niet doorbroken",
-    "Stablecoin-voorbereiding op volatiliteit"
+    "Macro-inflatie aandacht voorafgaand aan Fed-minutes",
+    "Altcoin relatieve underperformance vs. Bitcoin dominantie",
+    "Institutionele positieschikkingen in derivaten",
+    "Liquiditeits-clusters rondom ronde psychologische niveaus"
   ],
-  "macro_impact": "Mondiale rentemarkt-volatiliteit en inflatiebezorgdheid drukken op risicoactiva inclusief crypto. Beleggerssentiment verschuift voorzichtiger naarmate centrale banken hun houding verduidelijken. Dit verklaart de brede verkoopdruk op hoogtepunten.",
-  "whale_flows": "Volume concentreert zich in grote posities; BTC-volume $45,98B versus ETH-volume $24,22B duidt op institutionele posities die kleiner worden. Whale-alerts suggereren beweging naar exchanges voor liquidatie in plaats van accumulatie.",
-  "funding_oi": "Funding rates dalen naar lage niveaus, wat aangeeft dat long-posities winst nemen. Open interest zal waarschijnlijk consolideren rond $70k-$72k support levels. Verwacht geen agressieve leverancering in deze fase.",
-  "volatility_outlook": "Impliciete volatiliteit stijgt als gevolg van de brede correctie; ATR op 4-uur charts wijst op 1,5-2,0% dagelijkse swings. Verwacht choppy price action tot macro-triggers opnieuw uitstekendheid bepalen.",
-  "full_report": "De cryptomarkt ervaart donderdag 19 maart 2026 een algemene winstname nadat Bitcoin onder druk staat op $70.143 (-1,64%), gevolgd door Ethereum op $2.142,08 (-2,71%) en XRP op $1,45 (-0,89%). BNB daalt 1,84% naar $639,99 terwijl Solana volhardt op $89,01 (-0,87%). Het handelsvolume blijft substantieel met BTC-volume van $45,98B en ETH-volume van $24,22B, maar de directionaliteit is negatief. Institutionele flows vertonen voorzichtigheid aangezien macro-onzekerheden en technische weerstanden consolidatie afdwingen. Volatiliteit neemt toe en positioning wordt defensiever; verwacht laterale prijsactie totdat de $70k-support voor Bitcoin wordt getest."
+  "macro_impact": "De Amerikaanse rentemarkt wacht op aanvullende Fed-communicatie; beleggers voorkomen verhoogd blootstelling totdat beleidsduidelijkheid toeneemt. Geopolitieke spanningen in Oost-Europa steunen defensive havens maar drukken risicoactiva.",
+  "whale_flows": "Large accumulation-signalen ontbreken ondanks Bitcoin's volumineus handelsverkeer ($46.19B); dit duidt op horizontale verdeling tussen long en short posities. Ethereum's grotere dagverlies (-2.21%) weerspiegelt schwakke deriffen-inflows en minder institutionele steun dan bitcoin.",
+  "funding_oi": "Futures-funding rates blijven neutraal met kleine positieve premies, wat overeenkomt met conservatief handelsclimaatsentiment. Open interest verschuift geleidelijk naar stabielere instrumenten, wat toekomstige volatiliteitsdaling suggereert.",
+  "volatility_outlook": "Impliciete volatiliteit zal waarschijnlijk tot maandag verhoogd blijven gegeven macro-onzekerheden. Verwacht bewegingen tussen $69,000–$71,500 voor Bitcoin en $2,080–$2,210 voor Ethereum zonder duidelijke directionale catalysatoren.",
+  "full_report": "De cryptocurrencymarkt toont voorzichtig neerwaarts momentum op vrijdag 20 maart 2026, met Bitcoin op $70,454 (-0.95%) en Ethereum op $2,149.72 (-2.21%). Secundaire altcoins zoals XRP ($1.46), BNB ($641.99) en SOL ($89.51) volgen het patroon van lichte correcties (-0.36% tot -1.37%). Het totale handelsvolume blijft substantieel ($46.19B voor Bitcoin, $24.08B voor Ethereum) maar ontbreekt uitsluitend van bullish volume-profielen. Macro-omstandigheden rond Fed-beleidsverwachtingen en geopolitieke risico's beperken risicobereidheid, terwijl derivaten-funding rates neutraal blijven. Volatiliteit naar volgende week geacht te stijgen; technische steun voor Bitcoin ligt rond $69,000 en voor Ethereum rond $2,080."
 }
