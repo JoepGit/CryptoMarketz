@@ -1,18 +1,18 @@
 {
   "date": "2026-03-20",
-  "focus": "Extreme Fear-index daalt verder naar 11 terwijl Bitcoin onder druk blijft door renteverhogingsverwachtingen en obligatiemarkten.",
-  "risk": "Extreme Fear, liquidatierisico stijgend",
-  "btc_structure": "Bitcoin noteert op $69.919, met een dagelijkse daling van 0.88% en weekelijkse verlies van 1.62%. Technisch onder druk met analisten die $60K als kritiek supportniveau markeren na renteverhogingsbets en obligatiecrisis.",
-  "eth_flows": "Ethereum daalt naar $2.126,20 (\u22121,25% 24h) terwijl taker-volume een 3-jaar hoogtepunt bereikt. Dit signaal suggereert aggressive selling-druk ondanks potentieel verdere neerwaartse beweging.",
+  "focus": "Extreme Fear (11) drukt markt omlaag terwijl beleidsmatig momentum (Crypto Clarity Act) potentieel steun biedt.",
+  "risk": "D\u00e9fensief. Liquidatieduk. Rate-hike vrees.",
+  "btc_structure": "Bitcoin staat op $69.856 met minimale uurwinst (+0.30%) maar erosie over 24h (-0.64%) en week (-1.71%). Analisten flaggen $60K als cruciaal steunniveau in verdere neergaande scenario's.",
+  "eth_flows": "Ethereum noteert $2.124,59 met zwakheid over alle timeframes (24h -0.95%, week +1.16%). Ether taker volume bereikt 3-jaar high, wat liquiditeitsvolatiliteit suggereert ondanks technisch zwakke setup.",
   "top_narratives": [
-    "Renteverhoging-sentiment voedt Bitcoin-angst en obligatiemarktkrach",
-    "Wall Street domineert crypto-tech: Nasdaq krijgt SEC-goedkeuring voor aandelen on-chain",
-    "Institutionele vooruitgang: Ledger-IPO-push en Circle-CFO-aanstelling tonen volwassening",
-    "Extreme Fear-index bereikt dieptepunt op 11; liquidatierisico kritiek"
+    "Crypto Clarity Act bouwt regelgevingsgoedkeuring op, positief sentiment contrast tegen fear index",
+    "Obligatiemarkten verzwakken; renteverhogingsverwachtingen drukken risicoactiva inclusief crypto",
+    "Wall Street-adoptie versnelt (Nasdaq SEC-goedkeuring voor aandelen on-chain)",
+    "Extreme Fear Index (11) bereikt vrijwel historische bodems, potentieel contrarian bullish signaal"
   ],
-  "macro_impact": "Renteverhogingsverwachtingen en turbulentie in obligatiemarkten veroorzaken vlucht uit risicovolle activa. Wall Street's groeiende crypto-integratie (Nasdaq on-chain aandelen) biedt structurele steun maar kan niet tegen macro-tegenwind opwegen. Federal monetair beleid blijft dominante x-factor.",
-  "whale_flows": "Liquidatiedata ontbreken, maar extreme Fear-index (11) en ETH taker-volume-spike (3-jaar hoog) duiden op aggressive positionering-afbouw. Volume-verdeling BTC $39.21B naar ETH $16.98B suggereert kapitaalverschuiving naar defensievere assets.",
-  "funding_oi": "Funding rates en Open Interest data niet beschikbaar; echter extreme Fear-sentiment (11) implies negatieve risk sentiment met waarschijnlijke short-bias onder traders. Volg dit nauw\u2014liquidatiecascades mogelijk bij verder rendement-stijgingen.",
-  "volatility_outlook": "Fear & Greed-index (11) en aanhoudende macro-headwinds duiden op verhoogde volatiliteit-voorverwachting. Verdere $60K-test waarschijnlijk; liquidaties kunnen explosief zijn bij doorbraak onder kritieke support.",
-  "full_report": "Markten handelen in Extreme Fear (index 11, \u221212 vs. gisteren) onder druk van renteverhogingsverwachtingen en obligatiecrisis. Bitcoin ($69.919, \u22120.88% 24h) en Ethereum ($2.126,20, \u22121,25%) verliezen terwijl ETH taker-volume 3-jaar hoogtepunt bereikt\u2014teken van intensieve verkoop. Totale marktcap daalt naar $2.48T (\u22120,49%); BTC dominantie stabiliseert op 56,4%. Wall Street's crypto-integratie (Nasdaq on-chain approval) biedt lange-termijn fundamentals maar kan huidige macro-turbulentie niet opvangen. Analisten flaggen $60K Bitcoin als cruciaal defensief niveau; liquidatierisico kritiek gegeven Fear-extremen."
+  "macro_impact": "Renteverhogingsbets rijzen en obligatiemarkten instorten, wat klassieke vluchtgeld-rotatie aandrijft weg van crypto. Tegelijkertijd accelereert institutionele adoptie via regelgevingsklaring en Wall Street infrastructure, wat toekomstige vraagkant steunt ondanks huidige angst.",
+  "whale_flows": "Liquidatiedata niet beschikbaar, maar 24h volume ($92B totaal, BTC $39.44B) suggereert gedistribueerde positiebouw. ADA (-1.96% 24h) en DOT (-2.08%) vertonen sterkste liquidatieduk onder alt-seasons.",
+  "funding_oi": "Funding rate en Open Interest data zijn niet beschikbaar voor analyse vandaag. Zonder deze signalen blijft leverage- en positioneringssentiment deels verborgen, hoewel Extreme Fear aan negatief sentiment-bias wijst.",
+  "volatility_outlook": "Extreme Fear Index daling (11 van gisteren 23) suggereert zich stellend moment dicht bij paniekbodems. Verdere daling richting $60K BTC zou massale liquidaties kunnen triggeren, waarna mean-reversion volatility explodeert omhoog.",
+  "full_report": "Op 2026-03-20 kampt crypto met defensieve posturing: BTC $69.856 (-0.64% 24h, -1.71% week), ETH $2.124,59 (-0.95% 24h, +1.16% week), totale cap $2.48T (-0.47% 24h). Fear & Greed Index staat op Extreme Fear (11), dalend van gisteren (23), wat bottoming-signalen aangeeft ondanks aanhoudende macro-koppelingen aan renteverhoging en obligatiecrisis. Regelgevingswinsten (Crypto Clarity Act, Nasdaq on-chain stocks) contrasteren scherp tegen technische zwakte, wat strategische accumulation-kansen kan opleveren voor risicotolerante beleggers. BTC dominantie 56.4%, ETH 10.4%."
 }
