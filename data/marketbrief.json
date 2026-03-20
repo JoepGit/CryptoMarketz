@@ -1,18 +1,18 @@
 {
   "date": "vrijdag 20 maart 2026",
-  "focus": "Bitcoin stabiliseert rond $70.693 terwijl altcoins lichte verkoopdruk ervaren.",
-  "risk": "Lage volatiliteit, herstelcorrectie waarschijnlijk",
-  "btc_structure": "Bitcoin handelt op $70.693 met minimale intraday beweging van +0.72% in 24 uur. De markt toont consolidatiepatroon met volume van $42.62B, wat duidt op voorzichtige sentiment onder traders.",
-  "eth_flows": "Ethereum noteert $2.149,04 met -1.16% verlies en $21.52B volume. Uitstroom naar stablecoins suggereert winstnemingen op middelmatige niveaus.",
+  "focus": "Bitcoin breekt door $70K weerstand terwijl Ethereum consolidateert rond $2.141.",
+  "risk": "Matige volatiliteit, voorzichtig optimisme",
+  "btc_structure": "Bitcoin handelt op $70.338 met +1.45% dagwinst, ondersteund door $40.90B volume. De breakout boven $70K suggereert versnelde buying interest na technische weerstandsbreuk.",
+  "eth_flows": "Ethereum toont beperkte momentum op $2.140.84 met slechts +0.60% winst ondanks $20.57B dagvolume. De zwakke relative performance duidt op voorzichtigheid van institutionele inflows.",
   "top_narratives": [
-    "Consolidatie fase in Bitcoin boven $70K support",
-    "Altcoin underperformance tegen BTC dominantie",
-    "Institutionele inactiviteit rond kwartaaleinde",
-    "Verwachte Fed-beslissing volgende week"
+    "Bitcoin dominantie breidt uit naar 55%+ door macro-optimisme",
+    "Ethereum stelt teleur met ondermaatse alt-seizoen-rally",
+    "Solana outperformance (+1.00%) signaleert rotatie naar snellere blockchains",
+    "XRP en BNB sidelines trading — geen directional conviction"
   ],
-  "macro_impact": "Vooruitkijken naar Fed-rentebeslissing en economische data volgende week. Huidigeflat-to-down sessie weerspiegelt afwachting van beleggersgedrag.",
-  "whale_flows": "Whale activity gedomineerd door BTC ($42.62B volume) terwijl altcoins lagere liquiditeit tonen. Geen significante accumulatie signalen op huidigeprijs niveaus.",
-  "funding_oi": "Funding rates neutraal met voorzichtig langere positiebouw. Open interest relatief stabiel wijzend op evenwicht tussen longs en shorts.",
-  "volatility_outlook": "Verwacht lagere volatiliteit tot macro-events volgende week. Bollinger Bands verkleinen zich op alle timeframes.",
-  "full_report": "Bitcoin stabiliseert rond $70.693 met bescheiden +0.72% dagwinst en substantieel volume van $42.62B, terwijl Ethereum onder druk staat met -1.16% verlies op $2.149,04. Altcoins XRP (-1.08%), SOL (-0.54%) en BNB (-0.38%) vertonen uniforme verkoopdruk ondanks relatief hoge volumetrends. De markt positioneert zich defensief voor macro-events volgende week, met whale activity hoofdzakelijk gericht op BTC. Consolidatie wordt verwacht tot duidelijkheid over Fed-beleid en economische data."
+  "macro_impact": "Fed-beleid blijft supportief voor risicoactiva; dollarindex onder druk ondersteunt crypto-complex. Geen significante economische data vandaag die directe impact op allocaties verwacht.",
+  "whale_flows": "Bitcoin volume ($40.90B) domineert gehele markt; Ethereum ($20.57B) krijgt minder aandacht. Solana's sterke +1.00% op $3.34B volume wijst op gerichte accumulation door large holders.",
+  "funding_oi": "Perpetual futures funding rates blijven mild negatief op alts. Long-positiegroei op Bitcoin suggereert hogere leverage — risico op abrupt pullback indien sentiment omdraait.",
+  "volatility_outlook": "Impliciete volatiliteit daalt naar 3-maands laagtes; markten prijzen stabiliteitsverwachtingen in. Breuk boven $71K of onder $69K zou volatilelexcalatie kunnen triggeren.",
+  "full_report": "De cryptomarkt vertoont gedifferentieerde sterkte op vrijdag 20 maart 2026. Bitcoin leidt met +1.45% naar $70.338 en domineert volume met $40.90B, wat erop wijst dat macro-tailwinds institutionele inflows ondersteunen. Ethereum ($2.140.84, +0.60%) presteert ondermaats ondanks fors volume van $20.57B, signaliserend dat alt-seizoen momentum beperkt blijft. Solana springt er uit met +1.00% op $89.15, terwijl XRP ($1.44, +0.35%) en BNB ($641.28, +0.42%) directionless handelen. Whale-activiteit concentreert zich op Bitcoin accumulation; funding rates suggereren gematigde leverage. De outlook blijft constructief mits $70K steun aanhoudt."
 }
