@@ -1,18 +1,18 @@
 {
   "date": "vrijdag 20 maart 2026",
-  "focus": "Crypto markt vertoont stabiliteit met Bitcoin rond $70.709 terwijlaltcoins gemengde signalen afgeven.",
-  "risk": "Lage volatiliteit, macro afhankelijk",
-  "btc_structure": "Bitcoin handelt op $70.709 met bescheiden upside van 0,44% in 24 uur en robuust volume van $39,72B. De technische setup suggereert consolidatie rond deze ondersteuning met beperkte directionale bias.",
-  "eth_flows": "Ethereum beweegt voorzichtig op $2.156,52 met minimale dagwinst van 0,24% en volume van $17,15B. De onderperformance ten opzichte van Bitcoin duidt op voorzichtigheid van instituten in het alt-season.",
+  "focus": "Gedempte marktbewegingen wijzen op voorzichtige positieopbouw voor paasweekend.",
+  "risk": "Lage volatiliteit, liquiditeitsdunning",
+  "btc_structure": "Bitcoin handelt stabiel rond $70,476 met bescheiden +0.48% winst in 24 uur en $39.38B volume. De weerstand blijft intact boven $71,000, terwijl support zich bevindt rond $69,500.",
+  "eth_flows": "Ethereum vertoont zeer gelimiteerde dynamiek op $2,146.43 met slechts +0.22% dagwinst en $17.05B handelsvolume. Institutionele inflows blijven voorzichtig door macro onzekerheid.",
   "top_narratives": [
-    "Consolidatie fase na recente rally",
-    "Macro data verwachtingen volgende week",
-    "Ethereum stablecoin adoption",
-    "Solana momentum behoud boven $90"
+    "Paasweekend-liquiditeitsdip",
+    "Macro geopolitieke spanningen",
+    "Trage institutionele accumulatie",
+    "Altcoin underperformance relative to BTC"
   ],
-  "macro_impact": "Markt wacht op FED communication volgende week die cruciaal is voor risico-assets. De huidige vlakheid duidt op voorzichtige positioning voorafgaand aan mogelijk volatiliteit.",
-  "whale_flows": "Totaal volume van $62,72B gedomineerd door Bitcoin en Ethereum, Solana toont relatieve sterkte met 0,98% winst. Institutionele buyers lijken gereserveerd gegeven de macro onzekerheden.",
-  "funding_oi": "Funding rates liggen laag wat neutraliteit suggereert tussen long en short posities. Verwachting is dat leverage tot midweeks gering blijft tenzij duidelijkheid ontstaat over beleid.",
-  "volatility_outlook": "ATR contractie wijst op lage verwachte volatiliteit komend weekend. Risico op plotselinge moves neemt toe richting maandag als macro catalysts opdagen.",
-  "full_report": "De cryptomarkt vertoont voorzichtigheid op vrijdag met Bitcoin stabiel op $70.709 (0,44% winst, $39,72B volume) en Ethereum stagnererend op $2.156,52 (0,24% winst, $17,15B volume). XRP daalt licht met -0,39% naar $1,45 terwijl Solana de enige sterke performer is met 0,98% winst tot $89,95. Institutionele aktiviteit is gedempd met totaal volume van $62,72B, wat aangeeft dat marktdeelnemers wachten op volgende week's macro catalysts. De consolidatiefase zal waarschijnlijk aanhouden totdat FED-communicatie meer duidelijkheid brengt over monetaire beleid richting Q2 2026."
+  "macro_impact": "Afwachting rond rentebeslissingen blijft volatiliteit temperen. Geopolitieke risico's beperken risicoappetijt naar het weekeinde toe.",
+  "whale_flows": "Volume concentreert zich in BTC ($39.38B) en ETH ($17.05B), terwijl altcoins zwak presteren. SOL toont relatieve sterkte met +1.07%, suggererend selective risk-on attitude.",
+  "funding_oi": "Funding rates dalen naar neutraal territorium. Open Interest verwacht licht te dalen voordat mogelijke weekend volatiliteit toeneemt.",
+  "volatility_outlook": "Sub-1% range movement verwacht door lagere marktdeelname. Breakouts onwaarschijnlijk tot volgende week herneming van macro catalysts.",
+  "full_report": "De cryptomarkt handelt in narrow range met Bitcoin stabiel op $70,476 (+0.48%) en Ethereum op $2,146.43 (+0.22%), beiden met gezonde handelsvolumes van respectievelijk $39.38B en $17.05B. Altcoins vertonen gemengd beeld: SOL stijgt +1.07% naar $89.95, XRP daalt -0.33% naar $1.44, BNB stijgt +0.35% naar $642.2. De lage volatiliteit reflecteert paasweekend-liquiditeitsdunning en voorzichtigheid rond macro onzekerheden. Institutionele flows blijven gedempd, beperkend opgaande momentum. Traders positioneren zich defensief voor het weekeinde."
 }
