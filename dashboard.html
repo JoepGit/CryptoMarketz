@@ -708,7 +708,7 @@ body{font-family:'Inter',sans-serif;background:#0d0d0d;color:var(--cream);overfl
 .brief-top-kicker{font-family:'Inter',sans-serif;font-size:14px;font-weight:700;letter-spacing:.08em;color:var(--accent);text-transform:uppercase}
 .brief-top-sub{font-size:15px;color:var(--sub);margin-top:2px}
 .brief-updated{font-family:'Inter',sans-serif;font-size:15px;color:var(--sub);letter-spacing:.02em;text-transform:uppercase;white-space:nowrap}
-.brief-layout{display:grid;grid-template-columns:300px minmax(0,1fr) 290px;gap:0;background:rgba(12,10,14,.9);border:1px solid var(--bdr);border-radius:20px;overflow:hidden;min-height:720px}
+.brief-layout{display:grid;grid-template-columns:260px minmax(0,1fr);gap:0;background:rgba(12,10,14,.9);border:1px solid var(--bdr);border-radius:20px;overflow:hidden;min-height:720px}
 .brief-sidebar{border-right:1px solid rgba(0,85,255,.08);display:flex;flex-direction:column;background:rgba(10,8,12,.72)}
 .brief-side-head{padding:18px 18px 14px;border-bottom:1px solid rgba(0,85,255,.08)}
 .brief-side-label{font-family:'Inter',sans-serif;font-size:15px;letter-spacing:.04em;color:rgba(138,128,120,.55);text-transform:uppercase}
@@ -741,6 +741,12 @@ body{font-family:'Inter',sans-serif;background:#0d0d0d;color:var(--cream);overfl
 .brief-mini{padding:12px;border-radius:12px;border:1px solid rgba(0,85,255,.1);background:rgba(17,15,19,.5)}
 .brief-mini-label{font-family:'Inter',sans-serif;font-size:15px;color:var(--sub);letter-spacing:.02em;text-transform:uppercase;margin-bottom:6px}
 .brief-mini-copy{font-size:15px;color:var(--cream);line-height:1.6}
+/* ── BRIEF RIGHT SIDEBAR REDESIGN ── */
+.brief-right{display:flex;flex-direction:column;gap:10px;padding:18px;border-left:1px solid rgba(0,85,255,.08);background:rgba(10,8,12,.6);overflow-y:auto}
+.brief-quick-card{padding:14px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.03)}
+.brief-quick-label{font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(0,85,255,.55);margin-bottom:7px}
+.brief-quick-value{font-family:'Inter',sans-serif;font-size:18px;font-weight:700;color:var(--cream);letter-spacing:-.01em}
+.brief-quick-body{font-size:12px;color:#9aa3b0;line-height:1.65}
 .brief-report-date{color:var(--cream)}
 @media(max-width:1180px){.brief-layout{grid-template-columns:270px minmax(0,1fr)}.brief-right{grid-column:1/-1;border-left:none;border-top:1px solid rgba(0,85,255,.08);display:grid;grid-template-columns:repeat(3,1fr)}.brief-mini-grid{grid-column:1/-1}}
 @media(max-width:900px){.brief-layout{grid-template-columns:1fr}.brief-sidebar{border-right:none;border-bottom:1px solid rgba(0,85,255,.08)}.brief-side-list{display:grid;grid-template-columns:1fr 1fr}.brief-right{grid-template-columns:1fr}.brief-main{padding:26px 22px 28px}}
@@ -2760,26 +2766,16 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
             </section>
           </main>
 
-          <aside class="brief-right">
-            <div class="brief-stat">
-              <div class="brief-stat-label">Report date</div>
-              <div id="brief-report-date" class="brief-stat-value brief-report-date">--</div>
-            </div>
-            <div class="brief-stat">
-              <div class="brief-stat-label">Primary focus</div>
-              <div id="brief-focus" class="brief-stat-copy">loading...</div>
-            </div>
-            <div class="brief-stat">
-              <div class="brief-stat-label">Risk regime</div>
-              <div id="brief-risk" class="brief-stat-copy">loading...</div>
-            </div>
-            <div class="brief-mini-grid">
-              <div class="brief-mini"><div class="brief-mini-label">BTC structure</div><div id="brief-btc" class="brief-mini-copy">loading...</div></div>
-              <div class="brief-mini"><div class="brief-mini-label">ETH flows</div><div id="brief-eth" class="brief-mini-copy">loading...</div></div>
-              <div class="brief-mini"><div class="brief-mini-label">Funding + OI</div><div id="brief-funding" class="brief-mini-copy">loading...</div></div>
-              <div class="brief-mini"><div class="brief-mini-label">Volatility outlook</div><div id="brief-volatility" class="brief-mini-copy">loading...</div></div>
-            </div>
-          </aside>
+          <!-- hidden data placeholders for JS compatibility -->
+          <div style="display:none">
+            <div id="brief-report-date"></div>
+            <div id="brief-risk"></div>
+            <div id="brief-focus"></div>
+            <div id="brief-btc"></div>
+            <div id="brief-eth"></div>
+            <div id="brief-volatility"></div>
+            <div id="brief-funding"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -4513,28 +4509,59 @@ async function loadMarketBrief(){
 
     set('brief-date', data.date ? `Updated ${data.date}` : 'Updated --');
     set('brief-report-date', data.date || '--');
-    set('brief-btc', truncate(btc, 180));
-    set('brief-eth', truncate(eth, 180));
-    set('brief-funding', truncate(funding, 180));
-    set('brief-volatility', truncate(volatility, 180));
+
+    // Full content — no truncation in the brief sections
+    set('brief-btc', btc || 'No BTC data available.');
+    set('brief-eth', eth || 'No ETH data available.');
+    set('brief-funding', funding || 'No funding data available.');
+    set('brief-volatility', volatility || 'No volatility data available.');
     set('brief-narrative', narratives || 'No narrative data available.');
     set('brief-macro', macro || 'No macro data available.');
     set('brief-whales', whales || 'No whale flow data available.');
     set('brief-risk', risk || 'No risk regime loaded.');
     set('brief-focus', focus || 'No focus loaded.');
-    set('brief-summary', fullReport || 'market brief unavailable');
-    set('brief-market-structure-copy', compact(btc && ('BTC structure\n' + btc), eth && ('ETH flows\n' + eth)) || 'No market structure data available.');
-    set('brief-liquidity-copy', compact(funding && ('Funding + OI\n' + funding), volatility && ('Volatility outlook\n' + volatility)) || 'No liquidity data available.');
-    set('brief-risk-focus-copy', compact(risk && ('Risk regime\n' + risk), focus && ('Primary focus\n' + focus)) || 'No risk context available.');
+
+    // Overview: build a rich combined summary
+    const overviewParts = [];
+    if(fullReport) overviewParts.push(fullReport);
+    else {
+      if(btc) overviewParts.push('BTC\n' + btc);
+      if(eth) overviewParts.push('ETH\n' + eth);
+      if(macro) overviewParts.push('Macro\n' + macro);
+      if(whales) overviewParts.push('Whale activity\n' + whales);
+      if(funding) overviewParts.push('Funding & OI\n' + funding);
+      if(volatility) overviewParts.push('Volatility\n' + volatility);
+    }
+    set('brief-summary', overviewParts.join('\n\n') || 'Market brief unavailable.');
+
+    // Market structure: full BTC + ETH
+    set('brief-market-structure-copy', compact(
+      btc && ('BTC Structure\n' + btc),
+      eth && ('ETH Flows\n' + eth)
+    ) || 'No market structure data available.');
+
+    // Liquidity: full funding + volatility
+    set('brief-liquidity-copy', compact(
+      funding && ('Funding & OI\n' + funding),
+      volatility && ('Volatility Outlook\n' + volatility)
+    ) || 'No liquidity data available.');
+
+    // Risk & focus: full content
+    set('brief-risk-focus-copy', compact(
+      risk && ('Risk Regime\n' + risk),
+      focus && ('Primary Focus\n' + focus)
+    ) || 'No risk context available.');
+
     set('brief-focus-pill', focus ? `focus ${truncate(focus, 52)}` : 'focus loading');
     set('brief-risk-pill', risk ? `risk ${truncate(risk, 52)}` : 'risk loading');
 
+    // Dashboard card preview (short is fine here)
     set('dash-brief-title', data.date ? `AI Market Report · ${data.date}` : 'AI Market Report');
     set('dash-brief-sub', focus || 'Your daily AI market report appears here every morning.');
     set('dash-brief-time', data.date ? `report ${data.date}` : '08:00 daily update');
     set('dash-brief-risk', risk ? `risk ${truncate(risk, 42)}` : 'risk loading');
     set('dash-brief-focus', focus ? `focus ${truncate(focus, 42)}` : 'focus loading');
-    set('dash-brief-copy', truncate(fullReport || compact(btc, eth, funding, volatility, whales, macro), 520));
+    set('dash-brief-copy', truncate(fullReport || compact(btc, eth), 380));
 
     const firstNarrative = Array.isArray(data.top_narratives || data.narratives || data.narrative)
       ? (data.top_narratives || data.narratives || data.narrative)[0]
