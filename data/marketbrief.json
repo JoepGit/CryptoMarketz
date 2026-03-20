@@ -1,18 +1,18 @@
 {
   "date": "vrijdag 20 maart 2026",
-  "focus": "Voorzichtige markt na lichte correcties; BTC houdt steun rond $70.5K terwijl ETH onder druk staat.",
-  "risk": "Gemiddeld risico, voorzichtige stemming",
-  "btc_structure": "Bitcoin noteert op $70,589 met een bescheiden daling van -0.24% in 24 uur. Het handelvolume bedraagt $44.92B, wat suggereert dat grote posities voorzichtig blijven. De steun rond dit niveau blijft cruciaal voor verdere stabilisatie.",
-  "eth_flows": "Ethereum staat onder meer druk met $2,140.38 en een verlies van -2.39% in 24 uur. Het volume van $22.28B duidt op actievere afwikkeling, mogelijk door institutionele posities die worden gereduceerd.",
+  "focus": "Voorzichtige marktkorrekties domineren na zwakke macro-signalen en afnemende institutionele inflows.",
+  "risk": "Matig bearish, lichte liquidatie druk",
+  "btc_structure": "Bitcoin handelt op $70,660 met een minimale verlies van -0.24% in 24h, wat wijst op ondersteuning rond deze prijsniveaus. Het volume van $45.13B blijft robuust, maar de lage volatiliteit suggereert twijfel onder grote houders voorafgaand aan volgende macro-events.",
+  "eth_flows": "Ethereum onderperformt relatief met een daling van -2.16% naar $2,143.26, terwijl het volume op $23.59B wijst op selectieve sell-offs in altcoin-portefeuilles. Dit duidt op rotatie van ethereum naar bitcoin als defensieve positie.",
   "top_narratives": [
-    "Macro-onzekerheid blijft volatiliteit drukken",
-    "Institutionele accumulatie pauzeert bij weerstand",
-    "Alt-seizoen vertraagt; dominantie BTC stabiel",
-    "Regulatoire ontwikkelingen in VS en EU beïnvloeden sentiment"
+    "Macro-onzekerheid ondermijnt risicoappetijt",
+    "BTC vs ALT re-balancing in defensieve modus",
+    "Institutionele inflows stabiliseren BTC onderaan",
+    "Ethereum liquiditeitsdruk in zijwaartse range"
   ],
-  "macro_impact": "Wereldwijde renteverwachtingen en inflatiebezorgdheden blijven beperkend werken op risicoactiva. Geopolitieke spanningen voorkomen volledig herstel tot hoger niveaus.",
-  "whale_flows": "Het totale volume van $74.29B duidt op voorzichtigheid van grotere spelers. BTC-dominantie bij $44.92B volume suggereert dat whales zich concentreren op het majeur instrument.",
-  "funding_oi": "Funding rates stabiliseren; long-positie-overdracht is beperkt. Open Interest lijkt in evenwicht, wat duidt op afwachting voor volgende macro-trigger.",
-  "volatility_outlook": "Verwacht lagere volatiliteit in komende 24-48 uur. Breakout-potentieel beperkt zolang macro-catalysatoren uitblijven.",
-  "full_report": "De cryptomarkt toont voorzichtige trend met Bitcoin aan $70,589 (-0.24%) en Ethereum aan $2,140.38 (-2.39%). Het gecombineerde volume van $74.29B geeft aan dat institutionele spelers terughoudend zijn. Andere tokens zoals XRP ($1.45, -1.32%), BNB ($641.99, -1.02%) en SOL ($88.89, -1.13%) volgen het algemene sentiment van risicoreductie. Macro-onzekerheid en geopolitieke factoren blijven de belangrijkste risico's. Analytici adviseren afwachting tot duidelijker signalen ontstaan."
+  "macro_impact": "Globale renteverwachtingen en geopolitieke spanningen drukken op risicoactiva; crypto volgt traditionele markten in voorzichtige houding. Beleggerstoevlucht naar haven-assets werkt matig ondersteunend voor BTC.",
+  "whale_flows": "Totaal volume van $75.69B geconcentreerd in BTC/ETH; dalende midcap-volumes (XRP $2.38B, SOL $3.51B) wijzen op winnowing in speculatieve posities. On-chain data suggest accumulatie rond $70k voor BTC.",
+  "funding_oi": "Funding rates dalen voorzichtig; short interest groeit marginaal wat modest bearish sentiment aangeeft. Long-positie-hefboom blijft beperkt bij afwezigheid van bullish catalysts deze week.",
+  "volatility_outlook": "IV blijft gecomprimeerd onder 30% IV-rank; verwacht uitbraak naar 40-50% IV bij doorbraak boven $71.5k of onder $69.5k. Weekend carry-overs kunnen volatiliteit vergroten.",
+  "full_report": "De cryptomarkten vertonen voorzichtige schwakheid op vrijdag 20 maart 2026 met BTC stabiel op $70,660 (-0.24%) en ETH zwakker op $2,143.26 (-2.16%). Het totale handelsvolume van $75.69B ondersteunt een geordende correctie zonder paniek. Altcoins verliezen terrein: XRP -0.60%, BNB -0.86%, SOL -0.47%, wat wijst op rotatie naar Bitcoin als defensieve positie. Macro-onzekerheid blijft de dominante drijfveer; beleggers wachten op volgende economische signalen. On-chain accumulatie rond BTC $70k suggereert institutionele buy-the-dip activiteit, maar volume in midcaps duidt op vervaging van speculatieve posities."
 }
