@@ -1,18 +1,18 @@
 {
   "date": "vrijdag 20 maart 2026",
-  "focus": "Bitcoin en Ethereum stabiliseren rond key levels terwijl altcoins differentieel presteren.",
-  "risk": "Lage volatiliteit, geen directe triggers",
-  "btc_structure": "Bitcoin handelt vlak op $70,477 met een minimale 24h-daling van -0.11%, wat duidt op consolidatie rond deze steunzone. Het volume van $38.20B blijft robuust ondanks de laterale beweging.",
-  "eth_flows": "Ethereum toont relatieve sterkte met +0.14% winst op $2,150.32, terwijl het volume van $17.70B aanzienlijk blijft. Dit suggereert voorzichtig institutioneel herstelinteresse.",
+  "focus": "Crypto markt vertoont stabiliteit met Bitcoin rond $70.709 terwijlaltcoins gemengde signalen afgeven.",
+  "risk": "Lage volatiliteit, macro afhankelijk",
+  "btc_structure": "Bitcoin handelt op $70.709 met bescheiden upside van 0,44% in 24 uur en robuust volume van $39,72B. De technische setup suggereert consolidatie rond deze ondersteuning met beperkte directionale bias.",
+  "eth_flows": "Ethereum beweegt voorzichtig op $2.156,52 met minimale dagwinst van 0,24% en volume van $17,15B. De onderperformance ten opzichte van Bitcoin duidt op voorzichtigheid van instituten in het alt-season.",
   "top_narratives": [
-    "Macro-gecontroleerde risico-sentiment",
-    "Altcoin-differentiatie en herbalancing",
-    "Institutionele accumulatiefase",
-    "Verwachte Fed-beleidsstabiliteit"
+    "Consolidatie fase na recente rally",
+    "Macro data verwachtingen volgende week",
+    "Ethereum stablecoin adoption",
+    "Solana momentum behoud boven $90"
   ],
-  "macro_impact": "Geopolitieke onzekerheden blijven aanwezig maar zijn niet direct in de prijsactie weerspiegeld. Markten wachten op volgende Fed-signalen voor richting.",
-  "whale_flows": "Mega-volumes op BTC en ETH duiden op grijze walvissen die posities evalueren. XRP en BNB zien verdunning met lagere volumes respectievelijk $1.88B en $0.98B.",
-  "funding_oi": "Langzame opbouw van funding rates verwacht bij BTC en ETH gezien hun stabiliteit. Longs voorzichtig gefinancierd zonder grote leverage.",
-  "volatility_outlook": "ATR-niveaus wijzen op verdere contractie. Volatiliteit zal waarschijnlijk onder 1.5% per uur blijven tot volgende macro-triggers.",
-  "full_report": "CryptoMarketz rapporteert een opvallend vlakke sessie op vrijdag 20 maart 2026. Bitcoin consolidateert op $70,477 (-0.11%) met massaal volume van $38.20B, Ethereum toont milde outperformance op $2,150.32 (+0.14%) en $17.70B volume, terwijl altcoins divergeren: SOL stijgt 0.66% naar $89.64, XRP daalt -0.67% naar $1.44, en BNB verzwakt -0.11% naar $642.02. Institutionele marktdeelnemers lijken geduldig te wachten op macro-triggers, wat resulteert in gedempte volatiliteit en voorzichtige positioning. Geen directe risico's waargenomen; de markt behoudt zijn neutrale stance."
+  "macro_impact": "Markt wacht op FED communication volgende week die cruciaal is voor risico-assets. De huidige vlakheid duidt op voorzichtige positioning voorafgaand aan mogelijk volatiliteit.",
+  "whale_flows": "Totaal volume van $62,72B gedomineerd door Bitcoin en Ethereum, Solana toont relatieve sterkte met 0,98% winst. Institutionele buyers lijken gereserveerd gegeven de macro onzekerheden.",
+  "funding_oi": "Funding rates liggen laag wat neutraliteit suggereert tussen long en short posities. Verwachting is dat leverage tot midweeks gering blijft tenzij duidelijkheid ontstaat over beleid.",
+  "volatility_outlook": "ATR contractie wijst op lage verwachte volatiliteit komend weekend. Risico op plotselinge moves neemt toe richting maandag als macro catalysts opdagen.",
+  "full_report": "De cryptomarkt vertoont voorzichtigheid op vrijdag met Bitcoin stabiel op $70.709 (0,44% winst, $39,72B volume) en Ethereum stagnererend op $2.156,52 (0,24% winst, $17,15B volume). XRP daalt licht met -0,39% naar $1,45 terwijl Solana de enige sterke performer is met 0,98% winst tot $89,95. Institutionele aktiviteit is gedempd met totaal volume van $62,72B, wat aangeeft dat marktdeelnemers wachten op volgende week's macro catalysts. De consolidatiefase zal waarschijnlijk aanhouden totdat FED-communicatie meer duidelijkheid brengt over monetaire beleid richting Q2 2026."
 }
