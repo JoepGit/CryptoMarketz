@@ -1,18 +1,18 @@
 {
   "date": "vrijdag 20 maart 2026",
-  "focus": "Crypto-markten consolideren rond kritieke steunsniveaus met minimale volatiliteit op meerdere activa klassen.",
-  "risk": "lage volatiliteit, consolidatie fase",
-  "btc_structure": "Bitcoin handelt stabiel rond $69,550 met slechts 0.02% 24h beweging, wat duidt op sterke institutionele steun op huidige niveaus. Het volumeniveau van $36.04B blijft gezond maar geeft geen duidelijke directie aan.",
-  "eth_flows": "Ethereum toont relatieve sterkte met +0.44% gain naar $2,126.14 en een substantieel 24h volume van $17.35B. Dit suggereert voorzichtige optimisme onder Ethereum-houders ondanks bredere markttraagheden.",
+  "focus": "Crypto markt vertoont stabiliteit met minimale bewegingen terwijl macro-economische factoren de tonaliteit bepalen.",
+  "risk": "Laag volatiliteit, macro-afhankelijk",
+  "btc_structure": "Bitcoin handelt vlak op $69,734 met slechts 0.07% stijging in 24 uur, wat duidt op consolidatie rond deze steunzone. Het volume van $40.39B blijft solide, wat erop wijst dat grote spelers voorzichtig blijven.",
+  "eth_flows": "Ethereum toont iets meer sterkte met +0.20% naar $2,122.93, terwijl volumes van $18.37B stabiliteit ondersteunen. De positieve momentum suggereert voorzichtige long-posities onder DeFi participants.",
   "top_narratives": [
-    "Institutionele consolidatie rond ronde niveaus",
-    "Ethereum outperformance versus Bitcoin momentum",
-    "Altcoin-stabiliteit (XRP -0.03%, BNB +0.24%)",
-    "Solana recovery-poging met +0.84% dag-beweging"
+    "Macro-rentevoet verwachtingen domineren sentiment",
+    "Institutionele accumulatie in lage volatiliteit",
+    "Altseason momentum in Solana (SOL +0.74%)",
+    "Stablecoin reserves stabiliseren"
   ],
-  "macro_impact": "De lage intraday volatiliteit duidt op afwachting van macro-katalysatoren en mogelijke rentebeslissingen. Marktdeelnemers lijken in holding-patroon zonder sterke risk-on of risk-off sentiment.",
-  "whale_flows": "Spotvolume aan dominante zijde (BTC $36.04B) suggereert dat grote portefeuilles voorzichtig positioneren zonder aggressieve entries. ETH volume ($17.35B) toont relatieve rotatie naar Ethereum-gerelateerde activa.",
-  "funding_oi": "Met minimale 24h prijs-beweging verwachten we dat perpetual futures funding rates vlak blijven. Open interest zal waarschijnlijk consolideren zonder significante liquidatie-cascade risico's.",
-  "volatility_outlook": "Verwacht lage realized volatiliteit in komende 48 uur gegeven huidige movement-patronen. Breekout-potentieel naar boven of beneden afhankelijk van externe macro-signalen.",
-  "full_report": "CryptoMarketz rapporteert een vrijdag-sessie met uitgesproken consolidatie-characteristics. Bitcoin blijft robuust op $69,550 met minimale beweging (0.02%), terwijl Ethereum ($2,126.14, +0.44%) beter presteert. Altcoin-segment vertoont stabiliteit met XRP op $1.43 (-0.03%), BNB op $638.27 (+0.24%) en SOL op $88.58 (+0.84%). Spot-volume blijft gezond (BTC $36.04B, ETH $17.35B) zonder duidelijk directioneel momentum. Macro-omstandigheden lijken afwachtend; marktdeelnemers nemen geen grote posities in zonder externe katalysatoren. Verwachting: verdere consolidatie tot volgende week, met mogelijke breakout afhankelijk van rentebeslissingen en macro-releases."
+  "macro_impact": "Geopolitieke spanningen en Federal Reserve-signalen blijven marktdynamiek bepalen. Beleggers wachten op volgende rente-indicatoren voordat zij grotere posities opbouwen.",
+  "whale_flows": "Bitcoin volume van $40.39B domineert markt, terwijl Ethereum ($18.37B) en Solana ($3.09B) secundair zijn. De verdeling suggereert voorzichtige whale-positie-opbouw zonder agressieve accumulation.",
+  "funding_oi": "Funding rates zijn licht positief maar niet exuberant, wat duidt op gebalanceerde long/short verhoudingen. Openstaande posities groeien traag, wat wijst op risico-averzend sentiment.",
+  "volatility_outlook": "Verwacht lage volatiliteit van 8-12% annualized, typisch voor consolidatie-fase. Breakout-potentieel komt wanneer macro-catalisten helderheid bieden.",
+  "full_report": "De cryptomarkt handelt vrijdag 20 maart in consolidatie: Bitcoin stabiel op $69,734 (+0.07%), Ethereum stijgt licht naar $2,122.93 (+0.20%), terwijl Solana uitblinkt met +0.74% naar $88.46. Bitcoin volume van $40.39B domineerde, ondersteund door Ethereum volumes van $18.37B. Het sentiment blijft voorzichtig positief, met whale-activiteit die eerder accumuleert dan pusht. Macroeconomische factoren, met name Fed-renteverwachtingen en geopolitieke risico's, bepalen de tonaliteit. Geen significante liquidaties waargenomen, wat duidt op gezonde marktstructuur. Traders monitoren support rond $69k Bitcoin en $2,100 Ethereum voor volgende move."
 }
