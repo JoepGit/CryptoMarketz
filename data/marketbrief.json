@@ -1,18 +1,18 @@
 {
   "date": "zaterdag 21 maart 2026",
-  "focus": "Bitcoin consolidateert rond $70.416 terwijl Solana momentum toont met +1.40% winst.",
-  "risk": "Laag volatiliteit, steady accumulation",
-  "btc_structure": "Bitcoin handelt op $70.416 met bescheiden +0.82% dagelijkse winst en $21.55B volume. De stabiliteit suggereert institutionele accumulatie in dit prijsbereik zonder significante directionale druk.",
-  "eth_flows": "Ethereum stijgt naar $2.151.95 met +1.32% dagwinst bij $8.07B handelsvolume. Dit outperformance ten opzichte van Bitcoin duidt op hernieuwde interesses in alt-season narratieven.",
+  "focus": "Crypto markt toont voorzichtig herstel na weeklong consolidatie, met Bitcoin en Ethereum beide in positief groen.",
+  "risk": "Laag-matig, lichte opwaartse bias",
+  "btc_structure": "Bitcoin noteert op $70,438 met een bescheiden winst van 0.69% in 24 uur, ondersteund door een dagelijks handelsvolume van $21.02B. De koers behoudt weerstand rond $71,000 terwijl support zich vormt in de $69,500-regio.",
+  "eth_flows": "Ethereum outperformt met een stijging van 1.14% naar $2,153.69, gedreven door institutioneel interesse en een handelsvolume van $8.15B. De tweede grootste altcoin toont relatieve sterkte ten opzichte van Bitcoin.",
   "top_narratives": [
-    "Ethereum outperformance op basis volumes",
-    "Solana momentum met +1.40%",
-    "Stabiele BTC consolidatie onder $71k",
-    "Weekend accumulatie in kleinere alts"
+    "Institutionele accumulation in Q1 2026",
+    "Ethereum DeFi recovery narratief",
+    "Altseason signalen in XRP en Solana",
+    "Halving-anticipatie in Bitcoin ecosystem"
   ],
-  "macro_impact": "Weekendhandel toont gedisciplineerde marktgedrag zonder externe shocks. De lage volatiliteit duidt op afwachting voor weekstartende macro-catalysatoren.",
-  "whale_flows": "Bitcoin volume van $21.55B en ETH van $8.07B wijzen op gestage whale accumulatie. SOL's $1.75B volume suggereert growth-fund repositionering naar alt-exposure.",
-  "funding_oi": "Verwacht neutrale tot licht positieve funding rates gegeven huidige prijsstabiliteit. Open interest waarschijnlijk stijgend bij consolidatie rond deze support levels.",
-  "volatility_outlook": "Verwacht weekendvolatiliteit onder 2% te blijven gegeven huidige prijsvaste structuur. Maandag kan richtinggevend zijn bij opening Amerikaanse markten.",
-  "full_report": "Cryptomarkten tonen gedisciplineerd gedrag op zaterdag 21 maart met Bitcoin vast op $70.416 (+0.82%) en $21.55B dagvolume. Ethereum outperformt op $2.151.95 (+1.32%, $8.07B volume) terwijl Solana stijgt naar $89.84 met +1.40% winst. XRP en BNB blijven stabiel rond $1.44 en $641.50 met lagere volumes van respectievelijk $0.99B en $0.57B. De markt bevindt zich in een lage-volatiliteits accumulatiefase zonder significante externe catalysatoren. Whale flows suggereren herbalancering naar altcoins na recente BTC-dominantie."
+  "macro_impact": "Wereldwijde rente-verwachtingen en inflatieuitzichten blijven de crypto-markt sturen; centrale bankbeleid in focus voor maandagstart.",
+  "whale_flows": "Het totale dagvolume van $32.52B suggereert gematigd interesse van grote spelers; accumulation in Ethereum ($8.15B vol) wijst op institutionele positiebouw.",
+  "funding_oi": "Funding rates stabiliseren in bullish territory; open interest blijft gezond zonder excessieve leverage, wat duidt op duurzame opwaartse druk.",
+  "volatility_outlook": "Volatiliteit verwacht rond 3-5% bandbreedte; weekend-consolidatie verwacht met mogelijke breakout maandag. Risk-reward ratio gunstig voor lange posities.",
+  "full_report": "De cryptocurrency markt opent zaterdag met positieve momentum: Bitcoin (+0.69%, $70,438) en Ethereum (+1.14%, $2,153.69) leiden het herstel aan met gezond volume van respectievelijk $21.02B en $8.15B. Altcoins volgen: XRP (+0.56% naar $1.44), SOL (+1.02% naar $89.91) en BNB (+0.47% naar $641.94) tonen consistent groen. Het totale dagvolume van $32.52B reflecteert gematigd maar solide institutionele participatie. De markt behoudt een bullish bias zonder excessieve leverage, wat wijst op gezonde opwaartse fundamenten. Weekend consolidatie verwacht voordat maandagstart mogelijke nieuwe impulsen brengt."
 }
