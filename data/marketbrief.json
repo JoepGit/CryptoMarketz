@@ -1,18 +1,18 @@
 {
   "date": "zaterdag 21 maart 2026",
-  "focus": "Brede marktdaling met lichte druk op Bitcoin en Ethereum terwijl altcoins dieper corrigeren.",
-  "risk": "Gedempte volatiliteit, voorzichtig sentiment",
-  "btc_structure": "Bitcoin noteert op $70.279 met een bescheiden verlies van 0,61% in 24 uur. De markt handelt in een smalle range zonder duidelijke directie, wat duidt op consolidatie rond deze steunzone. Weekendhandel blijft voorzichtig gegeven macro-onzekerheden.",
-  "eth_flows": "Ethereum daalt licht met 0,28% naar $2.150,60 met een volume van $7,40B, wat wijst op gedempte participatie. De kleinere daling ten opzichte van Bitcoin suggereert relatieve sterkte in de Ethereum-positie. Institutionele flows blijven afwachtend in het weekend.",
+  "focus": "Lichte bearish druk over het weekeinde met BTC onder $70.5k en stabiele maar voorzichtige sentiment.",
+  "risk": "Gedempte volatiliteit, risico op liquidaties",
+  "btc_structure": "Bitcoin handelt op $70,146 met een bescheiden daling van -0.47% in 24 uur. De grootste crypto blijft in een consolidatiefase zonder duidelijke directie. Weekendliquiditeit blijft beperkt met $20.38B dagvolume.",
+  "eth_flows": "Ethereum toont relatieve stabiliteit op $2,145.24 met minimale verlies van -0.06%, wat wijst op institutionele steun. Het volume van $7.18B duidt op voorzichtige positionering rond het weekend. ETH/BTC ratio suggereert gelijkmatige marktbreedte.",
   "top_narratives": [
-    "Macro-onzekerheid duwt risicoactiva voorzichtig naar beneden",
-    "Weekend-liquiditeit fragmentatie beperkt prijsvorming",
-    "Altcoin-underperformance (XRP -0,68%, SOL -0,07%) wijst op risico-off sentiment",
-    "Bitcoin-dominantie stabiliseert ondanks brede dalende druk"
+    "Weekend consolidatie in major pairs",
+    "Lage volatiliteit bevordert langetermijnholders",
+    "Macro-economische factoren nog steeds dominant",
+    "Altcoin underperformance vs BTC"
   ],
-  "macro_impact": "Geopolitieke spanningen en renteverwachtingen blijven geldstromen onder druk zetten. Weekend-data-vacuum leidt tot verminderde volumes en hogere bid-ask spreads. Beleggerssentiment blijft voorzichtig vooruitkijkend naar maandag.",
-  "whale_flows": "Bitcoin volume van $20,15B suggereert institutionele positie-squaring. XRP daalt disproportioneel met $0,88B volume, wat erop duidt dat minder liquide altcoins gevoeliger reageren op weekenduitstroom. BNB en SOL tonen relatieve stabiliteit met beperkte whale-activiteit.",
-  "funding_oi": "Financieringspercentages zijn licht negatief gezien, wat wijst op korte posities die winsten nemen. Open interest stabiliseert rond huidige niveaus zonder significante liquidaties. Weekendperiode beperkt nieuwe positie-opbouw.",
-  "volatility_outlook": "Impliciete volatiliteit blijft laag gegeven het weekend en afwezigheid van grote catalysatoren. Verwacht wordt dat de markt in een smalle range blijft tot maandag marktopening. Breakout-waarschijnlijkheid neemt toe bij opening van New York-sessie.",
-  "full_report": "CryptoMarketz registreert op zaterdag 21 maart een voorzichtige marktdaling met Bitcoin op $70.279 (-0,61%) en Ethereum op $2.150,60 (-0,28%). Altcoins zoals XRP ($1,44, -0,68%) tonen relatieve zwakte vergeleken met de bluechips, wat duidt op risico-off sentimentsverschuiving. Volumes blijven solide voor Bitcoin ($20,15B) maar fragmentatie in het weekend beperkt prijsontdekkingsmechanismen. Macro-onzekerheid en weekendliquiditeitsdynamica bepalen het handelspatroon. Analisten verwachten stabilisatie in komende uren met mogelijke volatiliteitsstijging bij maandagopening in US-markten."
+  "macro_impact": "Weekendhandel toont afnemende interesse voorafgaand aan Maandag US marktopening. Geleidelijke afname in speculatieve activiteit wijst op afwachting van macro-triggers. Fed-signalering blijft kritieke factor voor volgende week.",
+  "whale_flows": "Bitcoin volume van $20.38B blijft gezond maar niet excessief, wat aangeeft dat grote wallets posities consolideren. XRP show relatief zwakke $0.88B volume op $1.44, wat verminderde institutionele interesse weerspiegelt. Weekend-segmentatie typisch voor retail-gedomineerde transacties.",
+  "funding_oi": "Perpetual funding rates vermoedelijk licht negatief gezien de bearish intonatie. Open Interest wijst op voorzichtigheid rond size-opbouw. Verwachting van volatiliteitspiek bij US marktopening maandag.",
+  "volatility_outlook": "Impliciete volatiliteit gedempd op weekendniveaus, typisch voor exit naar kleinere liquiditeitspools. Verwacht herstel naar normaalwaarden zondag/maandag bij Aziëopening. Breakout-potentie beide zijden beperkt tot $70k-zone.",
+  "full_report": "CryptoMarketz marktbrief zaterdag 21 maart 2026: Bitcoin handelt op $70,146 (-0.47%), Ethereum op $2,145.24 (-0.06%), met gedempte weekend-sentimenten en beperkte liquiditeit. Het altcoin complex zwakt af met XRP op $1.44 (-0.40%), BNB op $641.51 (-0.10%) en SOL op $89.74 (-0.23%). Totaal dagvolume Bitcoin $20.38B duidt op voorzichtige positionering voor Maandag. Macro-factoren blijven dominant en Fed-signalering zal volgende week marchtrichting bepalen. Verwacht consolidatie tot zondag met volatiliteitsherstel bij Aziëopening."
 }
