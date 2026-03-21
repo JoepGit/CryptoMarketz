@@ -1,18 +1,18 @@
 {
   "date": "zaterdag 21 maart 2026",
-  "focus": "Gemengde signalen in weekend trading terwijl BTC stabiliteit toont rond $70.453.",
-  "risk": "Laag - weekend liquiditeit beperkt",
-  "btc_structure": "Bitcoin handelt op $70.453 met bescheiden dagwinst van 1.19%. De stabiliteit in het weekend suggereert afwezigheid van grote verkoopdruk, hoewel volume met $22.99B beperkt blijft voor zaterdag.",
-  "eth_flows": "Ethereum outperformt met +1.57% naar $2.153,07 op $9.97B volume. De relatieve sterkte van ETH ten opzichte van BTC duidt op institutionele accumulatie in derivaten.",
+  "focus": "Bitcoin consolidateert rond $70.416 terwijl Solana momentum toont met +1.40% winst.",
+  "risk": "Laag volatiliteit, steady accumulation",
+  "btc_structure": "Bitcoin handelt op $70.416 met bescheiden +0.82% dagelijkse winst en $21.55B volume. De stabiliteit suggereert institutionele accumulatie in dit prijsbereik zonder significante directionale druk.",
+  "eth_flows": "Ethereum stijgt naar $2.151.95 met +1.32% dagwinst bij $8.07B handelsvolume. Dit outperformance ten opzichte van Bitcoin duidt op hernieuwde interesses in alt-season narratieven.",
   "top_narratives": [
-    "Weekend consolidatie na weekdagen volatiliteit",
-    "Altcoin relative strength vs Bitcoin dominantie",
-    "Liquidity migration naar lagere volumes",
-    "Macro-economische kalender maandag (rentebesluit verwachting)"
+    "Ethereum outperformance op basis volumes",
+    "Solana momentum met +1.40%",
+    "Stabiele BTC consolidatie onder $71k",
+    "Weekend accumulatie in kleinere alts"
   ],
-  "macro_impact": "Weekend markt wacht op maandagse macro-catalysts; geopolitieke spanningen blijven ondergrondse factor. Centrale bankbeleid blijft volatiliteitsfactor voor komende week.",
-  "whale_flows": "Concentratie in BTC volume ($22.99B) duidt op institutionele hodling; altseason-indicatoren zwak met XRP slechts +0.68% en BNB +0.79%. Whale accumulatie eerder voorzichtig dan agressief.",
-  "funding_oi": "Funding rates vermoedelijk neutraal in weekend trading. Long-positie stapeling beperkt gezien gematigd volume; geen uitgesproken leverage-opbouw waarneembaar.",
-  "volatility_outlook": "Volatiliteit blijft laag in weekend sessie; maandag kan realisatie brengen op macro-triggers. ATR verwachtingspatroon suggereert breakout-kandidaat bij opening institutionele markten.",
-  "full_report": "CryptoMarketz marktbrief zaterdag 21 maart 2026: Bitcoin consolidateert rond $70.453 (+1.19%) met $22.99B volume, terwijl Ethereum outperformt op $2.153,07 (+1.57%, $9.97B). Altcoins tonen weinig dynamiek—XRP +0.68% op $1.44, BNB +0.79% op $641,80, SOL +1.50% op $89,66—wat duidt op voorzichtige positioneringen voor weekend. Institutionele whale flows lijken eerder accumulatief dan distributief, hoewel maandag macro-catalysts (rentebeslissingen) potentieel volatiliteit kunnen ontgrendelen. Markt wacht af; technisch beeld blijft neutral tot bullish."
+  "macro_impact": "Weekendhandel toont gedisciplineerde marktgedrag zonder externe shocks. De lage volatiliteit duidt op afwachting voor weekstartende macro-catalysatoren.",
+  "whale_flows": "Bitcoin volume van $21.55B en ETH van $8.07B wijzen op gestage whale accumulatie. SOL's $1.75B volume suggereert growth-fund repositionering naar alt-exposure.",
+  "funding_oi": "Verwacht neutrale tot licht positieve funding rates gegeven huidige prijsstabiliteit. Open interest waarschijnlijk stijgend bij consolidatie rond deze support levels.",
+  "volatility_outlook": "Verwacht weekendvolatiliteit onder 2% te blijven gegeven huidige prijsvaste structuur. Maandag kan richtinggevend zijn bij opening Amerikaanse markten.",
+  "full_report": "Cryptomarkten tonen gedisciplineerd gedrag op zaterdag 21 maart met Bitcoin vast op $70.416 (+0.82%) en $21.55B dagvolume. Ethereum outperformt op $2.151.95 (+1.32%, $8.07B volume) terwijl Solana stijgt naar $89.84 met +1.40% winst. XRP en BNB blijven stabiel rond $1.44 en $641.50 met lagere volumes van respectievelijk $0.99B en $0.57B. De markt bevindt zich in een lage-volatiliteits accumulatiefase zonder significante externe catalysatoren. Whale flows suggereren herbalancering naar altcoins na recente BTC-dominantie."
 }
