@@ -1,18 +1,18 @@
 {
   "date": "zaterdag 21 maart 2026",
-  "focus": "Crypto markt toont voorzichtig herstel na weeklong consolidatie, met Bitcoin en Ethereum beide in positief groen.",
-  "risk": "Laag-matig, lichte opwaartse bias",
-  "btc_structure": "Bitcoin noteert op $70,438 met een bescheiden winst van 0.69% in 24 uur, ondersteund door een dagelijks handelsvolume van $21.02B. De koers behoudt weerstand rond $71,000 terwijl support zich vormt in de $69,500-regio.",
-  "eth_flows": "Ethereum outperformt met een stijging van 1.14% naar $2,153.69, gedreven door institutioneel interesse en een handelsvolume van $8.15B. De tweede grootste altcoin toont relatieve sterkte ten opzichte van Bitcoin.",
+  "focus": "Markt in consolidatie met lichte bearish bias terwijl macro-onzekerheden aanhouden.",
+  "risk": "Risicoregime: Matig verhoogd",
+  "btc_structure": "Bitcoin daalt licht naar $70.350 met -0.16% in 24h, wat duidt op voorzichtige positieafbouw. Volumeprofiel van $20.25B blijft solide, maar momentum ontbreekt voor bullish doorbraak.",
+  "eth_flows": "Ethereum toont relatieve sterkte met +0.19% op $2.153,70 en $7.33B volume. Institutionele inflows lijken voorzichtig, maar ETH weerstand biedt tegen bredere marktdruk.",
   "top_narratives": [
-    "Institutionele accumulation in Q1 2026",
-    "Ethereum DeFi recovery narratief",
-    "Altseason signalen in XRP en Solana",
-    "Halving-anticipatie in Bitcoin ecosystem"
+    "Macro-economische onzekerheid drukt risicoactiva",
+    "Bitcoin consolidatie rond $70k psychologisch niveau",
+    "Altseason momentum vertraagt, ETH spaarzaam positief",
+    "Weekend-liquidity squeeze verwacht in komende uren"
   ],
-  "macro_impact": "Wereldwijde rente-verwachtingen en inflatieuitzichten blijven de crypto-markt sturen; centrale bankbeleid in focus voor maandagstart.",
-  "whale_flows": "Het totale dagvolume van $32.52B suggereert gematigd interesse van grote spelers; accumulation in Ethereum ($8.15B vol) wijst op institutionele positiebouw.",
-  "funding_oi": "Funding rates stabiliseren in bullish territory; open interest blijft gezond zonder excessieve leverage, wat duidt op duurzame opwaartse druk.",
-  "volatility_outlook": "Volatiliteit verwacht rond 3-5% bandbreedte; weekend-consolidatie verwacht met mogelijke breakout maandag. Risk-reward ratio gunstig voor lange posities.",
-  "full_report": "De cryptocurrency markt opent zaterdag met positieve momentum: Bitcoin (+0.69%, $70,438) en Ethereum (+1.14%, $2,153.69) leiden het herstel aan met gezond volume van respectievelijk $21.02B en $8.15B. Altcoins volgen: XRP (+0.56% naar $1.44), SOL (+1.02% naar $89.91) en BNB (+0.47% naar $641.94) tonen consistent groen. Het totale dagvolume van $32.52B reflecteert gematigd maar solide institutionele participatie. De markt behoudt een bullish bias zonder excessieve leverage, wat wijst op gezonde opwaartse fundamenten. Weekend consolidatie verwacht voordat maandagstart mogelijke nieuwe impulsen brengt."
+  "macro_impact": "Weekendmarktdynamiek blijft fragiel met beperkte institutionele particpatie. Geopolitieke factoren en renteverwachtingen voor volgende week drukken sentiment.",
+  "whale_flows": "Gemengde whale-activiteit: BTC volume dalend ($20.25B), terwijl SOL relatieve aankoopdruk toont (+0.60% op $90.04). Kleine positions worden geherbalanceerd naar altcoins.",
+  "funding_oi": "Funding rates blijven laag met beperkte long-leverage. Open Interest verwacht stabiel te blijven tot maandag macro-catalysatoren.",
+  "volatility_outlook": "Implied volatility gedrukt; verwacht 2-3% intraday swings gedurende weekend. Volatility naar verwachting stijgt maandag bij marktopening.",
+  "full_report": "CryptoMarketz rapporteert consolidatie op zaterdag 21 maart met Bitcoin zwak op $70.350 (-0.16%) en $20.25B volume, terwijl Ethereum relatief sterk presteert op $2.153,70 (+0.19%, $7.33B). SOL toont momentumteken met +0.60% tot $90.04, maar marktbrede druk blijft vanuit macro-onzekerheid. BNB ($641,98, +0.03%) en XRP ($1,44, -0.24%) blijven stabiel zonder directe catalysatoren. Institutionele activiteit is beperkt in weekendhandel; volatiliteit verwacht volgende week op te trekken bij macro-releases."
 }
