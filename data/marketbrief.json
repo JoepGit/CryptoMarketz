@@ -1,18 +1,18 @@
 {
   "date": "zaterdag 21 maart 2026",
-  "focus": "Consolidatiepatroon rond $70.7k geeft markt ademruimte na recente volatiliteit.",
-  "risk": "Lage volume, selectieve druk",
-  "btc_structure": "Bitcoin noteert op $70,767 met een minimale daling van -0.19% in 24 uur, terwijl het volume uitdunt naar $35.74B. Dit wijst op voorzichtigheid van grote partijen voor het weekend.",
-  "eth_flows": "Ethereum toont stabiliteit met een kleine winst van +0.08% op $2,155.93 en volume van $15.93B. Het lijkt erop dat institutionele interesse gering is tijdens het zaterdag-handelsmoment.",
+  "focus": "Bitcoin stabiliseert rond $70.735 terwijl altcoins gemengde signalen afgeven in lage weekendvolumes.",
+  "risk": "Lage liquiditeit, technische fragility",
+  "btc_structure": "Bitcoin handelt stabiel op $70.735 met minimale beweging van +0.06% in 24h, wat wijst op consolidatie rond cruciale steunlevels. Het volume van $36.12B blijft solide ondanks weekendperiode.",
+  "eth_flows": "Ethereum toont relatieve sterkte met +0.47% stijging naar $2.154,26, hoewel het volume van $15.82B aangeeft dat institutionele inflows nog beperkt blijven. De outperformance versus Bitcoin suggereert rotatieactiviteit.",
   "top_narratives": [
-    "Weekend consolidatie in lage volatiliteit",
-    "Volume contractie duidt op afwachting",
-    "Altseason signalen zwak door BNB en XRP druk",
-    "Solana outperformance met +1.09% tegen trend"
+    "Weekend consolidatie in Bitcoin voor potentiële breakout volgende week",
+    "Solana momentum met +1.45% stijging naar $90.38 attraheert retail interesse",
+    "Ethereum relatief sterkte in altseason scenario",
+    "XRP en BNB zwakte duidt op selectieve marktpositionering"
   ],
-  "macro_impact": "Rentemarktbewegingen lijken de afgelopen nacht geminimaliseerd te zijn gegeven het weekend. De lage handelsvolumes duiden op afwachting van maandagopening en mogelijke macro-triggers.",
-  "whale_flows": "Whales reduceren posities voorzichtig; BTC-volume van $35.74B is laag voor het format, wat aangeeft dat grote orders worden uitgesteld. ETH-volume van $15.93B blijft relatief robuust.",
-  "funding_oi": "Funding rates liggen waarschijnlijk in neutrale zone gegeven de lage volatiliteit. OI-expansie wordt niet verwacht totdat het volume op maandag aantrekt.",
-  "volatility_outlook": "Verwacht lage intraday-volatiliteit gedurende het weekend. Echte marktbewegingen zullen waarschijnlijk volgen na de Aziatische marktopening maandag.",
-  "full_report": "CryptoMarketz observeert een kalme zaterdag met BTC stabiel op $70,767 (-0.19%), ETH vlak op $2,155.93 (+0.08%), en XRP onder druk op $1.45 (-0.64%). Alleen Solana onderscheidt zich met een winnaar-prestatie van +1.09% op $90.52. Het totale volume over alle toptickets bedraagt ruim $57B, maar dit is laag voor het weekend-handelsformaat. De markt lijkt in afwachtende modus gezet tot institutionele traders maandagochtend terugkeren. Risk-regime blijft beperkt gegeven de consolidatie rond kritieke steunniveaus."
+  "macro_impact": "Lage weekendvolatiliteit reflecteert afwezigheid van macro-triggers; traditionele markten gesloten. Fed-gevoeligheid blijft laag tot maandag marktopening.",
+  "whale_flows": "Gecumuleerde volume van $56.26B (BTC+ETH) suggereert voorzichtige whale-accumulatie op lagere levels. BNB en XRP laag volume duidt op afzijdigheid in illiquide periode.",
+  "funding_oi": "Verwacht steady funding rates in weekend sessies gegeven lage volatiliteit en range-bound prijsactie. Shorts dominant maar niet overextended.",
+  "volatility_outlook": "Impliciete volatiliteit contracteert in weekendperiode; verwacht hogere swings bij maandag NYSE opening. Technische triggers rond $70k BTC en $2.100 ETH vormen speelterreinen.",
+  "full_report": "Bitcoin consolidateert rond $70.735 met fractionale +0.06% winst en $36.12B volume, wat stabiliteit behoudt maar brekingspotentiaal afwacht. Ethereum outperformt met +0.47% naar $2.154,26 en $15.82B volume, wijzend op intern altseason rotatie. Solana leidt altcoins met +1.45% naar $90.38, terwijl XRP (-0.32% naar $1.45) en BNB (-0.09% naar $642.91) zwakte tonen. Weekend liquiditeit is beperkt; echte directionaliteit verwacht pas maandag bij instituutdruk. Risk regime blijft fragiel gegeven technische consolidatie zonder macrocatalysten."
 }
