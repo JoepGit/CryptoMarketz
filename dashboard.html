@@ -729,7 +729,7 @@ body{font-family:'Inter',sans-serif;background:#0d0d0d;color:var(--cream);overfl
 .brief-kicker::before{content:'';display:inline-block;width:16px;height:1px;background:var(--accent);opacity:.55}
 .brief-title{font-family:'Inter',sans-serif;font-size:clamp(28px,3vw,40px);font-weight:900;line-height:1.06;color:var(--cream);letter-spacing:-.02em;margin-bottom:10px}
 .brief-intro{font-size:14px;color:var(--accent);line-height:1.65;margin-bottom:22px;max-width:820px}
-.brief-copy{font-size:15px;color:var(--sub);line-height:1.95;white-space:pre-wrap}
+.brief-copy{font-size:15px;color:var(--sub);line-height:2.0;white-space:pre-wrap}
 .brief-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
 .brief-tag{font-family:'Inter',sans-serif;font-size:15px;letter-spacing:.01em;padding:5px 10px;border:1px solid rgba(155,89,214,.15);border-radius:4px;color:rgba(245,240,232,.42)}
 .brief-right{border-left:1px solid rgba(155,89,214,.08);padding:24px 22px;display:flex;flex-direction:column;gap:14px;background:rgba(10,8,12,.58)}
@@ -1020,8 +1020,8 @@ body::before { display: none !important; }
 .db-sub, .brief-intro, .dashboard-analysis-body, .dashboard-empty,
 .ph p, .pan-m, .db-copy, .brief-copy, .rc p, .anv pre {
   color: #7a90b0 !important;
-  font-size: 13.5px !important;
-  line-height: 1.75 !important;
+  font-size: 15px !important;
+  line-height: 1.9 !important;
 }
 .db-pill {
   background: #f5f0ff !important;
@@ -4572,8 +4572,17 @@ Notable individual movements:
     const res = await fetch('/data/marketbrief.json?t=' + Date.now(), {cache:'no-store'});
     if(res.ok){
       const fetched = await res.json();
-      // Only use fetched data if it has meaningful content
-      if(fetched && (fetched.btc || fetched.btc_structure || fetched.full_report || fetched.summary)){
+      // Detect Dutch content — if found, keep demo (English)
+      const sampleText = [
+        fetched.full_report, fetched.summary, fetched.btc_structure, fetched.btc,
+        fetched.macro_impact, fetched.macro
+      ].filter(Boolean).join(' ').toLowerCase();
+
+      const dutchWords = ['op ','de ','en ','van ','het ','met ','een ','voor ','niet ','maar ','ook ','dat ','zijn ','wordt ','heeft '];
+      const dutchScore = dutchWords.filter(w => sampleText.includes(w)).length;
+
+      // Only use fetched data if it has real content AND is in English
+      if(fetched && dutchScore < 4 && (fetched.btc || fetched.btc_structure || fetched.full_report || fetched.summary)){
         data = fetched;
       }
     }
