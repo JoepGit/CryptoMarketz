@@ -1,18 +1,18 @@
 {
   "date": "zaterdag 21 maart 2026",
-  "focus": "Bitcoin consolidatie rond $70,925 met moderate bullish bias terwijl altcoins gemengde signalen afgeven.",
-  "risk": "Volatiliteit stijgend, macro-afhankelijk",
-  "btc_structure": "Bitcoin noteert op $70,925 met een dagelijkse stijging van 1.47% en handelsvolume van $27.97B. De consolidatie rond dit niveau suggereert ondersteuning, maar breakout boven $71,500 is noodzakelijk voor verdere upside momentum.",
-  "eth_flows": "Ethereum staat op $2,161.50 met een bescheidener gain van 1.25% en volume van $10.79B. De underperformance ten opzichte van Bitcoin duidt op voorzichtigheid in altcoin-markten en mogelijke profit-taking.",
+  "focus": "Bitcoin consolidateert rond $70.602 terwijl altcoins zwakke gains tonen in beperkt weekend-volume.",
+  "risk": "Lage liquiditeit, consolidatie fase",
+  "btc_structure": "Bitcoin staat op $70.602 met bescheiden +1.21% winst in 24h, ondersteund door $26.49B volume. De markt wacht op macro-signalen maandag; geen duidelijke breakout-richting waarneembaar.",
+  "eth_flows": "Ethereum beweegt traag naar $2.150.88 met +1.01% dagelijkse gain op $10.17B volume. Alt-seizoen-momentum blijft achterwege; ETH volgt BTC zonder eigen catalysts.",
   "top_narratives": [
-    "Bitcoin consolidatie richting volgende breakout niveau",
-    "Altcoin relatieve zwakte op weekend handelsvolume",
-    "Macro economische onzekerheid drukt risicobereidheid",
-    "Ethereum volgt BTC in conservatief patroon"
+    "Weekend consolidatie in lage volume",
+    "Macro-wachttijd tot maandag",
+    "Altcoin underperformance (XRP +0.01%)",
+    "BTC dominantie-stabilisatie"
   ],
-  "macro_impact": "Weekend-liquiditeit is beperkt met lagere volumes over de bord, terwijl macro-economische factoren volatiliteit kunnen triggeren bij opening van weekmarkten. Fed-signalen blijven doorslaggevend voor risicoassets.",
-  "whale_flows": "Dominant volume concentratie in BTC ($27.97B) versus ETH ($10.79B) suggereert institutionele voorkeur voor Bitcoin exposure. Weekend-volume is geleidelijk afnemend, typisch patroon voor weekend-consolidatie.",
-  "funding_oi": "Funding rates blijven stabiel met gematigde long-posities. Open Interest beweging is lateraal, geen signalen voor grote liquidaties verwacht tot volgende week.",
-  "volatility_outlook": "Implied volatiliteit daalt in weekend-trading met verwachting van hogere spreads. Maandag zal waarschijnlijk volatility-opflaring brengen bij institutionele marktopening.",
-  "full_report": "CryptoMarketz rapporteert een gemengde zaterdag met Bitcoin als anker op $70,925 (+1.47%) en solide $27.97B volume. Ethereum volgt op $2,161.50 (+1.25%, $10.79B) maar blijft achter in momentum. Altcoins zoals SOL (+1.73%) en XRP (+0.16%) tonen heterogene signalen in afnemend weekend-volume. De markt consolidadeert in afwachting van weekdagse macro-impulsen; hoewel sentiment positief blijft, ontbreekt duidelijke directionaliteit. Volgende support voor BTC ligt rond $69,500, terwijl resistance $72,000+ is."
+  "macro_impact": "Weekend-trading toont gedempte volatiliteit; beleggers wachten op maandag voor macro-updates en Fed-communicatie. Geen significant macro-nieuws op zaterdag 21 maart.",
+  "whale_flows": "Volume verdeeld over top 5 assets ($40.6B gecombineerd); BTC domineert met 65% van totaal. Whale-activiteit minimaal in weekend-sessie.",
+  "funding_oi": "Funding rates stabiel op lage niveaus; geen excessieve leverage verwacht tot maandag. Open Interest blijft vlak door beperkte weekend-participation.",
+  "volatility_outlook": "Verwacht lage volatiliteit zaterdag; typisch weekend-patroon zonder major events. Breakout-potentieel keert terug bij maandag-sessie-opening.",
+  "full_report": "CryptoMarketz rapporteert stabiele weekend-sessie met BTC op $70.602 (+1.21%), ETH op $2.150.88 (+1.01%) en beperkt volume-momentum. XRP stagnant op $1.44 (+0.01%), BNB op $642.05 (+0.48%) en SOL op $89.56 (+0.73%) tonen zwakke altcoin-dynamiek. Totaal gecombineerd volume ($40.6B) wijst op lage institutionele participation. Markt consolidateert voorafgaand aan maandag's macro-katalysatoren. Risicobeheer prioriteit in low-liquidity environment."
 }
