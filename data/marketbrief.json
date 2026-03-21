@@ -1,18 +1,18 @@
 {
   "date": "zaterdag 21 maart 2026",
-  "focus": "Bitcoin consolidateert rond $70.602 terwijl altcoins zwakke gains tonen in beperkt weekend-volume.",
-  "risk": "Lage liquiditeit, consolidatie fase",
-  "btc_structure": "Bitcoin staat op $70.602 met bescheiden +1.21% winst in 24h, ondersteund door $26.49B volume. De markt wacht op macro-signalen maandag; geen duidelijke breakout-richting waarneembaar.",
-  "eth_flows": "Ethereum beweegt traag naar $2.150.88 met +1.01% dagelijkse gain op $10.17B volume. Alt-seizoen-momentum blijft achterwege; ETH volgt BTC zonder eigen catalysts.",
+  "focus": "Bitcoin consolidateert rond $70.410 terwijl altcoins gemengde signalen afgeven in lage weekend-liquiditeit.",
+  "risk": "Lage volume, consolidatie fase",
+  "btc_structure": "Bitcoin handelt op $70.410 met bescheiden 24h-stijging van 0.75%, wat wijst op voorzichtige kopers na recente hausse. Het weekendvolume van $25.25B blijft substantieel maar toont normale zaterdag-consolidatie zonder directionale duw.",
+  "eth_flows": "Ethereum noteert $2.148,37 met 0.56% dagelijkse winst en $10.04B volume, wat aangeeft dat kapitaal geleidelijk naar altcoins verschuift. De stabiele inflows suggereren institutionele rentes in ETH-derivaten.",
   "top_narratives": [
-    "Weekend consolidatie in lage volume",
-    "Macro-wachttijd tot maandag",
-    "Altcoin underperformance (XRP +0.01%)",
-    "BTC dominantie-stabilisatie"
+    "Weekend-consolidatie na weekafsluiting",
+    "Altcoin rotatie uit BTC naar diversificatie",
+    "Lage volumes wijzen op afwachting retail",
+    "Funding rates stabiel in verwachtingspatroon"
   ],
-  "macro_impact": "Weekend-trading toont gedempte volatiliteit; beleggers wachten op maandag voor macro-updates en Fed-communicatie. Geen significant macro-nieuws op zaterdag 21 maart.",
-  "whale_flows": "Volume verdeeld over top 5 assets ($40.6B gecombineerd); BTC domineert met 65% van totaal. Whale-activiteit minimaal in weekend-sessie.",
-  "funding_oi": "Funding rates stabiel op lage niveaus; geen excessieve leverage verwacht tot maandag. Open Interest blijft vlak door beperkte weekend-participation.",
-  "volatility_outlook": "Verwacht lage volatiliteit zaterdag; typisch weekend-patroon zonder major events. Breakout-potentieel keert terug bij maandag-sessie-opening.",
-  "full_report": "CryptoMarketz rapporteert stabiele weekend-sessie met BTC op $70.602 (+1.21%), ETH op $2.150.88 (+1.01%) en beperkt volume-momentum. XRP stagnant op $1.44 (+0.01%), BNB op $642.05 (+0.48%) en SOL op $89.56 (+0.73%) tonen zwakke altcoin-dynamiek. Totaal gecombineerd volume ($40.6B) wijst op lage institutionele participation. Markt consolidateert voorafgaand aan maandag's macro-katalysatoren. Risicobeheer prioriteit in low-liquidity environment."
+  "macro_impact": "Zaterdag 21 maart toont typische weekend-gedrag met gedempte volumes en risico-appetite. Macro-catalysators zijn beperkt zonder centrale bankenbesluiten of economische data.",
+  "whale_flows": "BTC-volume concentratie van $25.25B suggereert whale-accumulation op huidige niveaus rond $70.410, terwijl ETH lagere volume ($10.04B) aangeeft dat grote spelers voorzichtig zijn tot volgende week.",
+  "funding_oi": "Verwachting is dat funding rates neutraal blijven gezien de stabiele prijsbewegingen (BTC +0.75%, ETH +0.56%). Geen signalen van excessieve leverage positioning.",
+  "volatility_outlook": "Volatiliteit naar verwachting laag gedurende het weekend met range-bound trading tussen $70.000-$71.000 voor Bitcoin. Breakout onwaarschijnlijk zonder catalysator maandag.",
+  "full_report": "Cryptomarkten tonen zaterdag beheersing met Bitcoin stevig op $70.410 (+0.75%) en $25.25B volume, ondersteund door institutionele vraag. Ethereum volgt op $2.148,37 met +0.56% en $10.04B volume, terwijl altcoins gemengd presteren: SOL +0.86%, XRP -0.24%, BNB +0.13%. Weekend-liquiditeit blijft laag, wat consolidatie-activiteit suggereert voor maandag. Whale-concentratie in BTC en ETH-volumes duidt op voorzichtige accumulation. Volatiliteit naar verwachting beperkt tot de Amerikaanse marktopening volgende week."
 }
