@@ -1,18 +1,18 @@
 {
   "date": "zaterdag 21 maart 2026",
-  "focus": "Bitcoin consolideert rond $70.565 terwijl altcoins gemengde signalen afgeven in rustig weekend trading.",
-  "risk": "Lage volatiliteit, consolidatiepatroon",
-  "btc_structure": "Bitcoin noteert op $70.565 met een bescheiden dagelijkse stijging van 0.36% en een handelsvolume van $32.24B. De positie blijft defensief als markt afwacht op macroindicatoren volgende week.",
-  "eth_flows": "Ethereum toont meer momentum met +0.87% op $2.153.98 en een volume van $13.08B, wat wijst op geleidelijke accumulatie in instituionele handen. De relatieve outperformance ten opzichte van Bitcoin suggereert hernieuwde interesse in layer-2 narratieven.",
+  "focus": "Bitcoin stabiliseert rond $70.579 terwijl altcoins gemengde signalen afgeven in lage weekend-volumes.",
+  "risk": "Laag volume, consolidatie risico",
+  "btc_structure": "Bitcoin noteert op $70.579 met een minimale daling van -0.09% in 24h, wat duidt op sterke steun en stabiele prijsvorming. De koers handelt in een smalle range zonder significante momentum, typisch voor zaterdag.",
+  "eth_flows": "Ethereum klimt licht naar $2.155,02 met +0.22% winst ondanks lager weekendvolume van $12.70B. Dit positieve sentiment in lage liquiditeit suggereert institutionele interest.",
   "top_narratives": [
-    "Weekend consolidatie voor weekstart macro-events",
-    "Altcoin rebound na vorige week's correctie",
-    "Ethereum layer-2 adoption acceleration",
-    "Stablecoin dominantie in handelsvolumes"
+    "Weekend consolidatie van Bitcoin boven $70.500 niveau",
+    "Ethereum outperformance ten opzichte van Bitcoin",
+    "Solana stijging (+0.56%) wijst naar alt-seizoen potentieel",
+    "Lage weekend volumes - institutionele pauze"
   ],
-  "macro_impact": "De omgeving blijft voorzichtig vooruit het weekend zonder duidelijke directie. Fed-signalen en rentebeslissingen remain cruciaal voor volgende week's momentum.",
-  "whale_flows": "Bitcoin-volume van $32.24B domineert markt, terwijl Ethereum's $13.08B en Solana's $2.45B aanduiden dat instituties selectief posities verdelen over tier-1 assets.",
-  "funding_oi": "Funding rates blijven genormaliseerd zonder extreme leverage. Long-positie voorzichtigheid suggereert wachten op duidelijkere technische signalen.",
-  "volatility_outlook": "Impliciete volatiliteit verwacht laag te blijven in weekend trade met range-bound movement rond huidige niveaus. Verwacht geen grote impulsmoves tot maandag.",
-  "full_report": "Bitcoin consolideert op $70.565 (+0.36%) met dominant $32.24B volume, terwijl Ethereum sterker presteert op $2.153.98 (+0.87%, $13.08B volume). De markt vertoont gemengde signalen: XRP daalt -0.49% naar $1.44, maar Solana stijgt +1.42% naar $90.02, wat suggereert selectieve altcoin-vraag. Weekend trading verloopt rustig zonder major whale-activiteit, en marktdeelnemers wachten op macro-triggers voor volgende week. Risk-regime blijft laag met consolidatie-patroon dominant."
+  "macro_impact": "Zaterdag toont traditioneel lager handelsvolume met institutionele spelers in wachtstand. De stabiele prijsvorming van Bitcoin duidt op afwezigheid van macro-catalyst deze dag.",
+  "whale_flows": "Bitcoin volume van $31.76B domineert de markt; ETH volgt met $12.70B terwijl altcoins ondermaats presteren. Whales lijken te consolideren posities in afwachting van weekstart.",
+  "funding_oi": "Lage weekend-volumes duiden op gesloten posities en gedempte leverage. Expect stijging in open interest en funding rates maandag bij herstel van institutioneel handelsvolume.",
+  "volatility_outlook": "Volatiliteit blijft laag met minimale 24h-swings (<1%) op hoofd-assets. Zaterdag handelskarakter suggereert verder lage volatiliteit tot maandagopening.",
+  "full_report": "Op zaterdag 21 maart toont de cryptomarkt klassieke consolidatiepatronen met Bitcoin stabiel op $70.579 (-0.09%), Ethereum stijgend naar $2.155,02 (+0.22%), en gemengde alts (SOL +0.56%, XRP -0.66%, BNB 0.01%). Weekend-volumes blijven gering met BTC dominance in $31.76B trading tegen lager ETH-volume van $12.70B. De stabiliteit van Bitcoin en lichte Ethereum-winst wijzen op institutionele pauze zonder significante macro-impulsen. Volatiliteit blijft ingedamd onder 1%, typisch voor zaterdag. Verwacht hogere activiteit maandag."
 }
