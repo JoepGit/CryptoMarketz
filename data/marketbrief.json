@@ -1,18 +1,18 @@
 {
-  "date": "zaterdag 21 maart 2026",
-  "focus": "Bitcoin consolidateert rond $70,768 terwijl altcoins voorzichtig herstellen na recente verkoopdruk.",
-  "risk": "Volatiliteit normaal, macro-alert",
-  "btc_structure": "Bitcoin handelt stabiel op $70,768 met minimale dagelijkse beweging van +0.46%, ondersteund door solide volume van $35.97B. De markt toont geen duidelijke uitbraakrichting in beide richtingen, wat wijst op accumulatiefase.",
-  "eth_flows": "Ethereum koerst op $2,155.19 met sterkere dagelijkse winst van +0.89% en volume van $15.48B, wat suggereert voorzichtig herstel. De outperformance ten opzichte van BTC duidt op hernieuwde interesse in DeFi-sectoren.",
+  "date": "2026-03-21",
+  "focus": "Extreme Fear sentiment (12) drukt markt, terwijl politieke stabiliteit en crypto-regelgeving beleggersvertrouwen proberen te herstellen.",
+  "risk": "Extreme Fear, geopolitieke spanningen, inflatierisico's",
+  "btc_structure": "Bitcoin staat op $70.860 met minimale beweging (+0.43% 24h), waarin technisch evenwicht zich handhaaft rond psychologische $70K-drempel. Geopolitieke zorgen en renteverhogingsverwachtingen drukken opwaarts momentum, met dominantie op 56.5% naar risico-off sentiment wijzend.",
+  "eth_flows": "Ethereum toont relatieve sterkte op $2.159,63 (+0.78% 24h, +3.22% wekelijks) en outperformt BTC met consistente inflows. Volume van $15.02B geeft liquiditeit aan, hoewel macro-headwinds momentum afremmen.",
   "top_narratives": [
-    "Weekend consolidatie als voorbereiding op week-start volatiliteit",
-    "Altseason indicatoren: SOL +1.21% vs BTC +0.46% divergentie",
-    "Macro-macro: renteverwachtingen en Fed-signalen volgende week",
-    "Institutionele accumulatie in lagere volume-periode"
+    "Politieke stabiliteit: Senatoren bereiken compromis over crypto-marktbill en CLARITY Act-geruchten",
+    "Institutionele adoptie: Nasdaq SEC-goedkeuring voor onchain aandelen versnelt Wall Street's cryptotech-integratie",
+    "Geopolitieke risico's: Oorlog en renteverhogingsverwachtingen voeren risicoaversie en kapitaalvlucht naar goud",
+    "ETF-expansie: Grayscale dient S-1 in voor Hyperliquid ETF, join race met Bitwise en 21Shares"
   ],
-  "macro_impact": "Weekend-sessies tonen gebruikelijk gedempte activiteit met lagere volumes. Beleggers wachten op maandag voor macro-data en mogelijk Fed-communicatie die de rentes kan beïnvloeden.",
-  "whale_flows": "BTC-volume van $35.97B duidt op gezonde liquiditeit, terwijl altcoin-volumes (XRP $1.56B, SOL $2.71B) voorzichtig herstellen. Geen extreme whale-dump signalen waargenomen in huidige prijsstructuur.",
-  "funding_oi": "Funding rates blijven waarschijnlijk neutraal gegeven de stabiele prijzen. Long-posities worden voorzichtig opgebouwd zonder agressieve leverage, wat wijst op prudente marktsentiment.",
-  "volatility_outlook": "Verwacht lage volatiliteit gedurende weekend met mogelijke piek op maandag bij marktopening. Intraday-swings waarschijnlijk in 0.5-1.5% bandbreedte zonder catalisatoren.",
-  "full_report": "De cryptomarkt opent zaterdag in rustige modus met Bitcoin stabiel op $70,768 (+0.46%, vol $35.97B) en Ethereum op $2,155.19 (+0.89%, vol $15.48B). Solana toont relatieve kracht met +1.21% naar $90.22, terwijl XRP licht onderuit gaat naar $1.45 (-0.27%). De weekend-sessie kenmerkt zich door gedempte volumes en accumulatiebehavior zonder duidelijke directionaliteit. Beleggers positioneren zich voorzichtig voorafgaand aan maandag, wanneer macro-data en mogelijk Fed-communicatie volgende week kunnen zorgen voor verhoogde volatiliteit."
+  "macro_impact": "Renteverhogingsbets en obligatiemarktstabiliteit drukken risico-activa inclusief crypto, terwijl geopolitieke spanningen traditioneel veilige haven-vraag (goud) stimuleren. Politieke doorbraken in crypto-regelgeving bieden enige tegenwicht, maar macro-headwinds domineren.",
+  "whale_flows": "Liquidatiedata ontbreken, maar $81.8B 24h-volume en Fear & Greed extremiteit (12) suggereren voorzichtige positiering met beperkte whale-accumulation. Hoge volumes op Bitcoin ($34.81B) wijzen op twee-zijdige onzekerheid.",
+  "funding_oi": "Funding rates en Open Interest data ontbreken vandaag, wat monitoring van leverage-sentiment bemoeilijkt. Zonder concrete metrics blijft sentiment-tracking afhankelijk van Fear & Greed Index en liquidatiepatronen.",
+  "volatility_outlook": "Extreme Fear-score (12) en geopolitieke tumult leggen grond voor scherpe volatiliteitsspikes bij macro-triggers. Afwezigheid van duidelijke liquidatiegolven suggeert voorzichtige posities, maar renteverhogingsverwachtingen en oorlogsrisico's kunnen sudden sell-offs catalyseren.",
+  "full_report": "De cryptomarkt handelt vandaag in extreme vrees (Fear & Greed: 12) met Bitcoin op $70.860 (+0.43%) en Ethereum op $2.159,63 (+0.78%), terwijl totale marktcap stagnatie toont op $2.51T. Politieke doorbraken\u2014senatoren bereiken compromis over crypto-regelgeving en CLARITY Act-onderhandelingen\u2014bieden enige steun, net als institutionele adoptie via Nasdaq's SEC-goedkeuring voor onchain aandelen. Geopolitieke spanningen, renteverhogingsverwachtingen en obligatiemarktonrust drukken risico-sentiment echter aanzienlijk, met goud in 43 jaar grootste wekelijkse daling. Bitcoin-dominantie blijft sterk op 56.5%, maar de afwezigheid van liquidatiedata en funding rate-metrics bemoeilijkt leverage-sentiment-analyse. Outlook: Macro-headwinds domineren technische steun; politieke regelgeving kan steun bieden maar zal kort-termijn vrees niet volledig wegnemen zonder macro-verduidelijking."
 }
