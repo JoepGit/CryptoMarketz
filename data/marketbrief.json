@@ -1,18 +1,18 @@
 {
   "date": "zaterdag 21 maart 2026",
-  "focus": "Bitcoin consolidateert rond $70.410 terwijl altcoins gemengde signalen afgeven in lage weekend-liquiditeit.",
-  "risk": "Lage volume, consolidatie fase",
-  "btc_structure": "Bitcoin handelt op $70.410 met bescheiden 24h-stijging van 0.75%, wat wijst op voorzichtige kopers na recente hausse. Het weekendvolume van $25.25B blijft substantieel maar toont normale zaterdag-consolidatie zonder directionale duw.",
-  "eth_flows": "Ethereum noteert $2.148,37 met 0.56% dagelijkse winst en $10.04B volume, wat aangeeft dat kapitaal geleidelijk naar altcoins verschuift. De stabiele inflows suggereren institutionele rentes in ETH-derivaten.",
+  "focus": "Stabiele markt met minimale bewegingen; BTC houdt $70k-niveau vast terwijl ETH voorzichtig terrain verkent.",
+  "risk": "Lage volatiliteit, consolidatiepatroon",
+  "btc_structure": "Bitcoin noteert op $70,351 met bescheiden +1.01% winst in 24 uur. De koers beweegt zich in een nauwe range, wat wijst op accumulatie rond deze sleutelweerstand. Institutionele volume van $24.24B geeft steun aan huidige prijsniveaus.",
+  "eth_flows": "Ethereum staat op $2,147.25 met +0.77% dagelijkse winst. Het volume van $9.51B suggereert matige liquiditeit buiten peak-uren. Altcoin-rotaties blijven beperkt zolang BTC het primaire momentum dicteert.",
   "top_narratives": [
-    "Weekend-consolidatie na weekafsluiting",
-    "Altcoin rotatie uit BTC naar diversificatie",
-    "Lage volumes wijzen op afwachting retail",
-    "Funding rates stabiel in verwachtingspatroon"
+    "Weekend-consolidatie na wekenlange gains",
+    "Institutionele accumulatie rond BTC $70k",
+    "Stablecoin dominantie in tradingpairs",
+    "Altseason uitgesteld door ETH underperformance"
   ],
-  "macro_impact": "Zaterdag 21 maart toont typische weekend-gedrag met gedempte volumes en risico-appetite. Macro-catalysators zijn beperkt zonder centrale bankenbesluiten of economische data.",
-  "whale_flows": "BTC-volume concentratie van $25.25B suggereert whale-accumulation op huidige niveaus rond $70.410, terwijl ETH lagere volume ($10.04B) aangeeft dat grote spelers voorzichtig zijn tot volgende week.",
-  "funding_oi": "Verwachting is dat funding rates neutraal blijven gezien de stabiele prijsbewegingen (BTC +0.75%, ETH +0.56%). Geen signalen van excessieve leverage positioning.",
-  "volatility_outlook": "Volatiliteit naar verwachting laag gedurende het weekend met range-bound trading tussen $70.000-$71.000 voor Bitcoin. Breakout onwaarschijnlijk zonder catalysator maandag.",
-  "full_report": "Cryptomarkten tonen zaterdag beheersing met Bitcoin stevig op $70.410 (+0.75%) en $25.25B volume, ondersteund door institutionele vraag. Ethereum volgt op $2.148,37 met +0.56% en $10.04B volume, terwijl altcoins gemengd presteren: SOL +0.86%, XRP -0.24%, BNB +0.13%. Weekend-liquiditeit blijft laag, wat consolidatie-activiteit suggereert voor maandag. Whale-concentratie in BTC en ETH-volumes duidt op voorzichtige accumulation. Volatiliteit naar verwachting beperkt tot de Amerikaanse marktopening volgende week."
+  "macro_impact": "De Federal Reserve-communicatie blijft onveranderd voor het weekend; beleggerssentiment rust in afwachting van maandagdata. Geopolitieke factoren hebben vooralsnog geen directe impact op crypto-prijsvorming.",
+  "whale_flows": "Whale-aktiviteit is gedoofd op zaterdag; $24.24B BTC-volume is verdeeld over grote positiebouwers. XRP (-0.02%) en BNB (+0.31%) tonen minimale professionele nettoflows.",
+  "funding_oi": "Funding rates blijven neutraal met lage leverage-posities in weekendhandel. Open Interest stabiliseert rond huidige prijsniveaus, wat een dreigende breakout of breakdown voorlopig afweert.",
+  "volatility_outlook": "Impliciete volatiliteit daalt in lijnstijl met verminderde weekendhandel. Verwacht wordt dat bewegingen onder de 2% blijven totdat Aziatische markten maandag openen; IV-reversal risico bij onverwachte macro-events.",
+  "full_report": "Cryptomarkten presenteren zich zaterdag 21 maart 2026 in een rustig consolidatiepatroon. Bitcoin $70,351 (+1.01%) ondersteunt institutionele accumulatie, terwijl Ethereum $2,147.25 (+0.77%) uit de slipstream volgt. De totale spot-volume van $37.5B+ over BTC en ETH geeft aan dat grote spelers voorzichtig hun positie aanpassen zonder significante prijsbewegingen. XRP ($1.43, -0.02%) en SOL ($89.61, +0.94%) vertonen weerbaarheid ondanks zwakker altseason-sentiment. Weekend-liquiditeit is beperkt; verwacht professioneel hervat handelsmomentum wanneer Aziatische sessies maandag activeren."
 }
