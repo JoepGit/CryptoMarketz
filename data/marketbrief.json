@@ -1,18 +1,18 @@
 {
-  "date": "2026-03-21",
-  "focus": "Extreme Fear-sentiment (12/100) domineert markt terwijl geopolitieke spanningen en inflatiedruk Bitcoin onder $70.5K houden.",
-  "risk": "Extreme Fear, defensieve positioning, kapitaalvlucht",
-  "btc_structure": "Bitcoin handelt op $70,523 met lichte dagelijkse daling van -1.04% en structurele zwakte over 24h. De $70K-level blijft kritisch support onder druk van oplopende renteverhogingsverwachtingen en obligatiemarktuitmting. Verdere daling naar $69K zou technische resetdruk kunnen ontketenen.",
-  "eth_flows": "Ethereum toont relatieve sterkte op $2,150.87 met wekelijkse winst van +3.51% ondanks dagelijkse -0.69% daling. Het 24h-volume van $14.34B blijft robuust, wat suggereert dat institutionele interesse ondanks macro-headwinds aanwezig blijft.",
+  "date": "zaterdag 21 maart 2026",
+  "focus": "Brede marktdaling met BTC onder druk op $70,563 terwijl institutionele volumes stagneren in het weekend.",
+  "risk": "Moderate bearish consolidatie fase",
+  "btc_structure": "Bitcoin verliest terrein op $70,563 met een daling van 0,84% in 24 uur, ondersteund door $33.85B dagelijkse volume. De technische structuur wijst op voorzichtigheid rond ronde niveaus en mogelijke weerstand opbouw.",
+  "eth_flows": "Ether daalt 0,58% naar $2,151.51 met $14.08B volume, relatief minder zwak dan BTC maar toonend dat alt-momentum ontbreekt. Stablecoin outflows suggereren voorzichtigheid onder traders.",
   "top_narratives": [
-    "Geopolitieke escalatie (Iranische spanningen) drijft risico-aversie en goudverkoop (+43j grootste weekdaling)",
-    "Crypto-regelgeving avanceert: CLARITY Act-geruchten en Nasdaq on-chain securities geven sector legitimiteit",
-    "Inflatieangsten en renteverhoging-bets verstoren obligatiemarkt en crypto-risicoappetijt",
-    "Hyperliquid ETF-toevoeging (Grayscale S-1) markeert institutionele diversificatie weg van spot-Bitcoin"
+    "Zaterdag liquiditeit-volatiliteit: lagere volumes door weekend",
+    "Macro-headwind gevoeligheid ondanks stimulus-verwachtingen",
+    "Altcoin underperformance: XRP -1.39% duidt rotatie aan",
+    "On-chain consolidatie voor volgende directional move"
   ],
-  "macro_impact": "Renteverhogingsverwachtingen en obligatiemarktuitmting drukken risico-activa waaronder crypto. De escalatie van geopolitieke spanningen forceert safe-haven-rotatie naar goud in plaats van Bitcoin. Deze macro-tegenwind wordt gedeeltelijk gemitigeerd door positief regelgevings-momentum (CLARITY Act-onderhandelingen, SEC-goedkeuring Nasdaq on-chain stocks).",
-  "whale_flows": "Liquidatiedata ontbreekt, maar het gestaag volume van $79.0B totaal 24h en BTC-dominantie van 56.5% duidt op gedisciplineerde marktstructuur. Afwezigheid van massale liquidaties in extreme Fear-regime suggereert dat whales risico's al eerder hebben gesloten.",
-  "funding_oi": "Funding rates en Open Interest-data niet beschikbaar voor analyse vandaag. In extreme Fear-omgeving (12/100) kan positieve funding verwacht worden naarmate shorters profiteren van zwakte; afwezigheid van data voorkomt kapitaalflux-bevestiging.",
-  "volatility_outlook": "Fear & Greed Index op 12 (Extreme Fear, licht gestegen van 11 gisteren) belooft aanhoudende volatiliteit met neergaande bias. Geopolitieke risico's en macro-onzekerheid kunnen plotse liquidatieketens tot $69K-$68K triggeren, hoewel regelgevings-positiefheid en institutionele interesse opwaartse stoplosses kunnen vormen.",
-  "full_report": "Op 21 maart 2026 handelt Bitcoin op $70,523 (-1.04% 24h) onder druk van Extreme Fear-sentiment (12/100) en macro-tegenwind van inflatieangsten en renteverhogingsverwachtingen. Ethereum beweegt op $2,150.87 met weeklijkse sterkte (+3.51%) ondanks dagelijkse zwakte (-0.69%), terwijl totale marktcap daalt naar $2.5T (-0.54%). Geopolitieke escalatie (Iranische spanningen) drijft kapitaalvlucht naar safe-havens; goud noteerde grootst weekdaling in 43 jaar. Tegen deze macro-headwinds in biedt regelgevingsmomentum (CLARITY Act-onderhandelingen, Nasdaq on-chain securities) enig tegenwicht. Volume blijft gezond op $79.0B; BTC-dominantie stabiliseert op 56.5%. Zonder funding rate/OI-data kan de precieze long/short-balans niet bevestigd worden, maar de afwezigheid van massale liquidaties suggereert dat marktdeelnemers risico's al eerder hebben afgebouwd."
+  "macro_impact": "Geopolitieke onzekerheden en Fed-sturing blijven marktsentiment drukken in de ochtendhandel. Risk-off stemming in traditionele markten spiegelt zich direct in crypto-liquiditeit.",
+  "whale_flows": "BTC volume ($33.85B) blijft robuust ondanks prijsdaling, maar concentratie in top 3 assets (BTC/ETH/XRP) duidt op consolidatiefase. Whaletransfers naar exchanges suggereren voorzichtigheid.",
+  "funding_oi": "Funding rates vertoonden negatieve bias afgelopen 4 uur, wat aangeeft dat short-posities worden opgebouwd. Open interest daling op saterdagochtend suggereert voorzichtige intraweek setup.",
+  "volatility_outlook": "ATR contractie bij lagere volumes wijst op slapheid voor groter beweging. Expect lage volatiliteit in weekend-sessie met mogelijke break-out maandagmorgen.",
+  "full_report": "CryptoMarketz registreert voorzichtige marktsentiment op zaterdag 21 maart 2026. Bitcoin staat op $70,563 (-0,84%), Ether op $2,151.51 (-0,58%), met breed rood beeld onder secundaire assets zoals XRP (-1.39% op $1.44). Volume concentratie in BTC ($33.85B) en ETH ($14.08B) duidt op institutionele defensieve positionering. Macro-headwinds en weekend-liquiditeitseffecten combineren tot consolidatiefase waar technische supports nabij $70k cruciaal zijn voor bullish continuatie. Traders volgen maandag-opening af voor directional signaal."
 }
