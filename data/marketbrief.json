@@ -1,18 +1,18 @@
 {
-  "date": "vrijdag 20 maart 2026",
-  "focus": "Gedempte marktbewegingen wijzen op voorzichtige positieopbouw voor paasweekend.",
-  "risk": "Lage volatiliteit, liquiditeitsdunning",
-  "btc_structure": "Bitcoin handelt stabiel rond $70,476 met bescheiden +0.48% winst in 24 uur en $39.38B volume. De weerstand blijft intact boven $71,000, terwijl support zich bevindt rond $69,500.",
-  "eth_flows": "Ethereum vertoont zeer gelimiteerde dynamiek op $2,146.43 met slechts +0.22% dagwinst en $17.05B handelsvolume. Institutionele inflows blijven voorzichtig door macro onzekerheid.",
+  "date": "zaterdag 21 maart 2026",
+  "focus": "Stabiele markt met minimale volatiliteit, BTC houdt steun rond $70.474 terwijl alts zwak presteren.",
+  "risk": "Laag, consolidatiefase dominant",
+  "btc_structure": "Bitcoin noteert $70.474 met +0.12% dagwinst op bescheiden volume van $37.09B. De houding blijft defensief zonder duidelijke directie; steun rond deze niveaus lijkt robuust maar doorbraak ontbreekt.",
+  "eth_flows": "Ethereum daalt licht naar $2.147,34 met -0.08% performance en $17.25B volume. De relatieve weerstand tegen BTC-zwakte suggereert voorzichtig institutioneel interesse, maar momentum ontbreekt voor opwaartse beweging.",
   "top_narratives": [
-    "Paasweekend-liquiditeitsdip",
-    "Macro geopolitieke spanningen",
-    "Trage institutionele accumulatie",
-    "Altcoin underperformance relative to BTC"
+    "Marktconsolidatie voor potentiële catalysts volgende week",
+    "Altseason signalen zwak; dominantie van BTC blijft hoog",
+    "Macro-onzekerheid drukt risicobereidheid",
+    "Weekendliquiditeit historisch laag, beweeglijkheid beperkt"
   ],
-  "macro_impact": "Afwachting rond rentebeslissingen blijft volatiliteit temperen. Geopolitieke risico's beperken risicoappetijt naar het weekeinde toe.",
-  "whale_flows": "Volume concentreert zich in BTC ($39.38B) en ETH ($17.05B), terwijl altcoins zwak presteren. SOL toont relatieve sterkte met +1.07%, suggererend selective risk-on attitude.",
-  "funding_oi": "Funding rates dalen naar neutraal territorium. Open Interest verwacht licht te dalen voordat mogelijke weekend volatiliteit toeneemt.",
-  "volatility_outlook": "Sub-1% range movement verwacht door lagere marktdeelname. Breakouts onwaarschijnlijk tot volgende week herneming van macro catalysts.",
-  "full_report": "De cryptomarkt handelt in narrow range met Bitcoin stabiel op $70,476 (+0.48%) en Ethereum op $2,146.43 (+0.22%), beiden met gezonde handelsvolumes van respectievelijk $39.38B en $17.05B. Altcoins vertonen gemengd beeld: SOL stijgt +1.07% naar $89.95, XRP daalt -0.33% naar $1.44, BNB stijgt +0.35% naar $642.2. De lage volatiliteit reflecteert paasweekend-liquiditeitsdunning en voorzichtigheid rond macro onzekerheden. Institutionele flows blijven gedempd, beperkend opgaande momentum. Traders positioneren zich defensief voor het weekeinde."
+  "macro_impact": "Weekendsessie kenmerkt zich door verminderde liquiditeit en institutionele absence. Macro-drivers (Fed-beleid, inflatiedata) zijn waarschijnlijk in rust tot volgende week.",
+  "whale_flows": "BTC volume ($37.09B) blijft dominant maar ETH-volume ($17.25B) laat relative outflow zien. Altcoins vertonen lage engagement, wijzend op voorzichtigheid van grote houders.",
+  "funding_oi": "Funding rates vermoedelijk neutraal tot negatief gegeven flat prijswerking. Open Interest waarschijnlijk stabiel; geen duidelijke Long/Short voorkeur waarneembaar.",
+  "volatility_outlook": "Lage volatiliteit verwacht; intraday swings waarschijnlijk onder 2%. Weekendkarakter leidt tot gedempte bewegingen en bredere spreads op exchanges.",
+  "full_report": "CryptoMarketz meldt een traag weekend met minieme marktbewegingen. Bitcoin handelt op $70.474 (+0.12%, vol $37.09B), Ethereum op $2.147,34 (-0.08%, vol $17.25B), terwijl XRP (-0.96%), BNB (-0.18%) en SOL (+0.38%) marginaal presteren. De markt vertoont consolidatiekenmerken zonder duidelijke directie; liquiditeit is laag en institutionele activiteit beperkt. Volatiliteit blijft onderdrukt en grote bewegingen zijn onwaarschijnlijk tot volgende week wanneer macro-catalysts en reguliere handelsactiviteit hervatten."
 }
