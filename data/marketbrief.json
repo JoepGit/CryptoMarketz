@@ -1,18 +1,18 @@
 {
   "date": "2026-03-21",
-  "focus": "Bitcoin stabiliseert rond $70.688 terwijl geopolitieke risico's en inflatiebezorgdheden marktsentiment onder druk zetten.",
-  "risk": "Extreme Fear, defensief, gelijktijdige schokken",
-  "btc_structure": "Bitcoin noteert op $70.688 met minimale beweging (-0.23% 24h, -0.09% 1h), wat wijst op consolidatie rond deze kritieke steun. De 7-daagse stijging van +0.05% is marginaal, terwijl de Fear & Greed Index op 12 (Extreme Fear) duidt op kapitulatie-signalen en mogelijke bottoming dynamics.",
-  "eth_flows": "Ethereum presteert relatief beter op $2.155,14 met +0.19% 24h en +3.00% 7d, ondersteund door $13.58B in 24h-volume. De outperformance ten opzichte van Bitcoin suggereert geleidelijke herallocation naar alt-risk.",
+  "focus": "Crypto-markt vertoont extreme angst terwijl geopolitieke spanningen en inflatiedruk de risico-sentiment drukken.",
+  "risk": "Extreme Fear, defensief positioneren",
+  "btc_structure": "Bitcoin handelt op $70,690 met minimale dagelijkse beweging (-0.19% 24h), maar blijft onder druk van stijgende renteverwachtingen en geopolitieke onzekerheden. Support ligt rond $70K; doorbreach zou verdere liquidaties kunnen triggeren.",
+  "eth_flows": "Ethereum toont relatieve sterkte op $2,154.8 (+0.31% 24h) en +3.66% weekly, aangedreven door institutional ETF-interesse. Volume blijft solide op $14.59B ondanks marktbreedte negatief.",
   "top_narratives": [
-    "Geopolitieke escalatie (Iran-oorlog) drijft risicoafkeer in traditionele markten en crypto",
-    "Inflatie-renteverwachtingen rijzen terwijl obligatiemarkt onder druk staat",
-    "Politieke activiteit rond crypto-regelgeving (CLARITY Act, market bill)",
-    "Institutionele penetratie via Wall Street: Nasdaq ETF-goed keuring en Grayscale Hyperliquid filing"
+    "Regulatoire vooruitgang: CLARITY Act deal-geruchten en SEC goedkeuring Nasdaq onchain stocks bieden lange termijn growth",
+    "Geopolitieke risico's: Oorlog drukt risicoappetijt, goud crasht hardst in 43 jaar wat crypto-volatiliteit kan vergroten",
+    "Stablecoin/Yield narratief: Senatoren bereiken compromis over yield-regels; Grayscale Hyperliquid ETF filing wijst naar verdere institutionalisering",
+    "Liquiditeitsdruk: Fear & Greed op 12 (Extreme Fear) verhoogt downside-risico's en margin-call-kans"
   ],
-  "macro_impact": "Stijgende renteverhogingsverwachtingen en obligatiemarktkrach vormen directe headwind voor risicoactiva. De gouden markt zag de grootste wekelijkse daling in 43 jaar, wat volatiliteit in alle asset klassen signaleert. Tegelijkertijd cre\u00ebert regelgevingsvoortgang (senatorscompromis, Nasdaq SEC-goed keuring) langetermijnvertrouwen ondanks korte-termijn-macro-turbulentie.",
-  "whale_flows": "Liquidatiedata niet beschikbaar, maar het totale marktvolume van $81.0B en dominante BTC-volume van $34.52B duiden op voorzichtige positionering. SOL en AVAX tonen bescheiden inflows (+0.70% en +0.51% 24h) terwijl DOT en UNI onder druk staan, wat selectieve risicoallocatie aangeeft.",
-  "funding_oi": "Funding rates en Open Interest data niet beschikbaar voor vandaag. Dit bemoeilijkt meting van leveraged sentiment en positionering; bij Extreme Fear-niveaus zijn monitoring van shortkwetsbaarheden en capitulation-liquidaties kritiek voor bottoming-timing.",
-  "volatility_outlook": "De Extreme Fear Index (12) en geopolitieke schokken garanderen aanhoudende volatiliteit, maar consolidatie rond $70.688 BTC suggereert korte-termijn-verdediging van sleutelsteun. Verwacht gerichte bewegingen op macro-triggers (rentebeslissingen, escalaatnieuws) en regelgevingsaankondigingen.",
-  "full_report": "Crypto-markten bevinden zich in Extreme Fear-territorium (Index: 12) terwijl Bitcoin ($70.688) en Ethereum ($2.155,14) rond sleutelsteun consolideren. De totale marketcap van $2,5T daalde -0.16% 24h, met BTC-dominantie stabiel op 56,5%. XRP (+3.47% 7d), ETH (+3.00% 7d) en DOT (+4.52% 7d) tonen wekelijkse sterkte ondanks korte-termijn-zwakte, terwijl UNI (-8.86% 7d) significant underperformance vertoont. Geopolitieke escalatie, inflatie-rentebezorgdheden en obligatiemarktkrach dicteren het macro-sentiment, maar institutionele regelgevingsvoortgang (Nasdaq ETF-goed keuring, senatorscompromis) biedt langetermijn-steun. Funding rates en liquidatiedata ontbreken, maar extreme fear-niveaus en consolidatie-patronen suggereren mogelijke capitulation-setup voor risicoavers geori\u00ebnteerde traders."
+  "macro_impact": "Oplopende renteverhogingsverwachtingen en bondmarkt-turbulentie (goud -43Y worst week) cre\u00ebren headwind voor risicoactiva waaronder crypto. Oorlogsrisico's duwen beleggerssentiment verder de negatieve kant op, terwijl regulatoire vooruitgang (CLARITY Act, Nasdaq onchain) lang termijn steun biedt.",
+  "whale_flows": "Liquidatiedata niet beschikbaar, maar extreem lage Fear & Greed Index (12) suggereert verhoogde liquidatierisico's. Totale marktcap daling van 0.16% (24h) en volume concentratie in BTC ($34.28B) wijzen op voorzichtige positieverkleining.",
+  "funding_oi": "Funding rate en Open Interest data niet beschikbaar; monitoring van deze metriek is cruciaal gegeven extreme Fear sentiment. Zonder positieve funding signals blijft long-positie-risico significant.",
+  "volatility_outlook": "Fear & Greed Index op 12 (Extreme Fear, stijging van 11) duidt op verdere consolidatie of downside-scenario's. Volatiliteit naar verwachting hoog blijven door geopolitieke catalysts en macro-turbulentie; kleine positie-rebalancing kan grote moves veroorzaken.",
+  "full_report": "Cryptomarkt geconfronteerd met multipele headwinds op 21 maart 2026: Bitcoin ($70,690, -0.19% 24h) en totale market cap ($2.5T, -0.16%) tonen weerstand tegen verkoop ondanks extreme Fear & Greed Index van 12. Ethereum ($2,154.8, +0.31%) toont relatieve sterkte, terwijl XRP ($1.44, -0.70%) en Cardano ($0.2649, -1.86%) correcties doorlopen. Geopolitieke onzekerheden (oorlog), stijgende rentetarieven en bondmarktturmoil (goud -43Y worst week) drukken risicoapetijt. Compenserend: regulatoire doorbraken (CLARITY Act, SEC Nasdaq-toestemming) en institutionele ETF-expansie (Grayscale Hyperliquid) bieden lange termijn-ondersteuning voor beleggersvertrouwen."
 }
