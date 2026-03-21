@@ -841,7 +841,7 @@ body::before{background:radial-gradient(circle at 18% 0%, rgba(155,89,214,.12), 
 
 </style>
 
-<style id="light-theme">
+<style id="light-theme" disabled>
 /* ═══════════════════════════════════════════════════════
    STRIPE-EXACT THEME Plus Jakarta Sans, rich color
    ═══════════════════════════════════════════════════════ */
@@ -1497,6 +1497,17 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
         <svg viewBox="0 0 24 24"><path d="M12 1l9 4v6c0 6-4 10-9 12C7 21 3 17 3 11V5l9-4z"/></svg>Admin</a></li>
     </ul>
     <div class="sb-foot">
+      <!-- Theme toggle -->
+      <button id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode"
+        style="display:flex;align-items:center;gap:8px;width:100%;padding:9px 10px;margin-bottom:10px;border-radius:8px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04);cursor:pointer;transition:background .15s,border-color .15s;color:inherit;">
+        <span id="theme-icon" style="font-size:15px;line-height:1;flex-shrink:0;">🌙</span>
+        <span id="theme-label" style="font-size:13px;font-weight:500;color:rgba(255,255,255,.55);">Dark mode</span>
+        <span style="margin-left:auto;display:flex;align-items:center;">
+          <span id="theme-track" style="display:inline-flex;width:34px;height:18px;border-radius:9px;background:rgba(155,89,214,.25);border:1px solid rgba(155,89,214,.3);align-items:center;padding:2px;transition:background .2s;">
+            <span id="theme-thumb" style="width:12px;height:12px;border-radius:50%;background:#9b59d6;transition:transform .2s;transform:translateX(0px);"></span>
+          </span>
+        </span>
+      </button>
       <div class="sb-user">
         <div class="sb-av" id="sb-av">J</div>
         <div><div class="sb-uname" id="sb-name"> </div><div class="sb-urole" id="sb-role">Member</div></div>
@@ -4613,6 +4624,47 @@ function closeLessonVideo(e) {
   overlay.classList.remove('open');
   document.body.style.overflow = '';
 }
+</script>
+<script>
+// ── THEME TOGGLE ──────────────────────────────────────────
+(function(){
+  var sheet  = document.getElementById('light-theme');
+  var icon   = document.getElementById('theme-icon');
+  var label  = document.getElementById('theme-label');
+  var track  = document.getElementById('theme-track');
+  var thumb  = document.getElementById('theme-thumb');
+  var btn    = document.getElementById('theme-toggle');
+
+  function applyTheme(light){
+    sheet.disabled = !light;
+    if(light){
+      icon.textContent  = '☀️';
+      label.textContent = 'Light mode';
+      label.style.color = '#7a90b0';
+      track.style.background = 'rgba(155,89,214,.55)';
+      thumb.style.transform  = 'translateX(16px)';
+      btn.style.background   = 'rgba(155,89,214,.08)';
+      btn.style.borderColor  = 'rgba(155,89,214,.18)';
+    } else {
+      icon.textContent  = '🌙';
+      label.textContent = 'Dark mode';
+      label.style.color = 'rgba(255,255,255,.55)';
+      track.style.background = 'rgba(155,89,214,.25)';
+      thumb.style.transform  = 'translateX(0px)';
+      btn.style.background   = 'rgba(255,255,255,.04)';
+      btn.style.borderColor  = 'rgba(255,255,255,.08)';
+    }
+    localStorage.setItem('zimr-theme', light ? 'light' : 'dark');
+  }
+
+  // Restore saved preference
+  var saved = localStorage.getItem('zimr-theme');
+  if(saved === 'light'){ applyTheme(true); }
+
+  window.toggleTheme = function(){
+    applyTheme(sheet.disabled); // if currently disabled (dark) → enable (light)
+  };
+})();
 </script>
 </body>
 </html>
