@@ -1,18 +1,18 @@
 {
   "date": "zaterdag 21 maart 2026",
-  "focus": "Stabiele markt met minimale volatiliteit, BTC houdt steun rond $70.474 terwijl alts zwak presteren.",
-  "risk": "Laag, consolidatiefase dominant",
-  "btc_structure": "Bitcoin noteert $70.474 met +0.12% dagwinst op bescheiden volume van $37.09B. De houding blijft defensief zonder duidelijke directie; steun rond deze niveaus lijkt robuust maar doorbraak ontbreekt.",
-  "eth_flows": "Ethereum daalt licht naar $2.147,34 met -0.08% performance en $17.25B volume. De relatieve weerstand tegen BTC-zwakte suggereert voorzichtig institutioneel interesse, maar momentum ontbreekt voor opwaartse beweging.",
+  "focus": "Consolidatiepatroon rond $70.7k geeft markt ademruimte na recente volatiliteit.",
+  "risk": "Lage volume, selectieve druk",
+  "btc_structure": "Bitcoin noteert op $70,767 met een minimale daling van -0.19% in 24 uur, terwijl het volume uitdunt naar $35.74B. Dit wijst op voorzichtigheid van grote partijen voor het weekend.",
+  "eth_flows": "Ethereum toont stabiliteit met een kleine winst van +0.08% op $2,155.93 en volume van $15.93B. Het lijkt erop dat institutionele interesse gering is tijdens het zaterdag-handelsmoment.",
   "top_narratives": [
-    "Marktconsolidatie voor potentiële catalysts volgende week",
-    "Altseason signalen zwak; dominantie van BTC blijft hoog",
-    "Macro-onzekerheid drukt risicobereidheid",
-    "Weekendliquiditeit historisch laag, beweeglijkheid beperkt"
+    "Weekend consolidatie in lage volatiliteit",
+    "Volume contractie duidt op afwachting",
+    "Altseason signalen zwak door BNB en XRP druk",
+    "Solana outperformance met +1.09% tegen trend"
   ],
-  "macro_impact": "Weekendsessie kenmerkt zich door verminderde liquiditeit en institutionele absence. Macro-drivers (Fed-beleid, inflatiedata) zijn waarschijnlijk in rust tot volgende week.",
-  "whale_flows": "BTC volume ($37.09B) blijft dominant maar ETH-volume ($17.25B) laat relative outflow zien. Altcoins vertonen lage engagement, wijzend op voorzichtigheid van grote houders.",
-  "funding_oi": "Funding rates vermoedelijk neutraal tot negatief gegeven flat prijswerking. Open Interest waarschijnlijk stabiel; geen duidelijke Long/Short voorkeur waarneembaar.",
-  "volatility_outlook": "Lage volatiliteit verwacht; intraday swings waarschijnlijk onder 2%. Weekendkarakter leidt tot gedempte bewegingen en bredere spreads op exchanges.",
-  "full_report": "CryptoMarketz meldt een traag weekend met minieme marktbewegingen. Bitcoin handelt op $70.474 (+0.12%, vol $37.09B), Ethereum op $2.147,34 (-0.08%, vol $17.25B), terwijl XRP (-0.96%), BNB (-0.18%) en SOL (+0.38%) marginaal presteren. De markt vertoont consolidatiekenmerken zonder duidelijke directie; liquiditeit is laag en institutionele activiteit beperkt. Volatiliteit blijft onderdrukt en grote bewegingen zijn onwaarschijnlijk tot volgende week wanneer macro-catalysts en reguliere handelsactiviteit hervatten."
+  "macro_impact": "Rentemarktbewegingen lijken de afgelopen nacht geminimaliseerd te zijn gegeven het weekend. De lage handelsvolumes duiden op afwachting van maandagopening en mogelijke macro-triggers.",
+  "whale_flows": "Whales reduceren posities voorzichtig; BTC-volume van $35.74B is laag voor het format, wat aangeeft dat grote orders worden uitgesteld. ETH-volume van $15.93B blijft relatief robuust.",
+  "funding_oi": "Funding rates liggen waarschijnlijk in neutrale zone gegeven de lage volatiliteit. OI-expansie wordt niet verwacht totdat het volume op maandag aantrekt.",
+  "volatility_outlook": "Verwacht lage intraday-volatiliteit gedurende het weekend. Echte marktbewegingen zullen waarschijnlijk volgen na de Aziatische marktopening maandag.",
+  "full_report": "CryptoMarketz observeert een kalme zaterdag met BTC stabiel op $70,767 (-0.19%), ETH vlak op $2,155.93 (+0.08%), en XRP onder druk op $1.45 (-0.64%). Alleen Solana onderscheidt zich met een winnaar-prestatie van +1.09% op $90.52. Het totale volume over alle toptickets bedraagt ruim $57B, maar dit is laag voor het weekend-handelsformaat. De markt lijkt in afwachtende modus gezet tot institutionele traders maandagochtend terugkeren. Risk-regime blijft beperkt gegeven de consolidatie rond kritieke steunniveaus."
 }
