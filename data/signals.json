@@ -1,5 +1,17 @@
 [
   {
+    "id": 1774158854576,
+    "coin": "BNB/USD",
+    "type": "SELL",
+    "entry": "633.25",
+    "tp": "623",
+    "sl": "643",
+    "note": "24h -1.42%, 7d -3.95% sterke downtrend, 1h -0.27% negatief momentum",
+    "timestamp": "2026-03-22T05:54:13.359Z",
+    "generated_at": "Sun, 22 Mar 2026 05:54:13 GMT",
+    "source": "claude-bot"
+  },
+  {
     "id": 1774155157385,
     "coin": "ETH/USD",
     "type": "SELL",
