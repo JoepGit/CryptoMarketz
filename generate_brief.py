@@ -50,51 +50,12 @@ gainers = [f"{SYMBOLS.get(c['id'],c['symbol'].upper())} {round(c.get('price_chan
 market_block = "\n".join(price_lines)
 print(f"✅ {len(market_data)} coins | BTC dom {btc_dom}% | Total mcap ${total_mcap}T")
 
-# ── 2. Bybit public API: funding rates + open interest ────────────────────
-print("\n📈 Fetching Bybit funding rates + OI...")
-funding_lines = []
-oi_lines = []
-BYBIT_PAIRS = ["BTCUSDT", "ETHUSDT", "SOLUSDT", "BNBUSDT", "XRPUSDT"]
-
-for pair in BYBIT_PAIRS:
-    try:
-        ticker = json.loads(fetch(
-            f"https://api.bybit.com/v5/market/tickers?category=linear&symbol={pair}"
-        ))
-        item = ticker["result"]["list"][0]
-        fr = round(float(item.get("fundingRate", 0)) * 100, 4)
-        oi_val = float(item.get("openInterest", 0))
-        sym = pair.replace("USDT", "")
-        price = next((c["current_price"] for c in market_data if SYMBOLS.get(c["id"]) == sym), 1)
-        oi_usd = round(oi_val * price / 1e9, 2)
-        funding_lines.append(f"{pair}: {fr:+.4f}%")
-        oi_lines.append(f"{pair}: OI ${oi_usd}B")
-    except Exception as e:
-        funding_lines.append(f"{pair}: n/a ({e})")
-        oi_lines.append(f"{pair}: n/a")
-
-print("💥 Fetching liquidations from Bybit...")
-liq_lines = []
-for pair in ["BTCUSDT", "ETHUSDT"]:
-    try:
-        liq = json.loads(fetch(
-            f"https://api.bybit.com/v5/market/recent-trade?category=linear&symbol={pair}&limit=200"
-        ))
-        trades = liq["result"]["list"]
-        buy_vol  = sum(float(t["size"]) for t in trades if t.get("side") == "Buy")
-        sell_vol = sum(float(t["size"]) for t in trades if t.get("side") == "Sell")
-        sym = pair.replace("USDT", "")
-        price = next((c["current_price"] for c in market_data if SYMBOLS.get(c["id"]) == sym), 1)
-        liq_lines.append(
-            f"{pair}: buy vol {round(buy_vol * price / 1e6, 1)}M USD | sell vol {round(sell_vol * price / 1e6, 1)}M USD (last 200 trades)"
-        )
-    except Exception as e:
-        liq_lines.append(f"{pair}: n/a ({e})")
-
-funding_block = "\n".join(funding_lines)
-oi_block      = "\n".join(oi_lines)
-liq_block     = "\n".join(liq_lines) if liq_lines else "Not available"
-print(f"✅ Funding: {funding_block}")
+# ── 2. Funding / OI — not available from GitHub Actions (APIs blocked) ──────
+print("\n📈 Funding/OI APIs not reachable from GitHub Actions — skipping...")
+funding_block = "Not available (API blocked from GitHub Actions servers)"
+oi_block      = "Not available (API blocked from GitHub Actions servers)"
+liq_block     = "Not available (API blocked from GitHub Actions servers)"
+print("⚠️  Funding/OI data skipped — Claude will analyse based on price action only")
 
 # ── 3. Fear & Greed Index ─────────────────────────────────────────────────
 print("\n😨 Fetching Fear & Greed...")
@@ -132,9 +93,9 @@ news_block = "\n".join(news_items[:10]) if news_items else "Not available"
 print(f"✅ {len(news_items)} news headlines")
 
 # ── 5. Build prompt ───────────────────────────────────────────────────────
-prompt = f"""You are the lead analyst at ZIMR Capital, writing the daily market brief for {today}.
+prompt = f"""You are the lead analyst at CryptoMarketz, writing the daily market brief for {today}.
 
-CRITICAL: You MUST write ONLY in English. Every single word must be English. No Dutch, no other languages.
+IMPORTANT: Write ONLY in English. Be detailed, analytical and professional.
 Each section must be at least 4-6 sentences. Use the exact prices and figures from the live data below.
 
 ═══ LIVE PRICE DATA — use ONLY these prices ═══
@@ -148,14 +109,14 @@ Total crypto market cap: ${total_mcap}T ({mcap_chg:+.2f}% 24h)
 24h total volume: ${total_vol}B
 BTC dominance: {btc_dom}% | ETH dominance: {eth_dom}%
 
-═══ BYBIT FUTURES: FUNDING RATES ═══
+═══ BINANCE FUTURES: FUNDING RATES ═══
 {funding_block}
 (positive = longs pay shorts = bullish sentiment, negative = shorts pay longs = bearish)
 
-═══ BYBIT FUTURES: OPEN INTEREST ═══
+═══ BINANCE FUTURES: OPEN INTEREST ═══
 {oi_block}
 
-═══ RECENT TRADE VOLUME (proxy for liquidation pressure) ═══
+═══ RECENT LIQUIDATIONS ═══
 {liq_block}
 
 ═══ FEAR & GREED INDEX ═══
@@ -165,10 +126,10 @@ BTC dominance: {btc_dom}% | ETH dominance: {eth_dom}%
 {news_block}
 
 INSTRUCTIONS:
-- Write ENTIRELY in English — absolutely no Dutch words anywhere in the response
+- Write ENTIRELY in English — no Dutch words anywhere
 - Every section must be 4-6 sentences minimum, rich with analysis and context
 - Reference exact prices, percentages and figures from the data above
-- Analyse what the funding rates and OI mean for market direction
+- Note that funding/OI data is unavailable; base direction analysis on price action, Fear & Greed, and news
 - Connect the news headlines to price action where relevant
 - Write like a professional analyst briefing institutional traders
 
@@ -186,9 +147,9 @@ Return ONLY a valid JSON object, no markdown, no explanation:
     "Narrative 4: 2-3 sentence description"
   ],
   "macro_impact": "4-6 sentences: macro context from the news, geopolitical factors, regulatory developments, and how they are impacting crypto sentiment and price action",
-  "whale_flows": "4-6 sentences: analysis of trade volume data, what it reveals about leverage in the market, volume interpretation, and what large players appear to be doing",
+  "whale_flows": "4-6 sentences: analysis of liquidation data, what it reveals about leverage in the market, volume interpretation, and what large players appear to be doing",
   "funding_oi": "4-6 sentences: detailed analysis of the funding rates across pairs, what the open interest levels mean, whether the market is overleveraged, and trading implications",
-  "volatility_outlook": "4-6 sentences: volatility assessment based on Fear & Greed index score, trade volumes, funding rates, and what kind of moves traders should prepare for in the next 24-48 hours",
+  "volatility_outlook": "4-6 sentences: volatility assessment based on Fear & Greed index score, liquidation levels, funding rates, and what kind of moves traders should prepare for in the next 24-48 hours",
   "full_report": "6-8 sentences: complete executive overview incorporating exact prices, Fear & Greed score, BTC dominance, key news catalysts, funding environment, and overall market outlook for the day"
 }}"""
 
@@ -196,7 +157,7 @@ Return ONLY a valid JSON object, no markdown, no explanation:
 print("\n🤖 Generating brief with Claude...")
 payload = json.dumps({
     "model": "claude-haiku-4-5-20251001",
-    "max_tokens": 3000,
+    "max_tokens": 4096,
     "messages": [{"role": "user", "content": prompt}]
 }).encode()
 
