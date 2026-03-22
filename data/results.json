@@ -1,5 +1,44 @@
 [
   {
+    "id": 1773996079442,
+    "coin": "BNB/USD",
+    "type": "SELL",
+    "entry": "646.58",
+    "tp": "633.79",
+    "sl": "658.41",
+    "result": "win",
+    "pnl": "+-1.98%",
+    "resolved_price": 632.13,
+    "signal_date": "2026-03-20T08:41:13.728Z",
+    "resolved_at": "2026-03-22T02:21:49.382Z"
+  },
+  {
+    "id": 1773952739986,
+    "coin": "XRP/USD",
+    "type": "BUY",
+    "entry": "1.45",
+    "tp": "1.53",
+    "sl": "1.41",
+    "result": "loss",
+    "pnl": "-2.76%",
+    "resolved_price": 1.41,
+    "signal_date": "2026-03-19T20:38:52.203Z",
+    "resolved_at": "2026-03-22T02:21:49.383Z"
+  },
+  {
+    "id": 1773949626839,
+    "coin": "ETH/USD",
+    "type": "SELL",
+    "entry": "2145",
+    "tp": "2104",
+    "sl": "2194",
+    "result": "win",
+    "pnl": "+-1.91%",
+    "resolved_price": 2091.23,
+    "signal_date": "2026-03-19T19:47:04.486Z",
+    "resolved_at": "2026-03-22T02:21:49.383Z"
+  },
+  {
     "id": 1773949631199,
     "coin": "BTC/USD",
     "type": "BUY",
