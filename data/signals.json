@@ -1,5 +1,29 @@
 [
   {
+    "id": 1774214866999,
+    "coin": "ETH/USD",
+    "type": "SELL",
+    "entry": "2059",
+    "tp": "1980",
+    "sl": "2100",
+    "note": "4H downtrend, prijs onder beide EMA's ($2130.47/$2162.52), RSI 32.3 bearish momentum, 24h low $2055.32 support.",
+    "timestamp": "2026-03-22T21:27:45.716Z",
+    "generated_at": "Sun, 22 Mar 2026 21:27:45 GMT",
+    "source": "claude-bot"
+  },
+  {
+    "id": 1774214873880,
+    "coin": "SOL/USD",
+    "type": "SELL",
+    "entry": "85.6",
+    "tp": "80.0",
+    "sl": "90.0",
+    "note": "24h -4.94% en 1h -1.67% momentum bearish, ondersteund door 7d -2.91% downtrend zonder chart data.",
+    "timestamp": "2026-03-22T21:27:45.716Z",
+    "generated_at": "Sun, 22 Mar 2026 21:27:45 GMT",
+    "source": "claude-bot"
+  },
+  {
     "id": 1774207567699,
     "coin": "XRP/USD",
     "type": "SELL",
@@ -33,30 +57,6 @@
     "note": "24h -1.42%, 7d -3.95% sterke downtrend, 1h -0.27% negatief momentum",
     "timestamp": "2026-03-22T05:54:13.359Z",
     "generated_at": "Sun, 22 Mar 2026 05:54:13 GMT",
-    "source": "claude-bot"
-  },
-  {
-    "id": 1774155157385,
-    "coin": "ETH/USD",
-    "type": "SELL",
-    "entry": "2119.68",
-    "tp": "2061.53",
-    "sl": "2155.93",
-    "note": "4H bearish trend, prijs onder EMA20 ($2154.87), RSI 41.8 laag. Verkoop richting 24h low support level.",
-    "timestamp": "2026-03-22T04:52:28.917Z",
-    "generated_at": "Sun, 22 Mar 2026 04:52:28 GMT",
-    "source": "claude-bot"
-  },
-  {
-    "id": 1773952741938,
-    "coin": "SOL/USD",
-    "type": "BUY",
-    "entry": "88.9",
-    "tp": "92.5",
-    "sl": "86.2",
-    "note": "7d bullish trend +3.43%, 1h +0.11% positief momentum. Support rond $86. Risk/Reward 1:2.04",
-    "timestamp": "2026-03-19T20:38:52.203Z",
-    "generated_at": "Thu, 19 Mar 2026 20:38:52 GMT",
     "source": "claude-bot"
   }
 ]

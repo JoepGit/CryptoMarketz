@@ -1,5 +1,31 @@
 [
   {
+    "id": 1774155157385,
+    "coin": "ETH/USD",
+    "type": "SELL",
+    "entry": "2119.68",
+    "tp": "2061.53",
+    "sl": "2155.93",
+    "result": "win",
+    "pnl": "+-2.74%",
+    "resolved_price": 2036.88,
+    "signal_date": "2026-03-22T04:52:28.917Z",
+    "resolved_at": "2026-03-22T21:27:41.719Z"
+  },
+  {
+    "id": 1773952741938,
+    "coin": "SOL/USD",
+    "type": "BUY",
+    "entry": "88.9",
+    "tp": "92.5",
+    "sl": "86.2",
+    "result": "loss",
+    "pnl": "-3.04%",
+    "resolved_price": 85.6,
+    "signal_date": "2026-03-19T20:38:52.203Z",
+    "resolved_at": "2026-03-22T21:27:41.719Z"
+  },
+  {
     "id": 1774146120615,
     "coin": "XRP/USD",
     "type": "SELL",
