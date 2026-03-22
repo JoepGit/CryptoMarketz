@@ -1,5 +1,17 @@
 [
   {
+    "id": 1774168547838,
+    "coin": "BTC/USD",
+    "type": "SELL",
+    "entry": "68654",
+    "tp": "67000",
+    "sl": "69500",
+    "note": "4H downtrend, prijs onder EMA20 ($70402.97), RSI 42.5 bearish momentum, 24h low $68413 support niveau.",
+    "timestamp": "2026-03-22T08:35:40.975Z",
+    "generated_at": "Sun, 22 Mar 2026 08:35:40 GMT",
+    "source": "claude-bot"
+  },
+  {
     "id": 1774158854576,
     "coin": "BNB/USD",
     "type": "SELL",
@@ -45,18 +57,6 @@
     "note": "7d bullish trend +3.43%, 1h +0.11% positief momentum. Support rond $86. Risk/Reward 1:2.04",
     "timestamp": "2026-03-19T20:38:52.203Z",
     "generated_at": "Thu, 19 Mar 2026 20:38:52 GMT",
-    "source": "claude-bot"
-  },
-  {
-    "id": 1773949624661,
-    "coin": "BTC/USD",
-    "type": "SELL",
-    "entry": "70417",
-    "tp": "68934",
-    "sl": "71960",
-    "note": "4H trend BEARISH met RSI 17.1 (oversold), prijs $69381 onder beide EMA's ($71920.86 en $71960.48). Daling van 24h high $75937 naar current price. Risk/Reward 1:1.5",
-    "timestamp": "2026-03-19T19:47:04.486Z",
-    "generated_at": "Thu, 19 Mar 2026 19:47:04 GMT",
     "source": "claude-bot"
   }
 ]
