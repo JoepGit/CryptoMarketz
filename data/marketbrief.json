@@ -1,18 +1,18 @@
 {
-  "date": "zondag 22 maart 2026",
-  "focus": "Marktbrede correctie van -1.4% tot -2.5% signaleert voorzichtigheid voor maandagochtend Amerikaanse handelsstart.",
-  "risk": "Rood, verhoogde verkoopdruk",
-  "btc_structure": "Bitcoin daalt naar $69.160 met een 24h verlies van -2.17% en $27.21B volume. De steunzone rond $68.500 wordt kritisch gemonitord voor weekend-holders. Technische breuk onder deze level zou verdere afvloeiing naar $67.000 kunnen triggeren.",
-  "eth_flows": "Ethereum handelt op $2.114,41 met -1.81% dagverlies en $11.17B volume. De ETH/BTC ratio verslechtert, wat erop duidt dat institutionele liquiditeit prioriteit geeft aan Bitcoin defensie. Stablecoin-outflows van major exchanges suggereren voorzichtige positieverkleining.",
+  "date": "2026-03-22",
+  "focus": "Extreme fear sentiment (10/100) domineert markt terwijl geopolitieke risico's en macro headwinds Bitcoin onder $69.200 drukken.",
+  "risk": "Extreme Fear, liquidaties risico, geopolitieke instabiliteit",
+  "btc_structure": "Bitcoin noteert op $69.101 met een dagverlies van -2.27% en weekverlies van -3.41%, onder druk van geopolitieke onzekerheid rond Iran. De $69.200-range vormt een kritische steunzone; doorbreking zou verdere liquidaties kunnen triggeren. Volatiliteit blijft hoog ondanks een handelsvolume van $27.35B.",
+  "eth_flows": "Ethereum vertoont relatieve sterkte op $2.109,34 met slechts -2.01% dagverlies en +0.26% weekstijging, wat aangeeft dat institutionele kapitaalvluchten minder intens zijn. Het volume van $11.56B suggereert voorzichtige accumulatie in dip.",
   "top_narratives": [
-    "Weekend-correctie na sterke maarchlijn",
-    "Macro-onzekerheid rond rentes en Fed-signalen",
-    "Institutionele position-squeezing voor maandagopen",
-    "Altcoin-underperformance (XRP -2.51%, SOL -1.83%)"
+    "Geopolitieke risico's domineren sentiment - Trump Iran ultimatum zorgt voor risicomijding",
+    "Extreme Fear Index op 10/100 - Bitcoin options tonen all-time high downside protection premiums",
+    "Sector liquidaties - crypto bedrijven kappen honderden banen door zwakke markten en AI concurrentie",
+    "DeFi reconstructie - institutioneel kapitaal herpositioneert zich in fixed-income protocols"
   ],
-  "macro_impact": "Stijgende obligatierentes (waarschijnlijk Fed-forward guidance) drukken op risicoactiva globaal. Weekend-nieuws uit centrale bankencircuits kan sleutelgevoeligheid vormen voor Maandag Aziatische sessie.",
-  "whale_flows": "Volume-concentratie bij BTC ($27.21B) versus ETH ($11.17B) duidt op whale-defensie rond grote ronde nummers. Liquidatiebids zichtbaar onder $68.500 BTC; xrp-volume daalt tot $1.51B, wat zwakke retail-betrokkenheid suggereert.",
-  "funding_oi": "Funding rates staan waarschijnlijk negatief op leverage exchanges na twee dagen buying panic. Open Interest zal maandag herkalibreren afhankelijk van pre-Aziatische macro-prints.",
-  "volatility_outlook": "ATR-compressie suggereert dat breakout volgt in volgende 48 uur. Weekend-gapping-risico hoog; verwacht 2-4% swings Maandag bij Aziatische open.",
-  "full_report": "CryptoMarketz ziet een uniforme marktbrede dip van -1.4% tot -2.5% op zondag 22 maart 2026, met Bitcoin terugtrekkend naar $69.160 (-2.17%), Ethereum naar $2.114,41 (-1.81%), en altcoins zoals XRP ($1.41, -2.51%) en SOL ($88.53, -1.83%) nog harder stellend. Volume blijft solide in BTC ($27.21B) maar vertoont rotation naar cash op altcoin-pairs. Macro-triggers (waarschijnlijk Fed-communicatie of obligatierente-bewegingen) hebben risico-sentiment aangetast richting weekend-sluiting. Whale-flows tonen defensieve positionering rond psychologische niveaus; liquidatie-cascades onder $68.500 BTC vormen directe katalysator voor diepere correctie. Technische setup suggereert breakout Maandag bij Aziatische sessie; traders worden gewaarschuwd voor gap-risico's bij weekend-resume."
+  "macro_impact": "Geopolitieke spanningen (Trump Iran ultimatum) veroorzaken risicovermijding en doen beleggers naar defensive assets vluchten, wat cryptomarkten onder druk zet. Sector-brede banenbesnoeiingen wijzen op structurele marktdaling voorbij normale cycli. Regelgevingsonduidelijkheid (Nevada Kalshi-blok, CFTC crypto-collateral richtlijnen) remmen institutionele toetredingssnelheid.",
+  "whale_flows": "Liquidatiegegevens ontbreken, maar het extreme fear sentiment en all-time high put premiums duiden op massieve long-liquidaties in de afgelopen dagen. Volumes van $27.35B (BTC) en $11.56B (ETH) zijn substantieel maar ondergesneuveld door verkoopdrift, wat systemic deleveraging aangeeft.",
+  "funding_oi": "Financieringspercentages en open interest data ontbreken, doch de extreme fear-index (10/100) en put-call ratios duiden sterk op bearish positionering waarbij shorts dominant zijn. Dit suggereert dat schuldgraad afbouwstress plaatsvindt en verdere liquidatierisico's bestaan bij volgende prijsschokken.",
+  "volatility_outlook": "Volatiliteit zal aanzienlijk blijven gegeven de Extreme Fear score (10/100) en geopolitieke onzekerheden. Nadere weeksluitingen kunnen verdere short-dekking triggeren of omgekeerd liquidatiespiralen versnellen. Verwacht op korte termijn 3-5% zweepdagen.",
+  "full_report": "De cryptocurrency-markt noteert vandaag onder extreme druk met Bitcoin op $69.101 (-2.27% 24h), Ethereum op $2.109,34 (-2.01% 24h) en totale marktcap van $2.46T (-1.92%). Het Fear & Greed Index staat op 10 (Extreme Fear), ondersteund door all-time high bitcoin options downside protection premiums en geopolitieke risico's via Trump's Iran ultimatum. Financieringspercentages en open interest data zijn niet beschikbaar, maar massieve liquidaties worden gesuggereerd door extreme sentiment en put-call ratios. Sector-brede banenbesnoeiingen en regelgevingsonduidelijkheid remmen herstelbeweging, terwijl DeFi-reconstructie initiatieven institutioneel kapitaal voorzichtig repositioneren. Technische steun op $69.200 is kritisch; doorbreking zou volgende liquidatiecascades triggeren."
 }
