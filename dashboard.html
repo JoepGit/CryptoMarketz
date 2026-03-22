@@ -1181,6 +1181,40 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
 .ws-ticker::before { background: linear-gradient(90deg, #fff, transparent) !important; }
 .ws-ticker::after  { background: linear-gradient(-90deg, #fff, transparent) !important; }
 
+
+/* ── API KEY MANAGEMENT ── */
+function getApiKey(){
+  return localStorage.getItem('zimr_claude_api_key') || '';
+}
+function setApiKey(key){
+  localStorage.setItem('zimr_claude_api_key', key.trim());
+}
+function promptForApiKey(callback){
+  var existing = getApiKey();
+  var key = window.prompt(
+    'Voer je Anthropic API key in (begint met sk-ant-...):\n\n' +
+    'Je kunt een key aanmaken op: console.anthropic.com\n' +
+    'De key wordt lokaal opgeslagen in je browser.',
+    existing
+  );
+  if(key && key.trim().startsWith('sk-')){
+    setApiKey(key.trim());
+    if(callback) callback(key.trim());
+    return key.trim();
+  } else if(key !== null) {
+    alert('Ongeldige API key. Een geldige key begint met "sk-ant-..."');
+  }
+  return null;
+}
+function getOrRequestApiKey(callback){
+  var key = getApiKey();
+  if(key && key.startsWith('sk-')) {
+    if(callback) callback(key);
+    return key;
+  }
+  return promptForApiKey(callback);
+}
+
 /* ── AI ANALYST ── */
 .ai-prompts, .ai-settings { background: #fff !important; }
 .ai-prompts-title, .ai-settings-title {
@@ -2634,9 +2668,10 @@ input, select, textarea, .li, .lk-i, .ai-textarea { min-height: 38px !important;
             </div>
             <div style="display:flex;align-items:center;gap:10px">
               <button class="ai-clear" onclick="aiClear()" id="ai-clear-btn" style="display:none">CLEAR CHAT</button>
+              <button class="ai-clear" onclick="promptForApiKey(function(k){if(k)aiAddMessage('ai','✅ API key opgeslagen! Je kunt nu vragen stellen.')})" id="ai-apikey-btn" title="Anthropic API key instellen" style="opacity:0.7">🔑 API KEY</button>
               <div class="ai-status">
                 <div class="ai-status-dot" id="ai-status-dot"></div>
-                <span id="ai-status-txt">Online</span>
+                <span id="ai-status-txt" id="ai-status-txt">Online</span>
               </div>
             </div>
           </div>
@@ -3988,6 +4023,23 @@ function eduTab(idx,btn){
 var aiHistory=[];
 var aiTyping=false;
 
+// Show API key status on load
+(function checkApiKeyOnLoad(){
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', checkApiKeyOnLoad);
+    return;
+  }
+  setTimeout(function(){
+    var statusTxt = document.getElementById('ai-status-txt');
+    var statusDot = document.getElementById('ai-status-dot');
+    var key = getApiKey();
+    if(!key || !key.startsWith('sk-')){
+      if(statusTxt) statusTxt.textContent = 'API key vereist';
+      if(statusDot) statusDot.style.background = '#e74c3c';
+    }
+  }, 500);
+})();
+
 function aiUserInitial(){
   var name=(document.getElementById('sb-name')||{}).textContent||'U';
   return name.charAt(0).toUpperCase();
@@ -4106,9 +4158,31 @@ async function aiSend(){
   aiShowThinking();
 
   try{
+    var apiKey = getApiKey();
+    if(!apiKey || !apiKey.startsWith('sk-')){
+      aiRemoveThinking();
+      aiAddMessage('ai', '⚠️ **Geen API key ingesteld.** Klik op de knop hieronder om je Anthropic API key in te voeren.\n\n[Klik hier om API key in te stellen]');
+      // Offer key setup inline
+      var setupBtn = document.createElement('button');
+      setupBtn.textContent = '🔑 API Key instellen';
+      setupBtn.style.cssText = 'margin:8px 0 0 0;padding:8px 16px;background:var(--accent);color:#000;border:none;border-radius:4px;cursor:pointer;font-family:Inter,sans-serif;font-size:14px;font-weight:600';
+      setupBtn.onclick = function(){
+        promptForApiKey(function(k){ if(k) aiAddMessage('ai','✅ API key opgeslagen! Stel je vraag opnieuw.'); });
+      };
+      var msgs = document.getElementById('ai-messages');
+      if(msgs && msgs.lastChild) msgs.lastChild.appendChild(setupBtn);
+      aiTyping=false;
+      aiSetStatus(false);
+      return;
+    }
     var resp=await fetch('https://api.anthropic.com/v1/messages',{
       method:'POST',
-      headers:{'Content-Type':'application/json'},
+      headers:{
+        'Content-Type':'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
       body:JSON.stringify({
         model:'claude-sonnet-4-20250514',
         max_tokens:1000,
@@ -4117,13 +4191,30 @@ async function aiSend(){
       })
     });
     var data=await resp.json();
-    var reply=(data.content&&data.content[0]&&data.content[0].text)||'Sorry, er ging iets mis. Probeer het opnieuw.';
-    aiRemoveThinking();
-    aiHistory.push({role:'assistant',content:reply});
-    aiAddMessage('ai',reply);
+    if(data.error){
+      aiRemoveThinking();
+      var errMsg = data.error.message || 'Onbekende fout';
+      if(data.error.type === 'authentication_error'){
+        errMsg = '❌ **API key ongeldig.** Klik hieronder om een nieuwe key in te voeren.';
+        var fixBtn = document.createElement('button');
+        fixBtn.textContent = '🔑 API Key wijzigen';
+        fixBtn.style.cssText = 'margin:8px 0 0 0;padding:8px 16px;background:var(--accent);color:#000;border:none;border-radius:4px;cursor:pointer;font-family:Inter,sans-serif;font-size:14px;font-weight:600';
+        fixBtn.onclick = function(){ promptForApiKey(function(k){ if(k) aiAddMessage('ai','✅ API key bijgewerkt! Stel je vraag opnieuw.'); }); };
+        aiAddMessage('ai', errMsg);
+        var msgs2 = document.getElementById('ai-messages');
+        if(msgs2 && msgs2.lastChild) msgs2.lastChild.appendChild(fixBtn);
+      } else {
+        aiAddMessage('ai', '⚠️ API fout: ' + errMsg);
+      }
+    } else {
+      var reply=(data.content&&data.content[0]&&data.content[0].text)||'Sorry, er ging iets mis. Probeer het opnieuw.';
+      aiRemoveThinking();
+      aiHistory.push({role:'assistant',content:reply});
+      aiAddMessage('ai',reply);
+    }
   } catch(e){
     aiRemoveThinking();
-    aiAddMessage('ai','**Connection error** Could not reach the AI. Check your internet connection and try again.');
+    aiAddMessage('ai','**Verbindingsfout** Kon de AI niet bereiken. Controleer je internetverbinding en probeer opnieuw. (' + e.message + ')');
   }
 
   aiTyping=false;
@@ -4478,77 +4569,6 @@ function initBriefNavigation(){
 
 async function loadMarketBrief(){
 
-  // ── Fallback demo brief shown when no live data file is present ──
-  const DEMO = {
-    date: new Date().toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'}),
-    risk:  'Moderate — elevated macro uncertainty, crypto-specific momentum remains intact',
-    focus: 'BTC consolidation range + ETH fee compression narrative going into next catalyst',
-    full_report: `Bitcoin is currently navigating a technically significant consolidation zone following its most recent impulse leg higher. Price action is compressing between well-defined support and resistance, with the market digesting recent gains before committing to the next directional move. The broader structure remains constructive on higher timeframes, though short-term traders should be alert to the potential for a liquidity sweep before continuation.
-
-Ethereum continues to lag Bitcoin on a relative basis, which is a common pattern during early-stage bull cycles when capital concentrates into the market leader. However, fee activity on the base layer is beginning to tick up, and Layer 2 volumes are at multi-month highs — both of which historically precede periods of ETH outperformance. Watch for a BTC dominance peak as a potential trigger.
-
-Macro conditions are providing a mixed backdrop. Equity markets remain resilient despite ongoing central bank communication around higher-for-longer rates, and gold is holding near all-time highs — a signal that liquidity preferences are shifting. Crypto has historically benefited from this environment with a slight lag, suggesting the current window is one for accumulation rather than aggressive momentum chasing.
-
-Overall, the environment favours a measured approach: identify strong setups, respect stop levels, and avoid overextending into low-volume periods.`,
-    btc_structure: `Bitcoin is consolidating between $92,400 (key support, previous breakout level) and $98,800 (local resistance, high-volume node from last week's push). The 4H structure shows a series of higher lows since the last correction, which is a textbook sign of buyers absorbing supply at progressively higher prices.
-
-The daily RSI sits at 58 — firmly in bullish territory without being overbought. This reading gives room for another leg higher without requiring a significant cooldown first. The 200-day moving average at $71,200 is well below current price, confirming the longer-term trend is unambiguously up.
-
-Key levels to watch:
-— $92,400: Must hold on a daily close basis to maintain structure
-— $98,800: A clean break above this on volume would target the $104K–$106K zone
-— $87,000: Only a move below this level would invalidate the current bullish read
-
-On-chain, short-term holder supply in profit is at 89%, historically a zone where some distribution occurs but not enough to end a trend. Long-term holders continue to accumulate — their holdings grew by 14,200 BTC in the past 7 days.`,
-    eth_flows: `Ethereum is holding above its 50-day moving average but has underperformed BTC by approximately 12% over the past 30 days. This divergence is worth monitoring but is not yet a concern — ETH typically lags during the early phases of a broader rally before reclaiming ground.
-
-The key technical level is $3,280, which has acted as both support and resistance over the past six weeks. A sustained close above this level would significantly improve the short-term picture and likely attract momentum buyers. Below $3,050, the thesis weakens considerably.
-
-Ethereum fundamentals are quietly improving. Daily active addresses are up 8% month-on-month, average transaction fees have stabilised after the post-Dencun compression, and stablecoin issuance on Ethereum mainnet is rising — historically a leading indicator of on-chain activity picking up.
-
-Layer 2 ecosystems (Base, Arbitrum, Optimism) collectively processed 4.2M transactions yesterday, a new record. While much of this value doesn't flow directly back to ETH mainnet fees yet, the growth in users and developers building on Ethereum-aligned infrastructure is a long-term positive for the asset.`,
-    funding_oi: `Funding rates across major perpetual markets are in positive territory but not stretched. BTC perps are funding at approximately +0.012% per 8 hours — this is elevated relative to the 30-day average of +0.006%, suggesting moderate long bias, but nowhere near the +0.04%–+0.08% readings that typically precede sharp corrections.
-
-Open interest has grown by $2.1B over the past 72 hours, accompanying the recent price advance. This is a healthy sign — price rising alongside OI expansion indicates new money entering the market rather than short covering. However, it also means the market is more susceptible to a sharp move if a catalyst triggers forced liquidations.
-
-Total liquidations in the past 24 hours: $94M long, $31M short. The long-side bias in liquidations reflects the elevated positioning, but the absolute numbers are manageable and do not indicate systemic stress.
-
-Watch for: funding rates exceeding +0.025% on BTC or ETH as a signal to reduce leveraged long exposure. At current levels, holding spot or low-leverage positions is supported by the data.`,
-    volatility_outlook: `Implied volatility (IV) on BTC options is sitting at 58% annualised, down from the 74% peak seen during last month's breakout. This compression in IV is often interpreted as the market becoming complacent, which can precede sharp moves in either direction.
-
-The term structure is in mild backwardation for the front week (higher near-term IV than longer-dated), suggesting traders are pricing some uncertainty around upcoming macro catalysts — specifically the Fed minutes release and a major tech earnings cycle that could influence risk appetite broadly.
-
-Realised volatility over the past 14 days has been 44% annualised, meaning current IV represents a 14-point premium. This is a reasonable level — not cheap enough to make long volatility strategies obviously attractive, but not so expensive that selling volatility is a clear edge either.
-
-Practical implication: the current environment suits directional trades with defined risk (e.g., stop-loss orders or options spreads) rather than pure delta-neutral volatility strategies.`,
-    top_narratives: [
-      'AI x Crypto infrastructure (compute marketplaces, on-chain inference) — strongest momentum sector of the month',
-      'Bitcoin Layer 2s gaining traction — Stacks, Merlin, and BOB seeing developer activity and TVL growth',
-      'RWA (Real World Assets) on-chain — institutional interest driving stablecoin and tokenised T-bill growth',
-      'DePIN (Decentralised Physical Infrastructure) — Helium Mobile and Render leading a quiet recovery',
-      'Ethereum restaking and liquid restaking tokens — EigenLayer points farming winding down, real yield narrative emerging'
-    ],
-    macro_impact: `Global macro conditions remain the dominant external variable for crypto markets. The Federal Reserve held rates steady at the last meeting, but the accompanying statement struck a cautious tone on the timeline for cuts — markets have now priced out two of the four cuts originally expected for this year.
-
-US 10-year Treasury yields are at 4.52%, near the upper end of their recent range. Historically, crypto has shown a moderate negative correlation with real yields, so a sustained move above 4.6% on the 10-year would warrant attention. Conversely, any dovish surprise — weaker-than-expected inflation data or labour market softness — could act as a significant catalyst for risk assets including crypto.
-
-Dollar Index (DXY) is at 104.8, slightly elevated but not at extreme levels. A DXY above 107 has historically corresponded with headwinds for crypto; below 102 tends to be supportive. Current levels are neutral.
-
-Gold at $2,380/oz near all-time highs is a constructive signal — it suggests capital is seeking alternatives to fiat, and historically crypto has captured a portion of this flow with a 4–8 week lag.
-
-Equity markets (S&P 500) are up 8% YTD, which broadly supports risk appetite. However, concentration in mega-cap tech means the index is somewhat misleading — breadth is narrower than the headline number suggests, and any rotation away from tech could briefly weigh on crypto sentiment given the retail investor overlap.`,
-    whale_flows: `On-chain data shows a notable divergence between exchange flows and OTC desk activity over the past week. Exchange net flows have been moderately negative (more BTC leaving exchanges than arriving), which is traditionally interpreted as a bullish signal — coins moving to cold storage suggest holders are not preparing to sell.
-
-Specifically, 18,400 BTC left centralised exchanges in the past 7 days, bringing exchange-held BTC to its lowest level since January 2018. This structural supply reduction is a meaningful backdrop factor.
-
-Large transaction data (>$1M equivalent) shows a 23% week-over-week increase in volume, with the buy/sell ratio at 1.38 — indicating that large actors are net buyers at current levels. This is consistent with the on-chain accumulation narrative.
-
-Notable individual movements:
-— A wallet associated with a known early miner moved 2,100 BTC to an unknown address (not an exchange), suggesting long-term hold intent rather than immediate sell pressure
-— Grayscale's GBTC saw its first net inflow week since converting to a spot ETF, adding $310M
-— CME futures open interest hit a new all-time high of $12.4B, confirming that institutional participation is growing`
-  };
-
   const set = (id, value) => {
     const el = document.getElementById(id);
     if(el) el.innerText = value || '';
@@ -4566,27 +4586,106 @@ Notable individual movements:
     return str.length > size ? str.slice(0, size).trim() + '...' : str;
   };
 
-  let data = DEMO; // default to demo
+  // Show loading state
+  const today = new Date().toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'});
+  set('brief-date', `Generating brief for ${today}...`);
+  set('brief-summary', 'Market brief laden...');
 
+  // Try to load from /data/marketbrief.json first (server-generated, most up to date)
+  let data = null;
   try{
     const res = await fetch('/data/marketbrief.json?t=' + Date.now(), {cache:'no-store'});
     if(res.ok){
       const fetched = await res.json();
-      // Detect Dutch content — if found, keep demo (English)
       const sampleText = [
         fetched.full_report, fetched.summary, fetched.btc_structure, fetched.btc,
         fetched.macro_impact, fetched.macro
       ].filter(Boolean).join(' ').toLowerCase();
-
-      const dutchWords = ['op ','de ','en ','van ','het ','met ','een ','voor ','niet ','maar ','ook ','dat ','zijn ','wordt ','heeft '];
+      const dutchWords = ['op ','de ','en ','van ','het ','met ','een ','voor ','niet ','maar '];
       const dutchScore = dutchWords.filter(w => sampleText.includes(w)).length;
-
-      // Only use fetched data if it has real content AND is in English
-      if(fetched && dutchScore < 4 && (fetched.btc || fetched.btc_structure || fetched.full_report || fetched.summary)){
+      // Only use if fresh (within 6 hours) and English
+      const briefDate = fetched.generated_at ? new Date(fetched.generated_at) : null;
+      const ageHours = briefDate ? (Date.now() - briefDate) / 3600000 : 99;
+      if(fetched && dutchScore < 4 && ageHours < 6 && (fetched.btc || fetched.btc_structure || fetched.full_report || fetched.summary)){
         data = fetched;
       }
     }
-  }catch(e){ /* network error — use demo */ }
+  }catch(e){ /* no server file — will generate via AI */ }
+
+  // If no fresh server data, generate live via Claude API
+  if(!data){
+    try{
+      const prompt = `Today is ${new Date().toLocaleDateString('en-GB',{weekday:'long',day:'2-digit',month:'long',year:'numeric'})}.
+
+You are a professional crypto market analyst. Write a comprehensive daily market brief for today. Use current market knowledge up to your training cutoff. Be analytical, specific, and professional.
+
+Respond ONLY with a valid JSON object (no markdown, no backticks) with exactly these keys:
+{
+  "date": "<today's date as DD Mon YYYY>",
+  "risk": "<one-line risk regime, e.g. Moderate — elevated volatility with bullish bias>",
+  "focus": "<one-line primary market focus for today>",
+  "full_report": "<4 paragraph executive overview of current crypto market conditions>",
+  "btc_structure": "<2-3 paragraphs on Bitcoin market structure, key levels, on-chain signals>",
+  "eth_flows": "<2 paragraphs on Ethereum performance, Layer 2, fundamentals>",
+  "funding_oi": "<2 paragraphs on funding rates, open interest, liquidation data>",
+  "volatility_outlook": "<2 paragraphs on implied/realised volatility, options market>",
+  "top_narratives": ["<narrative 1>", "<narrative 2>", "<narrative 3>", "<narrative 4>", "<narrative 5>"],
+  "macro_impact": "<2-3 paragraphs on macro: Fed, rates, DXY, gold, equities impact on crypto>",
+  "whale_flows": "<2 paragraphs on whale on-chain activity, exchange flows, large transactions>"
+}`;
+
+      const briefApiKey = getApiKey();
+      if(!briefApiKey || !briefApiKey.startsWith('sk-')){
+        throw new Error('No API key configured');
+      }
+      const resp = await fetch('https://api.anthropic.com/v1/messages', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-api-key': briefApiKey,
+          'anthropic-version': '2023-06-01',
+          'anthropic-dangerous-direct-browser-access': 'true'
+        },
+        body: JSON.stringify({
+          model: 'claude-sonnet-4-20250514',
+          max_tokens: 4000,
+          messages: [{ role: 'user', content: prompt }]
+        })
+      });
+
+      if(resp.ok){
+        const aiData = await resp.json();
+        const rawText = (aiData.content && aiData.content[0] && aiData.content[0].text) || '';
+        // Strip any markdown fences just in case
+        const cleaned = rawText.replace(/^```json\s*/,'').replace(/```\s*$/,'').trim();
+        try{
+          data = JSON.parse(cleaned);
+          data._source = 'live-ai';
+        }catch(parseErr){
+          console.warn('Brief JSON parse error:', parseErr, rawText.slice(0,200));
+        }
+      }
+    }catch(e){
+      console.warn('Claude API brief generation failed:', e);
+    }
+  }
+
+  // Final fallback: workflow not yet run message
+  if(!data){
+    data = {
+      date: today,
+      risk: 'Wacht op eerste workflow run',
+      focus: 'De GitHub Actions workflow is nog niet gedraaid. Trigger hem handmatig via GitHub.',
+      full_report: 'De dagelijkse market brief wordt automatisch gegenereerd door een GitHub Actions workflow.\n\nDe workflow staat ingesteld om elke dag om 08:30 (Amsterdam) te draaien.\n\nOm de eerste brief nu te genereren:\n1. Ga naar je GitHub repository\n2. Klik op "Actions" tabblad\n3. Klik op "Daily Market Brief"\n4. Klik op "Run workflow"\n\nNa ~30 seconden verschijnt hier automatisch de verse market brief.',
+      btc_structure: 'Wordt gegenereerd na eerste workflow run.',
+      eth_flows: 'Wordt gegenereerd na eerste workflow run.',
+      funding_oi: 'Wordt gegenereerd na eerste workflow run.',
+      volatility_outlook: 'Wordt gegenereerd na eerste workflow run.',
+      top_narratives: ['Workflow nog niet gedraaid — trigger via GitHub Actions'],
+      macro_impact: 'Wordt gegenereerd na eerste workflow run.',
+      whale_flows: 'Wordt gegenereerd na eerste workflow run.'
+    };
+  }
 
   const btc        = data.btc_structure || data.btc || '';
   const eth        = data.eth_flows     || data.eth || '';
@@ -4599,7 +4698,7 @@ Notable individual movements:
   const focus      = data.focus  || '';
   const fullReport = data.full_report || data.summary || compact(btc, eth, macro, whales, funding, volatility);
 
-  set('brief-date',        data.date ? `Updated ${data.date}` : 'Updated --');
+  set('brief-date',        data.date ? `Updated ${data.date}${data._source === 'live-ai' ? ' · Live AI' : ''}` : 'Updated --');
   set('brief-report-date', data.date || '--');
 
   set('brief-btc',        btc        || 'No BTC data available.');
