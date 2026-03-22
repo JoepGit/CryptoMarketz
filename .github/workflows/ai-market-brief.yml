@@ -16,8 +16,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Generate AI market brief via Claude
         env:
-          CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
-        run: python3 generate_brief.py
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python3 generate_market_brief.py
       - name: Commit and push updated brief
         run: |
           git config user.name "github-actions[bot]"
