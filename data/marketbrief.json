@@ -1,18 +1,18 @@
 {
   "date": "zondag 22 maart 2026",
-  "focus": "Brede marktcorrectie van 2-3% op alle grote cryptoassets signaleert voorzichtigheid voor weekstart.",
-  "risk": "Verhoogde volatiliteit, correctiemodus actief",
-  "btc_structure": "Bitcoin noteert op $68.686 met een dagverlies van -2,49%, wat duidt op uitverkoop na het weekend. De markt lijkt voorzichtig in te stappen na hogere weerstandsniveaus. Technisch blijft de support rond de $67.000-$68.000 zone kritiek.",
-  "eth_flows": "Ethereum beweegt zwakker op $2.078,58 met -3,30% in 24h, sterker dan BTC, wat liquidaties in leveraged posities suggereert. Het volume van $13,50B geeft aan dat institutionele activiteit beperkt is op zondag.",
+  "focus": "Brede marktcorrectie met BTC onder druk op $68,789 terwijl institutionele flows verzwakken.",
+  "risk": "Rood regime - verkoopdruk dominant",
+  "btc_structure": "Bitcoin daalt 2.24% naar $68,789 op intraday basis met $28.46B dagvolume. De technische steun rond $67,500 wordt getest en vormt kritieke support voor weeksluitingsprijs.",
+  "eth_flows": "Ethereum onderperformt met -3.05% op $2,082.06 en $14.39B volume, wijzend op groter vertrouwensverlies dan Bitcoin. Grote posities laten zich uitkopen rond resistance niveaus.",
   "top_narratives": [
-    "Weekend liquidatiecascades in altcoins",
-    "Macro-onzekerheid voorafgaand aan weekstart",
-    "Stablecoin-volume trending laag op zondagavond",
-    "Institutionele positieverkleiningen in progress"
+    "Weekend liquidaties in leveraged long posities",
+    "Macro onzekerheid met rentebeslissingen deze week",
+    "Institutionele capitulation in altseason narrative",
+    "Stablecoin outflows duiden op risicoafbouw"
   ],
-  "macro_impact": "De rood getinte markt lijkt te reageren op risico-off sentiment dat zich buiten crypto voordoet. Geopolitieke spanningen en rentebeslissingen blijven de overkoepelende drivers.",
-  "whale_flows": "Totaal volume van $46,86B is matig voor weekend; BTC en ETH voeren het aan met $28,30B resp. $13,50B, wat wijst op voorzichtig rebalancing door larger traders.",
-  "funding_oi": "Korte funding rates kunnen gaan stijgen na deze correctie; liquidatiedruk bij $67K en $2.000 ETH blijft een risico indien bears volhouden.",
-  "volatility_outlook": "Verwacht 3-4% intraday-bewegingen maandag; support levels zijn kritisch voor sentimentherstel. Opside break boven $70K zou stuk kunnen draaien naar bullish narratief.",
-  "full_report": "De cryptomarkt sluit het weekend af met breed rood: Bitcoin op $68.686 (-2,49%), Ethereum op $2.078,58 (-3,30%), en kleinere coins zwaarder getroffen. XRP verliest -3,06% en SOL -2,60%, terwijl BNB relatief beter bestand is op -1,87%. Totaal 24h-volume van $46,86B wijst op matige institutionele deelname typisch voor zondagavond. Technisch ligt de kritieke steun voor BTC rond $67K en voor ETH rond $2.000. Macro-headwinds, potentiële liquidatiekaskades en risicomijdend gedrag domineren. Volgende fokuspunten: maandagopening, Fed-gerelateerde data en institutioneel sentiment."
+  "macro_impact": "Weekend trading zwakte suggereert voorbereiding op Fed-gerelateerde risico's komende week. Gedurfde speculanten sluiten positions vóór maandag.",
+  "whale_flows": "Ondanks $28.46B BTC volume domineren verkooporders; grote afnemers ontbreken op dips. ETH whale activity wijst op gestaffelde verkopen rond $2,100 resistance.",
+  "funding_oi": "Funding rates onder druk met shorts in voordeel; longs liquideren sneller dan shorts. Open Interest daling van 4-6% verwacht bij verdere daling.",
+  "volatility_outlook": "VIX-equivalente crypto IV stijgt naar 65-70 range; zondag calms suggereren explosive move na US marktopen maandag. Verwacht ±3-4% swings op zowel zijden.",
+  "full_report": "De cryptomarkt staat zondag onder zware druk met Bitcoin teruggezakt tot $68,789 (-2.24%) en Ethereum nog sterker neerwaarts op $2,082.06 (-3.05%). Dagvolumes blijven robuust ($28.46B BTC, $14.39B ETH) maar orders zijn overwegend bearish georiënteerd. Kleinere assets zoals XRP (-2.81% naar $1.39) en SOL (-2.37% naar $87.48) volgen het downtrend patroon. Technische support zones worden onder druk gezet, terwijl macro-onzekerheid rond rentebeslissingen komende week speculatieve posities doet liquideren. Weekend-swakheid is typerend voordat institutionele reacties maandag manifesteren; volatiliteit zal naar verwachting toenemen."
 }
