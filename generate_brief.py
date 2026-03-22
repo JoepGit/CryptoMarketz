@@ -126,28 +126,31 @@ BTC dominance: {btc_dom}% | ETH dominance: {eth_dom}%
 {news_block}
 
 INSTRUCTIONS:
-- Write ONLY in English. No Dutch.
-- 3-4 sentences per section. Reference exact prices and figures.
-- Funding/OI unavailable — analyse based on price action, Fear & Greed, news.
+- Write ONLY in English. No Dutch words anywhere.
+- Every section must be 5-7 sentences — detailed, analytical, professional.
+- Use exact prices, percentages and figures from the data above.
+- Funding/OI data unavailable — base leverage analysis on price action, Fear & Greed, and volume.
+- Connect news headlines to price action where relevant.
+- Write like a senior analyst briefing institutional traders.
 
-Return ONLY valid JSON, no markdown:
+Return ONLY valid JSON, no markdown, no backticks:
 {{
   "date": "{today}",
-  "focus": "one sentence: primary market focus today",
-  "risk": "risk regime in 4-6 words",
-  "btc_structure": "3-4 sentences: BTC price, 24h/7d change, key levels, market structure",
-  "eth_flows": "3-4 sentences: ETH price, vs BTC performance, key levels",
+  "focus": "one sentence: primary market focus today based on the data",
+  "risk": "risk regime in 4-6 words e.g. High Risk — Extreme Fear territory",
+  "btc_structure": "5-7 sentences: exact BTC price, 1h/24h/7d performance, key support and resistance levels, what price action and volume reveal about market structure, whether bulls or bears are in control, and what traders should watch",
+  "eth_flows": "5-7 sentences: exact ETH price, performance vs BTC, 24h and 7d change, volume context, Layer 2 ecosystem context from news, key levels, and ETH/BTC ratio outlook",
   "top_narratives": [
-    "Narrative 1: 2 sentence description",
-    "Narrative 2: 2 sentence description",
-    "Narrative 3: 2 sentence description",
-    "Narrative 4: 2 sentence description"
+    "Narrative 1: 3 sentence description of the most important theme driving markets today with specific data points",
+    "Narrative 2: 3 sentence description with specific data points",
+    "Narrative 3: 3 sentence description with specific data points",
+    "Narrative 4: 3 sentence description with specific data points"
   ],
-  "macro_impact": "3-4 sentences: macro context, news impact on crypto",
-  "whale_flows": "3-4 sentences: volume analysis, what large players are doing",
-  "funding_oi": "3-4 sentences: market leverage assessment based on available data",
-  "volatility_outlook": "3-4 sentences: volatility outlook based on Fear & Greed and price action",
-  "full_report": "4-5 sentences: executive overview with exact prices, Fear & Greed, BTC dominance, outlook"
+  "macro_impact": "5-7 sentences: macro context from the news, regulatory developments, geopolitical factors, how traditional markets affect crypto, Fed policy implications, DXY and risk-on/off sentiment, and macro outlook for next 48 hours",
+  "whale_flows": "5-7 sentences: analysis of volume patterns across top coins, what volume data reveals about institutional vs retail participation, which coins show unusual volume, what gainers and losers tell us about rotation, and what large players appear to be positioning for",
+  "funding_oi": "5-7 sentences: leverage and positioning assessment based on price action and Fear & Greed, whether market appears overleveraged, what extreme fear implies for reversals or continuation, liquidation risk assessment, and trading implications",
+  "volatility_outlook": "5-7 sentences: volatility assessment based on Fear & Greed score, recent price action, volume patterns, upcoming catalysts from news, expected trading ranges for BTC and ETH, and specific risk management recommendations",
+  "full_report": "7-9 sentences: complete executive overview with exact BTC price, ETH price, total market cap, Fear & Greed score, BTC dominance, top gainers and losers, key news catalysts, macro environment, market structure, and 24-48 hour outlook"
 }}"""
 
 # ── 6. Claude API call ────────────────────────────────────────────────────
@@ -176,22 +179,12 @@ except urllib.error.HTTPError as e:
     raise
 
 text = data['content'][0]['text'].strip()
-# Strip alle mogelijke markdown fences (```json, ```, etc.)
-import re
-text = re.sub(r'^```[a-z]*\s*', '', text)
-text = re.sub(r'\s*```$', '', text)
-text = text.strip()
+if text.startswith('```'):
+    text = '\n'.join(text.split('\n')[1:])
+if text.endswith('```'):
+    text = '\n'.join(text.split('\n')[:-1])
 
-# Log eerste 200 chars voor debugging
-print(f"Claude response start: {text[:200]}")
-
-try:
-    brief = json.loads(text)
-except json.JSONDecodeError as e:
-    print(f"❌ JSON parse error: {e}")
-    print(f"Response length: {len(text)} chars")
-    print(f"Last 200 chars: {text[-200:]}")
-    raise
+brief = json.loads(text.strip())
 brief['date'] = today
 
 os.makedirs('data', exist_ok=True)
