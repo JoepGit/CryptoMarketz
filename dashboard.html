@@ -4601,12 +4601,8 @@ async function loadMarketBrief(){
         fetched.full_report, fetched.summary, fetched.btc_structure, fetched.btc,
         fetched.macro_impact, fetched.macro
       ].filter(Boolean).join(' ').toLowerCase();
-      const dutchWords = ['op ','de ','en ','van ','het ','met ','een ','voor ','niet ','maar '];
-      const dutchScore = dutchWords.filter(w => sampleText.includes(w)).length;
-      // Only use if fresh (within 6 hours) and English
-      const briefDate = fetched.generated_at ? new Date(fetched.generated_at) : null;
-      const ageHours = briefDate ? (Date.now() - briefDate) / 3600000 : 99;
-      if(fetched && dutchScore < 4 && ageHours < 6 && (fetched.btc || fetched.btc_structure || fetched.full_report || fetched.summary)){
+      // Accept the data if it has content (Dutch or English both fine)
+      if(fetched && (fetched.btc || fetched.btc_structure || fetched.full_report || fetched.summary)){
         data = fetched;
       }
     }
