@@ -1,14 +1,14 @@
 [
   {
-    "id": 1774146119767,
+    "id": 1774155157385,
     "coin": "ETH/USD",
     "type": "SELL",
-    "entry": "2089",
-    "tp": "2061",
-    "sl": "2110",
-    "note": "1H bearish trend, prijs ver onder EMA20 ($2125.44) en EMA50 ($2139.54), RSI 17.4 extreem laag, 4H ook bearish onder EMAs. Risk/Reward 1:2.8",
-    "timestamp": "2026-03-22T02:21:52.242Z",
-    "generated_at": "Sun, 22 Mar 2026 02:21:52 GMT",
+    "entry": "2119.68",
+    "tp": "2061.53",
+    "sl": "2155.93",
+    "note": "4H bearish trend, prijs onder EMA20 ($2154.87), RSI 41.8 laag. Verkoop richting 24h low support level.",
+    "timestamp": "2026-03-22T04:52:28.917Z",
+    "generated_at": "Sun, 22 Mar 2026 04:52:28 GMT",
     "source": "claude-bot"
   },
   {
