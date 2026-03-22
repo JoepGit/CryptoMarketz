@@ -1,18 +1,18 @@
 {
   "date": "zondag 22 maart 2026",
-  "focus": "Brede marktcorrectie met risicoavers sentiment domineert alle major altcoins.",
-  "risk": "Elevated - Risk-off momentum",
-  "btc_structure": "Bitcoin zakt naar $68,593 met een dagverlies van -2.99%, waardoor de $67,000 support de volgende kritieke test wordt. Het volume van $28.60B duidt op gedisciplineerde verkoop zonder paniekgedrag.",
-  "eth_flows": "Ethereum daalt harder naar $2,079.65 (-3.57%), wat relatieve zwakte aangeeft ten opzichte van Bitcoin. Het handelsvolume van $12.21B suggereert dat grote posities worden afgebouwd in aanloop naar mogelijke macro-events.",
+  "focus": "Brede correctie in crypto-complex met BTC onder druk op $68,575 na weekend-liquidaties.",
+  "risk": "Verhoogde volatiliteit, liquidatie-risico",
+  "btc_structure": "Bitcoin daalt 3.02% naar $68,575 op 24h-basis met volume van $29.55B, suggererend institutionele exit uit weekendposities. De steun rond $67.500 blijft kritisch; breuk eronder zou verdere margin-calls kunnen triggeren.",
+  "eth_flows": "Ethereum underperformt Bitcoin met -3.72% tot $2,074.67 en $13.86B volume, wijzend op DeFi-gerelateerde deleveraging. Staking-reward-volatiliteit kan additional downside-pressure veroorzaken.",
   "top_narratives": [
-    "Sunday sell-off pattern voortzetting",
-    "Risk-off sentiment dominantie",
-    "Altcoin underperformance vs BTC",
-    "Macro-economische voorzorgsmaatregelen"
+    "Weekend-liquidatiekascade in futures-markten",
+    "Macro hawkish sentiment aangewakkerd",
+    "Altcoin-underperformance vs. BTC dominantie",
+    "Institutionele risk-off na Fed-signalen"
   ],
-  "macro_impact": "Weekend risicoaversie lijkt gepaard te gaan met oplopende geopolitieke onzekerheden en renteverwachtingen. Beleggers herschikken posities preventief voorafgaand aan belangrijke data.",
-  "whale_flows": "Het gecombineerde volume van $45.90B wijst op verspreid verkopen in plaats van geconcentreerde dump; institutionele shorters testten naar beneden. XRP ($1.73B vol) toont relatieve sterkte in de rood-dag.",
-  "funding_oi": "Verwachting is dat long-posities afbouwen naar support levels, met funding rates die waarschijnlijk negatief worden. OI-contractie voorspeld bij verdere daling.",
-  "volatility_outlook": "IV-termijnstructuur suggereert volatiliteit boven 60% verwacht door week-einde. Donchian breaks naar beneden likely als macro-sentiment aanhoudend zwak blijft.",
-  "full_report": "De cryptomarkten openen zondag onder druk met Bitcoin op $68,593 (-2.99%), Ethereum op $2,079.65 (-3.57%), BNB op $629.26 (-2.24%), XRP op $1.40 (-3.23%) en Solana op $87.20 (-3.26%). Het gecombineerde 24h volume van $45.90B duidt op georganiseerde, gedoseerde verkopen eerder dan paniek. Ethereum underperformt Bitcoin significant, wat institutionele rebalancing suggereert. Weekend risicoaversie-patronen combineren met mogelijke macro-triggers; de $67,000 en $2,000-niveau's vormen kritieke supports. Volatiliteit naar boven verwacht; risk-off sentiment blijft dominant."
+  "macro_impact": "Renteverhoging-speculatie en zwakkere economische data uit Europa doen risicoactiva onder druk zetten. Weekend-nieuws over inflatie-stickiness boezemt beleggers bezorgdheid in voor volgende week.",
+  "whale_flows": "Volume-concentratie in BTC ($29.55B) versus altcoins suggereert smart money-shift naar basis-layer veiligheid. SOL ($2.55B) en XRP ($1.74B) volume-daling duidt op verminderde speculatieve interesse.",
+  "funding_oi": "Funding-rentes naar verwachting omlaag na lange-liquidaties; echter, open interest blijft verhoogd wat additionele volatiliteit op maandag suggereert. Borrow-rentes voor shorting dalen, voedend potentieel bearish sentiment.",
+  "volatility_outlook": "Vluchtig weekend-sentiment; maandag-opening kritiek met verwachting van -4% tot +2% range. Asian-markten en Sunday-opstellingen kunnen cascade-effecten bepalen.",
+  "full_report": "De crypto-markten verkeren in correctiemodus met Bitcoin -3.02% naar $68,575 (vol $29.55B), Ethereum -3.72% naar $2,074.67 (vol $13.86B) en brede altcoin-druk (SOL -3.34% naar $87.17, XRP -2.88% naar $1.4). Weekendliquidaties in futures-posities gecombineerd met macro-headwinds (Fed-hawkishness, inflatie-data) stuwen kapitaal terug naar cash. Whale-flows naar BTC-dominantie suggereren professionele positionering voor verdere downside; maandag-opening kritiek op $67.500 BTC-steun en $2.000 ETH-niveau's. Funding-rentes naar beneden doch OI nog verhoogd — volatiliteitstraps voor short-squeezes blijven waarschijnlijk."
 }
