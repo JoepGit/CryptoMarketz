@@ -1,18 +1,18 @@
 {
   "date": "zondag 22 maart 2026",
-  "focus": "Brede correctie in crypto-complex met BTC onder druk op $68,575 na weekend-liquidaties.",
-  "risk": "Verhoogde volatiliteit, liquidatie-risico",
-  "btc_structure": "Bitcoin daalt 3.02% naar $68,575 op 24h-basis met volume van $29.55B, suggererend institutionele exit uit weekendposities. De steun rond $67.500 blijft kritisch; breuk eronder zou verdere margin-calls kunnen triggeren.",
-  "eth_flows": "Ethereum underperformt Bitcoin met -3.72% tot $2,074.67 en $13.86B volume, wijzend op DeFi-gerelateerde deleveraging. Staking-reward-volatiliteit kan additional downside-pressure veroorzaken.",
+  "focus": "Brede marktcorrectie met BTC onder druk op $68.792 na weekend-profit-taking.",
+  "risk": "Rood regime, correctie-fase actief",
+  "btc_structure": "Bitcoin daalt 3.01% naar $68.792 in 24 uur met volume van $29.13B, wat duidt op systematische liquidaties. De verliesmomentum verspreidt zich over alle major altcoins zonder technische steun.",
+  "eth_flows": "Ethereum onderperformt met -3.82% naar $2.078,95 en $13.52B volume, wijzend op gedwongen selling uit staking-posities. Liquidatiedruk concentreert zich rond de $2.050-support.",
   "top_narratives": [
-    "Weekend-liquidatiekascade in futures-markten",
-    "Macro hawkish sentiment aangewakkerd",
-    "Altcoin-underperformance vs. BTC dominantie",
-    "Institutionele risk-off na Fed-signalen"
+    "Weekend-correctie en profit-taking na wekenlange rally",
+    "Macro-rentes blijven hogere niveaus aanhouden",
+    "Altseason-momentum verbrokkelt onder BTC-druk",
+    "Ethereum-staking yields onder druk door outflows"
   ],
-  "macro_impact": "Renteverhoging-speculatie en zwakkere economische data uit Europa doen risicoactiva onder druk zetten. Weekend-nieuws over inflatie-stickiness boezemt beleggers bezorgdheid in voor volgende week.",
-  "whale_flows": "Volume-concentratie in BTC ($29.55B) versus altcoins suggereert smart money-shift naar basis-layer veiligheid. SOL ($2.55B) en XRP ($1.74B) volume-daling duidt op verminderde speculatieve interesse.",
-  "funding_oi": "Funding-rentes naar verwachting omlaag na lange-liquidaties; echter, open interest blijft verhoogd wat additionele volatiliteit op maandag suggereert. Borrow-rentes voor shorting dalen, voedend potentieel bearish sentiment.",
-  "volatility_outlook": "Vluchtig weekend-sentiment; maandag-opening kritiek met verwachting van -4% tot +2% range. Asian-markten en Sunday-opstellingen kunnen cascade-effecten bepalen.",
-  "full_report": "De crypto-markten verkeren in correctiemodus met Bitcoin -3.02% naar $68,575 (vol $29.55B), Ethereum -3.72% naar $2,074.67 (vol $13.86B) en brede altcoin-druk (SOL -3.34% naar $87.17, XRP -2.88% naar $1.4). Weekendliquidaties in futures-posities gecombineerd met macro-headwinds (Fed-hawkishness, inflatie-data) stuwen kapitaal terug naar cash. Whale-flows naar BTC-dominantie suggereren professionele positionering voor verdere downside; maandag-opening kritiek op $67.500 BTC-steun en $2.000 ETH-niveau's. Funding-rentes naar beneden doch OI nog verhoogd — volatiliteitstraps voor short-squeezes blijven waarschijnlijk."
+  "macro_impact": "Geopolitieke onzekerheden en Fed-signalen blijven risico-activa onder druk zetten dit weekend. Dollarversterkingen beperken opwaarts potentieel voor crypto-beleggingen.",
+  "whale_flows": "Daling in aggregaat-volume ($47.75B totaal) suggereert whale-wachten op lagere entry-niveaus. Institutionele bid-support blijft afwezig tijdens weekend-trading.",
+  "funding_oi": "Perpetual-funding rates dalen snel, wijzend op afbouw van long-posities. Short-coverage kan volatiliteit deze week verergeren.",
+  "volatility_outlook": "VIX-correlatie suggereert 4-6% dagelijkse volatiliteit komende week. Verwacht steun rond psychologische niveaus $67k BTC en $2.000 ETH.",
+  "full_report": "CryptoMarketz observeert brede correctie met Bitcoin dalend naar $68.792 (-3.01%), Ethereum naar $2.078,95 (-3.82%), en XRP naar $1.40 (-2.96%) in 24 uur. Totaal marktvolume blijft sterk op $47.75B, maar whale-biedingen ontbreken. Geopolitieke risico's en Fed-signalisering blijven headwinds voor risk-activa. Volgende kritische support: $67.000 BTC en $2.050 ETH. Anticipeer consolidatie tot woensdag voordat hernieuwde directionaliteit."
 }
