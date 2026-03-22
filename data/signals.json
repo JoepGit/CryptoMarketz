@@ -1,5 +1,17 @@
 [
   {
+    "id": 1774207567699,
+    "coin": "XRP/USD",
+    "type": "SELL",
+    "entry": "1.38",
+    "tp": "1.32",
+    "sl": "1.45",
+    "note": "Geen chartdata beschikbaar, maar -3.83% in 24h en -2.67% in 7d toont duidelijke downtrend. SELL op momentum. Risk/reward 1:2.",
+    "timestamp": "2026-03-22T19:26:01.742Z",
+    "generated_at": "Sun, 22 Mar 2026 19:26:01 GMT",
+    "source": "claude-bot"
+  },
+  {
     "id": 1774168547838,
     "coin": "BTC/USD",
     "type": "SELL",
@@ -33,18 +45,6 @@
     "note": "4H bearish trend, prijs onder EMA20 ($2154.87), RSI 41.8 laag. Verkoop richting 24h low support level.",
     "timestamp": "2026-03-22T04:52:28.917Z",
     "generated_at": "Sun, 22 Mar 2026 04:52:28 GMT",
-    "source": "claude-bot"
-  },
-  {
-    "id": 1774146120615,
-    "coin": "XRP/USD",
-    "type": "SELL",
-    "entry": "1.41",
-    "tp": "1.38",
-    "sl": "1.44",
-    "note": "24h -2.28% bearish momentum, geen chart data beschikbaar maar technisch momentum negatief. Conservative size aanbevolen",
-    "timestamp": "2026-03-22T02:21:52.242Z",
-    "generated_at": "Sun, 22 Mar 2026 02:21:52 GMT",
     "source": "claude-bot"
   },
   {

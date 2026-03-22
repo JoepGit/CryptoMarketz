@@ -1,18 +1,18 @@
 {
   "date": "zondag 22 maart 2026",
-  "focus": "Brede marktcorrectie weegt op sentimenten terwijl weekendliquiditeit afneemt.",
-  "risk": "Rood regime, risico-off momentum",
-  "btc_structure": "Bitcoin noteert op $68.439 met een dagdaling van -2,86%, wat wijst op voorzichtige positiewisseling in het weekend. De verkoopdynamiek blijft intact terwijl 24h-volume stabiel blijft op $26,34B. Technisch gezien testen we lagere steunzones zonder significante rebound.",
-  "eth_flows": "Ethereum laat de zwakste performance zien met -4,16% daling naar $2.063,25, wat duidt op selectieve afbouw in alt-positie. Het volume van $13,29B geeft aan dat grote houders posities doseren. De underperformance ten opzichte van BTC suggereert risico-allocationverschuivingen.",
+  "focus": "Brede marktcorrectie ondermijnt bullish sentiment terwijl Bitcoin onder druk blijft.",
+  "risk": "Verhoogde correctierisico's domineren",
+  "btc_structure": "Bitcoin noteert op $68.353 met een dagverlies van -2,93%, wat wijst op voortdurende verkoopdruk rond deze steunzone. De 24h volume van $29,25B geeft aan dat grote partijen posities afbouwen zonder agressieve verdediging van hogere niveaus.",
+  "eth_flows": "Ethereum daalt sterker door met -4,20% naar $2.061,8, waarbij het volume van $12,85B suggereert dat institutionele uitstroom prevalert. De onderperformance van ETH ten opzichte van BTC duidt op risico-off sentiment in altcoin-exposure.",
   "top_narratives": [
-    "Weekendliquiditeit-risico en institutionele positionering",
-    "Altseason-voorzichtigheid met ETH underperformance",
-    "Macro-onzekerheden remmen risicobereidheid",
-    "Volume-analysepatronen tonen gedoseerde verkopen"
+    "Macro risico's drukken risk-on assets",
+    "Altseason pauzering en correlatieverhoging",
+    "Weekend liquidatiepatronen manifesteren zich",
+    "Institutionele positie-ajustement in piekvolatiliteit"
   ],
-  "macro_impact": "Weekend-handelsomgeving beperkt volumecapaciteit, wat normaliter kleinere moves produceert maar verzwakte biedingen blootlegt. Macro-kalender blijft rustig tot maandag; beleggers lijken posities in te korten voor weekstart. Volatiliteitsstructuur suggereert voorzichtigheid tot nieuwe data.",
-  "whale_flows": "BTC-volume van $26,34B en ETH van $13,29B tonen gedoseerde liquiditeitsafbouw zonder paniekverkoop. XRP volgt met $1,74B volume wat proportioneel gezond is. Whale-activiteit lijkt meer beweging dan liquidatie, wat duidt op strategie-repositionering.",
-  "funding_oi": "Lage funding-rates suggereren beperkte leverage op dit moment; weekendpauze ondersteunt normalisering. Open interest zal waarschijnlijk groen blijven doordat niet massaal geliquideerd wordt. Verwachting: stabilisatie maandag mits macro intact blijft.",
-  "volatility_outlook": "Historische weekend-range-compressie zichtbaar; verwacht lagere daily-swings tot maandagstart. Echter, brede -2% tot -4% verliezen suggereren onderliggende risicoaversie die volgende week kan versnellen. VIX-proxy volatiliteit blijft elevated.",
-  "full_report": "CryptoMarketz rapporteert zondag 22 maart 2026: Bitcoin staat op $68.439 (-2,86%, vol $26,34B), Ethereum op $2.063,25 (-4,16%, vol $13,29B), en het bredere marktsentiment is rood. XRP daalt -3,73% naar $1,39, SOL -3,04% naar $86,98, terwijl BNB relatief sterker blijft op $629,27 (-1,97%). Dit is een voorzichtige correctie in weekend-context; de selectieve underperformance van altcoins suggereert risico-off herallocation. Weekendliquiditeit is beperkt wat volgende week kan escaleren. Beleggers monitoren de macro-kalender; geen paniek maar wel voelbare positiewisselingen zichtbaar in volume-patroon."
+  "macro_impact": "Zondag-marktdynamica toont typisch lagere liquiditeit met hogere spreads, wat correcties verergert. Macro-triggers lijken te gaan richting weekstart waarin Fed-signalen of economische data hernieuwde druk kunnen activeren.",
+  "whale_flows": "Het combineerde volume van $47,29B (BTC + ETH) op zondag wijst op voorzichtige whale-activiteit zonder duidelijke accumulation. XRP's $1,74B volume suggereert dat grote beleggers hun stablecoin-verhouding opnieuw kalibreren.",
+  "funding_oi": "Verwachting is dat long-funding-rates dalen gezien de brede verkoopdruk, wat potentieel cascade-liquidaties kan voorkomen. Open Interest drying up wijst op positioneringsvoorzichtigheid voor weekstart.",
+  "volatility_outlook": "Volatiliteit zal waarschijnlijk toenemen maandag bij marktopening terwijl weekend-divergenties opnieuw worden getest. Verwacht verhoogde IV-spiking rond macro-momenten deze week.",
+  "full_report": "De cryptocurrency-markten ervaren een brede correctie met Bitcoin dalend naar $68.353 (-2,93%) en Ethereum dieper vallend naar $2.061,8 (-4,20%), terwijl BNB, XRP en SOL respectievelijk -2,25%, -3,83% en -3,48% verliezen. Het totale handelsvolume over top-assets bedraagt $47,29B, wat duidt op substantiële maar niet paniekachtige liquiditeitsstromen. De zondag-timing en het volume-patroon suggereren voorzichtige weekendpositionering in afwachting van maandag-markt-opening, waarbij macro-catalysts en Fed-gerelateerde signalen het sentiment kunnen bepalen. Risk-regime verschuiving van growth naar defensie is evident in de relatieve underperformance van altcoins, terwijl XRP's $1,38-notering en het bredere ecosysteem-volume wijzen op herstructurering van portefeuilles naar hogere liquiditeit."
 }
