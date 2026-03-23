@@ -1,14 +1,38 @@
 [
   {
-    "id": 1774271363334,
+    "id": 1774277736274,
     "coin": "BTC/USD",
+    "type": "SELL",
+    "entry": "71235",
+    "tp": "68978",
+    "sl": "72500",
+    "note": "1H RSI 83.1 extreem overbought, 4H trend sideways met prijs onder EMA50 $70541, risico op correctie naar 24h low $67688",
+    "timestamp": "2026-03-23T14:55:33.414Z",
+    "generated_at": "Mon, 23 Mar 2026 14:55:33 GMT",
+    "source": "claude-bot"
+  },
+  {
+    "id": 1774277734040,
+    "coin": "ETH/USD",
+    "type": "SELL",
+    "entry": "2174",
+    "tp": "2083",
+    "sl": "2210",
+    "note": "1H RSI 78.3 overbought, 4H trend sideways met prijs onder EMA50 $2158.83, correctie richting support $2083",
+    "timestamp": "2026-03-23T14:55:33.414Z",
+    "generated_at": "Mon, 23 Mar 2026 14:55:33 GMT",
+    "source": "claude-bot"
+  },
+  {
+    "id": 1774277734084,
+    "coin": "XRP/USD",
     "type": "BUY",
-    "entry": "70643",
-    "tp": "71224",
-    "sl": "69500",
-    "note": "1H bullish trend, prijs boven EMA20 ($68839), RSI 64.9 sterk maar niet overbought. 4H sideways maar EMA20 ondersteunt rond $69500. Risk/Reward 1:1.1",
-    "timestamp": "2026-03-23T13:09:17.764Z",
-    "generated_at": "Mon, 23 Mar 2026 13:09:17 GMT",
+    "entry": "1.45",
+    "tp": "1.52",
+    "sl": "1.40",
+    "note": "1H momentum positief +0.59%, 24h sterk +3.58%, geen technische data maar marktsentiment bullish op korte termijn",
+    "timestamp": "2026-03-23T14:55:33.414Z",
+    "generated_at": "Mon, 23 Mar 2026 14:55:33 GMT",
     "source": "claude-bot"
   },
   {
@@ -24,18 +48,6 @@
     "source": "claude-bot"
   },
   {
-    "id": 1774266206281,
-    "coin": "ETH/USD",
-    "type": "SELL",
-    "entry": "2165",
-    "tp": "2030",
-    "sl": "2159",
-    "note": "4H trend bearish, prijs onder beide EMA's ($2110.71 en $2159.56), RSI 26.3 zeer oversold. 1H RSI 76.1 overbought creates pullback kans naar downtrend.",
-    "timestamp": "2026-03-23T11:43:26.012Z",
-    "generated_at": "Mon, 23 Mar 2026 11:43:26 GMT",
-    "source": "claude-bot"
-  },
-  {
     "id": 1774266215115,
     "coin": "BNB/USD",
     "type": "SELL",
@@ -45,18 +57,6 @@
     "note": "7d -5.21% en 24h +2.34% toont bearish trend. Geen detaildata maar marktstructuur en weektrend wijst op sell naar lagere niveaus.",
     "timestamp": "2026-03-23T11:43:26.012Z",
     "generated_at": "Mon, 23 Mar 2026 11:43:26 GMT",
-    "source": "claude-bot"
-  },
-  {
-    "id": 1774207567699,
-    "coin": "XRP/USD",
-    "type": "SELL",
-    "entry": "1.38",
-    "tp": "1.32",
-    "sl": "1.45",
-    "note": "Geen chartdata beschikbaar, maar -3.83% in 24h en -2.67% in 7d toont duidelijke downtrend. SELL op momentum. Risk/reward 1:2.",
-    "timestamp": "2026-03-22T19:26:01.742Z",
-    "generated_at": "Sun, 22 Mar 2026 19:26:01 GMT",
     "source": "claude-bot"
   }
 ]

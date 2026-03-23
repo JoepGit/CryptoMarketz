@@ -1,5 +1,44 @@
 [
   {
+    "id": 1774271363334,
+    "coin": "BTC/USD",
+    "type": "BUY",
+    "entry": "70643",
+    "tp": "71224",
+    "sl": "69500",
+    "result": "win",
+    "pnl": "+0.82%",
+    "resolved_price": 71235,
+    "signal_date": "2026-03-23T13:09:17.764Z",
+    "resolved_at": "2026-03-23T14:55:28.227Z"
+  },
+  {
+    "id": 1774266206281,
+    "coin": "ETH/USD",
+    "type": "SELL",
+    "entry": "2165",
+    "tp": "2030",
+    "sl": "2159",
+    "result": "loss",
+    "pnl": "-0.28%",
+    "resolved_price": 2174.34,
+    "signal_date": "2026-03-23T11:43:26.012Z",
+    "resolved_at": "2026-03-23T14:55:28.227Z"
+  },
+  {
+    "id": 1774207567699,
+    "coin": "XRP/USD",
+    "type": "SELL",
+    "entry": "1.38",
+    "tp": "1.32",
+    "sl": "1.45",
+    "result": "loss",
+    "pnl": "5.07%",
+    "resolved_price": 1.45,
+    "signal_date": "2026-03-22T19:26:01.742Z",
+    "resolved_at": "2026-03-23T14:55:28.227Z"
+  },
+  {
     "id": 1774266211648,
     "coin": "BTC/USD",
     "type": "SELL",
