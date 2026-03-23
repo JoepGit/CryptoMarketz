@@ -1,18 +1,18 @@
 {
   "date": "maandag 23 maart 2026",
-  "focus": "Bitcoin's doorbraak naar $71.235 markeert sterke momentum in altseason met breed gespreid volume.",
-  "risk": "Moderate bullish met consolidatie",
-  "btc_structure": "Bitcoin noteert $71.235 met +3.69% 24h gain en volumineus handelsverkeer van $49.67B, wat wijst op institutionele accumulatie rond deze technische weerstand. De positieve momentum suggereert verdere opwaartse druk richting hogere levels.",
-  "eth_flows": "Ethereum presteert sterker met $2.174,34 en +4.64% dagwinst op $25.93B volume, duidend op overperformance ten opzichte van Bitcoin. Dit duidt op robuuste demand voor alternative L1 en DeFi-gerelateerde posities.",
+  "focus": "Brede marktsterkte met Bitcoin boven $70k en alt-seizoen signalen in altcoins.",
+  "risk": "Mild bullish, volatiliteit normaliseren",
+  "btc_structure": "Bitcoin handelt op $70,133 met +1.85% 24h gain en $52.51B volume, wat wijst op gezonde accumulatie. De support rond $70k blijft intact met positieve momentum in de eerste handelsdag van de week.",
+  "eth_flows": "Ethereum stijgt naar $2,128.50 met +2.19% daily performance en $26.17B volume, outperformend Bitcoin. Dit suggereert institutionele interesse in layer-1 exposure.",
   "top_narratives": [
-    "Institutionele inflows in spot-markten",
-    "Altseason-rally met ETH outperformance",
-    "Margin long positioning normalisatie",
-    "Regulering stimulus uit G7-landen"
+    "Alt-seizoen momentum - Altcoins outperformen BTC",
+    "Volume concentratie in top-5 assets",
+    "Weekly bullish engulfing pattern vorming",
+    "Makro risicoaversie afnemend"
   ],
-  "macro_impact": "Globale rente-stabilisatie en verwachte Fed-pauze in het tweede kwartaal ondersteunt risicoactiva. De crypto-markt reageert positief op afnemende inflatiepressure en centralebankenvriendelijk sentiment.",
-  "whale_flows": "Massale volume concentratie in Bitcoin ($49.67B) en Ethereum ($25.93B) suggereert institutionele inflows en walletaccumulatie op dips. Smaller altcoins (XRP $3.19B, SOL $4.55B) tonen ondersteunende volumes zonder excessieve speculatie.",
-  "funding_oi": "Funding rates blijven moderate positief, wijzend op voorzichtig gepaarde positie-opbouw zonder excessieve leverage. Verwacht wordt dat open interest geleidelijk toeneemt onder bullish scenario's.",
-  "volatility_outlook": "ATR-gebaseerde volatiliteit in het lagere-midden bereik met dagelijkse bewegingen rond 3-4% in majors. Geen extreme IV-spikes waargenomen; consolidatiepatronen dominant met sporadische trending-sessies.",
-  "full_report": "CryptoMarketz rapporteert sterke marktbewegingen op maandag 23 maart 2026 met Bitcoin's prestatie van $71.235 (+3.69%) en Ethereum's outperformance naar $2.174,34 (+4.64%). Totaal handelsvolume van $49.67B in BTC en $25.93B in ETH duidt op substantiële institutionele participatie. XRP ($1.45), SOL ($91.23) en BNB ($644.92) vertonen stabiliteit met respectievelijk +3.58%, +4.54% en +2.39% dagwinsten. De markt refléteert optimisme rondom macro-oordelen en centralebankenbeleid, terwijl funding-structuren gezond en neutraal blijven. Technisch gezien verzamelt momentum zich in bullish consolidaties met waarschijnlijke doelstellingen hoger."
+  "macro_impact": "Minder geopolitieke onzekerheid op maandag draagt bij aan risicohervatting. De stabiele Fed-beleidsomgeving ondersteunt cryptocurrency risk-on sentiment.",
+  "whale_flows": "BTC volume van $52.51B domineert; ETH's $26.17B suggereert diversificatie naar altcoins. XRP's $3.45B volume wijst op retail interest na stijging van 3.05%.",
+  "funding_oi": "Funding rates stabiel met matige long bias in BTC futures. Open interest verwacht licht stijgend gegeven risicoherstel.",
+  "volatility_outlook": "Impliciete volatiliteit normaliseert na weekend consolidatie. Expect geleidelijke IV expansie bij doorbrekingen boven $71k.",
+  "full_report": "De cryptomarkt opent sterk op maandag 23 maart met Bitcoin op $70,133 (+1.85%) en Ethereum op $2,128.50 (+2.19%), ondersteund door gezond volume van respectievelijk $52.51B en $26.17B. Altcoins tonen verbetering met SOL +2.93% op $90.06 en XRP +3.05% op $1.44, suggererend bredere marktkracht. Het top-5 asset volume van $88.5B wijst op institutionele participatie. Macro-omgeving vertoont minder risicoaversie dan vorige week, wat cyclische assets ondersteunt. Technisch oogt Bitcoin gezond boven $70k support; we monitoren $71.5k als eerste resistance voor deze week."
 }
