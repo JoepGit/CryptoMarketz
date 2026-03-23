@@ -1,18 +1,18 @@
 {
   "date": "maandag 23 maart 2026",
-  "focus": "Brede marktcorrectie zorgt voor liquidaties terwijl institutionele volumes onder druk blijven.",
-  "risk": "Rood - Technische breakdown dreigt",
-  "btc_structure": "Bitcoin test het niveau van $68,632 met een dagverlies van -0.92%, maar volume van $28.38B suggereert voorzichtige accumulatie onder weerstand. Bearish momentum blijft beperkt met ronde getallen als steun in zicht.",
-  "eth_flows": "Ethereum's -2.45% daling naar $2,066.82 duidt op zwakkere altcoin-sentiment met volume van $13.27B. Derivative liquidaties zijn waarschijnlijk geactiveerd in deze kaarsenformatie.",
+  "focus": "Brede marktcorrectie met BTC onder druk terwijl institutionele liquiditeit afneemt.",
+  "risk": "Rood: Correctie fase actief",
+  "btc_structure": "Bitcoin daalt 2.02% naar $67.767 met volume van $31.16B. De steun rond $67k wordt getest en verdere daling naar $65k is risico indien macro-headwinds aanhouden. Technische weerstand blijft boven $70k.",
+  "eth_flows": "Ethereum verliest 3.63% tot $2.033,16 met $14.14B handelsvolume. De uitstroom van stablecoins naar exchanges duidt op hogere risico-aversie. Ondersteuning op $1.950 is kritisch voor sentiment.",
   "top_narratives": [
-    "Technische correctie na maart-rally",
-    "Institutionele profit-taking fase",
-    "Altcoin underperformance versus BTC",
-    "Liquidatiespiraal dreigt bij doorbraak onder steunniveaus"
+    "Macro-rente volatiliteit drukt risk assets",
+    "Institutionele exit uit growth-assets",
+    "SEC regelgeving onzekerheid blijft hangen",
+    "Altcoin underperformance tegen BTC/ETH"
   ],
-  "macro_impact": "Geopolitieke onzekerheden en renteverwachtingen drukken risicoactiva, waardoor crypto volgt met lagere flows. Safe-haven rotatie verklaart relatieve BTC-stabiliteit boven altcoins.",
-  "whale_flows": "BTC volume van $28.38B suggereert accumulatie bij dips, maar ETH/altcoin volumes dalen relatief, wat wijst op voorzichtigheid van grote beleggers. XRP en SOL (-1.97% en -2.33%) vertonen uitstroom naar stablecoin reserves.",
-  "funding_oi": "Long-positie liquidaties in ETH en SOL wijzen op verlaging van open interest; funding rates dalen naar neutraal-negatieve niveaus. Verwachting is consolidatie boven $68k BTC en $2,050 ETH.",
-  "volatility_outlook": "IV contractie suggereert that volatiliteitspiek voorbij is; trading ranges krimpen. Volgende breaker ligt tussen $67,500 en $69,500 voor BTC.",
-  "full_report": "De cryptomarkten openen maandag in correctiemodus met breed rood: Bitcoin daalt -0.92% naar $68,632 bij $28.38B volume, Ethereum verliest -2.45% naar $2,066.82 met $13.27B turnover, en altcoins zoals SOL (-2.33%) en XRP (-1.97%) voelen meer druk. Institutional volumes dalen terwijl whale-wallets kapitaal naar stablecoins verplaatsen, een klassieke defensieve positie. De technische structuur suggereert voorzichtig accumulation support rond BTC $68k en ETH $2,050, maar doorbraak onder deze levels zou liquidatiekaskades kunnen activeren. Macro-headwinds en profit-taking uit de maart-rally blijven de primaire treiber; consolidatie in smalle ranges is waarschijnlijk tot duidelijkheid over renteverwachtingen."
+  "macro_impact": "Stijgende renteverwachtingen en Fed-signalen duwen beleggers naar defensieve posities. Risicovolle assets zoals crypto voelen de druk het hardst.",
+  "whale_flows": "High volume bij $2.033 ETH en $67.767 BTC duidt op accumulatiemomenten door institutionele spelers. XRP volume van $1.74B suggereert positie-herschikking.",
+  "funding_oi": "Verwacht lagere funding rates komende 48 uur door het reduceren van long-posities. Open Interest daling is waarschijnlijk naarmate leverage wordt afgebouwd.",
+  "volatility_outlook": "Impliciete volatiliteit blijft verhoogd met 24h dalingen van -1.82% tot -3.63%. Verwacht aanhoudende turbulentie tot macro-klariteit toeneemt.",
+  "full_report": "De cryptomarkt geeft vrijdag-winsten terug met brede verliezen over alle major-assets. Bitcoin daalt 2.02% naar $67.767 en Ethereum verliest 3.63% tot $2.033,16 op $14.14B volume. Altcoins presteren relatief zwakker: SOL -3.13%, XRP -3.07%, BNB -1.82%. Volume op BTC blijft substantieel op $31.16B maar kan een teken zijn van gedwongen liquidaties. Macro-headwinds en Fed-hawkishness worden schuldig bevonden aan deze correctie."
 }
