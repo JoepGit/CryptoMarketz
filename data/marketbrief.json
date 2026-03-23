@@ -1,18 +1,18 @@
 {
   "date": "maandag 23 maart 2026",
-  "focus": "Brede marktral met sterke altcoin momentum terwijl BTC consolidatiepatroon handhaaft.",
-  "risk": "Overbought signalen, liquiditeitrisico",
-  "btc_structure": "Bitcoin noteert op $70,948 met een solide +4,76% dagwinst, wat wijst op herstel naar boven na recente pullback. De structuur blijft bullish zolang support boven $69,000 gehandhaafd wordt.",
-  "eth_flows": "Ethereum outperformt met +5,76% tot $2,159.59, ondersteund door $29.15B volume dat wijst op institutionele accumulatie. De relative strength ten opzichte van BTC suggereert dalende korrelatie.",
+  "focus": "Solana domineert momentum met 5.98% winst terwijl Bitcoin consolidatie zoekt boven $70.5k.",
+  "risk": "Moderate bullish momentum, consolidatierisico's",
+  "btc_structure": "Bitcoin noteert op $70,557 met een solide 3.38% dagwinst en $54.59B volume. De technische positie blijft constructief boven de 70k-support, hoewel consolidatie voelbaar is na recente rally.",
+  "eth_flows": "Ethereum stijgt 4.19% naar $2,146.08 met $28.73B volume, wat sterker outperformance aangeeft tegen Bitcoin. Het momentum in smart contract space blijft resilient ondanks breedbasis consolidatie.",
   "top_narratives": [
-    "Altcoin rally oppervlakkig - alleen top 5 tokens presteren",
-    "Macro: renteverwachtingen blijven onzeker",
-    "Institutionele inflow via ETF-producten aanhoudend",
-    "Q2 2026 tokenunlocks draaien sentiment"
+    "Solana momentum play (5.98% winst, $5.38B volume)",
+    "Bitcoin stabilisatie boven $70k psychologisch niveau",
+    "Ethereum sterkere relatieve performance vs BTC",
+    "Altcoin earnings cycle versterkt by institutional inflows"
   ],
-  "macro_impact": "Fed-beleid en rentecurveflattening beperken upside potentieel ondanks groen sentiment. Geopolitieke spanningen blijven wildcard factor voor risico-off scenarioswitches.",
-  "whale_flows": "BTC volume van $54.87B toont gezonde distributie; grote wallets verhogen posities bij dips. SOL volume ($5.44B) sterker dan BNB ($1.73B) wijst op selectieve altcoin accumulatie.",
-  "funding_oi": "Funding rates liggen mild positief; openinterest stijgt voorzichtig wat suggests markt nog niet overextended. Liquidatiedrempel rond $68,500 op BTC kritisch.",
-  "volatility_outlook": "24h volatiliteit normaal met 2-6% range per asset; verwacht lager niveau tot macro-catalysts vrijkomen. Greeks duiden op stabilisering na volatiliteitspieken vorige week.",
-  "full_report": "Maandag opent met breed groen canvas waarbij Bitcoin $70,948 (+4,76%) consolidert en Ethereum sterk uitblinkt op $2,159.59 (+5,76%). SOL leidt altcoin rally met +6,82%, terwijl XRP (+4,15%) en BNB (+2,39%) voorzichtiger stijgen. Volume metrics ($54.87B BTC, $29.15B ETH) duiden op gezonde marktbreedte zonder extreme concentration. Echter: deze rally rust zwaar op selectieve herstelverhalen en technische rebounds; fundamentele catalysts ontbreken. Risico's: overbought condities in kleinere alts, Fed-gevoeligheid en liquiditeitsgaten rondom $70,000 BTC-level. Aanbeveling: wachthouding tot duidelijker trend bevestiging en macro-backdrop opklaart."
+  "macro_impact": "Marktbrede winsten wijzen op risk-on sentiment met Bitcoin als anker. Volume concentratie in top-3 assets suggereert institutionele stabilisering van positiegrootte.",
+  "whale_flows": "XRP en BNB tonen zwakker volume ($3.59B en $1.72B) wat selectiviteit in whale allocatie aangeeft. Grote volumes in BTC/ETH duiden op institutionele ondersteuning van kernposities.",
+  "funding_oi": "Positive funding rates op toonaangevende exchanges suggereert blijvende long-bias. Open interest volumes in altcoins geven voorzichtige toename aan, mogelijk vooruitlopend op sterkere Q2-narratieven.",
+  "volatility_outlook": "IV-niveaus blijven gematigd met 3-6% dagelijkse moves op mainstreams. Verwachtingen voor modest volatiliteit deze week tenzij macro-triggers volatiliteit introduceren.",
+  "full_report": "Bitcoin handelt rond $70,557 (+3.38%) met gezonde $54.59B volume en ondersteunt consolidatie boven psychologische 70k-grens. Ethereum outperformed met 4.19% naar $2,146.08 ($28.73B volume), terwijl Solana momentum-leadership toont met 5.98% winst ($5.38B volume). XRP (+2.89%, $1.43) en BNB (+1.40%, $637.63) laggen in relatieve winsten, wat selectiviteit in institutional flows onderstreept. Marktbrede structuur blijft bullish met ondersteuning voor kernposities in BTC/ETH, terwijl altcoin-narratieven voorzichtig momentum opbouwen richting Q2."
 }
