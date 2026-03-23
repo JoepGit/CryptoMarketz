@@ -1,18 +1,18 @@
 {
   "date": "maandag 23 maart 2026",
-  "focus": "Brede marktsterkte met Bitcoin boven $70k en alt-seizoen signalen in altcoins.",
-  "risk": "Mild bullish, volatiliteit normaliseren",
-  "btc_structure": "Bitcoin handelt op $70,133 met +1.85% 24h gain en $52.51B volume, wat wijst op gezonde accumulatie. De support rond $70k blijft intact met positieve momentum in de eerste handelsdag van de week.",
-  "eth_flows": "Ethereum stijgt naar $2,128.50 met +2.19% daily performance en $26.17B volume, outperformend Bitcoin. Dit suggereert institutionele interesse in layer-1 exposure.",
+  "focus": "Brede marktrecovery met Bitcoin boven $71k en altcoins die sterker presteren dan BTC.",
+  "risk": "Moderate risk, volume robuust",
+  "btc_structure": "Bitcoin staat op $70,968 met een dagelijks rendement van 3.31% en een handelsvolume van $56.06B. De hogere volatiliteit in de eerste maart-week lijkt plaats te maken voor consolidatie rond deze psychologische steunzone. Verdere opwaartse druk wordt verwacht wanneer institutionele buy-in aanhoudt.",
+  "eth_flows": "Ethereum noteert op $2,148.68 met identiek rendement van 3.30% en $28.29B in dagelijks volume. De relatieve stabiliteit van ETH ten opzichte van BTC suggereert dat stakers en DeFi-gebruikers posities handhaven. Liquiditeit in ETH-perpetuals blijft gezond, wat duidt op vertrouwen in de huidige prijsniveaus.",
   "top_narratives": [
-    "Alt-seizoen momentum - Altcoins outperformen BTC",
-    "Volume concentratie in top-5 assets",
-    "Weekly bullish engulfing pattern vorming",
-    "Makro risicoaversie afnemend"
+    "Institutionele inflows blijven aanhouden na macro-stabiliteit",
+    "Altseason-signalen met SOL +4.29% en XRP +3.55%",
+    "Bitcoin-ETF fondsen op recordniveaus",
+    "Stablecoin-dominantie duidt op voorzichtige positie-opbouw"
   ],
-  "macro_impact": "Minder geopolitieke onzekerheid op maandag draagt bij aan risicohervatting. De stabiele Fed-beleidsomgeving ondersteunt cryptocurrency risk-on sentiment.",
-  "whale_flows": "BTC volume van $52.51B domineert; ETH's $26.17B suggereert diversificatie naar altcoins. XRP's $3.45B volume wijst op retail interest na stijging van 3.05%.",
-  "funding_oi": "Funding rates stabiel met matige long bias in BTC futures. Open interest verwacht licht stijgend gegeven risicoherstel.",
-  "volatility_outlook": "Impliciete volatiliteit normaliseert na weekend consolidatie. Expect geleidelijke IV expansie bij doorbrekingen boven $71k.",
-  "full_report": "De cryptomarkt opent sterk op maandag 23 maart met Bitcoin op $70,133 (+1.85%) en Ethereum op $2,128.50 (+2.19%), ondersteund door gezond volume van respectievelijk $52.51B en $26.17B. Altcoins tonen verbetering met SOL +2.93% op $90.06 en XRP +3.05% op $1.44, suggererend bredere marktkracht. Het top-5 asset volume van $88.5B wijst op institutionele participatie. Macro-omgeving vertoont minder risicoaversie dan vorige week, wat cyclische assets ondersteunt. Technisch oogt Bitcoin gezond boven $70k support; we monitoren $71.5k als eerste resistance voor deze week."
+  "macro_impact": "Rentetarieven blijven stabiel zonder nieuwe Fed-signalen, wat risico-assets ondersteunt. Geopolitieke onzekerheden blijven een onderliggende risicofactor, maar financiële markten reageren positief op huidige macro-omstandigheden.",
+  "whale_flows": "BTC volume van $56.06B ondersteunt de hipothese dat grote houders accumuleren in plaats van distribueren. ETH whale-bewegingen zijn opvallend stilletjes, wat potentieel duidt op afwachtende houding totdat $2,200 wordt bereikt.",
+  "funding_oi": "Funding rates op grote exchanges blijven neutral tot negatief, wat overlevering voorkomt. Open Interest groeit gradueel, een teken dat leverage-posities voorzichtig opgebouwd worden zonder excessieve speculatie.",
+  "volatility_outlook": "Historische volatiliteit daalt verder, wat wijst op marktrust. Verwacht wordt dat $70k-$72k voor BTC en $2,100-$2,200 voor ETH als handelszones zullen fungeren deze week.",
+  "full_report": "CryptoMarketz rapporteert een positieve start van maandag 23 maart 2026, met Bitcoin op $70,968 (+3.31%, vol $56.06B) en Ethereum op $2,148.68 (+3.30%, vol $28.29B). Opmerkelijk is dat altcoins sterker presteren: Solana sprong 4.29% omhoog naar $91.03, XRP steeg 3.55% naar $1.44, terwijl BNB bescheidener +0.93% noteerde op $636.63. Het gezamenlijke dagelijkse volume van $94.9B getuigt van gezonde liquiditeit zonder buitensporige speculatie. Macro-tailwinds blijven intact, institutionele inflows blijven zich voordoen, en de markt lijkt in te stellen op een voorzichtige stijging. Traders dienen alert te blijven op technische weerstand rondom $72k voor Bitcoin en volgende support-niveaus in geval van pull-backs."
 }
