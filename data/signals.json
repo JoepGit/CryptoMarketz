@@ -1,14 +1,26 @@
 [
   {
-    "id": 1774266211648,
+    "id": 1774271363334,
     "coin": "BTC/USD",
-    "type": "SELL",
-    "entry": "68534",
-    "tp": "67613",
-    "sl": "69443",
-    "note": "4H trend bearish, prijs onder EMA20 ($69443.53), RSI 30.6 oversold maar met neergaande momentum. Entry op 1H support niveau.",
-    "timestamp": "2026-03-23T11:43:26.012Z",
-    "generated_at": "Mon, 23 Mar 2026 11:43:26 GMT",
+    "type": "BUY",
+    "entry": "70643",
+    "tp": "71224",
+    "sl": "69500",
+    "note": "1H bullish trend, prijs boven EMA20 ($68839), RSI 64.9 sterk maar niet overbought. 4H sideways maar EMA20 ondersteunt rond $69500. Risk/Reward 1:1.1",
+    "timestamp": "2026-03-23T13:09:17.764Z",
+    "generated_at": "Mon, 23 Mar 2026 13:09:17 GMT",
+    "source": "claude-bot"
+  },
+  {
+    "id": 1774271361232,
+    "coin": "SOL/USD",
+    "type": "BUY",
+    "entry": "90",
+    "tp": "93",
+    "sl": "87",
+    "note": "Sterkste 24h performance +3.03%, 1h +1.31% momentum. Geen chart data maar outperformance tegenover markt. Risk/Reward 1:2",
+    "timestamp": "2026-03-23T13:09:17.764Z",
+    "generated_at": "Mon, 23 Mar 2026 13:09:17 GMT",
     "source": "claude-bot"
   },
   {
