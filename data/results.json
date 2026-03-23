@@ -1,5 +1,57 @@
 [
   {
+    "id": 1774249898057,
+    "coin": "BNB/USD",
+    "type": "SELL",
+    "entry": "620",
+    "tp": "600",
+    "sl": "635",
+    "result": "loss",
+    "pnl": "2.42%",
+    "resolved_price": 643.31,
+    "signal_date": "2026-03-23T07:11:34.727Z",
+    "resolved_at": "2026-03-23T11:43:22.600Z"
+  },
+  {
+    "id": 1774214866999,
+    "coin": "ETH/USD",
+    "type": "SELL",
+    "entry": "2059",
+    "tp": "1980",
+    "sl": "2100",
+    "result": "loss",
+    "pnl": "1.99%",
+    "resolved_price": 2158.2,
+    "signal_date": "2026-03-22T21:27:45.716Z",
+    "resolved_at": "2026-03-23T11:43:22.600Z"
+  },
+  {
+    "id": 1774214873880,
+    "coin": "SOL/USD",
+    "type": "SELL",
+    "entry": "85.6",
+    "tp": "80.0",
+    "sl": "90.0",
+    "result": "loss",
+    "pnl": "5.14%",
+    "resolved_price": 90.09,
+    "signal_date": "2026-03-22T21:27:45.716Z",
+    "resolved_at": "2026-03-23T11:43:22.601Z"
+  },
+  {
+    "id": 1774168547838,
+    "coin": "BTC/USD",
+    "type": "SELL",
+    "entry": "68654",
+    "tp": "67000",
+    "sl": "69500",
+    "result": "loss",
+    "pnl": "1.23%",
+    "resolved_price": 70661,
+    "signal_date": "2026-03-22T08:35:40.975Z",
+    "resolved_at": "2026-03-23T11:43:22.601Z"
+  },
+  {
     "id": 1774158854576,
     "coin": "BNB/USD",
     "type": "SELL",
