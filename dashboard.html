@@ -839,6 +839,62 @@ body::before{background:radial-gradient(circle at 18% 0%, rgba(155,89,214,.12), 
 ::-webkit-scrollbar-thumb{background:#2a2a2a!important;border-color:#121212!important}
 ::-webkit-scrollbar-track{background:#161616!important}
 
+
+/* ══ DASHBOARD NEW LAYOUT ══════════════════════════════ */
+.dash-new-layout{display:grid;grid-template-columns:1fr 300px;gap:20px;padding:24px 40px 60px;align-items:start}
+@media(max-width:1100px){.dash-new-layout{grid-template-columns:1fr;padding:20px}}
+
+/* World map card */
+.world-map-card{background:#111214;border:1px solid rgba(255,255,255,.06);border-radius:16px;overflow:hidden;position:relative}
+.world-map-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--accent),transparent);z-index:1}
+.wm-header{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid rgba(255,255,255,.05)}
+.wm-title{font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--accent);display:flex;align-items:center;gap:8px;text-transform:uppercase}
+.wm-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent);animation:wmdot 2s ease-in-out infinite}
+@keyframes wmdot{0%,100%{box-shadow:0 0 4px var(--accent)}50%{box-shadow:0 0 12px var(--accent),0 0 24px rgba(155,89,214,.3)}}
+.wm-live-badge{font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:.1em;color:#27ae60;background:rgba(39,174,96,.08);border:1px solid rgba(39,174,96,.2);padding:3px 8px;border-radius:3px}
+
+/* Market clocks */
+.market-clocks{display:flex;overflow-x:auto;border-top:1px solid rgba(255,255,255,.05);scrollbar-width:none}
+.market-clocks::-webkit-scrollbar{display:none}
+.mc-item{flex:1;min-width:110px;padding:12px 14px;border-right:1px solid rgba(255,255,255,.05);position:relative;transition:background .2s}
+.mc-item:last-child{border-right:none}
+.mc-item.open::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:#27ae60}
+.mc-item.closed::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:rgba(138,128,120,.2)}
+.mc-city{font-family:'Inter',sans-serif;font-size:8px;font-weight:700;letter-spacing:.1em;color:#8a8078;text-transform:uppercase;margin-bottom:4px}
+.mc-time{font-family:'Inter',sans-serif;font-size:16px;font-weight:700;color:#c8c0b8;line-height:1;margin-bottom:3px}
+.mc-item.open .mc-time{color:var(--accent)}
+.mc-status{font-family:'Inter',sans-serif;font-size:8px;font-weight:600;letter-spacing:.08em}
+.mc-item.open .mc-status{color:#27ae60}
+.mc-item.closed .mc-status{color:#4a5568}
+.mc-exchange{font-family:'Inter',sans-serif;font-size:7px;color:#4a5568;margin-top:2px}
+
+/* Right column */
+.dash-right-col{display:flex;flex-direction:column;gap:14px}
+
+/* Compact AI Brief */
+.dash-brief-mini{background:#111214;border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:18px 20px;cursor:pointer;transition:all .2s;position:relative;overflow:hidden}
+.dash-brief-mini::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(155,89,214,.4),transparent)}
+.dash-brief-mini:hover{border-color:rgba(155,89,214,.25);box-shadow:0 0 20px rgba(155,89,214,.06);transform:translateY(-1px)}
+.dbm-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.dbm-kicker{font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:.14em;color:rgba(155,89,214,.7);text-transform:uppercase}
+.dbm-lock{font-family:'Inter',sans-serif;font-size:8px;font-weight:700;color:var(--sub);background:rgba(138,128,120,.08);border:1px solid rgba(138,128,120,.15);padding:2px 7px;border-radius:3px}
+.dbm-title{font-family:'Inter',sans-serif;font-size:15px;font-weight:700;color:#eaecef;margin-bottom:8px;line-height:1.3}
+.dbm-pills{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.dbm-pill{font-family:'Inter',sans-serif;font-size:9px;font-weight:600;letter-spacing:.06em;padding:3px 8px;border:1px solid rgba(155,89,214,.15);border-radius:3px;color:rgba(155,89,214,.6);background:rgba(155,89,214,.04)}
+.dbm-copy{font-size:11px;color:#8a8078;line-height:1.7;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:12px}
+.dbm-cta{font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:.1em;color:var(--accent);text-transform:uppercase}
+
+/* Notifications */
+.dash-notif-card{background:#111214;border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:18px 20px;transition:border-color .2s}
+.dash-notif-card:hover{border-color:rgba(155,89,214,.12)}
+.notif-item{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.04)}
+.notif-item:last-child{border-bottom:none}
+.notif-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:3px;box-shadow:0 0 6px rgba(155,89,214,.5)}
+.notif-dot-warn{background:var(--red);box-shadow:0 0 6px rgba(232,57,42,.5)}
+.notif-dot-muted{background:#4a5568;box-shadow:none}
+.notif-text{font-family:'Inter',sans-serif;font-size:12px;color:var(--cream);line-height:1.4;margin-bottom:2px}
+.notif-time{font-family:'Inter',sans-serif;font-size:9px;color:var(--sub);letter-spacing:.04em}
+
 </style>
 
 <style id="light-theme" disabled>
@@ -1396,6 +1452,26 @@ function getOrRequestApiKey(callback){
   .page { padding: 18px 14px !important; }
   .edu-lessons, .eg, .plg, .bgrid { grid-template-columns: 1fr !important; }
 }
+
+/* ── NEW DASHBOARD COMPONENTS — light theme fix ── */
+.dash-notif-card { background: #1a1a2e !important; border-color: rgba(155,89,214,.15) !important; }
+.dash-brief-mini  { background: #1a1a2e !important; border-color: rgba(155,89,214,.15) !important; }
+.world-map-card   { background: #111214 !important; border-color: rgba(155,89,214,.15) !important; }
+.notif-text  { color: #e8e0d8 !important; background: transparent !important; }
+.notif-time  { color: #8a8078 !important; background: transparent !important; }
+.dbm-title   { color: #e8e0d8 !important; background: transparent !important; }
+.dbm-copy    { color: #8a8078 !important; background: transparent !important; }
+.dbm-cta     { color: #9b59d6 !important; background: transparent !important; }
+.dbm-kicker  { color: rgba(155,89,214,.8) !important; background: transparent !important; }
+.mc-time     { color: #c8c0b8 !important; background: transparent !important; }
+.mc-city     { color: #8a8078 !important; background: transparent !important; }
+.mc-status   { background: transparent !important; }
+.mc-exchange { color: #4a5568 !important; background: transparent !important; }
+.mc-item     { background: transparent !important; }
+.mc-item.open .mc-time { color: #9b59d6 !important; }
+.notif-item  { background: transparent !important; }
+.dash-right-col * { background: transparent !important; }
+.dash-notif-card, .dash-brief-mini { background: #111214 !important; }
 </style>
 
 </head>
@@ -1574,44 +1650,65 @@ function getOrRequestApiKey(callback){
           <div id="clock-d"></div>
         </div>
 
-        <div class="dashboard-feed">
-          <div class="dashboard-stack">
-            <div class="morning-brief-card" onclick="briefClick()">
-              <div class="db-kicker">Morning brief</div>
-              <div class="db-title" id="dash-brief-title">AI Market Report</div>
-              <div class="db-meta">
-                <span class="db-pill" id="dash-brief-time">08:00 daily update</span>
-                <span class="db-pill" id="dash-brief-risk">risk loading</span>
+        <div class="dash-new-layout">
+
+          <!-- WORLD MAP -->
+          <div class="world-map-card">
+            <div class="wm-header">
+              <div class="wm-title"><span class="wm-dot"></span>GLOBAL MARKETS</div>
+              <div class="wm-live-badge">● LIVE</div>
+            </div>
+            <div id="chartdiv" style="width:100%;height:360px;"></div>
+            <div class="market-clocks" id="market-clocks"></div>
+          </div>
+
+          <!-- RIGHT COLUMN -->
+          <div class="dash-right-col">
+
+            <!-- Compact AI Brief -->
+            <div class="dash-brief-mini" onclick="briefClick()">
+              <div class="dbm-header">
+                <span class="dbm-kicker">AI BRIEF</span>
+                <span class="dbm-lock" id="brief-lock-badge" style="display:none">🔒 MEMBERS</span>
               </div>
-              <div id="dash-brief-copy" class="db-copy">Loading market brief...</div>
-              <div style="display:flex;align-items:center;justify-content:space-between;margin-top:4px;">
-                <div class="db-link">Open full AI brief <span>→</span></div>
-                <span id="brief-lock-badge" style="display:none;font-size:10px;background:rgba(155,89,214,.1);color:#9b59d6;border:1px solid rgba(155,89,214,.25);padding:4px 10px;border-radius:100px;font-weight:700;letter-spacing:.06em;">MEMBERS ONLY</span>
+              <div class="dbm-title" id="dash-brief-title">AI Market Report</div>
+              <div class="dbm-pills">
+                <span class="dbm-pill" id="dash-brief-time">Daily</span>
+                <span class="dbm-pill" id="dash-brief-risk">loading...</span>
+              </div>
+              <div class="dbm-copy" id="dash-brief-copy">Loading...</div>
+              <div class="dbm-cta">Open full brief →</div>
+            </div>
+
+            <!-- Notifications -->
+            <div class="dash-notif-card">
+              <div class="dash-section-head">
+                <div class="dash-section-title">🔔 Notifications</div>
+                <div class="dash-section-note" id="notif-count">0 new</div>
+              </div>
+              <div id="dash-notifications">
+                <div class="notif-item">
+                  <div class="notif-dot"></div>
+                  <div><div class="notif-text">Daily market brief updated</div><div class="notif-time">07:00 UTC · Today</div></div>
+                </div>
+                <div class="notif-item">
+                  <div class="notif-dot notif-dot-warn"></div>
+                  <div><div class="notif-text">Fear &amp; Greed: Extreme Fear (10)</div><div class="notif-time">Live · Now</div></div>
+                </div>
+                <div class="notif-item">
+                  <div class="notif-dot notif-dot-muted"></div>
+                  <div><div class="notif-text">BTC dominance above 56%</div><div class="notif-time">Market update</div></div>
+                </div>
               </div>
             </div>
 
-            <div class="dashboard-side-card">
-              <div class="dash-section-head">
-                <div class="dash-section-title">Latest analysis</div>
-                <div class="dash-section-note">Admin editable</div>
-              </div>
-              <div id="dash-analysis-wrap">
-                <div class="dashboard-empty">No analysis yet.</div>
-              </div>
-            </div>
           </div>
+        </div>
 
-          <div class="dashboard-stack">
-            <div class="dashboard-side-card">
-              <div class="dash-section-head">
-                <div class="dash-section-title">Active signals</div>
-                <div class="dash-section-note">Latest calls</div>
-              </div>
-              <div id="dash-signals" class="dashboard-signal-list">
-                <div class="dashboard-empty">No signals yet.</div>
-              </div>
-            </div>
-          </div>
+        <!-- Hidden for JS compatibility -->
+        <div style="display:none">
+          <div id="dash-analysis-wrap"></div>
+          <div id="dash-signals"></div>
         </div>
       </div>
     </div><!-- /page-dashboard -->
@@ -4803,5 +4900,118 @@ function closeLessonVideo(e) {
   };
 })();
 </script>
+
+<script>
+// ── MARKET CLOCKS ──────────────────────────────────────────────────────────
+const MARKETS = [
+  { city:'New York',  tz:'America/New_York',  exchange:'NYSE / NASDAQ', openH:9,  openM:30, closeH:16, closeM:0  },
+  { city:'London',    tz:'Europe/London',      exchange:'LSE',           openH:8,  openM:0,  closeH:16, closeM:30 },
+  { city:'Amsterdam', tz:'Europe/Amsterdam',   exchange:'AEX',           openH:9,  openM:0,  closeH:17, closeM:30 },
+  { city:'Frankfurt', tz:'Europe/Berlin',      exchange:'XETRA',         openH:9,  openM:0,  closeH:17, closeM:30 },
+  { city:'Dubai',     tz:'Asia/Dubai',         exchange:'DFM',           openH:10, openM:0,  closeH:14, closeM:0  },
+  { city:'Hong Kong', tz:'Asia/Hong_Kong',     exchange:'HKEX',          openH:9,  openM:30, closeH:16, closeM:0  },
+  { city:'Tokyo',     tz:'Asia/Tokyo',         exchange:'TSE',           openH:9,  openM:0,  closeH:15, closeM:30 },
+  { city:'Sydney',    tz:'Australia/Sydney',   exchange:'ASX',           openH:10, openM:0,  closeH:16, closeM:0  },
+];
+function isMarketOpen(m){
+  var now=new Date();
+  var local=new Date(now.toLocaleString('en-US',{timeZone:m.tz}));
+  var day=local.getDay();
+  if(day===0||day===6)return false;
+  var mins=local.getHours()*60+local.getMinutes();
+  return mins>=(m.openH*60+m.openM)&&mins<(m.closeH*60+m.closeM);
+}
+function updateMarketClocks(){
+  var el=document.getElementById('market-clocks');
+  if(!el)return;
+  var now=new Date();
+  el.innerHTML=MARKETS.map(function(m){
+    var t=now.toLocaleTimeString('en-GB',{timeZone:m.tz,hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false});
+    var open=isMarketOpen(m);
+    return '<div class="mc-item '+(open?'open':'closed')+'">'
+      +'<div class="mc-city">'+m.city+'</div>'
+      +'<div class="mc-time">'+t+'</div>'
+      +'<div class="mc-status">'+(open?'● OPEN':'○ CLOSED')+'</div>'
+      +'<div class="mc-exchange">'+m.exchange+'</div>'
+      +'</div>';
+  }).join('');
+}
+updateMarketClocks();
+setInterval(updateMarketClocks,1000);
+// ── END MARKET CLOCKS ──────────────────────────────────────────────────────
+</script>
+
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<script>
+(function(){
+  if(!document.getElementById('chartdiv'))return;
+  var root=am5.Root.new("chartdiv");
+  root.setThemes([am5themes_Animated.new(root)]);
+  var chart=root.container.children.push(am5map.MapChart.new(root,{
+    panX:"none",panY:"none",wheelY:"none",
+    projection:am5map.geoMercator(),
+    homeZoomLevel:1.2,homeGeoPoint:{longitude:20,latitude:25},
+    maxZoomLevel:1,minZoomLevel:1
+  }));
+  chart.chartContainer.set("background",am5.Rectangle.new(root,{fill:am5.color(0x111214),fillOpacity:1}));
+  var polySeries=chart.series.push(am5map.MapPolygonSeries.new(root,{geoJSON:am5geodata_worldLow,exclude:["AQ"]}));
+  polySeries.mapPolygons.template.setAll({fill:am5.color(0x1a1a1f),stroke:am5.color(0x2a2a35),strokeWidth:0.5,tooltipText:"{name}"});
+  polySeries.mapPolygons.template.states.create("hover",{fill:am5.color(0x252530)});
+  var grat=chart.series.push(am5map.GraticuleSeries.new(root,{}));
+  grat.mapLines.template.setAll({stroke:am5.color(0x9b59d6),strokeOpacity:0.05,strokeWidth:0.4});
+
+  var marketsData=[
+    {title:"NEW YORK",  longitude:-74.006,  latitude:40.7128, tz:"America/New_York", openH:9,  openM:30, closeH:16, closeM:0,  big:true},
+    {title:"LONDON",    longitude:-0.1276,  latitude:51.5074, tz:"Europe/London",    openH:8,  openM:0,  closeH:16, closeM:30, big:true},
+    {title:"AMS",       longitude:4.9041,   latitude:52.3676, tz:"Europe/Amsterdam", openH:9,  openM:0,  closeH:17, closeM:30, big:false},
+    {title:"FRNK",      longitude:8.6821,   latitude:50.1109, tz:"Europe/Berlin",    openH:9,  openM:0,  closeH:17, closeM:30, big:false},
+    {title:"DUBAI",     longitude:55.2708,  latitude:25.2048, tz:"Asia/Dubai",       openH:10, openM:0,  closeH:14, closeM:0,  big:false},
+    {title:"HONG KONG", longitude:114.1694, latitude:22.3193, tz:"Asia/Hong_Kong",   openH:9,  openM:30, closeH:16, closeM:0,  big:true},
+    {title:"TOKYO",     longitude:139.6917, latitude:35.6762, tz:"Asia/Tokyo",       openH:9,  openM:0,  closeH:15, closeM:30, big:true},
+    {title:"SYDNEY",    longitude:151.2093, latitude:-33.8688,tz:"Australia/Sydney", openH:10, openM:0,  closeH:16, closeM:0,  big:false},
+  ];
+
+  function isOpen(m){
+    var now=new Date();
+    var local=new Date(now.toLocaleString('en-US',{timeZone:m.tz}));
+    var day=local.getDay();
+    if(day===0||day===6)return false;
+    var mins=local.getHours()*60+local.getMinutes();
+    return mins>=(m.openH*60+m.openM)&&mins<(m.closeH*60+m.closeM);
+  }
+
+  var pointSeries=chart.series.push(am5map.MapPointSeries.new(root,{}));
+  pointSeries.bullets.push(function(root,series,dataItem){
+    var d=dataItem.dataContext;
+    var open=isOpen(d);
+    var col=open?0x27ae60:0x4a5568;
+    var sz=d.big?5:3;
+    var container=am5.Container.new(root,{});
+    if(open){
+      var ring=container.children.push(am5.Circle.new(root,{radius:sz,fill:am5.color(col),fillOpacity:0,stroke:am5.color(col),strokeOpacity:0.5,strokeWidth:1.5}));
+      ring.animate({key:"radius",from:sz,to:sz*4,duration:2000,loops:Infinity,easing:am5.ease.out(am5.ease.cubic)});
+      ring.animate({key:"strokeOpacity",from:0.5,to:0,duration:2000,loops:Infinity,easing:am5.ease.out(am5.ease.cubic)});
+    }
+    container.children.push(am5.Circle.new(root,{radius:sz,fill:am5.color(col),fillOpacity:0.9,tooltipText:d.title}));
+    if(d.big){
+      container.children.push(am5.Label.new(root,{
+        text:d.title,fill:am5.color(col),fontSize:8,fontFamily:"Inter,sans-serif",
+        fontWeight:"700",letterSpacing:1,dy:sz+10,centerX:am5.percent(50),
+        background:am5.Rectangle.new(root,{fill:am5.color(0x111214),fillOpacity:0.7})
+      }));
+    }
+    return am5.Bullet.new(root,{sprite:container});
+  });
+  pointSeries.data.setAll(marketsData.map(function(m){
+    return Object.assign({},m,{geometry:{type:"Point",coordinates:[m.longitude,m.latitude]}});
+  }));
+  root._logo.dispose();
+  chart.appear(1000,100);
+})();
+</script>
+
 </body>
 </html>
