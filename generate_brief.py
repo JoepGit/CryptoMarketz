@@ -95,7 +95,7 @@ print(f"✅ {len(news_items)} news headlines")
 # ── 5. Build prompt ───────────────────────────────────────────────────────
 prompt = f"""You are the lead analyst at CryptoMarketz, writing the daily market brief for {today}.
 
-IMPORTANT: Write ONLY in English. Be detailed, analytical and professional.
+CRITICAL REQUIREMENT: You MUST write ONLY in English. Every single word must be English. Do NOT use Dutch, German, or any other language under any circumstances.
 Each section must be at least 4-6 sentences. Use the exact prices and figures from the live data below.
 
 ═══ LIVE PRICE DATA — use ONLY these prices ═══
@@ -158,6 +158,7 @@ print("\n🤖 Generating brief with Claude...")
 payload = json.dumps({
     "model": "claude-haiku-4-5-20251001",
     "max_tokens": 4096,
+    "system": "You are a professional crypto market analyst. You ALWAYS write in English only. Never use Dutch or any other language. Always respond with valid JSON only.",
     "messages": [{"role": "user", "content": prompt}]
 }).encode()
 
@@ -178,13 +179,18 @@ except urllib.error.HTTPError as e:
     print("HTTP Error:", e.code, e.read().decode())
     raise
 
+import re as _re
 text = data['content'][0]['text'].strip()
-if text.startswith('```'):
-    text = '\n'.join(text.split('\n')[1:])
-if text.endswith('```'):
-    text = '\n'.join(text.split('\n')[:-1])
-
-brief = json.loads(text.strip())
+text = _re.sub(r'^```[a-z]*\s*', '', text)
+text = _re.sub(r'\s*```$', '', text)
+text = text.strip()
+print(f"Claude response preview: {text[:200]}")
+try:
+    brief = json.loads(text)
+except json.JSONDecodeError as e:
+    print(f"❌ JSON parse error: {e}")
+    print(f"Last 300 chars: {text[-300:]}")
+    raise
 brief['date'] = today
 
 os.makedirs('data', exist_ok=True)
