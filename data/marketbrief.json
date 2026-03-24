@@ -1,18 +1,18 @@
 {
   "date": "dinsdag 24 maart 2026",
-  "focus": "Bitcoin testing steun rond $69.8K terwijl altcoins differentieel zwakker presteren.",
-  "risk": "Risicovolle markt, voorzichtig sentiment",
-  "btc_structure": "Bitcoin daalde 0.83% naar $69,869 met substantieel volume van $37.53B. De daling duidt op voorzichtigheid na recente rallies, hoewel steun onder de $68.5K nog intact blijft.",
-  "eth_flows": "Ethereum vertoonde stabiliteit met slechts +0.02% winst naar $2,137.03, wat suggereert institutionele positiebuilding. Het trading volume van $16.96B geeft aan dat beleggers wachten op volgende catalysator.",
+  "focus": "Brede marktcorrectie met BTC onder $70k druk op risicoactiva.",
+  "risk": "Verhoogd negatief sentiment.",
+  "btc_structure": "Bitcoin daalt 2.89% naar $69,019 na weerstand rond $71k. Volume blijft robuust op $35.20B ondanks de daling. Support vormt zich boven $68k-niveau.",
+  "eth_flows": "Ethereum zwakker dan Bitcoin met -2.11% naar $2,106.94 en volume $17.51B. ETH/BTC ratio vertoont relatieve zwakte in deze pullback.",
   "top_narratives": [
-    "Altcoin divergentie - XRP (-2.62%) en SOL (-0.53%) underperformen",
-    "Stablecoin vraag ondersteunt volatiliteitspatronen",
-    "Macro-timing risk voor Q2 Fed-beslissingen",
-    "On-chain accumulation in bear-case scenario's"
+    "Macro-headwinds drukken risicomiddelen",
+    "Bitcoin technische weerstandsbreuk",
+    "Altcoin underperformance (XRP -4.00%)",
+    "Volume-blokkade rond $70k zone"
   ],
-  "macro_impact": "De brede marktmove wijst op voorzichtigheid vooruitlopend op economische data. De dalende altcoins duiden erop dat risico-off sentiment dominant blijft ondanks Bitcoins relatieve stabiliteit.",
-  "whale_flows": "BTC-volume van $37.53B is solide maar niet extremaal; de onderperformance van altcoins ($2-4B bereik) suggereert dat grote posities in Bitcoin geconcentreerd blijven.",
-  "funding_oi": "Long-posities waarschijnlijk onder druk met afnemende leverage. Liquidatie-risico's rond $68K-$67K levels zijn verhoogd gegeven de -0.83% move.",
-  "volatility_outlook": "Verwacht 3-5% dagelijkse ranges op Bitcoin. Altcoin-volatiliteit kan toenemen indien Bitcoin onder $69K breekt, met especiale aandacht voor XRP-liquidity.",
-  "full_report": "De markt opent dinsdag in voorzichtig territorium: Bitcoin daalde 0.83% naar $69,869 met $37.53B volume, Ethereum was vrijwel vlak op $2,137.03 ($16.96B), terwijl altcoins significant zwakker waren met XRP -2.62% naar $1.40 en SOL -0.53% naar $89.74. De divergentie tussen Bitcoin en altcoins wijst op risicomijding, mogelijk vooruitlopend op macro-economische triggers. Technisch gezien blijft Bitcoin rond kritische steunzones; een break onder $69K kan liquidaties van $2-3B triggeren. Beleggers dienen voorzichtig te blijven totdat volumes en sentimentindicatoren verbetering tonen."
+  "macro_impact": "Bredere marktcorrectie suggereert voorzichtigheid vanuit institutionele beleggers. Rentetariefverwachtingen blijven pressie uitoefenen op cryptoassets.",
+  "whale_flows": "Handelsvolume gedomineerd door exit-liquiditeit op altcoins (XRP $2.14B). BTC volume stabiel ($35.20B) wijst op accumulatie ondanks prijsdaling.",
+  "funding_oi": "Negatieve funding rates verwacht bij longs als bearish stemming aanhoudt. Open interest kan contaminatie zien als technische levels breken.",
+  "volatility_outlook": "IV verwacht naar 60-70 range gegeven beweging. Breakout scenario's blijven operationeel boven $68k en onder $67k.",
+  "full_report": "Cryptomarkten ondergaan brede correctie dinsdag 24 maart met BTC op $69,019 (-2.89%), ETH $2,106.94 (-2.11%) en significante altcoin-underperformance (XRP -4.00%). Volume concentreert op BTC ($35.20B) en ETH ($17.51B) terwijl kleinere assets (BNB -1.56%, SOL -2.47%) zwakker handelen. Technische niveaus rond $68k-$70k bepalen korttermijnsentiment. Macro-factoren blijven dominant met aanhoudende voorzichtigheid van institutionele spelers. Wij monitoren support-integriteit voor signalen van accumulatie versus verdere uitstroom."
 }
