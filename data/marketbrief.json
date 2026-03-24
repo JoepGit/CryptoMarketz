@@ -1,18 +1,18 @@
 {
   "date": "dinsdag 24 maart 2026",
-  "focus": "Solana leidt rally aan met 6.88% stijging terwijl Bitcoin consolidateert rond $71,164.",
-  "risk": "Opgaande volatiliteit, sterke momentum",
-  "btc_structure": "Bitcoin handelt op $71,164 met een bescheiden +3.84% in 24 uur, wat duidt op voorzichtige accumulatie. De volume van $49.61B blijft robust, ondersteunend voor verdere opwaartse beweging.",
-  "eth_flows": "Ethereum toont sterker momentum met +5.39% tot $2,158.67, aangedreven door $27.53B dagvolume. Dit outperformance ten opzichte van Bitcoin suggereert institutionele interesse in altcoins.",
+  "focus": "Bitcoin consolidatie rond $71.231 terwijl altcoins gemengde signalen afgeven in dalende volume.",
+  "risk": "Lage volatiliteit, liquiditeits-compressie",
+  "btc_structure": "Bitcoin handelt op $71.231 met bescheiden groei van 1.35% in 24h, ondersteund door $42.32B volume. De consolidatie suggereert afwachtende houding van grote spelers voor het volgende impulszignaal.",
+  "eth_flows": "Ether noteert $2.171,44 met 1.40% winst en $22.69B volume, licht outperformance ten opzichte van Bitcoin. Het volume-to-price ratio geeft aan dat institutionele inflows nog niet aantrekken.",
   "top_narratives": [
-    "Solana momentum dominantie met 6.88% dagelijkse gain",
-    "Ethereum outperformance boven Bitcoin",
-    "Grote volumeflows in top-3 assets",
-    "Risk-on sentiment terug in markt"
+    "Macro-onzekerheid remt risicoappetijt",
+    "Solana momentum ($91.84, +2.52%) voorbijganger",
+    "XRP stagnatie ($1.42, +0.33%) ondanks regulatory clarity",
+    "Altseason nog niet actief geactiveerd"
   ],
-  "macro_impact": "De brede marktbewegingen duiden op terugkeer van risk appetite, mogelijk gedreven door macro stabilisering. Volumeconcentratie in de top-5 assets suggereert gerichte institutionele positioning.",
-  "whale_flows": "Bitcoin volume van $49.61B en Ethereum van $27.53B indiceren substantiële whale accumulatie. Solana ($5.40B) trekt verhoudingsgewijs meer volume aan dan BNB ($1.68B), signalererend selectief interest in high-beta assets.",
-  "funding_oi": "De opwaartse momentum in SOL en ETH duidt op constructieve funding sentiment. Verwacht wordt dat long positioning zich verder consolidateert als BTC boven $71,000 blijft.",
-  "volatility_outlook": "Volatiliteit blijft verhoogd gegeven de ongelijke winsten (+3.84% tot +6.88% spreiding). Verwacht meer sectorselectiviteit en intraday ranging totdat macro catalysts duiding geven.",
-  "full_report": "De cryptomarkt toont dinsdag 24 maart 2026 gedifferentieerd sterkte met Bitcoin gestabiliseerd op $71,164 (+3.84%) en $49.61B volume, Ethereum accelererend op $2,158.67 (+5.39%) met $27.53B volume, en Solana leidend met 6.88% winst op $91.79. Kleinere assets BNB (+1.74% op $637.44) en XRP (+3.39% op $1.42) hinken achter, wat selectieve risk-on sentiment reflecteert. De volumeconcentratie in Bitcoin en Ethereum paired met Solana's outperformance duidt op gedifferentieerde institutionele interest, terwijl macro stabilisering waarschijnlijk ondersteunend werkt voor verdere opwaartse beweging."
+  "macro_impact": "Globale rentetarieven en Fed-signalen bepalen risico-sentiment. Lage volatiliteit wijst op afwachtend marktsentiment voor volgende macro-catalysator.",
+  "whale_flows": "Totaal volume $73.83B gedomineerd door BTC/ETH paren; BNB dalend (-0.25%) geeft lichte uitstroom aan. Concentratie in top-2 duidt op voorzichtige positiegrootte.",
+  "funding_oi": "Verwacht neutrale tot licht positieve funding rates gegeven het consolidatie-patroon. Long-posities worden aangehouden maar niet aggressief uitgebreid.",
+  "volatility_outlook": "Impliciete volatiliteit blijft laag met afnemende 24h-bereiken. Doorbraak boven $72K of onder $70K zal volatiliteit katalyseren.",
+  "full_report": "CryptoMarketz marktbriefing 24 maart 2026: Bitcoin consolidateert rond $71.231 met 1.35% dagwinst en $42.32B volume, terwijl Ether op $2.171,44 handelt met marginale outperformance (+1.40%). Solana springt eruit met +2.52% naar $91.84, maar het totale altseason-momentum blijft beperkt — XRP stijgt slechts 0.33% naar $1.42 en BNB daalt 0.25%. Het volume-patroon wijst op liquide maar voorzichtige marktdeelnemers. De macro-achtergrond blijft onzeker, wat verklaart waarom grote spelers nog niet agressief posities opbouwen. We verwachten dat volatiliteit terugkeert zodra de Fed-boodschappen of macro-data het sentiment verschuift."
 }
