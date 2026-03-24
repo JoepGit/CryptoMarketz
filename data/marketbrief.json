@@ -1,18 +1,18 @@
 {
   "date": "dinsdag 24 maart 2026",
-  "focus": "Brede marktcorrectie met Bitcoin onder druk door macro-onzekerheid en technische weerstand rond $70.000.",
-  "risk": "Verhoogd risico, correctie-fase actief",
-  "btc_structure": "Bitcoin noteert op $70.044 met een verlies van -1.21% in 24 uur, waarbij het ondersteunend niveau rond $69.000 kritisch wordt. De afgezwakte volume van $39.46B duidt op terughoudendheid van grote markttelers.",
-  "eth_flows": "Ethereum trekt beter dan Bitcoin met slechts -0.66% verlies op $2.148,43, wat suggereert dat institutioneel kapitaal naar alt-layer migreert. De volume van $16.82B blijft robuust ondanks de correctie.",
+  "focus": "Breed marktcorrectie van -0,7% tot -2% duidt op voorzichtigheid voorafgaand aan macro-catalisten.",
+  "risk": "Rood scenario, gedempte volumes",
+  "btc_structure": "Bitcoin noteert op $70.053 met een daling van -1,27% in 24 uur, terwijl het handelsvolume van $39,63B milde bezorgdheid aangeeft. De technische steun rond $69.000 blijft kritisch onder toezicht.",
+  "eth_flows": "Ethereum handelt op $2.144,44 met een minder sterke daling van -0,73%, ondersteund door een volumen van $16,98B. De relatieve weerstand van Ethereum suggereert institutionele stapeling in dips.",
   "top_narratives": [
-    "Macro headwinds door sterkere USD en renteverwachtingen",
-    "Technische weerstand rond $70K-$72K in Bitcoin",
-    "Altseason-momentum met Ethereum outperformance",
-    "Liquidatierisico's in short-posities bij break onder $69K"
+    "FED-rentebesluit volatiliteit",
+    "Miner capitulation signalen",
+    "Stablecoin reserve druk",
+    "Institutionele accumulatie phases"
   ],
-  "macro_impact": "Sterkere dollar-index en gewijzigde renteverwachtingen drukken risicoactiva. De markt prijst mogelijk in dat centrale banken minder liquide blijven dan eerder voorzien.",
-  "whale_flows": "Afgenomen volume ($39.46B BTC) wijst op whale-voorzichtigheid; XRP (-2.32%) en SOL (-2.14%) ondervinden verkoopdwang door liquidaties in kleinere posities.",
-  "funding_oi": "Financieringstarieven dalen naar neutral niveau, wat aangeeft dat leveraged long-posities afbouwen. OI-compressie verwacht boven de $30B voor Bitcoin.",
-  "volatility_outlook": "VIX-equivalenten in crypto stijgen; verwachting voor 3-5% dagelijkse bewegingen tot einde week. Volatiliteit blijft verhoogd totdat macro-catalysts verduidelijken.",
-  "full_report": "De cryptomarkt vertoont brede correctiefasen dinsdag 24 maart met Bitcoin op $70.044 (-1.21%), Ethereum op $2.148,43 (-0.66%) en kleinere alts zoals XRP ($1.40, -2.32%) en SOL ($89.86, -2.14%) die ondermaats presteren. Het verminderde volume op $39.46B voor BTC duidt op institutionele terughoudendheid in een macro-onzeker klimaat met sterke dollar-druk. Ethereum outperformance suggereert rotatie naar Layer-2-narrative en DeFi-tokens, terwijl fundamentele risk-off sentimenten dominerend blijven. Technische steun rond $69K-$69.5K voor Bitcoin en $2.100 voor Ethereum worden kritiek getest; break-out poging vereist duidelijke macro-catalysts."
+  "macro_impact": "De brede daling correleren mogelijk met renteverwachtingen en geopolitieke onzekerheid. Marktdeelnemers wachten op duidelijkheid over geldpolitieke beleid in de komende weken.",
+  "whale_flows": "Volume concentraties in BTC ($39,63B) versus ETH ($16,98B) duiden op voorzichtige institutionele posities. Bijzonderheden in XRP-volume ($2,29B) suggereren niche-speculatie.",
+  "funding_oi": "Lage funding rates en beperkte open interest wijzen op verminderde leverage-positie. Toekomstige volatiliteit kan worden getriggerd door macro-events en technische breakouts.",
+  "volatility_outlook": "Impliciete volatiliteit blijft gedempt met -0,7% tot -2% dagelijks bereik. Verwacht wordt dat volatiliteit toeneemt rond ECB/FED-mededelingen.",
+  "full_report": "CryptoMarketz registreert een brede correctie op dinsdag 24 maart 2026 met Bitcoin ($70.053, -1,27%), Ethereum ($2.144,44, -0,73%), Solana ($90,03, -1,74%) en XRP ($1,41, -2,02%) allen in rood. Het gecombineerde handelsvolume van $64B suggereert selectieve positionering. Terwijl grote munten gematig dalen, duidt de volume-verdeling op institutionele voorzichtigheid. Technische steunpunten voor Bitcoin rond $69K en voor Ethereum rond $2.100 blijven operationeel. Markttiming suggereert voorbereiding op macro-catalisten deze week, met XRP en Solana aangetast door sector-specifieke druk."
 }
