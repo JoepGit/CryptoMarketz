@@ -1,5 +1,18 @@
 [
   {
+    "id": 1774277734084,
+    "coin": "XRP/USD",
+    "type": "BUY",
+    "entry": "1.45",
+    "tp": "1.52",
+    "sl": "1.40",
+    "result": "loss",
+    "pnl": "-3.45%",
+    "resolved_price": 1.4,
+    "signal_date": "2026-03-23T14:55:33.414Z",
+    "resolved_at": "2026-03-24T14:59:00.795Z"
+  },
+  {
     "id": 1774271363334,
     "coin": "BTC/USD",
     "type": "BUY",

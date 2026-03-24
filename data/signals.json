@@ -24,18 +24,6 @@
     "source": "claude-bot"
   },
   {
-    "id": 1774277734084,
-    "coin": "XRP/USD",
-    "type": "BUY",
-    "entry": "1.45",
-    "tp": "1.52",
-    "sl": "1.40",
-    "note": "1H momentum positief +0.59%, 24h sterk +3.58%, geen technische data maar marktsentiment bullish op korte termijn",
-    "timestamp": "2026-03-23T14:55:33.414Z",
-    "generated_at": "Mon, 23 Mar 2026 14:55:33 GMT",
-    "source": "claude-bot"
-  },
-  {
     "id": 1774271361232,
     "coin": "SOL/USD",
     "type": "BUY",
