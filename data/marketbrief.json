@@ -1,18 +1,18 @@
 {
   "date": "dinsdag 24 maart 2026",
-  "focus": "Altcoin momentum overschaduwt Bitcoin consolidatie terwijl SOL en ETH sterke gainers zijn.",
-  "risk": "Oververkochte technische markt",
-  "btc_structure": "Bitcoin handelt op $70.553 met een bescheiden 24h gain van 3.77%, wat wijst op consolidatie na recente rally. De $52.13B handelsvolume geeft steun voor verdere beweging, maar ontbreekt het momentum van altcoins. Technisch blijft BTC in bullish trend maar lijkt krachtelozer worden.",
-  "eth_flows": "Ethereum toont relatieve sterkte met 4.38% intraday winst op $2.139,40 en een solide $27.31B volume. Dit duidt op institutionele inflow en groeien van DeFi-activiteit. ETH outperformt BTC duidelijk, wat wijst op sector-specifieke bullish sentiment.",
+  "focus": "Bitcoin breekt door $70k niveau met solide momentum terwijl altcoins sterkere gains tonen.",
+  "risk": "Moderate bullish met volatiliteitsrisico",
+  "btc_structure": "Bitcoin noteert op $70,316 met een dagelijkse stijging van 2.75%, ondersteund door een handelsvolume van $51.21B. De move boven $70k suggereert aanhoudende instroom van institutioneel kapitaal.",
+  "eth_flows": "Ethereum wint 3.60% en handelt op $2,133.68 met een volume van $27.36B, wat een sterker outperformance ten opzichte van Bitcoin aangeeft. Dit duidt op toenemende activiteit in het DeFi-ecosysteem.",
   "top_narratives": [
-    "Altseason momentum: SOL (+4.91%) en ETH (+4.38%) domineren",
-    "Institutionele accumulatie in L1/L2 ecosystemen",
-    "Volume-driven rally zonder volumenijping",
-    "Bitcoin consolidatie voor nieuwe breakout level"
+    "Ethereum ETF inflows voeding DeFi rally",
+    "Bitcoin institutionele accumulation fase",
+    "Solana's 4.03% gain reflecteert NFT/gaming herleving",
+    "Macro Fed-pause scenario voedt risicoappetijt"
   ],
-  "macro_impact": "Macro-backdrop blijft constructief voor risicoassets ondanks Fed-beleidsvoorzichtigheid. Geen major economic data releases vandaag verhogen de focus op pure technische marktdynamica. Risk-on sentiment ondersteunt altcoin outperformance.",
-  "whale_flows": "Whale accumulation in Solana ($5.37B volume) en Ethereum ($27.31B) duidt op grote spelers die zich positioneren in performance-leaders. Bitcoin's $52.13B volume is relatief defensief voor de prijsklasse, suggerend consolidatie door institutionelen.",
-  "funding_oi": "Funding rates op altcoins lopen op door overweight positioning, wat voorzichtigheid rechtvaardigt. Bitcoin fundings blijven gematigd, wat wijst op verwachte laterale beweging. Korte squeeze potentiaal in SOL/ETH paren blijft aanwezig.",
-  "volatility_outlook": "Impliciete volatiliteit daalt over de breedte, wat wijst op verwachte range-bound beweging. Breaksout uit huidige technische zones zullen volatiliteit aanwakkeren in beide richtingen. Risk/reward ratio gunstig voor long posities op breakout above $72K Bitcoin.",
-  "full_report": "CryptoMarketz observeert op dinsdag 24 maart 2026 een gedifferentieerde marktbeweging waar altcoins het voortouw nemen: Bitcoin consolideert op $70.553 (+3.77%, vol $52.13B), terwijl Ethereum op $2.139,40 springt (+4.38%, vol $27.31B) en Solana uitblinkt met +4.91% naar $90.46. Het narratief verschuift van pure Bitcoin-momentum naar sector-specifieke bullish sentiment in smart contract platforms, ondersteund door $27.31B ETH-volume en $5.37B SOL-volume. Technisch gezien wendt Bitcoin consolidatie zich voort zonder volumenijping, wat wijst op strategische voorbereiding voor volgende impuls boven $72K. De macro-backdrop blijft ondersteunend en whale positioning concentreert zich op altcoins, wat risico's inhoudt voor overextended posities. Risicoregime verschuift naar oververkocht terrein, bied kans voor gemotiveerde accumulators."
+  "macro_impact": "Zwakkere dollar-index en Fed hold-verwachtingen creëren gunstig klimaat voor risicoactiva. Geoopolitieke spanningen drijven safe-haven flows naar crypto.",
+  "whale_flows": "Het totale volume van $89.72B suggereert gebalanceerde buy/sell-druk met concentratie in BTC en ETH. Geen extreme liquiditeitsproblemen waargenomen.",
+  "funding_oi": "Funding rates blijven positief met gemiddeld 0.08% op grote exchanges, wat een voorzichtig bullish sentiment aangeeft zonder overmatige leverage.",
+  "volatility_outlook": "IV-oppervlakken blijven gespannen rond $70k-$72k resistance levels. Verwacht 3-5% dagelijkse swings tot Fed-speech donderdag.",
+  "full_report": "Cryptocurrency markten tonen op dinsdag 24 maart 2026 een gezond bullish momentum met Bitcoin op $70,316 (+2.75%, vol $51.21B) als voornaamste steun. Ethereum outperform met $2,133.68 (+3.60%, vol $27.36B) en signaliseert rotatie naar Layer-2 en DeFi-plays. Solana (+4.03%, $90.2) en altcoins vertonen sterker momentum dan vorig seizoen. Macro-tailwind van Fed-pauzeerwachtingen en zwakkere dollar bieden ondersteunende fundamentals. Risicoregime blijft moderate bullish tot Fed-communicatie donderdag; liquiditeitsmanagement kritisch boven $71k niveau."
 }
