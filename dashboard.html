@@ -4573,7 +4573,7 @@ async function loadMarketBrief(){
   // Show loading state
   const today = new Date().toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'});
   set('brief-date', `Generating brief for ${today}...`);
-  set('brief-summary', 'Market brief laden...');
+  set('brief-summary', 'Loading market brief...');
 
   // Try to load from /data/marketbrief.json first (server-generated, most up to date)
   let data = null;
@@ -4598,6 +4598,8 @@ async function loadMarketBrief(){
       const prompt = `Today is ${new Date().toLocaleDateString('en-GB',{weekday:'long',day:'2-digit',month:'long',year:'numeric'})}.
 
 You are a professional crypto market analyst. Write a comprehensive daily market brief for today. Use current market knowledge up to your training cutoff. Be analytical, specific, and professional.
+
+CRITICAL: Write ONLY in English. Every single word must be in English. Do not use any Dutch or other languages.
 
 Respond ONLY with a valid JSON object (no markdown, no backticks) with exactly these keys:
 {
