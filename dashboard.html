@@ -3587,28 +3587,87 @@ var COINCAP_CARD_MAP={'bitcoin':'btc','ethereum':'eth','litecoin':'ltc'};
 
 // Cache
 var _priceCache=null,_priceCacheTime=0;
+var _tickerRenderedOnce=false;
 
+function safeLsGet(key){
+  try{var raw=localStorage.getItem(key);return raw?JSON.parse(raw):null;}catch(e){return null;}
+}
+function safeLsSet(key,val){
+  try{localStorage.setItem(key,JSON.stringify(val));}catch(e){}
+}
+function updateMiniCardsFromCoins(coins){
+  (coins||[]).forEach(function(c){
+    var cardId=COINCAP_CARD_MAP[c.id];
+    var price=Number(c.current_price)||0;
+    var ch=Number(c.price_change_percentage_24h)||0;
+    var chStr=(ch>=0?'+':'')+ch.toFixed(2)+'%';
+    var chClass=ch>=0?'db-stat-up':'db-stat-dn';
+    if(cardId){
+      var pe=document.getElementById('p-'+cardId);if(pe)pe.textContent=fP(price);
+      var ce=document.getElementById('c-'+cardId);if(ce){ce.textContent=chStr;ce.className='db-stat-sub '+chClass;}
+      var se=document.getElementById('sp-'+cardId);if(se)se.innerHTML='<polyline points="'+spark(ch)+'" fill="none" stroke="'+(ch>=0?'#9b59d6':'var(--red)')+'" stroke-width="1.8" stroke-linecap="round"/>';
+    }
+    if(c.id==='solana'){
+      var solv=document.getElementById('p-sol-db');if(solv)solv.textContent=fP(price);
+      var solc=document.getElementById('c-sol-db');if(solc){solc.textContent=chStr;solc.className='db-stat-sub '+chClass;}
+    }
+  });
+}
+function normalizeTickerCoins(coins){
+  return (coins||[]).filter(function(c){return c && isFinite(Number(c.current_price));}).map(function(c){
+    return {
+      id:c.id,
+      ticker:c.ticker||COINCAP_LABEL_MAP[c.id]||c.symbol||String(c.id||'').toUpperCase(),
+      symbol:(c.symbol||c.id||'').toString().toLowerCase(),
+      current_price:Number(c.current_price)||0,
+      price_change_percentage_24h:Number(c.price_change_percentage_24h)||0
+    };
+  });
+}
+function fallbackTickerCoins(){
+  var cached = safeLsGet('zimr_ticker_cache');
+  if(cached && cached.coins && cached.coins.length) return normalizeTickerCoins(cached.coins);
+  if(_priceCache && _priceCache.length) return normalizeTickerCoins(_priceCache);
+  var btcEl=document.getElementById('mst-btc-price');
+  var ethEl=document.getElementById('mst-eth-price');
+  var btcChEl=document.getElementById('mst-btc-chg');
+  var ethChEl=document.getElementById('mst-eth-chg');
+  function parseMoney(t){ return Number(String(t||'').replace(/[^0-9.\-]/g,''))||0; }
+  function parsePct(t){ return Number(String(t||'').replace(/[^0-9.\-]/g,''))||0; }
+  var arr=[];
+  if(btcEl && btcEl.textContent && btcEl.textContent.indexOf('—')===-1) arr.push({id:'bitcoin',ticker:'BTC',symbol:'btc',current_price:parseMoney(btcEl.textContent)*1000,price_change_percentage_24h:parsePct(btcChEl&&btcChEl.textContent)});
+  if(ethEl && ethEl.textContent && ethEl.textContent.indexOf('—')===-1) arr.push({id:'ethereum',ticker:'ETH',symbol:'eth',current_price:parseMoney(ethEl.textContent)*1000,price_change_percentage_24h:parsePct(ethChEl&&ethChEl.textContent)});
+  if(arr.length) return arr;
+  return [
+    {id:'bitcoin',ticker:'BTC',symbol:'btc',current_price:0,price_change_percentage_24h:0},
+    {id:'ethereum',ticker:'ETH',symbol:'eth',current_price:0,price_change_percentage_24h:0}
+  ];
+}
 function renderTicker(coins){
+  var normalized = normalizeTickerCoins(coins);
+  if(!normalized.length) normalized = fallbackTickerCoins();
   var t='';
-  coins.forEach(function(c){
-    var lbl=c.ticker||c.symbol.toUpperCase();
-    var price=c.current_price;
-    var ch=c.price_change_percentage_24h||0;
-    t+='<div class="ti"><span class="ti-s">'+lbl+'/USDT</span><span class="ti-v">'+fP(price)+'</span><span class="'+(ch>=0?'ti-u':'ti-d')+'">'+(ch>=0?'▲':'▼')+' '+Math.abs(ch).toFixed(2)+'%</span></div>';
+  normalized.forEach(function(c){
+    var lbl=(c.ticker||c.symbol||'').toString().toUpperCase();
+    var price=Number(c.current_price)||0;
+    var ch=Number(c.price_change_percentage_24h)||0;
+    t+='<div class="ti"><span class="ti-s">'+lbl+'/USDT</span><span class="ti-v">'+(price?fP(price):'--')+'</span><span class="'+(ch>=0?'ti-u':'ti-d')+'">'+(ch>=0?'▲':'▼')+' '+Math.abs(ch).toFixed(2)+'%</span></div>';
   });
   var el=document.getElementById('tkr-t');if(el)el.innerHTML=t+t;
+  _tickerRenderedOnce=true;
+  safeLsSet('zimr_ticker_cache',{ts:Date.now(),coins:normalized});
 }
 
 function coincapFetch(){
   if(_priceCache&&Date.now()-_priceCacheTime<30000)return Promise.resolve(_priceCache);
   var url='https://api.coincap.io/v2/assets?ids='+COINCAP_IDS.join(',')+'&limit=15';
-  return fetch(url,{headers:{'Accept-Encoding':'gzip,deflate,br'}})
+  return fetch(url)
     .then(function(r){
       if(!r.ok) throw new Error('CoinCap HTTP '+r.status);
       return r.json();
     })
     .then(function(d){
-      if(!d||!d.data) throw new Error('CoinCap lege response');
+      if(!d||!d.data||!d.data.length) throw new Error('CoinCap lege response');
       var coins=d.data.map(function(a){
         return{
           id:a.id,
@@ -3624,39 +3683,30 @@ function coincapFetch(){
 }
 
 function fetchPrices(){
+  if(!_tickerRenderedOnce) renderTicker(fallbackTickerCoins());
   coincapFetch().then(function(coins){
-    // Update dashboard stat bar + price cards
-    coins.forEach(function(c){
-      var cardId=COINCAP_CARD_MAP[c.id];
-      var price=c.current_price;
-      var ch=c.price_change_percentage_24h||0;
-      var chStr=(ch>=0?'+':'')+ch.toFixed(2)+'%';
-      var chClass=ch>=0?'db-stat-up':'db-stat-dn';
-      if(cardId){
-        var pe=document.getElementById('p-'+cardId);if(pe)pe.textContent=fP(price);
-        var ce=document.getElementById('c-'+cardId);if(ce){ce.textContent=chStr;ce.className='db-stat-sub '+chClass;}
-        var se=document.getElementById('sp-'+cardId);if(se)se.innerHTML='<polyline points="'+spark(ch)+'" fill="none" stroke="'+(ch>=0?'#9b59d6':'var(--red)')+'" stroke-width="1.8" stroke-linecap="round"/>';
-      }
-      if(c.id==='solana'){
-        var solv=document.getElementById('p-sol-db');if(solv)solv.textContent=fP(price);
-        var solc=document.getElementById('c-sol-db');if(solc){solc.textContent=chStr;solc.className='db-stat-sub '+chClass;}
-      }
-    });
-    // Update top ticker bar met live data
+    updateMiniCardsFromCoins(coins);
     renderTicker(coins);
   }).catch(function(err){
     console.warn('[ZIMR] CoinCap fetch mislukt:', err);
-    // Probeer CoinGecko als fallback
-    var cgUrl='https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana,ripple,dogecoin,cardano,chainlink&vs_currencies=usd&include_24hr_change=true';
-    fetch(cgUrl).then(function(r){return r.json();}).then(function(d){
-      var coins=Object.keys(d).map(function(id){
-        return{id:id,ticker:CG_LABELS[id]||(id.slice(0,4).toUpperCase()),symbol:id,current_price:d[id].usd||0,price_change_percentage_24h:d[id].usd_24h_change||0};
+    var cgUrl='https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana,ripple,dogecoin,cardano,chainlink,litecoin&vs_currencies=usd&include_24hr_change=true';
+    fetch(cgUrl).then(function(r){
+      if(!r.ok) throw new Error('CoinGecko HTTP '+r.status);
+      return r.json();
+    }).then(function(d){
+      var map={bitcoin:'BTC',ethereum:'ETH',solana:'SOL',ripple:'XRP',dogecoin:'DOGE',cardano:'ADA',chainlink:'LINK',litecoin:'LTC'};
+      var coins=Object.keys(d||{}).map(function(id){
+        return{id:id,ticker:map[id]||(id.slice(0,4).toUpperCase()),symbol:id,current_price:Number(d[id].usd)||0,price_change_percentage_24h:Number(d[id].usd_24h_change)||0};
       });
+      updateMiniCardsFromCoins(coins);
       renderTicker(coins);
-    }).catch(function(){});
+    }).catch(function(err2){
+      console.warn('[ZIMR] CoinGecko fallback mislukt:', err2);
+      renderTicker(fallbackTickerCoins());
+    });
   });
 }
-setInterval(fetchPrices,30000); // elke 30s — CoinCap heeft ruimere rate limits
+setInterval(fetchPrices,30000);
 
 function fetchTotalMarketCap(){
   // Binance doesn't have global market cap use CoinGecko just for this one call (cached 5 min)
@@ -5282,100 +5332,64 @@ async function loadLiveNotifications() {
   const timeStr = now.toLocaleTimeString('en-GB', {hour:'2-digit', minute:'2-digit'});
 
   try {
-    // ── Fetch all data in parallel ──────────────────────────────────────
-    const [cgMarkets, cgGlobal, fgRes, newsRes] = await Promise.allSettled([
-      fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,solana,binancecoin,ripple&order=market_cap_desc&per_page=5&page=1&sparkline=false&price_change_percentage=1h,24h').then(r=>r.json()),
-      fetch('https://api.coingecko.com/api/v3/global').then(r=>r.json()),
+    // Fetch only what we need — minimal API calls
+    const [fgRes, cgGlobalRes, newsRes] = await Promise.allSettled([
       fetch('https://api.alternative.me/fng/?limit=2').then(r=>r.json()),
+      fetch('https://api.coingecko.com/api/v3/global').then(r=>r.json()),
       fetch('https://cointelegraph.com/rss').then(r=>r.text())
     ]);
 
     // ── 1. Fear & Greed ─────────────────────────────────────────────────
     if(fgRes.status === 'fulfilled') {
-      const fg    = fgRes.value;
-      const cur   = parseInt(fg.data[0].value);
-      const prev  = parseInt(fg.data[1].value);
-      const lbl   = fg.data[0].value_classification;
-      const diff  = cur - prev;
+      const fg  = fgRes.value;
+      const cur = parseInt(fg.data[0].value);
+      const prv = parseInt(fg.data[1].value);
+      const lbl = fg.data[0].value_classification;
+      const diff = cur - prv;
       const diffStr = (diff >= 0 ? '+' : '') + diff;
       let dot = cur <= 25 ? 'notif-dot-warn' : cur >= 60 ? '' : 'notif-dot-muted';
       events.push({ dot, text: `Fear & Greed: ${lbl} (${cur})`, time: `${diffStr} vs yesterday · Updated daily`, ts: 0 });
     }
 
-    // ── 2. Price movements ──────────────────────────────────────────────
-    if(cgMarkets.status === 'fulfilled') {
-      const coins = cgMarkets.value;
-      coins.forEach(coin => {
-        const sym   = coin.symbol.toUpperCase();
-        const p     = coin.current_price;
-        const chg1h = coin.price_change_percentage_1h_in_currency || 0;
-        const chg24 = coin.price_change_percentage_24h || 0;
-        const pFmt  = p >= 1000 ? '$' + p.toLocaleString('en-US', {maximumFractionDigits:0}) : '$' + p.toFixed(3);
+    // ── 2. BTC price + key level check (reuse existing price from ticker) ─
+    try {
+      const btcEl = document.getElementById('mst-btc-price');
+      const btcChEl = document.getElementById('mst-btc-chg');
+      if(btcEl && btcEl.textContent !== '—') {
+        const btcP = parseFloat(btcEl.textContent.replace(/[^0-9.]/g,''));
+        const btcChg = btcChEl ? btcChEl.textContent : '';
+        // BTC key level detection
+        const levels = [100000,90000,80000,75000,70000,65000,60000,55000,50000];
+        const prev = _prevNotifData.btcPrice || btcP;
+        levels.forEach(lvl => {
+          if((prev < lvl && btcP >= lvl) || (prev > lvl && btcP <= lvl)) {
+            const dir = btcP >= lvl ? 'above' : 'below';
+            events.push({ dot: dir==='above' ? '' : 'notif-dot-warn',
+              text: `⚡ BTC crossed $${lvl.toLocaleString()}`,
+              time: `Now $${btcP.toLocaleString('en-US',{maximumFractionDigits:0})} · Key level`, ts: 0 });
+          }
+        });
+        _prevNotifData.btcPrice = btcP;
+      }
+    } catch(e) {}
 
-        // Big 1h move (>2%)
-        if(Math.abs(chg1h) >= 2) {
-          const up = chg1h > 0;
-          events.push({
-            dot: up ? '' : 'notif-dot-warn',
-            text: `${sym} ${up ? '📈' : '📉'} ${chg1h > 0 ? '+' : ''}${chg1h.toFixed(2)}% in 1h`,
-            time: `Now ${pFmt} · ${timeStr}`,
-            ts: 1
-          });
-        }
-
-        // Big 24h move (>5%)
-        if(Math.abs(chg24) >= 5) {
-          const up = chg24 > 0;
-          events.push({
-            dot: up ? '' : 'notif-dot-warn',
-            text: `${sym} ${up ? '🚀' : '🔴'} ${chg24 > 0 ? '+' : ''}${chg24.toFixed(2)}% in 24h`,
-            time: `${pFmt} · Strong ${up ? 'momentum' : 'sell-off'}`,
-            ts: 2
-          });
-        }
-
-        // BTC key levels
-        if(coin.id === 'bitcoin') {
-          const levels = [100000, 90000, 80000, 75000, 70000, 65000, 60000, 55000, 50000];
-          const prev = _prevNotifData.btcPrice || p;
-          levels.forEach(lvl => {
-            const crossed = (prev < lvl && p >= lvl) || (prev > lvl && p <= lvl);
-            if(crossed) {
-              const dir = p >= lvl ? 'above' : 'below';
-              events.push({
-                dot: dir === 'above' ? '' : 'notif-dot-warn',
-                text: `⚡ BTC crossed $${lvl.toLocaleString()}`,
-                time: `Now ${pFmt} · Key level ${dir}`,
-                ts: 0
-              });
-            }
-          });
-          _prevNotifData.btcPrice = p;
-        }
-      });
-    }
-
-    // ── 3. Global market ────────────────────────────────────────────────
-    if(cgGlobal.status === 'fulfilled') {
-      const g      = cgGlobal.value.data;
-      const dom    = (g.market_cap_percentage.btc).toFixed(1);
-      const mcap   = (g.total_market_cap.usd / 1e12).toFixed(2);
-      const chg    = (g.market_cap_change_percentage_24h_usd || 0).toFixed(2);
-      const up     = parseFloat(chg) >= 0;
-      events.push({
-        dot: 'notif-dot-muted',
+    // ── 3. Global market cap ─────────────────────────────────────────────
+    if(cgGlobalRes.status === 'fulfilled') {
+      const g    = cgGlobalRes.value.data;
+      const dom  = g.market_cap_percentage.btc.toFixed(1);
+      const mcap = (g.total_market_cap.usd / 1e12).toFixed(2);
+      const chg  = (g.market_cap_change_percentage_24h_usd || 0).toFixed(2);
+      const up   = parseFloat(chg) >= 0;
+      events.push({ dot: 'notif-dot-muted',
         text: `Market cap $${mcap}T (${up?'+':''}${chg}% 24h)`,
-        time: `BTC dom ${dom}% · Updated ${timeStr}`,
-        ts: 3
-      });
+        time: `BTC dom ${dom}% · Updated ${timeStr}`, ts: 3 });
     }
 
-    // ── 4. Top news from RSS ────────────────────────────────────────────
+    // ── 4. Latest 2 news headlines ───────────────────────────────────────
     if(newsRes.status === 'fulfilled') {
       try {
-        const parser = new DOMParser();
-        const xml    = parser.parseFromString(newsRes.value, 'text/xml');
-        const items  = xml.querySelectorAll('item');
+        const xml   = new DOMParser().parseFromString(newsRes.value, 'text/xml');
+        const items = xml.querySelectorAll('item');
         let count = 0;
         items.forEach(item => {
           if(count >= 2) return;
@@ -5383,29 +5397,22 @@ async function loadLiveNotifications() {
           const pub   = item.querySelector('pubDate')?.textContent?.trim();
           if(title && title.length > 10) {
             const pubTime = pub ? new Date(pub).toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'}) : '';
-            events.push({
-              dot: 'notif-dot-muted',
-              text: `📰 ${title.length > 60 ? title.slice(0,60) + '…' : title}`,
-              time: `Cointelegraph${pubTime ? ' · ' + pubTime : ''}`,
-              ts: 4
-            });
+            events.push({ dot: 'notif-dot-muted',
+              text: `📰 ${title.length > 60 ? title.slice(0,60)+'…' : title}`,
+              time: `Cointelegraph${pubTime ? ' · '+pubTime : ''}`, ts: 4 });
             count++;
           }
         });
       } catch(e) {}
     }
 
-    // ── 5. Brief status ─────────────────────────────────────────────────
+    // ── 5. Brief status ──────────────────────────────────────────────────
     try {
       const briefRes = await fetch('/data/marketbrief.json?t=' + Date.now(), {cache:'no-store'});
       if(briefRes.ok) {
         const brief = await briefRes.json();
-        events.push({
-          dot: '',
-          text: `📋 Market brief updated`,
-          time: `${brief.date || 'Today'} · 07:00 UTC daily`,
-          ts: 5
-        });
+        events.push({ dot: '', text: `📋 Market brief updated`,
+          time: `${brief.date || 'Today'} · 07:00 UTC daily`, ts: 5 });
       }
     } catch(e) {}
 
@@ -5524,60 +5531,71 @@ setInterval(loadLiveNotifications, 3 * 60 * 1000);
 
 <script>
 // ══ MARKET STAT WIDGETS ════════════════════════════════════════════════════
+function applyMarketStatsSnapshot(snapshot){
+  if(!snapshot) return;
+  const fmt = (n) => n >= 1000 ? '$' + (n/1000).toFixed(1) + 'K' : '$' + Number(n||0).toFixed(2);
+  const fmtB = (n) => '$' + (Number(n||0)/1e12).toFixed(2) + 'T';
+  const chgClass = (n) => Number(n||0) >= 0 ? 'up' : 'dn';
+  const chgStr  = (n) => (Number(n||0) >= 0 ? '+' : '') + Number(n||0).toFixed(2) + '%';
+
+  var btcPrice=document.getElementById('mst-btc-price'); if(btcPrice && snapshot.btcPrice!=null) btcPrice.textContent = fmt(snapshot.btcPrice);
+  var btcChgEl=document.getElementById('mst-btc-chg'); if(btcChgEl && snapshot.btcChg!=null){ btcChgEl.textContent = chgStr(snapshot.btcChg); btcChgEl.className='mst-chg '+chgClass(snapshot.btcChg); }
+
+  var ethPrice=document.getElementById('mst-eth-price'); if(ethPrice && snapshot.ethPrice!=null) ethPrice.textContent = fmt(snapshot.ethPrice);
+  var ethChgEl=document.getElementById('mst-eth-chg'); if(ethChgEl && snapshot.ethChg!=null){ ethChgEl.textContent = chgStr(snapshot.ethChg); ethChgEl.className='mst-chg '+chgClass(snapshot.ethChg); }
+
+  var mcap=document.getElementById('mst-mcap'); if(mcap && snapshot.marketCap!=null) mcap.textContent = fmtB(snapshot.marketCap);
+  var mcapEl=document.getElementById('mst-mcap-chg'); if(mcapEl && snapshot.marketCapChg!=null){ mcapEl.textContent = chgStr(snapshot.marketCapChg); mcapEl.className='mst-chg '+chgClass(snapshot.marketCapChg); }
+
+  var dom=document.getElementById('mst-btc-dom'); if(dom && snapshot.btcDom!=null) dom.textContent = Number(snapshot.btcDom).toFixed(1)+'%';
+  var domSub=document.getElementById('mst-dom-chg'); if(domSub && snapshot.ethDom!=null) domSub.textContent = 'ETH: ' + Number(snapshot.ethDom).toFixed(1) + '%';
+
+  var fng=document.getElementById('mst-fng'); if(fng && snapshot.fngVal!=null) fng.textContent = snapshot.fngVal;
+  var fgEl=document.getElementById('mst-fng-lbl'); if(fgEl && snapshot.fngLabel){
+    fgEl.textContent = snapshot.fngLabel;
+    fgEl.className = 'mst-chg ' + (Number(snapshot.fngVal||0) <= 25 ? 'dn' : Number(snapshot.fngVal||0) >= 60 ? 'up' : '');
+  }
+}
+
 async function loadMarketStats() {
+  const cached = safeLsGet('zimr_market_stats_cache');
+  if(cached) applyMarketStatsSnapshot(cached);
   try {
-    const [cgGlobal, cgMarkets, fgRes] = await Promise.all([
-      fetch('https://api.coingecko.com/api/v3/global').then(r=>r.json()),
-      fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum&order=market_cap_desc&per_page=2&page=1&sparkline=false&price_change_percentage=24h').then(r=>r.json()),
-      fetch('https://api.alternative.me/fng/?limit=1').then(r=>r.json())
+    const results = await Promise.allSettled([
+      fetch('https://api.coingecko.com/api/v3/global').then(r=>{ if(!r.ok) throw new Error('global '+r.status); return r.json(); }),
+      fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum&order=market_cap_desc&per_page=2&page=1&sparkline=false&price_change_percentage=24h').then(r=>{ if(!r.ok) throw new Error('markets '+r.status); return r.json(); }),
+      fetch('https://api.alternative.me/fng/?limit=1').then(r=>{ if(!r.ok) throw new Error('fng '+r.status); return r.json(); })
     ]);
 
-    const btc = cgMarkets.find(c=>c.id==='bitcoin');
-    const eth = cgMarkets.find(c=>c.id==='ethereum');
-    const g   = cgGlobal.data;
-    const fg  = fgRes.data[0];
+    const cgGlobal = results[0].status==='fulfilled' ? results[0].value : null;
+    const cgMarkets = results[1].status==='fulfilled' && Array.isArray(results[1].value) ? results[1].value : [];
+    const fgRes = results[2].status==='fulfilled' ? results[2].value : null;
 
-    const fmt = (n) => n >= 1000 ? '$' + (n/1000).toFixed(1) + 'K' : '$' + n.toFixed(2);
-    const fmtB = (n) => '$' + (n/1e12).toFixed(2) + 'T';
-    const chgClass = (n) => n >= 0 ? 'up' : 'dn';
-    const chgStr  = (n) => (n >= 0 ? '+' : '') + n.toFixed(2) + '%';
+    const btc = cgMarkets.find(c=>c.id==='bitcoin') || ((_priceCache||[]).find(c=>c.id==='bitcoin') ? {current_price:(_priceCache||[]).find(c=>c.id==='bitcoin').current_price, price_change_percentage_24h:(_priceCache||[]).find(c=>c.id==='bitcoin').price_change_percentage_24h} : null);
+    const eth = cgMarkets.find(c=>c.id==='ethereum') || ((_priceCache||[]).find(c=>c.id==='ethereum') ? {current_price:(_priceCache||[]).find(c=>c.id==='ethereum').current_price, price_change_percentage_24h:(_priceCache||[]).find(c=>c.id==='ethereum').price_change_percentage_24h} : null);
+    const g = cgGlobal && cgGlobal.data ? cgGlobal.data : null;
+    const fg = fgRes && fgRes.data && fgRes.data[0] ? fgRes.data[0] : null;
 
-    // BTC
-    document.getElementById('mst-btc-price').textContent = btc ? fmt(btc.current_price) : '—';
-    const btcChgEl = document.getElementById('mst-btc-chg');
-    if(btc && btcChgEl) { btcChgEl.textContent = chgStr(btc.price_change_percentage_24h); btcChgEl.className = 'mst-chg ' + chgClass(btc.price_change_percentage_24h); }
+    const snapshot = {
+      btcPrice: btc ? Number(btc.current_price)||0 : (cached&&cached.btcPrice!=null ? cached.btcPrice : null),
+      btcChg: btc ? Number(btc.price_change_percentage_24h)||0 : (cached&&cached.btcChg!=null ? cached.btcChg : null),
+      ethPrice: eth ? Number(eth.current_price)||0 : (cached&&cached.ethPrice!=null ? cached.ethPrice : null),
+      ethChg: eth ? Number(eth.price_change_percentage_24h)||0 : (cached&&cached.ethChg!=null ? cached.ethChg : null),
+      marketCap: g && g.total_market_cap ? Number(g.total_market_cap.usd)||0 : (cached&&cached.marketCap!=null ? cached.marketCap : null),
+      marketCapChg: g ? Number(g.market_cap_change_percentage_24h_usd)||0 : (cached&&cached.marketCapChg!=null ? cached.marketCapChg : null),
+      btcDom: g && g.market_cap_percentage ? Number(g.market_cap_percentage.btc)||0 : (cached&&cached.btcDom!=null ? cached.btcDom : null),
+      ethDom: g && g.market_cap_percentage ? Number(g.market_cap_percentage.eth)||0 : (cached&&cached.ethDom!=null ? cached.ethDom : null),
+      fngVal: fg ? parseInt(fg.value,10) : (cached&&cached.fngVal!=null ? cached.fngVal : null),
+      fngLabel: fg ? fg.value_classification : (cached&&cached.fngLabel ? cached.fngLabel : null)
+    };
 
-    // ETH
-    document.getElementById('mst-eth-price').textContent = eth ? fmt(eth.current_price) : '—';
-    const ethChgEl = document.getElementById('mst-eth-chg');
-    if(eth && ethChgEl) { ethChgEl.textContent = chgStr(eth.price_change_percentage_24h); ethChgEl.className = 'mst-chg ' + chgClass(eth.price_change_percentage_24h); }
-
-    // Market cap
-    const mcap = g.total_market_cap.usd;
-    const mcapChg = g.market_cap_change_percentage_24h_usd || 0;
-    document.getElementById('mst-mcap').textContent = fmtB(mcap);
-    const mcapEl = document.getElementById('mst-mcap-chg');
-    if(mcapEl) { mcapEl.textContent = chgStr(mcapChg); mcapEl.className = 'mst-chg ' + chgClass(mcapChg); }
-
-    // BTC dominance
-    const dom = g.market_cap_percentage.btc.toFixed(1);
-    const ethDom = g.market_cap_percentage.eth.toFixed(1);
-    document.getElementById('mst-btc-dom').textContent = dom + '%';
-    document.getElementById('mst-dom-chg').textContent = 'ETH: ' + ethDom + '%';
-
-    // Fear & Greed
-    const fgVal = parseInt(fg.value);
-    const fgLbl = fg.value_classification;
-    document.getElementById('mst-fng').textContent = fgVal;
-    const fgEl = document.getElementById('mst-fng-lbl');
-    if(fgEl) {
-      fgEl.textContent = fgLbl;
-      fgEl.className = 'mst-chg ' + (fgVal <= 25 ? 'dn' : fgVal >= 60 ? 'up' : '');
-    }
-
-    // Check price alerts
-    checkPriceAlerts(btc ? btc.current_price : null, eth ? eth.current_price : null);
-  } catch(e) { console.warn('Market stats error:', e); }
+    applyMarketStatsSnapshot(snapshot);
+    safeLsSet('zimr_market_stats_cache', snapshot);
+    if(typeof checkPriceAlerts==='function') checkPriceAlerts(snapshot.btcPrice, snapshot.ethPrice);
+  } catch(e) {
+    console.warn('Market stats error:', e);
+    if(cached) applyMarketStatsSnapshot(cached);
+  }
 }
 
 // ══ CRYPTO SESSION INDICATOR ═══════════════════════════════════════════════
