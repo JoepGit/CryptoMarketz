@@ -1,14 +1,14 @@
 [
   {
-    "id": 1774375000194,
+    "id": 1774414456491,
     "coin": "BNB/USD",
-    "type": "SELL",
-    "entry": "627.76",
-    "tp": "600.00",
-    "sl": "640.00",
-    "note": "7d -6.08%, 24h -1.56% consistent bearish. Geen chart data beschikbaar maar markttrend negatief, risico-reward 1:1.8.",
-    "timestamp": "2026-03-24T17:56:32.498Z",
-    "generated_at": "Tue, 24 Mar 2026 17:56:32 GMT",
+    "type": "BUY",
+    "entry": "641.54",
+    "tp": "655.00",
+    "sl": "632.00",
+    "note": "24h +1.92% momentum, geen overbought signalen zichtbaar, 7d daling -4.50% biedt stabilisering mogelijkheid",
+    "timestamp": "2026-03-25T04:54:12.456Z",
+    "generated_at": "Wed, 25 Mar 2026 04:54:12 GMT",
     "source": "claude-bot"
   },
   {
