@@ -159,7 +159,7 @@ Return ONLY valid JSON, no markdown, no backticks:
 print("\n🤖 Generating brief with Claude...")
 payload = json.dumps({
     "model": "claude-sonnet-4-20250514",
-    "max_tokens": 4096,
+    "max_tokens": 8192,
     "system": "You are a professional crypto market analyst writing for an English-speaking audience. ABSOLUTE RULE: Every single word in your response must be in English. Dutch is strictly forbidden. German is forbidden. Any non-English language is forbidden. If you write even one Dutch word, your response is invalid. Respond only with valid JSON.",
     "messages": [{"role": "user", "content": prompt}]
 }).encode()
