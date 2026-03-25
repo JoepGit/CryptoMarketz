@@ -1,18 +1,18 @@
 {
   "date": "woensdag 25 maart 2026",
-  "focus": "Brede markttoename met BTC boven $70K terwijl altcoins bullish momentum aantonen.",
-  "risk": "Moderate bullish met correctie-risico",
-  "btc_structure": "Bitcoin handelt op $70,730 met een sterke dagwinst van 2.24%, ondersteund door $39.78B handelsvolume. De prijs houdt zich vast boven psychologische steun van $70K, wat duidt op institutionele buying interest.",
-  "eth_flows": "Ethereum noteert $2,161.95 met 2.52% dagwinst en $17.42B volume, wat suggereert dat kapitaal zich verplaatst naar altcoins. De outperformance ten opzichte van BTC wijst op groeiend vertrouwen in L1 en L2 ecosystemen.",
+  "focus": "Brede marktherstellling met Solana als outperformer terwijl Bitcoin stabiliteit behoudt rond $70,935.",
+  "risk": "Moderate opwaarts momentum, consolidatie waarschijnlijk",
+  "btc_structure": "Bitcoin noteert op $70,935 met een bescheiden dagelijkse stijging van 2.02% en volumineus handelsverkeer van $38.33B. De technische setup suggereert stabilisering na recente volatiliteit, met veel interesse van institutionele partijen.",
+  "eth_flows": "Ethereum klimt naar $2,167.57 met een stijging van 2.07% en volume van $16.87B, wat aangeeft dat kapitaalverschuivingen naar altcoins doorgaan. De outflow naar DeFi-platforms wijst op actieve portefeuille-herverdeling.",
   "top_narratives": [
-    "Altseason momentum: SOL +3.16%, BNB +2.66% duiden op brede risicoappetijt",
-    "Institutionele accumulatie in spot markets via volume",
-    "Macro-stabiliteit ondersteunt risk-on sentiment",
-    "XRP consolidatie ondanks lagere 24h gain van 1.80%"
+    "Solana's sterke momentum (3.14%) duidt op herstel vertrouwen in hoge-snelheid blockchains",
+    "ETH stijging naar $2,167.57 ondersteund door staking-inflows en L2-activiteit",
+    "BNB consolidatie ($646.72, +2.49%) reflecteert stabiele Binance-ecosysteem activiteit",
+    "XRP blijft voorzichtig met slechts 1.64% groei ondanks marktbrede rally"
   ],
-  "macro_impact": "Stijgende risicoappetijt globaal werkt door in crypto-allocaties. Fed-signalen over stimulus blijven supportief voor liquide assets.",
-  "whale_flows": "BTC en ETH volumes domineren met $39.78B en $17.42B respectievelijk, wat wijst op grote portefeuille-herschikkingen. Altcoin volume concentratie (BNB, SOL, XRP) suggereert gerichte positieaufbouw.",
-  "funding_oi": "Verwachting van stijgende long-positioning gegeven bullish technische setup. Funding rates waarschijnlijk positief met potentieel voor lichte correcties bij extremen.",
-  "volatility_outlook": "Verwachte 24h volatiliteit rond 2-3% gegeven huidige range. Bewegingen blijven ordelijk zonder extreme volatiliteit, typisch voor geleidelijke bullish opbouw.",
-  "full_report": "Crypto-markten laten woensdag een brede toename zien met BTC op $70,730 (+2.24%), ETH op $2,161.95 (+2.52%), SOL op $91.7 (+3.16%), BNB op $645.08 (+2.66%), en XRP op $1.41 (+1.80%). Het totale trading volume ($39.78B voor BTC, $17.42B voor ETH) geeft aan dat institutionele spelers posities opbouwen. De outperformance van altcoins suggereert breder risk-on sentiment en mogelijke rotatie naar laaggekapitaliseerde assets. Macro-backdrop blijft supportief met stabiele risicoappetijt, hoewel korte-termijn correcties niet kunnen worden uitgesloten na deze sterke moving average."
+  "macro_impact": "Afwezigheid van scherpe macro-catalysatoren leidt tot voorzichtige risicohandelingen, met centrale banken-verwachtingen stabiel gebleven. De brede markt-sentiment herstelt langzaam van eerdere rente-schokken.",
+  "whale_flows": "Cumulatief volume van $61.97B wijst op gefaseerde akkumulatie door grote spelers, vooral in Bitcoin ($38.33B) en Ethereum ($16.87B). Solana's disproportioneel sterke prestatie (+3.14%) suggereert gerichte inflows naar kleinere caps.",
+  "funding_oi": "Funding rates blijven mild positief zonder extreem sentiment, wat wijst op voorzichtig optimisme zonder overlevering. Open Interest stabiliseert rond gemiddelde niveaus zonder acute vereffening-risico's.",
+  "volatility_outlook": "De 2-3% dagelijkse bewegingen duiden op gezonde handelsactiviteit zonder extrema. Volatiliteit verwacht stabiel te blijven tenzij onverwachte macro-schokken optreden.",
+  "full_report": "De cryptomarkt toont herstelkracht op woensdag 25 maart 2026 met Bitcoin op $70,935 (+2.02%, vol $38.33B), Ethereum op $2,167.57 (+2.07%, vol $16.87B), en brede stijging in altcoins. Solana voert de rally aan met +3.14% naar $91.74, terwijl BNB (+2.49%) en XRP (+1.64%) meer voorzichtige winsten boeken. Cumulatief handelsvolume van $61.97B suggereert geleidelijke kapitaalverschuivingen naar riskantere assets na eerdere consolidatie. Zonder acute macro-catalysatoren blijft het sentiment voorzichtig optimistisch, met technische structuren die een periode van stabiele expansie mogelijk maken."
 }
