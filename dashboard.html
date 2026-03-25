@@ -5053,6 +5053,14 @@ Respond ONLY with a valid JSON object (no markdown, no backticks) with exactly t
   const focus      = data.focus  || '';
   const fullReport = data.full_report || data.summary || compact(btc, eth, macro, whales, funding, volatility);
 
+  // Render helper — must be defined before use
+  const renderParagraphs = (text) => {
+    if(!text) return '<p>Loading...</p>';
+    return text.split(/\n{2,}|(?<=\.) (?=[A-Z])/).filter(p => p.trim().length > 20).map(p =>
+      '<p>' + p.trim() + '</p>'
+    ).join('');
+  };
+
   set('brief-date',        data.date ? `Updated ${data.date}${data._source === 'live-ai' ? ' · Live AI' : ''}` : 'Updated --');
   set('brief-report-date', data.date || '--');
 
@@ -5091,15 +5099,9 @@ Respond ONLY with a valid JSON object (no markdown, no backticks) with exactly t
   set('brief-risk',       risk       || 'No risk regime loaded.');
   set('brief-focus',      focus      || 'No focus loaded.');
 
-  // Render overview as readable paragraphs
-  const renderParagraphs = (text) => {
-    if(!text) return '<p>Loading...</p>';
-    return text.split(/\n{2,}|(?<=\.) (?=[A-Z])/).filter(p => p.trim().length > 20).map(p =>
-      '<p>' + p.trim() + '</p>'
-    ).join('');
-  };
-  const el = document.getElementById('brief-summary');
-  if(el) el.innerHTML = renderParagraphs(fullReport || 'Market brief unavailable.');
+  // renderParagraphs defined above
+  const summaryEl2 = document.getElementById('brief-summary');
+  if(summaryEl2) summaryEl2.innerHTML = renderParagraphs(fullReport || 'Market brief unavailable.');
 
   // brief-market-structure-copy now rendered via brief-btc-card and brief-eth-card
 
