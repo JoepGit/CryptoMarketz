@@ -4705,7 +4705,7 @@ async function refreshBotSignals(){
 
   var sigs=await loadBotSignals();
 
-  if(upd)upd.textContent='Bijgewerkt om '+new Date().toLocaleTimeString('nl-NL',{hour:'2-digit',minute:'2-digit'});
+  if(upd)upd.textContent='Updated at '+new Date().toLocaleTimeString('nl-NL',{hour:'2-digit',minute:'2-digit'});
 
   // Stats
   var total=sigs.length;
@@ -4720,8 +4720,8 @@ async function refreshBotSignals(){
   if(!sigs.length){
     grid.innerHTML='<div class="card" style="padding:40px;text-align:center;grid-column:1/-1">'
       +'<div style="font-size:32px;margin-bottom:12px">\uD83E\uDD16</div>'
-      +'<div style="font-family:\'Orbitron\',monospace;font-size:11px;font-weight:700;color:var(--cream);margin-bottom:8px">BOT NOG NIET ACTIEF</div>'
-      +'<div style="font-size:13px;color:var(--sub);line-height:1.7;max-width:380px;margin:0 auto">Voeg <strong style="color:var(--cream)">CLAUDE_API_KEY</strong> toe als GitHub Secret en run de workflow. Daarna verschijnen hier elk uur verse AI-signalen.</div>'
+      +'<div style="font-family:\'Orbitron\',monospace;font-size:11px;font-weight:700;color:var(--cream);margin-bottom:8px">BOT NOT YET ACTIVE</div>'
+      +'<div style="font-size:13px;color:var(--sub);line-height:1.7;max-width:380px;margin:0 auto">Add <strong style="color:var(--cream)">CLAUDE_API_KEY</strong> as a GitHub Secret and run the workflow. Fresh AI signals will appear here automatically.</div>'
       +'<div style="margin-top:16px;font-family:\'Orbitron\',monospace;font-size:8px;color:rgba(155,89,214,.5);letter-spacing:.01em">GitHub \u2192 Settings \u2192 Secrets \u2192 Actions \u2192 New secret</div>'
       +'</div>';
     return;
@@ -4809,7 +4809,7 @@ async function renderBotWL() {
   if(lp) lp.textContent = total > 0 ? lossPct + '%' : ' ';
   if(wc) wc.textContent = wins.length + ' win' + (wins.length !== 1 ? 's' : '');
   if(lc) lc.textContent = losses.length + ' loss' + (losses.length !== 1 ? 'es' : '');
-  if(tt) tt.textContent = total + ' afgesloten trade' + (total !== 1 ? 's' : '');
+  if(tt) tt.textContent = total + ' closed trade' + (total !== 1 ? 's' : '');
   if(tp) {
     tp.textContent = total > 0 ? (pnlPositive ? '+' : '') + totalPnl.toFixed(2) + '%' : ' ';
     tp.style.color = total > 0 ? (pnlPositive ? '#9b59d6' : 'var(--red)') : 'var(--sub)';
@@ -4863,7 +4863,7 @@ function showBotHistory(filter) {
   }
 
   if(!filtered.length){
-    list.innerHTML = '<div style="padding:32px;text-align:center;font-family:\'Orbitron\',monospace;font-size:9px;color:var(--sub)">Nog geen '+(filter==='win'?'wins':filter==='loss'?'losses':'afgesloten trades')+' de bot checkt elk uur TP/SL.</div>';
+    list.innerHTML = '<div style="padding:32px;text-align:center;font-family:\'Orbitron\',monospace;font-size:9px;color:var(--sub)">Nog geen '+(filter==='win'?'wins':filter==='loss'?'losses':'closed trades')+' de bot checkt elk uur TP/SL.</div>';
   } else {
     list.innerHTML = filtered.map(function(r, i){
       var isWin = r.result === 'win';
