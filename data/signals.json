@@ -1,5 +1,17 @@
 [
   {
+    "id": 1774444329907,
+    "coin": "XRP/USD",
+    "type": "SELL",
+    "entry": "1.42",
+    "tp": "1.38",
+    "sl": "1.45",
+    "note": "7d daling -2.84%, 24h +0.64% zwakke recovery, 1h -0.34% downtrend. Laagste momentum van alle coins, bearish technisch patroon.",
+    "timestamp": "2026-03-25T13:12:03.065Z",
+    "generated_at": "Wed, 25 Mar 2026 13:12:03 GMT",
+    "source": "claude-bot"
+  },
+  {
     "id": 1774438940952,
     "coin": "SOL/USD",
     "type": "BUY",
