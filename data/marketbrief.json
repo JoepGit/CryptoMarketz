@@ -1,18 +1,18 @@
 {
-  "date": "dinsdag 24 maart 2026",
-  "focus": "Bitcoin consolideert rond $70.775 terwijl Ethereum een groeimoment toont met +0.70% stijging.",
-  "risk": "Lage volatiliteit, consolidatiefase actief",
-  "btc_structure": "Bitcoin noteert op $70.775 met minimale dagelijkse beweging van +0.20%, wat een sterke steunpositie aangeeft. De 24h volume van $41.17B wijst op gezonde liquiditeit ondanks de laterale prijsactie.",
-  "eth_flows": "Ethereum outperformt met +0.70% tot $2.160,76 en trekt $18.19B dagvolume aan. Dit suggereert selectieve kracht in altcoinrotatie terwijl Bitcoin consolidateert.",
+  "date": "woensdag 25 maart 2026",
+  "focus": "Crypto markt handhaaft stabiliteit met gemengde signalen terwijl BTC consolidateert rond $70.603.",
+  "risk": "Lage volatiliteit, consolidatie fase",
+  "btc_structure": "Bitcoin noteert op $70.603 met minimale 24h-beweging van +0.18%, wat duidt op sterke steun in dit prijsgebied. De consolidatie suggereert voorzichtigheid van grote marktdeelnemers voordat volgende directie bepaald wordt.",
+  "eth_flows": "Ethereum presteerde beter met +0.88% tot $2.155,06, wat aangeeft dat altcoins voorzichtig herstel inzetten. Het handelsvolume van $17,97B ondersteunt geleidelijke vraag naar grotere altcoins.",
   "top_narratives": [
-    "Ethereum's relative outperformance in consolidatie",
-    "Bitcoin's stabiele steunzone rond $70.775",
-    "XRP's zwakheid (-0.97%) tegen risicoactiva",
-    "Lage volatiliteit wijst op accumulatiefase"
+    "Consolidatie fase na recente rally",
+    "Altcoin outperformance tegen BTC",
+    "Stabiel macro sentiment",
+    "Volume concentratie in top-5 assets"
   ],
-  "macro_impact": "De brede stabiliteit in crypto suggereert wachten op macroeconomische triggers. BTC's steun en ETH's kracht duiden op voorwaardelijk optimisme zonder scherpere directionaliteit.",
-  "whale_flows": "BTC-volume van $41.17B en ETH's $18.19B bieden voldoende absorptiecapaciteit voor institutionele positieopstellingen. XRP's daling met -0.97% en SOL's zwakte (-0.33%) wijzen op voorzichtige whale-rotatie naar top-2.",
-  "funding_oi": "Verwacht steeds meer long-posities te sluiten gegeven de lage volatiliteit. Funding rates zullen waarschijnlijk genormaliseerd blijven in dit consolidatiepatroon.",
-  "volatility_outlook": "Verwacht aanhoudende lage volatiliteit zolang Bitcoin rond $70.775 blijft. Een break onder de $70k of boven $71.5k zou het richtingloze sentiment kunnen doorbreken.",
-  "full_report": "De cryptomarkten bevinden zich dinsdag 24 maart 2026 in een consolidatiefase met Bitcoin vastgesteld op $70.775 (+0.20%) en sterke liquiditeitsvolumes van $41.17B. Ethereum toont relatieve kracht met +0.70% tot $2.160,76 en $18.19B volume, wat op selectieve altcoinrotatie wijst. Zwakke tokens als XRP (-0.97%) en SOL (-0.33%) suggereren dat traders hun risicoposities inperken. Dit patroon wijst op een accumulatiefase waarbij marktdeelnemers op macroeconomische triggers wachten. Zolang BTC rond $70.775 blijft, blijft de volatiliteit laag en neigt het volume naar degelijke liquiditeitsabsorptie."
+  "macro_impact": "De lage volatiliteit wijst op afwezigheid van schokkende macro-events. Markt lijkt in afwachtende positie voordat volgende economische data of beleidsupdates.",
+  "whale_flows": "BTC volume van $40,89B domineert markt, terwijl ETH $17,97B trekt. De relatief lage volumes in kleinere alts (XRP $2,26B, SOL $4,07B) suggereren voorzichtige whale-positionering.",
+  "funding_oi": "Lage volatiliteit en kleine 24h-bewegingen duiden op gematigde leverage-positie. Funding rates verwacht vlak tot licht positief gegeven het neutrale momentum.",
+  "volatility_outlook": "Verwachting van laag-tot-gemiddelde volatiliteit blijft bestaan met geen duidelijke directionaliteit. Breakout potentieel naar beneden begint nu relevant te worden als consolidatie langer aanhouden.",
+  "full_report": "CryptoMarketz meldt stabiliteit in cryptomarkt op woensdag 25 maart 2026, met BTC stagnation op $70.603 (+0.18%) en ETH-herstel naar $2.155,06 (+0.88%). Altcoins tonen gemengde prestatie: XRP +0.25% op $1,41 en SOL +0.68% op $91, terwijl BNB +0.96% klom naar $638,85. Het dominante BTC-volume van $40,89B reflecteert voortdurende institutionele interesse, maar lage volatiliteit suggereert afwezigheid van overtuigde marktrichting. Macro-sentiment blijft neutraal zonder significante katalysatoren. Technische consolidatie rond huidig niveau kan binnenkort doorbroken worden; traders monitoren sleutelsteunniveaus nauw."
 }
