@@ -1,18 +1,18 @@
 {
   "date": "woensdag 25 maart 2026",
-  "focus": "Stabiele markt met lichte bullish bias in altcoins terwijl Bitcoin consolidateert rond $71.5K.",
-  "risk": "Lage volatiliteit, consolidatie risico",
-  "btc_structure": "Bitcoin handelt op $71,521 met minimale dagelijkse beweging van +0.50%, wat wijst op sterke steunvormatie. Het volume van $40.26B blijft substantieel, indicatief voor institutionele participatie ondanks de lage volatiliteit.",
-  "eth_flows": "Ethereum toont relatieve sterkte met +1.21% op $2,184.83 en $17.66B dagvolume. Dit outperformance ten opzichte van Bitcoin suggereert rotatie naar Layer-1 fundamentals.",
+  "focus": "Lichte risico-off sentiment met gedempte bewegingen over alle majors terwijl macro-katalysatoren uitblijven.",
+  "risk": "laag volatiliteit, wachtmodus",
+  "btc_structure": "Bitcoin handelt stabiel rond $71.844 met minimale 24h gain van 0.84%, wat erop duidt dat bieders en vragers in evenwicht zijn. De volume van $41.57B blijft gezond, maar de beperkte prijsactie suggereert consolidatie in plaats van directionaliteit.",
+  "eth_flows": "Ethereum toont iets meer dynamiek op $2.193.34 met een 24h stijging van 0.95% en volumen van $18.77B, wat wijst op herstel van intra-day verkoop. Ethereum blijft afhankelijk van broader macro sentiment en DeFi activiteit.",
   "top_narratives": [
-    "Altcoin-dominantie stijgt met BNB +1.49% en SOL +0.69%",
-    "Institutioneel volume blijft robust op beide mainchains",
-    "XRP stabiel op $1.42 wijst op consolidatie in remittance narrative",
-    "DeFi seizoen potentieel activerend door ETH outperformance"
+    "Consolidatie in afwachting van Fed-signalen volgende week",
+    "Altcoin underperformance ondanks stabiele ETH",
+    "Solana outperformance met 1.40% gain ondanks lagere volumes",
+    "XRP stagnatie op $1.43 duidt op afwezige retail momentum"
   ],
-  "macro_impact": "De stabiele prijsstelling suggereert dat macroeconomische onzekerheden zijn ingebed; geopolitieke factoren blijven op achtergrond. Renteverwachtingen lijken geneutraliseerd in huidige valuaties.",
-  "whale_flows": "Concentrated volume in BTC ($40.26B) en ETH ($17.66B) duidt op whale-accumulation in dips zonder agressieve selling pressure. Altcoin volume-spreiding ($1-4B range) suggereert retail-driven rotaties.",
-  "funding_oi": "Stabiele funding rates verwacht gezien lage volatiliteit; long positions lijken goed gedekt tegen liquidatierisico's. Verwachting is dat OI gradueel oploopt op breaks van consolidatie.",
-  "volatility_outlook": "Historisch lage dag-volatiliteit duidt op rust voor een potentiële move; ondersteuning rond $71K-$2.1K ziet stevige bids. Verwacht breakout pas bij Fed-gerelateerde catalysators of technische doorbraken.",
-  "full_report": "De markt opent woensdag 25 maart in een voorzichtig evenwicht met Bitcoin op $71,521 (+0.50%, vol $40.26B) en Ethereum op $2,184.83 (+1.21%, vol $17.66B). Altcoins vertonen relatieve sterkte: BNB +1.49% op $646.89, SOL +0.69% op $92.48, terwijl XRP consolidateert op $1.42 (+0.24%). De volume-distributie wijst op institutionele focus op mainchains, met mogelijke rotatie naar ETH-ecosysteem assets. Consolidatie rond huidige niveaus lijkt gezond; ondersteuning voelt stevig terwijl winstnemen minimaal is. Beleggers wachten op macro-katalysators voor directional klariteit in deze lage-volatiliteitsphase."
+  "macro_impact": "De crypto markt blijft voorzichtig in afwachting van volgende week's Federal Reserve communicatie en macro data. Absent bullish triggers, risico-assets bevriezen in neutrale posities.",
+  "whale_flows": "Whale activity blijft gedempd met BTC volume van $41.57B en ETH volume van $18.77B beide onder seizoensgemiddelden, wat duidt op afwezigheid van grote institutionele positionering.",
+  "funding_oi": "Funding rates blijven laag en neutraal, wat aangeeft dat shorters en longers evenwichtig zijn. Open interest verwacht stagnatie zonder significante macro catalysatoren.",
+  "volatility_outlook": "Impliciete volatiliteit zal waarschijnlijk laag blijven totdat macro data of Fed remarks verduidelijking geven. Verwacht $1.000–$2.000 trading ranges op BTC zonder catalysatoren.",
+  "full_report": "Op woensdag 25 maart toont de cryptomarkt gedempte activiteit met Bitcoin stabiel op $71.844 (+0.84%, vol $41.57B), Ethereum op $2.193.34 (+0.95%, vol $18.77B), en altcoins die achterblijven. Solana (+1.40%) voert meerderheid aan, terwijl XRP stagneer op $1.43 (+0.80%). Volume blijft fragmented en onder seizoensgemiddelden, wat duidt op afwachtingshouding voor volgende week's Fed-signalen. Whale flows zijn ondermaats en de markt consolidateert in neutrale posities zonder duidelijke directie."
 }

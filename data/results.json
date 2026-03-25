@@ -1,5 +1,31 @@
 [
   {
+    "id": 1774368810869,
+    "coin": "XRP/USD",
+    "type": "SELL",
+    "entry": "1.40",
+    "tp": "1.36",
+    "sl": "1.43",
+    "result": "loss",
+    "pnl": "2.14%",
+    "resolved_price": 1.43,
+    "signal_date": "2026-03-24T16:13:24.752Z",
+    "resolved_at": "2026-03-25T11:42:12.946Z"
+  },
+  {
+    "id": 1774271361232,
+    "coin": "SOL/USD",
+    "type": "BUY",
+    "entry": "90",
+    "tp": "93",
+    "sl": "87",
+    "result": "win",
+    "pnl": "+3.33%",
+    "resolved_price": 93.14,
+    "signal_date": "2026-03-23T13:09:17.764Z",
+    "resolved_at": "2026-03-25T11:42:12.946Z"
+  },
+  {
     "id": 1774375000194,
     "coin": "BNB/USD",
     "type": "SELL",
