@@ -2,8 +2,8 @@ name: CryptoMarketz Signal Bot
 
 on:
   schedule:
-    - cron: '0 * * * *'   # elk uur
-  workflow_dispatch:        # ook handmatig te starten
+    - cron: '0 6,12,18,22 * * *'   # 4x per dag: 06:00, 12:00, 18:00, 22:00 UTC
+  workflow_dispatch:
 
 jobs:
   generate-signals:
@@ -34,4 +34,5 @@ jobs:
           git config user.email "bot@cryptomarketz.com"
           git add data/signals.json data/marketbrief.json data/results.json
           git diff --cached --quiet || git commit -m "🤖 Bot update $(date -u '+%Y-%m-%d %H:%M UTC')"
-          git push --force
+          git pull --rebase origin main || true
+          git push origin main
