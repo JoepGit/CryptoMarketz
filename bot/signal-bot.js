@@ -181,28 +181,29 @@ async function generateSignals(marketData, candleData) {
     return `${sym}: $${c.current_price.toLocaleString()} | 1h ${ch1h}% | 24h ${ch24}% | 7d ${ch7d}%\n  1H chart: ${c1h}\n  4H chart: ${c4h}`;
   }).join('\n\n');
 
-  const prompt = `Je bent een professionele crypto trader voor CryptoMarketz.
+  const prompt = `You are a professional crypto trader for CryptoMarketz. Your goal is a HIGH WIN RATE — only take trades with strong conviction.
 
-LIVE MARKTDATA + TECHNISCHE ANALYSE (${new Date().toUTCString()}):
+LIVE MARKET DATA + TECHNICAL ANALYSIS (${new Date().toUTCString()}):
 ${summary}
 
-TAAK: Analyseer de 1H en 4H charts en geef maximaal 5 trading setups.
+TASK: Analyse the 1H and 4H charts. Only generate a signal if you are genuinely confident it is a winner. If nothing looks convincing, return an empty array [].
 
-REGELS:
-- Gebruik ALLEEN de exacte prijzen uit de data hierboven
-- Geef ZOWEL BUY als SELL signalen op basis van de technische analyse:
-  * BUY als: uptrend op 4H, prijs boven EMA20/EMA50, RSI < 70, bullish momentum
-  * SELL als: downtrend op 4H, prijs onder EMA20/EMA50, RSI > 60, bearish momentum
-- Forceer een eerlijke mix: als meerdere coins bearish zijn, geef SELL — niet alleen BUY
-- Type: "BUY" of "SELL" (geen WATCH)
-- Entry: dichtbij huidige prijs
-- TP en SL gebaseerd op technische levels (EMA, 24h high/low)
-- Risk/Reward minimaal 1:2
-- Maximaal 1 signaal per coin
-- Note: Nederlandse uitleg met exacte technische reden
+STRICT RULES:
+- Quality over quantity — it is BETTER to return 0-2 signals than 5 forced ones
+- Only signal when ALL conditions align: trend, EMA alignment, RSI, and clear risk/reward
+- BUY only when: 4H uptrend, price above EMA20 AND EMA50, RSI between 40-65, clear support below
+- SELL only when: 4H downtrend, price below EMA20 AND EMA50, RSI above 60, clear resistance above
+- Minimum Risk/Reward ratio: 1:2.5 (TP must be at least 2.5x the distance to SL)
+- Entry: at or very close to current price
+- TP and SL based on strong technical levels (EMA, 24h high/low, key structure)
+- Maximum 1 signal per coin
+- Position size: always 1/3 of available capital (include this in note)
+- Note: explain the exact technical reason in English, mention the 1/3 position size
 
-BELANGRIJK: Geef ALLEEN een geldige JSON array terug, NIETS anders, geen uitleg, geen markdown:
-[{"coin":"BTC/USD","type":"BUY","entry":"83200","tp":"88000","sl":"81500","note":"4H trend bullish boven EMA50, RSI 52."},{"coin":"ETH/USD","type":"SELL","entry":"2050","tp":"1900","sl":"2120","note":"4H bearish onder EMA20, RSI 72 overbought."}]`;
+IF NO CLEAR HIGH-CONVICTION SETUP EXISTS: return exactly []
+
+Return ONLY a valid JSON array, nothing else, no markdown:
+[{"coin":"BTC/USD","type":"BUY","entry":"83200","tp":"88000","sl":"81500","note":"4H bullish above EMA50, RSI 52, clear support at 81500. Use 1/3 position size."}]`;
 
   const res = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
@@ -212,7 +213,7 @@ BELANGRIJK: Geef ALLEEN een geldige JSON array terug, NIETS anders, geen uitleg,
       'anthropic-version': '2023-06-01',
     },
     body: JSON.stringify({
-      model: 'claude-haiku-4-5-20251001',
+      model: 'claude-sonnet-4-20250514',
       max_tokens: 1024,
       messages: [{ role: 'user', content: prompt }],
     }),
@@ -265,7 +266,7 @@ BELANGRIJK: Geef ALLEEN een geldige JSON array terug, NIETS anders, geen uitleg,
 // ── 6. Market brief ────────────────────────────────────────────────────────
 async function generateMarketBrief(marketData) {
   const now = new Date();
-  const dateStr = now.toLocaleDateString('nl-NL', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
+  const dateStr = now.toLocaleDateString('en-GB', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
   const summary = marketData.map(c => {
     const sym = COIN_SYMBOLS[c.id] || c.symbol.toUpperCase();
     const h24 = (c.price_change_percentage_24h || 0).toFixed(2);
@@ -273,13 +274,15 @@ async function generateMarketBrief(marketData) {
     return `${sym}: $${c.current_price.toLocaleString()} | 24h ${h24}% | vol $${vol}B`;
   }).join('\n');
 
-  const prompt = `Je bent hoofdanalist van CryptoMarketz. Schrijf een dagelijkse marktbrief in het Nederlands voor ${dateStr}.
+  const prompt = `You are the lead analyst at CryptoMarketz. Write a daily market brief in ENGLISH ONLY for ${dateStr}.
 
-LIVE MARKTDATA — gebruik UITSLUITEND deze prijzen, verzin niets:
+CRITICAL: Write ONLY in English. Every single word must be English. Never use Dutch.
+
+LIVE MARKET DATA — use ONLY these prices, do not invent data:
 ${summary}
 
-Geef ALLEEN een geldig JSON object terug, geen markdown, geen uitleg:
-{"date":"${dateStr}","focus":"één zin primaire focus","risk":"risk regime 3-5 woorden","btc_structure":"2-3 zinnen BTC met exacte prijs","eth_flows":"2-3 zinnen ETH met exacte prijs","top_narratives":["n1","n2","n3","n4"],"macro_impact":"2-3 zinnen macro","whale_flows":"2-3 zinnen whale flows op basis van volume","funding_oi":"2-3 zinnen funding verwachting","volatility_outlook":"2-3 zinnen volatiliteit","full_report":"4-6 zinnen volledig overzicht met exacte prijzen"}`;
+Return ONLY a valid JSON object, no markdown, no explanation:
+{"date":"${dateStr}","focus":"one sentence primary focus","risk":"risk regime 3-5 words","btc_structure":"2-3 sentences on BTC with exact price","eth_flows":"2-3 sentences on ETH with exact price","top_narratives":["n1","n2","n3","n4"],"macro_impact":"2-3 sentences macro context","whale_flows":"2-3 sentences whale flows based on volume","funding_oi":"2-3 sentences funding assessment","volatility_outlook":"2-3 sentences volatility outlook","full_report":"4-6 sentences complete overview with exact prices"}`;
 
   const res = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
@@ -288,7 +291,7 @@ Geef ALLEEN een geldig JSON object terug, geen markdown, geen uitleg:
       'x-api-key': CLAUDE_API_KEY,
       'anthropic-version': '2023-06-01',
     },
-    body: JSON.stringify({ model: 'claude-haiku-4-5-20251001', max_tokens: 2048, messages: [{ role: 'user', content: prompt }] }),
+    body: JSON.stringify({ model: 'claude-sonnet-4-20250514', max_tokens: 2048, messages: [{ role: 'user', content: prompt }] }),
   });
 
   if (!res.ok) {
