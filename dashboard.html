@@ -4602,7 +4602,7 @@ function showBotHistory(filter) {
       var col = isWin ? '#9b59d6' : 'var(--red)';
       var bg  = isWin ? 'rgba(155,89,214,.04)' : 'rgba(255,77,77,.04)';
       var icon = isWin ? '✓' : '✗';
-      var dateStr = r.resolved_at ? new Date(r.resolved_at).toLocaleDateString('nl-NL',{day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'}) : '';
+      var dateStr = r.resolved_at ? new Date(r.resolved_at).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'}) : '';
       var num = filtered.length - i; // nieuwste bovenaan = hoogste nummer
       return '<div style="display:flex;align-items:center;gap:12px;padding:11px 18px;border-bottom:1px solid rgba(255,255,255,.04);background:'+bg+'">'
         +'<div style="font-family:\'Orbitron\',monospace;font-size:8px;color:var(--sub);width:20px;text-align:right;flex-shrink:0">#'+num+'</div>'
@@ -4728,6 +4728,7 @@ Respond ONLY with a valid JSON object (no markdown, no backticks) with exactly t
         body: JSON.stringify({
           model: 'claude-sonnet-4-20250514',
           max_tokens: 4000,
+          system: 'You are a professional crypto market analyst. ALWAYS write in English only. Never use Dutch or any other language. Always respond with valid JSON only.',
           messages: [{ role: 'user', content: prompt }]
         })
       });
