@@ -1,18 +1,18 @@
 {
-  "date": "woensdag 25 maart 2026",
-  "focus": "Gematigde rally in toplayers terwijl BTC zich stabiliseert rond $71.675 op bescheiden volume.",
-  "risk": "Lage volatiliteit, consolidatie risico",
-  "btc_structure": "Bitcoin handelt op $71.675 met een bescheiden dagwinst van 1.21% en een 24h volume van $42.67B. De markt toont geen sterke directionele drang, wat wijst op voorzichtige accumulatie rond huidige levels. Technisch blijft BTC in een laterale fase tot doorbraak van $72.000.",
-  "eth_flows": "Ether prijs $2.182,01 met 1.17% stijging en $19.42B dagvolume, onderperformend ten opzichte van BTC. De ETH/BTC ratio staat onder druk, wat erop duidt dat instituten voorzichtig blijven met altcoin exposure. Liquiditeitspatronen suggereren voorzichtige positiegroei.",
+  "date": "25 Mar 2026",
+  "focus": "Awaiting fresh brief \u2014 trigger the GitHub Actions workflow to generate today's analysis.",
+  "risk": "Data pending",
+  "btc_structure": "Run the GitHub Actions workflow to generate today's Bitcoin analysis.",
+  "eth_flows": "Run the GitHub Actions workflow to generate today's Ethereum analysis.",
   "top_narratives": [
-    "Macro-onzekerheid drukt aggressieve risiconemende risico",
-    "Layer-2 integratie momentum blijft ondersteund",
-    "Institutionele accumulatie rond support levels",
-    "Fed-beleid en rentevoetprojectie domineren sentiment"
+    "Trigger the workflow: GitHub \u2192 Actions \u2192 AI Market Brief \u2192 Run workflow.",
+    "The brief generates automatically every day at 07:00 UTC.",
+    "All sections will populate within 60 seconds of running the workflow.",
+    "Powered by live CoinGecko data, Fear & Greed index, and Claude AI."
   ],
-  "macro_impact": "Geopolitieke spanning en inflatiedata uit de eurozone wegen op risicoassets. Beleggers wachten op volgende ECB-signalen, wat de gematigde daggains verklaart. Klassieke safe-haven demand biedt steun aan volatiliteitsproducten.",
-  "whale_flows": "Gecombineerd 24h volume van $69.57B (BTC+ETH) geeft aan dat grote partijen voorzichtig posities sizing. BTC dominantie in volume suggereert institutioneel voorkeur voor directe blootstelling. Geen signalen van grote liquidaties of kapitaalvlucht.",
-  "funding_oi": "Perpetual funding rates blijven licht negatief op major exchanges, wat erop duidt dat long-positiebouwers geen excessieve leverage aanmeten. Open interest groei is minimaal, consistent met consolidatiepatroon. Volgende 48 uur kritisch voor trend continuïteit.",
-  "volatility_outlook": "Impliciete volatiliteit blijft ingeperkt rond 45-day moving average, wat wijst op verwachting van range-trading. Geen grote opties-barrières boven $72.500 of onder $70.000 werkt als stabilisator. Breakout beweging vereist extern macro-event.",
-  "full_report": "De cryptomarkt opende woensdag 25 maart 2026 in stabilisatiemodus met BTC op $71.675 (+1.21%) en ETH op $2.182,01 (+1.17%). Toplayers zoals SOL (+1.70%) en BNB (+1.85%) tonen marginaal betere momentum, maar totaal 24h volume van $69.57B ondersteunt geen aggressief sentiment. Macro-headwinds rond Fed-beleid en eurozone-inflatiedata remmen risiconemende bewegingen, terwijl whaleflows voorzichtig accumuleren rond huidige supportniveaus. Funding rates en open interest indiceren dat long-posities discipline handhaven, waarbij consolidatie naar verwachting doorgaat totdat technische breakout-niveaus bij $72.000+ worden bereikt."
+  "macro_impact": "Macro analysis will appear after the workflow runs.",
+  "whale_flows": "Whale flow analysis will appear after the workflow runs.",
+  "funding_oi": "Funding and OI analysis will appear after the workflow runs.",
+  "volatility_outlook": "Volatility outlook will appear after the workflow runs.",
+  "full_report": "The daily market brief is generated automatically by GitHub Actions. To generate it now: go to your repository, click Actions, click AI Market Brief, and click Run workflow. The fresh English brief will appear within 60 seconds."
 }
