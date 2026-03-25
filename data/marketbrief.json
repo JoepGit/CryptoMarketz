@@ -1,18 +1,18 @@
 {
   "date": "woensdag 25 maart 2026",
-  "focus": "Bitcoin stabiliseert rond $70.929 terwijl altcoins voorzichtig groen kleuren in gedempte marktomstandigheden.",
-  "risk": "Lage volatiliteit, consolidatie fase",
-  "btc_structure": "Bitcoin noteert op $70.929 met een minimale daling van -0.09% in 24 uur, wat op sterke steun duidt. Het handelsvolume van $40.65B blijft robuust en geeft aan dat grote spelers hun posities behouden zonder paniekverkopen.",
-  "eth_flows": "Ethereum stijgt voorzichtig naar $2.166 met een winst van 0.42% in 24 uur ondanks een handelsvolume van $17.25B. De bescheiden rally suggereert geleidelijke institutionele opbouw zonder agressieve long-positie opbouw.",
+  "focus": "Bitcoin consolidateert rond $71.298 terwijl Ethereum momentum opbouwt met 1.04% dagwinst.",
+  "risk": "Mild bullish, lage volatiliteit",
+  "btc_structure": "Bitcoin handelt op $71.298 met bescheiden 0.49% dagwinst en volumineus handelsverkeer van $40.12B. De prijs beweegt lateraal in een consolidatiefase waarbij technische weerstand rond het huidige niveau cruciaal blijft voor verdere stijging.",
+  "eth_flows": "Ethereum toont relatieve sterkte met $2.178,23 en 1.04% dagwinst, ondersteund door $17.19B handelsvolume. Dit outperformance-signaal suggereert groeiende institutionele belangstelling voor altcoins.",
   "top_narratives": [
-    "Altseason consolidatie met BNB (+1.19%) en SOL (+0.87%) als voortrekkers",
-    "Institutionele stabiliteit rond Bitcoin-steunniveaus",
-    "Ethereum's langzame maar gestage momentum opbouw",
-    "Lagere volatiliteit signaleert voorbereiding op volgende impuls"
+    "Ethereum outperformance vs Bitcoin duidt op risicoappetijt-rotatie",
+    "BNB momentum met 1.93% winst wijst op BSC-ecosysteem activiteit",
+    "XRP stabiliteit rond $1.42 na regelgeving-clarificatie",
+    "SOL steady-state groei met 0.88% winst en solide volume-inflow"
   ],
-  "macro_impact": "De globale risicomars blijft gematigd; geen grote macro-events vandaag die directe crypto-volatiliteit veroorzaken. Fed-verwachtingen blijven gemengd, wat de voorzichtige tone in institutionele flows weerspiegelt.",
-  "whale_flows": "Whale-activiteit is diffuus verdeeld: Bitcoin's volume van $40.65B suggereert positie-onderhoud, terwijl altcoins zoals BNB ($0.97B) en XRP ($2.28B) lagere volumes vertonen, wat op selectiviteit wijst.",
-  "funding_oi": "Funding rates blijven matig positief; geen extreme leverage waargenomen. Open interest blijft stabiel rond dit consolidatie-niveau, wat aangeeft dat traders voorzichtig nieuwe posities opbouwen voor de volgende move.",
-  "volatility_outlook": "Volatiliteit staat op minimumniveaus; verwacht bescheiden bewegingen van 0.5-1.5% zolang macro-data afwacht. Breakouts kunnen verwacht worden bij doorbraak boven Bitcoin's $71.500 of onder $70.000.",
-  "full_report": "Woensdag 25 maart brengt een stille dag op de crypto-markten met Bitcoin stabiel op $70.929 (-0.09%), Ethereum voorzichtig groen op $2.166 (+0.42%), en altcoins mild positief (BNB +1.19% op $643.58, SOL +0.87% op $92.03). XRP daalt licht -0.25% naar $1.42 in bescheiden $2.28B volume. Institutionele flows blijven gedisciplineerd en concentreren zich op positie-onderhoud in plaats van agressieve bets. De consolidatiefase duurt voort met totaal bitcoin-volume van $40.65B, wat wijst op voorbereiding voor volgende directionale move."
+  "macro_impact": "Lage volatiliteit in crypto-markten wijst op afwachting van macro-signalen en centrale bank-beleid. Gemengde marktsentiment houdt kapitaal verspreid over diverse tokens.",
+  "whale_flows": "Bitcoin volume van $40.12B domineert de markt, terwijl Ethereum's $17.19B aandeel groeiende whale-interesse in DeFi aangeeft. Altcoin-volume-dispersie suggereert voorzichtige accumulatie in tweede-laag assets.",
+  "funding_oi": "Perpetual funding rates blijven in evenwicht gegeven de consolidatiepatronen. Verwachting is dat leveraged posities beperkt blijven totdat directionaliteit duidelijker wordt.",
+  "volatility_outlook": "Volatiliteit naar beneden bijgesteld met BTC onder 0.5% en meeste alts onder 2% dagwinst. Verwacht wordt dat dit patroon aanhoudt totdat macro-catalysts verschijnen.",
+  "full_report": "CryptoMarketz marktrapport woensdag 25 maart 2026 toont consolidatie met Bitcoin op $71.298 (+0.49%) en Ethereum sterkere performance op $2.178,23 (+1.04%). BNB leidt altcoins met 1.93% winst op $647,21, terwijl SOL stabiel blijft op $92,49 en XRP $1,42 behoudt. Totaal handelsvolume van $64.81B reflecteert gezonde liquiditeit zonder extremen. Sentiment is mild bullish met focus op Ethereum-momentum en gespreide whale-accumulatie. Technisch gezien prevaleert voorzichtigheid totdat key resistance-niveaus worden doorbroken, met verwachting van meer volatiliteit alleen bij macro-veranderingen."
 }
