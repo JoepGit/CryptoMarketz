@@ -93,7 +93,9 @@ news_block = "\n".join(news_items[:10]) if news_items else "Not available"
 print(f"✅ {len(news_items)} news headlines")
 
 # ── 5. Build prompt ───────────────────────────────────────────────────────
-prompt = f"""You are the lead analyst at CryptoMarketz, writing the daily market brief for {today}.
+prompt = f"""LANGUAGE RULE — THIS IS MANDATORY: Write ONLY in English. Every word must be English. Never write in Dutch. Never write in German. English only.
+
+You are the lead analyst at CryptoMarketz, writing the daily market brief for {today}.
 
 CRITICAL REQUIREMENT: You MUST write ONLY in English. Every single word must be English. Do NOT use Dutch, German, or any other language under any circumstances.
 Each section must be at least 4-6 sentences. Use the exact prices and figures from the live data below.
@@ -135,7 +137,7 @@ INSTRUCTIONS:
 
 Return ONLY valid JSON, no markdown, no backticks:
 {{
-  "date": "{today}",
+  "date": "{today}",  // ENGLISH ONLY — example: March 25, 2026
   "focus": "one sentence: primary market focus today based on the data",
   "risk": "risk regime in 4-6 words e.g. High Risk — Extreme Fear territory",
   "btc_structure": "5-7 sentences: exact BTC price, 1h/24h/7d performance, key support and resistance levels, what price action and volume reveal about market structure, whether bulls or bears are in control, and what traders should watch",
@@ -156,9 +158,9 @@ Return ONLY valid JSON, no markdown, no backticks:
 # ── 6. Claude API call ────────────────────────────────────────────────────
 print("\n🤖 Generating brief with Claude...")
 payload = json.dumps({
-    "model": "claude-haiku-4-5-20251001",
+    "model": "claude-sonnet-4-20250514",
     "max_tokens": 4096,
-    "system": "You are a professional crypto market analyst. You ALWAYS write in English only. Never use Dutch or any other language. Always respond with valid JSON only.",
+    "system": "You are a professional crypto market analyst writing for an English-speaking audience. ABSOLUTE RULE: Every single word in your response must be in English. Dutch is strictly forbidden. German is forbidden. Any non-English language is forbidden. If you write even one Dutch word, your response is invalid. Respond only with valid JSON.",
     "messages": [{"role": "user", "content": prompt}]
 }).encode()
 
