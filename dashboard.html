@@ -1014,6 +1014,69 @@ body::before{background:radial-gradient(circle at 18% 0%, rgba(155,89,214,.12), 
   line-height: 1.75;
 }
 
+
+/* ══ MARKET STAT WIDGETS ══════════════════════════════════════════════════ */
+.mkt-stats-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-bottom: 1px solid rgba(255,255,255,.05);
+}
+@media(max-width:900px){ .mkt-stats-row{grid-template-columns:repeat(3,1fr)} }
+@media(max-width:600px){ .mkt-stats-row{grid-template-columns:repeat(2,1fr)} }
+
+.mkt-stat-card {
+  background: transparent;
+  border-right: 1px solid rgba(255,255,255,.05);
+  border-radius: 0;
+  padding: 12px 16px;
+  transition: background .2s;
+}
+.mkt-stat-card:last-child { border-right: none; }
+.mkt-stat-card:hover { background: rgba(155,89,214,.03); }
+.mst-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  color: var(--sub);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.mst-val {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #eaecef;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.mst-chg {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--sub);
+}
+.mst-chg.up { color: var(--grn); }
+.mst-chg.dn { color: var(--red); }
+
+/* Session badge */
+.wm-session-badge {
+  font-family: 'Inter', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  padding: 3px 10px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  background: rgba(155,89,214,.1);
+  border: 1px solid rgba(155,89,214,.25);
+  color: var(--accent);
+}
+.wm-session-badge.asian  { background: rgba(14,203,129,.08); border-color: rgba(14,203,129,.25); color: #0ecb81; }
+.wm-session-badge.london { background: rgba(155,89,214,.08); border-color: rgba(155,89,214,.25); color: var(--accent); }
+.wm-session-badge.ny     { background: rgba(232,57,42,.08);  border-color: rgba(232,57,42,.25);  color: var(--red); }
+.wm-session-badge.overlap{ background: rgba(240,185,11,.08); border-color: rgba(240,185,11,.25); color: #f0b90b; }
+
 </style>
 
 <style id="light-theme" disabled>
@@ -1717,6 +1780,8 @@ function getOrRequestApiKey(callback){
         <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>Whale Tracker<span class="sb-lk" id="lk-whales">🔒</span></a></li>
       <li><a href="trending.html" style="display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;font-size:12.5px;font-weight:500;color:#0a1929;text-decoration:none;border:1px solid transparent;transition:all .15s;margin-bottom:2px;" onmouseenter="this.style.background='rgba(155,89,214,.07)';this.style.borderColor='rgba(155,89,214,.18)'" onmouseleave="this.style.background='';this.style.borderColor='transparent'">
         <svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;opacity:.7"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>Trending &amp; Airdrops <span style="font-size:10px;background:rgba(155,89,214,.1);color:#9b59d6;border:1px solid rgba(155,89,214,.2);padding:1px 6px;border-radius:3px;margin-left:4px;font-weight:700;">NEW</span></a></li>
+      <li><a onclick="goPage('location',this)">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 14 8 14s8-8.75 8-14a8 8 0 0 0-8-8z"/></svg>Location &amp; Alerts</a></li>
     </ul>
     <div class="sb-sec">Account</div>
     <ul class="sbn">
@@ -1771,13 +1836,42 @@ function getOrRequestApiKey(callback){
 
         <div class="dash-new-layout">
 
-          <!-- WORLD MAP -->
+          <!-- WORLD MAP with stats inside -->
           <div class="world-map-card">
             <div class="wm-header">
               <div class="wm-title"><span class="wm-dot"></span>GLOBAL MARKETS</div>
+              <div id="wm-session-badge" class="wm-session-badge">ASIAN SESSION</div>
               <div class="wm-live-badge">● LIVE</div>
             </div>
-            <div id="chartdiv" style="width:100%;height:360px;"></div>
+            <!-- Market stat widgets inside the card -->
+            <div class="mkt-stats-row" id="mkt-stats-row">
+              <div class="mkt-stat-card">
+                <div class="mst-label">BTC PRICE</div>
+                <div class="mst-val" id="mst-btc-price">—</div>
+                <div class="mst-chg" id="mst-btc-chg">—</div>
+              </div>
+              <div class="mkt-stat-card">
+                <div class="mst-label">ETH PRICE</div>
+                <div class="mst-val" id="mst-eth-price">—</div>
+                <div class="mst-chg" id="mst-eth-chg">—</div>
+              </div>
+              <div class="mkt-stat-card">
+                <div class="mst-label">MARKET CAP</div>
+                <div class="mst-val" id="mst-mcap">—</div>
+                <div class="mst-chg" id="mst-mcap-chg">—</div>
+              </div>
+              <div class="mkt-stat-card">
+                <div class="mst-label">BTC DOM</div>
+                <div class="mst-val" id="mst-btc-dom">—</div>
+                <div class="mst-chg" id="mst-dom-chg">—</div>
+              </div>
+              <div class="mkt-stat-card">
+                <div class="mst-label">FEAR &amp; GREED</div>
+                <div class="mst-val" id="mst-fng">—</div>
+                <div class="mst-chg" id="mst-fng-lbl">—</div>
+              </div>
+            </div>
+            <div id="chartdiv" style="width:100%;height:320px;"></div>
             <div class="market-clocks" id="market-clocks"></div>
           </div>
 
@@ -5175,88 +5269,157 @@ setInterval(updateMarketClocks,1000);
 
 <script>
 // ── LIVE NOTIFICATIONS ──────────────────────────────────────────────────────
+// ── SMART LIVE NOTIFICATIONS ──────────────────────────────────────────────
+var _prevNotifData = {};  // store previous values to detect changes
+
 async function loadLiveNotifications() {
   const container = document.getElementById('dash-notifications');
   const countEl   = document.getElementById('notif-count');
   if(!container) return;
 
-  const notifications = [];
+  const events = [];
+  const now = new Date();
+  const timeStr = now.toLocaleTimeString('en-GB', {hour:'2-digit', minute:'2-digit'});
 
-  // 1. Fear & Greed — live from API
   try {
-    const fg = await fetch('https://api.alternative.me/fng/?limit=2');
-    const fgData = await fg.json();
-    const now  = fgData.data[0];
-    const prev = fgData.data[1];
-    const val  = parseInt(now.value);
-    const cls  = now.value_classification;
-    const prevVal = parseInt(prev.value);
-    const change  = val - prevVal;
-    const changeStr = change >= 0 ? `+${change}` : `${change}`;
+    // ── Fetch all data in parallel ──────────────────────────────────────
+    const [cgMarkets, cgGlobal, fgRes, newsRes] = await Promise.allSettled([
+      fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,solana,binancecoin,ripple&order=market_cap_desc&per_page=5&page=1&sparkline=false&price_change_percentage=1h,24h').then(r=>r.json()),
+      fetch('https://api.coingecko.com/api/v3/global').then(r=>r.json()),
+      fetch('https://api.alternative.me/fng/?limit=2').then(r=>r.json()),
+      fetch('https://cointelegraph.com/rss').then(r=>r.text())
+    ]);
 
-    let dotClass = 'notif-dot-muted';
-    if(val <= 25) dotClass = 'notif-dot-warn';       // extreme/fear = red
-    else if(val >= 60) dotClass = '';                  // greed = purple
+    // ── 1. Fear & Greed ─────────────────────────────────────────────────
+    if(fgRes.status === 'fulfilled') {
+      const fg    = fgRes.value;
+      const cur   = parseInt(fg.data[0].value);
+      const prev  = parseInt(fg.data[1].value);
+      const lbl   = fg.data[0].value_classification;
+      const diff  = cur - prev;
+      const diffStr = (diff >= 0 ? '+' : '') + diff;
+      let dot = cur <= 25 ? 'notif-dot-warn' : cur >= 60 ? '' : 'notif-dot-muted';
+      events.push({ dot, text: `Fear & Greed: ${lbl} (${cur})`, time: `${diffStr} vs yesterday · Updated daily`, ts: 0 });
+    }
 
-    notifications.push({
-      dot: dotClass,
-      text: `Fear & Greed: ${cls} (${val})`,
-      time: `${changeStr} vs yesterday · Live`
-    });
-  } catch(e) {}
+    // ── 2. Price movements ──────────────────────────────────────────────
+    if(cgMarkets.status === 'fulfilled') {
+      const coins = cgMarkets.value;
+      coins.forEach(coin => {
+        const sym   = coin.symbol.toUpperCase();
+        const p     = coin.current_price;
+        const chg1h = coin.price_change_percentage_1h_in_currency || 0;
+        const chg24 = coin.price_change_percentage_24h || 0;
+        const pFmt  = p >= 1000 ? '$' + p.toLocaleString('en-US', {maximumFractionDigits:0}) : '$' + p.toFixed(3);
 
-  // 2. Brief update status
-  try {
-    const res = await fetch('/data/marketbrief.json?t=' + Date.now(), {cache:'no-store'});
-    if(res.ok) {
-      const brief = await res.json();
-      const dateStr = brief.date || 'today';
-      notifications.push({
-        dot: '',
-        text: 'Daily market brief updated',
-        time: `${dateStr} · 07:00 UTC`
+        // Big 1h move (>2%)
+        if(Math.abs(chg1h) >= 2) {
+          const up = chg1h > 0;
+          events.push({
+            dot: up ? '' : 'notif-dot-warn',
+            text: `${sym} ${up ? '📈' : '📉'} ${chg1h > 0 ? '+' : ''}${chg1h.toFixed(2)}% in 1h`,
+            time: `Now ${pFmt} · ${timeStr}`,
+            ts: 1
+          });
+        }
+
+        // Big 24h move (>5%)
+        if(Math.abs(chg24) >= 5) {
+          const up = chg24 > 0;
+          events.push({
+            dot: up ? '' : 'notif-dot-warn',
+            text: `${sym} ${up ? '🚀' : '🔴'} ${chg24 > 0 ? '+' : ''}${chg24.toFixed(2)}% in 24h`,
+            time: `${pFmt} · Strong ${up ? 'momentum' : 'sell-off'}`,
+            ts: 2
+          });
+        }
+
+        // BTC key levels
+        if(coin.id === 'bitcoin') {
+          const levels = [100000, 90000, 80000, 75000, 70000, 65000, 60000, 55000, 50000];
+          const prev = _prevNotifData.btcPrice || p;
+          levels.forEach(lvl => {
+            const crossed = (prev < lvl && p >= lvl) || (prev > lvl && p <= lvl);
+            if(crossed) {
+              const dir = p >= lvl ? 'above' : 'below';
+              events.push({
+                dot: dir === 'above' ? '' : 'notif-dot-warn',
+                text: `⚡ BTC crossed $${lvl.toLocaleString()}`,
+                time: `Now ${pFmt} · Key level ${dir}`,
+                ts: 0
+              });
+            }
+          });
+          _prevNotifData.btcPrice = p;
+        }
       });
-      // Risk regime from brief
-      if(brief.risk) {
-        const isHigh = /high|extreme|danger|panic/i.test(brief.risk);
-        notifications.push({
-          dot: isHigh ? 'notif-dot-warn' : 'notif-dot-muted',
-          text: `Risk: ${brief.risk}`,
-          time: 'From latest brief'
+    }
+
+    // ── 3. Global market ────────────────────────────────────────────────
+    if(cgGlobal.status === 'fulfilled') {
+      const g      = cgGlobal.value.data;
+      const dom    = (g.market_cap_percentage.btc).toFixed(1);
+      const mcap   = (g.total_market_cap.usd / 1e12).toFixed(2);
+      const chg    = (g.market_cap_change_percentage_24h_usd || 0).toFixed(2);
+      const up     = parseFloat(chg) >= 0;
+      events.push({
+        dot: 'notif-dot-muted',
+        text: `Market cap $${mcap}T (${up?'+':''}${chg}% 24h)`,
+        time: `BTC dom ${dom}% · Updated ${timeStr}`,
+        ts: 3
+      });
+    }
+
+    // ── 4. Top news from RSS ────────────────────────────────────────────
+    if(newsRes.status === 'fulfilled') {
+      try {
+        const parser = new DOMParser();
+        const xml    = parser.parseFromString(newsRes.value, 'text/xml');
+        const items  = xml.querySelectorAll('item');
+        let count = 0;
+        items.forEach(item => {
+          if(count >= 2) return;
+          const title = item.querySelector('title')?.textContent?.trim();
+          const pub   = item.querySelector('pubDate')?.textContent?.trim();
+          if(title && title.length > 10) {
+            const pubTime = pub ? new Date(pub).toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'}) : '';
+            events.push({
+              dot: 'notif-dot-muted',
+              text: `📰 ${title.length > 60 ? title.slice(0,60) + '…' : title}`,
+              time: `Cointelegraph${pubTime ? ' · ' + pubTime : ''}`,
+              ts: 4
+            });
+            count++;
+          }
+        });
+      } catch(e) {}
+    }
+
+    // ── 5. Brief status ─────────────────────────────────────────────────
+    try {
+      const briefRes = await fetch('/data/marketbrief.json?t=' + Date.now(), {cache:'no-store'});
+      if(briefRes.ok) {
+        const brief = await briefRes.json();
+        events.push({
+          dot: '',
+          text: `📋 Market brief updated`,
+          time: `${brief.date || 'Today'} · 07:00 UTC daily`,
+          ts: 5
         });
       }
-    }
-  } catch(e) {
-    notifications.push({
-      dot: 'notif-dot-muted',
-      text: 'Brief not yet generated',
-      time: 'Run workflow via GitHub Actions'
-    });
-  }
+    } catch(e) {}
 
-  // 3. BTC dominance from CoinGecko
-  try {
-    const cg = await fetch('https://api.coingecko.com/api/v3/global');
-    const cgData = await cg.json();
-    const btcDom = Math.round(cgData.data.market_cap_percentage.btc * 10) / 10;
-    const mcap   = (cgData.data.total_market_cap.usd / 1e12).toFixed(2);
-    const mcapChg = (cgData.data.market_cap_change_percentage_24h_usd || 0).toFixed(2);
-    const mcapUp = parseFloat(mcapChg) >= 0;
+  } catch(e) { console.warn('Notifications error:', e); }
 
-    notifications.push({
-      dot: btcDom > 55 ? '' : 'notif-dot-muted',
-      text: `BTC dominance: ${btcDom}%`,
-      time: `Total mcap $${mcap}T (${mcapChg >= 0 ? '+' : ''}${mcapChg}% 24h)`
-    });
-  } catch(e) {}
+  // Sort: most urgent first
+  events.sort((a,b) => a.ts - b.ts);
 
-  // Render
-  if(notifications.length === 0) {
-    container.innerHTML = '<div class="notif-item"><div class="notif-dot notif-dot-muted"></div><div><div class="notif-text">No notifications</div></div></div>';
+  if(!events.length) {
+    container.innerHTML = '<div class="notif-item"><div class="notif-dot notif-dot-muted"></div><div><div class="notif-text">All quiet — checking markets...</div></div></div>';
     return;
   }
 
-  container.innerHTML = notifications.map(n => `
+  container.innerHTML = events.map(n => `
     <div class="notif-item">
       <div class="notif-dot ${n.dot || ''}"></div>
       <div>
@@ -5266,13 +5429,293 @@ async function loadLiveNotifications() {
     </div>
   `).join('');
 
-  if(countEl) countEl.textContent = notifications.length + ' live';
+  if(countEl) countEl.textContent = events.length + ' live';
 }
 
-// Load on start, refresh every 5 minutes
+// Load immediately, then every 3 minutes
 loadLiveNotifications();
-setInterval(loadLiveNotifications, 5 * 60 * 1000);
+setInterval(loadLiveNotifications, 3 * 60 * 1000);
 // ── END LIVE NOTIFICATIONS ──────────────────────────────────────────────────
+</script>
+
+
+    <!-- ═══ LOCATION & ALERTS ═══ -->
+    <div class="page" id="page-location">
+      <div class="ph"><h1>Location &amp; Alerts</h1><p>Set your timezone and configure price alerts</p></div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:900px">
+
+        <!-- Timezone card -->
+        <div class="card" style="padding:28px 30px">
+          <div style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:.12em;color:var(--accent);text-transform:uppercase;margin-bottom:16px">📍 Your Location</div>
+          <div style="font-size:13px;color:var(--sub);margin-bottom:20px;line-height:1.7">Set your timezone so market clocks show your local time first.</div>
+
+          <div style="margin-bottom:16px">
+            <label style="font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:.1em;color:var(--sub);text-transform:uppercase;display:block;margin-bottom:8px">TIMEZONE</label>
+            <select id="loc-timezone" style="width:100%;background:var(--c4);border:1px solid var(--bdr);border-radius:8px;padding:10px 12px;color:var(--cream);font-size:13px;outline:none;font-family:'Inter',sans-serif">
+              <option value="America/New_York">New York (ET)</option>
+              <option value="America/Chicago">Chicago (CT)</option>
+              <option value="America/Los_Angeles">Los Angeles (PT)</option>
+              <option value="Europe/London">London (GMT)</option>
+              <option value="Europe/Amsterdam" selected>Amsterdam (CET)</option>
+              <option value="Europe/Berlin">Frankfurt (CET)</option>
+              <option value="Europe/Paris">Paris (CET)</option>
+              <option value="Asia/Dubai">Dubai (GST)</option>
+              <option value="Asia/Hong_Kong">Hong Kong (HKT)</option>
+              <option value="Asia/Tokyo">Tokyo (JST)</option>
+              <option value="Asia/Singapore">Singapore (SGT)</option>
+              <option value="Australia/Sydney">Sydney (AEDT)</option>
+            </select>
+          </div>
+
+          <div style="margin-bottom:20px">
+            <label style="font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:.1em;color:var(--sub);text-transform:uppercase;display:block;margin-bottom:8px">YOUR LOCAL TIME</label>
+            <div id="loc-local-time" style="font-family:'Inter',sans-serif;font-size:22px;font-weight:700;color:var(--accent)">--:--:--</div>
+          </div>
+
+          <button onclick="saveLocation()" style="background:var(--accent);color:#0d0d0d;border:none;padding:10px 22px;border-radius:8px;font-family:'Inter',sans-serif;font-weight:700;font-size:12px;cursor:pointer;letter-spacing:.06em">SAVE TIMEZONE</button>
+          <div id="loc-saved" style="font-family:'Inter',sans-serif;font-size:11px;color:var(--grn);margin-top:10px;display:none">✓ Saved!</div>
+        </div>
+
+        <!-- Price alerts card -->
+        <div class="card" style="padding:28px 30px">
+          <div style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:.12em;color:var(--accent);text-transform:uppercase;margin-bottom:16px">🔔 Price Alerts</div>
+          <div style="font-size:13px;color:var(--sub);margin-bottom:20px;line-height:1.7">Get a browser notification when BTC or ETH hits your target price.</div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px">
+            <div>
+              <label style="font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:.1em;color:var(--sub);text-transform:uppercase;display:block;margin-bottom:6px">COIN</label>
+              <select id="alert-coin" style="width:100%;background:var(--c4);border:1px solid var(--bdr);border-radius:8px;padding:9px 12px;color:var(--cream);font-size:13px;outline:none;font-family:'Inter',sans-serif">
+                <option value="bitcoin">BTC</option>
+                <option value="ethereum">ETH</option>
+                <option value="solana">SOL</option>
+                <option value="ripple">XRP</option>
+              </select>
+            </div>
+            <div>
+              <label style="font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:.1em;color:var(--sub);text-transform:uppercase;display:block;margin-bottom:6px">CONDITION</label>
+              <select id="alert-cond" style="width:100%;background:var(--c4);border:1px solid var(--bdr);border-radius:8px;padding:9px 12px;color:var(--cream);font-size:13px;outline:none;font-family:'Inter',sans-serif">
+                <option value="above">Above</option>
+                <option value="below">Below</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="margin-bottom:16px">
+            <label style="font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:.1em;color:var(--sub);text-transform:uppercase;display:block;margin-bottom:6px">TARGET PRICE (USD)</label>
+            <input id="alert-price" type="number" placeholder="e.g. 75000" style="width:100%;background:var(--c4);border:1px solid var(--bdr);border-radius:8px;padding:10px 12px;color:var(--cream);font-size:14px;outline:none;font-family:'Inter',sans-serif;box-sizing:border-box">
+          </div>
+
+          <button onclick="addPriceAlert()" style="background:var(--accent);color:#0d0d0d;border:none;padding:10px 22px;border-radius:8px;font-family:'Inter',sans-serif;font-weight:700;font-size:12px;cursor:pointer;letter-spacing:.06em">ADD ALERT</button>
+          <div id="alert-err" style="font-family:'Inter',sans-serif;font-size:11px;color:var(--red);margin-top:8px;min-height:14px"></div>
+
+          <!-- Active alerts list -->
+          <div style="margin-top:20px;border-top:1px solid var(--bdr);padding-top:16px">
+            <div style="font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:.1em;color:var(--sub);text-transform:uppercase;margin-bottom:12px">ACTIVE ALERTS</div>
+            <div id="alert-list">
+              <div style="font-size:12px;color:var(--sub)">No alerts set.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /page-location -->
+
+
+<script>
+// ══ MARKET STAT WIDGETS ════════════════════════════════════════════════════
+async function loadMarketStats() {
+  try {
+    const [cgGlobal, cgMarkets, fgRes] = await Promise.all([
+      fetch('https://api.coingecko.com/api/v3/global').then(r=>r.json()),
+      fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum&order=market_cap_desc&per_page=2&page=1&sparkline=false&price_change_percentage=24h').then(r=>r.json()),
+      fetch('https://api.alternative.me/fng/?limit=1').then(r=>r.json())
+    ]);
+
+    const btc = cgMarkets.find(c=>c.id==='bitcoin');
+    const eth = cgMarkets.find(c=>c.id==='ethereum');
+    const g   = cgGlobal.data;
+    const fg  = fgRes.data[0];
+
+    const fmt = (n) => n >= 1000 ? '$' + (n/1000).toFixed(1) + 'K' : '$' + n.toFixed(2);
+    const fmtB = (n) => '$' + (n/1e12).toFixed(2) + 'T';
+    const chgClass = (n) => n >= 0 ? 'up' : 'dn';
+    const chgStr  = (n) => (n >= 0 ? '+' : '') + n.toFixed(2) + '%';
+
+    // BTC
+    document.getElementById('mst-btc-price').textContent = btc ? fmt(btc.current_price) : '—';
+    const btcChgEl = document.getElementById('mst-btc-chg');
+    if(btc && btcChgEl) { btcChgEl.textContent = chgStr(btc.price_change_percentage_24h); btcChgEl.className = 'mst-chg ' + chgClass(btc.price_change_percentage_24h); }
+
+    // ETH
+    document.getElementById('mst-eth-price').textContent = eth ? fmt(eth.current_price) : '—';
+    const ethChgEl = document.getElementById('mst-eth-chg');
+    if(eth && ethChgEl) { ethChgEl.textContent = chgStr(eth.price_change_percentage_24h); ethChgEl.className = 'mst-chg ' + chgClass(eth.price_change_percentage_24h); }
+
+    // Market cap
+    const mcap = g.total_market_cap.usd;
+    const mcapChg = g.market_cap_change_percentage_24h_usd || 0;
+    document.getElementById('mst-mcap').textContent = fmtB(mcap);
+    const mcapEl = document.getElementById('mst-mcap-chg');
+    if(mcapEl) { mcapEl.textContent = chgStr(mcapChg); mcapEl.className = 'mst-chg ' + chgClass(mcapChg); }
+
+    // BTC dominance
+    const dom = g.market_cap_percentage.btc.toFixed(1);
+    const ethDom = g.market_cap_percentage.eth.toFixed(1);
+    document.getElementById('mst-btc-dom').textContent = dom + '%';
+    document.getElementById('mst-dom-chg').textContent = 'ETH: ' + ethDom + '%';
+
+    // Fear & Greed
+    const fgVal = parseInt(fg.value);
+    const fgLbl = fg.value_classification;
+    document.getElementById('mst-fng').textContent = fgVal;
+    const fgEl = document.getElementById('mst-fng-lbl');
+    if(fgEl) {
+      fgEl.textContent = fgLbl;
+      fgEl.className = 'mst-chg ' + (fgVal <= 25 ? 'dn' : fgVal >= 60 ? 'up' : '');
+    }
+
+    // Check price alerts
+    checkPriceAlerts(btc ? btc.current_price : null, eth ? eth.current_price : null);
+  } catch(e) { console.warn('Market stats error:', e); }
+}
+
+// ══ CRYPTO SESSION INDICATOR ═══════════════════════════════════════════════
+function updateSessionIndicator() {
+  const badge = document.getElementById('wm-session-badge');
+  if(!badge) return;
+  const now = new Date();
+  const utcH = now.getUTCHours();
+  const utcM = now.getUTCMinutes();
+  const utcMins = utcH * 60 + utcM;
+
+  // Session times in UTC
+  const sessions = [
+    { name: 'ASIAN SESSION',   cls: 'asian',  start: 0*60,   end: 9*60   },
+    { name: 'OVERLAP: ASIA/EU', cls: 'overlap', start: 7*60,  end: 9*60   },
+    { name: 'LONDON SESSION',  cls: 'london', start: 7*60,   end: 16*60  },
+    { name: 'OVERLAP: EU/NY',  cls: 'overlap', start: 13*60, end: 16*60  },
+    { name: 'NY SESSION',      cls: 'ny',     start: 13*60,  end: 22*60  },
+    { name: 'LATE NY / QUIET', cls: '',       start: 22*60,  end: 24*60  },
+  ];
+
+  // Find most specific active session
+  let active = sessions[5]; // default quiet
+  // Check overlap first (more specific)
+  if(utcMins >= 13*60 && utcMins < 16*60) active = { name: 'EU / NY OVERLAP', cls: 'overlap' };
+  else if(utcMins >= 7*60 && utcMins < 9*60) active = { name: 'ASIA / EU OVERLAP', cls: 'overlap' };
+  else if(utcMins >= 13*60 && utcMins < 22*60) active = { name: 'NY SESSION', cls: 'ny' };
+  else if(utcMins >= 7*60 && utcMins < 16*60) active = { name: 'LONDON SESSION', cls: 'london' };
+  else if(utcMins >= 0 && utcMins < 9*60) active = { name: 'ASIAN SESSION', cls: 'asian' };
+  else active = { name: 'QUIET HOURS', cls: '' };
+
+  badge.textContent = '● ' + active.name;
+  badge.className = 'wm-session-badge' + (active.cls ? ' ' + active.cls : '');
+}
+
+// ══ PRICE ALERTS ══════════════════════════════════════════════════════════
+var priceAlerts = JSON.parse(localStorage.getItem('zimr_alerts') || '[]');
+var alertFired  = JSON.parse(localStorage.getItem('zimr_alerts_fired') || '{}');
+
+function saveAlerts() { localStorage.setItem('zimr_alerts', JSON.stringify(priceAlerts)); }
+
+function renderAlerts() {
+  const el = document.getElementById('alert-list');
+  if(!el) return;
+  if(!priceAlerts.length) { el.innerHTML = '<div style="font-size:12px;color:var(--sub)">No alerts set.</div>'; return; }
+  el.innerHTML = priceAlerts.map((a, i) => `
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.04)">
+      <div>
+        <div style="font-family:'Inter',sans-serif;font-size:12px;color:var(--cream);font-weight:600">${a.coin.toUpperCase()} ${a.cond} $${Number(a.price).toLocaleString()}</div>
+        <div style="font-family:'Inter',sans-serif;font-size:9px;color:var(--sub);margin-top:2px">${a.fired ? '✓ Triggered' : '⏳ Watching'}</div>
+      </div>
+      <button onclick="removeAlert(${i})" style="background:rgba(232,57,42,.1);border:1px solid rgba(232,57,42,.2);color:var(--red);font-size:10px;padding:3px 8px;border-radius:5px;cursor:pointer;font-family:'Inter',sans-serif">✕</button>
+    </div>
+  `).join('');
+}
+
+function addPriceAlert() {
+  const coin  = document.getElementById('alert-coin').value;
+  const cond  = document.getElementById('alert-cond').value;
+  const price = parseFloat(document.getElementById('alert-price').value);
+  const errEl = document.getElementById('alert-err');
+
+  if(!price || price <= 0) { errEl.textContent = 'Enter a valid price.'; return; }
+  errEl.textContent = '';
+
+  // Request notification permission
+  if(Notification.permission === 'default') Notification.requestPermission();
+
+  priceAlerts.push({ coin, cond, price, fired: false });
+  saveAlerts();
+  renderAlerts();
+  document.getElementById('alert-price').value = '';
+}
+
+function removeAlert(i) {
+  priceAlerts.splice(i, 1);
+  saveAlerts();
+  renderAlerts();
+}
+
+function checkPriceAlerts(btcPrice, ethPrice) {
+  const prices = { bitcoin: btcPrice, ethereum: ethPrice };
+  priceAlerts.forEach((a, i) => {
+    if(a.fired) return;
+    const cur = prices[a.coin];
+    if(!cur) return;
+    const triggered = a.cond === 'above' ? cur >= a.price : cur <= a.price;
+    if(triggered) {
+      priceAlerts[i].fired = true;
+      saveAlerts();
+      renderAlerts();
+      // Browser notification
+      if(Notification.permission === 'granted') {
+        new Notification('ZIMR Capital Alert 🔔', {
+          body: `${a.coin.toUpperCase()} is ${a.cond} $${Number(a.price).toLocaleString()} — Current: $${Number(cur).toLocaleString()}`,
+          icon: '/favicon.ico'
+        });
+      }
+      // Also add to notifications panel
+      const notifEl = document.getElementById('dash-notifications');
+      if(notifEl) {
+        const item = document.createElement('div');
+        item.className = 'notif-item';
+        item.innerHTML = `<div class="notif-dot notif-dot-warn"></div><div><div class="notif-text">🔔 ${a.coin.toUpperCase()} ${a.cond} $${Number(a.price).toLocaleString()}</div><div class="notif-time">Price alert triggered · Now</div></div>`;
+        notifEl.prepend(item);
+      }
+    }
+  });
+}
+
+// ══ LOCATION / TIMEZONE ════════════════════════════════════════════════════
+var userTimezone = localStorage.getItem('zimr_timezone') || 'Europe/Amsterdam';
+
+function saveLocation() {
+  const tz = document.getElementById('loc-timezone').value;
+  userTimezone = tz;
+  localStorage.setItem('zimr_timezone', tz);
+  const savedEl = document.getElementById('loc-saved');
+  if(savedEl) { savedEl.style.display = 'block'; setTimeout(() => savedEl.style.display = 'none', 2000); }
+}
+
+function updateLocalTime() {
+  const el = document.getElementById('loc-local-time');
+  if(!el) return;
+  el.textContent = new Date().toLocaleTimeString('en-GB', { timeZone: userTimezone, hour: '2-digit', minute: '2-digit', second: '2-digit' });
+  // Set dropdown to saved value
+  const sel = document.getElementById('loc-timezone');
+  if(sel && sel.value !== userTimezone) sel.value = userTimezone;
+}
+
+// ══ INIT & INTERVALS ═══════════════════════════════════════════════════════
+loadMarketStats();
+setInterval(loadMarketStats, 90 * 1000);   // every 90s
+updateSessionIndicator();
+setInterval(updateSessionIndicator, 60 * 1000); // every minute
+setInterval(updateLocalTime, 1000);
+renderAlerts();
+setTimeout(updateLocalTime, 500);
 </script>
 
 </body>
