@@ -2,7 +2,7 @@
 // - Max 5 actieve trades tegelijk
 // - Gebruikt 1h + 4h CoinGecko OHLC candles voor analyse
 // - Checkt elk uur of TP/SL geraakt is
-// - Schrijft signals.json, results.json, marketbrief.json
+// - Writes signals.json, results.json
 
 import fetch from 'node-fetch';
 import fs from 'fs';
@@ -191,8 +191,9 @@ TASK: Analyse the 1H and 4H charts. Only generate a signal if you are genuinely 
 STRICT RULES:
 - Quality over quantity — it is BETTER to return 0-2 signals than 5 forced ones
 - Only signal when ALL conditions align: trend, EMA alignment, RSI, and clear risk/reward
-- BUY only when: 4H uptrend, price above EMA20 AND EMA50, RSI between 40-65, clear support below
-- SELL only when: 4H downtrend, price below EMA20 AND EMA50, RSI above 60, clear resistance above
+- BUY when: 4H uptrend OR sideways with price above EMA20, RSI between 35-68, clear support below entry
+- SELL when: 4H downtrend OR sideways with price below EMA20, RSI above 55, clear resistance above entry
+- In sideways markets: only trade if RSI shows clear extreme (below 40 for BUY, above 65 for SELL)
 - Minimum Risk/Reward ratio: 1:2.5 (TP must be at least 2.5x the distance to SL)
 - Entry: at or very close to current price
 - TP and SL based on strong technical levels (EMA, 24h high/low, key structure)
@@ -309,14 +310,15 @@ Return ONLY a valid JSON array, nothing else, no markdown:
       console.log(`🆓 ${slotsOpen} slot(s) vrij — CoinGecko OHLC candles ophalen...`);
 
       const candleData = {};
+      const sleep = ms => new Promise(r => setTimeout(r, ms));
       for (const c of marketData) {
         const sym = COIN_SYMBOLS[c.id];
         if (!sym) continue;
-        // Gebruik coinId voor CoinGecko OHLC
-        const [c1h, c4h] = await Promise.all([
-          fetchCandles(c.id, '1h'),
-          fetchCandles(c.id, '4h'),
-        ]);
+        // Fetch sequentially with delay to avoid CoinGecko 429
+        const c1h = await fetchCandles(c.id, '1h');
+        await sleep(1500);
+        const c4h = await fetchCandles(c.id, '4h');
+        await sleep(1500);
         candleData[sym] = {
           '1h': summarizeCandles(c1h, '1H'),
           '4h': summarizeCandles(c4h, '4H'),
