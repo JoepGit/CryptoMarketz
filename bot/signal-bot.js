@@ -201,10 +201,15 @@ STRICT RULES:
 - Position size: always 1/3 of available capital (include this in note)
 - Note: explain the exact technical reason in English, mention the 1/3 position size
 
-IF NO CLEAR HIGH-CONVICTION SETUP EXISTS: return exactly []
+IF NO CLEAR HIGH-CONVICTION SETUP EXISTS: return exactly: []
 
-Return ONLY a valid JSON array, nothing else, no markdown:
-[{"coin":"BTC/USD","type":"BUY","entry":"83200","tp":"88000","sl":"81500","note":"4H bullish above EMA50, RSI 52, clear support at 81500. Use 1/3 position size."}]`;
+CRITICAL OUTPUT RULE: Your ENTIRE response must be ONLY the JSON array. No analysis text. No explanation. No markdown. No backticks. Start with [ and end with ]. Nothing before [, nothing after ].
+
+Example of correct output:
+[{"coin":"BTC/USD","type":"SELL","entry":"69785","tp":"67000","sl":"71200","note":"4H sideways, price below EMA20, RSI 32 oversold bounce risk but 4H bearish bias. Use 1/3 position size."}]
+
+Example of correct output when no setup:
+[]`;
 
   const res = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
@@ -242,10 +247,12 @@ Return ONLY a valid JSON array, nothing else, no markdown:
   console.log(`   Claude raw output (eerste 300 tekens): ${raw.slice(0, 300)}`);
 
   // Robuuste JSON extractie: pak alleen het JSON array gedeelte
+  // First try to find a proper JSON array
   const jsonMatch = raw.match(/\[[\s\S]*\]/);
   if (!jsonMatch) {
-    console.error('❌ Geen JSON array gevonden in Claude output');
-    console.error('   Volledige output:', raw.slice(0, 500));
+    // Claude wrote text instead of JSON - log and return empty
+    console.error('❌ Claude schreef tekst i.p.v. JSON array');
+    console.log('   Tip: Claude negeerde de JSON-only instructie. Wordt opgelost in volgende run.');
     return [];
   }
 
