@@ -4189,31 +4189,53 @@ function fetchMarkets(){
 /* ── NEWS ── */
 function tAgo(d){var s=Math.floor((Date.now()-new Date(d))/1000);if(s<60)return'now';if(s<3600)return Math.floor(s/60)+'m';if(s<86400)return Math.floor(s/3600)+'h';return Math.floor(s/86400)+'d';}
 
+// News cache
+var _newsCache = {};
+var _newsCacheTime = {};
+
+function parseRSSItems(txt, srcName) {
+  var xml = new DOMParser().parseFromString(txt, 'text/xml');
+  var items = Array.from(xml.querySelectorAll('item')).slice(0, 20).map(function(it) {
+    var title = (it.querySelector('title') || {}).textContent || '';
+    var link  = (it.querySelector('link')  || {}).textContent || '';
+    var pub   = (it.querySelector('pubDate') || {}).textContent || '';
+    if(!title || !link) return null;
+    return { title: title.trim(), url: link.trim(), date: pub ? new Date(pub) : new Date(), src: srcName };
+  }).filter(Boolean);
+  return items;
+}
+
 function fetchFeedWithFallback(feedUrl, srcName){
-  var proxies=[
+  // Return cache if fresh (< 5 min)
+  var cacheKey = srcName;
+  if(_newsCache[cacheKey] && Date.now() - _newsCacheTime[cacheKey] < 5 * 60 * 1000) {
+    return Promise.resolve(_newsCache[cacheKey]);
+  }
+
+  var proxies = [
     'https://api.allorigins.win/raw?url=',
     'https://corsproxy.io/?',
     'https://api.codetabs.com/v1/proxy?quest='
   ];
-  function tryProxy(i){
-    if(i>=proxies.length)return Promise.resolve([]);
-    return fetch(proxies[i]+encodeURIComponent(feedUrl),{signal:AbortSignal.timeout(6000)})
-      .then(function(r){if(!r.ok)throw new Error('bad');return r.text();})
-      .then(function(txt){
-        var xml=new DOMParser().parseFromString(txt,'text/xml');
-        var items=Array.from(xml.querySelectorAll('item')).slice(0,20).map(function(it){
-          var title=(it.querySelector('title')||{}).textContent||'';
-          var link=(it.querySelector('link')||{}).textContent||'';
-          var pub=(it.querySelector('pubDate')||{}).textContent||'';
-          if(!title||!link)return null;
-          return{title:title.trim(),url:link.trim(),date:pub?new Date(pub):new Date(),src:srcName};
-        }).filter(Boolean);
-        if(!items.length)throw new Error('empty');
+
+  // Try all proxies in parallel, take first success
+  var attempts = proxies.map(function(proxy) {
+    return fetch(proxy + encodeURIComponent(feedUrl), { signal: AbortSignal.timeout(4000) })
+      .then(function(r) { if(!r.ok) throw new Error('bad'); return r.text(); })
+      .then(function(txt) {
+        var items = parseRSSItems(txt, srcName);
+        if(!items.length) throw new Error('empty');
         return items;
-      })
-      .catch(function(){return tryProxy(i+1);});
-  }
-  return tryProxy(0);
+      });
+  });
+
+  return Promise.any(attempts)
+    .then(function(items) {
+      _newsCache[cacheKey] = items;
+      _newsCacheTime[cacheKey] = Date.now();
+      return items;
+    })
+    .catch(function() { return _newsCache[cacheKey] || []; });
 }
 
 function renderNews(all){
@@ -4244,7 +4266,7 @@ function fetchNews(){
       }
     });
 }
-setInterval(fetchNews,300000);
+setInterval(fetchNews, 3 * 60 * 1000);
 
 /* ═══════════════════════════════════════════
    HEATMAP PAGE loads only when tab opened
