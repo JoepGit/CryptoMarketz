@@ -1248,6 +1248,153 @@ body::before{background:radial-gradient(circle at 18% 0%, rgba(155,89,214,.12), 
   letter-spacing: .03em;
 }
 
+
+/* ══ FEAR & GREED PAGE ═══════════════════════════════════════════════════ */
+.fg-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+@media(max-width: 900px) { .fg-layout { grid-template-columns: 1fr; } }
+
+.fg-main-card {
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fg-meter-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.fg-gauge {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: -20px;
+}
+.fg-score-wrap {
+  text-align: center;
+  margin-top: 10px;
+}
+.fg-score {
+  font-family: 'Inter', sans-serif;
+  font-size: 72px;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--cream);
+  letter-spacing: -.03em;
+  transition: color .5s;
+}
+.fg-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-top: 6px;
+  transition: color .5s;
+}
+.fg-updated {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  color: var(--sub);
+  margin-top: 6px;
+  letter-spacing: .04em;
+}
+
+.fg-right { display: flex; flex-direction: column; gap: 14px; }
+
+.fg-compare-card { padding: 20px 24px; }
+.fg-compare-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 12px;
+}
+.fg-compare-item { text-align: center; }
+.fg-compare-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  color: var(--sub);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.fg-compare-val {
+  font-family: 'Inter', sans-serif;
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--cream);
+}
+.fg-compare-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--sub);
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+.fg-compare-arrow {
+  font-size: 24px;
+  color: var(--sub);
+  opacity: .4;
+}
+
+.fg-meaning-card { padding: 20px 24px; }
+.fg-meaning-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.fg-meaning-text {
+  font-size: 13px;
+  color: var(--sub);
+  line-height: 1.8;
+}
+
+.fg-zones-card { padding: 24px 26px; margin-bottom: 0; }
+.fg-zones {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+@media(max-width: 900px) { .fg-zones { grid-template-columns: repeat(2, 1fr); } }
+@media(max-width: 500px) { .fg-zones { grid-template-columns: 1fr; } }
+
+.fg-zone {
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.fg-zone-score {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.fg-zone-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.fg-zone-desc {
+  font-size: 11px;
+  color: var(--sub);
+  line-height: 1.7;
+}
+
 </style>
 
 <style id="light-theme" disabled>
@@ -1921,6 +2068,8 @@ function getOrRequestApiKey(callback){
         <svg viewBox="0 0 24 24"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><line x1="10" y1="7" x2="18" y2="7"/><line x1="10" y1="11" x2="18" y2="11"/><line x1="10" y1="15" x2="18" y2="15"/></svg>Crypto News</a></li>
       <li><a onclick="goPage('tvbtc',this)">
         <svg viewBox="0 0 24 24"><line x1="4" y1="19" x2="20" y2="19"/><line x1="7" y1="17" x2="7" y2="8"/><line x1="12" y1="17" x2="12" y2="5"/><line x1="17" y1="17" x2="17" y2="10"/></svg>Charting</a></li>
+      <li><a onclick="goPage('fear-greed',this)">
+        <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Fear &amp; Greed <span style="font-family:'Inter',sans-serif;font-size:7px;background:rgba(39,174,96,.12);color:#27ae60;border:1px solid rgba(39,174,96,.25);padding:1px 5px;border-radius:2px;margin-left:2px;font-weight:700;letter-spacing:.05em">FREE</span></a></li>
 
     </ul>
     <div class="sb-sec">AI</div>
@@ -3422,6 +3571,106 @@ function getOrRequestApiKey(callback){
       </div>
     </div><!-- /page-bot-signals -->
 
+<!-- ═══ FEAR & GREED ═══ -->
+    <div class="page" id="page-fear-greed">
+      <div class="ph"><h1>Fear &amp; Greed Index</h1><p>Live market sentiment · Updated daily · Free for everyone</p></div>
+
+      <div class="fg-layout">
+
+        <!-- Main meter -->
+        <div class="card fg-main-card">
+          <div class="fg-meter-wrap">
+            <svg class="fg-gauge" viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="gaugeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%"   stop-color="#e8392a"/>
+                  <stop offset="25%"  stop-color="#e67e22"/>
+                  <stop offset="50%"  stop-color="#f0b90b"/>
+                  <stop offset="75%"  stop-color="#27ae60"/>
+                  <stop offset="100%" stop-color="#00d4aa"/>
+                </linearGradient>
+              </defs>
+              <path d="M 30 150 A 120 120 0 0 1 270 150" fill="none" stroke="rgba(255,255,255,.06)" stroke-width="18" stroke-linecap="round"/>
+              <path id="fg-arc" d="M 30 150 A 120 120 0 0 1 270 150" fill="none" stroke="url(#gaugeGrad)" stroke-width="18" stroke-linecap="round" stroke-dasharray="377" stroke-dashoffset="377" style="transition:stroke-dashoffset 1s ease"/>
+              <g id="fg-needle" transform="rotate(-90 150 150)" style="transition:transform 1s ease">
+                <line x1="150" y1="150" x2="150" y2="42" stroke="white" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
+                <circle cx="150" cy="150" r="6" fill="#9b59d6"/>
+              </g>
+              <text x="18"  y="170" fill="#e8392a" font-size="9" font-family="Inter,sans-serif" font-weight="700">FEAR</text>
+              <text x="240" y="170" fill="#27ae60" font-size="9" font-family="Inter,sans-serif" font-weight="700">GREED</text>
+            </svg>
+            <div class="fg-score-wrap">
+              <div class="fg-score" id="fg-score">--</div>
+              <div class="fg-label" id="fg-label">Loading...</div>
+              <div class="fg-updated" id="fg-updated">Fetching live data...</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right column -->
+        <div class="fg-right">
+          <div class="card fg-compare-card">
+            <div class="fg-compare-row">
+              <div class="fg-compare-item">
+                <div class="fg-compare-label">TODAY</div>
+                <div class="fg-compare-val" id="fg-today-val">--</div>
+                <div class="fg-compare-sub" id="fg-today-lbl">--</div>
+              </div>
+              <div class="fg-compare-arrow" id="fg-arrow">→</div>
+              <div class="fg-compare-item">
+                <div class="fg-compare-label">YESTERDAY</div>
+                <div class="fg-compare-val" id="fg-yest-val">--</div>
+                <div class="fg-compare-sub" id="fg-yest-lbl">--</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card fg-meaning-card">
+            <div class="fg-meaning-title">WHAT THIS MEANS FOR TRADERS</div>
+            <div class="fg-meaning-text" id="fg-meaning">Loading interpretation...</div>
+          </div>
+
+          <div class="card" style="padding:20px 22px">
+            <div style="font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:.12em;color:var(--accent);text-transform:uppercase;margin-bottom:14px">30-DAY HISTORY</div>
+            <canvas id="fg-history-chart" height="80" style="width:100%;display:block"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Zone explainer -->
+      <div class="card fg-zones-card">
+        <div style="font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:.12em;color:var(--accent);text-transform:uppercase;margin-bottom:18px">THE FIVE ZONES</div>
+        <div class="fg-zones">
+          <div class="fg-zone" style="border-color:rgba(232,57,42,.3);background:rgba(232,57,42,.05)">
+            <div class="fg-zone-score" style="color:#e8392a">0 – 24</div>
+            <div class="fg-zone-name" style="color:#e8392a">Extreme Fear</div>
+            <div class="fg-zone-desc">Most investors panic selling. Historically the best time to accumulate.</div>
+          </div>
+          <div class="fg-zone" style="border-color:rgba(230,126,34,.3);background:rgba(230,126,34,.05)">
+            <div class="fg-zone-score" style="color:#e67e22">25 – 44</div>
+            <div class="fg-zone-name" style="color:#e67e22">Fear</div>
+            <div class="fg-zone-desc">Negative sentiment. Good accumulation zone for patient buyers.</div>
+          </div>
+          <div class="fg-zone" style="border-color:rgba(240,185,11,.3);background:rgba(240,185,11,.05)">
+            <div class="fg-zone-score" style="color:#f0b90b">45 – 55</div>
+            <div class="fg-zone-name" style="color:#f0b90b">Neutral</div>
+            <div class="fg-zone-desc">Balanced sentiment. Wait for clearer directional signals.</div>
+          </div>
+          <div class="fg-zone" style="border-color:rgba(39,174,96,.3);background:rgba(39,174,96,.05)">
+            <div class="fg-zone-score" style="color:#27ae60">56 – 74</div>
+            <div class="fg-zone-name" style="color:#27ae60">Greed</div>
+            <div class="fg-zone-desc">Investors getting greedy. Consider taking partial profits.</div>
+          </div>
+          <div class="fg-zone" style="border-color:rgba(0,212,170,.3);background:rgba(0,212,170,.05)">
+            <div class="fg-zone-score" style="color:#00d4aa">75 – 100</div>
+            <div class="fg-zone-name" style="color:#00d4aa">Extreme Greed</div>
+            <div class="fg-zone-desc">Dangerously greedy. High correction risk. Strong sell signal.</div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-fear-greed -->
+
 <!-- ═══ PRICING ═══ -->
     <div class="page" id="page-pricing">
       <div class="ph"><h1>Pricing</h1><p>Choose the plan that fits your goals. Cancel anytime.</p></div>
@@ -3671,6 +3920,8 @@ function goPage(id,el){
   /* heatmap removed */
   if(id==='portfolio'){if(!portfolioInited){portfolioInited=true;}renderPortfolio();}
   if(id==='whales'){if(!whalesInited){whalesInited=true;initWhales();};}
+  // Fear & Greed page trigger
+  if(id === 'fear-greed') setTimeout(loadFearGreed, 150);
   // Sync mobile bottom nav
   var tabMap={'dashboard':'mob-tab-dashboard','ai-brief':'mob-tab-ai-brief','bot-signals':'mob-tab-bot-signals','news':'mob-tab-news','pricing':'mob-tab-account','admin':'mob-tab-account','tvbtc':'mob-tab-dashboard','ai':'mob-tab-ai-brief','education':'mob-tab-account','analysis':'mob-tab-account','books':'mob-tab-account','whales':'mob-tab-account','portfolio':'mob-tab-account','risk':'mob-tab-account'};
   document.querySelectorAll('.mob-tab').forEach(function(t){t.classList.remove('active');});
@@ -5986,5 +6237,126 @@ if(typeof enterApp !== 'undefined') {
 }
 // ── END SIDEBAR LOCK OVERLAY ────────────────────────────────────────────────
 </script>
+
+<script>
+// ── FEAR & GREED PAGE ───────────────────────────────────────────────────────
+async function loadFearGreed() {
+  try {
+    const res  = await fetch('https://api.alternative.me/fng/?limit=30');
+    const data = await res.json();
+    const today = data.data[0];
+    const yesterday = data.data[1];
+    const history = data.data.slice(0, 30).reverse();
+
+    const val   = parseInt(today.value);
+    const lbl   = today.value_classification;
+    const yVal  = parseInt(yesterday.value);
+    const yLbl  = yesterday.value_classification;
+
+    // Color based on value
+    const color = val <= 24 ? '#e8392a' : val <= 44 ? '#e67e22' : val <= 55 ? '#f0b90b' : val <= 74 ? '#27ae60' : '#00d4aa';
+
+    // Update score
+    const scoreEl = document.getElementById('fg-score');
+    const labelEl = document.getElementById('fg-label');
+    const updEl   = document.getElementById('fg-updated');
+    if(scoreEl) { scoreEl.textContent = val; scoreEl.style.color = color; }
+    if(labelEl) { labelEl.textContent = lbl; labelEl.style.color = color; }
+    if(updEl)   updEl.textContent = 'Updated ' + new Date(today.timestamp * 1000).toLocaleDateString('en-GB', {day:'numeric',month:'short',year:'numeric'});
+
+    // Animate gauge needle and arc
+    const needle = document.getElementById('fg-needle');
+    const arc    = document.getElementById('fg-arc');
+    if(needle) {
+      const angle = (val / 100) * 180 - 90;
+      needle.setAttribute('transform', `rotate(${angle} 150 150)`);
+    }
+    if(arc) {
+      const dashOffset = 377 - (val / 100) * 377;
+      arc.style.strokeDashoffset = dashOffset;
+    }
+
+    // Compare
+    const tEl = document.getElementById('fg-today-val');
+    const tLEl = document.getElementById('fg-today-lbl');
+    const yEl = document.getElementById('fg-yest-val');
+    const yLEl = document.getElementById('fg-yest-lbl');
+    const arrEl = document.getElementById('fg-arrow');
+    if(tEl) { tEl.textContent = val; tEl.style.color = color; }
+    if(tLEl) { tLEl.textContent = lbl; tLEl.style.color = color; }
+    const yColor = yVal <= 24 ? '#e8392a' : yVal <= 44 ? '#e67e22' : yVal <= 55 ? '#f0b90b' : yVal <= 74 ? '#27ae60' : '#00d4aa';
+    if(yEl) { yEl.textContent = yVal; yEl.style.color = yColor; }
+    if(yLEl) { yLEl.textContent = yLbl; yLEl.style.color = yColor; }
+    if(arrEl) {
+      const diff = val - yVal;
+      arrEl.textContent = diff > 0 ? '↑' : diff < 0 ? '↓' : '→';
+      arrEl.style.color = diff > 0 ? '#27ae60' : diff < 0 ? '#e8392a' : 'var(--sub)';
+      arrEl.style.opacity = '1';
+    }
+
+    // Meaning
+    const meanings = {
+      'Extreme Fear':  'The market is in a state of extreme fear. Historically, this has been one of the best times to accumulate — when everyone is scared, smart money is buying. Consider dollar-cost averaging into strong assets.',
+      'Fear':          'Investors are fearful and sentiment is negative. This is typically a good zone to start accumulating quality assets at discounted prices. Patience tends to be rewarded here.',
+      'Neutral':       'Market sentiment is balanced with no strong directional bias. Wait for clearer signals before making major moves. Monitor BTC dominance and volume for clues.',
+      'Greed':         'The market is showing signs of greed. Risk is elevated — consider taking partial profits on positions and tighten stop losses. New entries carry higher risk at these levels.',
+      'Extreme Greed': 'Extreme greed levels have historically preceded corrections. This is a strong signal to reduce exposure and secure profits. Do not chase pumps at these sentiment levels.'
+    };
+    const mEl = document.getElementById('fg-meaning');
+    if(mEl) mEl.textContent = meanings[lbl] || 'Sentiment data loaded.';
+
+    // History chart
+    const canvas = document.getElementById('fg-history-chart');
+    if(canvas) {
+      const ctx = canvas.getContext('2d');
+      const w = canvas.offsetWidth;
+      canvas.width = w;
+      canvas.height = 80;
+      const vals = history.map(d => parseInt(d.value));
+      const max = 100, min = 0;
+      const step = w / (vals.length - 1);
+
+      // Draw gradient fill
+      const grad = ctx.createLinearGradient(0, 0, 0, 80);
+      grad.addColorStop(0, 'rgba(155,89,214,.3)');
+      grad.addColorStop(1, 'rgba(155,89,214,.0)');
+
+      ctx.beginPath();
+      vals.forEach((v, i) => {
+        const x = i * step;
+        const y = 80 - ((v - min) / (max - min)) * 70;
+        i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      });
+      ctx.strokeStyle = 'rgba(155,89,214,.8)';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      // Fill below
+      ctx.lineTo((vals.length - 1) * step, 80);
+      ctx.lineTo(0, 80);
+      ctx.closePath();
+      ctx.fillStyle = grad;
+      ctx.fill();
+
+      // Current dot
+      const lastX = (vals.length - 1) * step;
+      const lastY = 80 - ((vals[vals.length-1] - min) / (max - min)) * 70;
+      ctx.beginPath();
+      ctx.arc(lastX, lastY, 4, 0, Math.PI * 2);
+      ctx.fillStyle = color;
+      ctx.fill();
+    }
+
+  } catch(e) {
+    console.warn('Fear & Greed error:', e);
+    const scoreEl = document.getElementById('fg-score');
+    if(scoreEl) scoreEl.textContent = '--';
+  }
+}
+
+// Load when page opens — inject directly into main goPage
+// ── END FEAR & GREED ────────────────────────────────────────────────────────
+</script>
+
 </body>
 </html>
