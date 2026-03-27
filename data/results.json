@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "id": 1774551171195,
+    "coin": "BTC/USD",
+    "type": "BUY",
+    "entry": "68365",
+    "tp": "71500",
+    "sl": "67000",
+    "result": "loss",
+    "pnl": "-2.00%",
+    "resolved_price": 66580,
+    "signal_date": "2026-03-26T18:52:42.338Z",
+    "resolved_at": "2026-03-27T12:40:07.065Z"
+  },
+  {
+    "id": 1774535590902,
+    "coin": "ETH/USD",
+    "type": "BUY",
+    "entry": "2078",
+    "tp": "2200",
+    "sl": "2030",
+    "result": "loss",
+    "pnl": "-2.31%",
+    "resolved_price": 1987.64,
+    "signal_date": "2026-03-26T14:33:08.707Z",
+    "resolved_at": "2026-03-27T12:40:07.065Z"
+  }
+]
