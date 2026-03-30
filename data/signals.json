@@ -1,26 +1,14 @@
 [
   {
-    "id": 1774615231378,
-    "coin": "BTC/USD",
-    "type": "SELL",
-    "entry": "66580",
-    "tp": "63500",
-    "sl": "67800",
-    "note": "Strong 4H bearish trend with price well below both EMAs. 1H RSI at extreme oversold 18.3 but 4H confirms downtrend continuation. Clear resistance at EMA levels above. Use 1/3 position size.",
-    "timestamp": "2026-03-27T12:40:26.979Z",
-    "generated_at": "Fri, 27 Mar 2026 12:40:26 GMT",
-    "source": "claude-bot"
-  },
-  {
-    "id": 1774615229682,
+    "id": 1774875248001,
     "coin": "ETH/USD",
-    "type": "SELL",
-    "entry": "1987",
-    "tp": "1850",
-    "sl": "2050",
-    "note": "4H bearish trend confirmed, price significantly below EMA20/50. 1H RSI 20.8 oversold but 4H RSI 18.9 supports further downside. Strong resistance cluster above entry. Use 1/3 position size.",
-    "timestamp": "2026-03-27T12:40:26.979Z",
-    "generated_at": "Fri, 27 Mar 2026 12:40:26 GMT",
+    "type": "BUY",
+    "entry": "2070",
+    "tp": "2160",
+    "sl": "2034",
+    "note": "4H sideways with price above EMA20, 1H bullish trend, RSI 68.5 approaching overbought but still valid. Strong support at EMA20 level 2029. Use 1/3 position size.",
+    "timestamp": "2026-03-30T12:54:03.878Z",
+    "generated_at": "Mon, 30 Mar 2026 12:54:03 GMT",
     "source": "claude-bot"
   }
 ]
