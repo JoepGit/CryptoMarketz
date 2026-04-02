@@ -1,5 +1,17 @@
 [
   {
+    "id": 1775134098002,
+    "coin": "ETH/USD",
+    "type": "BUY",
+    "entry": "2029",
+    "tp": "2157",
+    "sl": "1980",
+    "note": "4H sideways trend with price below EMA20 but 1H RSI at 31.9 showing extreme oversold conditions. Clear support around 1980 and resistance at 24h high 2157. Risk/reward 1:2.6. Use 1/3 position size.",
+    "timestamp": "2026-04-02T12:48:17.583Z",
+    "generated_at": "Thu, 02 Apr 2026 12:48:17 GMT",
+    "source": "claude-bot"
+  },
+  {
     "id": 1774896350245,
     "coin": "BTC/USD",
     "type": "BUY",
@@ -9,18 +21,6 @@
     "note": "1H RSI at 31.5 oversold extreme in sideways market, price near 24h low support at 66638. Target resistance near 24h high. Use 1/3 position size.",
     "timestamp": "2026-03-30T18:45:45.984Z",
     "generated_at": "Mon, 30 Mar 2026 18:45:45 GMT",
-    "source": "claude-bot"
-  },
-  {
-    "id": 1774875248001,
-    "coin": "ETH/USD",
-    "type": "BUY",
-    "entry": "2070",
-    "tp": "2160",
-    "sl": "2034",
-    "note": "4H sideways with price above EMA20, 1H bullish trend, RSI 68.5 approaching overbought but still valid. Strong support at EMA20 level 2029. Use 1/3 position size.",
-    "timestamp": "2026-03-30T12:54:03.878Z",
-    "generated_at": "Mon, 30 Mar 2026 12:54:03 GMT",
     "source": "claude-bot"
   }
 ]
