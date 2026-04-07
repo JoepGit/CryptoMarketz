@@ -1,5 +1,17 @@
 [
   {
+    "id": 1775600944906,
+    "coin": "ETH/USD",
+    "type": "SELL",
+    "entry": "2158",
+    "tp": "2050",
+    "sl": "2200",
+    "note": "1H RSI critically overbought at 84.9, price at 24h high resistance level. 4H bullish but 1H showing extreme conditions. RR 2.6:1 targeting support zone. Use 1/3 position size.",
+    "timestamp": "2026-04-07T22:28:55.066Z",
+    "generated_at": "Tue, 07 Apr 2026 22:28:55 GMT",
+    "source": "claude-bot"
+  },
+  {
     "id": 1775479567399,
     "coin": "BTC/USD",
     "type": "SELL",
@@ -9,18 +21,6 @@
     "note": "4H RSI 85.8 extremely overbought signaling potential reversal, price near 24h high resistance at 70065, clear 1:2.5 RR with support at 67000. Use 1/3 position size.",
     "timestamp": "2026-04-06T12:46:05.728Z",
     "generated_at": "Mon, 06 Apr 2026 12:46:05 GMT",
-    "source": "claude-bot"
-  },
-  {
-    "id": 1775134098002,
-    "coin": "ETH/USD",
-    "type": "BUY",
-    "entry": "2029",
-    "tp": "2157",
-    "sl": "1980",
-    "note": "4H sideways trend with price below EMA20 but 1H RSI at 31.9 showing extreme oversold conditions. Clear support around 1980 and resistance at 24h high 2157. Risk/reward 1:2.6. Use 1/3 position size.",
-    "timestamp": "2026-04-02T12:48:17.583Z",
-    "generated_at": "Thu, 02 Apr 2026 12:48:17 GMT",
     "source": "claude-bot"
   }
 ]
