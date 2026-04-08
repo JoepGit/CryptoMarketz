@@ -1,5 +1,31 @@
 [
   {
+    "id": 1775600944906,
+    "coin": "ETH/USD",
+    "type": "SELL",
+    "entry": "2158",
+    "tp": "2050",
+    "sl": "2200",
+    "result": "loss",
+    "pnl": "1.95%",
+    "resolved_price": 2245.36,
+    "signal_date": "2026-04-07T22:28:55.066Z",
+    "resolved_at": "2026-04-08T07:06:04.611Z"
+  },
+  {
+    "id": 1775479567399,
+    "coin": "BTC/USD",
+    "type": "SELL",
+    "entry": "69500",
+    "tp": "67000",
+    "sl": "70800",
+    "result": "loss",
+    "pnl": "1.87%",
+    "resolved_price": 71654,
+    "signal_date": "2026-04-06T12:46:05.728Z",
+    "resolved_at": "2026-04-08T07:06:04.611Z"
+  },
+  {
     "id": 1775134098002,
     "coin": "ETH/USD",
     "type": "BUY",
