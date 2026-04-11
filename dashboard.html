@@ -3876,69 +3876,63 @@ body {
       </div>
     </div>
 
-    <!-- ═══ EARLY SIGNAL SCANNER ═══ -->
+    <!-- ═══ PRE-BREAKOUT RADAR ═══ -->
     <div class="page" id="page-scanner">
-      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:22px">
+      <!-- Header -->
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-bottom:20px">
         <div>
-          <div style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:.12em;color:rgba(155,89,214,.7);text-transform:uppercase;margin-bottom:6px">ZIMR Capital</div>
-          <h1 style="font-size:22px;font-weight:800;letter-spacing:-.5px;margin:0">Early Signal <span style="color:#9b59d6">Scanner</span></h1>
-          <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,.25);margin-top:5px;letter-spacing:.08em">TOP 500 · VOLUME ANOMALY · RANK MOMENTUM · X10 RADAR</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.14em;color:rgba(155,89,214,.6);text-transform:uppercase;margin-bottom:8px">ZIMR Capital · Intelligence</div>
+          <h1 style="font-size:24px;font-weight:800;letter-spacing:-.5px;margin:0 0 4px">Pre-Breakout <span style="color:#9b59d6">Radar</span></h1>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,.18);letter-spacing:.06em">MAX 10 COINS · STEALTH ACCUMULATION · BEFORE THE MOVE · NOT AFTER</div>
         </div>
-        <button onclick="runScanner()" id="scannerBtn" style="background:#9b59d6;color:#fff;font-family:'JetBrains Mono',monospace;font-size:10px;border:none;padding:10px 22px;border-radius:6px;cursor:pointer;letter-spacing:.08em;font-weight:700;transition:opacity .15s">▶ SCAN NOW</button>
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+          <div style="display:flex;align-items:center;gap:7px;font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,.3)">
+            <div id="sc-pulse" style="width:6px;height:6px;border-radius:50%;background:#00e676;animation:scPulse 1.5s ease-in-out infinite;flex-shrink:0"></div>
+            <span id="sc-status">Ready</span>
+            <span style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);padding:3px 10px;border-radius:20px">Scanned: <span id="sc-count" style="color:#9b59d6">—</span></span>
+            <span style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);padding:3px 10px;border-radius:20px">Picks: <span id="sc-signals" style="color:#9b59d6">—</span></span>
+          </div>
+          <button onclick="runScanner()" id="scannerBtn" style="background:#9b59d6;color:#fff;font-family:'JetBrains Mono',monospace;font-size:10px;border:none;padding:10px 22px;border-radius:7px;cursor:pointer;letter-spacing:.08em;font-weight:700;transition:opacity .15s,transform .1s;white-space:nowrap">&#9654; SCAN NOW</button>
+        </div>
       </div>
 
-      <!-- Filters -->
-      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;align-items:center">
-        <button class="sc-filter on" data-scf="all" onclick="setScFilter('all',this)">ALL SIGNALS</button>
-        <button class="sc-filter" data-scf="volume" onclick="setScFilter('volume',this)">VOLUME SPIKE</button>
-        <button class="sc-filter" data-scf="rank" onclick="setScFilter('rank',this)">RANK CLIMBER</button>
-        <button class="sc-filter" data-scf="momentum" onclick="setScFilter('momentum',this)">MOMENTUM</button>
-        <button class="sc-filter" data-scf="accumulate" onclick="setScFilter('accumulate',this)">ACCUMULATION</button>
-      </div>
-
-      <!-- Status -->
-      <div style="display:flex;align-items:center;gap:12px;font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(255,255,255,.3);margin-bottom:14px;flex-wrap:wrap">
-        <div id="sc-pulse" style="width:6px;height:6px;border-radius:50%;background:#00e676;animation:scPulse 1.5s ease-in-out infinite;flex-shrink:0"></div>
-        <span id="sc-status">Ready to scan</span>
-        <span style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);padding:3px 10px;border-radius:20px">Scanned: <span id="sc-count" style="color:#9b59d6">—</span></span>
-        <span style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);padding:3px 10px;border-radius:20px">Signals: <span id="sc-signals" style="color:#9b59d6">—</span></span>
-        <span style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);padding:3px 10px;border-radius:20px" id="sc-time">Last update: —</span>
-      </div>
-
-      <!-- Legend -->
-      <div style="display:flex;gap:16px;margin-bottom:18px;flex-wrap:wrap">
-        <div style="display:flex;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,.3)"><div style="width:8px;height:8px;border-radius:50%;background:#ff4500"></div>MEGA — meerdere sterke triggers</div>
-        <div style="display:flex;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,.3)"><div style="width:8px;height:8px;border-radius:50%;background:#00e676"></div>HIGH — volume + momentum combo</div>
-        <div style="display:flex;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,.3)"><div style="width:8px;height:8px;border-radius:50%;background:#f5c518"></div>MEDIUM — één sterke trigger</div>
-        <div style="display:flex;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,.3)"><div style="width:8px;height:8px;border-radius:50%;background:#9b59d6"></div>WATCH — vroege signalen</div>
+      <!-- Logic pills -->
+      <div style="display:flex;gap:7px;flex-wrap:wrap;margin-bottom:20px">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:8px;padding:4px 10px;border-radius:20px;background:rgba(39,174,96,.1);color:#27ae60;border:1px solid rgba(39,174,96,.25)">&#10003; Price flat or slightly up (0-20%)</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:8px;padding:4px 10px;border-radius:20px;background:rgba(39,174,96,.1);color:#27ae60;border:1px solid rgba(39,174,96,.25)">&#10003; Volume building quietly</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:8px;padding:4px 10px;border-radius:20px;background:rgba(39,174,96,.1);color:#27ae60;border:1px solid rgba(39,174,96,.25)">&#10003; Small / micro cap</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:8px;padding:4px 10px;border-radius:20px;background:rgba(232,57,42,.1);color:#e8392a;border:1px solid rgba(232,57,42,.25)">&#10005; Already pumped 30%+ = skip</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:8px;padding:4px 10px;border-radius:20px;background:rgba(232,57,42,.1);color:#e8392a;border:1px solid rgba(232,57,42,.25)">&#10005; Large cap = too little upside</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:8px;padding:4px 10px;border-radius:20px;background:rgba(232,57,42,.1);color:#e8392a;border:1px solid rgba(232,57,42,.25)">&#10005; Dead volume = skip</span>
       </div>
 
       <!-- Results -->
       <div id="sc-results">
-        <div style="text-align:center;padding:60px 20px;font-family:'JetBrains Mono',monospace;font-size:12px;color:rgba(255,255,255,.2)">
-          <div style="font-size:32px;margin-bottom:12px">📡</div>
-          Hit SCAN NOW om de top 500 coins te analyseren op early breakout signals<br>
-          <span style="font-size:10px;opacity:.6">Klik daarna op een coin om hem te openen op CoinGecko</span>
+        <div style="text-align:center;padding:70px 20px;font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,.2)">
+          <div style="font-size:34px;margin-bottom:14px">&#128248;</div>
+          Hit <strong style="color:#9b59d6">SCAN NOW</strong> to find coins before they move<br>
+          Silent accumulation &middot; Volume building &middot; Not yet on radar<br>
+          <span style="font-size:9px;opacity:.45;display:block;margin-top:6px">Max 10 picks &middot; Click any coin to open on CoinGecko</span>
         </div>
       </div>
 
       <style>
-        @keyframes scPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
-        @keyframes scFadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-        .sc-filter{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace;font-size:9px;padding:6px 13px;border-radius:4px;cursor:pointer;letter-spacing:.08em;transition:all .15s}
-        .sc-filter.on,.sc-filter:hover{border-color:#9b59d6;color:#9b59d6;background:rgba(155,89,214,.12)}
-        .sc-card{background:var(--card);border:1px solid var(--bdr);border-radius:8px;padding:14px 16px;display:grid;grid-template-columns:52px 1fr auto;gap:14px;align-items:center;animation:scFadeIn .3s ease both;position:relative;overflow:hidden;cursor:pointer;transition:border-color .15s,transform .12s;text-decoration:none}
-        .sc-card:hover{border-color:rgba(155,89,214,.4);transform:translateY(-1px)}
-        .sc-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px}
-        .sc-card.sc-mega::before{background:#ff4500}.sc-card.sc-high::before{background:#00e676}.sc-card.sc-medium::before{background:#f5c518}.sc-card.sc-low::before{background:#9b59d6}
-        .sc-badge{font-family:'JetBrains Mono',monospace;font-size:8px;padding:2px 7px;border-radius:3px;font-weight:700;letter-spacing:.08em}
-        .sc-badge.bm{background:rgba(255,69,0,.18);color:#ff6b35;border:1px solid rgba(255,69,0,.3)}
-        .sc-badge.bh{background:rgba(0,230,118,.1);color:#00e676;border:1px solid rgba(0,230,118,.2)}
-        .sc-badge.bmd{background:rgba(245,197,24,.1);color:#f5c518;border:1px solid rgba(245,197,24,.2)}
-        .sc-badge.bl{background:rgba(155,89,214,.12);color:#9b59d6;border:1px solid rgba(155,89,214,.25)}
-        .sc-tag{font-family:'JetBrains Mono',monospace;font-size:8px;color:rgba(255,255,255,.4);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);padding:2px 6px;border-radius:3px}
-        .sc-bar-track{flex:1;height:3px;background:rgba(255,255,255,.06);border-radius:2px;overflow:hidden}
+        @keyframes scPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.65)}}
+        @keyframes scFadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+        .sc-card{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:16px 18px;display:grid;grid-template-columns:52px 1fr auto;gap:14px;align-items:center;animation:scFadeUp .4s ease both;position:relative;overflow:hidden;cursor:pointer;transition:border-color .15s,transform .1s,background .15s;text-decoration:none;color:inherit}
+        .sc-card:hover{border-color:rgba(155,89,214,.4);background:#141414;transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.4)}
+        .sc-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;border-radius:2px 0 0 2px}
+        .sc-card.sc-stealth::before{background:linear-gradient(180deg,#f97316,rgba(249,115,22,.3))}
+        .sc-card.sc-pre::before{background:linear-gradient(180deg,#9b59d6,rgba(155,89,214,.3))}
+        .sc-stage{font-family:'JetBrains Mono',monospace;font-size:8px;font-weight:700;letter-spacing:.08em;padding:3px 8px;border-radius:4px}
+        .sc-stage.st-stealth{background:rgba(249,115,22,.12);color:#f97316;border:1px solid rgba(249,115,22,.28)}
+        .sc-stage.st-pre{background:rgba(155,89,214,.15);color:#9b59d6;border:1px solid rgba(155,89,214,.3)}
+        .sc-tag{font-family:'JetBrains Mono',monospace;font-size:8px;color:rgba(255,255,255,.35);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);padding:2px 7px;border-radius:3px}
+        .sc-tag.sc-hot{color:#f97316;background:rgba(249,115,22,.08);border-color:rgba(249,115,22,.2)}
+        .sc-tag.sc-acc{color:#9b59d6;background:rgba(155,89,214,.08);border-color:rgba(155,89,214,.2)}
+        .sc-bar-track{flex:1;height:3px;background:rgba(255,255,255,.05);border-radius:2px;overflow:hidden}
         .sc-bar-fill{height:100%;border-radius:2px;transition:width 1s ease}
+        .sc-sec-label{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.12em;color:rgba(155,89,214,.5);text-transform:uppercase;padding:4px 0 10px;border-bottom:1px solid var(--bdr);margin-bottom:6px}
       </style>
     </div><!-- /page-scanner -->
 
@@ -6713,191 +6707,203 @@ function ptRender() {
 })();
 // ── END POLITICAL TRADES ─────────────────────────────────────────────────────
 
-// ══ EARLY SIGNAL SCANNER ═════════════════════════════════════════════════════
+// ══ PRE-BREAKOUT RADAR ═══════════════════════════════════════════════════════
 (function(){
-  var scCoins = [];
-  var scFilter = 'all';
+  var picks = [];
 
-  window.setScFilter = function(f, btn) {
-    scFilter = f;
-    document.querySelectorAll('.sc-filter').forEach(function(b){ b.classList.remove('on'); });
-    btn.classList.add('on');
-    renderScanner(getFilteredCoins());
-  };
+  var COLS = ['#9b59d6','#3498db','#e74c3c','#2ecc71','#f39c12','#1abc9c','#e91e63','#00bcd4','#ff6b35','#a855f7','#06b6d4','#84cc16'];
+  function cco(n){ var h=0; for(var i=0;i<n.length;i++) h=(h*31+n.charCodeAt(i))&0xffff; return COLS[h%COLS.length]; }
 
-  function getFilteredCoins() {
-    if (scFilter === 'all') return scCoins;
-    if (scFilter === 'volume') return scCoins.filter(function(c){ return c.signals.indexOf('VOL SPIKE') > -1 || c.signals.indexOf('HIGH VOL') > -1; });
-    if (scFilter === 'rank') return scCoins.filter(function(c){ return c.signals.indexOf('RANK CLIMB') > -1; });
-    if (scFilter === 'momentum') return scCoins.filter(function(c){ return c.signals.indexOf('MOMENTUM') > -1 || c.signals.indexOf('7D BREAKOUT') > -1 || c.signals.indexOf('MOONIN 🔥') > -1; });
-    if (scFilter === 'accumulate') return scCoins.filter(function(c){ return c.signals.indexOf('ACCUMULATE?') > -1; });
-    return scCoins;
+  function fp(p){
+    if(!p) return '$-';
+    if(p<0.0001) return '$'+p.toFixed(7);
+    if(p<0.01) return '$'+p.toFixed(5);
+    if(p<1) return '$'+p.toFixed(4);
+    if(p<100) return '$'+p.toFixed(2);
+    return '$'+Math.round(p).toLocaleString('en-US');
+  }
+  function fm(v){
+    if(!v) return '-';
+    if(v>=1e9) return '$'+(v/1e9).toFixed(1)+'B';
+    if(v>=1e6) return '$'+(v/1e6).toFixed(1)+'M';
+    return '$'+(v/1e3).toFixed(0)+'K';
   }
 
-  function fmtPrice(p) {
-    if (!p) return '$—';
-    if (p < 0.0001) return '$' + p.toExponential(2);
-    if (p < 0.01) return '$' + p.toFixed(6);
-    if (p < 1) return '$' + p.toFixed(4);
-    if (p < 100) return '$' + p.toFixed(2);
-    return '$' + p.toLocaleString('en-US', {maximumFractionDigits:0});
+  function scoreIt(c, idx) {
+    var mc  = c.market_cap || 1;
+    var vol = c.total_volume || 0;
+    var c24 = c.price_change_percentage_24h || 0;
+    var c7  = c.price_change_percentage_7d_in_currency || 0;
+    var rk  = c.market_cap_rank || idx;
+    var vr  = vol / mc;
+
+    var pts = 0, tags = [], why = '', stage = 'pre';
+
+    // ── HARD DISQUALIFIERS ──
+    if(c24 > 35)   return null; // already pumped
+    if(c7  > 80)   return null; // already ran
+    if(mc  > 2e9)  return null; // too big
+    if(vr  < 0.05) return null; // dead volume
+
+    // ── STEALTH ACCUMULATION (best signal) ──
+    // High volume but price barely moving = silent buying
+    if(vr > 0.5 && Math.abs(c24) < 5) {
+      pts += 40; stage = 'stealth';
+      tags.push({t:'SILENT BUY', cls:'sc-acc'});
+      why = 'High volume, price not moving yet — someone buying quietly';
+    } else if(vr > 0.3 && Math.abs(c24) < 8) {
+      pts += 25;
+      tags.push({t:'ACCUMULATE', cls:'sc-acc'});
+      why = 'Volume building, still under the radar';
+    }
+
+    // ── VOLUME INTEREST ──
+    if(vr > 1.2)      { pts += 20; tags.push({t:'VOL SPIKE', cls:'sc-hot'}); }
+    else if(vr > 0.6) { pts += 12; tags.push({t:'HIGH VOL',  cls:'sc-hot'}); }
+    else if(vr > 0.2) { pts += 5;  tags.push({t:'VOL BUILD', cls:''}); }
+
+    // ── 7D TREND ──
+    if(c7 > 15 && c7 < 50)                        { pts += 15; tags.push({t:'7D BUILD', cls:''}); if(!why) why = 'Slowly trending up over the week'; }
+    else if(c7 > 5 && c7 < 15)                    { pts += 8;  tags.push({t:'7D CREEP', cls:''}); }
+    else if(c7 > -20 && c7 < 0 && vr > 0.3)       { pts += 12; tags.push({t:'DIP+VOL',  cls:'sc-acc'}); if(!why) why = 'Price dipped but volume staying high — possible reversal'; }
+
+    // ── 24H PRICE: flat = best entry ──
+    if(Math.abs(c24) < 3)                         { pts += 15; tags.push({t:'FLAT',     cls:'sc-acc'}); }
+    else if(c24 > 3 && c24 <= 15)                 { pts += 8;  tags.push({t:'MOVING',   cls:''}); }
+    else if(c24 > 15 && c24 <= 35)                { pts += 2;  tags.push({t:'PUMPING',  cls:'sc-hot'}); }
+    else if(c24 < -3 && c24 > -15 && c7 > 5)     { pts += 10; tags.push({t:'SHAKEOUT', cls:'sc-acc'}); if(!why) why = 'Red today, but weekly trend intact — shakeout before continuation'; }
+
+    // ── MARKET CAP: smaller = more upside room ──
+    if(mc < 10e6)      { pts += 20; tags.push({t:'MICRO CAP',  cls:''}); }
+    else if(mc < 50e6) { pts += 15; tags.push({t:'SMALL CAP',  cls:''}); }
+    else if(mc < 2e8)  { pts += 8;  tags.push({t:'MID-SMALL',  cls:''}); }
+    else if(mc < 5e8)  { pts += 3;  tags.push({t:'MID CAP',    cls:''}); }
+
+    // ── RANK (200-500 = sweet spot) ──
+    if(rk > 200 && rk <= 500) { pts += 10; tags.push({t:'RANK CLIMB', cls:''}); }
+    else if(rk > 100 && rk <= 200) { pts += 5; }
+
+    if(pts < 30) return null;
+    if(!why) why = vr > 0.4 ? 'Elevated volume/mcap ratio — interest building' : 'Quiet accumulation signals detected';
+
+    return { id:c.id, name:c.name, sym:(c.symbol||'').toUpperCase(), p:c.current_price||0, c24:c24, c7:c7, mc:mc, vol:vol, vr:vr, rk:rk, tags:tags, pts:Math.min(pts,100), why:why, stage:stage };
   }
 
-  function fmtMcap(v) {
-    if (!v) return '—';
-    if (v >= 1e9) return '$' + (v/1e9).toFixed(1) + 'B';
-    if (v >= 1e6) return '$' + (v/1e6).toFixed(1) + 'M';
-    return '$' + (v/1e3).toFixed(0) + 'K';
-  }
-
-  function coinColor(name) {
-    var colors = ['#9b59d6','#3498db','#e74c3c','#2ecc71','#f39c12','#1abc9c','#e91e63','#00bcd4'];
-    var hash = 0;
-    for (var i = 0; i < name.length; i++) hash = (hash * 31 + name.charCodeAt(i)) & 0xffff;
-    return colors[hash % colors.length];
-  }
-
-  function scoreClass(s) {
-    if (s >= 80) return 'mega'; if (s >= 60) return 'high'; if (s >= 40) return 'medium'; return 'low';
-  }
-  function scoreLabel(s) {
-    if (s >= 80) return 'MEGA'; if (s >= 60) return 'HIGH'; if (s >= 40) return 'MEDIUM'; return 'WATCH';
-  }
-  function scoreBadge(s) {
-    if (s >= 80) return 'bm'; if (s >= 60) return 'bh'; if (s >= 40) return 'bmd'; return 'bl';
-  }
-  function scoreColor(s) {
-    if (s >= 80) return '#ff4500'; if (s >= 60) return '#00e676'; if (s >= 40) return '#f5c518'; return '#9b59d6';
-  }
-
-  function analyzeSignals(coin, idx) {
-    var signals = [];
-    var score = 0;
-    var price = coin.current_price || 0;
-    var mcap = coin.market_cap || 1;
-    var vol = coin.total_volume || 0;
-    var ch24 = coin.price_change_percentage_24h || 0;
-    var ch7 = coin.price_change_percentage_7d_in_currency || 0;
-    var rank = coin.market_cap_rank || idx;
-    var vr = vol / mcap;
-
-    if (vr > 1.5) { signals.push('VOL SPIKE'); score += 35; }
-    else if (vr > 0.8) { signals.push('HIGH VOL'); score += 20; }
-    else if (vr > 0.4) { signals.push('VOL BUILD'); score += 10; }
-
-    if (ch24 > 25) { signals.push('MOONIN 🔥'); score += 30; }
-    else if (ch24 > 12) { signals.push('MOMENTUM'); score += 18; }
-    else if (ch24 > 5) { signals.push('MOVING'); score += 8; }
-
-    if (ch7 > 50) { signals.push('7D BREAKOUT'); score += 25; }
-    else if (ch7 > 25) { signals.push('7D CLIMB'); score += 15; }
-    else if (ch7 > 10) { signals.push('7D BUILD'); score += 8; }
-
-    if (mcap < 20000000) { signals.push('MICRO CAP'); score += 15; }
-    else if (mcap < 100000000) { signals.push('SMALL CAP'); score += 10; }
-    else if (mcap < 500000000) { signals.push('MID CAP'); score += 5; }
-
-    if (rank > 300) { signals.push('RANK CLIMB'); score += 10; }
-    else if (rank > 150) { signals.push('MID RANK'); score += 5; }
-
-    if (vr > 0.6 && Math.abs(ch24) < 5) { signals.push('ACCUMULATE?'); score += 20; }
-    if (ch7 > 20 && ch24 > 0 && ch24 < 8) { signals.push('CONSOLIDATING'); score += 12; }
-
-    return { id: coin.id, name: coin.name, symbol: (coin.symbol||'').toUpperCase(), price: price, ch24: ch24, ch7: ch7, mcap: mcap, vol: vol, vr: vr, rank: rank, signals: signals, score: Math.min(score, 100) };
-  }
-
-  function renderScanner(coins) {
+  function renderPicks(list) {
     var el = document.getElementById('sc-results');
-    if (!el) return;
-    if (!coins || !coins.length) {
-      el.innerHTML = '<div style="text-align:center;padding:40px;font-family:\'JetBrains Mono\',monospace;font-size:11px;color:rgba(255,255,255,.25)">Geen coins matchen dit filter</div>';
+    if(!el) return;
+    if(!list || !list.length) {
+      el.innerHTML = '<div style="text-align:center;padding:60px 20px;font-family:\'JetBrains Mono\',monospace;font-size:11px;color:rgba(255,255,255,.2)"><div style="font-size:28px;margin-bottom:12px">&#128269;</div>No pre-breakout setups found right now<br><span style="font-size:9px;opacity:.5">Try again in a few minutes — market changes fast</span></div>';
       return;
     }
-    el.innerHTML = coins.map(function(c, i) {
-      var sc = scoreClass(c.score);
-      var color = coinColor(c.name);
-      var pos24 = c.ch24 >= 0;
-      var pos7 = c.ch7 >= 0;
-      var vPct = Math.min((c.vr / 2) * 100, 100);
-      var cgUrl = 'https://www.coingecko.com/en/coins/' + c.id;
-      return '<a class="sc-card sc-' + sc + '" href="' + cgUrl + '" target="_blank" rel="noopener" style="animation-delay:' + (i * 0.04) + 's">' +
+
+    var html = '<div class="sc-sec-label">Pre-Breakout Picks &mdash; ' + list.length + ' coins in window</div>';
+
+    html += list.map(function(c, i) {
+      var col = cco(c.name);
+      var p4  = c.c24 >= 0, p7 = c.c7 >= 0;
+      var vp  = Math.min((c.vr / 1.5) * 100, 100);
+      var pp  = c.pts;
+      var ch24cls = Math.abs(c.c24) < 4 ? 'color:#f5c518' : (p4 ? 'color:#27ae60' : 'color:#e8392a');
+      var url = 'https://www.coingecko.com/en/coins/' + c.id;
+      var barColor = c.stage === 'stealth' ? '#f97316' : '#9b59d6';
+
+      return '<a class="sc-card sc-' + c.stage + '" href="' + url + '" target="_blank" rel="noopener" style="animation-delay:' + (i*0.06) + 's">' +
+
+        // rank col
         '<div style="text-align:center">' +
-          '<div style="width:28px;height:28px;border-radius:50%;background:' + color + ';display:flex;align-items:center;justify-content:center;font-family:\'JetBrains Mono\',monospace;font-size:9px;font-weight:700;color:#fff;margin:0 auto 3px">' + c.symbol.slice(0,3) + '</div>' +
-          '<div style="font-family:\'JetBrains Mono\',monospace;font-size:9px;color:rgba(255,255,255,.3)">#' + c.rank + '</div>' +
+          '<div style="font-family:\'JetBrains Mono\',monospace;font-size:8px;color:var(--sub);margin-bottom:4px">#' + c.rk + '</div>' +
+          '<div style="width:32px;height:32px;border-radius:50%;background:' + col + ';display:flex;align-items:center;justify-content:center;font-family:\'JetBrains Mono\',monospace;font-size:9px;font-weight:700;color:#fff;margin:0 auto">' + c.sym.slice(0,3) + '</div>' +
         '</div>' +
+
+        // main col
         '<div style="min-width:0">' +
-          '<div style="display:flex;align-items:center;gap:8px;margin-bottom:5px;flex-wrap:wrap">' +
-            '<span style="font-size:14px;font-weight:800;letter-spacing:-.3px">' + c.name + '</span>' +
-            '<span style="font-family:\'JetBrains Mono\',monospace;font-size:9px;color:rgba(255,255,255,.3)">' + c.symbol + '</span>' +
-            '<span class="sc-badge ' + scoreBadge(c.score) + '">' + scoreLabel(c.score) + '</span>' +
+          '<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:5px">' +
+            '<span style="font-size:15px;font-weight:800;letter-spacing:-.3px">' + c.name + '</span>' +
+            '<span style="font-family:\'JetBrains Mono\',monospace;font-size:9px;color:var(--sub)">' + c.sym + '</span>' +
+            '<span class="sc-stage ' + (c.stage==='stealth'?'st-stealth':'st-pre') + '">' + (c.stage==='stealth'?'STEALTH':'PRE-BREAKOUT') + '</span>' +
           '</div>' +
-          '<div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:8px">' +
-            c.signals.map(function(s){ return '<span class="sc-tag">' + s + '</span>'; }).join('') +
+          '<div style="font-family:\'JetBrains Mono\',monospace;font-size:9px;color:rgba(255,255,255,.4);margin-bottom:8px;line-height:1.5">' + c.why + '</div>' +
+          '<div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:9px">' +
+            c.tags.map(function(t){ return '<span class="sc-tag ' + (t.cls||'') + '">' + t.t + '</span>'; }).join('') +
           '</div>' +
-          '<div style="display:flex;align-items:center;gap:8px;margin-bottom:3px">' +
-            '<span style="font-family:\'JetBrains Mono\',monospace;font-size:9px;color:rgba(255,255,255,.3);width:70px;flex-shrink:0">SIGNAL</span>' +
-            '<div class="sc-bar-track"><div class="sc-bar-fill" style="width:' + c.score + '%;background:' + scoreColor(c.score) + '"></div></div>' +
-            '<span style="font-family:\'JetBrains Mono\',monospace;font-size:9px;color:' + scoreColor(c.score) + ';width:22px;text-align:right">' + c.score + '</span>' +
+          '<div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">' +
+            '<span style="font-family:\'JetBrains Mono\',monospace;font-size:8px;color:rgba(255,255,255,.22);width:72px;flex-shrink:0">RADAR SCORE</span>' +
+            '<div class="sc-bar-track"><div class="sc-bar-fill" style="width:' + pp + '%;background:' + barColor + '"></div></div>' +
+            '<span style="font-family:\'JetBrains Mono\',monospace;font-size:8px;color:' + barColor + ';width:28px;text-align:right">' + pp + '</span>' +
           '</div>' +
           '<div style="display:flex;align-items:center;gap:8px">' +
-            '<span style="font-family:\'JetBrains Mono\',monospace;font-size:9px;color:rgba(255,255,255,.3);width:70px;flex-shrink:0">VOL/MCAP</span>' +
-            '<div class="sc-bar-track"><div class="sc-bar-fill" style="width:' + vPct + '%;background:#f5c518"></div></div>' +
-            '<span style="font-family:\'JetBrains Mono\',monospace;font-size:9px;color:#f5c518;width:22px;text-align:right">' + c.vr.toFixed(1) + 'x</span>' +
+            '<span style="font-family:\'JetBrains Mono\',monospace;font-size:8px;color:rgba(255,255,255,.22);width:72px;flex-shrink:0">VOL / MCAP</span>' +
+            '<div class="sc-bar-track"><div class="sc-bar-fill" style="width:' + vp + '%;background:#f5c518"></div></div>' +
+            '<span style="font-family:\'JetBrains Mono\',monospace;font-size:8px;color:#f5c518;width:28px;text-align:right">' + c.vr.toFixed(2) + 'x</span>' +
           '</div>' +
         '</div>' +
-        '<div style="text-align:right;min-width:88px">' +
-          '<div style="font-family:\'JetBrains Mono\',monospace;font-size:13px;font-weight:700;margin-bottom:3px">' + fmtPrice(c.price) + '</div>' +
-          '<div style="font-family:\'JetBrains Mono\',monospace;font-size:11px;font-weight:700;color:' + (pos24 ? '#00e676' : '#ff4545') + ';margin-bottom:5px">' + (pos24?'+':'') + c.ch24.toFixed(1) + '%</div>' +
-          '<div style="font-family:\'JetBrains Mono\',monospace;font-size:9px;color:rgba(255,255,255,.3)">7d: <span style="color:' + (pos7?'#00e676':'#ff4545') + '">' + (pos7?'+':'') + c.ch7.toFixed(0) + '%</span></div>' +
-          '<div style="font-family:\'JetBrains Mono\',monospace;font-size:9px;color:rgba(255,255,255,.25);margin-top:2px">' + fmtMcap(c.mcap) + '</div>' +
-          '<div style="font-family:\'JetBrains Mono\',monospace;font-size:8px;color:rgba(155,89,214,.6);margin-top:5px;letter-spacing:.05em">↗ COINGECKO</div>' +
+
+        // stats col
+        '<div style="text-align:right;min-width:90px;flex-shrink:0">' +
+          '<div style="font-family:\'JetBrains Mono\',monospace;font-size:13px;font-weight:700;margin-bottom:3px">' + fp(c.p) + '</div>' +
+          '<div style="font-family:\'JetBrains Mono\',monospace;font-size:10px;font-weight:700;margin-bottom:5px;' + ch24cls + '">' + (p4?'+':'') + c.c24.toFixed(1) + '%</div>' +
+          '<div style="font-family:\'JetBrains Mono\',monospace;font-size:9px;color:rgba(255,255,255,.28);line-height:1.8">' +
+            '7d: <span style="' + (p7?'color:#27ae60':'color:#e8392a') + '">' + (p7?'+':'') + c.c7.toFixed(0) + '%</span><br>' +
+            fm(c.mc) + ' mcap<br>Vol: ' + fm(c.vol) +
+          '</div>' +
+          '<div style="font-family:\'JetBrains Mono\',monospace;font-size:8px;color:rgba(155,89,214,.5);margin-top:7px">&#8599; CoinGecko</div>' +
         '</div>' +
+
       '</a>';
     }).join('');
+
+    el.innerHTML = html;
   }
 
   window.runScanner = function() {
-    var btn = document.getElementById('scannerBtn');
-    var pulse = document.getElementById('sc-pulse');
+    var btn    = document.getElementById('scannerBtn');
+    var pulse  = document.getElementById('sc-pulse');
     var status = document.getElementById('sc-status');
-    if (btn) { btn.disabled = true; btn.textContent = '⟳ SCANNING...'; btn.style.opacity = '.5'; }
-    if (pulse) pulse.style.background = '#f5c518';
-    if (status) status.textContent = 'Fetching market data...';
+    var el     = document.getElementById('sc-results');
 
-    var el = document.getElementById('sc-results');
-    if (el) el.innerHTML = '<div style="text-align:center;padding:60px;font-family:\'JetBrains Mono\',monospace;font-size:11px;color:rgba(255,255,255,.25)"><div style="font-size:28px;margin-bottom:10px">⚡</div>Scanning top 500 coins...</div>';
+    if(btn)    { btn.disabled = true; btn.textContent = 'Scanning...'; }
+    if(pulse)  pulse.style.background = '#f5c518';
+    if(status) status.textContent = 'Fetching 500 coins...';
+    if(el)     el.innerHTML = '<div style="text-align:center;padding:60px;font-family:\'JetBrains Mono\',monospace;font-size:11px;color:rgba(255,255,255,.25)"><div style="font-size:28px;margin-bottom:10px">&#9889;</div>Scanning for pre-breakout setups...</div>';
 
     var p1 = fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=false&price_change_percentage=7d');
     var p2 = fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=2&sparkline=false&price_change_percentage=7d');
 
-    Promise.all([p1, p2]).then(function(responses) {
-      return Promise.all(responses.map(function(r){ return r.json(); }));
-    }).then(function(pages) {
-      var raw = pages[0].concat(pages[1]);
-      if (document.getElementById('sc-count')) document.getElementById('sc-count').textContent = raw.length;
-      if (status) status.textContent = 'Analyzing signals...';
+    Promise.all([p1, p2])
+      .then(function(res){ return Promise.all(res.map(function(r){ return r.json(); })); })
+      .then(function(pages) {
+        var raw = pages[0].concat(pages[1]);
+        if(document.getElementById('sc-count')) document.getElementById('sc-count').textContent = raw.length;
+        if(status) status.textContent = 'Filtering pre-breakout setups...';
 
-      scCoins = raw.map(function(c, i){ return analyzeSignals(c, i+1); })
-        .filter(function(c){ return c.score >= 30; })
-        .sort(function(a,b){ return b.score - a.score; })
-        .slice(0, 40);
+        picks = raw
+          .map(function(c, i){ return scoreIt(c, i+1); })
+          .filter(function(c){ return c !== null; })
+          .sort(function(a, b){ return b.pts - a.pts; })
+          .slice(0, 10);
 
-      if (document.getElementById('sc-signals')) document.getElementById('sc-signals').textContent = scCoins.length;
-      if (document.getElementById('sc-time')) document.getElementById('sc-time').textContent = 'Last update: ' + new Date().toLocaleTimeString('nl-NL',{hour:'2-digit',minute:'2-digit'});
-      if (pulse) pulse.style.background = '#00e676';
-      if (status) status.textContent = 'Scan complete — top signals gevonden';
+        if(document.getElementById('sc-signals')) document.getElementById('sc-signals').textContent = picks.length;
+        if(pulse)  pulse.style.background = '#00e676';
+        if(status) status.textContent = 'Done — ' + new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
 
-      renderScanner(getFilteredCoins());
-    }).catch(function(err) {
-      if (el) el.innerHTML = '<div style="background:rgba(255,69,69,.08);border:1px solid rgba(255,69,69,.2);border-radius:6px;padding:14px 16px;font-family:\'JetBrains Mono\',monospace;font-size:11px;color:#ff9090">⚠ API rate limit — wacht 60 sec en probeer opnieuw<br><span style="font-size:9px;opacity:.7">' + err.message + '</span></div>';
-      if (pulse) pulse.style.background = '#ff4545';
-      if (status) status.textContent = 'Error';
-    }).finally(function() {
-      if (btn) { btn.disabled = false; btn.textContent = '▶ SCAN NOW'; btn.style.opacity = '1'; }
-    });
+        renderPicks(picks);
+      })
+      .catch(function(err) {
+        if(el) el.innerHTML = '<div style="background:rgba(232,57,42,.08);border:1px solid rgba(232,57,42,.2);border-radius:8px;padding:14px 16px;font-family:\'JetBrains Mono\',monospace;font-size:11px;color:#ff9090">&#9888; API rate limit — wait 60 sec and try again<br><span style="font-size:9px;opacity:.7">' + err.message + '</span></div>';
+        if(pulse)  pulse.style.background = '#e8392a';
+        if(status) status.textContent = 'Error';
+      })
+      .finally(function() {
+        if(btn) { btn.disabled = false; btn.textContent = '&#9654; SCAN NOW'; }
+      });
   };
 })();
-// ── END EARLY SIGNAL SCANNER ─────────────────────────────────────────────────
+// ── END PRE-BREAKOUT RADAR ────────────────────────────────────────────────────
+</script>
+
+</body>
+</html>
 </script>
 
 </body>
