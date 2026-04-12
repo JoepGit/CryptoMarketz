@@ -260,12 +260,12 @@ function renderTable(trades) {
   });
 
   var html = '<table><thead><tr>'+
-    '<th data-col="name" onclick="sortTrades('name')">Member</th>'+
-    '<th data-col="ticker" onclick="sortTrades('ticker')">Ticker</th>'+
-    '<th data-col="type" onclick="sortTrades('type')">Type</th>'+
-    '<th data-col="amount" onclick="sortTrades('amount')">Amount</th>'+
-    '<th data-col="date" onclick="sortTrades('date')">Disclosed</th>'+
-    '<th data-col="traded" onclick="sortTrades('traded')">Traded</th>'+
+    '<th data-col="name" onclick="sortTrades(&quot;name&quot;)">Member</th>'+
+    '<th data-col="ticker" onclick="sortTrades(&quot;ticker&quot;)">Ticker</th>'+
+    '<th data-col="type" onclick="sortTrades(&quot;type&quot;)">Type</th>'+
+    '<th data-col="amount" onclick="sortTrades(&quot;amount&quot;)">Amount</th>'+
+    '<th data-col="date" onclick="sortTrades(&quot;date&quot;)">Disclosed</th>'+
+    '<th data-col="traded" onclick="sortTrades(&quot;traded&quot;)">Traded</th>'+
   '</tr></thead><tbody>';
 
   sorted.forEach(function(t, i){
