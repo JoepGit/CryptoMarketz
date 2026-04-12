@@ -161,7 +161,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
     </div>
   </div>
   <div class="hero-right">
-    <button class="btn-outline" id="aiBtn" onclick="runAI()">&#10024; AI Market Take</button>
+    <button class="btn-outline" id="aiBtn" onclick="loadBrief()">&#10024; Daily Brief</button>
   </div>
 </div>
 
@@ -392,60 +392,49 @@ function renderGrid(markets){
   }).join('');
 }
 
-// ── AI MARKET TAKE ──
-async function runAI(){
+// ── DAILY BRIEF ──
+async function loadBrief(){
   var btn=document.getElementById('aiBtn');
   var box=document.getElementById('aiBox');
   var body=document.getElementById('aiBody');
   var timeEl=document.getElementById('aiTime');
-
-  if(!allMarkets.length){alert('Load markets first');return;}
-
-  btn.disabled=true; btn.textContent='Analysing...';
+  btn.disabled=true; btn.textContent='Loading...';
   box.classList.add('on');
-  body.innerHTML='<div class="ai-loading"><div class="ai-spin"></div>Claude is analysing the top movers...</div>';
-
-  // Build context for Claude
-  var movers=allMarkets
-    .filter(function(m){return Math.abs(m._change)>1;})
-    .sort(function(a,b){return Math.abs(b._change)-Math.abs(a._change);})
-    .slice(0,10);
-
-  var topVol=allMarkets
-    .sort(function(a,b){return parseFloat(b.volume24hr||0)-parseFloat(a.volume24hr||0);})
-    .slice(0,5);
-
-  var context='Today\'s top Polymarket movers (24h price change):\n'+
-    movers.map(function(m){return '- '+m.question+' | Now: '+m._prob+'% | Change: '+(m._change>0?'+':'')+m._change.toFixed(1)+'% | Vol: '+fmtVol(m.volume24hr);}).join('\n')+
-    '\n\nTop markets by volume today:\n'+
-    topVol.map(function(m){return '- '+m.question+' | '+m._prob+'% | Vol: '+fmtVol(m.volume24hr);}).join('\n');
-
-  var prompt='You are a sharp prediction market analyst for ZIMR Capital crypto trading platform. Analyse these Polymarket markets and give a brief, punchy take (3-4 short paragraphs). Focus on: what is the market telling us today, any interesting signals or potential mispricings, and what traders should watch. Keep it direct and insightful. No bullet points, just clean prose. End with one clear actionable observation.\n\n'+context;
-
+  body.innerHTML='<div class="ai-loading"><div class="ai-spin"></div>Loading daily brief...</div>';
   try {
-    var resp=await fetch('https://api.anthropic.com/v1/messages',{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({
-        model:'claude-sonnet-4-20250514',
-        max_tokens:1000,
-        messages:[{role:'user',content:prompt}]
-      })
-    });
-    var data=await resp.json();
-    var text=data.content&&data.content[0]?data.content[0].text:'No response';
+    var r=await fetch('https://raw.githubusercontent.com/SevillaWZRD/zimr-proxy/main/data/polymarket-brief.json?'+Date.now());
+    if(!r.ok) throw new Error('Brief not available yet');
+    var data=await r.json();
+    var html=data.brief.split('
 
-    // Format paragraphs
-    var html=text.split('\n\n').filter(function(p){return p.trim();})
-      .map(function(p){return '<p>'+p.trim()+'</p>';}).join('');
-
+').filter(function(p){return p.trim();})
+      .map(function(p){return '<p>'+p.trim().replace(/
+/g,'<br>')+'</p>';}).join('');
     body.innerHTML=html;
-    timeEl.textContent='Updated '+new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
+    timeEl.textContent=data.date+' — updated at 09:00';
   } catch(e){
-    body.innerHTML='<p style="color:var(--red)">Analysis failed: '+e.message+'</p>';
+    body.innerHTML='<p style="color:var(--sub)">No brief available yet — generated daily at 09:00 Amsterdam time. <a href="#" onclick="runManual()" style="color:var(--accent)">Run now?</a></p>';
+    timeEl.textContent='Not yet generated today';
   }
+  btn.disabled=false; btn.textContent='&#10024; Daily Brief';
+}
 
-  btn.disabled=false; btn.textContent='&#10024; AI Market Take';
+async function runManual(){
+  // Fallback: show top movers as a simple summary
+  var box=document.getElementById('aiBox');
+  var body=document.getElementById('aiBody');
+  box.classList.add('on');
+  if(!allMarkets.length){body.innerHTML='<p>Load markets first</p>';return;}
+  var movers=allMarkets.filter(function(m){return Math.abs(m._change)>=3;})
+    .sort(function(a,b){return Math.abs(b._change)-Math.abs(a._change);}).slice(0,5);
+  if(!movers.length){body.innerHTML='<p style="color:var(--sub)">No significant movers today — markets are calm.</p>';return;}
+  var html='<p><strong>Top movers today:</strong></p>'+
+    movers.map(function(m){
+      var dir=m._change>0?'&#128200; up':'&#128201; down';
+      return '<p>'+dir+' <strong>'+Math.abs(m._change).toFixed(1)+'%</strong> — '+m.question+' now at <strong>'+m._prob+'%</strong></p>';
+    }).join('');
+  body.innerHTML=html;
+  document.getElementById('aiTime').textContent='Live data — '+new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
 }
 
 async function load(){
