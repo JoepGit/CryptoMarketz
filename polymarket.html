@@ -10,7 +10,6 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--cream);min-height:100vh;-webkit-font-smoothing:antialiased}
 
-/* TOPBAR */
 .topbar{display:flex;align-items:center;justify-content:space-between;padding:0 28px;height:56px;background:linear-gradient(180deg,#151515,#111111);border-bottom:1px solid var(--bdr);position:sticky;top:0;z-index:50;gap:12px}
 .tb-left{display:flex;align-items:center;gap:14px}
 .tb-back{display:flex;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.06em;color:var(--sub);text-decoration:none;padding:6px 12px;border:1px solid var(--bdr);border-radius:5px;transition:all .15s;background:rgba(255,255,255,.03)}
@@ -22,83 +21,112 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 .tb-pill{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--sub);background:rgba(255,255,255,.04);border:1px solid var(--bdr);padding:4px 11px;border-radius:20px}
 .tb-pill em{color:var(--accent);font-style:normal}
 .tb-dot{width:7px;height:7px;border-radius:50%;background:var(--grn);animation:pulse 1.5s ease-in-out infinite}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.65)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 .btn{background:var(--accent);color:#fff;font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;border:none;padding:8px 18px;border-radius:6px;cursor:pointer;letter-spacing:.08em;transition:opacity .15s}
 .btn:hover{opacity:.85}
 .btn:disabled{opacity:.35;cursor:not-allowed}
+.btn-outline{background:transparent;color:var(--accent);border:1px solid rgba(155,89,214,.4);font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;padding:8px 18px;border-radius:6px;cursor:pointer;letter-spacing:.08em;transition:all .15s}
+.btn-outline:hover{background:rgba(155,89,214,.1)}
+.btn-outline:disabled{opacity:.35;cursor:not-allowed}
 
 /* HERO */
-.hero{padding:22px 28px 16px;border-bottom:1px solid var(--bdr)}
+.hero{padding:20px 28px 16px;border-bottom:1px solid var(--bdr);display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.hero-left{}
 .hero-k{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.14em;color:rgba(155,89,214,.65);text-transform:uppercase;margin-bottom:6px}
 .hero-t{font-size:22px;font-weight:800;letter-spacing:-.4px;margin-bottom:12px}
 .hero-t span{color:var(--accent)}
-.filters{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.filters{display:flex;gap:6px;flex-wrap:wrap}
 .f-btn{font-family:'JetBrains Mono',monospace;font-size:9px;padding:6px 13px;border-radius:5px;border:1px solid var(--bdr);background:rgba(255,255,255,.04);color:var(--sub);cursor:pointer;letter-spacing:.06em;transition:all .15s}
 .f-btn:hover,.f-btn.on{border-color:rgba(155,89,214,.4);color:var(--accent);background:rgba(155,89,214,.1)}
+.hero-right{display:flex;gap:8px;align-items:center;flex-shrink:0}
 
-/* STATS BAR */
-.stats{display:flex;gap:0;border-bottom:1px solid var(--bdr)}
-.stat-box{flex:1;padding:12px 20px;border-right:1px solid var(--bdr);text-align:center}
-.stat-box:last-child{border-right:none}
-.stat-num{font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;margin-bottom:2px}
-.stat-lbl{font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--sub);letter-spacing:.08em;text-transform:uppercase}
+/* AI SUMMARY BOX */
+.ai-box{margin:16px 28px;background:linear-gradient(135deg,rgba(155,89,214,.08),rgba(59,130,246,.05));border:1px solid rgba(155,89,214,.2);border-radius:12px;padding:18px 20px;display:none}
+.ai-box.on{display:block}
+.ai-header{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.ai-icon{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,#9b59d6,#3b82f6);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.ai-title{font-size:13px;font-weight:700;color:var(--cream)}
+.ai-sub{font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--sub);margin-top:1px}
+.ai-body{font-size:13px;line-height:1.7;color:rgba(255,255,255,.75)}
+.ai-body p{margin-bottom:8px}
+.ai-body p:last-child{margin-bottom:0}
+.ai-loading{display:flex;align-items:center;gap:10px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--sub)}
+.ai-spin{width:14px;height:14px;border:2px solid rgba(155,89,214,.2);border-top-color:var(--accent);border-radius:50%;animation:spin .7s linear infinite;flex-shrink:0}
+@keyframes spin{to{transform:rotate(360deg)}}
 
-/* GRID */
-.grid{padding:18px 28px 60px;display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:12px}
+/* OPPORTUNITY ALERTS */
+.section{padding:16px 28px 0}
+.sec-hdr{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.12em;color:rgba(155,89,214,.5);text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.sec-hdr::after{content:'';flex:1;height:1px;background:var(--bdr)}
 
-/* MARKET CARD */
-.mcard{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:16px;cursor:pointer;text-decoration:none;color:inherit;transition:border-color .15s,background .12s,transform .1s;animation:fadeIn .3s ease both;display:flex;flex-direction:column;gap:10px;position:relative;overflow:hidden}
-.mcard:hover{border-color:rgba(155,89,214,.35);background:#141414;transform:translateY(-1px)}
-@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+/* Alert cards */
+.alerts{display:flex;flex-direction:column;gap:8px;margin-bottom:4px}
+.alert-card{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:14px 16px;display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;text-decoration:none;color:inherit;transition:all .15s;animation:fadeIn .3s ease both}
+.alert-card:hover{border-color:rgba(155,89,214,.3);background:#141414}
+@keyframes fadeIn{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+
+/* Alert icon */
+.al-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.al-up{background:rgba(39,174,96,.1);border:1px solid rgba(39,174,96,.2)}
+.al-dn{background:rgba(232,57,42,.08);border:1px solid rgba(232,57,42,.2)}
+.al-vol{background:rgba(249,115,22,.08);border:1px solid rgba(249,115,22,.2)}
+.al-mis{background:rgba(155,89,214,.08);border:1px solid rgba(155,89,214,.2)}
+
+/* Alert main */
+.al-main{}
+.al-type{font-family:'JetBrains Mono',monospace;font-size:8px;font-weight:700;letter-spacing:.08em;margin-bottom:4px}
+.al-type.up{color:var(--grn)}
+.al-type.dn{color:var(--red)}
+.al-type.vol{color:var(--orange)}
+.al-type.mis{color:var(--accent)}
+.al-q{font-size:13px;font-weight:700;line-height:1.3;margin-bottom:5px;color:var(--cream)}
+.al-why{font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,.38);line-height:1.4}
+
+/* Alert stat */
+.al-stat{text-align:right;flex-shrink:0;min-width:80px}
+.al-prob{font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:800;margin-bottom:3px}
+.al-change{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;display:inline-block}
+.al-change.up{background:rgba(39,174,96,.12);color:var(--grn)}
+.al-change.dn{background:rgba(232,57,42,.1);color:var(--red)}
+.al-vol-num{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--sub);margin-top:4px}
+
+/* MARKET GRID */
+.grid{padding:16px 28px 60px;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:10px}
+.mcard{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:14px;cursor:pointer;text-decoration:none;color:inherit;transition:all .15s;animation:fadeIn .3s ease both;display:flex;flex-direction:column;gap:9px;position:relative;overflow:hidden}
+.mcard:hover{border-color:rgba(155,89,214,.3);background:#141414;transform:translateY(-1px)}
 .mcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
 .mcard.crypto::before{background:linear-gradient(90deg,#f97316,#f5c518)}
 .mcard.politics::before{background:linear-gradient(90deg,#3b82f6,#8b5cf6)}
 .mcard.sports::before{background:linear-gradient(90deg,#27ae60,#06b6d4)}
 .mcard.other::before{background:linear-gradient(90deg,#9b59d6,#3b82f6)}
-
-/* Card header */
-.mc-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
-.mc-cat{font-family:'JetBrains Mono',monospace;font-size:7px;font-weight:700;letter-spacing:.1em;padding:2px 7px;border-radius:3px;text-transform:uppercase;flex-shrink:0}
+.mc-top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.mc-cat{font-family:'JetBrains Mono',monospace;font-size:7px;font-weight:700;letter-spacing:.1em;padding:2px 7px;border-radius:3px;text-transform:uppercase}
 .cat-crypto{background:rgba(249,115,22,.12);color:#f97316;border:1px solid rgba(249,115,22,.25)}
 .cat-politics{background:rgba(59,130,246,.1);color:#60a5fa;border:1px solid rgba(59,130,246,.2)}
 .cat-sports{background:rgba(39,174,96,.1);color:#27ae60;border:1px solid rgba(39,174,96,.2)}
 .cat-other{background:rgba(155,89,214,.1);color:var(--accent);border:1px solid rgba(155,89,214,.2)}
-
-/* Question */
-.mc-q{font-size:14px;font-weight:700;line-height:1.4;color:var(--cream)}
-
-/* Probability bar */
+.mc-chg{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;padding:2px 7px;border-radius:4px}
+.chg-up{background:rgba(39,174,96,.1);color:var(--grn)}
+.chg-dn{background:rgba(232,57,42,.08);color:var(--red)}
+.chg-flat{background:rgba(255,255,255,.04);color:var(--sub)}
+.mc-q{font-size:13px;font-weight:700;line-height:1.35;color:var(--cream)}
 .prob-row{display:flex;align-items:center;gap:10px}
-.prob-yes{font-family:'JetBrains Mono',monospace;font-size:22px;font-weight:800;flex-shrink:0}
-.prob-bar-wrap{flex:1}
-.prob-bar-track{width:100%;height:6px;background:rgba(255,255,255,.06);border-radius:3px;overflow:hidden;margin-bottom:4px}
-.prob-bar-yes{height:100%;border-radius:3px;transition:width .6s ease}
-.prob-labels{display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:8px;color:rgba(255,255,255,.3)}
+.prob-pct{font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:800;flex-shrink:0}
+.prob-bars{flex:1}
+.prob-track{width:100%;height:5px;background:rgba(255,255,255,.06);border-radius:3px;overflow:hidden;margin-bottom:3px}
+.prob-fill{height:100%;border-radius:3px}
+.prob-lbl{display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:8px;color:rgba(255,255,255,.25)}
+.mc-meta{display:flex;gap:10px;flex-wrap:wrap}
+.mc-mi{font-family:'JetBrains Mono',monospace;font-size:8px;color:rgba(255,255,255,.28)}
+.mc-mi em{color:rgba(255,255,255,.55);font-style:normal}
+.mc-cg{font-family:'JetBrains Mono',monospace;font-size:8px;color:rgba(155,89,214,.4)}
 
-/* Change badge */
-.change-badge{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;padding:3px 8px;border-radius:4px;flex-shrink:0}
-.ch-up{background:rgba(39,174,96,.12);color:#27ae60;border:1px solid rgba(39,174,96,.25)}
-.ch-dn{background:rgba(232,57,42,.1);color:#e8392a;border:1px solid rgba(232,57,42,.2)}
-.ch-flat{background:rgba(255,255,255,.05);color:var(--sub);border:1px solid var(--bdr)}
-
-/* Volume row */
-.mc-meta{display:flex;gap:12px;flex-wrap:wrap}
-.mc-meta-item{font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,.3);display:flex;align-items:center;gap:4px}
-.mc-meta-item em{color:rgba(255,255,255,.6);font-style:normal}
-.mc-link{font-family:'JetBrains Mono',monospace;font-size:8px;color:rgba(155,89,214,.45);margin-top:2px}
-
-/* HOT badge */
-.hot-badge{font-family:'JetBrains Mono',monospace;font-size:7px;font-weight:700;padding:2px 6px;border-radius:3px;background:rgba(249,115,22,.15);color:#f97316;border:1px solid rgba(249,115,22,.3);letter-spacing:.06em}
-
-/* PLACEHOLDER */
-.placeholder{text-align:center;padding:60px 20px;font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,.2);grid-column:1/-1}
-.placeholder .ico{font-size:32px;display:block;margin-bottom:12px}
-.ld-bar{width:160px;height:2px;background:var(--bdr);border-radius:2px;margin:14px auto 0;overflow:hidden}
+.placeholder{text-align:center;padding:50px 20px;font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,.2);grid-column:1/-1}
+.ld-bar{width:140px;height:2px;background:var(--bdr);border-radius:2px;margin:12px auto 0;overflow:hidden}
 .ld-fill{height:100%;background:var(--accent);border-radius:2px;animation:lda 1.3s ease-in-out infinite}
 @keyframes lda{0%{width:0;margin-left:0}50%{width:100%;margin-left:0}100%{width:0;margin-left:100%}}
-.err{background:rgba(232,57,42,.07);border:1px solid rgba(232,57,42,.18);border-radius:8px;padding:14px;font-family:'JetBrains Mono',monospace;font-size:11px;color:#ff9999;line-height:1.7;grid-column:1/-1}
 
-@media(max-width:600px){.topbar,.hero,.grid{padding-left:14px;padding-right:14px}.grid{grid-template-columns:1fr}}
+@media(max-width:600px){.topbar,.hero,.section,.grid,.ai-box{padding-left:14px;padding-right:14px}.grid{grid-template-columns:1fr}.alert-card{grid-template-columns:auto 1fr}}
 </style>
 </head>
 <body>
@@ -119,30 +147,52 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 </div>
 
 <div class="hero">
-  <div class="hero-k">ZIMR Capital &middot; Intelligence</div>
-  <h1 class="hero-t">Polymarket <span>Intelligence</span></h1>
-  <div class="filters">
-    <button class="f-btn on" onclick="sf('all',this)">ALL</button>
-    <button class="f-btn" onclick="sf('crypto',this)">CRYPTO</button>
-    <button class="f-btn" onclick="sf('politics',this)">POLITICS</button>
-    <button class="f-btn" onclick="sf('sports',this)">SPORTS</button>
-    <button class="f-btn" onclick="sf('movers',this)">BIG MOVERS</button>
-    <button class="f-btn" onclick="sf('high',this)">HIGH PROB &gt;70%</button>
-    <button class="f-btn" onclick="sf('low',this)">LOW PROB &lt;30%</button>
+  <div class="hero-left">
+    <div class="hero-k">ZIMR Capital &middot; Intelligence</div>
+    <h1 class="hero-t">Polymarket <span>Intelligence</span></h1>
+    <div class="filters">
+      <button class="f-btn on" onclick="sf('all',this)">ALL</button>
+      <button class="f-btn" onclick="sf('crypto',this)">CRYPTO</button>
+      <button class="f-btn" onclick="sf('politics',this)">POLITICS</button>
+      <button class="f-btn" onclick="sf('sports',this)">SPORTS</button>
+      <button class="f-btn" onclick="sf('movers',this)">BIG MOVERS</button>
+      <button class="f-btn" onclick="sf('high',this)">HIGH PROB &gt;70%</button>
+      <button class="f-btn" onclick="sf('low',this)">LOW PROB &lt;30%</button>
+    </div>
+  </div>
+  <div class="hero-right">
+    <button class="btn-outline" id="aiBtn" onclick="runAI()">&#10024; AI Market Take</button>
   </div>
 </div>
 
-<div class="stats" id="statsRow" style="display:none">
-  <div class="stat-box"><div class="stat-num" style="color:var(--accent)" id="st-total">0</div><div class="stat-lbl">Active Markets</div></div>
-  <div class="stat-box"><div class="stat-num" style="color:#f97316" id="st-vol">$0</div><div class="stat-lbl">Total Volume</div></div>
-  <div class="stat-box"><div class="stat-num" style="color:var(--grn)" id="st-up">0</div><div class="stat-lbl">Moving Up</div></div>
-  <div class="stat-box"><div class="stat-num" style="color:var(--red)" id="st-dn">0</div><div class="stat-lbl">Moving Down</div></div>
+<!-- AI SUMMARY -->
+<div class="ai-box" id="aiBox">
+  <div class="ai-header">
+    <div class="ai-icon">&#129302;</div>
+    <div>
+      <div class="ai-title">AI Market Analysis</div>
+      <div class="ai-sub" id="aiTime">&#8212;</div>
+    </div>
+  </div>
+  <div class="ai-body" id="aiBody">
+    <div class="ai-loading"><div class="ai-spin"></div>Analysing top movers...</div>
+  </div>
 </div>
 
+<!-- OPPORTUNITY ALERTS -->
+<div class="section" id="alertsSection" style="display:none">
+  <div class="sec-hdr">&#9889; Opportunity Alerts</div>
+  <div class="alerts" id="alerts"></div>
+</div>
+
+<!-- ALL MARKETS -->
+<div class="section" style="margin-top:16px">
+  <div class="sec-hdr" id="marketsHdr">All Markets</div>
+</div>
 <div class="grid" id="grid">
   <div class="placeholder">
-    <span class="ico">&#127919;</span>
-    <p>Loading Polymarket data...<br><span style="font-size:9px;opacity:.4">Prediction markets &middot; Real money &middot; Live odds</span></p>
+    <span style="font-size:32px;display:block;margin-bottom:12px">&#127919;</span>
+    Loading Polymarket data...
     <div class="ld-bar"><div class="ld-fill"></div></div>
   </div>
 </div>
@@ -150,170 +200,289 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 <script>
 var allMarkets = [], activeFilter = 'all';
 
-function fmtVol(v) {
-  if(!v) return '$0';
-  v = parseFloat(v);
-  if(v >= 1e6) return '$' + (v/1e6).toFixed(1) + 'M';
-  if(v >= 1e3) return '$' + (v/1e3).toFixed(0) + 'K';
-  return '$' + Math.round(v);
+function fmtVol(v){
+  v=parseFloat(v||0);
+  if(v>=1e6) return '$'+(v/1e6).toFixed(1)+'M';
+  if(v>=1e3) return '$'+(v/1e3).toFixed(0)+'K';
+  return '$'+Math.round(v);
 }
 
-function fmtProb(p) {
-  if(!p) return 0;
-  var v = parseFloat(p);
-  if(v > 1) return Math.round(v);
-  return Math.round(v * 100);
-}
-
-function getCategory(market) {
-  var tags = (market.tags || []).map(function(t){ return (t.label||t.slug||'').toLowerCase(); });
-  var q = (market.question || '').toLowerCase();
-  if(tags.some(function(t){ return t.includes('crypto')||t.includes('bitcoin')||t.includes('eth')||t.includes('solana')||t.includes('defi'); }) ||
-     q.includes('btc')||q.includes('bitcoin')||q.includes('ethereum')||q.includes('crypto')||q.includes('sol ')||q.includes('price')) return 'crypto';
-  if(tags.some(function(t){ return t.includes('polit')||t.includes('election')||t.includes('govern')||t.includes('trump')||t.includes('president'); }) ||
-     q.includes('election')||q.includes('president')||q.includes('congress')||q.includes('senate')||q.includes('trump')||q.includes('biden')) return 'politics';
-  if(tags.some(function(t){ return t.includes('sport')||t.includes('nba')||t.includes('nfl')||t.includes('soccer')||t.includes('tennis'); }) ||
-     q.includes('championship')||q.includes('world cup')||q.includes('nba')||q.includes('nfl')||q.includes('match')) return 'sports';
+function getCategory(m){
+  var tags=(m.tags||[]).map(function(t){return(t.label||t.slug||'').toLowerCase();});
+  var q=(m.question||'').toLowerCase();
+  if(tags.some(function(t){return t.includes('crypto')||t.includes('bitcoin')||t.includes('defi')||t.includes('token');})
+     ||q.match(/btc|bitcoin|ethereum|eth |crypto|solana|sol |price target|binance/)) return 'crypto';
+  if(tags.some(function(t){return t.includes('polit')||t.includes('elect')||t.includes('govern');})
+     ||q.match(/election|president|congress|senate|trump|biden|minister|vote|war|nato|sanctions/)) return 'politics';
+  if(tags.some(function(t){return t.includes('sport')||t.includes('nba')||t.includes('nfl')||t.includes('soccer')||t.includes('tennis')||t.includes('fifa');})
+     ||q.match(/championship|world cup|nba|nfl|match|tournament|league|win the/)) return 'sports';
   return 'other';
 }
 
-function catLabel(cat) {
-  return {crypto:'CRYPTO',politics:'POLITICS',sports:'SPORTS',other:'OTHER'}[cat]||'OTHER';
-}
-function catClass(cat) {
-  return 'cat-'+cat;
+function getProb(m){
+  try {
+    var p = typeof m.outcomePrices==='string' ? JSON.parse(m.outcomePrices) : m.outcomePrices;
+    if(p&&p.length) return Math.round(parseFloat(p[0])*100);
+  } catch(e){}
+  if(m.lastTradePrice) return Math.round(parseFloat(m.lastTradePrice)*100);
+  return 50;
 }
 
-function sf(f, btn) {
-  activeFilter = f;
-  document.querySelectorAll('.f-btn').forEach(function(b){ b.classList.remove('on'); });
+function getChange(m){
+  if(m.oneDayPriceChange) return parseFloat(m.oneDayPriceChange)*100;
+  if(m.price24hChange) return parseFloat(m.price24hChange)*100;
+  return 0;
+}
+
+function sf(f,btn){
+  activeFilter=f;
+  document.querySelectorAll('.f-btn').forEach(function(b){b.classList.remove('on');});
   btn.classList.add('on');
-  render(filtered());
+  var list=filtered();
+  document.getElementById('marketsHdr').textContent=list.length+' Markets';
+  renderGrid(list);
 }
 
-function filtered() {
-  return allMarkets.filter(function(m) {
-    if(activeFilter === 'all') return true;
-    if(activeFilter === 'crypto') return m._cat === 'crypto';
-    if(activeFilter === 'politics') return m._cat === 'politics';
-    if(activeFilter === 'sports') return m._cat === 'sports';
-    if(activeFilter === 'movers') return Math.abs(m._change) >= 5;
-    if(activeFilter === 'high') return m._prob >= 70;
-    if(activeFilter === 'low') return m._prob <= 30;
+function filtered(){
+  return allMarkets.filter(function(m){
+    if(activeFilter==='all') return true;
+    if(activeFilter==='crypto') return m._cat==='crypto';
+    if(activeFilter==='politics') return m._cat==='politics';
+    if(activeFilter==='sports') return m._cat==='sports';
+    if(activeFilter==='movers') return Math.abs(m._change)>=5;
+    if(activeFilter==='high') return m._prob>=70;
+    if(activeFilter==='low') return m._prob<=30;
     return true;
   });
 }
 
-function render(markets) {
-  var grid = document.getElementById('grid');
-  if(!markets.length) {
-    grid.innerHTML = '<div class="placeholder"><span class="ico">&#128269;</span><p>No markets match this filter</p></div>';
-    return;
-  }
+// ── OPPORTUNITY ALERTS ──
+function buildAlerts(markets){
+  var alerts=[];
 
-  var html = markets.map(function(m, i) {
-    var prob = m._prob;
-    var cat = m._cat;
-    var vol24 = fmtVol(m.volume24hr || m.volume);
-    var volTotal = fmtVol(m.volumeNum || m.volume);
-    var change = m._change;
-    var chClass = change > 2 ? 'ch-up' : change < -2 ? 'ch-dn' : 'ch-flat';
-    var chText = change > 0 ? '+' + change.toFixed(1) + '%' : change.toFixed(1) + '%';
-    var barColor = prob > 60 ? '#27ae60' : prob > 40 ? '#f5c518' : '#e8392a';
-    var url = 'https://polymarket.com/event/' + (m.slug || m.conditionId || '');
-    var isHot = parseFloat(m.volume24hr||0) > 100000;
-
-    return '<a class="mcard ' + cat + '" href="' + url + '" target="_blank" rel="noopener" style="animation-delay:' + (i*0.04) + 's">' +
-      '<div class="mc-head">' +
-        '<span class="mc-cat ' + catClass(cat) + '">' + catLabel(cat) + '</span>' +
-        (isHot ? '<span class="hot-badge">&#128293; HOT</span>' : '') +
-        '<span class="change-badge ' + chClass + '">' + chText + '</span>' +
-      '</div>' +
-      '<div class="mc-q">' + (m.question || '') + '</div>' +
-      '<div class="prob-row">' +
-        '<div class="prob-yes" style="color:' + barColor + '">' + prob + '%</div>' +
-        '<div class="prob-bar-wrap">' +
-          '<div class="prob-bar-track"><div class="prob-bar-yes" style="width:' + prob + '%;background:' + barColor + '"></div></div>' +
-          '<div class="prob-labels"><span>YES</span><span>NO ' + (100-prob) + '%</span></div>' +
-        '</div>' +
-      '</div>' +
-      '<div class="mc-meta">' +
-        '<div class="mc-meta-item">Vol 24h: <em>' + vol24 + '</em></div>' +
-        '<div class="mc-meta-item">Total: <em>' + volTotal + '</em></div>' +
-        (m.endDate ? '<div class="mc-meta-item">Ends: <em>' + new Date(m.endDate).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}) + '</em></div>' : '') +
-      '</div>' +
-      '<div class="mc-link">&#8599; polymarket.com</div>' +
-    '</a>';
-  }).join('');
-
-  grid.innerHTML = html;
-}
-
-function updateStats(markets) {
-  var totalVol = markets.reduce(function(s,m){ return s + parseFloat(m.volume||0); }, 0);
-  var up = markets.filter(function(m){ return m._change > 2; }).length;
-  var dn = markets.filter(function(m){ return m._change < -2; }).length;
-  document.getElementById('st-total').textContent = markets.length;
-  document.getElementById('st-vol').textContent = fmtVol(totalVol);
-  document.getElementById('st-up').textContent = up;
-  document.getElementById('st-dn').textContent = dn;
-  document.getElementById('statsRow').style.display = 'flex';
-  document.getElementById('tbCount').textContent = markets.length;
-}
-
-async function load() {
-  var dot = document.getElementById('tbDot');
-  var grid = document.getElementById('grid');
-  dot.style.background = '#f5c518';
-  document.getElementById('statsRow').style.display = 'none';
-  grid.innerHTML = '<div class="placeholder"><span class="ico">&#9889;</span><p>Fetching Polymarket data...</p><div class="ld-bar"><div class="ld-fill"></div></div></div>';
-
-  try {
-    // Fetch top markets by volume
-    var url = 'https://zimr-proxy.vercel.app/api/polymarket';
-    var r = await fetch(url);
-    if(!r.ok) throw new Error('HTTP ' + r.status);
-    var data = await r.json();
-
-    var markets = Array.isArray(data) ? data : (data.markets || data.data || []);
-    if(!markets.length) throw new Error('No markets returned');
-
-    // Process markets
-    allMarkets = markets.map(function(m) {
-      // Get YES probability
-      var prob = 50;
-      try {
-        var prices = typeof m.outcomePrices === 'string' ? JSON.parse(m.outcomePrices) : m.outcomePrices;
-        if(prices && prices.length) prob = Math.round(parseFloat(prices[0]) * 100);
-      } catch(e) {
-        if(m.lastTradePrice) prob = Math.round(parseFloat(m.lastTradePrice) * 100);
-      }
-
-      // Get 24h change
-      var change = 0;
-      if(m.oneDayPriceChange) change = parseFloat(m.oneDayPriceChange) * 100;
-      else if(m.price24hChange) change = parseFloat(m.price24hChange) * 100;
-
-      m._prob = Math.max(1, Math.min(99, prob));
-      m._change = parseFloat(change.toFixed(1));
-      m._cat = getCategory(m);
-      return m;
+  // Big movers up (>5% in 24h)
+  markets.filter(function(m){return m._change>=5;})
+    .sort(function(a,b){return b._change-a._change;})
+    .slice(0,2).forEach(function(m){
+      alerts.push({
+        type:'up', icon:'&#128200;',
+        typeLabel:'SURGING UP',
+        iconClass:'al-up',
+        q:m.question,
+        why:'Up '+m._change.toFixed(1)+'% today — strong buying pressure, possible news catalyst',
+        prob:m._prob,
+        change:'+'+m._change.toFixed(1)+'%',
+        vol:fmtVol(m.volume24hr),
+        url:'https://polymarket.com/event/'+(m.slug||'')
+      });
     });
 
-    // Sort by volume24hr desc
-    allMarkets.sort(function(a,b){ return parseFloat(b.volume24hr||0) - parseFloat(a.volume24hr||0); });
+  // Big movers down (>5% drop)
+  markets.filter(function(m){return m._change<=-5;})
+    .sort(function(a,b){return a._change-b._change;})
+    .slice(0,2).forEach(function(m){
+      alerts.push({
+        type:'dn', icon:'&#128201;',
+        typeLabel:'DROPPING FAST',
+        iconClass:'al-dn',
+        q:m.question,
+        why:'Down '+Math.abs(m._change).toFixed(1)+'% today — market repricing, sellers in control',
+        prob:m._prob,
+        change:m._change.toFixed(1)+'%',
+        vol:fmtVol(m.volume24hr),
+        url:'https://polymarket.com/event/'+(m.slug||'')
+      });
+    });
 
-    updateStats(allMarkets);
-    render(filtered());
-    dot.style.background = '#00e676';
+  // Volume spikes — high 24h vol relative to total
+  markets.filter(function(m){
+    var r=parseFloat(m.volume24hr||0)/Math.max(parseFloat(m.volume||1),1);
+    return r>0.15 && Math.abs(m._change)<3;
+  }).sort(function(a,b){return parseFloat(b.volume24hr||0)-parseFloat(a.volume24hr||0);})
+    .slice(0,2).forEach(function(m){
+      alerts.push({
+        type:'vol', icon:'&#128293;',
+        typeLabel:'VOLUME SPIKE',
+        iconClass:'al-vol',
+        q:m.question,
+        why:'Huge volume but price barely moved — smart money accumulating quietly',
+        prob:m._prob,
+        change:'flat',
+        vol:fmtVol(m.volume24hr),
+        url:'https://polymarket.com/event/'+(m.slug||'')
+      });
+    });
 
-  } catch(e) {
-    grid.innerHTML = '<div class="err">&#9888; ' + e.message + '<br><span style="font-size:9px;opacity:.6">Polymarket API may be temporarily unavailable</span></div>';
-    dot.style.background = '#e8392a';
+  // Potential mispricing — extreme probability (<5% or >95%) with high volume
+  markets.filter(function(m){
+    return (m._prob<=5||m._prob>=95) && parseFloat(m.volume24hr||0)>50000;
+  }).slice(0,1).forEach(function(m){
+    var side = m._prob<=5 ? 'near zero' : 'near certain';
+    alerts.push({
+      type:'mis', icon:'&#129300;',
+      typeLabel:'POSSIBLE MISPRICING',
+      iconClass:'al-mis',
+      q:m.question,
+      why:'Market at '+m._prob+'% ('+side+') with high volume — is the market right? High risk/reward',
+      prob:m._prob,
+      change:(m._change>0?'+':'')+m._change.toFixed(1)+'%',
+      vol:fmtVol(m.volume24hr),
+      url:'https://polymarket.com/event/'+(m.slug||'')
+    });
+  });
+
+  return alerts.slice(0,6);
+}
+
+function renderAlerts(alerts){
+  var sec=document.getElementById('alertsSection');
+  var el=document.getElementById('alerts');
+  if(!alerts.length){sec.style.display='none';return;}
+  sec.style.display='block';
+  el.innerHTML=alerts.map(function(a,i){
+    var probColor=a.prob>60?'var(--grn)':a.prob>40?'var(--yel)':'var(--red)';
+    var chClass=a.type==='up'?'up':a.type==='dn'?'dn':'flat';
+    return '<a class="alert-card" href="'+a.url+'" target="_blank" rel="noopener" style="animation-delay:'+(i*0.06)+'s">'+
+      '<div class="al-icon '+a.iconClass+'">'+a.icon+'</div>'+
+      '<div class="al-main">'+
+        '<div class="al-type '+a.type+'">'+a.typeLabel+'</div>'+
+        '<div class="al-q">'+a.q+'</div>'+
+        '<div class="al-why">'+a.why+'</div>'+
+      '</div>'+
+      '<div class="al-stat">'+
+        '<div class="al-prob" style="color:'+probColor+'">'+a.prob+'%</div>'+
+        '<div class="al-change '+(a.change==='flat'?'flat':chClass)+'">'+a.change+'</div>'+
+        '<div class="al-vol-num">Vol: '+a.vol+'</div>'+
+      '</div>'+
+    '</a>';
+  }).join('');
+}
+
+function renderGrid(markets){
+  var grid=document.getElementById('grid');
+  if(!markets.length){
+    grid.innerHTML='<div class="placeholder">No markets match this filter</div>';
+    return;
+  }
+  grid.innerHTML=markets.map(function(m,i){
+    var prob=m._prob, cat=m._cat, change=m._change;
+    var barColor=prob>60?'#27ae60':prob>40?'#f5c518':'#e8392a';
+    var chCls=change>2?'chg-up':change<-2?'chg-dn':'chg-flat';
+    var chTxt=(change>0?'+':'')+change.toFixed(1)+'%';
+    var url='https://polymarket.com/event/'+(m.slug||'');
+    return '<a class="mcard '+cat+'" href="'+url+'" target="_blank" rel="noopener" style="animation-delay:'+(i*0.03)+'s">'+
+      '<div class="mc-top">'+
+        '<span class="mc-cat cat-'+cat+'">'+cat.toUpperCase()+'</span>'+
+        '<span class="mc-chg '+chCls+'">'+chTxt+'</span>'+
+      '</div>'+
+      '<div class="mc-q">'+m.question+'</div>'+
+      '<div class="prob-row">'+
+        '<div class="prob-pct" style="color:'+barColor+'">'+prob+'%</div>'+
+        '<div class="prob-bars">'+
+          '<div class="prob-track"><div class="prob-fill" style="width:'+prob+'%;background:'+barColor+'"></div></div>'+
+          '<div class="prob-lbl"><span>YES</span><span>NO '+(100-prob)+'%</span></div>'+
+        '</div>'+
+      '</div>'+
+      '<div class="mc-meta">'+
+        '<div class="mc-mi">24h vol: <em>'+fmtVol(m.volume24hr)+'</em></div>'+
+        (m.endDate?'<div class="mc-mi">Ends: <em>'+new Date(m.endDate).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})+'</em></div>':'')+
+      '</div>'+
+      '<div class="mc-cg">&#8599; polymarket.com</div>'+
+    '</a>';
+  }).join('');
+}
+
+// ── AI MARKET TAKE ──
+async function runAI(){
+  var btn=document.getElementById('aiBtn');
+  var box=document.getElementById('aiBox');
+  var body=document.getElementById('aiBody');
+  var timeEl=document.getElementById('aiTime');
+
+  if(!allMarkets.length){alert('Load markets first');return;}
+
+  btn.disabled=true; btn.textContent='Analysing...';
+  box.classList.add('on');
+  body.innerHTML='<div class="ai-loading"><div class="ai-spin"></div>Claude is analysing the top movers...</div>';
+
+  // Build context for Claude
+  var movers=allMarkets
+    .filter(function(m){return Math.abs(m._change)>1;})
+    .sort(function(a,b){return Math.abs(b._change)-Math.abs(a._change);})
+    .slice(0,10);
+
+  var topVol=allMarkets
+    .sort(function(a,b){return parseFloat(b.volume24hr||0)-parseFloat(a.volume24hr||0);})
+    .slice(0,5);
+
+  var context='Today\'s top Polymarket movers (24h price change):\n'+
+    movers.map(function(m){return '- '+m.question+' | Now: '+m._prob+'% | Change: '+(m._change>0?'+':'')+m._change.toFixed(1)+'% | Vol: '+fmtVol(m.volume24hr);}).join('\n')+
+    '\n\nTop markets by volume today:\n'+
+    topVol.map(function(m){return '- '+m.question+' | '+m._prob+'% | Vol: '+fmtVol(m.volume24hr);}).join('\n');
+
+  var prompt='You are a sharp prediction market analyst for ZIMR Capital crypto trading platform. Analyse these Polymarket markets and give a brief, punchy take (3-4 short paragraphs). Focus on: what is the market telling us today, any interesting signals or potential mispricings, and what traders should watch. Keep it direct and insightful. No bullet points, just clean prose. End with one clear actionable observation.\n\n'+context;
+
+  try {
+    var resp=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        model:'claude-sonnet-4-20250514',
+        max_tokens:1000,
+        messages:[{role:'user',content:prompt}]
+      })
+    });
+    var data=await resp.json();
+    var text=data.content&&data.content[0]?data.content[0].text:'No response';
+
+    // Format paragraphs
+    var html=text.split('\n\n').filter(function(p){return p.trim();})
+      .map(function(p){return '<p>'+p.trim()+'</p>';}).join('');
+
+    body.innerHTML=html;
+    timeEl.textContent='Updated '+new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
+  } catch(e){
+    body.innerHTML='<p style="color:var(--red)">Analysis failed: '+e.message+'</p>';
+  }
+
+  btn.disabled=false; btn.textContent='&#10024; AI Market Take';
+}
+
+async function load(){
+  var dot=document.getElementById('tbDot');
+  var grid=document.getElementById('grid');
+  dot.style.background='#f5c518';
+  document.getElementById('alertsSection').style.display='none';
+  grid.innerHTML='<div class="placeholder"><span style="font-size:28px;display:block;margin-bottom:10px">&#9889;</span>Fetching markets...<div class="ld-bar"><div class="ld-fill"></div></div></div>';
+
+  try {
+    var r=await fetch('https://zimr-proxy.vercel.app/api/polymarket');
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    var data=await r.json();
+    var markets=Array.isArray(data)?data:(data.markets||data.data||[]);
+    if(!markets.length) throw new Error('No markets returned');
+
+    allMarkets=markets.map(function(m){
+      m._prob=Math.max(1,Math.min(99,getProb(m)));
+      m._change=parseFloat(getChange(m).toFixed(1));
+      m._cat=getCategory(m);
+      return m;
+    }).sort(function(a,b){return parseFloat(b.volume24hr||0)-parseFloat(a.volume24hr||0);});
+
+    document.getElementById('tbCount').textContent=allMarkets.length;
+    document.getElementById('marketsHdr').textContent=allMarkets.length+' Markets';
+    dot.style.background='#00e676';
+
+    renderAlerts(buildAlerts(allMarkets));
+    renderGrid(filtered());
+
+  } catch(e){
+    grid.innerHTML='<div style="background:rgba(232,57,42,.07);border:1px solid rgba(232,57,42,.18);border-radius:8px;padding:14px;font-family:JetBrains Mono,monospace;font-size:11px;color:#ff9999;grid-column:1/-1">&#9888; '+e.message+'</div>';
+    dot.style.background='#e8392a';
   }
 }
 
-window.addEventListener('load', load);
+window.addEventListener('load',load);
 </script>
 </body>
 </html>
