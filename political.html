@@ -109,7 +109,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
   </div>
   <div class="tb-right">
     <div class="tb-pill">Trades: <em id="tbCount">&#8212;</em></div>
-    <button class="btn-load" id="loadBtn" onclick="load()">&#8635; REFRESH</button>
+    <button class="btn-load" id="loadBtn" onclick="load()">↻ REFRESH</button>
   </div>
 </div>
 
@@ -316,7 +316,7 @@ async function load(){
     document.getElementById('cards').innerHTML='<div class="err">&#9888; '+e.message+'</div>';
   }
 
-  btn.disabled=false; btn.textContent='&#8635; REFRESH';
+  btn.disabled=false; btn.textContent='↻ REFRESH';
 }
 
 window.addEventListener('load',load);
