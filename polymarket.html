@@ -405,11 +405,7 @@ async function loadBrief(){
     var r=await fetch('https://raw.githubusercontent.com/SevillaWZRD/CryptoMarketz/main/data/polymarket-brief.json?'+Date.now());
     if(!r.ok) throw new Error('Brief not available yet');
     var data=await r.json();
-    var html=data.brief.split('
-
-').filter(function(p){return p.trim();})
-      .map(function(p){return '<p>'+p.trim().replace(/
-/g,'<br>')+'</p>';}).join('');
+    var html=data.brief.split('\n\n').filter(function(p){return p.trim();}).map(function(p){return '<p>'+p.trim()+'</p>';}).join('');
     body.innerHTML=html;
     timeEl.textContent=data.date+' — updated at 09:00';
   } catch(e){
