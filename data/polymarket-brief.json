@@ -1,0 +1,65 @@
+{
+  "date": "Sunday April 12, 2026",
+  "generated": "2026-04-12T14:35:18.517433Z",
+  "brief": "# HUNGARIAN POLITICS OVERWHELMS MARKETS AS GEOPOLITICAL FEARS COOL\n\n**The Signal:** Magyar momentum is real. P\u00e9ter Magyar's odds surged 13 points overnight to 84% while Orb\u00e1n cratered 13 points to 16%\u2014a stunning 98-point swing in political futures. This isn't noise; $4.9M flowed into Hungary's succession narrative in 24 hours, dwarfing all other macro moves. Smart money has already priced in an Orb\u00e1n exit.\n\n**The Geopolitical Flip:** Iran-Israel conflict resolution odds dropped 25.7% to 44%\u2014the biggest macro drawdown of the day. Markets are quietly walking back peace hopes after the April 7 deadline passed without resolution. Meanwhile, Strait of Hormuz normalization collapsed to just 14%, suggesting traders now expect prolonged regional tension. This should be roiling oil, but the data lag suggests Polymarket hasn't fully repriced energy risk yet.\n\n**The Sports Arb:** McIlroy's Masters odds tanked 34.5% to 35% on $1.5M volume\u2014the second-largest single-day dump. This is either sharp injury intel or early-week overreaction. Cross-reference with PGA tour injury reports immediately; if McIlroy is healthy, 35% is a gift on a top-10 player 48 hours before Augusta. The IPL market is dead (1% liquidity)\u2014ignore.\n\n---\n\n## WATCH LIST\n\n1. **Hungary PM succession** (Magyar 84% / Orb\u00e1n 16%) \u2014 Highest conviction trade on the board. Watch for any government coalition statements or snap election calls today; this market could swing another 20+ points on hard news.\n\n2. **McIlroy Masters odds** \u2014 If no injury news emerges by EOD, 35% is underpriced on a historical 3x major winner two weeks before competition. Light vol ($1.5M) means retail may have panic-sold.\n\n3. **Iran-Israel conflict (44%)** \u2014 Geopolitical \"tail risk\" reset lower, but watch for any UN statements or regional militia activity. If this drops below 30%, Hormuz implications ($1.1M volume) become asymmetric long.",
+  "top_movers": [
+    {
+      "question": "Indian Premier League: Lucknow Super Giants vs Gujarat Titans",
+      "prob": 1,
+      "change": -46.5,
+      "vol24": "$1.4M",
+      "slug": "cricipl-luc-guj-2026-04-12"
+    },
+    {
+      "question": "Will Rory McIlroy win the 2026 Masters tournament?",
+      "prob": 35,
+      "change": -34.5,
+      "vol24": "$1.5M",
+      "slug": "will-rory-mcilroy-win-the-2026-masters-tournament"
+    },
+    {
+      "question": "Nuggets vs. Spurs",
+      "prob": 18,
+      "change": -27.0,
+      "vol24": "$1.0M",
+      "slug": "nba-den-sas-2026-04-12"
+    },
+    {
+      "question": "LoL: Weibo Gaming vs Bilibili Gaming - Game 1 Winner",
+      "prob": 1,
+      "change": -25.9,
+      "vol24": "$1.0M",
+      "slug": "lol-wb-blg-2026-04-12-game1"
+    },
+    {
+      "question": "Iran x Israel/US conflict ends by April 7?",
+      "prob": 44,
+      "change": -25.7,
+      "vol24": "$1.2M",
+      "slug": "iran-x-israelus-conflict-ends-by-april-7-346"
+    }
+  ],
+  "top_vol": [
+    {
+      "question": "Rolex Monte Carlo Masters: Carlos Alcaraz vs Jannik Sinner",
+      "prob": 23,
+      "change": 0,
+      "vol24": "$4.4M",
+      "slug": "atp-alcaraz-sinner-2026-04-12"
+    },
+    {
+      "question": "Will the next Prime Minister of Hungary be Viktor Orb\u00e1n?",
+      "prob": 16,
+      "change": -13.0,
+      "vol24": "$2.6M",
+      "slug": "will-the-next-prime-minister-of-hungary-be-viktor-orbn"
+    },
+    {
+      "question": "Will the next Prime Minister of Hungary be P\u00e9ter Magyar?",
+      "prob": 84,
+      "change": 13.0,
+      "vol24": "$2.4M",
+      "slug": "will-the-next-prime-minister-of-hungary-be-pter-magyar"
+    }
+  ]
+}
