@@ -402,7 +402,7 @@ async function loadBrief(){
   box.classList.add('on');
   body.innerHTML='<div class="ai-loading"><div class="ai-spin"></div>Loading daily brief...</div>';
   try {
-    var r=await fetch('https://raw.githubusercontent.com/SevillaWZRD/zimr-proxy/main/data/polymarket-brief.json?'+Date.now());
+    var r=await fetch('https://raw.githubusercontent.com/SevillaWZRD/CryptoMarketz/main/data/polymarket-brief.json?'+Date.now());
     if(!r.ok) throw new Error('Brief not available yet');
     var data=await r.json();
     var html=data.brief.split('
