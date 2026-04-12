@@ -269,7 +269,7 @@ function buildAlerts(markets){
         typeLabel:'SURGING UP',
         iconClass:'al-up',
         q:m.question,
-        why:'Up '+m._change.toFixed(1)+'% today — strong buying pressure, possible news catalyst',
+        why:'Up '+m._change.toFixed(1)+'% today - strong buying pressure, possible news catalyst',
         prob:m._prob,
         change:'+'+m._change.toFixed(1)+'%',
         vol:fmtVol(m.volume24hr),
@@ -286,7 +286,7 @@ function buildAlerts(markets){
         typeLabel:'DROPPING FAST',
         iconClass:'al-dn',
         q:m.question,
-        why:'Down '+Math.abs(m._change).toFixed(1)+'% today — market repricing, sellers in control',
+        why:'Down '+Math.abs(m._change).toFixed(1)+'% today - market repricing, sellers in control',
         prob:m._prob,
         change:m._change.toFixed(1)+'%',
         vol:fmtVol(m.volume24hr),
@@ -294,7 +294,7 @@ function buildAlerts(markets){
       });
     });
 
-  // Volume spikes — high 24h vol relative to total
+  // Volume spikes - high 24h vol relative to total
   markets.filter(function(m){
     var r=parseFloat(m.volume24hr||0)/Math.max(parseFloat(m.volume||1),1);
     return r>0.15 && Math.abs(m._change)<3;
@@ -305,7 +305,7 @@ function buildAlerts(markets){
         typeLabel:'VOLUME SPIKE',
         iconClass:'al-vol',
         q:m.question,
-        why:'Huge volume but price barely moved — smart money accumulating quietly',
+        why:'Huge volume but price barely moved - smart money accumulating quietly',
         prob:m._prob,
         change:'flat',
         vol:fmtVol(m.volume24hr),
@@ -313,7 +313,7 @@ function buildAlerts(markets){
       });
     });
 
-  // Potential mispricing — extreme probability (<5% or >95%) with high volume
+  // Potential mispricing - extreme probability (<5% or >95%) with high volume
   markets.filter(function(m){
     return (m._prob<=5||m._prob>=95) && parseFloat(m.volume24hr||0)>50000;
   }).slice(0,1).forEach(function(m){
@@ -323,7 +323,7 @@ function buildAlerts(markets){
       typeLabel:'POSSIBLE MISPRICING',
       iconClass:'al-mis',
       q:m.question,
-      why:'Market at '+m._prob+'% ('+side+') with high volume — is the market right? High risk/reward',
+      why:'Market at '+m._prob+'% ('+side+') with high volume - is the market right? High risk/reward',
       prob:m._prob,
       change:(m._change>0?'+':'')+m._change.toFixed(1)+'%',
       vol:fmtVol(m.volume24hr),
@@ -407,9 +407,9 @@ async function loadBrief(){
     var data=await r.json();
     var html=data.brief.split('\n\n').filter(function(p){return p.trim();}).map(function(p){return '<p>'+p.trim()+'</p>';}).join('');
     body.innerHTML=html;
-    timeEl.textContent=data.date+' — updated at 09:00';
+    timeEl.textContent=data.date+' - updated at 09:00';
   } catch(e){
-    body.innerHTML='<p style="color:var(--sub)">No brief available yet — generated daily at 09:00 Amsterdam time. <a href="#" onclick="runManual()" style="color:var(--accent)">Run now?</a></p>';
+    body.innerHTML='<p style="color:var(--sub)">No brief available yet - generated daily at 09:00 Amsterdam time. <a href="#" onclick="runManual()" style="color:var(--accent)">Run now?</a></p>';
     timeEl.textContent='Not yet generated today';
   }
   btn.disabled=false; btn.textContent='&#10024; Daily Brief';
@@ -423,14 +423,14 @@ async function runManual(){
   if(!allMarkets.length){body.innerHTML='<p>Load markets first</p>';return;}
   var movers=allMarkets.filter(function(m){return Math.abs(m._change)>=3;})
     .sort(function(a,b){return Math.abs(b._change)-Math.abs(a._change);}).slice(0,5);
-  if(!movers.length){body.innerHTML='<p style="color:var(--sub)">No significant movers today — markets are calm.</p>';return;}
+  if(!movers.length){body.innerHTML='<p style="color:var(--sub)">No significant movers today - markets are calm.</p>';return;}
   var html='<p><strong>Top movers today:</strong></p>'+
     movers.map(function(m){
       var dir=m._change>0?'&#128200; up':'&#128201; down';
-      return '<p>'+dir+' <strong>'+Math.abs(m._change).toFixed(1)+'%</strong> — '+m.question+' now at <strong>'+m._prob+'%</strong></p>';
+      return '<p>'+dir+' <strong>'+Math.abs(m._change).toFixed(1)+'%</strong> - '+m.question+' now at <strong>'+m._prob+'%</strong></p>';
     }).join('');
   body.innerHTML=html;
-  document.getElementById('aiTime').textContent='Live data — '+new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
+  document.getElementById('aiTime').textContent='Live data - '+new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
 }
 
 async function load(){
