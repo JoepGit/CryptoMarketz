@@ -167,39 +167,28 @@ payload = json.dumps({
 import time as _time
 
 def call_claude(payload, api_key, max_retries=5):
-    """Call Claude API with exponential backoff on 529/500/overload errors."""
-    req = urllib.request.Request(
-        "https://api.anthropic.com/v1/messages",
-        data=payload,
-        headers={
-            "Content-Type": "application/json",
-            "x-api-key": api_key,
-            "anthropic-version": "2023-06-01"
-        }
-    )
+    """Retry on 529/500/503 with exponential backoff."""
     for attempt in range(1, max_retries + 1):
+        req = urllib.request.Request(
+            "https://api.anthropic.com/v1/messages",
+            data=payload,
+            headers={
+                "Content-Type": "application/json",
+                "x-api-key": api_key,
+                "anthropic-version": "2023-06-01"
+            }
+        )
         try:
             with urllib.request.urlopen(req) as r:
                 return json.loads(r.read())
         except urllib.error.HTTPError as e:
             body = e.read().decode()
-            print(f"HTTP Error {e.code} (attempt {attempt}/{max_retries}): {body[:120]}")
-            if e.code in (529, 500, 503, 524) and attempt < max_retries:
-                wait = 10 * (2 ** (attempt - 1))  # 10s, 20s, 40s, 80s
+            print(f"⚠️  HTTP {e.code} (attempt {attempt}/{max_retries}): {body[:120]}")
+            if e.code in (529, 500, 503) and attempt < max_retries:
+                wait = 30 * attempt  # 30s, 60s, 90s, 120s
                 print(f"⏳ API overloaded — retrying in {wait}s...")
                 _time.sleep(wait)
-                # Rebuild request (urllib consumes it)
-                req = urllib.request.Request(
-                    "https://api.anthropic.com/v1/messages",
-                    data=payload,
-                    headers={
-                        "Content-Type": "application/json",
-                        "x-api-key": api_key,
-                        "anthropic-version": "2023-06-01"
-                    }
-                )
             else:
-                print(f"❌ Fatal error {e.code} — giving up.")
                 raise
     raise RuntimeError("Max retries exceeded")
 
