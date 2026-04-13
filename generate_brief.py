@@ -93,65 +93,46 @@ news_block = "\n".join(news_items[:10]) if news_items else "Not available"
 print(f"✅ {len(news_items)} news headlines")
 
 # ── 5. Build prompt ───────────────────────────────────────────────────────
-prompt = f"""LANGUAGE RULE — THIS IS MANDATORY: Write ONLY in English. Every word must be English. Never write in Dutch. Never write in German. English only.
+prompt = f"""You are the lead analyst at ZIMR Capital. Write the daily market brief for {today} in plain English prose — no bullet points, no headers, no JSON, no structure. Just a flowing written summary like a senior analyst would send to members every morning.
 
-You are the lead analyst at ZIMR Capital, writing the daily market brief for {today}.
+Write 4-5 paragraphs covering:
+1. Overall market: what happened today, total market cap, general mood
+2. BTC: exact price, what it did, key levels to watch
+3. ETH and notable altcoins: what moved, what didn't, any divergences
+4. Macro context: what's driving things (rates, geopolitics, regulation, sentiment)
+5. What to watch next: key catalysts, risks, what would change the picture
 
-LANGUAGE RULE: English only. No Dutch, no German, no other languages.
+RULES:
+- English only. No Dutch, no German.
+- Always use numerals: $72,544 not "seventy two thousand", 1.3% not "one point three percent"
+- Tone: sharp, confident, trader-to-trader. Like a Bloomberg note, not a chatbot.
+- No filler phrases. Every sentence should add information.
+- Do NOT use bullet points, headers, or any formatting. Pure prose paragraphs only.
 
-CRITICAL FORMAT RULE: Keep everything SHORT. 60-second morning brief, not a report. ALWAYS write numbers as numerals — NEVER spell them out. $72,544 not "seventy two thousand". 1.3% not "one point three percent". $2.54T not "two point five four trillion". Tone: sharp, confident, trader-to-trader.
-
-═══ LIVE PRICE DATA — use ONLY these prices ═══
+═══ LIVE MARKET DATA ═══
 {market_block}
 
 Top gainers 24h: {', '.join(gainers)}
 Top losers 24h:  {', '.join(losers)}
 
-═══ GLOBAL MARKET ═══
 Total crypto market cap: ${total_mcap}T ({mcap_chg:+.2f}% 24h)
-24h total volume: ${total_vol}B
-BTC dominance: {btc_dom}% | ETH dominance: {eth_dom}%
+24h volume: ${total_vol}B | BTC dominance: {btc_dom}% | ETH dominance: {eth_dom}%
 
-═══ BINANCE FUTURES: FUNDING RATES ═══
-{funding_block}
-(positive = longs pay shorts = bullish sentiment, negative = shorts pay longs = bearish)
+Funding rates: {funding_block}
+Open interest: {oi_block}
+Recent liquidations: {liq_block}
+Fear & Greed: {fg_block}
 
-═══ BINANCE FUTURES: OPEN INTEREST ═══
-{oi_block}
-
-═══ RECENT LIQUIDATIONS ═══
-{liq_block}
-
-═══ FEAR & GREED INDEX ═══
-{fg_block}
-
-═══ LATEST NEWS ═══
+Latest news:
 {news_block}
 
-Return ONLY valid JSON, no markdown, no backticks. Keep every value SHORT:
-{{
-  "date": "{today}",
-  "focus": "<max 15 words: the single most important thing to watch today>",
-  "risk": "<4-5 words max, e.g. Extreme Fear — hold $70K>",
-  "full_report": "<3 short sentences: market overview, BTC+ETH prices, what to watch>",
-  "btc_structure": "<2 short sentences: exact BTC price + the one key level that matters>",
-  "eth_flows": "<2 short sentences: exact ETH price + one notable observation>",
-  "macro_impact": "<2 short sentences: the one macro factor driving crypto right now>",
-  "whale_flows": "<2 short sentences: what positioning data implies + one actionable takeaway>",
-  "top_narratives": [
-    "<1 sentence: top story from news with price context>",
-    "<1 sentence: second key theme>",
-    "<1 sentence: third key theme>"
-  ],
-  "funding_oi": "<1 sentence: leverage sentiment in plain English>",
-  "volatility_outlook": "<1 sentence: what to expect in the next 24h>"
-}}"""
+Now write the brief. Plain prose, 4-5 paragraphs, no formatting."""
 
 # ── 6. Claude API call ────────────────────────────────────────────────────
 print("\n🤖 Generating brief with Claude...")
 payload = json.dumps({
     "model": "claude-sonnet-4-20250514",
-    "max_tokens": 2000,
+    "max_tokens": 3000,
     "system": "You are the lead analyst at ZIMR Capital. Write ONLY in English. ALWAYS use numerals for numbers — never spell them out ($72,544 not seventy two thousand, 1.3% not one point three percent). Keep every field short and punchy. Respond only with valid JSON.",
     "messages": [{"role": "user", "content": prompt}]
 }).encode()
@@ -197,14 +178,15 @@ text = data['content'][0]['text'].strip()
 text = _re.sub(r'^```[a-z]*\s*', '', text)
 text = _re.sub(r'\s*```$', '', text)
 text = text.strip()
-print(f"Claude response preview: {text[:200]}")
-try:
-    brief = json.loads(text)
-except json.JSONDecodeError as e:
-    print(f"❌ JSON parse error: {e}")
-    print(f"Last 300 chars: {text[-300:]}")
-    raise
-brief['date'] = today
+print(f"Claude response preview: {text[:300]}")
+
+brief = {
+    "date": today,
+    "body": text,
+    "btc_price": market_data[0]['current_price'],
+    "fg_value": fg_now['value'],
+    "fg_label": fg_now['value_classification'],
+}
 
 os.makedirs('data', exist_ok=True)
 with open('data/marketbrief.json', 'w') as f:
