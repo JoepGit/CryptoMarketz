@@ -1056,17 +1056,24 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;background:ra
 }
 .zc-tab:hover { color: rgba(155,89,214,.7); }
 .zc-tab.active { color: #9b59d6; border-bottom-color: #9b59d6; }
-.zc-tab-panel { display: none; padding: 32px 36px 36px; }
+.zc-tab-panel { display: none; padding: 28px 36px 36px; }
 .zc-tab-panel.active { display: block; }
 .zc-meta-bar {
   display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+.zc-meta-item {
+  flex: 1;
+  padding: 12px 18px;
+  background: rgba(155,89,214,.04);
   border: 1px solid rgba(155,89,214,.1);
   border-radius: 10px;
-  overflow: hidden;
-  margin-bottom: 30px;
 }
-.zc-meta-item { flex: 1; padding: 14px 20px; background: rgba(155,89,214,.04); }
-.zc-meta-item--risk { background: rgba(232,57,42,.03); border-left: 1px solid rgba(155,89,214,.08); }
+.zc-meta-item--risk {
+  background: rgba(232,57,42,.03);
+  border-color: rgba(232,57,42,.12);
+}
 .zc-meta-label {
   font-family: 'Inter', sans-serif;
   font-size: 8.5px;
@@ -3545,52 +3552,24 @@ body {
             <!-- Risk + Focus bar -->
             <div class="zc-meta-bar">
               <div class="zc-meta-item">
-                <div class="zc-meta-label">Market Focus</div>
+                <div class="zc-meta-label">Today's Focus</div>
                 <div class="zc-meta-val" id="zc-focus-val">Loading...</div>
               </div>
-              <div class="zc-meta-sep"></div>
               <div class="zc-meta-item zc-meta-item--risk">
-                <div class="zc-meta-label">Risk Regime</div>
+                <div class="zc-meta-label">Risk</div>
                 <div class="zc-meta-val zc-meta-val--risk" id="zc-risk-val">Loading...</div>
               </div>
             </div>
 
-            <!-- Full report body -->
-            <div class="zc-brief-section">
-              <div class="zc-section-label">Executive Overview</div>
-              <div class="zc-brief-body" id="brief-summary">Loading market brief...</div>
-            </div>
-
-            <div class="zc-brief-divider zc-brief-divider--light"></div>
-
-            <!-- BTC + ETH side by side -->
-            <div class="zc-brief-cols">
-              <div class="zc-brief-col">
-                <div class="zc-section-label">Bitcoin (BTC)</div>
-                <div class="zc-brief-body" id="brief-btc-card">Loading...</div>
-              </div>
-              <div class="zc-brief-col">
-                <div class="zc-section-label">Ethereum (ETH)</div>
-                <div class="zc-brief-body" id="brief-eth-card">Loading...</div>
-              </div>
-            </div>
+            <!-- Full report body — short and punchy -->
+            <div class="zc-brief-body" id="brief-summary">Loading market brief...</div>
 
           </div>
 
           <!-- ══ TAB: MACRO ══ -->
           <div class="zc-tab-panel" id="zc-panel-macro">
 
-            <div class="zc-brief-section">
-              <div class="zc-section-label">Macro &amp; Cross-Asset Context</div>
-              <div class="zc-brief-body" id="brief-macro">Loading macro analysis...</div>
-            </div>
-
-            <div class="zc-brief-divider zc-brief-divider--light"></div>
-
-            <div class="zc-brief-section">
-              <div class="zc-section-label">Positioning &amp; Volume Flows</div>
-              <div class="zc-brief-body" id="brief-whales-card">Loading positioning data...</div>
-            </div>
+            <div class="zc-brief-body" id="brief-macro">Loading macro analysis...</div>
 
           </div>
 
@@ -3621,6 +3600,9 @@ body {
           <div id="brief-focus-pill"><span id="brief-focus-pill-val"></span></div>
           <div id="brief-risk-pill"><span id="brief-risk-pill-val"></span></div>
           <div id="brief-whales"></div>
+          <div id="brief-btc-card"></div>
+          <div id="brief-eth-card"></div>
+          <div id="brief-whales-card"></div>
         </div>
       </div>
     </div>
@@ -5803,28 +5785,31 @@ Top gainer 24h: ${topGainer}
 Top loser 24h: ${topLoser}
 Fear and Greed Index: ${fgText}
 
-WRITING STANDARDS — mandatory:
-- English only. Zero other languages.
-- Write like a Bloomberg Intelligence analyst briefing professional traders. Specific, direct, data-driven.
-- Use EXACT prices and percentages from the live data. Never invent numbers.
-- Every paragraph must be substantive and worth reading. Cut all filler.
-- Connect macro context to crypto price action with clear logic.
-- full_report: 4 dense paragraphs: (1) total market state with exact mcap, dominance, and mood; (2) BTC + ETH specifics with exact prices and 24h moves; (3) what the Fear and Greed reading signals strategically and historically; (4) what to watch in next 24-48 hours and why it matters.
-- btc_structure: 3 paragraphs: current price action with exact levels and what they mean; volume and momentum analysis with specific observations; clear trading implication and what bulls vs bears need to see.
-- eth_analysis: 2 paragraphs: ETH exact price and performance vs BTC; key levels and what Layer 2 ecosystem context tells us about ETH demand.
-- macro_context: 3 paragraphs: how traditional markets and dollar strength are affecting crypto right now; Fed policy and rates context with specific implications; geopolitical or regulatory backdrop and what it means for the next week.
-- whale_flows: 2 paragraphs: what volume patterns and dominance shifts reveal about institutional vs retail activity; rotation signals and where big money appears to be moving based on the data.
+WRITING RULES — non-negotiable:
+- English only.
+- SHORT and punchy. This is a morning brief people read in 60 seconds, not a research report.
+- Use exact prices and percentages from the live data. Never invent numbers.
+- No filler, no waffle. Every sentence must earn its place.
+- Write numbers as numbers ($72,544 not "seventy two thousand").
+- Tone: confident, sharp, like a trader talking to another trader.
+
+FORMAT RULES:
+- full_report: exactly 3 short sentences. One on market overview, one on BTC/ETH, one on what to watch today.
+- btc_summary: exactly 2 short sentences. Current price + key level to watch.
+- eth_summary: exactly 2 short sentences. Current price + one notable observation.
+- macro_summary: exactly 2 short sentences. The one macro factor that matters most right now.
+- positioning: exactly 2 short sentences. What Fear & Greed implies + one actionable takeaway.
 
 Respond ONLY with valid JSON, no markdown, no backticks, no preamble:
 {
   "date": "${dateShort}",
-  "risk": "<6-8 words capturing exact risk regime with specific context>",
-  "focus": "<one sharp, specific sentence: the single most important thing to watch today>",
-  "full_report": "<4 paragraphs separated by double newline, dense and analytical, using exact prices>",
-  "btc_structure": "<3 paragraphs on Bitcoin, using exact price levels and percentages>",
-  "eth_analysis": "<2 paragraphs on Ethereum specifics with exact figures>",
-  "macro_context": "<3 paragraphs on macro, rates, DXY and their specific impact on crypto>",
-  "whale_flows": "<2 paragraphs on volume, rotation and institutional positioning signals>"
+  "risk": "<4-5 words max, e.g. Extreme Fear — watch $70K>",
+  "focus": "<one sharp sentence, max 15 words, the single thing to watch today>",
+  "full_report": "<3 sentences: market overview, BTC+ETH, what to watch>",
+  "btc_structure": "<2 sentences: BTC price + key level>",
+  "eth_analysis": "<2 sentences: ETH price + notable observation>",
+  "macro_context": "<2 sentences: the one macro factor that matters>",
+  "whale_flows": "<2 sentences: Fear and Greed implication + one actionable takeaway>"
 }`;
 
       const briefApiKey = getApiKey();
