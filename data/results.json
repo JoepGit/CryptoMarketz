@@ -1,5 +1,18 @@
 [
   {
+    "id": 1776032602525,
+    "coin": "XRP/USD",
+    "type": "SELL",
+    "entry": "1.33",
+    "tp": "1.30",
+    "sl": "1.35",
+    "result": "loss",
+    "pnl": "1.50%",
+    "resolved_price": 1.37,
+    "signal_date": "2026-04-12T22:23:17.771Z",
+    "resolved_at": "2026-04-13T22:35:20.004Z"
+  },
+  {
     "id": 1775600944906,
     "coin": "ETH/USD",
     "type": "SELL",
