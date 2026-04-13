@@ -4504,15 +4504,30 @@ function fetchFeedWithFallback(feedUrl, srcName){
     return Promise.resolve(_newsCache[cacheKey]);
   }
 
-  var proxies = [
-    'https://api.allorigins.win/raw?url=',
-    'https://corsproxy.io/?',
-    'https://api.codetabs.com/v1/proxy?quest='
-  ];
+  // rss2json - works reliably from GitHub Pages, no CORS issues
+  var rss2jsonUrl = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(feedUrl) + '&count=20';
 
-  // Try all proxies in parallel, take first success
-  var attempts = proxies.map(function(proxy) {
-    return fetch(proxy + encodeURIComponent(feedUrl), { signal: AbortSignal.timeout(4000) })
+  var rss2jsonAttempt = fetch(rss2jsonUrl, { signal: AbortSignal.timeout(6000) })
+    .then(function(r) { if(!r.ok) throw new Error('bad'); return r.json(); })
+    .then(function(json) {
+      if(!json.items || !json.items.length) throw new Error('empty');
+      return json.items.map(function(item) {
+        return {
+          title: item.title || '',
+          url:   item.link  || '#',
+          src:   srcName,
+          date:  item.pubDate ? new Date(item.pubDate) : new Date()
+        };
+      }).filter(function(i) { return i.title.length > 0; });
+    });
+
+  // Raw proxy fallbacks
+  var rawProxies = [
+    'https://api.allorigins.win/raw?url=',
+    'https://corsproxy.io/?'
+  ];
+  var rawAttempts = rawProxies.map(function(proxy) {
+    return fetch(proxy + encodeURIComponent(feedUrl), { signal: AbortSignal.timeout(5000) })
       .then(function(r) { if(!r.ok) throw new Error('bad'); return r.text(); })
       .then(function(txt) {
         var items = parseRSSItems(txt, srcName);
@@ -4521,7 +4536,7 @@ function fetchFeedWithFallback(feedUrl, srcName){
       });
   });
 
-  return Promise.any(attempts)
+  return Promise.any([rss2jsonAttempt].concat(rawAttempts))
     .then(function(items) {
       _newsCache[cacheKey] = items;
       _newsCacheTime[cacheKey] = Date.now();
@@ -4541,7 +4556,8 @@ function renderNews(all){
 function fetchNews(){
   var feeds=[
     {name:'CoinTelegraph',url:'https://cointelegraph.com/rss'},
-    {name:'CoinDesk',url:'https://www.coindesk.com/arc/outboundfeeds/rss/'}
+    {name:'CoinDesk',url:'https://www.coindesk.com/arc/outboundfeeds/rss/'},
+    {name:'Decrypt',url:'https://decrypt.co/feed'}
   ];
   Promise.all(feeds.map(function(f){return fetchFeedWithFallback(f.url,f.name);}))
     .then(function(groups){
