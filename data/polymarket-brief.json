@@ -1,65 +1,65 @@
 {
-  "date": "Sunday April 12, 2026",
-  "generated": "2026-04-12T14:35:18.517433Z",
-  "brief": "# HUNGARIAN POLITICS OVERWHELMS MARKETS AS GEOPOLITICAL FEARS COOL\n\n**The Signal:** Magyar momentum is real. P\u00e9ter Magyar's odds surged 13 points overnight to 84% while Orb\u00e1n cratered 13 points to 16%\u2014a stunning 98-point swing in political futures. This isn't noise; $4.9M flowed into Hungary's succession narrative in 24 hours, dwarfing all other macro moves. Smart money has already priced in an Orb\u00e1n exit.\n\n**The Geopolitical Flip:** Iran-Israel conflict resolution odds dropped 25.7% to 44%\u2014the biggest macro drawdown of the day. Markets are quietly walking back peace hopes after the April 7 deadline passed without resolution. Meanwhile, Strait of Hormuz normalization collapsed to just 14%, suggesting traders now expect prolonged regional tension. This should be roiling oil, but the data lag suggests Polymarket hasn't fully repriced energy risk yet.\n\n**The Sports Arb:** McIlroy's Masters odds tanked 34.5% to 35% on $1.5M volume\u2014the second-largest single-day dump. This is either sharp injury intel or early-week overreaction. Cross-reference with PGA tour injury reports immediately; if McIlroy is healthy, 35% is a gift on a top-10 player 48 hours before Augusta. The IPL market is dead (1% liquidity)\u2014ignore.\n\n---\n\n## WATCH LIST\n\n1. **Hungary PM succession** (Magyar 84% / Orb\u00e1n 16%) \u2014 Highest conviction trade on the board. Watch for any government coalition statements or snap election calls today; this market could swing another 20+ points on hard news.\n\n2. **McIlroy Masters odds** \u2014 If no injury news emerges by EOD, 35% is underpriced on a historical 3x major winner two weeks before competition. Light vol ($1.5M) means retail may have panic-sold.\n\n3. **Iran-Israel conflict (44%)** \u2014 Geopolitical \"tail risk\" reset lower, but watch for any UN statements or regional militia activity. If this drops below 30%, Hormuz implications ($1.1M volume) become asymmetric long.",
+  "date": "Monday April 13, 2026",
+  "generated": "2026-04-13T08:57:24.081264Z",
+  "brief": "# ZIMR CAPITAL MARKET INTELLIGENCE | Monday, April 13, 2026\n\n## HEADLINE\n**Peru's Presidential Race Breaks Open as L\u00f3pez Aliaga Surges; Hungary's Political Verdict Locks In**\n\n---\n\n## MARKET ANALYSIS\n\n**The L\u00f3pez Aliaga momentum is real.** Up 25.5% in 24 hours on $994K volume, he's now the market favorite at 48%\u2014flipping the board against Keiko Fujimori (38%, +6%). This isn't noise; it's smart money repositioning. Something material moved Peru-side yesterday. Watch for polling data release or endorsement news that triggered this. Fujimori's ceiling appears to be capping out, making L\u00f3pez Aliaga the consensus pick for traders. Ricardo Belmont's collapse to 1% (-21.5%) confirms the race has consolidated to a two-horse affair.\n\n**Hungary's market resolved itself spectacularly.** P\u00e9ter Magyar at 99% (+22.9%) now represents near-certainty that Orb\u00e1n's reign ends. The $7.1M volume on Magyar paired with $10.2M fleeing the Orb\u00e1n position (now 1%, -23.2%) tells you institutional money had conviction on this outcome and positioned accordingly. This is a post-facto price discovery\u2014likely the government announcement already happened, but retail was catching up Sunday night into Monday. The arbitrage is closed.\n\n**Iran-US diplomacy is a lottery, not a trade.** The April 10 deadline passed; now \"by April 15\" sits at 3% on $706K. The +24.9% spike on the April 10 miss suggests speculative longs hoping for last-minute theater. Smart money isn't here\u2014this is retail FOMO on geopolitical headlines. Skip it unless you have alpha on actual back-channel negotiations.\n\n---\n\n## WATCH LIST\n\n1. **L\u00f3pez Aliaga 2026 Peru winner** \u2014 Could 48% hold or does this consolidate higher? Watch for second-wave smart money if new polling drops Monday. Liquidity at $994K is still thin; a $2M+ move either direction signals institutional conviction shifting.\n\n2. **Keiko Fujimori Peru winner** \u2014 The 38% floor is critical. If she drops below 35% this week, it's capitulation; above 40% means a real runoff scenario priced in. This is your hedge if L\u00f3pez Aliaga overheated.\n\n3. **Spain 2026 FIFA World Cup** \u2014 Oddball +1.7% move on $1.3M volume. No obvious news catalyst. Either someone knows squad health updates early, or this is algorithmic noise. Monitor for injury news or friendly match performance mid-week.\n\n---\n\n**Volume check:** Hungary's $17.3M combined action dwarfs everything else. Peru's $3.5M spread across 5 candidates shows conviction without consensus. Treat accordingly.",
   "top_movers": [
     {
-      "question": "Indian Premier League: Lucknow Super Giants vs Gujarat Titans",
-      "prob": 1,
-      "change": -46.5,
-      "vol24": "$1.4M",
-      "slug": "cricipl-luc-guj-2026-04-12"
+      "question": "Will Rafael L\u00f3pez Aliaga win the 2026 Peruvian presidential election?",
+      "prob": 48,
+      "change": 25.5,
+      "vol24": "$994K",
+      "slug": "will-rafael-lpez-aliaga-win-the-2026-peruvian-presidential-election"
     },
     {
-      "question": "Will Rory McIlroy win the 2026 Masters tournament?",
-      "prob": 35,
-      "change": -34.5,
-      "vol24": "$1.5M",
-      "slug": "will-rory-mcilroy-win-the-2026-masters-tournament"
-    },
-    {
-      "question": "Nuggets vs. Spurs",
-      "prob": 18,
-      "change": -27.0,
-      "vol24": "$1.0M",
-      "slug": "nba-den-sas-2026-04-12"
-    },
-    {
-      "question": "LoL: Weibo Gaming vs Bilibili Gaming - Game 1 Winner",
-      "prob": 1,
-      "change": -25.9,
-      "vol24": "$1.0M",
-      "slug": "lol-wb-blg-2026-04-12-game1"
-    },
-    {
-      "question": "Iran x Israel/US conflict ends by April 7?",
-      "prob": 44,
-      "change": -25.7,
-      "vol24": "$1.2M",
-      "slug": "iran-x-israelus-conflict-ends-by-april-7-346"
-    }
-  ],
-  "top_vol": [
-    {
-      "question": "Rolex Monte Carlo Masters: Carlos Alcaraz vs Jannik Sinner",
-      "prob": 23,
-      "change": 0,
-      "vol24": "$4.4M",
-      "slug": "atp-alcaraz-sinner-2026-04-12"
+      "question": "US x Iran meeting by April 10, 2026?",
+      "prob": 25,
+      "change": 24.9,
+      "vol24": "$1.1M",
+      "slug": "us-x-iran-meeting-by-april-10-2026-895"
     },
     {
       "question": "Will the next Prime Minister of Hungary be Viktor Orb\u00e1n?",
-      "prob": 16,
-      "change": -13.0,
-      "vol24": "$2.6M",
+      "prob": 1,
+      "change": -23.2,
+      "vol24": "$10.2M",
       "slug": "will-the-next-prime-minister-of-hungary-be-viktor-orbn"
     },
     {
       "question": "Will the next Prime Minister of Hungary be P\u00e9ter Magyar?",
-      "prob": 84,
-      "change": 13.0,
-      "vol24": "$2.4M",
+      "prob": 99,
+      "change": 22.9,
+      "vol24": "$7.1M",
       "slug": "will-the-next-prime-minister-of-hungary-be-pter-magyar"
+    },
+    {
+      "question": "Will Ricardo Belmont win the 2026 Peruvian presidential election?",
+      "prob": 1,
+      "change": -21.5,
+      "vol24": "$763K",
+      "slug": "will-ricardo-belmont-win-the-2026-peruvian-presidential-election"
+    }
+  ],
+  "top_vol": [
+    {
+      "question": "Will the next Prime Minister of Hungary be Viktor Orb\u00e1n?",
+      "prob": 1,
+      "change": -23.2,
+      "vol24": "$10.2M",
+      "slug": "will-the-next-prime-minister-of-hungary-be-viktor-orbn"
+    },
+    {
+      "question": "Will the next Prime Minister of Hungary be P\u00e9ter Magyar?",
+      "prob": 99,
+      "change": 22.9,
+      "vol24": "$7.1M",
+      "slug": "will-the-next-prime-minister-of-hungary-be-pter-magyar"
+    },
+    {
+      "question": "Will the next Prime Minister of Hungary be Istv\u00e1n Kapit\u00e1ny?",
+      "prob": 1,
+      "change": -0.1,
+      "vol24": "$2.3M",
+      "slug": "will-the-next-prime-minister-of-hungary-be-istvn-kapitny"
     }
   ]
 }
