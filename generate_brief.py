@@ -95,10 +95,11 @@ print(f"✅ {len(news_items)} news headlines")
 # ── 5. Build prompt ───────────────────────────────────────────────────────
 prompt = f"""LANGUAGE RULE — THIS IS MANDATORY: Write ONLY in English. Every word must be English. Never write in Dutch. Never write in German. English only.
 
-You are the lead analyst at CryptoMarketz, writing the daily market brief for {today}.
+You are the lead analyst at ZIMR Capital, writing the daily market brief for {today}.
 
-CRITICAL REQUIREMENT: You MUST write ONLY in English. Every single word must be English. Do NOT use Dutch, German, or any other language under any circumstances.
-Each section must be at least 4-6 sentences. Use the exact prices and figures from the live data below.
+LANGUAGE RULE: English only. No Dutch, no German, no other languages.
+
+CRITICAL FORMAT RULE: Keep everything SHORT. This is a morning brief that readers scan in 60 seconds, not a research report. Every field must be concise and punchy. Write numbers as numbers ($72,544 not "seventy two thousand"). Tone: sharp, confident, trader-to-trader.
 
 ═══ LIVE PRICE DATA — use ONLY these prices ═══
 {market_block}
@@ -127,40 +128,31 @@ BTC dominance: {btc_dom}% | ETH dominance: {eth_dom}%
 ═══ LATEST NEWS ═══
 {news_block}
 
-INSTRUCTIONS:
-- Write ONLY in English. No Dutch words anywhere.
-- Every section must be 5-7 sentences — detailed, analytical, professional.
-- Use exact prices, percentages and figures from the data above.
-- Funding/OI data unavailable — base leverage analysis on price action, Fear & Greed, and volume.
-- Connect news headlines to price action where relevant.
-- Write like a senior analyst briefing institutional traders.
-
-Return ONLY valid JSON, no markdown, no backticks:
+Return ONLY valid JSON, no markdown, no backticks. Keep every value SHORT:
 {{
-  "date": "{today}",  // ENGLISH ONLY — example: March 25, 2026
-  "focus": "one sentence: primary market focus today based on the data",
-  "risk": "risk regime in 4-6 words e.g. High Risk — Extreme Fear territory",
-  "btc_structure": "5-7 sentences: exact BTC price, 1h/24h/7d performance, key support and resistance levels, what price action and volume reveal about market structure, whether bulls or bears are in control, and what traders should watch",
-  "eth_flows": "5-7 sentences: exact ETH price, performance vs BTC, 24h and 7d change, volume context, Layer 2 ecosystem context from news, key levels, and ETH/BTC ratio outlook",
+  "date": "{today}",
+  "focus": "<max 15 words: the single most important thing to watch today>",
+  "risk": "<4-5 words max, e.g. Extreme Fear — hold $70K>",
+  "full_report": "<3 short sentences: market overview, BTC+ETH prices, what to watch>",
+  "btc_structure": "<2 short sentences: exact BTC price + the one key level that matters>",
+  "eth_flows": "<2 short sentences: exact ETH price + one notable observation>",
+  "macro_impact": "<2 short sentences: the one macro factor driving crypto right now>",
+  "whale_flows": "<2 short sentences: what positioning data implies + one actionable takeaway>",
   "top_narratives": [
-    "Narrative 1: 3 sentence description of the most important theme driving markets today with specific data points",
-    "Narrative 2: 3 sentence description with specific data points",
-    "Narrative 3: 3 sentence description with specific data points",
-    "Narrative 4: 3 sentence description with specific data points"
+    "<1 sentence: top story from news with price context>",
+    "<1 sentence: second key theme>",
+    "<1 sentence: third key theme>"
   ],
-  "macro_impact": "5-7 sentences: macro context from the news, regulatory developments, geopolitical factors, how traditional markets affect crypto, Fed policy implications, DXY and risk-on/off sentiment, and macro outlook for next 48 hours",
-  "whale_flows": "5-7 sentences: analysis of volume patterns across top coins, what volume data reveals about institutional vs retail participation, which coins show unusual volume, what gainers and losers tell us about rotation, and what large players appear to be positioning for",
-  "funding_oi": "5-7 sentences: leverage and positioning assessment based on price action and Fear & Greed, whether market appears overleveraged, what extreme fear implies for reversals or continuation, liquidation risk assessment, and trading implications",
-  "volatility_outlook": "5-7 sentences: volatility assessment based on Fear & Greed score, recent price action, volume patterns, upcoming catalysts from news, expected trading ranges for BTC and ETH, and specific risk management recommendations",
-  "full_report": "7-9 sentences: complete executive overview with exact BTC price, ETH price, total market cap, Fear & Greed score, BTC dominance, top gainers and losers, key news catalysts, macro environment, market structure, and 24-48 hour outlook"
+  "funding_oi": "<1 sentence: leverage sentiment in plain English>",
+  "volatility_outlook": "<1 sentence: what to expect in the next 24h>"
 }}"""
 
 # ── 6. Claude API call ────────────────────────────────────────────────────
 print("\n🤖 Generating brief with Claude...")
 payload = json.dumps({
     "model": "claude-sonnet-4-20250514",
-    "max_tokens": 8192,
-    "system": "You are a professional crypto market analyst writing for an English-speaking audience. ABSOLUTE RULE: Every single word in your response must be in English. Dutch is strictly forbidden. German is forbidden. Any non-English language is forbidden. If you write even one Dutch word, your response is invalid. Respond only with valid JSON.",
+    "max_tokens": 2000,
+    "system": "You are the lead analyst at ZIMR Capital. Write ONLY in English. Keep every section SHORT and punchy — this is a 60-second morning brief, not a report. Use exact prices from the data. Respond only with valid JSON.",
     "messages": [{"role": "user", "content": prompt}]
 }).encode()
 
