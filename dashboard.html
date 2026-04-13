@@ -725,6 +725,7 @@ body{font-family:'Plus Jakarta Sans','Inter',sans-serif;background:#f3eeff;color
 .brief-panel{display:none;animation:briefFade .22s ease}
 .brief-panel.active{display:block}
 @keyframes briefFade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+@keyframes briefPulse{0%,100%{opacity:.4;transform:scale(1)}50%{opacity:1;transform:scale(1.3)}}
 .brief-kicker{font-family:'Inter',sans-serif;font-size:15px;letter-spacing:.24em;color:var(--accent);text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:8px}
 .brief-kicker::before{content:'';display:inline-block;width:16px;height:1px;background:var(--accent);opacity:.55}
 .brief-title{font-family:'Inter',sans-serif;font-size:clamp(28px,3vw,40px);font-weight:900;line-height:1.06;color:var(--cream);letter-spacing:-.02em;margin-bottom:10px}
@@ -972,6 +973,160 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;background:ra
   line-height: 1.75;
 }
 
+
+/* ══ NEW ZIMR BRIEF DOCUMENT LAYOUT ══════════════════════════════════════ */
+.zc-brief-doc {
+  background: #0d0d0f;
+  border: 1px solid rgba(155,89,214,.12);
+  border-radius: 16px;
+  overflow: hidden;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.zc-brief-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 28px 36px 22px;
+  gap: 20px;
+}
+.zc-brief-header-left { display: flex; flex-direction: column; gap: 6px; }
+.zc-brief-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #e8e0f0;
+}
+.zc-brief-header-type {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(155,89,214,.55);
+}
+.zc-brief-header-right { text-align: right; flex-shrink: 0; }
+.zc-brief-header-date {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #c4b8d8;
+  letter-spacing: .02em;
+}
+.zc-brief-header-time {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  color: rgba(155,89,214,.5);
+  margin-top: 3px;
+  letter-spacing: .06em;
+}
+.zc-brief-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(155,89,214,.3), transparent);
+}
+.zc-brief-divider--light {
+  background: rgba(155,89,214,.08);
+  margin: 28px 36px;
+}
+.zc-brief-tabs {
+  display: flex;
+  padding: 16px 36px 0;
+  border-bottom: 1px solid rgba(155,89,214,.08);
+}
+.zc-tab {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: rgba(155,89,214,.4);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 10px 18px 12px;
+  cursor: pointer;
+  transition: all .18s;
+  margin-bottom: -1px;
+}
+.zc-tab:hover { color: rgba(155,89,214,.7); }
+.zc-tab.active { color: #9b59d6; border-bottom-color: #9b59d6; }
+.zc-tab-panel { display: none; padding: 32px 36px 36px; }
+.zc-tab-panel.active { display: block; }
+.zc-meta-bar {
+  display: flex;
+  border: 1px solid rgba(155,89,214,.1);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.zc-meta-item { flex: 1; padding: 14px 20px; background: rgba(155,89,214,.04); }
+.zc-meta-item--risk { background: rgba(232,57,42,.03); border-left: 1px solid rgba(155,89,214,.08); }
+.zc-meta-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(155,89,214,.5);
+  margin-bottom: 5px;
+}
+.zc-meta-item--risk .zc-meta-label { color: rgba(232,57,42,.6); }
+.zc-meta-val {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #d4ccec;
+  line-height: 1.4;
+}
+.zc-meta-val--risk { color: #e8594a; }
+.zc-section-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(155,89,214,.5);
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(155,89,214,.07);
+}
+.zc-brief-body {
+  font-family: 'Georgia', serif;
+  font-size: 15px;
+  color: #c0b8d4;
+  line-height: 2;
+  letter-spacing: .01em;
+}
+.zc-brief-body p { margin: 0 0 18px; }
+.zc-brief-body p:last-child { margin-bottom: 0; }
+.zc-brief-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.zc-brief-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 36px;
+  background: rgba(0,0,0,.3);
+  border-top: 1px solid rgba(155,89,214,.06);
+  font-family: 'Inter', sans-serif;
+  font-size: 9.5px;
+  color: rgba(155,89,214,.3);
+  letter-spacing: .04em;
+}
+.zc-brief-footer-sep { opacity: .3; }
+@media(max-width: 680px) {
+  .zc-brief-header { padding: 18px 18px 14px; }
+  .zc-brief-tabs { padding: 10px 18px 0; }
+  .zc-tab-panel { padding: 20px 18px 22px; }
+  .zc-brief-cols { grid-template-columns: 1fr; gap: 20px; }
+  .zc-brief-divider--light { margin: 18px 18px; }
+}
 
 /* ══ MARKET STAT WIDGETS ══════════════════════════════════════════════════ */
 .mkt-stats-row {
@@ -3347,7 +3502,7 @@ body {
         
     <!-- ═══ AI DAILY MARKET BRIEF ═══ -->
     <div class="page" id="page-ai-brief">
-      <div class="ph"><h1>AI Daily Market Brief</h1><p>Daily overview built for quick decision making.</p></div>
+      <div class="ph"><h1>Daily Market Brief</h1><p>AI-generated intelligence report &mdash; published every day at 07:00 UTC.</p></div>
       <div class="lkd brief-shell">
         <div id="lko-ai-brief" class="lko"><div class="lkb">
           <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#9b59d6" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
@@ -3358,124 +3513,114 @@ body {
           <div class="lk-ft">No code? <a onclick="goPage('pricing',null)">View pricing →</a></div>
         </div></div>
 
-        <div class="brief-topbar">
-          <div class="brief-topbar-left">
-            <div class="brief-icon">
-              <svg viewBox="0 0 24 24"><path d="M12 3v18"/><path d="M5.5 7.5h13"/><path d="M5.5 16.5h13"/></svg>
+        <!-- ═══ NEW BRIEF DOCUMENT LAYOUT ═══ -->
+        <div class="zc-brief-doc">
+
+          <!-- LETTER HEADER -->
+          <div class="zc-brief-header">
+            <div class="zc-brief-header-left">
+              <div class="zc-brief-logo">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9b59d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                <span>ZIMR Capital</span>
+              </div>
+              <div class="zc-brief-header-type">AI Market Brief &mdash; Daily Intelligence Report</div>
             </div>
-            <div>
-              <div class="brief-top-kicker">AI market report</div>
-              <div class="brief-top-sub">Topic based daily brief with clickable sections and one clean narrative flow.</div>
+            <div class="zc-brief-header-right">
+              <div class="zc-brief-header-date" id="brief-doc-date">--</div>
+              <div class="zc-brief-header-time" id="brief-doc-time">--:--</div>
             </div>
           </div>
-          <div id="brief-date" class="brief-updated">Updated --</div>
+
+          <div class="zc-brief-divider"></div>
+
+          <!-- TAB SWITCHER -->
+          <div class="zc-brief-tabs">
+            <button class="zc-tab active" data-zctab="market" type="button">AI Market Report</button>
+            <button class="zc-tab" data-zctab="macro" type="button">Macro News</button>
+          </div>
+
+          <!-- ══ TAB: MARKET REPORT ══ -->
+          <div class="zc-tab-panel active" id="zc-panel-market">
+
+            <!-- Risk + Focus bar -->
+            <div class="zc-meta-bar">
+              <div class="zc-meta-item">
+                <div class="zc-meta-label">Market Focus</div>
+                <div class="zc-meta-val" id="zc-focus-val">Loading...</div>
+              </div>
+              <div class="zc-meta-sep"></div>
+              <div class="zc-meta-item zc-meta-item--risk">
+                <div class="zc-meta-label">Risk Regime</div>
+                <div class="zc-meta-val zc-meta-val--risk" id="zc-risk-val">Loading...</div>
+              </div>
+            </div>
+
+            <!-- Full report body -->
+            <div class="zc-brief-section">
+              <div class="zc-section-label">Executive Overview</div>
+              <div class="zc-brief-body" id="brief-summary">Loading market brief...</div>
+            </div>
+
+            <div class="zc-brief-divider zc-brief-divider--light"></div>
+
+            <!-- BTC + ETH side by side -->
+            <div class="zc-brief-cols">
+              <div class="zc-brief-col">
+                <div class="zc-section-label">Bitcoin (BTC)</div>
+                <div class="zc-brief-body" id="brief-btc-card">Loading...</div>
+              </div>
+              <div class="zc-brief-col">
+                <div class="zc-section-label">Ethereum (ETH)</div>
+                <div class="zc-brief-body" id="brief-eth-card">Loading...</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- ══ TAB: MACRO ══ -->
+          <div class="zc-tab-panel" id="zc-panel-macro">
+
+            <div class="zc-brief-section">
+              <div class="zc-section-label">Macro &amp; Cross-Asset Context</div>
+              <div class="zc-brief-body" id="brief-macro">Loading macro analysis...</div>
+            </div>
+
+            <div class="zc-brief-divider zc-brief-divider--light"></div>
+
+            <div class="zc-brief-section">
+              <div class="zc-section-label">Positioning &amp; Volume Flows</div>
+              <div class="zc-brief-body" id="brief-whales-card">Loading positioning data...</div>
+            </div>
+
+          </div>
+
+          <!-- FOOTER -->
+          <div class="zc-brief-footer">
+            <span>ZIMR Capital &copy; <span id="zc-brief-yr"></span></span>
+            <span class="zc-brief-footer-sep">|</span>
+            <span>Generated by AI &mdash; not financial advice</span>
+            <span class="zc-brief-footer-sep">|</span>
+            <span>Updated <span id="brief-report-date">--</span></span>
+          </div>
+
         </div>
 
-        <div class="brief-layout">
-          <aside class="brief-sidebar">
-            <div class="brief-side-head"><div class="brief-side-label">Report</div></div>
-            <div class="brief-side-list">
-              <button class="brief-nav active" type="button" data-brief-target="overview">
-                <span class="brief-nav-icon"><svg viewBox="0 0 24 24"><path d="M12 1v22"/><path d="M5 8h14"/><path d="M5 16h14"/></svg></span>
-                <span class="brief-nav-copy"><div class="brief-nav-title">AI Market Report</div><div class="brief-nav-sub">Overview</div></span>
-              </button>
-              <button class="brief-nav" type="button" data-brief-target="market-structure">
-                <span class="brief-nav-icon"><svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></span>
-                <span class="brief-nav-copy"><div class="brief-nav-title">Market Structure</div><div class="brief-nav-sub">BTC + ETH</div></span>
-              </button>
-              <button class="brief-nav" type="button" data-brief-target="narratives">
-                <span class="brief-nav-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
-                <span class="brief-nav-copy"><div class="brief-nav-title">Narratives</div><div class="brief-nav-sub">Flow of attention</div></span>
-              </button>
-
-
-              <button class="brief-nav" type="button" data-brief-target="macro">
-                <span class="brief-nav-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14.5 14.5 0 0 1 0 18"/><path d="M12 3a14.5 14.5 0 0 0 0 18"/></svg></span>
-                <span class="brief-nav-copy"><div class="brief-nav-title">Macro</div><div class="brief-nav-sub">Cross asset</div></span>
-              </button>
-              <button class="brief-nav" type="button" data-brief-target="risk-outlook">
-                <span class="brief-nav-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg></span>
-                <span class="brief-nav-copy"><div class="brief-nav-title">Risk Outlook</div><div class="brief-nav-sub">Positioning</div></span>
-              </button>
-            </div>
-          </aside>
-
-          <main class="brief-main">
-            <section class="brief-panel active" id="brief-panel-overview">
-              <div class="brief-kicker">Daily brief</div>
-              <h2 class="brief-title">AI Market Report</h2>
-              <!-- Key stat pills -->
-              <div class="brief-stat-row">
-                <div class="brief-stat-pill" id="brief-focus-pill"><span class="bsp-label">FOCUS</span><span class="bsp-val" id="brief-focus-pill-val">loading...</span></div>
-                <div class="brief-stat-pill brief-stat-pill--risk" id="brief-risk-pill"><span class="bsp-label">RISK</span><span class="bsp-val" id="brief-risk-pill-val">loading...</span></div>
-              </div>
-              <!-- Summary broken into readable chunks -->
-              <div id="brief-summary" class="brief-readable">loading market brief...</div>
-            </section>
-
-            <section class="brief-panel" id="brief-panel-market-structure">
-              <div class="brief-kicker">Structure</div>
-              <h2 class="brief-title">Market Structure</h2>
-              <div class="brief-section-grid">
-                <div class="brief-section-card">
-                  <div class="bsc-label">₿ Bitcoin</div>
-                  <div id="brief-btc-card" class="brief-readable">loading...</div>
-                </div>
-                <div class="brief-section-card">
-                  <div class="bsc-label">Ξ Ethereum</div>
-                  <div id="brief-eth-card" class="brief-readable">loading...</div>
-                </div>
-              </div>
-            </section>
-
-            <section class="brief-panel" id="brief-panel-narratives">
-              <div class="brief-kicker">Narratives</div>
-              <h2 class="brief-title">Attention Flow</h2>
-              <div id="brief-narrative-cards" class="brief-narrative-grid">loading...</div>
-            </section>
-
-
-            <section class="brief-panel" id="brief-panel-macro">
-              <div class="brief-kicker">Macro</div>
-              <h2 class="brief-title">Cross Asset Context</h2>
-              <div class="brief-section-card" style="margin-bottom:16px">
-                <div class="bsc-label">🌍 Macro Impact</div>
-                <div id="brief-macro" class="brief-readable">loading market brief...</div>
-              </div>
-              <div class="brief-section-card">
-                <div class="bsc-label">🐋 Whale &amp; Volume Flows</div>
-                <div id="brief-whales-card" class="brief-readable">loading market brief...</div>
-              </div>
-            </section>
-
-            <section class="brief-panel" id="brief-panel-risk-outlook">
-              <div class="brief-kicker">Risk outlook</div>
-              <h2 class="brief-title">Risk and Focus</h2>
-              <div class="brief-section-card" style="margin-bottom:16px">
-                <div class="bsc-label">⚠️ Risk Regime</div>
-                <div id="brief-risk-display" class="brief-readable brief-readable--highlight">loading...</div>
-              </div>
-              <div class="brief-section-card" style="margin-bottom:16px">
-                <div class="bsc-label">🎯 Primary Focus</div>
-                <div id="brief-focus-display" class="brief-readable">loading...</div>
-              </div>
-              <div class="brief-section-card">
-                <div class="bsc-label">📊 Volatility Outlook</div>
-                <div id="brief-risk-focus-copy" class="brief-readable">loading market brief...</div>
-              </div>
-            </section>
-          </main>
-
-          <!-- hidden data placeholders for JS compatibility -->
-          <div style="display:none">
-            <div id="brief-report-date"></div>
-            <div id="brief-risk"></div>
-            <div id="brief-focus"></div>
-            <div id="brief-btc"></div>
-            <div id="brief-eth"></div>
-            <div id="brief-volatility"></div>
-            <div id="brief-funding"></div>
-          </div>
+        <!-- hidden data placeholders for JS compatibility -->
+        <div style="display:none">
+          <div id="brief-risk"></div>
+          <div id="brief-focus"></div>
+          <div id="brief-btc"></div>
+          <div id="brief-eth"></div>
+          <div id="brief-volatility"></div>
+          <div id="brief-funding"></div>
+          <div id="brief-risk-display"></div>
+          <div id="brief-focus-display"></div>
+          <div id="brief-risk-focus-copy"></div>
+          <div id="brief-narrative-cards"></div>
+          <div id="brief-narrative"></div>
+          <div id="brief-focus-pill"><span id="brief-focus-pill-val"></span></div>
+          <div id="brief-risk-pill"><span id="brief-risk-pill-val"></span></div>
+          <div id="brief-whales"></div>
         </div>
       </div>
     </div>
@@ -5499,17 +5644,29 @@ function closeBotHistory(){
 
 
 function initBriefNavigation(){
-  const navs = document.querySelectorAll('.brief-nav');
-  const panels = document.querySelectorAll('.brief-panel');
-  if(!navs.length || !panels.length) return;
-
-  navs.forEach((btn) => {
+  // New ZC tab system
+  const zcTabs = document.querySelectorAll('.zc-tab');
+  const zcPanels = document.querySelectorAll('.zc-tab-panel');
+  zcTabs.forEach(btn => {
     btn.addEventListener('click', () => {
-      const target = btn.getAttribute('data-brief-target');
-      navs.forEach((item) => item.classList.toggle('active', item === btn));
-      panels.forEach((panel) => panel.classList.toggle('active', panel.id === 'brief-panel-' + target));
+      const target = btn.getAttribute('data-zctab');
+      zcTabs.forEach(t => t.classList.toggle('active', t === btn));
+      zcPanels.forEach(p => p.classList.toggle('active', p.id === 'zc-panel-' + target));
     });
   });
+
+  // Set header date/time
+  function updateBriefHeaderTime() {
+    const now = new Date();
+    const dateEl = document.getElementById('brief-doc-date');
+    const timeEl = document.getElementById('brief-doc-time');
+    const yrEl   = document.getElementById('zc-brief-yr');
+    if(dateEl) dateEl.textContent = now.toLocaleDateString('en-GB', {weekday:'long', day:'numeric', month:'long', year:'numeric'});
+    if(timeEl) timeEl.textContent = now.toLocaleTimeString('en-GB', {hour:'2-digit', minute:'2-digit', timeZoneName:'short'}) + ' — Amsterdam';
+    if(yrEl)   yrEl.textContent = now.getFullYear();
+  }
+  updateBriefHeaderTime();
+  setInterval(updateBriefHeaderTime, 30000);
 }
 
 async function loadMarketBrief(){
@@ -5553,28 +5710,105 @@ async function loadMarketBrief(){
     }
   }catch(e){ /* no server file — will generate via AI */ }
 
-  // If no fresh server data, generate live via Claude API
+  // If no fresh server data, generate live via Claude API with real market data
   if(!data){
     try{
-      const prompt = `Today is ${new Date().toLocaleDateString('en-GB',{weekday:'long',day:'2-digit',month:'long',year:'numeric'})}.
+      // Show loading state in new layout
+      const loadingHTML = `<div style="color:rgba(155,89,214,.5);font-family:'Inter',sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:8px 0;display:flex;align-items:center;gap:10px"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#9b59d6;animation:briefPulse 1.2s ease-in-out infinite"></span>Fetching live data and generating brief...</div>`;
+      ['brief-summary','brief-btc-card','brief-eth-card','brief-macro','brief-whales-card'].forEach(id => {
+        const el = document.getElementById(id);
+        if(el) el.innerHTML = loadingHTML;
+      });
+      const zcFocusElLoad = document.getElementById('zc-focus-val');
+      if(zcFocusElLoad) zcFocusElLoad.textContent = 'Generating brief...';
+      const zcRiskElLoad = document.getElementById('zc-risk-val');
+      if(zcRiskElLoad) zcRiskElLoad.textContent = 'Fetching live data...';
 
-You are a professional crypto market analyst. Write a comprehensive daily market brief for today. Use current market knowledge up to your training cutoff. Be analytical, specific, and professional.
+      // 1. Fetch live prices from CoinCap
+      let liveMarketBlock = '';
+      let btcPrice = 'N/A', ethPrice = 'N/A', solPrice = 'N/A', bnbPrice = 'N/A';
+      let btc24h = '', eth24h = '', topGainer = '', topLoser = '';
+      let totalMcap = '', btcDom = '';
+      try{
+        const ccResp = await fetch('https://api.coincap.io/v2/assets?limit=15');
+        if(ccResp.ok){
+          const ccData = await ccResp.json();
+          const coins = ccData.data || [];
+          const fmt = (n) => parseFloat(n || 0);
+          const fmtP = (n) => { const v = fmt(n); return (v >= 0 ? '+' : '') + v.toFixed(2) + '%'; };
+          const fmtUSD = (n) => { const v = fmt(n); return v >= 1 ? '$' + v.toLocaleString('en-US', {maximumFractionDigits:2}) : '$' + v.toFixed(4); };
+          const lines = coins.map(c => `${c.symbol}/USD: ${fmtUSD(c.priceUsd)} | 24h ${fmtP(c.changePercent24Hr)} | MCap $${(fmt(c.marketCapUsd)/1e9).toFixed(1)}B`);
+          liveMarketBlock = lines.join('\n');
+          const btc = coins.find(c => c.id === 'bitcoin');
+          const eth = coins.find(c => c.id === 'ethereum');
+          const sol = coins.find(c => c.id === 'solana');
+          const bnb = coins.find(c => c.id === 'binance-coin');
+          if(btc){ btcPrice = fmtUSD(btc.priceUsd); btc24h = fmtP(btc.changePercent24Hr); }
+          if(eth){ ethPrice = fmtUSD(eth.priceUsd); eth24h = fmtP(eth.changePercent24Hr); }
+          if(sol){ solPrice = fmtUSD(sol.priceUsd); }
+          if(bnb){ bnbPrice = fmtUSD(bnb.priceUsd); }
+          const sorted = [...coins].sort((a,b) => parseFloat(b.changePercent24Hr||0) - parseFloat(a.changePercent24Hr||0));
+          topGainer = sorted[0] ? `${sorted[0].symbol} ${fmtP(sorted[0].changePercent24Hr)}` : '';
+          topLoser  = sorted[sorted.length-1] ? `${sorted[sorted.length-1].symbol} ${fmtP(sorted[sorted.length-1].changePercent24Hr)}` : '';
+          const totalMcapVal = coins.reduce((s,c) => s + parseFloat(c.marketCapUsd||0), 0);
+          totalMcap = '$' + (totalMcapVal/1e12).toFixed(2) + 'T';
+          const btcMcap = btc ? parseFloat(btc.marketCapUsd||0) : 0;
+          btcDom = btc ? ((btcMcap/totalMcapVal)*100).toFixed(1) + '%' : 'N/A';
+        }
+      }catch(e){ console.warn('CoinCap fetch failed:', e); }
 
-CRITICAL: Write ONLY in English. Every single word must be in English. Do not use any Dutch or other languages.
+      // 2. Fetch Fear & Greed
+      let fgText = 'N/A';
+      try{
+        const fgResp = await fetch('https://api.alternative.me/fng/?limit=1');
+        if(fgResp.ok){
+          const fgData = await fgResp.json();
+          const fg = fgData.data && fgData.data[0];
+          if(fg) fgText = `${fg.value} out of 100 — ${fg.value_classification}`;
+        }
+      }catch(e){}
 
-Respond ONLY with a valid JSON object (no markdown, no backticks) with exactly these keys:
+      const todayStr = new Date().toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+      const dateShort = new Date().toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'});
+
+      const prompt = `You are the lead analyst at ZIMR Capital, writing the daily market intelligence brief for ${todayStr}.
+
+LIVE MARKET DATA — pulled from CoinCap API right now:
+${liveMarketBlock || 'Live data unavailable — use best knowledge from training cutoff'}
+
+KEY FIGURES:
+Bitcoin: ${btcPrice} (24h: ${btc24h})
+Ethereum: ${ethPrice} (24h: ${eth24h})
+Solana: ${solPrice}
+BNB: ${bnbPrice}
+Total crypto market cap: ${totalMcap}
+Bitcoin dominance: ${btcDom}
+Top gainer 24h: ${topGainer}
+Top loser 24h: ${topLoser}
+Fear and Greed Index: ${fgText}
+
+WRITING STANDARDS — mandatory:
+- English only. Zero other languages.
+- Write like a Bloomberg Intelligence analyst briefing professional traders. Specific, direct, data-driven.
+- Use EXACT prices and percentages from the live data. Never invent numbers.
+- Every paragraph must be substantive and worth reading. Cut all filler.
+- Connect macro context to crypto price action with clear logic.
+- full_report: 4 dense paragraphs: (1) total market state with exact mcap, dominance, and mood; (2) BTC + ETH specifics with exact prices and 24h moves; (3) what the Fear and Greed reading signals strategically and historically; (4) what to watch in next 24-48 hours and why it matters.
+- btc_structure: 3 paragraphs: current price action with exact levels and what they mean; volume and momentum analysis with specific observations; clear trading implication and what bulls vs bears need to see.
+- eth_analysis: 2 paragraphs: ETH exact price and performance vs BTC; key levels and what Layer 2 ecosystem context tells us about ETH demand.
+- macro_context: 3 paragraphs: how traditional markets and dollar strength are affecting crypto right now; Fed policy and rates context with specific implications; geopolitical or regulatory backdrop and what it means for the next week.
+- whale_flows: 2 paragraphs: what volume patterns and dominance shifts reveal about institutional vs retail activity; rotation signals and where big money appears to be moving based on the data.
+
+Respond ONLY with valid JSON, no markdown, no backticks, no preamble:
 {
-  "date": "<today's date as DD Mon YYYY>",
-  "risk": "<one-line risk regime, e.g. Moderate — elevated volatility with bullish bias>",
-  "focus": "<one-line primary market focus for today>",
-  "full_report": "<4 paragraph executive overview of current crypto market conditions>",
-  "btc_structure": "<2-3 paragraphs on Bitcoin market structure, key levels, on-chain signals>",
-  "eth_flows": "<2 paragraphs on Ethereum performance, Layer 2, fundamentals>",
-  "funding_oi": "<2 paragraphs on funding rates, open interest, liquidation data>",
-  "volatility_outlook": "<2 paragraphs on implied/realised volatility, options market>",
-  "top_narratives": ["<narrative 1>", "<narrative 2>", "<narrative 3>", "<narrative 4>", "<narrative 5>"],
-  "macro_impact": "<2-3 paragraphs on macro: Fed, rates, DXY, gold, equities impact on crypto>",
-  "whale_flows": "<2 paragraphs on whale on-chain activity, exchange flows, large transactions>"
+  "date": "${dateShort}",
+  "risk": "<6-8 words capturing exact risk regime with specific context>",
+  "focus": "<one sharp, specific sentence: the single most important thing to watch today>",
+  "full_report": "<4 paragraphs separated by double newline, dense and analytical, using exact prices>",
+  "btc_structure": "<3 paragraphs on Bitcoin, using exact price levels and percentages>",
+  "eth_analysis": "<2 paragraphs on Ethereum specifics with exact figures>",
+  "macro_context": "<3 paragraphs on macro, rates, DXY and their specific impact on crypto>",
+  "whale_flows": "<2 paragraphs on volume, rotation and institutional positioning signals>"
 }`;
 
       const briefApiKey = getApiKey();
@@ -5591,8 +5825,8 @@ Respond ONLY with a valid JSON object (no markdown, no backticks) with exactly t
         },
         body: JSON.stringify({
           model: 'claude-sonnet-4-20250514',
-          max_tokens: 4000,
-          system: 'You are a professional crypto market analyst. ALWAYS write in English only. Never use Dutch or any other language. Always respond with valid JSON only.',
+          max_tokens: 5000,
+          system: 'You are the lead crypto market analyst at ZIMR Capital. Write ONLY in English. Use exact figures from the data provided. Be specific, analytical, and genuinely valuable to professional traders. Respond only with valid JSON.',
           messages: [{ role: 'user', content: prompt }]
         })
       });
@@ -5600,20 +5834,23 @@ Respond ONLY with a valid JSON object (no markdown, no backticks) with exactly t
       if(resp.ok){
         const aiData = await resp.json();
         const rawText = (aiData.content && aiData.content[0] && aiData.content[0].text) || '';
-        // Strip any markdown fences just in case
         const cleaned = rawText.replace(/^```json\s*/,'').replace(/```\s*$/,'').trim();
         try{
           data = JSON.parse(cleaned);
+          // Normalize field names for the renderer
+          data.btc_structure = data.btc_structure || data.btc_analysis || '';
+          data.eth_flows     = data.eth_flows     || data.eth_analysis || '';
+          data.macro_impact  = data.macro_impact  || data.macro_context || '';
+          data.whale_flows   = data.whale_flows   || '';
           data._source = 'live-ai';
         }catch(parseErr){
-          console.warn('Brief JSON parse error:', parseErr, rawText.slice(0,200));
+          console.warn('Brief JSON parse error:', parseErr, rawText.slice(0,300));
         }
       }
     }catch(e){
       console.warn('Claude API brief generation failed:', e);
     }
   }
-
   // Final fallback: workflow not yet run message
   if(!data){
     data = {
@@ -5645,7 +5882,13 @@ Respond ONLY with a valid JSON object (no markdown, no backticks) with exactly t
   // Render helper — must be defined before use
   const renderParagraphs = (text) => {
     if(!text) return '<p>Loading...</p>';
-    return text.split(/\n{2,}|(?<=\.) (?=[A-Z])/).filter(p => p.trim().length > 20).map(p =>
+    // Split on double newlines first (our preferred separator), then fall back to sentence splitting
+    const parts = text.split(/\n{2,}/);
+    if(parts.length > 1){
+      return parts.filter(p => p.trim().length > 10).map(p => '<p>' + p.trim().replace(/\n/g, ' ') + '</p>').join('');
+    }
+    // Single block — split on sentence boundaries
+    return text.split(/(?<=\.) (?=[A-Z])/).filter(p => p.trim().length > 20).map(p =>
       '<p>' + p.trim() + '</p>'
     ).join('');
   };
@@ -5703,6 +5946,12 @@ Respond ONLY with a valid JSON object (no markdown, no backticks) with exactly t
   if(fpv) fpv.textContent = focus || 'loading...';
   const rpv = document.getElementById('brief-risk-pill-val');
   if(rpv) rpv.textContent = risk || 'loading...';
+
+  // New ZC brief meta bar
+  const zcFocus = document.getElementById('zc-focus-val');
+  if(zcFocus) zcFocus.textContent = focus || 'Loading...';
+  const zcRisk = document.getElementById('zc-risk-val');
+  if(zcRisk) zcRisk.textContent = risk || 'Loading...';
 
   const firstNarrative = Array.isArray(data.top_narratives || data.narratives || data.narrative)
     ? (data.top_narratives || data.narratives || data.narrative)[0]
