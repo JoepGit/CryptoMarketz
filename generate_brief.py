@@ -99,7 +99,7 @@ You are the lead analyst at ZIMR Capital, writing the daily market brief for {to
 
 LANGUAGE RULE: English only. No Dutch, no German, no other languages.
 
-CRITICAL FORMAT RULE: Keep everything SHORT. This is a morning brief that readers scan in 60 seconds, not a research report. Every field must be concise and punchy. Write numbers as numbers ($72,544 not "seventy two thousand"). Tone: sharp, confident, trader-to-trader.
+CRITICAL FORMAT RULE: Keep everything SHORT. 60-second morning brief, not a report. ALWAYS write numbers as numerals — NEVER spell them out. $72,544 not "seventy two thousand". 1.3% not "one point three percent". $2.54T not "two point five four trillion". Tone: sharp, confident, trader-to-trader.
 
 ═══ LIVE PRICE DATA — use ONLY these prices ═══
 {market_block}
@@ -152,14 +152,14 @@ print("\n🤖 Generating brief with Claude...")
 payload = json.dumps({
     "model": "claude-sonnet-4-20250514",
     "max_tokens": 2000,
-    "system": "You are the lead analyst at ZIMR Capital. Write ONLY in English. Keep every section SHORT and punchy — this is a 60-second morning brief, not a report. Use exact prices from the data. Respond only with valid JSON.",
+    "system": "You are the lead analyst at ZIMR Capital. Write ONLY in English. ALWAYS use numerals for numbers — never spell them out ($72,544 not seventy two thousand, 1.3% not one point three percent). Keep every field short and punchy. Respond only with valid JSON.",
     "messages": [{"role": "user", "content": prompt}]
 }).encode()
 
 import time as _time
 
-def call_claude(payload, api_key, max_retries=5):
-    """Retry on 529/500/503 with exponential backoff."""
+def call_claude(payload, api_key, max_retries=3):
+    """Retry on 529/500/503 with backoff. Returns None if API stays down."""
     for attempt in range(1, max_retries + 1):
         req = urllib.request.Request(
             "https://api.anthropic.com/v1/messages",
@@ -177,14 +177,20 @@ def call_claude(payload, api_key, max_retries=5):
             body = e.read().decode()
             print(f"⚠️  HTTP {e.code} (attempt {attempt}/{max_retries}): {body[:120]}")
             if e.code in (529, 500, 503) and attempt < max_retries:
-                wait = 30 * attempt  # 30s, 60s, 90s, 120s
+                wait = 45 * attempt  # 45s, 90s
                 print(f"⏳ API overloaded — retrying in {wait}s...")
                 _time.sleep(wait)
+            elif e.code in (529, 500, 503):
+                print("⚠️  API still overloaded — keeping existing brief, will retry tomorrow.")
+                return None
             else:
-                raise
-    raise RuntimeError("Max retries exceeded")
+                raise  # real errors (401, 400 etc) still crash loudly
+    return None
 
 data = call_claude(payload, api_key)
+if data is None:
+    print("✅ No update today — existing brief stays live.")
+    import sys; sys.exit(0)
 
 import re as _re
 text = data['content'][0]['text'].strip()
