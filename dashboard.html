@@ -5702,7 +5702,7 @@ async function loadMarketBrief(){
         fetched.macro_impact, fetched.macro
       ].filter(Boolean).join(' ').toLowerCase();
       // Accept the data if it has content (Dutch or English both fine)
-      if(fetched && (fetched.btc || fetched.btc_structure || fetched.full_report || fetched.summary)){
+      if(fetched && (fetched.btc || fetched.btc_structure || fetched.full_report || fetched.summary || fetched.body)){
         data = fetched;
       }
     }
@@ -5878,7 +5878,7 @@ Respond ONLY with valid JSON, no markdown, no backticks, no preamble:
   const whales     = data.whale_flows   || data.whales || '';
   const risk       = data.risk   || '';
   const focus      = data.focus  || '';
-  const fullReport = data.full_report || data.summary || compact(btc, eth, macro, whales, funding, volatility);
+  const fullReport = data.body || data.full_report || data.summary || compact(btc, eth, macro, whales, funding, volatility);
 
   // Render helper — must be defined before use
   const renderParagraphs = (text) => {
