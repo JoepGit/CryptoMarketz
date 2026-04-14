@@ -5869,16 +5869,27 @@ Respond ONLY with valid JSON, no markdown, no backticks, no preamble:
     };
   }
 
+  // New format: body is plain prose — split across tabs
+  let fullReport, macro, focus, risk;
+  if(data.body) {
+    const paras = data.body.split(/\n{2,}/).map(p => p.trim()).filter(p => p.length > 20);
+    const splitAt = Math.max(2, paras.length - 2);
+    fullReport = paras.slice(0, splitAt).join('\n\n');
+    macro      = paras.slice(splitAt).join('\n\n');
+    focus      = data.focus || '';
+    risk       = data.risk  || (data.fg_value ? 'Fear & Greed: ' + data.fg_value + (data.fg_label ? ' — ' + data.fg_label : '') : '');
+  } else {
+    fullReport = data.full_report || data.summary || '';
+    macro      = data.macro_impact || data.macro || '';
+    focus      = data.focus || '';
+    risk       = data.risk  || '';
+  }
   const btc        = data.btc_structure || data.btc || '';
   const eth        = data.eth_flows     || data.eth || '';
   const funding    = data.funding_oi    || data.funding || '';
   const volatility = data.volatility_outlook || data.volatility || '';
   const narratives = normalizeList(data.top_narratives || data.narratives || data.narrative);
-  const macro      = data.macro_impact  || data.macro || '';
   const whales     = data.whale_flows   || data.whales || '';
-  const risk       = data.risk   || '';
-  const focus      = data.focus  || '';
-  const fullReport = data.body || data.full_report || data.summary || compact(btc, eth, macro, whales, funding, volatility);
 
   // Render helper — must be defined before use
   const renderParagraphs = (text) => {
@@ -5950,9 +5961,13 @@ Respond ONLY with valid JSON, no markdown, no backticks, no preamble:
 
   // New ZC brief meta bar
   const zcFocus = document.getElementById('zc-focus-val');
-  if(zcFocus) zcFocus.textContent = focus || 'Loading...';
+  const zcFocusBox = zcFocus && zcFocus.closest('.zc-meta-item');
+  if(zcFocus && focus) { zcFocus.textContent = focus; if(zcFocusBox) zcFocusBox.style.display=''; }
+  else if(zcFocusBox) zcFocusBox.style.display = 'none';
   const zcRisk = document.getElementById('zc-risk-val');
-  if(zcRisk) zcRisk.textContent = risk || 'Loading...';
+  const zcRiskBox = zcRisk && zcRisk.closest('.zc-meta-item');
+  if(zcRisk && risk) { zcRisk.textContent = risk; if(zcRiskBox) zcRiskBox.style.display=''; }
+  else if(zcRiskBox) zcRiskBox.style.display = 'none';
 
   const firstNarrative = Array.isArray(data.top_narratives || data.narratives || data.narrative)
     ? (data.top_narratives || data.narratives || data.narrative)[0]
