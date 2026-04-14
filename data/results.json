@@ -1,5 +1,18 @@
 [
   {
+    "id": 1775631988965,
+    "coin": "BTC/USD",
+    "type": "BUY",
+    "entry": "71654",
+    "tp": "74500",
+    "sl": "70000",
+    "result": "win",
+    "pnl": "+3.97%",
+    "resolved_price": 74743,
+    "signal_date": "2026-04-08T07:06:24.770Z",
+    "resolved_at": "2026-04-14T07:17:20.034Z"
+  },
+  {
     "id": 1776032602525,
     "coin": "XRP/USD",
     "type": "SELL",
