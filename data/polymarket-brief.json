@@ -1,65 +1,65 @@
 {
-  "date": "Monday April 13, 2026",
-  "generated": "2026-04-13T08:57:24.081264Z",
-  "brief": "# ZIMR CAPITAL MARKET INTELLIGENCE | Monday, April 13, 2026\n\n## HEADLINE\n**Peru's Presidential Race Breaks Open as L\u00f3pez Aliaga Surges; Hungary's Political Verdict Locks In**\n\n---\n\n## MARKET ANALYSIS\n\n**The L\u00f3pez Aliaga momentum is real.** Up 25.5% in 24 hours on $994K volume, he's now the market favorite at 48%\u2014flipping the board against Keiko Fujimori (38%, +6%). This isn't noise; it's smart money repositioning. Something material moved Peru-side yesterday. Watch for polling data release or endorsement news that triggered this. Fujimori's ceiling appears to be capping out, making L\u00f3pez Aliaga the consensus pick for traders. Ricardo Belmont's collapse to 1% (-21.5%) confirms the race has consolidated to a two-horse affair.\n\n**Hungary's market resolved itself spectacularly.** P\u00e9ter Magyar at 99% (+22.9%) now represents near-certainty that Orb\u00e1n's reign ends. The $7.1M volume on Magyar paired with $10.2M fleeing the Orb\u00e1n position (now 1%, -23.2%) tells you institutional money had conviction on this outcome and positioned accordingly. This is a post-facto price discovery\u2014likely the government announcement already happened, but retail was catching up Sunday night into Monday. The arbitrage is closed.\n\n**Iran-US diplomacy is a lottery, not a trade.** The April 10 deadline passed; now \"by April 15\" sits at 3% on $706K. The +24.9% spike on the April 10 miss suggests speculative longs hoping for last-minute theater. Smart money isn't here\u2014this is retail FOMO on geopolitical headlines. Skip it unless you have alpha on actual back-channel negotiations.\n\n---\n\n## WATCH LIST\n\n1. **L\u00f3pez Aliaga 2026 Peru winner** \u2014 Could 48% hold or does this consolidate higher? Watch for second-wave smart money if new polling drops Monday. Liquidity at $994K is still thin; a $2M+ move either direction signals institutional conviction shifting.\n\n2. **Keiko Fujimori Peru winner** \u2014 The 38% floor is critical. If she drops below 35% this week, it's capitulation; above 40% means a real runoff scenario priced in. This is your hedge if L\u00f3pez Aliaga overheated.\n\n3. **Spain 2026 FIFA World Cup** \u2014 Oddball +1.7% move on $1.3M volume. No obvious news catalyst. Either someone knows squad health updates early, or this is algorithmic noise. Monitor for injury news or friendly match performance mid-week.\n\n---\n\n**Volume check:** Hungary's $17.3M combined action dwarfs everything else. Peru's $3.5M spread across 5 candidates shows conviction without consensus. Treat accordingly.",
+  "date": "Tuesday April 14, 2026",
+  "generated": "2026-04-14T08:19:03.027419Z",
+  "brief": "# ZIMR DAILY BRIEF | Tuesday, April 14, 2026\n\n## Headline\n**Peru's kingmaker race tightens as L\u00f3pez Aliaga collapses; Iran tensions eerily priced at 1% despite $13M bet on military standdown**\n\n---\n\n## The Signal\n\nPeruvian presidential markets are consolidating around **Fujimori as frontrunner (55%)** after L\u00f3pez Aliaga hemorrhaged 41% in a single day\u2014$878K in volume suggests institutional conviction in his exit. S\u00e1nchez Palomino's modest +19.7% gain ($1.7M) indicates smart money positioning him as the anti-Fujimori fallback, not a genuine threat. This looks like fragmentation of the center-right vote crystallizing into a two-horse race.\n\nThe real **red flag is Iran**. $13M is parked on \"military action ends by April 17\" at 99%, yet parallel markets show 1% odds on an immediate meeting and 12% on a permanent deal by April 22. This is either complacency or the market is pricing a ceasefire announcement as already locked in. The $2.2M short on \"MIGA\" posts suggests traders don't believe Trump will escalate rhetoric further\u2014a tell that backchannels may be warmer than public signals indicate.\n\n**Smart money's actual bet:** S\u00e1nchez Palomino as Peru's dark horse (not reflected in his 22% price) and a Iran de-escalation narrative shift within 48-72 hours that crushes the 99% \"action ends\" market when reality doesn't match hype.\n\n---\n\n## Watch List\n\n1. **S\u00e1nchez Palomino 2026 Peru** (22%) \u2014 L\u00f3pez Aliaga's collapse unwinds a crowded short. If Fujimori stumbles on corruption issues, this is the contrarian position. Monitor Peruvian polling releases.\n\n2. **Iran meeting by April 10** (1%) \u2014 This *already passed* (it's April 14). Market hasn't resolved or is broken. If live, it's a free arb; if dead, expect delayed settlement fees.\n\n3. **Strait of Hormuz normal by end of April** (22%) \u2014 Lagging indicator of Iran sentiment. Watch for shipping data and tanker booking rates; jumped +8% today suggesting traders expect quick re-opening.",
   "top_movers": [
     {
+      "question": "Busan: Ilya Ivashka vs Dane Sweeny",
+      "prob": 99,
+      "change": 62.0,
+      "vol24": "$1.0M",
+      "slug": "atp-ivashka-sweeny-2026-04-12"
+    },
+    {
       "question": "Will Rafael L\u00f3pez Aliaga win the 2026 Peruvian presidential election?",
-      "prob": 48,
-      "change": 25.5,
-      "vol24": "$994K",
+      "prob": 22,
+      "change": -41.0,
+      "vol24": "$878K",
       "slug": "will-rafael-lpez-aliaga-win-the-2026-peruvian-presidential-election"
     },
     {
-      "question": "US x Iran meeting by April 10, 2026?",
-      "prob": 25,
-      "change": 24.9,
-      "vol24": "$1.1M",
-      "slug": "us-x-iran-meeting-by-april-10-2026-895"
+      "question": "Will Keiko Fujimori win the 2026 Peruvian presidential election?",
+      "prob": 55,
+      "change": 24.5,
+      "vol24": "$645K",
+      "slug": "will-keiko-fujimori-win-the-2026-peruvian-presidential-election"
     },
     {
-      "question": "Will the next Prime Minister of Hungary be Viktor Orb\u00e1n?",
+      "question": "Will Roberto S\u00e1nchez Palomino win the 2026 Peruvian presidential election?",
+      "prob": 22,
+      "change": 19.7,
+      "vol24": "$1.7M",
+      "slug": "will-roberto-snchez-palomino-win-the-2026-peruvian-presidential-election"
+    },
+    {
+      "question": "Will Trump post \"Make Iran Great Again\" or \"MIGA\" on Truth Social this week?",
       "prob": 1,
-      "change": -23.2,
-      "vol24": "$10.2M",
-      "slug": "will-the-next-prime-minister-of-hungary-be-viktor-orbn"
-    },
-    {
-      "question": "Will the next Prime Minister of Hungary be P\u00e9ter Magyar?",
-      "prob": 99,
-      "change": 22.9,
-      "vol24": "$7.1M",
-      "slug": "will-the-next-prime-minister-of-hungary-be-pter-magyar"
-    },
-    {
-      "question": "Will Ricardo Belmont win the 2026 Peruvian presidential election?",
-      "prob": 1,
-      "change": -21.5,
-      "vol24": "$763K",
-      "slug": "will-ricardo-belmont-win-the-2026-peruvian-presidential-election"
+      "change": -15.0,
+      "vol24": "$2.2M",
+      "slug": "will-trump-post-make-iran-great-again-or-miga-on-truth-social-this-week"
     }
   ],
   "top_vol": [
     {
-      "question": "Will the next Prime Minister of Hungary be Viktor Orb\u00e1n?",
-      "prob": 1,
-      "change": -23.2,
-      "vol24": "$10.2M",
-      "slug": "will-the-next-prime-minister-of-hungary-be-viktor-orbn"
-    },
-    {
-      "question": "Will the next Prime Minister of Hungary be P\u00e9ter Magyar?",
+      "question": "Military action against Iran ends by April 17, 2026?",
       "prob": 99,
-      "change": 22.9,
-      "vol24": "$7.1M",
-      "slug": "will-the-next-prime-minister-of-hungary-be-pter-magyar"
+      "change": 0.1,
+      "vol24": "$13.0M",
+      "slug": "military-action-against-iran-ends-by-april-17-2026"
     },
     {
-      "question": "Will the next Prime Minister of Hungary be Istv\u00e1n Kapit\u00e1ny?",
+      "question": "Will PH win the third most seats in the 2026 Colombian Chamber of Representatives election?",
       "prob": 1,
       "change": -0.1,
-      "vol24": "$2.3M",
-      "slug": "will-the-next-prime-minister-of-hungary-be-istvn-kapitny"
+      "vol24": "$2.5M",
+      "slug": "will-ph-win-the-third-most-seats-in-the-2026-colombian-chamber-of-representatives-election"
+    },
+    {
+      "question": "Will Trump post \"Make Iran Great Again\" or \"MIGA\" on Truth Social this week?",
+      "prob": 1,
+      "change": -15.0,
+      "vol24": "$2.2M",
+      "slug": "will-trump-post-make-iran-great-again-or-miga-on-truth-social-this-week"
     }
   ]
 }
