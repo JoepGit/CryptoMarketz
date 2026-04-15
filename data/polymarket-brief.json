@@ -1,65 +1,65 @@
 {
-  "date": "Tuesday April 14, 2026",
-  "generated": "2026-04-14T08:19:03.027419Z",
-  "brief": "# ZIMR DAILY BRIEF | Tuesday, April 14, 2026\n\n## Headline\n**Peru's kingmaker race tightens as L\u00f3pez Aliaga collapses; Iran tensions eerily priced at 1% despite $13M bet on military standdown**\n\n---\n\n## The Signal\n\nPeruvian presidential markets are consolidating around **Fujimori as frontrunner (55%)** after L\u00f3pez Aliaga hemorrhaged 41% in a single day\u2014$878K in volume suggests institutional conviction in his exit. S\u00e1nchez Palomino's modest +19.7% gain ($1.7M) indicates smart money positioning him as the anti-Fujimori fallback, not a genuine threat. This looks like fragmentation of the center-right vote crystallizing into a two-horse race.\n\nThe real **red flag is Iran**. $13M is parked on \"military action ends by April 17\" at 99%, yet parallel markets show 1% odds on an immediate meeting and 12% on a permanent deal by April 22. This is either complacency or the market is pricing a ceasefire announcement as already locked in. The $2.2M short on \"MIGA\" posts suggests traders don't believe Trump will escalate rhetoric further\u2014a tell that backchannels may be warmer than public signals indicate.\n\n**Smart money's actual bet:** S\u00e1nchez Palomino as Peru's dark horse (not reflected in his 22% price) and a Iran de-escalation narrative shift within 48-72 hours that crushes the 99% \"action ends\" market when reality doesn't match hype.\n\n---\n\n## Watch List\n\n1. **S\u00e1nchez Palomino 2026 Peru** (22%) \u2014 L\u00f3pez Aliaga's collapse unwinds a crowded short. If Fujimori stumbles on corruption issues, this is the contrarian position. Monitor Peruvian polling releases.\n\n2. **Iran meeting by April 10** (1%) \u2014 This *already passed* (it's April 14). Market hasn't resolved or is broken. If live, it's a free arb; if dead, expect delayed settlement fees.\n\n3. **Strait of Hormuz normal by end of April** (22%) \u2014 Lagging indicator of Iran sentiment. Watch for shipping data and tanker booking rates; jumped +8% today suggesting traders expect quick re-opening.",
+  "date": "Wednesday April 15, 2026",
+  "generated": "2026-04-15T08:20:19.085269Z",
+  "brief": "# ZIMR DAILY BRIEF | April 15, 2026\n\n## Market Screaming \"Iran Strike Imminent\"\u2014But Peace Deal Odds Rising\n\nThe Iran-Iraq conflict market just made a violent move: \"Will Iran strike Iraq by April 30\" jumped 58.5% to 99%, now essentially pricing in certainty. Simultaneously, the broader \"US x Iran permanent peace deal by April 22\" gained 14% to 26%\u2014a seemingly contradictory signal that reveals the real trade: markets are betting Iran *does* strike, but within a framework that doesn't derail negotiations. The $502K volume spike on the strike market suggests informed positioning ahead of an expected escalation window.\n\nSmart money is clearly hedged. The 99% Iran strike probability paired with rising peace deal odds (26%) indicates traders expect a tit-for-tat exchange that stays *contained*\u2014tactical strikes, not strategic war. Watch the \"Military action against Iran ends by April 17\" at 99% with massive $6.8M volume: this is the real tell. That market is saying the kinetic phase resolves *before* mid-April, leaving room for diplomatic salvage by the 22nd. The inverse play is the Trump announcement market (2% on \"end of military ops by April 15th\")\u2014extremely thin odds on immediate peace, high conviction that escalation happens first.\n\n**The Peru election complex** is reshuffling aggressively. S\u00e1nchez Palomino's second-place odds jumped 39% to 84% on $452K volume, while L\u00f3pez Aliaga collapsed -14% to just 8%. Keiko Fujimori stabilized at 66%, suggesting she's now the consensus frontrunner with S\u00e1nchez as the likely runoff opponent. This is a crowded trade with $1.3M+ flowing into S\u00e1nchez first-round positioning.\n\n## WATCH LIST\n\n1. **\"Military action against Iran ends by April 17\" (99% | $6.8M)** \u2014 If this dips below 95%, the market is repricing the conflict window as longer than expected. Track this hourly for real-time escalation risk. Biggest liquidity pool suggests this is the true market consensus.\n\n2. **\"US x Iran permanent peace deal by April 22\" (26% | $1.1M)** \u2014 Counter-intuitively, this needs to *rise* alongside the strike market to confirm the \"controlled escalation \u2192 negotiation\" narrative. If it falls below 20%, peace is off the table and we're looking at prolonged conflict.\n\n3. **S\u00e1nchez Palomino second-place (84% | +39.4%)** \u2014 This is likely overextended on single-day volume. If L\u00f3pez Aliaga stabilizes above 15% tomorrow, expect mean reversion. Watch for Peru polling drops or new candidate statements that could flush weak hands.",
   "top_movers": [
     {
-      "question": "Busan: Ilya Ivashka vs Dane Sweeny",
+      "question": "Will Iran strike Iraq by April 30, 2026?",
       "prob": 99,
-      "change": 62.0,
-      "vol24": "$1.0M",
-      "slug": "atp-ivashka-sweeny-2026-04-12"
+      "change": 58.5,
+      "vol24": "$502K",
+      "slug": "will-iran-strike-iraq-by-april-30-2026"
+    },
+    {
+      "question": "Will Roberto S\u00e1nchez Palomino finish in second place in the first round of the 2026 Peruvian presidential election?",
+      "prob": 84,
+      "change": 39.4,
+      "vol24": "$452K",
+      "slug": "will-roberto-snchez-palomino-finish-in-second-place-in-the-first-round-of-the-2026-peruvian-presidential-election"
     },
     {
       "question": "Will Rafael L\u00f3pez Aliaga win the 2026 Peruvian presidential election?",
-      "prob": 22,
-      "change": -41.0,
-      "vol24": "$878K",
+      "prob": 8,
+      "change": -14.0,
+      "vol24": "$1.5M",
       "slug": "will-rafael-lpez-aliaga-win-the-2026-peruvian-presidential-election"
     },
     {
-      "question": "Will Keiko Fujimori win the 2026 Peruvian presidential election?",
-      "prob": 55,
-      "change": 24.5,
-      "vol24": "$645K",
-      "slug": "will-keiko-fujimori-win-the-2026-peruvian-presidential-election"
+      "question": "US x Iran permanent peace deal by April 22, 2026?",
+      "prob": 26,
+      "change": 14.0,
+      "vol24": "$1.1M",
+      "slug": "us-x-iran-permanent-peace-deal-by-april-22-2026"
     },
     {
-      "question": "Will Roberto S\u00e1nchez Palomino win the 2026 Peruvian presidential election?",
-      "prob": 22,
-      "change": 19.7,
-      "vol24": "$1.7M",
-      "slug": "will-roberto-snchez-palomino-win-the-2026-peruvian-presidential-election"
-    },
-    {
-      "question": "Will Trump post \"Make Iran Great Again\" or \"MIGA\" on Truth Social this week?",
-      "prob": 1,
-      "change": -15.0,
-      "vol24": "$2.2M",
-      "slug": "will-trump-post-make-iran-great-again-or-miga-on-truth-social-this-week"
+      "question": "LoL: Nongshim Red Force vs BNK FEARX (BO3) - LCK Rounds 1-2",
+      "prob": 36,
+      "change": -12.0,
+      "vol24": "$455K",
+      "slug": "lol-ns-fox1-2026-04-15"
     }
   ],
   "top_vol": [
     {
       "question": "Military action against Iran ends by April 17, 2026?",
       "prob": 99,
-      "change": 0.1,
-      "vol24": "$13.0M",
+      "change": 0,
+      "vol24": "$6.8M",
       "slug": "military-action-against-iran-ends-by-april-17-2026"
     },
     {
-      "question": "Will PH win the third most seats in the 2026 Colombian Chamber of Representatives election?",
-      "prob": 1,
-      "change": -0.1,
-      "vol24": "$2.5M",
-      "slug": "will-ph-win-the-third-most-seats-in-the-2026-colombian-chamber-of-representatives-election"
+      "question": "Trump announces end of military operations against Iran by April 15th?",
+      "prob": 2,
+      "change": 0.6,
+      "vol24": "$2.2M",
+      "slug": "trump-announces-end-of-military-operations-against-iran-by-april-15th-962-364-677"
     },
     {
-      "question": "Will Trump post \"Make Iran Great Again\" or \"MIGA\" on Truth Social this week?",
+      "question": "Will Cura\u00e7ao win the 2026 FIFA World Cup?",
       "prob": 1,
-      "change": -15.0,
-      "vol24": "$2.2M",
-      "slug": "will-trump-post-make-iran-great-again-or-miga-on-truth-social-this-week"
+      "change": -0.1,
+      "vol24": "$1.9M",
+      "slug": "will-curaao-win-the-2026-fifa-world-cup"
     }
   ]
 }
