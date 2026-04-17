@@ -1,5 +1,17 @@
 [
   {
+    "id": 1776451415404,
+    "coin": "ETH/USD",
+    "type": "SELL",
+    "entry": "2429",
+    "tp": "2320",
+    "sl": "2470",
+    "note": "4H RSI 72.4 overbought, 1H RSI 70.7 elevated. Price near 24H high resistance at 2462. Target support at EMA20 level 2342. Use 1/3 position size.",
+    "timestamp": "2026-04-17T18:43:27.230Z",
+    "generated_at": "Fri, 17 Apr 2026 18:43:27 GMT",
+    "source": "claude-bot"
+  },
+  {
     "id": 1776430538049,
     "coin": "BTC/USD",
     "type": "BUY",
@@ -21,18 +33,6 @@
     "note": "Strong momentum with 2.63% 1H gain and 4.50% 24H gain, 7-day uptrend at 6.34%. Entry near current price with TP at psychological $98 level and SL below recent support. Risk/reward 1:2.5. Use 1/3 position size.",
     "timestamp": "2026-04-16T18:58:27.134Z",
     "generated_at": "Thu, 16 Apr 2026 18:58:27 GMT",
-    "source": "claude-bot"
-  },
-  {
-    "id": 1775631987117,
-    "coin": "ETH/USD",
-    "type": "BUY",
-    "entry": "2245",
-    "tp": "2400",
-    "sl": "2120",
-    "note": "4H bullish trend with price above EMA20/50, 1H RSI 43.6 in buy zone, strong momentum with 6.91% daily gain, 4H EMA20 at 2123 as support. Use 1/3 position size.",
-    "timestamp": "2026-04-08T07:06:24.770Z",
-    "generated_at": "Wed, 08 Apr 2026 07:06:24 GMT",
     "source": "claude-bot"
   }
 ]
