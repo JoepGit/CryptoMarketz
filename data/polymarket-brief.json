@@ -1,45 +1,52 @@
 {
-  "date": "Thursday April 16, 2026",
-  "generated": "2026-04-16T08:21:06.904748Z",
-  "brief": "# POLYMARKET DAILY BRIEF | Thursday, April 16, 2026\n\n## HEADLINE\n**Peru's Presidential Race Tilts as L\u00f3pez Aliaga's Second-Place Odds Spike 22% \u2014 Market Sniffs Polling Shift**\n\n---\n\n## THE SIGNAL\n\nThe Peruvian election complex just moved hard. L\u00f3pez Aliaga's second-place finish jumped from 14% to 36% in 24 hours (+$470K volume), while his outright win odds ticked up 11% to 18% simultaneously. This isn't random noise\u2014it signals credible new polling or campaign momentum intelligence filtering into markets before traditional media. S\u00e1nchez Palomino got punished (-10%), suggesting a three-way race narrative is crystallizing. Smart money is positioning for a L\u00f3pez Aliaga runoff scenario.\n\nThe geopolitical desk is equally active. Israel-Hezbollah ceasefire by April 30 hit 64% (+20.2%), now carrying serious conviction with $769K daily volume. This tracks real diplomatic signals, not speculation. Conversely, the US-Iran permanent peace deal by April 22 cratered to 22% (-4%), suggesting the market has priced in that window is closed. The Iran invasion odds edged up 3% to 32%\u2014baseline risk reassessment, not panic.\n\n**The misprice:** Warriors at 1% to win 2026 NBA Finals on $2.8M volume is hilariously depressed. Bayern Munich at 34% for Champions League has more than 30x the conviction despite similar competitive positioning. Either the Warriors market has liquidity-driven mispricing or there's real injury data the esports-heavy Polymarket crowd doesn't track.\n\n---\n\n## WATCH LIST\n\n1. **L\u00f3pez Aliaga second-place (36%)** \u2014 Will momentum hold or fade into noise? Next 48 hours critical. If it holds above 32%, runoff trade is live.\n\n2. **Israel-Hezbollah ceasefire by April 30 (64%)** \u2014 Watch for any Beirut/Tel Aviv escalation headlines. A 64% price with 2 weeks to expiry is aggressive; small military flare-up could crater this 15-20 points fast.\n\n3. **Fed rate decision markets (1% both directions)** \u2014 $5.6M+ volume on hold/cut/hike. These are absurdly mispriced if decision probability is actually distributed. Monitor for real Fed speak today that could swing 200+ bps across these three outcomes.",
+  "date": "Friday April 17, 2026",
+  "generated": "2026-04-17T08:19:46.353183Z",
+  "brief": "# ZIMR DAILY BRIEF | Friday, April 17, 2026\n\n## HEADLINE\n**Iran Peace Talks Stumble Into Weekend: April 22 Window Tightens as Traders Rotate into May Scenarios**\n\n---\n\n## MARKET INTELLIGENCE\n\nThe Iran peace narrative is fracturing by deadline. The April 22 deal probability sits at just 24% despite $2.1M in volume\u2014the highest liquidity on any Iran contract\u2014while May 31 holds steady at 56%. This spread screams that smart money has already priced in a failed near-term agreement and is now positioning for extended negotiations. The +2.0% move on April 22 amid sideways action on the May contract suggests retail is still chasing the near-term longshot, but institutional capital has rotated downstream.\n\nThe 99% certainty on an Israel-Hezbollah ceasefire by tomorrow (backed by $20.5M volume) is a market floor, not signal\u2014this is tail-risk hedging. More telling: the Strait of Hormuz normalization market (26% probability) is barely moving despite theoretical linkage to Iran talks. If dealmakers were close, traders would be front-running shipping recovery. The flat price action here suggests genuine pessimism about April resolution, not just technical consolidation.\n\nFed pricing remains crystalline: 99% on no change, 1% on 50bps cut. This is efficient and not a trading opportunity\u2014move on. The Elon tweet volume markets (both 1%) are dead money; execution risk on exact tweet counts is too high relative to payout structure.\n\n---\n\n## WATCH LIST\n\n**1. US x Iran April 30 deal (40%, $562K vol)** \u2014 The middle-ground contract. If April 22 collapses below 20% today, watch if April 30 holds or bleeds toward 30%. Structural break below 35% signals markets pricing zero April resolution entirely.\n\n**2. Strait of Hormuz normalization (26%, $1.2M vol)** \u2014 A leading indicator. Any spike above 30% on Iran headlines would be early confirmation of deal momentum; flatness through weekend = delay confirmation.\n\n**3. Como 1907 match result (62%, +4.0%)** \u2014 Only non-geopolitical high-volume play. Use this as a volatility benchmark for European betting flow. If it reverses sharply EOD, suggests retail repositioning ahead of weekend.\n\n---\n\n*Position sizing: Iran deals are binary and illiquid at edges. Treat as 2-3% portfolio max.*",
   "top_movers": [
     {
-      "question": "Will Rafael L\u00f3pez Aliaga finish in second place in the first round of the 2026 Peruvian presidential election?",
-      "prob": 36,
-      "change": 22.0,
-      "vol24": "$470K",
-      "slug": "will-rafael-lpez-aliaga-finish-in-second-place-in-the-first-round-of-the-2026-peruvian-presidential-election"
-    },
-    {
-      "question": "Israel x Hezbollah ceasefire by April 30, 2026?",
-      "prob": 64,
-      "change": 20.2,
-      "vol24": "$769K",
-      "slug": "israel-x-hezbollah-ceasefire-by-april-30-2026-989-656-528"
-    },
-    {
-      "question": "Game Handicap: GEN (-1.5) vs HANJIN BRION (+1.5)",
-      "prob": 49,
-      "change": -19.5,
-      "vol24": "$431K",
-      "slug": "lol-bro2-gen-2026-04-16-game-handicap-home-1pt5"
+      "question": "Will Elon Musk post 280-299 tweets from April 10 to April 17, 2026?",
+      "prob": 1,
+      "change": -19.4,
+      "vol24": "$494K",
+      "slug": "elon-musk-of-tweets-april-10-april-17-280-299"
     },
     {
       "question": "Will Rafael L\u00f3pez Aliaga win the 2026 Peruvian presidential election?",
-      "prob": 18,
-      "change": 11.0,
-      "vol24": "$1.2M",
+      "prob": 12,
+      "change": -6.0,
+      "vol24": "$588K",
       "slug": "will-rafael-lpez-aliaga-win-the-2026-peruvian-presidential-election"
     },
     {
-      "question": "Will Roberto S\u00e1nchez Palomino win the 2026 Peruvian presidential election?",
-      "prob": 18,
-      "change": -10.2,
-      "vol24": "$725K",
-      "slug": "will-roberto-snchez-palomino-win-the-2026-peruvian-presidential-election"
+      "question": "Will Como 1907 win on 2026-04-17?",
+      "prob": 62,
+      "change": 4.0,
+      "vol24": "$578K",
+      "slug": "sea-sas-com-2026-04-17-com"
+    },
+    {
+      "question": "US x Iran permanent peace deal by May 31, 2026?",
+      "prob": 56,
+      "change": -3.0,
+      "vol24": "$474K",
+      "slug": "us-x-iran-permanent-peace-deal-by-may-31-2026"
+    },
+    {
+      "question": "US x Iran permanent peace deal by April 22, 2026?",
+      "prob": 24,
+      "change": 2.0,
+      "vol24": "$2.1M",
+      "slug": "us-x-iran-permanent-peace-deal-by-april-22-2026"
     }
   ],
   "top_vol": [
+    {
+      "question": "Israel x Hezbollah ceasefire by April 18, 2026?",
+      "prob": 99,
+      "change": 0,
+      "vol24": "$20.5M",
+      "slug": "israel-x-hezbollah-ceasefire-by-april-18-2026"
+    },
     {
       "question": "Will the Fed decrease interest rates by 50+ bps after the April 2026 meeting?",
       "prob": 1,
@@ -48,18 +55,11 @@
       "slug": "will-the-fed-decrease-interest-rates-by-50-bps-after-the-april-2026-meeting"
     },
     {
-      "question": "Military action against Iran ends by April 17, 2026?",
-      "prob": 99,
-      "change": 0,
-      "vol24": "$5.6M",
-      "slug": "military-action-against-iran-ends-by-april-17-2026"
-    },
-    {
-      "question": "Will \"Donk\" be said during the PGL Bucharest 2026 Grand Final?",
-      "prob": 1,
-      "change": -1.5,
-      "vol24": "$4.3M",
-      "slug": "will-donk-be-said-during-the-pgl-bucharest-2026-grand-final"
+      "question": "US x Iran permanent peace deal by April 22, 2026?",
+      "prob": 24,
+      "change": 2.0,
+      "vol24": "$2.1M",
+      "slug": "us-x-iran-permanent-peace-deal-by-april-22-2026"
     }
   ]
 }
