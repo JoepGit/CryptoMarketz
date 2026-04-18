@@ -2157,6 +2157,605 @@ body {
 }
 ::-webkit-scrollbar-thumb { background: #293444 !important; }
 ::-webkit-scrollbar-track  { background: #121923 !important; }
+
+/* ═══════════════════════════════════════════════════════════
+   POLISH v2 — tighter layout, smoother motion, better logo
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Smoother default transitions everywhere ── */
+*{
+  transition-timing-function:cubic-bezier(.22,.61,.36,1);
+}
+
+/* ── Scrollbar: thinner, purple hover ── */
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-thumb{background:#2a2a2a !important;border-radius:10px;border:2px solid transparent;background-clip:padding-box !important}
+::-webkit-scrollbar-thumb:hover{background:rgba(155,89,214,.45) !important;background-clip:padding-box !important}
+::-webkit-scrollbar-track{background:transparent !important}
+
+/* ── Page entrance animation ── */
+@keyframes pageFadeUp{
+  from{opacity:0;transform:translateY(8px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.page.active{animation:pageFadeUp .45s cubic-bezier(.22,.61,.36,1)}
+
+/* ── Card polish: subtle glow on hover, smoother lift ── */
+.card{
+  transition:transform .28s cubic-bezier(.22,.61,.36,1),
+             border-color .28s ease,
+             box-shadow .35s ease !important;
+  will-change:transform;
+}
+.card:hover{
+  transform:translateY(-2px) !important;
+  border-color:rgba(155,89,214,.28) !important;
+  box-shadow:
+    0 18px 40px rgba(0,0,0,.5),
+    0 0 0 1px rgba(155,89,214,.05),
+    0 0 28px -8px rgba(155,89,214,.25),
+    inset 0 1px 0 rgba(255,255,255,.04) !important;
+}
+
+/* ── Sidebar: cleaner spacing & smoother active state ── */
+.sb{
+  border-right:1px solid rgba(255,255,255,.04) !important;
+  backdrop-filter:blur(20px);
+}
+.sb-head{padding:22px 20px 18px !important}
+.sb-brand img{
+  border-radius:10px !important;
+  box-shadow:
+    0 4px 14px rgba(155,89,214,.25),
+    0 0 0 1px rgba(155,89,214,.15);
+  transition:transform .35s cubic-bezier(.22,.61,.36,1), box-shadow .35s ease;
+}
+.sb-brand:hover img{
+  transform:rotate(-4deg) scale(1.06);
+  box-shadow:
+    0 6px 20px rgba(155,89,214,.4),
+    0 0 0 1px rgba(155,89,214,.3);
+}
+.sbn li a{
+  transition:background .2s ease, color .2s ease,
+             border-color .2s ease, transform .2s ease,
+             box-shadow .2s ease !important;
+}
+.sbn li a:hover{transform:translateX(2px)}
+.sbn li a.active{
+  box-shadow:inset 3px 0 0 var(--accent),
+             0 0 16px -4px rgba(155,89,214,.25) !important;
+}
+.sbn li a.active svg{
+  filter:drop-shadow(0 0 6px rgba(155,89,214,.5));
+}
+
+/* ── Sidebar section labels: better hierarchy ── */
+.sb-sec{
+  font-size:10px !important;
+  letter-spacing:.14em !important;
+  color:rgba(255,255,255,.32) !important;
+  padding:18px 13px 8px !important;
+  font-weight:600 !important;
+}
+
+/* ── Avatar: purple glow ── */
+.sb-av{
+  box-shadow:
+    0 4px 14px rgba(155,89,214,.35),
+    0 0 0 2px rgba(155,89,214,.15),
+    inset 0 1px 0 rgba(255,255,255,.25);
+  transition:transform .3s ease, box-shadow .3s ease;
+}
+.sb-av:hover{
+  transform:scale(1.08);
+  box-shadow:
+    0 6px 20px rgba(155,89,214,.5),
+    0 0 0 2px rgba(155,89,214,.3);
+}
+
+/* ── Page header: stronger hierarchy, subtle gradient text ── */
+.ph{margin-bottom:28px !important}
+.ph h1{
+  font-size:28px !important;
+  font-weight:800 !important;
+  letter-spacing:-.02em !important;
+  background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,.7) 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* ── Greet animation on dashboard ── */
+.greet h1{
+  animation:pageFadeUp .6s cubic-bezier(.22,.61,.36,1);
+}
+.greet h1 em{
+  position:relative;
+  display:inline-block;
+}
+.greet h1 em::after{
+  content:'';
+  position:absolute;
+  left:0;right:0;bottom:-2px;
+  height:2px;
+  background:linear-gradient(90deg,transparent,var(--accent),transparent);
+  transform:scaleX(0);
+  transform-origin:center;
+  animation:underlineIn .8s cubic-bezier(.22,.61,.36,1) .3s forwards;
+}
+@keyframes underlineIn{to{transform:scaleX(1)}}
+
+/* ── Ticker: smoother fade edges ── */
+.tkr{backdrop-filter:blur(16px) saturate(140%) !important}
+.ti{transition:color .2s ease}
+.ti:hover .ti-v{color:var(--accent)}
+
+/* ── Dashboard brief (AI Market Report): breathe more ── */
+.dbm-title{
+  font-size:16px !important;
+  font-weight:700 !important;
+  letter-spacing:-.01em !important;
+}
+.dbm-pill{
+  font-size:10.5px !important;
+  letter-spacing:.08em !important;
+  padding:4px 9px !important;
+  border-radius:999px !important;
+  background:rgba(155,89,214,.1) !important;
+  border:1px solid rgba(155,89,214,.22) !important;
+  color:var(--accent) !important;
+  font-weight:600 !important;
+  transition:background .2s ease, border-color .2s ease;
+}
+.dbm-pill:hover{
+  background:rgba(155,89,214,.18) !important;
+  border-color:rgba(155,89,214,.35) !important;
+}
+
+/* ── Buttons: unified pulse on hover ── */
+button,.lbtn,.db-link{
+  transition:all .22s cubic-bezier(.22,.61,.36,1) !important;
+}
+.lbtn:hover{
+  transform:translateY(-1px);
+  box-shadow:0 8px 22px rgba(155,89,214,.45) !important;
+}
+.lbtn:active{transform:translateY(0)}
+.db-link{
+  position:relative;
+  overflow:hidden;
+}
+.db-link::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,transparent,rgba(155,89,214,.18),transparent);
+  transform:translateX(-100%);
+  transition:transform .5s ease;
+}
+.db-link:hover::before{transform:translateX(100%)}
+.db-link:hover{
+  border-color:rgba(155,89,214,.5) !important;
+  color:#fff !important;
+  transform:translateY(-1px);
+  box-shadow:0 6px 18px -4px rgba(155,89,214,.35);
+}
+
+/* ── News items / general list items: underline slide ── */
+.ni,.gi,.nfi{
+  transition:background .2s ease, transform .2s ease !important;
+  position:relative;
+}
+.ni:hover,.gi:hover,.nfi:hover{
+  background:rgba(155,89,214,.04);
+  transform:translateX(3px);
+}
+
+/* ── Section panels: stronger border on focus ── */
+.pan-t,.hl-t,.fsh-title{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+.pan-t::before,.hl-t::before,.fsh-title::before{
+  content:'';
+  width:3px;height:14px;
+  background:var(--accent);
+  border-radius:2px;
+  box-shadow:0 0 8px rgba(155,89,214,.6);
+}
+/* Only add the bar if not already styled with one */
+.hl-t::before{display:none} /* hl-t already has its own */
+
+/* ── Fear & Greed bar: subtle shimmer ── */
+.fng-bar::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.15),transparent);
+  animation:shimmer 3s ease-in-out infinite;
+}
+@keyframes shimmer{
+  0%{transform:translateX(-100%)}
+  100%{transform:translateX(100%)}
+}
+
+/* ── Tables / ticker numbers: monospace feel ── */
+.ti-v,.ti-u,.ti-d{
+  font-variant-numeric:tabular-nums;
+  font-feature-settings:"tnum";
+}
+
+/* ── Signal / portfolio badges: tighter pills ── */
+.badge,.pill{
+  font-variant-numeric:tabular-nums;
+}
+
+/* ── Number flash animation (for live updating values) ── */
+@keyframes numFlash{
+  0%{background:rgba(155,89,214,.25)}
+  100%{background:transparent}
+}
+.flash-up{animation:numFlash .8s ease-out}
+
+/* ── Loader skeleton (subtle shimmer for loading states) ── */
+.skeleton{
+  background:linear-gradient(90deg,
+    rgba(255,255,255,.03) 0%,
+    rgba(155,89,214,.08) 50%,
+    rgba(255,255,255,.03) 100%);
+  background-size:200% 100%;
+  animation:skel 1.6s ease-in-out infinite;
+  border-radius:6px;
+}
+@keyframes skel{
+  0%{background-position:-200% 0}
+  100%{background-position:200% 0}
+}
+
+/* ── Content breathing: more whitespace ── */
+.page{padding:38px 36px !important}
+@media (max-width:900px){
+  .page{padding:24px 18px !important}
+}
+
+/* ── Focus states: accessible purple ring ── */
+a:focus-visible,button:focus-visible,input:focus-visible{
+  outline:2px solid rgba(155,89,214,.6);
+  outline-offset:2px;
+  border-radius:6px;
+}
+
+/* ── Subtle ambient glow behind main content (just a vibe) ── */
+.main::before{
+  content:'';
+  position:fixed;
+  top:0;left:var(--sb);
+  width:40vw;height:40vh;
+  background:radial-gradient(circle at 30% 0%,rgba(155,89,214,.08),transparent 60%);
+  pointer-events:none;
+  z-index:0;
+}
+
+/* ── Cards: subtle inner gradient for premium feel ── */
+.card{
+  position:relative;
+}
+.card::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  background:linear-gradient(145deg,rgba(155,89,214,.03),transparent 40%);
+  pointer-events:none;
+  opacity:0;
+  transition:opacity .3s ease;
+}
+.card:hover::after{opacity:1}
+
+/* ── Prevent layout jump from animations ── */
+.main,.page,.card{contain:layout style}
+
+/* ═══════════════════════════════════════════════════════════
+   POLISH v3 — COLORFUL KPI CARDS + DASHBOARD VIBRANCY
+   Crypto-focused, purple-gradient premium feel
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── KPI Row: more space, real cards instead of flat strip ── */
+.mkt-stats-row{
+  display:grid !important;
+  grid-template-columns:repeat(5,1fr) !important;
+  gap:12px !important;
+  padding:16px !important;
+  border-bottom:1px solid rgba(255,255,255,.04) !important;
+  background:
+    radial-gradient(circle at 20% 0%,rgba(155,89,214,.06),transparent 50%),
+    radial-gradient(circle at 80% 100%,rgba(168,85,247,.04),transparent 50%);
+}
+
+/* ── Individual KPI Card: premium purple gradient ── */
+.mkt-stat-card{
+  position:relative !important;
+  background:
+    linear-gradient(145deg,
+      rgba(155,89,214,.08) 0%,
+      rgba(155,89,214,.02) 40%,
+      rgba(20,20,20,.4) 100%) !important;
+  border:1px solid rgba(155,89,214,.12) !important;
+  border-right:1px solid rgba(155,89,214,.12) !important;
+  border-radius:14px !important;
+  padding:14px 16px !important;
+  overflow:hidden;
+  transition:all .3s cubic-bezier(.22,.61,.36,1) !important;
+  cursor:pointer;
+}
+.mkt-stat-card::before{
+  content:'';
+  position:absolute;
+  top:0;left:0;right:0;
+  height:2px;
+  background:linear-gradient(90deg,transparent,var(--accent),transparent);
+  opacity:.5;
+  transition:opacity .3s ease;
+}
+.mkt-stat-card::after{
+  content:'';
+  position:absolute;
+  top:-40%;right:-40%;
+  width:120px;height:120px;
+  background:radial-gradient(circle,rgba(155,89,214,.18),transparent 65%);
+  pointer-events:none;
+  transition:transform .5s ease, opacity .3s ease;
+}
+.mkt-stat-card:hover{
+  background:
+    linear-gradient(145deg,
+      rgba(155,89,214,.15) 0%,
+      rgba(155,89,214,.05) 40%,
+      rgba(30,20,45,.6) 100%) !important;
+  border-color:rgba(155,89,214,.35) !important;
+  transform:translateY(-2px);
+  box-shadow:
+    0 12px 28px rgba(0,0,0,.4),
+    0 0 24px -6px rgba(155,89,214,.3),
+    inset 0 1px 0 rgba(255,255,255,.05) !important;
+}
+.mkt-stat-card:hover::before{opacity:1}
+.mkt-stat-card:hover::after{
+  transform:scale(1.3) translate(-10%,10%);
+  opacity:.8;
+}
+
+/* Per-card unique purple tint (subtle variation for visual interest) */
+.mkt-stat-card:nth-child(1)::after{background:radial-gradient(circle,rgba(180,120,240,.22),transparent 65%)}
+.mkt-stat-card:nth-child(2)::after{background:radial-gradient(circle,rgba(155,89,214,.2),transparent 65%)}
+.mkt-stat-card:nth-child(3)::after{background:radial-gradient(circle,rgba(130,70,200,.22),transparent 65%)}
+.mkt-stat-card:nth-child(4)::after{background:radial-gradient(circle,rgba(168,85,247,.2),transparent 65%)}
+.mkt-stat-card:nth-child(5)::after{background:radial-gradient(circle,rgba(200,140,255,.22),transparent 65%)}
+
+/* ── KPI Label: clearer, slightly more prominent ── */
+.mst-label{
+  font-size:9.5px !important;
+  letter-spacing:.14em !important;
+  color:rgba(155,89,214,.75) !important;
+  font-weight:700 !important;
+  margin-bottom:8px !important;
+  display:flex;
+  align-items:center;
+  gap:5px;
+}
+.mst-label::before{
+  content:'';
+  width:4px;height:4px;
+  border-radius:50%;
+  background:var(--accent);
+  box-shadow:0 0 6px var(--accent);
+  animation:pulseDot 2s ease-in-out infinite;
+}
+@keyframes pulseDot{
+  0%,100%{opacity:1;transform:scale(1)}
+  50%{opacity:.5;transform:scale(.85)}
+}
+
+/* ── KPI Value: bigger, gradient text ── */
+.mst-val{
+  font-size:18px !important;
+  font-weight:800 !important;
+  line-height:1 !important;
+  margin-bottom:6px !important;
+  background:linear-gradient(180deg,#fff 0%,#d8c8f0 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  font-variant-numeric:tabular-nums;
+  letter-spacing:-.01em;
+}
+
+/* ── KPI Change: pill-shaped badge ── */
+.mst-chg{
+  display:inline-flex !important;
+  align-items:center;
+  gap:3px;
+  font-size:10px !important;
+  font-weight:700 !important;
+  padding:3px 8px;
+  border-radius:999px;
+  background:rgba(155,89,214,.08);
+  border:1px solid rgba(155,89,214,.2);
+  color:var(--accent) !important;
+}
+.mst-chg.up{
+  background:rgba(39,174,96,.1) !important;
+  border-color:rgba(39,174,96,.3) !important;
+  color:#4ade80 !important;
+}
+.mst-chg.up::before{content:'▲';font-size:8px}
+.mst-chg.dn{
+  background:rgba(232,57,42,.1) !important;
+  border-color:rgba(232,57,42,.3) !important;
+  color:#f87171 !important;
+}
+.mst-chg.dn::before{content:'▼';font-size:8px}
+
+/* ── Mobile: 2 cols on small screens ── */
+@media(max-width:900px){
+  .mkt-stats-row{grid-template-columns:repeat(3,1fr) !important;gap:8px !important;padding:12px !important}
+}
+@media(max-width:600px){
+  .mkt-stats-row{grid-template-columns:repeat(2,1fr) !important}
+  .mst-val{font-size:15px !important}
+  .mkt-stat-card{padding:12px !important}
+}
+
+/* ── World Map Card: gradient border glow ── */
+.world-map-card{
+  position:relative;
+  background:
+    linear-gradient(180deg,
+      rgba(25,18,40,.6) 0%,
+      #111214 60%) !important;
+  border:1px solid rgba(155,89,214,.18) !important;
+  box-shadow:
+    0 20px 50px rgba(0,0,0,.4),
+    0 0 0 1px rgba(155,89,214,.05),
+    inset 0 1px 0 rgba(255,255,255,.03);
+}
+.world-map-card::before{
+  height:2px !important;
+  background:linear-gradient(90deg,
+    transparent,
+    rgba(168,85,247,.8) 30%,
+    var(--accent) 50%,
+    rgba(168,85,247,.8) 70%,
+    transparent) !important;
+  animation:scanBar 4s ease-in-out infinite;
+}
+@keyframes scanBar{
+  0%,100%{opacity:.4}
+  50%{opacity:1}
+}
+
+/* ── Compact AI Brief: more visual weight ── */
+.dash-brief-mini{
+  background:
+    linear-gradient(135deg,
+      rgba(155,89,214,.1) 0%,
+      rgba(25,18,40,.6) 40%,
+      rgba(17,18,20,.8) 100%) !important;
+  border:1px solid rgba(155,89,214,.2) !important;
+  border-radius:16px !important;
+  padding:18px !important;
+  position:relative;
+  overflow:hidden;
+  transition:all .3s cubic-bezier(.22,.61,.36,1);
+}
+.dash-brief-mini::before{
+  content:'';
+  position:absolute;
+  top:-50%;right:-30%;
+  width:200px;height:200px;
+  background:radial-gradient(circle,rgba(168,85,247,.15),transparent 65%);
+  pointer-events:none;
+}
+.dash-brief-mini:hover{
+  border-color:rgba(155,89,214,.4) !important;
+  transform:translateY(-2px);
+  box-shadow:
+    0 16px 36px rgba(0,0,0,.4),
+    0 0 28px -6px rgba(155,89,214,.3);
+}
+.dbm-kicker{
+  display:inline-block;
+  font-size:10px !important;
+  font-weight:700;
+  letter-spacing:.16em;
+  color:var(--accent) !important;
+  padding:3px 10px;
+  border-radius:999px;
+  background:rgba(155,89,214,.15);
+  border:1px solid rgba(155,89,214,.3);
+}
+
+/* ── Greeting: add subtle sparkle ── */
+.greet h1{
+  font-size:clamp(24px,4vw,32px) !important;
+  font-weight:800 !important;
+  letter-spacing:-.02em !important;
+  margin-bottom:8px !important;
+}
+.greet h1 em{
+  background:linear-gradient(135deg,var(--accent),#c084fc,var(--accent));
+  background-size:200% auto;
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:shimmerText 4s ease-in-out infinite;
+}
+@keyframes shimmerText{
+  0%,100%{background-position:0% center}
+  50%{background-position:100% center}
+}
+
+/* ── Dashboard hero: add ambient purple backdrop ── */
+.dashboard-hero{
+  position:relative;
+}
+.dashboard-hero::before{
+  content:'';
+  position:absolute;
+  top:-80px;left:-5%;right:-5%;
+  height:300px;
+  background:
+    radial-gradient(ellipse at 20% 50%,rgba(155,89,214,.08),transparent 60%),
+    radial-gradient(ellipse at 80% 50%,rgba(168,85,247,.06),transparent 60%);
+  pointer-events:none;
+  z-index:0;
+}
+.dashboard-hero>*{position:relative;z-index:1}
+
+/* ── Signals / notifications area: more color ── */
+#dash-signals .card,
+#dash-notifications .ni{
+  transition:all .25s ease;
+}
+#dash-notifications .ni:hover{
+  background:linear-gradient(90deg,rgba(155,89,214,.06),transparent) !important;
+  border-left:2px solid var(--accent);
+  padding-left:14px;
+}
+
+/* ── Live badge & dots: more punch ── */
+.wm-live-badge{
+  color:#4ade80 !important;
+  font-weight:700 !important;
+  font-size:10px !important;
+  letter-spacing:.1em !important;
+  text-transform:uppercase;
+  animation:livePulse 2s ease-in-out infinite;
+}
+@keyframes livePulse{
+  0%,100%{opacity:1;text-shadow:0 0 6px rgba(74,222,128,.4)}
+  50%{opacity:.7;text-shadow:0 0 12px rgba(74,222,128,.7)}
+}
+.wm-dot{
+  width:6px;height:6px !important;
+  background:var(--accent) !important;
+  box-shadow:0 0 10px var(--accent);
+  animation:pulseDot 2s ease-in-out infinite;
+}
+
+/* ── Session badge: cleaner pill ── */
+.wm-session-badge{
+  background:rgba(155,89,214,.12) !important;
+  border:1px solid rgba(155,89,214,.3) !important;
+  color:var(--accent) !important;
+  font-weight:700 !important;
+  padding:5px 12px !important;
+  border-radius:999px !important;
+  letter-spacing:.12em !important;
+}
 </style>
 
 </head>
@@ -4352,26 +4951,52 @@ function renderTicker(coins){
   safeLsSet('zimr_ticker_cache',{ts:Date.now(),coins:normalized});
 }
 
+/* ═══════════════════════════════════════════════════════════
+   UNIVERSAL CORS-PROOF CRYPTO FETCH (v2 - April 2026)
+   CoinCap v2 is dead. CoinGecko blocks direct requests from
+   cryptomarketz.xyz. This helper routes through CORS proxies
+   with multiple fallbacks so GitHub Pages works reliably.
+   ═══════════════════════════════════════════════════════════ */
+var CORS_PROXIES = [
+  'https://api.allorigins.win/raw?url=',
+  'https://api.codetabs.com/v1/proxy?quest=',
+  'https://corsproxy.io/?',
+  'https://thingproxy.freeboard.io/fetch/'
+];
+
+function cryptoFetch(url, timeoutMs){
+  timeoutMs = timeoutMs || 8000;
+  // Try direct first (works if API allows CORS or we're local)
+  var direct = fetch(url, { signal: AbortSignal.timeout(timeoutMs) })
+    .then(function(r){ if(!r.ok) throw new Error('http '+r.status); return r.json(); });
+  // Race with proxies
+  var proxied = CORS_PROXIES.map(function(proxy){
+    return fetch(proxy + encodeURIComponent(url), { signal: AbortSignal.timeout(timeoutMs) })
+      .then(function(r){ if(!r.ok) throw new Error('proxy http '+r.status); return r.text(); })
+      .then(function(txt){ return JSON.parse(txt); });
+  });
+  return Promise.any([direct].concat(proxied));
+}
+
 function coincapFetch(){
   if(_priceCache&&Date.now()-_priceCacheTime<30000)return Promise.resolve(_priceCache);
-  var url='https://api.coincap.io/v2/assets?ids='+COINCAP_IDS.join(',')+'&limit=15';
-  return fetch(url)
-    .then(function(r){
-      if(!r.ok) throw new Error('CoinCap HTTP '+r.status);
-      return r.json();
-    })
-    .then(function(d){
-      if(!d||!d.data||!d.data.length) throw new Error('CoinCap lege response');
-      var coins=d.data.map(function(a){
-        return{
-          id:a.id,
-          ticker:COINCAP_LABEL_MAP[a.id]||a.symbol,
-          symbol:a.symbol.toLowerCase(),
-          current_price:parseFloat(a.priceUsd)||0,
-          price_change_percentage_24h:parseFloat(a.changePercent24Hr)||0
+  // Use CoinGecko via proxy (CoinCap v2 is offline, CoinGecko blocks direct from github-pages domains)
+  var ids = 'bitcoin,ethereum,solana,ripple,dogecoin,cardano,chainlink,litecoin';
+  var url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids='+ids+'&order=market_cap_desc&per_page=15&page=1&sparkline=false&price_change_percentage=24h';
+  return cryptoFetch(url)
+    .then(function(data){
+      if(!Array.isArray(data) || !data.length) throw new Error('CoinGecko lege response');
+      var coins = data.map(function(c){
+        return {
+          id: c.id,
+          ticker: (c.symbol||'').toUpperCase(),
+          symbol: (c.symbol||'').toLowerCase(),
+          current_price: Number(c.current_price)||0,
+          price_change_percentage_24h: Number(c.price_change_percentage_24h)||0
         };
       });
       _priceCache=coins;_priceCacheTime=Date.now();
+      console.log('[ZIMR] ✓ prijzen geladen:', coins.length, 'coins');
       return coins;
     });
 }
@@ -4382,33 +5007,48 @@ function fetchPrices(){
     updateMiniCardsFromCoins(coins);
     renderTicker(coins);
   }).catch(function(err){
-    console.warn('[ZIMR] CoinCap fetch mislukt:', err);
-    var cgUrl='https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana,ripple,dogecoin,cardano,chainlink,litecoin&vs_currencies=usd&include_24hr_change=true';
-    fetch(cgUrl).then(function(r){
-      if(!r.ok) throw new Error('CoinGecko HTTP '+r.status);
-      return r.json();
-    }).then(function(d){
-      var map={bitcoin:'BTC',ethereum:'ETH',solana:'SOL',ripple:'XRP',dogecoin:'DOGE',cardano:'ADA',chainlink:'LINK',litecoin:'LTC'};
-      var coins=Object.keys(d||{}).map(function(id){
-        return{id:id,ticker:map[id]||(id.slice(0,4).toUpperCase()),symbol:id,current_price:Number(d[id].usd)||0,price_change_percentage_24h:Number(d[id].usd_24h_change)||0};
-      });
-      updateMiniCardsFromCoins(coins);
-      renderTicker(coins);
-    }).catch(function(err2){
-      console.warn('[ZIMR] CoinGecko fallback mislukt:', err2);
-      renderTicker(fallbackTickerCoins());
+    console.warn('[ZIMR] Alle prijs-bronnen mislukt, probeert Coinbase:', err);
+    // Last resort: Coinbase (has liberal CORS, but one coin at a time)
+    var coinbasePairs = [
+      {id:'bitcoin',   pair:'BTC-USD', ticker:'BTC'},
+      {id:'ethereum',  pair:'ETH-USD', ticker:'ETH'},
+      {id:'solana',    pair:'SOL-USD', ticker:'SOL'},
+      {id:'ripple',    pair:'XRP-USD', ticker:'XRP'},
+      {id:'dogecoin',  pair:'DOGE-USD',ticker:'DOGE'},
+      {id:'cardano',   pair:'ADA-USD', ticker:'ADA'},
+      {id:'chainlink', pair:'LINK-USD',ticker:'LINK'},
+      {id:'litecoin',  pair:'LTC-USD', ticker:'LTC'}
+    ];
+    Promise.all(coinbasePairs.map(function(p){
+      return fetch('https://api.coinbase.com/v2/prices/'+p.pair+'/spot')
+        .then(function(r){return r.json();})
+        .then(function(d){
+          return {
+            id:p.id, ticker:p.ticker, symbol:p.id,
+            current_price: Number(d.data&&d.data.amount)||0,
+            price_change_percentage_24h: 0
+          };
+        })
+        .catch(function(){return null;});
+    })).then(function(results){
+      var coins = results.filter(function(c){return c&&c.current_price>0;});
+      if(coins.length){
+        updateMiniCardsFromCoins(coins);
+        renderTicker(coins);
+        console.log('[ZIMR] ✓ Coinbase fallback:', coins.length, 'coins');
+      } else {
+        renderTicker(fallbackTickerCoins());
+      }
     });
   });
 }
 setInterval(fetchPrices,30000);
 
 function fetchTotalMarketCap(){
-  // Binance doesn't have global market cap use CoinGecko just for this one call (cached 5 min)
   var hit=cGet('global');if(hit){applyMarketCap(hit);return;}
-  fetch('https://api.coingecko.com/api/v3/global')
-    .then(function(r){return r.json();})
-    .then(function(d){cSet('global',d,300);applyMarketCap(d);})
-    .catch(function(){});
+  cryptoFetch('https://api.coingecko.com/api/v3/global')
+    .then(function(d){cSet('global',d,300);applyMarketCap(d);console.log('[ZIMR] ✓ global market cap');})
+    .catch(function(err){console.warn('[ZIMR] global market cap mislukt:',err);});
 }
 function applyMarketCap(d){
   var data=d&&d.data;if(!data)return;
@@ -4486,31 +5126,17 @@ function fetchFeedWithFallback(feedUrl, srcName){
     return Promise.resolve(_newsCache[cacheKey]);
   }
 
-  // rss2json - works reliably from GitHub Pages, no CORS issues
-  var rss2jsonUrl = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(feedUrl) + '&count=20';
-
-  var rss2jsonAttempt = fetch(rss2jsonUrl, { signal: AbortSignal.timeout(6000) })
-    .then(function(r) { if(!r.ok) throw new Error('bad'); return r.json(); })
-    .then(function(json) {
-      if(!json.items || !json.items.length) throw new Error('empty');
-      return json.items.map(function(item) {
-        return {
-          title: item.title || '',
-          url:   item.link  || '#',
-          src:   srcName,
-          date:  item.pubDate ? new Date(item.pubDate) : new Date()
-        };
-      }).filter(function(i) { return i.title.length > 0; });
-    });
-
-  // Raw proxy fallbacks
-  var rawProxies = [
+  // rss2json gives 422 on github-pages referrer; corsproxy.io gives 403.
+  // Working proxies as of April 2026:
+  var workingProxies = [
     'https://api.allorigins.win/raw?url=',
-    'https://corsproxy.io/?'
+    'https://api.codetabs.com/v1/proxy?quest=',
+    'https://thingproxy.freeboard.io/fetch/'
   ];
-  var rawAttempts = rawProxies.map(function(proxy) {
-    return fetch(proxy + encodeURIComponent(feedUrl), { signal: AbortSignal.timeout(5000) })
-      .then(function(r) { if(!r.ok) throw new Error('bad'); return r.text(); })
+
+  var attempts = workingProxies.map(function(proxy) {
+    return fetch(proxy + encodeURIComponent(feedUrl), { signal: AbortSignal.timeout(8000) })
+      .then(function(r) { if(!r.ok) throw new Error('http '+r.status); return r.text(); })
       .then(function(txt) {
         var items = parseRSSItems(txt, srcName);
         if(!items.length) throw new Error('empty');
@@ -4518,13 +5144,17 @@ function fetchFeedWithFallback(feedUrl, srcName){
       });
   });
 
-  return Promise.any([rss2jsonAttempt].concat(rawAttempts))
+  return Promise.any(attempts)
     .then(function(items) {
       _newsCache[cacheKey] = items;
       _newsCacheTime[cacheKey] = Date.now();
+      console.log('[news] ✓ ' + srcName + ': ' + items.length + ' items');
       return items;
     })
-    .catch(function() { return _newsCache[cacheKey] || []; });
+    .catch(function(err) {
+      console.warn('[news] ✗ alle proxies mislukt voor ' + srcName, err);
+      return _newsCache[cacheKey] || [];
+    });
 }
 
 function renderNews(all){
@@ -4768,8 +5398,7 @@ function ptFetchPrice(sym,cb){
   // Gebruik CoinGecko ipv Binance (Binance geblokkeerd in NL)
   var idMap={BTC:'bitcoin',ETH:'ethereum',SOL:'solana',BNB:'binancecoin',XRP:'ripple',ADA:'cardano',AVAX:'avalanche-2',DOT:'polkadot',LINK:'chainlink',LTC:'litecoin',DOGE:'dogecoin',MATIC:'matic-network',UNI:'uniswap',ATOM:'cosmos',NEAR:'near'};
   var coinId=idMap[sym]||sym.toLowerCase();
-  fetch('https://api.coingecko.com/api/v3/simple/price?ids='+coinId+'&vs_currencies=usd')
-    .then(function(r){return r.json();})
+  cryptoFetch('https://api.coingecko.com/api/v3/simple/price?ids='+coinId+'&vs_currencies=usd')
     .then(function(d){
       var p=d&&d[coinId]&&d[coinId].usd?d[coinId].usd:0;
       ptPriceCache[sym]={p:p,t:Date.now()};
@@ -5728,10 +6357,17 @@ async function loadMarketBrief(){
       let btc24h = '', eth24h = '', topGainer = '', topLoser = '';
       let totalMcap = '', btcDom = '';
       try{
-        const ccResp = await fetch('https://api.coincap.io/v2/assets?limit=15');
-        if(ccResp.ok){
-          const ccData = await ccResp.json();
-          const coins = ccData.data || [];
+        // CoinCap v2 offline — use CoinGecko via proxy
+        const ccData = await cryptoFetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=15&page=1&sparkline=false&price_change_percentage=24h');
+        if(Array.isArray(ccData) && ccData.length){
+          // Normalize to old CoinCap shape so downstream code keeps working
+          const coins = ccData.map(c => ({
+            id: c.id,
+            symbol: (c.symbol||'').toUpperCase(),
+            priceUsd: c.current_price,
+            changePercent24Hr: c.price_change_percentage_24h,
+            marketCapUsd: c.market_cap
+          }));
           const fmt = (n) => parseFloat(n || 0);
           const fmtP = (n) => { const v = fmt(n); return (v >= 0 ? '+' : '') + v.toFixed(2) + '%'; };
           const fmtUSD = (n) => { const v = fmt(n); return v >= 1 ? '$' + v.toLocaleString('en-US', {maximumFractionDigits:2}) : '$' + v.toFixed(4); };
@@ -5740,7 +6376,7 @@ async function loadMarketBrief(){
           const btc = coins.find(c => c.id === 'bitcoin');
           const eth = coins.find(c => c.id === 'ethereum');
           const sol = coins.find(c => c.id === 'solana');
-          const bnb = coins.find(c => c.id === 'binance-coin');
+          const bnb = coins.find(c => c.id === 'binance-coin' || c.id === 'binancecoin');
           if(btc){ btcPrice = fmtUSD(btc.priceUsd); btc24h = fmtP(btc.changePercent24Hr); }
           if(eth){ ethPrice = fmtUSD(eth.priceUsd); eth24h = fmtP(eth.changePercent24Hr); }
           if(sol){ solPrice = fmtUSD(sol.priceUsd); }
@@ -6190,8 +6826,8 @@ async function loadLiveNotifications() {
     // Fetch only what we need — minimal API calls
     const [fgRes, cgGlobalRes, newsRes] = await Promise.allSettled([
       fetch('https://api.alternative.me/fng/?limit=2').then(r=>r.json()),
-      fetch('https://api.coingecko.com/api/v3/global').then(r=>r.json()),
-      fetch('https://cointelegraph.com/rss').then(r=>r.text())
+      cryptoFetch('https://api.coingecko.com/api/v3/global'),
+      cryptoFetch('https://cointelegraph.com/rss').catch(()=>null).then(d=>typeof d==='string'?d:'')
     ]);
 
     // ── 1. Fear & Greed ─────────────────────────────────────────────────
@@ -6336,8 +6972,8 @@ async function loadMarketStats() {
   if(cached) applyMarketStatsSnapshot(cached);
   try {
     const results = await Promise.allSettled([
-      fetch('https://api.coingecko.com/api/v3/global').then(r=>{ if(!r.ok) throw new Error('global '+r.status); return r.json(); }),
-      fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum&order=market_cap_desc&per_page=2&page=1&sparkline=false&price_change_percentage=24h').then(r=>{ if(!r.ok) throw new Error('markets '+r.status); return r.json(); }),
+      cryptoFetch('https://api.coingecko.com/api/v3/global'),
+      cryptoFetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum&order=market_cap_desc&per_page=2&page=1&sparkline=false&price_change_percentage=24h'),
       fetch('https://api.alternative.me/fng/?limit=1').then(r=>{ if(!r.ok) throw new Error('fng '+r.status); return r.json(); })
     ]);
 
@@ -7134,11 +7770,10 @@ function ptRender() {
     if(status) status.textContent = 'Fetching 500 coins...';
     if(el)     el.innerHTML = '<div style="text-align:center;padding:60px;font-family:\'JetBrains Mono\',monospace;font-size:11px;color:rgba(255,255,255,.25)"><div style="font-size:28px;margin-bottom:10px">&#9889;</div>Scanning for pre-breakout setups...</div>';
 
-    var p1 = fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=false&price_change_percentage=7d');
-    var p2 = fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=2&sparkline=false&price_change_percentage=7d');
+    var p1 = cryptoFetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=false&price_change_percentage=7d');
+    var p2 = cryptoFetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=2&sparkline=false&price_change_percentage=7d');
 
     Promise.all([p1, p2])
-      .then(function(res){ return Promise.all(res.map(function(r){ return r.json(); })); })
       .then(function(pages) {
         var raw = pages[0].concat(pages[1]);
         if(document.getElementById('sc-count')) document.getElementById('sc-count').textContent = raw.length;
