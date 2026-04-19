@@ -1,42 +1,42 @@
 {
-  "date": "Saturday April 18, 2026",
-  "generated": "2026-04-18T07:52:03.468494Z",
-  "brief": "# ZIMR POLYMARKET BRIEFING | Saturday, April 18, 2026\n\n## HEADLINE\n**Iran Peace Momentum Surges Ahead of Deadline Week\u2014Bitcoin Shorts Getting Squeezed**\n\n---\n\n## THE SIGNAL\n\nThe Iran peace deal complex is *moving*. Three separate peace-by-X-date markets rallied 6-8% overnight, with the May 31 permanent deal now at 64%\u2014the highest conviction level in the suite. Smart money is clearly pricing in imminent diplomatic movement. The April 22 market (30%) suggests traders expect *either* a deal announcement or a decisive \"no deal\" signal within 4 days, creating binary event risk. Volume across the Iran stack ($8.4M combined) indicates institutional positioning ahead of what feels like a hard deadline.\n\nBitcoin's $80K April call jumped +22% to 55%\u2014a classic squeeze trade that's caught shorts off guard. With 12 days left and spot hovering near breakout levels, this isn't crazy pricing anymore. The move suggests algorithmic buyers and retail capitulation, not new fundamental catalyst.\n\nThe Warriors-Suns collapse (-41.4% in 24h) is pure sports arbitrage noise, but note the Hezbollah ceasefire at 99% on $27.1M volume\u2014that's a *resolved* market signaling peace is already locked. If Lebanon's done, Iran escalation risk drops meaningfully.\n\n---\n\n## WHAT TO WATCH\n\n1. **US x Iran permanent peace deal by April 22 (30%)** \u2014 The tightest deadline with most liquidity ($2.2M). This is your real-time Iran sentiment gauge. Any diplomatic headlines between now and Wednesday will create 5-10% whipsaws. If it breaks 40%, you're seeing serious deal probability.\n\n2. **Will Bitcoin reach $80,000 in April? (55%)** \u2014 Now at fair value. Watch for $78K+ tests; if Bitcoin stalls here and reverses, expect the market to dump to 35-40%. Currently pricing in ~50/50 odds of a $2K rally in 12 days. Use it as a BTC momentum indicator.\n\n3. **Strait of Hormuz traffic returns to normal by end of April (45%)** \u2014 Underpriced relative to Iran peace deals. If April 22 peace market pops to 50%+, Hormuz should be 60%+. Tactical arb opportunity if Iran deal news breaks today.\n\n---\n\n**ZIMR Capital | Markets don't lie. Pricing does.**",
+  "date": "Sunday April 19, 2026",
+  "generated": "2026-04-19T07:59:34.782007Z",
+  "brief": "# MARKET PULLBACK SIGNALS: MIDDLE EAST HOPES COOLING FAST\n\nThe Iran conflict resolution trade is reversing hard. After yesterday's optimism, major de-escalation bets are bleeding\u2014the April 22 permanent peace deal cratered 17%, while both near-term conflict resolution markets (April 7 and 15) dropped 10%+. The message is clear: market confidence in a quick diplomatic win is evaporating. Meanwhile, the Strait of Hormuz normalization bet got absolutely hammered (-27%), suggesting traders are pricing in extended disruption risk rather than rapid resolution.\n\nSmart money isn't panicking out uniformly\u2014they're *rebalancing*. The US invasion probability actually ticked up 6% to 30%, which is the real tell. Traders are hedging for a more protracted, harder-line scenario rather than a negotiated settlement. The gap between April 15 (79% probability) and April 22 (14% for permanent peace) is the critical divergence: the market now thinks a ceasefire *might* hold short-term but sees virtually zero chance of actual diplomatic resolution within a week. That's a subtle but massive shift in tail risk.\n\nThe one misprice screaming for attention: **Israel-Hezbollah ceasefire at 99% with $9M volume**. This is priced as fait accompli, yet it's already technically past its April 18 deadline (if we're reading Sunday April 19 dates correctly). Either this resolves Monday or it's a canary in the coalmine for all the other Middle East bets tanking today.\n\n---\n\n## WATCH LIST\n\n1. **US x Iran permanent peace deal by April 30** (38%, -9% today) \u2014 The longer-dated bet shows less damage than April 22, but watch for sub-20% on any new escalation news. This is the real macro risk asset.\n\n2. **Will the U.S. invade Iran before 2027** (30%, +6% today) \u2014 Up 6% while peace bets crater = smart money shifting hedges. If this breaks 35% intraday, it signals genuine hawkish repricing.\n\n3. **Strait of Hormuz traffic returns to normal by end of April** (20%, -27% today) \u2014 Worst performer. If this holds below 25%, the market is locking in \"disruption extends into May,\" with cascading commodity implications.",
   "top_movers": [
     {
-      "question": "Warriors vs. Suns",
-      "prob": 1,
-      "change": -41.4,
-      "vol24": "$8.9M",
-      "slug": "nba-gsw-phx-2026-04-17"
-    },
-    {
-      "question": "Will Bitcoin reach $80,000 in April?",
-      "prob": 55,
-      "change": 22.0,
-      "vol24": "$620K",
-      "slug": "will-bitcoin-reach-80k-in-april-2026"
-    },
-    {
-      "question": "Dota 2: Xtreme Gaming vs Natus Vincere (BO3) - PGL Wallachia Group Stage",
-      "prob": 33,
-      "change": -21.5,
-      "vol24": "$1.8M",
-      "slug": "dota2-xtreme-navi-2026-04-18"
-    },
-    {
       "question": "Strait of Hormuz traffic returns to normal by end of April?",
-      "prob": 45,
-      "change": 18.5,
-      "vol24": "$3.9M",
+      "prob": 20,
+      "change": -27.0,
+      "vol24": "$2.3M",
       "slug": "strait-of-hormuz-traffic-returns-to-normal-by-april-30"
     },
     {
-      "question": "US obtains Iranian enriched uranium by May 31?",
-      "prob": 30,
-      "change": 9.0,
-      "vol24": "$1.6M",
-      "slug": "us-obtains-iranian-enriched-uranium-by-may-31-396"
+      "question": "US x Iran permanent peace deal by April 22, 2026?",
+      "prob": 14,
+      "change": -17.0,
+      "vol24": "$1.5M",
+      "slug": "us-x-iran-permanent-peace-deal-by-april-22-2026"
+    },
+    {
+      "question": "Iran x Israel/US conflict ends by April 15?",
+      "prob": 79,
+      "change": -11.5,
+      "vol24": "$407K",
+      "slug": "iran-x-israelus-conflict-ends-by-april-15-618-586-982"
+    },
+    {
+      "question": "Iran x Israel/US conflict ends by April 7?",
+      "prob": 80,
+      "change": -10.8,
+      "vol24": "$499K",
+      "slug": "iran-x-israelus-conflict-ends-by-april-7-346"
+    },
+    {
+      "question": "US x Iran permanent peace deal by April 30, 2026?",
+      "prob": 38,
+      "change": -9.0,
+      "vol24": "$470K",
+      "slug": "us-x-iran-permanent-peace-deal-by-april-30-2026"
     }
   ],
   "top_vol": [
@@ -44,22 +44,22 @@
       "question": "Israel x Hezbollah ceasefire by April 18, 2026?",
       "prob": 99,
       "change": 0,
-      "vol24": "$27.1M",
+      "vol24": "$9.0M",
       "slug": "israel-x-hezbollah-ceasefire-by-april-18-2026"
     },
     {
-      "question": "Warriors vs. Suns",
-      "prob": 1,
-      "change": -41.4,
-      "vol24": "$8.9M",
-      "slug": "nba-gsw-phx-2026-04-17"
+      "question": "Strait of Hormuz traffic returns to normal by end of April?",
+      "prob": 20,
+      "change": -27.0,
+      "vol24": "$2.3M",
+      "slug": "strait-of-hormuz-traffic-returns-to-normal-by-april-30"
     },
     {
-      "question": "Strait of Hormuz traffic returns to normal by end of April?",
-      "prob": 45,
-      "change": 18.5,
-      "vol24": "$3.9M",
-      "slug": "strait-of-hormuz-traffic-returns-to-normal-by-april-30"
+      "question": "US x Iran permanent peace deal by April 22, 2026?",
+      "prob": 14,
+      "change": -17.0,
+      "vol24": "$1.5M",
+      "slug": "us-x-iran-permanent-peace-deal-by-april-22-2026"
     }
   ]
 }
