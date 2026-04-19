@@ -1,14 +1,14 @@
 [
   {
-    "id": 1776365910393,
-    "coin": "SOL/USD",
-    "type": "BUY",
-    "entry": "88.84",
-    "tp": "98.00",
-    "sl": "83.50",
-    "note": "Strong momentum with 2.63% 1H gain and 4.50% 24H gain, 7-day uptrend at 6.34%. Entry near current price with TP at psychological $98 level and SL below recent support. Risk/reward 1:2.5. Use 1/3 position size.",
-    "timestamp": "2026-04-16T18:58:27.134Z",
-    "generated_at": "Thu, 16 Apr 2026 18:58:27 GMT",
+    "id": 1776637507723,
+    "coin": "ETH/USD",
+    "type": "SELL",
+    "entry": "2278",
+    "tp": "2200",
+    "sl": "2320",
+    "note": "4H sideways trend with price below EMA20, extremely oversold 1H RSI 11.4 indicates selling exhaustion but 4H RSI 40.3 allows more downside. Entry near 24h low with resistance at EMA levels. Risk/reward 1:1.86 but extreme RSI divergence creates high conviction short-term drop. Use 1/3 position size.",
+    "timestamp": "2026-04-19T22:25:03.914Z",
+    "generated_at": "Sun, 19 Apr 2026 22:25:03 GMT",
     "source": "claude-bot"
   }
 ]

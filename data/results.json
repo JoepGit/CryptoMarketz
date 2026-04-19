@@ -1,5 +1,18 @@
 [
   {
+    "id": 1776365910393,
+    "coin": "SOL/USD",
+    "type": "BUY",
+    "entry": "88.84",
+    "tp": "98.00",
+    "sl": "83.50",
+    "result": "loss",
+    "pnl": "-6.01%",
+    "resolved_price": 83.13,
+    "signal_date": "2026-04-16T18:58:27.134Z",
+    "resolved_at": "2026-04-19T22:24:44.502Z"
+  },
+  {
     "id": 1776451415404,
     "coin": "ETH/USD",
     "type": "SELL",
