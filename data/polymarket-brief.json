@@ -1,42 +1,42 @@
 {
-  "date": "Sunday April 19, 2026",
-  "generated": "2026-04-19T07:59:34.782007Z",
-  "brief": "# MARKET PULLBACK SIGNALS: MIDDLE EAST HOPES COOLING FAST\n\nThe Iran conflict resolution trade is reversing hard. After yesterday's optimism, major de-escalation bets are bleeding\u2014the April 22 permanent peace deal cratered 17%, while both near-term conflict resolution markets (April 7 and 15) dropped 10%+. The message is clear: market confidence in a quick diplomatic win is evaporating. Meanwhile, the Strait of Hormuz normalization bet got absolutely hammered (-27%), suggesting traders are pricing in extended disruption risk rather than rapid resolution.\n\nSmart money isn't panicking out uniformly\u2014they're *rebalancing*. The US invasion probability actually ticked up 6% to 30%, which is the real tell. Traders are hedging for a more protracted, harder-line scenario rather than a negotiated settlement. The gap between April 15 (79% probability) and April 22 (14% for permanent peace) is the critical divergence: the market now thinks a ceasefire *might* hold short-term but sees virtually zero chance of actual diplomatic resolution within a week. That's a subtle but massive shift in tail risk.\n\nThe one misprice screaming for attention: **Israel-Hezbollah ceasefire at 99% with $9M volume**. This is priced as fait accompli, yet it's already technically past its April 18 deadline (if we're reading Sunday April 19 dates correctly). Either this resolves Monday or it's a canary in the coalmine for all the other Middle East bets tanking today.\n\n---\n\n## WATCH LIST\n\n1. **US x Iran permanent peace deal by April 30** (38%, -9% today) \u2014 The longer-dated bet shows less damage than April 22, but watch for sub-20% on any new escalation news. This is the real macro risk asset.\n\n2. **Will the U.S. invade Iran before 2027** (30%, +6% today) \u2014 Up 6% while peace bets crater = smart money shifting hedges. If this breaks 35% intraday, it signals genuine hawkish repricing.\n\n3. **Strait of Hormuz traffic returns to normal by end of April** (20%, -27% today) \u2014 Worst performer. If this holds below 25%, the market is locking in \"disruption extends into May,\" with cascading commodity implications.",
+  "date": "Monday April 20, 2026",
+  "generated": "2026-04-20T09:03:25.740021Z",
+  "brief": "# POLYMARKET BRIEF | Monday, April 20, 2026\n\n## **Market Pricing Iran De-Escalation While Hedging Invasion Risk**\n\nThe geopolitical complex is sending mixed signals today. While the Israel-Hezbollah ceasefire sits at 99% (massive $30M volume\u2014essentially priced as done), the market is simultaneously bidding up US invasion odds to 34% (+2.0%). This isn't contradictory; it's smart money hedging. The Strait of Hormuz normalization trade is gaining traction (+3.0% to 24%), suggesting traders believe conflict stays contained\u2014but the 5% odds on US-Iran diplomacy by today (April 20) getting crushed (-5.4%) tells you nobody expects last-minute negotiations. The real tell: $878K just moved into \"Kharg Island lost by April 30\" at 8%. Someone's positioning for Iranian territory loss without full invasion.\n\n**What this means:** The market is pricing a scenario where Israel/proxies consolidate gains, Hezbollah accepts ceasefire, but US-Iran tensions simmer without resolution. Low odds on permanent peace deals (14% on April 22 deadline, $2.4M volume) confirm traders see this as a freeze, not a settlement. Watch the Hormuz contract carefully\u2014it's the leading indicator of whether markets believe this holds.\n\n**Mispricings to watch:** Elon's tweet volume at 1% feels comically low given his track record. Bachelorette volatility (+14.4%) is entertainment noise masking real volume. The Fed rate cut at 1% is genuinely mispriced if April jobs data comes weak\u2014currently ignored noise in geopolitical chaos.\n\n---\n\n## WATCH LIST\n\n1. **Strait of Hormuz by April 30 (24%)** \u2014 This is the oil market's canary. If this moves above 35% in next 48 hours, energy markets will price in real risk. Watch for shipping data and tanker positioning.\n\n2. **US-Iran Invasion by 2027 (34%)** \u2014 Currently surging on invasion speculation but still underpriced relative to diplomatic silence. If this breaks 40%, expect energy and crypto volatility spikes. Key trigger: any US naval movements or statements.\n\n3. **Kharg Island control (8%)** \u2014 Low volume but sharp directional move. Highly asymmetric: either becomes irrelevant or signals larger territorial shift. Watch for Iranian military statements today.",
   "top_movers": [
     {
+      "question": "Will Richard Van De Water win The Bachelorette Season 22?",
+      "prob": 16,
+      "change": 14.4,
+      "vol24": "$458K",
+      "slug": "will-richard-van-de-water-win-the-bachelorette-season-22"
+    },
+    {
+      "question": "US x Iran diplomatic meeting by April 20, 2026?",
+      "prob": 5,
+      "change": -5.4,
+      "vol24": "$485K",
+      "slug": "us-x-iran-diplomatic-meeting-by-april-20-2026"
+    },
+    {
+      "question": "Will Elon Musk post <40 tweets from April 18 to April 20, 2026?",
+      "prob": 1,
+      "change": -3.6,
+      "vol24": "$562K",
+      "slug": "elon-musk-of-tweets-april-18-april-20-0-39"
+    },
+    {
+      "question": "Will Roberto S\u00e1nchez Palomino win the 2026 Peruvian presidential election?",
+      "prob": 26,
+      "change": 3.5,
+      "vol24": "$533K",
+      "slug": "will-roberto-snchez-palomino-win-the-2026-peruvian-presidential-election"
+    },
+    {
       "question": "Strait of Hormuz traffic returns to normal by end of April?",
-      "prob": 20,
-      "change": -27.0,
-      "vol24": "$2.3M",
-      "slug": "strait-of-hormuz-traffic-returns-to-normal-by-april-30"
-    },
-    {
-      "question": "US x Iran permanent peace deal by April 22, 2026?",
-      "prob": 14,
-      "change": -17.0,
+      "prob": 24,
+      "change": 3.0,
       "vol24": "$1.5M",
-      "slug": "us-x-iran-permanent-peace-deal-by-april-22-2026"
-    },
-    {
-      "question": "Iran x Israel/US conflict ends by April 15?",
-      "prob": 79,
-      "change": -11.5,
-      "vol24": "$407K",
-      "slug": "iran-x-israelus-conflict-ends-by-april-15-618-586-982"
-    },
-    {
-      "question": "Iran x Israel/US conflict ends by April 7?",
-      "prob": 80,
-      "change": -10.8,
-      "vol24": "$499K",
-      "slug": "iran-x-israelus-conflict-ends-by-april-7-346"
-    },
-    {
-      "question": "US x Iran permanent peace deal by April 30, 2026?",
-      "prob": 38,
-      "change": -9.0,
-      "vol24": "$470K",
-      "slug": "us-x-iran-permanent-peace-deal-by-april-30-2026"
+      "slug": "strait-of-hormuz-traffic-returns-to-normal-by-april-30"
     }
   ],
   "top_vol": [
@@ -44,21 +44,21 @@
       "question": "Israel x Hezbollah ceasefire by April 18, 2026?",
       "prob": 99,
       "change": 0,
-      "vol24": "$9.0M",
+      "vol24": "$30.0M",
       "slug": "israel-x-hezbollah-ceasefire-by-april-18-2026"
     },
     {
-      "question": "Strait of Hormuz traffic returns to normal by end of April?",
-      "prob": 20,
-      "change": -27.0,
-      "vol24": "$2.3M",
-      "slug": "strait-of-hormuz-traffic-returns-to-normal-by-april-30"
+      "question": "Will PH win the third most seats in the 2026 Colombian Chamber of Representatives election?",
+      "prob": 1,
+      "change": 0.2,
+      "vol24": "$3.3M",
+      "slug": "will-ph-win-the-third-most-seats-in-the-2026-colombian-chamber-of-representatives-election"
     },
     {
       "question": "US x Iran permanent peace deal by April 22, 2026?",
       "prob": 14,
-      "change": -17.0,
-      "vol24": "$1.5M",
+      "change": 1.0,
+      "vol24": "$2.4M",
       "slug": "us-x-iran-permanent-peace-deal-by-april-22-2026"
     }
   ]
