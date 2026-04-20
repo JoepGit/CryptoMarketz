@@ -1,14 +1,14 @@
 [
   {
-    "id": 1776637507723,
-    "coin": "ETH/USD",
-    "type": "SELL",
-    "entry": "2278",
-    "tp": "2200",
-    "sl": "2320",
-    "note": "4H sideways trend with price below EMA20, extremely oversold 1H RSI 11.4 indicates selling exhaustion but 4H RSI 40.3 allows more downside. Entry near 24h low with resistance at EMA levels. Risk/reward 1:1.86 but extreme RSI divergence creates high conviction short-term drop. Use 1/3 position size.",
-    "timestamp": "2026-04-19T22:25:03.914Z",
-    "generated_at": "Sun, 19 Apr 2026 22:25:03 GMT",
+    "id": 1776711114179,
+    "coin": "BTC/USD",
+    "type": "BUY",
+    "entry": "76200",
+    "tp": "78500",
+    "sl": "75000",
+    "note": "1H bullish trend with price above EMA20/50, RSI 64.5 not overbought, approaching 24h high resistance at 76309 but 4H shows bullish structure. Target previous 24h high at 78240. Use 1/3 position size.",
+    "timestamp": "2026-04-20T18:51:46.646Z",
+    "generated_at": "Mon, 20 Apr 2026 18:51:46 GMT",
     "source": "claude-bot"
   }
 ]
