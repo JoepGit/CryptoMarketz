@@ -1,65 +1,65 @@
 {
-  "date": "Monday April 20, 2026",
-  "generated": "2026-04-20T09:03:25.740021Z",
-  "brief": "# POLYMARKET BRIEF | Monday, April 20, 2026\n\n## **Market Pricing Iran De-Escalation While Hedging Invasion Risk**\n\nThe geopolitical complex is sending mixed signals today. While the Israel-Hezbollah ceasefire sits at 99% (massive $30M volume\u2014essentially priced as done), the market is simultaneously bidding up US invasion odds to 34% (+2.0%). This isn't contradictory; it's smart money hedging. The Strait of Hormuz normalization trade is gaining traction (+3.0% to 24%), suggesting traders believe conflict stays contained\u2014but the 5% odds on US-Iran diplomacy by today (April 20) getting crushed (-5.4%) tells you nobody expects last-minute negotiations. The real tell: $878K just moved into \"Kharg Island lost by April 30\" at 8%. Someone's positioning for Iranian territory loss without full invasion.\n\n**What this means:** The market is pricing a scenario where Israel/proxies consolidate gains, Hezbollah accepts ceasefire, but US-Iran tensions simmer without resolution. Low odds on permanent peace deals (14% on April 22 deadline, $2.4M volume) confirm traders see this as a freeze, not a settlement. Watch the Hormuz contract carefully\u2014it's the leading indicator of whether markets believe this holds.\n\n**Mispricings to watch:** Elon's tweet volume at 1% feels comically low given his track record. Bachelorette volatility (+14.4%) is entertainment noise masking real volume. The Fed rate cut at 1% is genuinely mispriced if April jobs data comes weak\u2014currently ignored noise in geopolitical chaos.\n\n---\n\n## WATCH LIST\n\n1. **Strait of Hormuz by April 30 (24%)** \u2014 This is the oil market's canary. If this moves above 35% in next 48 hours, energy markets will price in real risk. Watch for shipping data and tanker positioning.\n\n2. **US-Iran Invasion by 2027 (34%)** \u2014 Currently surging on invasion speculation but still underpriced relative to diplomatic silence. If this breaks 40%, expect energy and crypto volatility spikes. Key trigger: any US naval movements or statements.\n\n3. **Kharg Island control (8%)** \u2014 Low volume but sharp directional move. Highly asymmetric: either becomes irrelevant or signals larger territorial shift. Watch for Iranian military statements today.",
+  "date": "Tuesday April 21, 2026",
+  "generated": "2026-04-21T08:25:06.926022Z",
+  "brief": "# ZIMR Capital | Polymarket Daily Brief | Tuesday, April 21, 2026\n\n## Headline\n**Iran Crisis Inflection: Market Splits on Immediate vs. Near-Term Resolution**\n\n---\n\n## Market Intelligence\n\n**The Signal:** The market is pricing a decisive *de-escalation narrative shift*. Short-dated ceasefire and diplomatic meeting odds cratered (-42%, -23%) while longer-dated peace deal confidence rose (+9.5%). Translation: traders believe the worst is behind us, but don't expect formal talks by tomorrow. The 96% pricing on conflicts ending by April 7-15 suggests those dates have already passed\u2014we're likely trading on *post-event reality*, not future probability.\n\n**Smart Money Moves:** Volume flooded into April 22 peace deal contracts ($5.7M\u2014highest on the board), despite only 14% pricing. This screams asymmetric betting: whales are either front-running an announcement window or hedging tail risk of sudden breakthrough. Meanwhile, April 21 ceasefire extension collapsed from 22% despite being *today*\u2014if this was live, someone would have arb'd it to near-zero by now. Market is already pricing the event resolved.\n\n**The Mispricing:** Strait of Hormuz \"normal traffic\" at 30% feels artificially depressed given bullish geopolitical momentum elsewhere. If Iran-US tensions are genuinely defusing (as 40% permanent peace deal and 73% April 22 meeting suggest), shipping should be repricing higher. Watch for this to move 40%+ if diplomatic meetings confirm.\n\n---\n\n## Watch List\n\n1. **US x Iran diplomatic meeting by April 22** (73% | $508K vol) \u2014 Canary in the coal mine. Any breach above 80% signals real intel on scheduled talks. Below 65% = renewed uncertainty.\n\n2. **Strait of Hormuz traffic normalcy** (30% | $1.3M vol) \u2014 Lagging indicator with asymmetric upside. If April 22 meeting hits, this should spike 50%+ on energy market relief. Current pricing leaves 40-50 points on the table.\n\n3. **US x Iran permanent peace deal by April 30** (40% | $1.4M vol) \u2014 The meta-bet. Still reasonable value if April 22 talks progress. Upside to 55%+ if framework agreement emerges.\n\n---\n\n**Markets are pricing *stabilization*, not stasis.** Accumulate on dips if you believe diplomatic momentum holds.",
   "top_movers": [
     {
-      "question": "Will Richard Van De Water win The Bachelorette Season 22?",
-      "prob": 16,
-      "change": 14.4,
-      "vol24": "$458K",
-      "slug": "will-richard-van-de-water-win-the-bachelorette-season-22"
+      "question": "US x Iran ceasefire extended by April 21, 2026?",
+      "prob": 22,
+      "change": -42.0,
+      "vol24": "$549K",
+      "slug": "will-the-us-x-iran-ceasefire-be-extended-by-april-21-2026-365"
     },
     {
-      "question": "US x Iran diplomatic meeting by April 20, 2026?",
-      "prob": 5,
-      "change": -5.4,
-      "vol24": "$485K",
-      "slug": "us-x-iran-diplomatic-meeting-by-april-20-2026"
+      "question": "US x Iran diplomatic meeting by April 21, 2026?",
+      "prob": 18,
+      "change": -23.0,
+      "vol24": "$925K",
+      "slug": "us-x-iran-diplomatic-meeting-by-april-21-2026"
     },
     {
-      "question": "Will Elon Musk post <40 tweets from April 18 to April 20, 2026?",
-      "prob": 1,
-      "change": -3.6,
-      "vol24": "$562K",
-      "slug": "elon-musk-of-tweets-april-18-april-20-0-39"
+      "question": "Iran x Israel/US conflict ends by April 15?",
+      "prob": 96,
+      "change": 15.6,
+      "vol24": "$623K",
+      "slug": "iran-x-israelus-conflict-ends-by-april-15-618-586-982"
     },
     {
-      "question": "Will Roberto S\u00e1nchez Palomino win the 2026 Peruvian presidential election?",
-      "prob": 26,
-      "change": 3.5,
-      "vol24": "$533K",
-      "slug": "will-roberto-snchez-palomino-win-the-2026-peruvian-presidential-election"
+      "question": "Iran x Israel/US conflict ends by April 7?",
+      "prob": 96,
+      "change": 15.2,
+      "vol24": "$1.0M",
+      "slug": "iran-x-israelus-conflict-ends-by-april-7-346"
     },
     {
-      "question": "Strait of Hormuz traffic returns to normal by end of April?",
-      "prob": 24,
-      "change": 3.0,
-      "vol24": "$1.5M",
-      "slug": "strait-of-hormuz-traffic-returns-to-normal-by-april-30"
+      "question": "US x Iran permanent peace deal by April 30, 2026?",
+      "prob": 40,
+      "change": 9.5,
+      "vol24": "$1.4M",
+      "slug": "us-x-iran-permanent-peace-deal-by-april-30-2026"
     }
   ],
   "top_vol": [
     {
-      "question": "Israel x Hezbollah ceasefire by April 18, 2026?",
-      "prob": 99,
-      "change": 0,
-      "vol24": "$30.0M",
-      "slug": "israel-x-hezbollah-ceasefire-by-april-18-2026"
-    },
-    {
-      "question": "Will PH win the third most seats in the 2026 Colombian Chamber of Representatives election?",
-      "prob": 1,
-      "change": 0.2,
-      "vol24": "$3.3M",
-      "slug": "will-ph-win-the-third-most-seats-in-the-2026-colombian-chamber-of-representatives-election"
-    },
-    {
       "question": "US x Iran permanent peace deal by April 22, 2026?",
       "prob": 14,
-      "change": 1.0,
-      "vol24": "$2.4M",
+      "change": -2.0,
+      "vol24": "$5.7M",
       "slug": "us-x-iran-permanent-peace-deal-by-april-22-2026"
+    },
+    {
+      "question": "Will the Fed increase interest rates by 25+ bps after the April 2026 meeting?",
+      "prob": 1,
+      "change": 0,
+      "vol24": "$3.1M",
+      "slug": "will-the-fed-increase-interest-rates-by-25-bps-after-the-april-2026-meeting"
+    },
+    {
+      "question": "Will Kim Kardashian win the 2028 Democratic presidential nomination?",
+      "prob": 1,
+      "change": 0,
+      "vol24": "$2.5M",
+      "slug": "will-kim-kardashian-win-the-2028-democratic-presidential-nomination"
     }
   ]
 }
