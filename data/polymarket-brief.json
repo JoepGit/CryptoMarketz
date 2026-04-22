@@ -1,65 +1,65 @@
 {
-  "date": "Tuesday April 21, 2026",
-  "generated": "2026-04-21T08:25:06.926022Z",
-  "brief": "# ZIMR Capital | Polymarket Daily Brief | Tuesday, April 21, 2026\n\n## Headline\n**Iran Crisis Inflection: Market Splits on Immediate vs. Near-Term Resolution**\n\n---\n\n## Market Intelligence\n\n**The Signal:** The market is pricing a decisive *de-escalation narrative shift*. Short-dated ceasefire and diplomatic meeting odds cratered (-42%, -23%) while longer-dated peace deal confidence rose (+9.5%). Translation: traders believe the worst is behind us, but don't expect formal talks by tomorrow. The 96% pricing on conflicts ending by April 7-15 suggests those dates have already passed\u2014we're likely trading on *post-event reality*, not future probability.\n\n**Smart Money Moves:** Volume flooded into April 22 peace deal contracts ($5.7M\u2014highest on the board), despite only 14% pricing. This screams asymmetric betting: whales are either front-running an announcement window or hedging tail risk of sudden breakthrough. Meanwhile, April 21 ceasefire extension collapsed from 22% despite being *today*\u2014if this was live, someone would have arb'd it to near-zero by now. Market is already pricing the event resolved.\n\n**The Mispricing:** Strait of Hormuz \"normal traffic\" at 30% feels artificially depressed given bullish geopolitical momentum elsewhere. If Iran-US tensions are genuinely defusing (as 40% permanent peace deal and 73% April 22 meeting suggest), shipping should be repricing higher. Watch for this to move 40%+ if diplomatic meetings confirm.\n\n---\n\n## Watch List\n\n1. **US x Iran diplomatic meeting by April 22** (73% | $508K vol) \u2014 Canary in the coal mine. Any breach above 80% signals real intel on scheduled talks. Below 65% = renewed uncertainty.\n\n2. **Strait of Hormuz traffic normalcy** (30% | $1.3M vol) \u2014 Lagging indicator with asymmetric upside. If April 22 meeting hits, this should spike 50%+ on energy market relief. Current pricing leaves 40-50 points on the table.\n\n3. **US x Iran permanent peace deal by April 30** (40% | $1.4M vol) \u2014 The meta-bet. Still reasonable value if April 22 talks progress. Upside to 55%+ if framework agreement emerges.\n\n---\n\n**Markets are pricing *stabilization*, not stasis.** Accumulate on dips if you believe diplomatic momentum holds.",
+  "date": "Wednesday April 22, 2026",
+  "generated": "2026-04-22T08:22:48.209130Z",
+  "brief": "# MARKET CALLING BLUFF ON IMMINENT IRAN DIPLOMACY\n\nThe Polymarket crowd has decisively repriced overnight: diplomatic hopes are dead. The April 22 meeting contract collapsed 74.9% to just 1%, while April 23's plunged 79%. This isn't gradual repricing\u2014it's capitulation. Smart money read something concrete (leaked intelligence, off-record statements, or simply the calendar) and exited hard.\n\nWhat's revealing is the **asymmetric conviction on military escalation**. U.S. tanker seizures hit 99% (+58.7%), yet Hormuz normalization sits at just 10% despite the two being inversely related. This disconnect suggests traders are pricing a prolonged tit-for-tat scenario rather than full conflict or resolution\u2014shallow, contained strikes that don't actually choke shipping. The permanent peace deal (April 30) drifting to 16% confirms it: the market is now betting on indefinite brinkmanship, not breakthrough.\n\nThe real tell: **$5.1M piled into the April 22 peace deal at 1%**, suggesting either sophisticated contrarians playing tail odds or late liquidation noise. Worth watching, but the directional signal is unmistakable\u2014diplomatic window is closed, at least through month-end.\n\n---\n\n## WATCH LIST\n\n1. **Strait of Hormuz traffic returns to normal by end of April (10%)** \u2014 If this stays pinned below 12%, confirms market believes escalation will persist. A spike above 25% would signal off-ramp credibility.\n\n2. **U.S. forces seize another oil tanker by April 30 (99%)** \u2014 Already priced as certainty. Watch for pullback toward 85%; any dip below signals unexpected de-escalation signal.\n\n3. **US x Iran permanent peace deal by April 30 (16%)** \u2014 Thin liquidity, high gamma. Monitor for any geopolitical headline; this could swing 5-8% on single events.",
   "top_movers": [
     {
-      "question": "US x Iran ceasefire extended by April 21, 2026?",
-      "prob": 22,
-      "change": -42.0,
-      "vol24": "$549K",
-      "slug": "will-the-us-x-iran-ceasefire-be-extended-by-april-21-2026-365"
+      "question": "US x Iran diplomatic meeting by April 23, 2026?",
+      "prob": 8,
+      "change": -79.0,
+      "vol24": "$595K",
+      "slug": "us-x-iran-diplomatic-meeting-by-april-23-2026"
     },
     {
-      "question": "US x Iran diplomatic meeting by April 21, 2026?",
+      "question": "US x Iran diplomatic meeting by April 22, 2026?",
+      "prob": 1,
+      "change": -74.9,
+      "vol24": "$1.3M",
+      "slug": "us-x-iran-diplomatic-meeting-by-april-22-2026-321-831"
+    },
+    {
+      "question": "U.S. forces seize another oil tanker by April 30?",
+      "prob": 99,
+      "change": 58.7,
+      "vol24": "$593K",
+      "slug": "us-forces-seize-another-oil-tanker-by-april-30"
+    },
+    {
+      "question": "US x Iran ceasefire extended by April 22, 2026?",
       "prob": 18,
-      "change": -23.0,
-      "vol24": "$925K",
-      "slug": "us-x-iran-diplomatic-meeting-by-april-21-2026"
-    },
-    {
-      "question": "Iran x Israel/US conflict ends by April 15?",
-      "prob": 96,
-      "change": 15.6,
-      "vol24": "$623K",
-      "slug": "iran-x-israelus-conflict-ends-by-april-15-618-586-982"
-    },
-    {
-      "question": "Iran x Israel/US conflict ends by April 7?",
-      "prob": 96,
-      "change": 15.2,
-      "vol24": "$1.0M",
-      "slug": "iran-x-israelus-conflict-ends-by-april-7-346"
+      "change": -47.5,
+      "vol24": "$896K",
+      "slug": "us-x-iran-ceasefire-extended-by-april-22-2026"
     },
     {
       "question": "US x Iran permanent peace deal by April 30, 2026?",
-      "prob": 40,
-      "change": 9.5,
-      "vol24": "$1.4M",
-      "slug": "us-x-iran-permanent-peace-deal-by-april-30-2026"
+      "prob": 16,
+      "change": -26.0,
+      "vol24": "$2.1M",
+      "slug": "us-x-iran-permanent-peace-deal-by-april-30-2026-925"
     }
   ],
   "top_vol": [
     {
+      "question": "Will Bitcoin hit $150k by June 30, 2026?",
+      "prob": 1,
+      "change": 0,
+      "vol24": "$5.8M",
+      "slug": "will-bitcoin-hit-150k-by-june-30-2026"
+    },
+    {
       "question": "US x Iran permanent peace deal by April 22, 2026?",
-      "prob": 14,
-      "change": -2.0,
-      "vol24": "$5.7M",
+      "prob": 1,
+      "change": -14.1,
+      "vol24": "$5.1M",
       "slug": "us-x-iran-permanent-peace-deal-by-april-22-2026"
     },
     {
-      "question": "Will the Fed increase interest rates by 25+ bps after the April 2026 meeting?",
-      "prob": 1,
-      "change": 0,
-      "vol24": "$3.1M",
-      "slug": "will-the-fed-increase-interest-rates-by-25-bps-after-the-april-2026-meeting"
-    },
-    {
-      "question": "Will Kim Kardashian win the 2028 Democratic presidential nomination?",
-      "prob": 1,
-      "change": 0,
-      "vol24": "$2.5M",
-      "slug": "will-kim-kardashian-win-the-2028-democratic-presidential-nomination"
+      "question": "Iran x Israel/US conflict ends by April 7?",
+      "prob": 99,
+      "change": 3.8,
+      "vol24": "$4.2M",
+      "slug": "iran-x-israelus-conflict-ends-by-april-7-346"
     }
   ]
 }
