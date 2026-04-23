@@ -1,14 +1,14 @@
 [
   {
-    "id": 1776897521510,
+    "id": 1776928939189,
     "coin": "ETH/USD",
     "type": "BUY",
-    "entry": "2396",
-    "tp": "2455",
-    "sl": "2370",
-    "note": "Strong 4H bullish trend, price above all EMAs, 1H RSI neutral at 51.6 with bullish bias. Clear support near 24h low. Targeting resistance near 24h high. R/R 1:2.27 but strong trend justifies entry. Use 1/3 position size.",
-    "timestamp": "2026-04-22T22:38:40.704Z",
-    "generated_at": "Wed, 22 Apr 2026 22:38:40 GMT",
+    "entry": "2350",
+    "tp": "2420",
+    "sl": "2322",
+    "note": "4H sideways with price near EMA20 support, 1H RSI 31.8 oversold showing clear extreme below 40, good bounce setup to 24h high resistance. Use 1/3 position size.",
+    "timestamp": "2026-04-23T07:22:19.146Z",
+    "generated_at": "Thu, 23 Apr 2026 07:22:19 GMT",
     "source": "claude-bot"
   },
   {
