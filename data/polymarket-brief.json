@@ -1,42 +1,42 @@
 {
-  "date": "Wednesday April 22, 2026",
-  "generated": "2026-04-22T08:22:48.209130Z",
-  "brief": "# MARKET CALLING BLUFF ON IMMINENT IRAN DIPLOMACY\n\nThe Polymarket crowd has decisively repriced overnight: diplomatic hopes are dead. The April 22 meeting contract collapsed 74.9% to just 1%, while April 23's plunged 79%. This isn't gradual repricing\u2014it's capitulation. Smart money read something concrete (leaked intelligence, off-record statements, or simply the calendar) and exited hard.\n\nWhat's revealing is the **asymmetric conviction on military escalation**. U.S. tanker seizures hit 99% (+58.7%), yet Hormuz normalization sits at just 10% despite the two being inversely related. This disconnect suggests traders are pricing a prolonged tit-for-tat scenario rather than full conflict or resolution\u2014shallow, contained strikes that don't actually choke shipping. The permanent peace deal (April 30) drifting to 16% confirms it: the market is now betting on indefinite brinkmanship, not breakthrough.\n\nThe real tell: **$5.1M piled into the April 22 peace deal at 1%**, suggesting either sophisticated contrarians playing tail odds or late liquidation noise. Worth watching, but the directional signal is unmistakable\u2014diplomatic window is closed, at least through month-end.\n\n---\n\n## WATCH LIST\n\n1. **Strait of Hormuz traffic returns to normal by end of April (10%)** \u2014 If this stays pinned below 12%, confirms market believes escalation will persist. A spike above 25% would signal off-ramp credibility.\n\n2. **U.S. forces seize another oil tanker by April 30 (99%)** \u2014 Already priced as certainty. Watch for pullback toward 85%; any dip below signals unexpected de-escalation signal.\n\n3. **US x Iran permanent peace deal by April 30 (16%)** \u2014 Thin liquidity, high gamma. Monitor for any geopolitical headline; this could swing 5-8% on single events.",
+  "date": "Thursday April 23, 2026",
+  "generated": "2026-04-23T08:27:06.695522Z",
+  "brief": "# ZIMR CAPITAL MARKET BRIEFING | Thursday, April 23, 2026\n\n## Headline\n**Iran Deal Unraveling: Markets Pricing Out Near-Term Peace as Blockade Remains Locked In**\n\n---\n\n## THE SIGNAL\n\nThe market is getting nervous. Across the Iran resolution curve, every single deal-by date has sold off hard\u2014especially the aggressive ones. Trump's blockade announcement odds cratered 9.8% to just 4%, and the May 31 permanent peace deal dropped 8% to 36%. This isn't noise; it's capitulation from deal believers.\n\nWhat's worth noting: the April 22 ceasefire extension (already passed or about to pass) still sits at 12% with massive $3.6M volume, suggesting real uncertainty on whether it held. Smart money appears to be exiting near-term resolution positions en masse. The market is rotating from \"peace by April\" to \"maybe by May, probably not.\"\n\n**Mispricing watch:** Iran surrendering enriched uranium by April 30 is only at 8% (down 3.6%). For context, uranium enrichment was always the hardest nut to crack in any deal. This feels appropriately pessimistic\u2014but if negotiations are still live, this might be slightly underpriced relative to the 36% odds on a full May 31 deal. The uranium give-up would be the final domino.\n\n---\n\n## WATCH LIST\n\n1. **US x Iran ceasefire extended by April 22** (12%, $3.6M) \u2014 This should be resolved or resolving *right now*. If it extended, expect a relief rally up the curve. If it broke, watch for cascading selloffs into the permanent deal markets.\n\n2. **Iran x Israel/US conflict ends by May 15** (99%, $3.2M) \u2014 The market is pricing near-certainty on *some* resolution by mid-May, even as near-term deal odds crater. Follow this; it's the real market consensus hiding in plain sight.\n\n3. **Strait of Hormuz traffic returns to normal by end of April** (4%, $1.6M) \u2014 The cleanest real-world indicator. If this one doesn't budge off 4% by Friday, blockade is entrenched. If it pops, deal momentum is returning.\n\n---\n\n**ZIMR** | *Polymarket intelligence for serious traders*",
   "top_movers": [
     {
-      "question": "US x Iran diplomatic meeting by April 23, 2026?",
-      "prob": 8,
-      "change": -79.0,
-      "vol24": "$595K",
-      "slug": "us-x-iran-diplomatic-meeting-by-april-23-2026"
+      "question": "Will Donald Trump announce that the United States blockade of the Strait of Hormuz has been lifted by April 23, 2026?",
+      "prob": 4,
+      "change": -9.8,
+      "vol24": "$736K",
+      "slug": "will-donald-trump-announce-that-the-united-states-blockade-of-the-strait-of-hormuz-has-been-lifted-by-april-23-2026"
     },
     {
-      "question": "US x Iran diplomatic meeting by April 22, 2026?",
-      "prob": 1,
-      "change": -74.9,
-      "vol24": "$1.3M",
-      "slug": "us-x-iran-diplomatic-meeting-by-april-22-2026-321-831"
+      "question": "US x Iran permanent peace deal by May 31, 2026?",
+      "prob": 36,
+      "change": -8.0,
+      "vol24": "$818K",
+      "slug": "us-x-iran-permanent-peace-deal-by-may-31-2026-333"
     },
     {
-      "question": "U.S. forces seize another oil tanker by April 30?",
-      "prob": 99,
-      "change": 58.7,
-      "vol24": "$593K",
-      "slug": "us-forces-seize-another-oil-tanker-by-april-30"
+      "question": "LoL: HANJIN BRION vs Dplus KIA - Game 1 Winner",
+      "prob": 24,
+      "change": -6.5,
+      "vol24": "$664K",
+      "slug": "lol-bro2-dk-2026-04-23-game1"
     },
     {
       "question": "US x Iran ceasefire extended by April 22, 2026?",
-      "prob": 18,
-      "change": -47.5,
-      "vol24": "$896K",
+      "prob": 12,
+      "change": -6.0,
+      "vol24": "$3.6M",
       "slug": "us-x-iran-ceasefire-extended-by-april-22-2026"
     },
     {
-      "question": "US x Iran permanent peace deal by April 30, 2026?",
-      "prob": 16,
-      "change": -26.0,
-      "vol24": "$2.1M",
-      "slug": "us-x-iran-permanent-peace-deal-by-april-30-2026-925"
+      "question": "Strait of Hormuz traffic returns to normal by end of April?",
+      "prob": 4,
+      "change": -6.0,
+      "vol24": "$1.6M",
+      "slug": "strait-of-hormuz-traffic-returns-to-normal-by-april-30"
     }
   ],
   "top_vol": [
@@ -48,18 +48,18 @@
       "slug": "will-bitcoin-hit-150k-by-june-30-2026"
     },
     {
-      "question": "US x Iran permanent peace deal by April 22, 2026?",
-      "prob": 1,
-      "change": -14.1,
-      "vol24": "$5.1M",
-      "slug": "us-x-iran-permanent-peace-deal-by-april-22-2026"
+      "question": "US x Iran ceasefire extended by April 22, 2026?",
+      "prob": 12,
+      "change": -6.0,
+      "vol24": "$3.6M",
+      "slug": "us-x-iran-ceasefire-extended-by-april-22-2026"
     },
     {
-      "question": "Iran x Israel/US conflict ends by April 7?",
+      "question": "Iran x Israel/US conflict ends by May 15?",
       "prob": 99,
-      "change": 3.8,
-      "vol24": "$4.2M",
-      "slug": "iran-x-israelus-conflict-ends-by-april-7-346"
+      "change": 0.1,
+      "vol24": "$3.2M",
+      "slug": "iran-x-israelus-conflict-ends-by-may-15-562-372-916-721-496"
     }
   ]
 }
