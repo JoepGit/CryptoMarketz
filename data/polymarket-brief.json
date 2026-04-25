@@ -1,51 +1,58 @@
 {
-  "date": "Friday April 24, 2026",
-  "generated": "2026-04-24T08:54:46.059976Z",
-  "brief": "# POLYMARKET FRIDAY BRIEF | April 24, 2026\n\n## Headline\n**MegaETH Token Launch Explodes to 93%; Iran Peace Hopes Crater as Ceasefire Window Slams Shut**\n\n---\n\n## The Signal\n\nThe market just repriced two competing narratives hard. MegaETH's token launch probability rocketed 86% in 24 hours\u2014now sitting at 93% with nearly $1M in volume. This isn't noise. Six days remain and smart money is either seeing internal signals or pricing in the inevitability of a launch announcement. Watch for insider accumulation if this breaks 95%.\n\nThe geopolitical flip is sharper: Iran ceasefire extended by April 22 (yesterday's deadline) crashed from viable to 1%\u2014a -13.4% hammering on $4.9M volume. The market is saying: *that window closed*. Interestingly, the broader \"conflict ends by May 15\" still sits at 99%, suggesting traders expect de-escalation later, not continuation of tensions. This is rational hedging: near-term ceasefire dead, but longer-dated peace still priced in. Smart money isn't betting on escalation\u2014they're betting on time.\n\nMusk's tweet count hitting 180-199 (April 17-24) at 43% is suspicious. Up 36.5% means accumulation is happening. Either he's been quiet (easy to verify) or this was mispriced at the lows. Worth a sanity check against actual tweet counts.\n\n---\n\n## Watch List\n\n**1. US x Iran permanent peace deal by April 30 (6%, $2.0M vol)**  \nThis is the real tell. If ceasefire is dead but this stays at 6%, traders don't fear escalation\u2014they think negotiated settlement is still possible before month-end. Monitor for any news on back-channel talks. A pop to 15%+ signals serious diplomatic movement.\n\n**2. MegaETH token launch (93%, $912K vol)**  \nApproaching saturation. The risk/reward flips once this hits 95%+. If it breaks to 98-99%, you're catching a falling knife on any short. Watch for announcement timing\u2014if delayed past April 28, expect 10-15% sell-off.\n\n**3. Israel x Hezbollah ceasefire extended by April 26 (64%, +13%)**  \nThis one's outperforming. Only two days to deadline. High volume, rising odds = market confidence in extension. If this holds above 60% into Saturday, it signals broader regional stability narrative is winning.\n\n---\n\n**Trade smart. Verify the MegaETH rumors. Iran's window closed\u2014now it's about whether negotiations resume.**",
+  "date": "Saturday April 25, 2026",
+  "generated": "2026-04-25T07:58:13.281297Z",
+  "brief": "# ZIMR POLYMARKET BRIEFING | Saturday, April 25, 2026\n\n## Headline\n**Iran Diplomacy Sprint: Market Pricing Imminent Breakthrough as April 28 Deadline Hits 58%**\n\n---\n\n## The Signal\n\nThe Iran diplomatic complex just experienced a coordinated surge across all near-term windows. The April 28 meeting probability rocketed 43.5% in 24 hours\u2014the sharpest move in the entire market\u2014while April 30 hit 66%. This isn't noise. Volume concentration ($1.2M on the 30-day window) suggests institutional positioning ahead of a concrete event. Smart money is front-running either a formal announcement or a leaked timeline.\n\n**What's interesting:** The April 26 window sits at just 28% despite being 48 hours away. This creates a mispricing opportunity. If diplomacy actually moves *this weekend*, early April 26 traders will be left holding underwater positions while April 28+ beneficiaries rake in gains. Either the market knows talks aren't happening until Sunday/Monday, or it's underpricing the compounding probability of a meeting announcement in the next two days.\n\n**The blockade question (24%)** lagging the broader Iran rally is telling. Markets are pricing a *talking phase*, not a capitulation. The Strait of Hormuz remains locked; the endgame probability is still weak. This is de-escalation theater, not resolution.\n\n---\n\n## Watch List\n\n1. **US x Iran diplomatic meeting by April 26, 2026** (28%) \u2014 Your 48-hour arbitrage. If markets don't move in the next 6 hours, this should be dead money by Sunday EOD. If there's a surprise Friday evening leak, it reprices hard.\n\n2. **Will Donald Trump announce that the US blockade of the Strait of Hormuz has been lifted by April 30, 2026?** (24%) \u2014 The real tell. Meeting \u2260 lifted blockade. Watch this for market expectation reset once talks commence. Current pricing suggests traders think diplomacy stalls before capitulation.\n\n3. **US x Iran permanent peace deal by May 31, 2026** (34%, +6%) \u2014 The sleeper winner today. Lowest volume but cleanest signal: smart money is buying the 5-week window as a leveraged bet on breakthrough momentum. If April 28 meeting happens, this reprices north of 50% within hours.\n\n---\n\n**Bottom line:** Iran story is live. April 26 is mispriced relative to the 28-30 window. Blockade lifting is priced like a tail risk\u2014probably correct, but worth monitoring for upside shock.",
   "top_movers": [
     {
-      "question": "Will MegaETH launch a token by April 30, 2026?",
-      "prob": 93,
-      "change": 86.1,
-      "vol24": "$912K",
-      "slug": "will-megaeth-launch-a-token-by-april-30-2026-798"
+      "question": "US x Iran diplomatic meeting by April 28, 2026?",
+      "prob": 58,
+      "change": 43.5,
+      "vol24": "$565K",
+      "slug": "us-x-iran-diplomatic-meeting-by-april-28-2026"
     },
     {
-      "question": "Will Elon Musk post 180-199 tweets from April 17 to April 24, 2026?",
-      "prob": 43,
-      "change": 36.5,
-      "vol24": "$589K",
-      "slug": "elon-musk-of-tweets-april-17-april-24-180-199"
+      "question": "US x Iran diplomatic meeting by April 27, 2026?",
+      "prob": 50,
+      "change": 40.0,
+      "vol24": "$644K",
+      "slug": "us-x-iran-diplomatic-meeting-by-april-27-2026"
     },
     {
-      "question": "US x Iran ceasefire extended by April 22, 2026?",
+      "question": "US x Iran diplomatic meeting by April 30, 2026?",
+      "prob": 66,
+      "change": 38.5,
+      "vol24": "$1.2M",
+      "slug": "us-x-iran-diplomatic-meeting-by-april-30-2026-299-459-263-225"
+    },
+    {
+      "question": "Will the price of Bitcoin be above $78,000 on April 24?",
       "prob": 1,
-      "change": -13.4,
-      "vol24": "$4.9M",
-      "slug": "us-x-iran-ceasefire-extended-by-april-22-2026"
+      "change": -37.5,
+      "vol24": "$2.9M",
+      "slug": "bitcoin-above-78k-on-april-24"
     },
     {
-      "question": "Israel x Hezbollah Ceasefire extended by April 26, 2026?",
-      "prob": 64,
-      "change": 13.0,
-      "vol24": "$725K",
-      "slug": "israel-x-hezbollah-ceasefire-extended-by-april-26-2026"
-    },
-    {
-      "question": "US x Iran permanent peace deal by May 31, 2026?",
-      "prob": 28,
-      "change": -9.0,
-      "vol24": "$871K",
-      "slug": "us-x-iran-permanent-peace-deal-by-may-31-2026-333"
+      "question": "LoL: Top Esports vs Ninjas in Pyjamas - Game 1 Winner",
+      "prob": 99,
+      "change": 36.0,
+      "vol24": "$500K",
+      "slug": "lol-tes-nip-2026-04-25-game1"
     }
   ],
   "top_vol": [
     {
-      "question": "Iran x Israel/US conflict ends by April 7?",
-      "prob": 99,
+      "question": "US x Iran ceasefire extended by April 22, 2026?",
+      "prob": 1,
+      "change": -0.1,
+      "vol24": "$11.0M",
+      "slug": "us-x-iran-ceasefire-extended-by-april-22-2026"
+    },
+    {
+      "question": "Will the Indian National Congress (INC) win the most seats in the 2026 Tamil Nadu Legislative Assembly election?",
+      "prob": 1,
       "change": 0,
-      "vol24": "$7.7M",
-      "slug": "iran-x-israelus-conflict-ends-by-april-7-346"
+      "vol24": "$7.8M",
+      "slug": "will-the-indian-national-congress-inc-win-the-most-seats-in-the-2026-tamil-nadu-legislative-assembly-election"
     },
     {
       "question": "Will Bitcoin hit $150k by June 30, 2026?",
@@ -53,13 +60,6 @@
       "change": 0,
       "vol24": "$5.8M",
       "slug": "will-bitcoin-hit-150k-by-june-30-2026"
-    },
-    {
-      "question": "US x Iran ceasefire extended by April 22, 2026?",
-      "prob": 1,
-      "change": -13.4,
-      "vol24": "$4.9M",
-      "slug": "us-x-iran-ceasefire-extended-by-april-22-2026"
     }
   ]
 }
