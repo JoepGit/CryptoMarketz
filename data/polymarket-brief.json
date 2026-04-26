@@ -1,65 +1,65 @@
 {
-  "date": "Saturday April 25, 2026",
-  "generated": "2026-04-25T07:58:13.281297Z",
-  "brief": "# ZIMR POLYMARKET BRIEFING | Saturday, April 25, 2026\n\n## Headline\n**Iran Diplomacy Sprint: Market Pricing Imminent Breakthrough as April 28 Deadline Hits 58%**\n\n---\n\n## The Signal\n\nThe Iran diplomatic complex just experienced a coordinated surge across all near-term windows. The April 28 meeting probability rocketed 43.5% in 24 hours\u2014the sharpest move in the entire market\u2014while April 30 hit 66%. This isn't noise. Volume concentration ($1.2M on the 30-day window) suggests institutional positioning ahead of a concrete event. Smart money is front-running either a formal announcement or a leaked timeline.\n\n**What's interesting:** The April 26 window sits at just 28% despite being 48 hours away. This creates a mispricing opportunity. If diplomacy actually moves *this weekend*, early April 26 traders will be left holding underwater positions while April 28+ beneficiaries rake in gains. Either the market knows talks aren't happening until Sunday/Monday, or it's underpricing the compounding probability of a meeting announcement in the next two days.\n\n**The blockade question (24%)** lagging the broader Iran rally is telling. Markets are pricing a *talking phase*, not a capitulation. The Strait of Hormuz remains locked; the endgame probability is still weak. This is de-escalation theater, not resolution.\n\n---\n\n## Watch List\n\n1. **US x Iran diplomatic meeting by April 26, 2026** (28%) \u2014 Your 48-hour arbitrage. If markets don't move in the next 6 hours, this should be dead money by Sunday EOD. If there's a surprise Friday evening leak, it reprices hard.\n\n2. **Will Donald Trump announce that the US blockade of the Strait of Hormuz has been lifted by April 30, 2026?** (24%) \u2014 The real tell. Meeting \u2260 lifted blockade. Watch this for market expectation reset once talks commence. Current pricing suggests traders think diplomacy stalls before capitulation.\n\n3. **US x Iran permanent peace deal by May 31, 2026** (34%, +6%) \u2014 The sleeper winner today. Lowest volume but cleanest signal: smart money is buying the 5-week window as a leveraged bet on breakthrough momentum. If April 28 meeting happens, this reprices north of 50% within hours.\n\n---\n\n**Bottom line:** Iran story is live. April 26 is mispriced relative to the 28-30 window. Blockade lifting is priced like a tail risk\u2014probably correct, but worth monitoring for upside shock.",
+  "date": "Sunday April 26, 2026",
+  "generated": "2026-04-26T08:09:49.004844Z",
+  "brief": "# ZIMR DAILY BRIEF | Sunday, April 26, 2026\n\n## Headline\n**Iran Diplomacy Hopes Cratering\u2014Market Pricing Imminent Failure**\n\n---\n\n## Market Intelligence\n\nThe Iran diplomatic complex is collapsing in real-time. All near-term meeting odds have been obliterated overnight: the April 27 deadline fell 49%, April 28 dropped 52%, and April 30 (the \"soft deadline\") shed 45%. Volume surged to $3.1M across these four markets\u2014this isn't retail noise, it's institutional repositioning. The signal is unmistakable: smart money is now pricing in that no meaningful meeting happens this week.\n\nWhat's notable is the *relative stability* in longer-dated peace deal odds (May 31 still at 30%, down only 4%). This suggests sophisticated players are hedging: they've abandoned near-term catalysts but haven't given up on eventual resolution. The disconnect is telling\u2014markets expect the April sprint to fail, but maintain faith in extended negotiations. Meanwhile, the Hezbollah ceasefire (22%) is holding ground despite the broader deterioration, suggesting regional actors may be compartmentalizing.\n\nThe real mispricing? Bitcoin's +7.5% pop to 52% for April's $80K target amid Iran's diplomatic implosion. Risk-off typically crushes crypto, but BTC is pricing geopolitical stability *or* a \"relief rally\" if expectations are so depressed that any non-disaster reads as positive. Watch whether that decoupling holds if Iran news deteriorates further\u2014it's a tell on whether the market has truly repriced tail risk.\n\n---\n\n## Watch List\n\n1. **US x Iran diplomatic meeting by April 30** (18% | $956K vol) \u2014 The inflection point. If this breaches 10% today, the market is officially pricing zero chance of a meeting this month. A bounce above 25% signals unexpected dovish signaling.\n\n2. **Bitcoin $80K by April (52% | $356K vol)** \u2014 Correlation breakage indicator. If this stays elevated *and* Iran odds continue falling, we're in a genuine \"crypto divergence\" scenario worth investigating. Weakness below 45% would be more normal risk-on/off behavior.\n\n3. **US x Iran permanent peace deal by May 31 (30% | $669K vol)** \u2014 The structural bet. Track whether this holds the 28-32% range or rolls lower. It's the only market still pricing *eventual* resolution, and it's your window into whether the market believes this is a negotiating tactic or genuine breakdown.",
   "top_movers": [
     {
       "question": "US x Iran diplomatic meeting by April 28, 2026?",
-      "prob": 58,
-      "change": 43.5,
-      "vol24": "$565K",
+      "prob": 6,
+      "change": -52.0,
+      "vol24": "$428K",
       "slug": "us-x-iran-diplomatic-meeting-by-april-28-2026"
     },
     {
       "question": "US x Iran diplomatic meeting by April 27, 2026?",
-      "prob": 50,
-      "change": 40.0,
-      "vol24": "$644K",
+      "prob": 2,
+      "change": -48.9,
+      "vol24": "$796K",
       "slug": "us-x-iran-diplomatic-meeting-by-april-27-2026"
     },
     {
       "question": "US x Iran diplomatic meeting by April 30, 2026?",
-      "prob": 66,
-      "change": 38.5,
-      "vol24": "$1.2M",
+      "prob": 18,
+      "change": -45.5,
+      "vol24": "$956K",
       "slug": "us-x-iran-diplomatic-meeting-by-april-30-2026-299-459-263-225"
     },
     {
-      "question": "Will the price of Bitcoin be above $78,000 on April 24?",
+      "question": "US x Iran diplomatic meeting by April 26, 2026?",
       "prob": 1,
-      "change": -37.5,
-      "vol24": "$2.9M",
-      "slug": "bitcoin-above-78k-on-april-24"
+      "change": -32.0,
+      "vol24": "$717K",
+      "slug": "us-x-iran-diplomatic-meeting-by-april-26-2026"
     },
     {
-      "question": "LoL: Top Esports vs Ninjas in Pyjamas - Game 1 Winner",
-      "prob": 99,
-      "change": 36.0,
-      "vol24": "$500K",
-      "slug": "lol-tes-nip-2026-04-25-game1"
+      "question": "Israel x Hezbollah Ceasefire extended by April 26, 2026?",
+      "prob": 22,
+      "change": -17.0,
+      "vol24": "$450K",
+      "slug": "israel-x-hezbollah-ceasefire-extended-by-april-26-2026"
     }
   ],
   "top_vol": [
-    {
-      "question": "US x Iran ceasefire extended by April 22, 2026?",
-      "prob": 1,
-      "change": -0.1,
-      "vol24": "$11.0M",
-      "slug": "us-x-iran-ceasefire-extended-by-april-22-2026"
-    },
-    {
-      "question": "Will the Indian National Congress (INC) win the most seats in the 2026 Tamil Nadu Legislative Assembly election?",
-      "prob": 1,
-      "change": 0,
-      "vol24": "$7.8M",
-      "slug": "will-the-indian-national-congress-inc-win-the-most-seats-in-the-2026-tamil-nadu-legislative-assembly-election"
-    },
     {
       "question": "Will Bitcoin hit $150k by June 30, 2026?",
       "prob": 1,
       "change": 0,
       "vol24": "$5.8M",
       "slug": "will-bitcoin-hit-150k-by-june-30-2026"
+    },
+    {
+      "question": "US x Iran ceasefire extended by April 22, 2026?",
+      "prob": 1,
+      "change": 0,
+      "vol24": "$5.5M",
+      "slug": "us-x-iran-ceasefire-extended-by-april-22-2026"
+    },
+    {
+      "question": "Will there be no change in Fed interest rates after the April 2026 meeting?",
+      "prob": 99,
+      "change": 0.2,
+      "vol24": "$4.4M",
+      "slug": "will-there-be-no-change-in-fed-interest-rates-after-the-april-2026-meeting"
     }
   ]
 }
