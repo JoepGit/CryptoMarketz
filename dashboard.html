@@ -4967,7 +4967,15 @@ function parseRSSItems(txt, srcName) {
   var xml = new DOMParser().parseFromString(txt, 'text/xml');
   var items = Array.from(xml.querySelectorAll('item')).slice(0, 20).map(function(it) {
     var title = (it.querySelector('title') || {}).textContent || '';
-    var link  = (it.querySelector('link')  || {}).textContent || '';
+    // <link> in RSS is tricky - try multiple approaches
+    var linkEl = it.querySelector('link');
+    var link = '';
+    if(linkEl) {
+      link = linkEl.textContent || linkEl.getAttribute('href') || '';
+      // Sometimes link is empty but next sibling is the URL text
+      if(!link && linkEl.nextSibling) link = (linkEl.nextSibling.nodeValue || '').trim();
+    }
+    if(!link) { var guid = it.querySelector('guid'); if(guid) link = guid.textContent || ''; }
     var pub   = (it.querySelector('pubDate') || {}).textContent || '';
     if(!title || !link) return null;
     return { title: title.trim(), url: link.trim(), date: pub ? new Date(pub) : new Date(), src: srcName };
@@ -4982,16 +4990,34 @@ function fetchFeedWithFallback(feedUrl, srcName){
     return Promise.resolve(_newsCache[cacheKey]);
   }
 
-  // rss2json gives 422 on github-pages referrer; corsproxy.io gives 403.
-  // Working proxies as of April 2026:
-  var workingProxies = [
+  // Strategy 1: rss2json (most reliable for GitHub Pages)
+  var rss2jsonAttempt = fetch(
+    'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(feedUrl) + '&count=20',
+    { signal: AbortSignal.timeout(10000) }
+  ).then(function(r) {
+    if(!r.ok) throw new Error('http '+r.status);
+    return r.json();
+  }).then(function(data) {
+    if(!data.items || !data.items.length) throw new Error('empty');
+    return data.items.map(function(it) {
+      return {
+        title: (it.title || '').trim(),
+        url: (it.link || '').trim(),
+        date: it.pubDate ? new Date(it.pubDate) : new Date(),
+        src: srcName
+      };
+    }).filter(function(i){ return i.title && i.url; });
+  });
+
+  // Strategy 2: CORS proxies (raw RSS XML fallback)
+  var corsProxies = [
+    'https://corsproxy.io/?',
     'https://api.allorigins.win/raw?url=',
-    'https://api.codetabs.com/v1/proxy?quest=',
-    'https://thingproxy.freeboard.io/fetch/'
+    'https://api.codetabs.com/v1/proxy?quest='
   ];
 
-  var attempts = workingProxies.map(function(proxy) {
-    return fetch(proxy + encodeURIComponent(feedUrl), { signal: AbortSignal.timeout(8000) })
+  var corsAttempts = corsProxies.map(function(proxy) {
+    return fetch(proxy + encodeURIComponent(feedUrl), { signal: AbortSignal.timeout(10000) })
       .then(function(r) { if(!r.ok) throw new Error('http '+r.status); return r.text(); })
       .then(function(txt) {
         var items = parseRSSItems(txt, srcName);
@@ -4999,6 +5025,8 @@ function fetchFeedWithFallback(feedUrl, srcName){
         return items;
       });
   });
+
+  var attempts = [rss2jsonAttempt].concat(corsAttempts);
 
   return Promise.any(attempts)
     .then(function(items) {
