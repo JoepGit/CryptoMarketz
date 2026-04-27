@@ -5783,6 +5783,28 @@ function aiUserInitial(){
   return name.charAt(0).toUpperCase();
 }
 
+function aiGetLivePriceContext(){
+  var lines = [];
+  var today = new Date().toISOString().slice(0,10);
+  lines.push('LIVE MARKET DATA (as of ' + today + '):');
+  if(_priceCache && _priceCache.length){
+    var top = _priceCache.slice(0,20);
+    top.forEach(function(c){
+      var sym = (c.symbol||c.ticker||c.id||'').toUpperCase();
+      var price = c.current_price||c.price||0;
+      var change = c.price_change_percentage_24h||c.changePercent24Hr||0;
+      if(sym && price){
+        var dir = change>=0?'+':'';
+        lines.push('  ' + sym + ': $' + Number(price).toLocaleString('en-US',{maximumFractionDigits:4}) + ' (' + dir + Number(change).toFixed(2) + '% 24h)');
+      }
+    });
+  } else {
+    lines.push('  (Price data loading...)');
+  }
+  lines.push('IMPORTANT: Use ONLY these prices in your analysis. Never use prices from your training data.');
+  return lines.join('\n');
+}
+
 function aiGetSystemPrompt(){
   var focus=document.getElementById('ai-focus')?document.getElementById('ai-focus').value:'balanced';
   var lang=document.getElementById('ai-lang')?document.getElementById('ai-lang').value:'en';
@@ -5794,7 +5816,8 @@ function aiGetSystemPrompt(){
     beginner:'Explain everything in a beginner-friendly way, avoid jargon or always explain it clearly.'
   };
   var langInstr=lang==='en'?'Respond in English.':'Respond in English.';
-  return 'You are an experienced crypto market analyst for the ZIMR Capital platform. You provide in-depth analyses of the crypto market based on technical analysis, on-chain data, macro economics and market sentiment. Always give concrete, well-substantiated analyses no vague answers. Use markdown-style formatting: use **bold** for important terms and short ALL-CAPS headings for sections. Be direct and professional. '+focusMap[focus]+' '+langInstr;
+  var liveData = aiGetLivePriceContext();
+  return 'You are an experienced crypto market analyst for the ZIMR Capital platform. You provide in-depth analyses of the crypto market based on technical analysis, on-chain data, macro economics and market sentiment. Always give concrete, well-substantiated analyses no vague answers. Use markdown-style formatting: use **bold** for important terms and short ALL-CAPS headings for sections. Be direct and professional. '+focusMap[focus]+' '+langInstr+'\n\n'+liveData;
 }
 
 function aiAddMessage(role,text){
