@@ -4973,23 +4973,58 @@ function cryptoFetch(url, timeoutMs){
 
 function coincapFetch(){
   if(_priceCache&&Date.now()-_priceCacheTime<30000)return Promise.resolve(_priceCache);
-  // Use CoinGecko via proxy (CoinCap v2 is offline, CoinGecko blocks direct from github-pages domains)
-  var ids = 'bitcoin,ethereum,solana,ripple,dogecoin,cardano,chainlink,litecoin';
-  var url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids='+ids+'&order=market_cap_desc&per_page=15&page=1&sparkline=false&price_change_percentage=24h';
-  return cryptoFetch(url)
+
+  var ids = 'bitcoin,ethereum,solana,ripple,dogecoin,cardano,chainlink,litecoin,polkadot,avalanche-2,matic-network,uniswap,tron,stellar,near';
+  var cgUrl = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids='+ids+'&order=market_cap_desc&per_page=20&page=1&sparkline=false&price_change_percentage=24h';
+
+  // Strategy 1: via Vercel proxy (most reliable)
+  var vercelAttempt = fetch('https://zimr-proxy.vercel.app/api/prices?ids='+ids, {
+    signal: AbortSignal.timeout(8000)
+  }).then(function(r){
+    if(!r.ok) throw new Error('vercel proxy http '+r.status);
+    return r.json();
+  }).then(function(data){
+    if(!Array.isArray(data)||!data.length) throw new Error('empty');
+    return data;
+  });
+
+  // Strategy 2: CoinGecko via CORS proxies
+  var corsAttempt = cryptoFetch(cgUrl, 8000);
+
+  // Strategy 3: CryptoCompare (different API, has 24h change)
+  var ccIds = 'BTC,ETH,SOL,XRP,DOGE,ADA,LINK,LTC,DOT,AVAX,MATIC,UNI,TRX,XLM,NEAR';
+  var ccUrl = 'https://min-api.cryptocompare.com/data/pricemultifull?fsyms='+ccIds+'&tsyms=USD';
+  var ccAttempt = fetch(ccUrl, { signal: AbortSignal.timeout(8000) })
+    .then(function(r){ if(!r.ok) throw new Error('cc http '+r.status); return r.json(); })
     .then(function(data){
-      if(!Array.isArray(data) || !data.length) throw new Error('CoinGecko lege response');
+      if(!data.RAW) throw new Error('cc empty');
+      var symbolToId = {BTC:'bitcoin',ETH:'ethereum',SOL:'solana',XRP:'ripple',DOGE:'dogecoin',ADA:'cardano',LINK:'chainlink',LTC:'litecoin',DOT:'polkadot',AVAX:'avalanche-2',MATIC:'matic-network',UNI:'uniswap',TRX:'tron',XLM:'stellar',NEAR:'near'};
+      return Object.keys(data.RAW).map(function(sym){
+        var d = data.RAW[sym].USD;
+        return {
+          id: symbolToId[sym]||sym.toLowerCase(),
+          ticker: sym,
+          symbol: sym.toLowerCase(),
+          current_price: d.PRICE||0,
+          price_change_percentage_24h: d.CHANGEPCT24HOUR||0
+        };
+      }).filter(function(c){ return c.current_price>0; });
+    });
+
+  return Promise.any([vercelAttempt, corsAttempt, ccAttempt])
+    .then(function(data){
       var coins = data.map(function(c){
         return {
-          id: c.id,
-          ticker: (c.symbol||'').toUpperCase(),
-          symbol: (c.symbol||'').toLowerCase(),
+          id: c.id||'',
+          ticker: (c.symbol||c.ticker||'').toUpperCase(),
+          symbol: (c.symbol||c.ticker||'').toLowerCase(),
           current_price: Number(c.current_price)||0,
           price_change_percentage_24h: Number(c.price_change_percentage_24h)||0
         };
-      });
+      }).filter(function(c){ return c.current_price>0; });
+      if(!coins.length) throw new Error('all empty');
       _priceCache=coins;_priceCacheTime=Date.now();
-      console.log('[ZIMR] ✓ prijzen geladen:', coins.length, 'coins');
+      console.log('[ZIMR] ✓ prijzen geladen:', coins.length, 'coins via', coins[0].ticker);
       return coins;
     });
 }
@@ -5127,7 +5162,26 @@ function fetchFeedWithFallback(feedUrl, srcName){
     return Promise.resolve(_newsCache[cacheKey]);
   }
 
-  // Strategy 1: rss2json (most reliable for GitHub Pages)
+  // Strategy 1: Vercel proxy (most reliable)
+  var vercelNewsAttempt = fetch(
+    'https://zimr-proxy.vercel.app/api/news?feed=' + encodeURIComponent(feedUrl),
+    { signal: AbortSignal.timeout(10000) }
+  ).then(function(r) {
+    if(!r.ok) throw new Error('vercel http '+r.status);
+    return r.json();
+  }).then(function(data) {
+    if(!data.items || !data.items.length) throw new Error('empty');
+    return data.items.map(function(it) {
+      return {
+        title: (it.title || '').trim(),
+        url: (it.link || '').trim(),
+        date: it.pubDate ? new Date(it.pubDate) : new Date(),
+        src: srcName
+      };
+    }).filter(function(i){ return i.title && i.url; });
+  });
+
+  // Strategy 2: rss2json
   var rss2jsonAttempt = fetch(
     'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(feedUrl) + '&count=20',
     { signal: AbortSignal.timeout(10000) }
@@ -5163,7 +5217,7 @@ function fetchFeedWithFallback(feedUrl, srcName){
       });
   });
 
-  var attempts = [rss2jsonAttempt].concat(corsAttempts);
+  var attempts = [vercelNewsAttempt, rss2jsonAttempt].concat(corsAttempts);
 
   return Promise.any(attempts)
     .then(function(items) {
