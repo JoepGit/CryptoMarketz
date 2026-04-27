@@ -4343,80 +4343,217 @@ a:focus-visible,button:focus-visible,input:focus-visible{
 
 <!-- ═══ PRICING ═══ -->
     <div class="page" id="page-pricing">
-      <div class="ph"><h1>Pricing</h1><p>Choose the plan that fits your goals. Cancel anytime.</p></div>
-      
-        <div class="plg">
+      <div class="ph"><h1>Pricing</h1><p>Everything included. One simple plan.</p></div>
 
-          <!-- STARTER -->
-          <div class="card pl">
-            <div class="pl-name">Starter</div>
-            <div class="pl-price">$0</div>
-            <div class="pl-per">free forever</div>
-            <div class="pl-div"></div>
-            <ul class="pl-ul">
-              <li><span>Dashboard access</span></li>
-              <li><span>Crypto markets live</span></li>
-              <li><span>Crypto news feed</span></li>
-              <li><span>Charting</span></li>
-              <li><span>Market Tracker</span></li>
-            </ul>
-            <button class="pl-bt bt-o" onclick="goPage('pricing',null)">Get Started</button>
+      <style>
+        .zimr-plan-wrap {
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          padding: 10px 0 60px;
+        }
+        .zimr-plan {
+          position: relative;
+          width: 100%;
+          max-width: 460px;
+          background: linear-gradient(160deg, #0f0f14 0%, #111118 60%, #13101a 100%);
+          border: 1px solid rgba(155,89,214,.35);
+          border-radius: 20px;
+          padding: 40px 38px 36px;
+          overflow: hidden;
+          box-shadow: 0 0 60px rgba(155,89,214,.12), 0 30px 80px rgba(0,0,0,.5);
+        }
+        .zimr-plan::before {
+          content: '';
+          position: absolute;
+          top: -80px; left: -80px;
+          width: 300px; height: 300px;
+          background: radial-gradient(circle, rgba(155,89,214,.18) 0%, transparent 70%);
+          pointer-events: none;
+        }
+        .zimr-plan::after {
+          content: '';
+          position: absolute;
+          bottom: -60px; right: -60px;
+          width: 220px; height: 220px;
+          background: radial-gradient(circle, rgba(168,85,247,.1) 0%, transparent 70%);
+          pointer-events: none;
+        }
+        .zimr-plan-tag {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          background: rgba(155,89,214,.15);
+          border: 1px solid rgba(155,89,214,.4);
+          color: #b07ee8;
+          font-family: 'JetBrains Mono', monospace;
+          font-size: 10px;
+          font-weight: 700;
+          letter-spacing: .12em;
+          padding: 5px 12px;
+          border-radius: 100px;
+          text-transform: uppercase;
+          margin-bottom: 24px;
+        }
+        .zimr-plan-tag::before {
+          content: '';
+          width: 6px; height: 6px;
+          background: #9b59d6;
+          border-radius: 50%;
+          box-shadow: 0 0 8px #9b59d6;
+          animation: zimrPulse 2s ease-in-out infinite;
+        }
+        @keyframes zimrPulse {
+          0%,100% { opacity:1; transform:scale(1); }
+          50% { opacity:.4; transform:scale(.7); }
+        }
+        .zimr-plan-label {
+          font-family: 'Orbitron', monospace;
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: .22em;
+          color: rgba(155,89,214,.7);
+          text-transform: uppercase;
+          margin-bottom: 8px;
+        }
+        .zimr-plan-price {
+          display: flex;
+          align-items: flex-start;
+          gap: 4px;
+          margin-bottom: 4px;
+          line-height: 1;
+        }
+        .zimr-plan-currency {
+          font-family: 'Inter', sans-serif;
+          font-size: 22px;
+          font-weight: 800;
+          color: #9b59d6;
+          margin-top: 8px;
+        }
+        .zimr-plan-amount {
+          font-family: 'Inter', sans-serif;
+          font-size: 64px;
+          font-weight: 900;
+          color: #f0ece8;
+          letter-spacing: -3px;
+          line-height: 1;
+        }
+        .zimr-plan-cents {
+          font-family: 'Inter', sans-serif;
+          font-size: 22px;
+          font-weight: 800;
+          color: rgba(240,236,232,.5);
+          margin-top: 8px;
+          letter-spacing: 0;
+        }
+        .zimr-plan-period {
+          font-family: 'Inter', sans-serif;
+          font-size: 13px;
+          color: rgba(240,236,232,.3);
+          margin-bottom: 28px;
+          letter-spacing: .02em;
+        }
+        .zimr-plan-divider {
+          height: 1px;
+          background: linear-gradient(90deg, transparent, rgba(155,89,214,.3), transparent);
+          margin-bottom: 26px;
+        }
+        .zimr-plan-features {
+          list-style: none;
+          margin-bottom: 32px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 0;
+        }
+        .zimr-plan-features li {
+          display: flex;
+          align-items: center;
+          gap: 9px;
+          padding: 9px 0;
+          font-family: 'Inter', sans-serif;
+          font-size: 13px;
+          color: rgba(240,236,232,.75);
+          border-bottom: 1px solid rgba(255,255,255,.04);
+        }
+        .zimr-plan-features li:nth-last-child(-n+2) { border-bottom: none; }
+        .zimr-plan-features li::before {
+          content: '';
+          width: 16px; height: 16px;
+          background: rgba(155,89,214,.15);
+          border: 1px solid rgba(155,89,214,.35);
+          border-radius: 50%;
+          flex-shrink: 0;
+          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 10 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 5l2.5 2.5L8 3' stroke='%239b59d6' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+          background-size: 10px;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+        .zimr-plan-cta {
+          position: relative;
+          display: block;
+          width: 100%;
+          padding: 16px;
+          background: linear-gradient(135deg, #9b59d6 0%, #7c3aed 100%);
+          border: none;
+          border-radius: 12px;
+          color: #fff;
+          font-family: 'Inter', sans-serif;
+          font-size: 14px;
+          font-weight: 800;
+          letter-spacing: .1em;
+          text-transform: uppercase;
+          cursor: pointer;
+          transition: all .2s;
+          box-shadow: 0 8px 32px rgba(155,89,214,.35);
+          overflow: hidden;
+        }
+        .zimr-plan-cta::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(135deg, rgba(255,255,255,.15) 0%, transparent 60%);
+          opacity: 0;
+          transition: opacity .2s;
+        }
+        .zimr-plan-cta:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(155,89,214,.5); }
+        .zimr-plan-cta:hover::before { opacity: 1; }
+        .zimr-plan-cta:active { transform: translateY(0); }
+        .zimr-plan-note {
+          text-align: center;
+          font-family: 'Inter', sans-serif;
+          font-size: 11px;
+          color: rgba(240,236,232,.2);
+          margin-top: 14px;
+          letter-spacing: .02em;
+        }
+      </style>
+
+      <div class="zimr-plan-wrap">
+        <div class="zimr-plan">
+          <div class="zimr-plan-tag">Full Access</div>
+          <div class="zimr-plan-label">ZIMR Capital</div>
+          <div class="zimr-plan-price">
+            <span class="zimr-plan-currency">$</span>
+            <span class="zimr-plan-amount">19</span>
+            <span class="zimr-plan-cents">.99</span>
           </div>
-
-          <!-- PRO -->
-          <div class="card pl">
-            <div class="pl-name">Pro</div>
-            <div class="pl-price">$15</div>
-            <div class="pl-per">per month</div>
-            <div class="pl-div"></div>
-            <ul class="pl-ul">
-              <li><span>Everything in Starter</span></li>
-              <li><span>Platform Guide</span></li>
-              <li><span>Education library</span></li>
-              <li><span>Market analysis</span></li>
-              <li><span>Thursday Update</span></li>
-              <li><span>Books</span></li>
-              <li><span>Trading signals</span></li>
-            </ul>
-            <button class="pl-bt bt-s" onclick="goPage('pricing',null)">Join Pro</button>
-          </div>
-
-          <!-- AI ANALYST -->
-          <div class="card pl ft">
-            <div class="pl-badge">Most Popular</div>
-            <div class="pl-name">AI Analyst</div>
-            <div class="pl-price">$35</div>
-            <div class="pl-per">per month</div>
-            <div class="pl-div"></div>
-            <ul class="pl-ul">
-              <li><span>Everything in Pro</span></li>
-              <li><span>AI market analyst</span></li>
-              <li><span>AI daily market brief</span></li>
-              <li><span>Bot signals</span></li>
-              <li><span>BTC / ETH deep dive</span></li>
-              <li><span>Whale alerts advanced</span></li>
-              <li><span>Smart money flows</span></li>
-            </ul>
-            <button class="pl-bt bt-o" onclick="goPage('pricing',null)">Start AI Plan</button>
-          </div>
-
-          <!-- LIFETIME -->
-          <div class="card pl">
-            <div class="pl-name">Lifetime</div>
-            <div class="pl-price">$500</div>
-            <div class="pl-per">one-time payment</div>
-            <div class="pl-div"></div>
-            <ul class="pl-ul">
-              <li><span>Everything in AI Analyst</span></li>
-              <li><span>Lifetime access, no renewals</span></li>
-              <li><span>All future updates included</span></li>
-              <li><span>Private trading group</span></li>
-              <li><span>Priority support</span></li>
-            </ul>
-            <button class="pl-bt bt-o" onclick="goPage('pricing',null)">Get Lifetime</button>
-          </div>
-
-        </div></div>
+          <div class="zimr-plan-period">per month &nbsp;·&nbsp; cancel anytime</div>
+          <div class="zimr-plan-divider"></div>
+          <ul class="zimr-plan-features">
+            <li>Full dashboard access</li>
+            <li>Crypto markets live</li>
+            <li>Crypto news feed</li>
+            <li>Charting &amp; analysis</li>
+            <li>AI market analyst</li>
+            <li>AI daily market brief</li>
+            <li>Bot signals</li>
+            <li>Education library</li>
+            <li>Thursday Update</li>
+            <li>Books</li>
+          </ul>
+          <button class="zimr-plan-cta" onclick="goPage('pricing',null)">Get Started — $19.99/mo</button>
+          <div class="zimr-plan-note">No hidden fees &nbsp;·&nbsp; Secure payment &nbsp;·&nbsp; Instant access</div>
+        </div>
       </div>
     </div>
 <!-- ═══ ADMIN ═══ -->
