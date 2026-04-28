@@ -1,5 +1,17 @@
 [
   {
+    "id": 1777403967006,
+    "coin": "ETH/USD",
+    "type": "SELL",
+    "entry": "2291",
+    "tp": "2210",
+    "sl": "2320",
+    "note": "4H bearish trend with price below EMA20, 1H RSI at 67.5 showing overbought conditions in sideways action. Clear resistance at 24h high 2398. Use 1/3 position size.",
+    "timestamp": "2026-04-28T19:19:18.447Z",
+    "generated_at": "Tue, 28 Apr 2026 19:19:18 GMT",
+    "source": "claude-bot"
+  },
+  {
     "id": 1777382876621,
     "coin": "BTC/USD",
     "type": "BUY",
