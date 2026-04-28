@@ -1,42 +1,42 @@
 {
-  "date": "Monday April 27, 2026",
-  "generated": "2026-04-27T09:12:11.050412Z",
-  "brief": "# POLYMARKET DAILY BRIEF | Monday, April 27, 2026\n\n## Headline\n**Middle East De-escalation Priced In; Bitcoin Rejection at $80K Signals Consolidation Mode**\n\n---\n\n## Market Intelligence\n\n**The Signal:** Hezbollah ceasefire extension just spiked 15% to 40% probability\u2014smart money is front-running diplomatic momentum. The inverse is telling: US-Iran direct talks by April 27 collapsed to 1% (effectively dead), but April 30 meetings sit at 10%, suggesting markets expect backdoor negotiations over public theatre. This is classic geopolitical risk unwinding on soft signals.\n\n**Smart Money Moves:** The Lakers-Rockets obliteration (-38.5%, now 1%) screams liquidation\u2014likely early sharps got torched on a live event or line moved post-injury. The $11.3M volume is junk time action. Meanwhile, Fed rate hold at 99% with $8M volume confirms zero surprise expected after this week's meeting. The real play: India's West Bengal election (AITC at 58%, +12%) is accumulating quietly on regional polling\u2014$369K volume masks significant institution building.\n\n**The Mispricing:** Bitcoin at 42% for $80K by month-end is *fairly priced* given we're 4 days from close and price action is listless. The 5% shot at $85K feels right. Ignore the noise\u2014consolidation above $70K is healthy. Boston Celtics at 14% for Finals are *underpriced* relative to injury-adjusted odds; this is a 2% mispricing if you trust their depth chart.\n\n---\n\n## Watch List\n\n1. **US x Iran by April 30** (10%) \u2014 Expect intraday moves if Reuters/AP drops anything on back-channel talks. Could pop to 18-22% on hard news. Monitor USTR statements closely.\n\n2. **Manchester United vs. [Opponent] Today** (50%) \u2014 Live event risk. If odds sit at 50%, sharp public is split; watch first-half movement for sharp steam.\n\n3. **AITC West Bengal** (58%) \u2014 Low volume hides big money. If this crosses 62% before May 1 counting, you're seeing institutional conviction building. Track Indian political Twitter for polling updates.",
+  "date": "Tuesday April 28, 2026",
+  "generated": "2026-04-28T09:13:11.548431Z",
+  "brief": "# ZIMR POLYMARKET BRIEF | Tuesday, April 28, 2026\n\n## Market's Calling the Middle East Stable\u2014But Geopolitical Hedges Are Cheap\n\nThe Hezbollah ceasefire extension just hit 99% after a 61% rally today ($3.9M volume), effectively pricing in regional stability through late April. This is the market's loudest signal: peace holds. But here's the tension\u2014the Iran-US diplomatic meeting sits at 3% despite only two days left in the window. Smart money appears to be taking the contradiction seriously: they're willing to bet heavy on Israeli-Hezbollah holding (low-risk, high-confidence trade) while leaving diplomatic upside severely underpriced. The $14.1M sitting in the Iran ceasefire at 1% suggests real hedging activity\u2014institutional players aren't comfortable assuming the Middle East stays quiet without buying tail-risk protection.\n\nThe crypto markets are capitulating. Bitcoin at 1% to hit $85k in April tells you April's dead; the June $150k market at 1% with $5.8M volume is the real price discovery. This isn't panic\u2014it's repricing. The Fed rate hike at 1% ($3.7M) with earnings season ramping suggests traders expect the April meeting to hold. Watch the yield curve: if it inverts further, that 1% becomes a steal.\n\nSports and AI are noise. PSG-Bayern split (40/38) is basically a coin flip with real money behind it. OpenAI at 1% is a sentiment graveyard\u2014Claude 3.5 and Grok momentum is real, and that market is dead wrong if you believe the narrative has shifted.\n\n---\n\n## WATCH LIST\n\n**1. US x Iran diplomatic meeting by April 30 (3%, Vol: $420K)**  \nOnly 48 hours left. This is either a mispricing or the market has genuine intel it won't happen. Heavy volume in the Iran ceasefire ($14.1M at 1%) suggests institutional fear\u2014these two markets should be correlated. If anything moves in the next 2 days, watch this first.\n\n**2. Will Bitcoin reach $85,000 in April? (1%, Vol: $381K)**  \nThree days to move ~$3-5K. Effectively dead, but the capitulation is worth noting. If we see a reversal bounce, this becomes a quick 10x trade. Tight stops only.\n\n**3. Will the Fed increase interest rates by 25+ bps after April meeting? (1%, Vol: $3.7M)**  \nHighest conviction short for smart money right now. The volume here matters. If this shifts above 5% on any Fed hawkish signal, equities crater. This is your macro canary.",
   "top_movers": [
     {
-      "question": "Lakers vs. Rockets",
-      "prob": 1,
-      "change": -38.5,
-      "vol24": "$11.3M",
-      "slug": "nba-lal-hou-2026-04-26"
-    },
-    {
       "question": "Israel x Hezbollah Ceasefire extended by April 26, 2026?",
-      "prob": 40,
-      "change": 15.0,
-      "vol24": "$794K",
+      "prob": 99,
+      "change": 61.4,
+      "vol24": "$3.9M",
       "slug": "israel-x-hezbollah-ceasefire-extended-by-april-26-2026"
     },
     {
-      "question": "Will the All India Trinamool Congress (AITC) win the most seats in the 2026 West Bengal Legislative Assembly election?",
-      "prob": 58,
-      "change": 12.0,
-      "vol24": "$369K",
-      "slug": "will-the-all-india-trinamool-congress-aitc-win-the-most-seats-in-the-2026-west-bengal-legislative-assembly-election"
+      "question": "Madrid Open: Stefanos Tsitsipas vs Daniel Merida Aguilar",
+      "prob": 99,
+      "change": 35.4,
+      "vol24": "$382K",
+      "slug": "atp-tsitsip-aguilar-2026-04-27"
     },
     {
-      "question": "Will Bitcoin reach $80,000 in April?",
-      "prob": 42,
-      "change": -9.0,
-      "vol24": "$485K",
-      "slug": "will-bitcoin-reach-80k-in-april-2026-794"
+      "question": "Clavicular pregnancy in 2026?",
+      "prob": 98,
+      "change": 14.0,
+      "vol24": "$920K",
+      "slug": "clavicular-pregnancy-in-2026"
     },
     {
       "question": "US x Iran diplomatic meeting by April 30, 2026?",
-      "prob": 10,
-      "change": -5.0,
-      "vol24": "$419K",
+      "prob": 3,
+      "change": -7.3,
+      "vol24": "$420K",
       "slug": "us-x-iran-diplomatic-meeting-by-april-30-2026-299-459-263-225"
+    },
+    {
+      "question": "Will Bitcoin reach $85,000 in April?",
+      "prob": 1,
+      "change": -4.2,
+      "vol24": "$381K",
+      "slug": "will-bitcoin-reach-85k-in-april-2026"
     }
   ],
   "top_vol": [
@@ -44,22 +44,22 @@
       "question": "US x Iran ceasefire extended by April 22, 2026?",
       "prob": 1,
       "change": 0.1,
-      "vol24": "$41.0M",
+      "vol24": "$14.1M",
       "slug": "us-x-iran-ceasefire-extended-by-april-22-2026"
     },
     {
-      "question": "Lakers vs. Rockets",
+      "question": "Will Bitcoin hit $150k by June 30, 2026?",
       "prob": 1,
-      "change": -38.5,
-      "vol24": "$11.3M",
-      "slug": "nba-lal-hou-2026-04-26"
+      "change": 0,
+      "vol24": "$5.8M",
+      "slug": "will-bitcoin-hit-150k-by-june-30-2026"
     },
     {
-      "question": "Will there be no change in Fed interest rates after the April 2026 meeting?",
+      "question": "Israel x Hezbollah Ceasefire extended by April 26, 2026?",
       "prob": 99,
-      "change": 0.1,
-      "vol24": "$8.0M",
-      "slug": "will-there-be-no-change-in-fed-interest-rates-after-the-april-2026-meeting"
+      "change": 61.4,
+      "vol24": "$3.9M",
+      "slug": "israel-x-hezbollah-ceasefire-extended-by-april-26-2026"
     }
   ]
 }
