@@ -1,14 +1,14 @@
 [
   {
-    "id": 1777228628025,
-    "coin": "ETH/USD",
-    "type": "SELL",
-    "entry": "2349",
-    "tp": "2280",
-    "sl": "2377",
-    "note": "ETH showing RSI overbought at 69.9 on 1H and 68.0 on 4H, price near 24h high resistance at 2349.90, bullish trend losing momentum. Target support around previous low 2294 area. Risk/reward 1:2.46. Use 1/3 position size.",
-    "timestamp": "2026-04-26T18:37:03.696Z",
-    "generated_at": "Sun, 26 Apr 2026 18:37:03 GMT",
+    "id": 1777382876621,
+    "coin": "BTC/USD",
+    "type": "BUY",
+    "entry": "76122",
+    "tp": "78800",
+    "sl": "75200",
+    "note": "4H sideways trend with RSI at 40.3 approaching oversold. Price near 24h low at strong support level $76138. Risk/reward 1:2.9 with TP at previous resistance. Use 1/3 position size.",
+    "timestamp": "2026-04-28T13:27:53.725Z",
+    "generated_at": "Tue, 28 Apr 2026 13:27:53 GMT",
     "source": "claude-bot"
   }
 ]
