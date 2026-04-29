@@ -1,14 +1,14 @@
 [
   {
-    "id": 1777403967006,
+    "id": 1777449574183,
     "coin": "ETH/USD",
     "type": "SELL",
-    "entry": "2291",
-    "tp": "2210",
-    "sl": "2320",
-    "note": "4H bearish trend with price below EMA20, 1H RSI at 67.5 showing overbought conditions in sideways action. Clear resistance at 24h high 2398. Use 1/3 position size.",
-    "timestamp": "2026-04-28T19:19:18.447Z",
-    "generated_at": "Tue, 28 Apr 2026 19:19:18 GMT",
+    "entry": "2322",
+    "tp": "2260",
+    "sl": "2340",
+    "note": "4H sideways trend with price below EMA50, 1H RSI at 71.3 showing overbought conditions. Clear resistance at 24h high 2336. Strong risk/reward 3.4:1 ratio. Use 1/3 position size.",
+    "timestamp": "2026-04-29T07:59:33.041Z",
+    "generated_at": "Wed, 29 Apr 2026 07:59:33 GMT",
     "source": "claude-bot"
   },
   {
