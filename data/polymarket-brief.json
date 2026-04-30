@@ -1,42 +1,42 @@
 {
-  "date": "Wednesday April 29, 2026",
-  "generated": "2026-04-29T09:04:13.216137Z",
-  "brief": "# ZIMR POLYMARKET BRIEFING | Wednesday, April 29, 2026\n\n## \"Iran Peace Talk Dust Settles; Market Pricing Permanent Deal Over Imminent Ceasefire\"\n\nThe market is drawing a hard line between fantasy and reality. The April 30th Trump announcement contract sits at a laughable 3%\u2014smart money correctly treating it as political theater. But here's what's actually moving: the May 31 permanent peace deal climbed to 30% (+2.0%), suggesting serious institutional money believes *some* framework deal gets announced in the next month, even if hostilities don't officially end. Meanwhile, the \"ceasefire extended by April 22\" contract\u2014already expired\u2014is still pulling $15.1M in volume. That's dead money. Arb opportunity if you're watching late fills.\n\nThe real tell is the Strait of Hormuz traffic contract at 16% (+1.0%). That's still pricing in severe risk. If you believe the May 31 deal talk is real, normalcy should be repriced higher\u2014traders are either hedging tail risk or don't trust the geopolitical signals yet. Watch for any Biden or Iranian official statements; a single credible quote about \"constructive talks\" could spike both contracts simultaneously.\n\nFed rates are fully pinned (99% no change), Bitcoin is priced as a lottery ticket at $150k, and\u2014inexplicably\u2014someone dropped $15.1M on an already-resolved ceasefire contract. Follow the breadcrumbs, not the noise.\n\n---\n\n## WATCH LIST\n\n1. **US x Iran permanent peace deal by May 31** (30%) \u2014 Core signal. Any uptick above 35% signals institutional conviction; any drop below 25% means the May announcement is off the table.\n\n2. **Strait of Hormuz traffic returns to normal by May 15** (16%) \u2014 The lagging indicator. If May 31 peace talk odds spike, Hormuz should follow within hours. Divergence = mispricing.\n\n3. **That $15.1M ceasefire-by-April-22 contract** \u2014 Dead market with live money. Track for late liquidation cascades if volatility spikes.",
+  "date": "Thursday April 30, 2026",
+  "generated": "2026-04-30T09:06:39.935452Z",
+  "brief": "# POLYMARKET BRIEFING | Thursday, April 30, 2026\n\n## Markets Price Reality Check: Printr Hype Evaporates, MegaETH Momentum Persists\n\nThe market just delivered a brutal verdict on Printr's fundraising trajectory. All three commitment thresholds crashed overnight\u2014the $3M target down 83.5%, signaling smart money is pricing in a failed or severely undersubscribed public sale. The speed and magnitude of these collapses suggest insiders or early participants are dumping aggressively. This is how markets kill narratives: not with slow fade, but with coordinated capitulation in 24 hours.\n\nMeanwhile, MegaETH is defying gravity. The >$1B cap market sits at 95% (+6.6% today) while >$2B is at 42% (+13.0%), suggesting the launch executed cleanly and exceeded baseline expectations. Volume is solid across both tiers. This contrasts sharply with Printr's implosion\u2014one token launch is validating, the other is failing live on the chain.\n\nGeopolitical markets show extreme crowding and stale pricing. The Iran-Israel ceasefire extension is priced at 99% on $3.2M volume, the US-Iran permanent peace deal at 22%\u2014these are either heavily capitalized bets by well-connected players or mispriced by retail cope. The $61.1M volume on the expired Iran-US ceasefire question suggests massive liquidation/rollover flows, not fresh conviction. Watch for any breaking news; these markets have zero dry powder left.\n\n---\n\n## WATCH LIST\n\n**1. Will Bitcoin hit $150k by June 30, 2026? [1% | $5.8M vol]**\nHighest-volume market on the board. At 1%, this is either a graveyard for bears or the year's most extreme mispricing. Monitor BTC momentum into May; any move toward $100k could trigger cascading liquidations in short positions or a violent repricing upward.\n\n**2. MegaETH market cap >$2B one day after launch [42% | +13.0%]**\nRiding real positive momentum. Track whether volume sustains or dries up\u2014if buyers are still committed at 42%, this could drift toward 60%+. If volume collapses, smart money may already be exiting.\n\n**3. US x Iran permanent peace deal by May 31, 2026 [22% | -8.0%]**\nDown today but still material odds in a compressed timeframe. Any ceasefire stabilization news could re-rate this hard higher. Currently underpriced relative to the ceasefire extension market (99%). Asymmetric risk if negotiations accelerate.",
   "top_movers": [
     {
-      "question": "Clavicular pregnancy in 2026?",
-      "prob": 90,
-      "change": -7.4,
-      "vol24": "$5.1M",
-      "slug": "clavicular-pregnancy-in-2026"
+      "question": "Over $3M committed to the Printr public sale?",
+      "prob": 15,
+      "change": -83.5,
+      "vol24": "$536K",
+      "slug": "over-3m-committed-to-the-printr-public-sale"
     },
     {
-      "question": "US x Iran permanent peace deal by May 31, 2026?",
-      "prob": 30,
-      "change": 2.0,
-      "vol24": "$1.4M",
-      "slug": "us-x-iran-permanent-peace-deal-by-may-31-2026-333-871"
-    },
-    {
-      "question": "Trump announces end of military operations against Iran by April 30th?",
+      "question": "Over $8M committed to the Printr public sale?",
       "prob": 3,
-      "change": 1.1,
-      "vol24": "$2.9M",
-      "slug": "trump-announces-end-of-military-operations-against-iran-by-april-30th-753-882-164-769-641-926-643"
+      "change": -82.3,
+      "vol24": "$337K",
+      "slug": "over-8m-committed-to-the-printr-public-sale"
     },
     {
-      "question": "Strait of Hormuz traffic returns to normal by May 15?",
-      "prob": 16,
-      "change": 1.0,
-      "vol24": "$961K",
-      "slug": "strait-of-hormuz-traffic-returns-to-normal-by-may-15"
+      "question": "Over $10M committed to the Printr public sale?",
+      "prob": 6,
+      "change": -74.5,
+      "vol24": "$375K",
+      "slug": "over-10m-committed-to-the-printr-public-sale"
     },
     {
-      "question": "Will the Los Angeles Lakers win the 2026 NBA Finals?",
-      "prob": 3,
-      "change": -0.6,
-      "vol24": "$1.9M",
-      "slug": "will-the-los-angeles-lakers-win-the-2026-nba-finals"
+      "question": "MegaETH market cap (FDV) >$2B one day after launch?",
+      "prob": 42,
+      "change": 13.0,
+      "vol24": "$371K",
+      "slug": "megaeth-market-cap-fdv-2b-one-day-after-launch-738-867-649-272-765-733"
+    },
+    {
+      "question": "San Francisco Giants vs. Philadelphia Phillies: O/U 7.5",
+      "prob": 56,
+      "change": 11.0,
+      "vol24": "$373K",
+      "slug": "mlb-sf-phi-2026-04-29-total-7pt5"
     }
   ],
   "top_vol": [
@@ -44,15 +44,8 @@
       "question": "US x Iran ceasefire extended by April 22, 2026?",
       "prob": 1,
       "change": 0,
-      "vol24": "$15.1M",
+      "vol24": "$61.1M",
       "slug": "us-x-iran-ceasefire-extended-by-april-22-2026"
-    },
-    {
-      "question": "Will there be no change in Fed interest rates after the April 2026 meeting?",
-      "prob": 99,
-      "change": 0,
-      "vol24": "$5.8M",
-      "slug": "will-there-be-no-change-in-fed-interest-rates-after-the-april-2026-meeting"
     },
     {
       "question": "Will Bitcoin hit $150k by June 30, 2026?",
@@ -60,6 +53,13 @@
       "change": 0,
       "vol24": "$5.8M",
       "slug": "will-bitcoin-hit-150k-by-june-30-2026"
+    },
+    {
+      "question": "Will the Iranian regime fall by April 30?",
+      "prob": 1,
+      "change": -0.1,
+      "vol24": "$4.7M",
+      "slug": "will-the-iranian-regime-fall-by-april-30"
     }
   ]
 }
