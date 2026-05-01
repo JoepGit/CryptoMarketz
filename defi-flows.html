@@ -3,246 +3,133 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>DeFi Flows — ZIMR Capital</title>
+<title>DeFi Flows  ZIMR Capital</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
   font-family: 'Inter', sans-serif;
-  background: #0f0f13;
+  background: #0d0d11;
   color: #e2e2e8;
   height: 100vh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  font-size: 13px;
 }
 
 /* ── Topbar ── */
 .topbar {
-  background: #13131a;
-  border-bottom: 1px solid #1e1e28;
+  background: #111116;
+  border-bottom: 1px solid #1e1e2a;
   padding: 0 20px;
-  height: 48px;
+  height: 46px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-shrink: 0;
 }
-.logo { font-size: 15px; font-weight: 700; color: #fff; }
+.logo { font-size: 15px; font-weight: 700; color: #fff; letter-spacing: -.01em; }
 .logo span { color: #9b59d6; }
-.tabs { display: flex; gap: 2px; margin-left: 24px; }
-.tab {
-  background: none; border: none;
-  padding: 6px 14px; border-radius: 6px;
-  font-size: 12px; font-weight: 500;
-  color: #6b6b80; cursor: pointer;
-  font-family: inherit; transition: all .15s;
-}
-.tab:hover { color: #e2e2e8; background: #1a1a24; }
+.tabs { display: flex; gap: 2px; margin-left: 20px; }
+.tab { background: none; border: none; padding: 5px 14px; border-radius: 20px; font-size: 12px; font-weight: 500; color: #6b6b80; cursor: pointer; font-family: inherit; transition: all .15s; }
+.tab:hover { color: #e2e2e8; }
 .tab.active { background: #9b59d6; color: #fff; }
 .topbar-right { display: flex; align-items: center; gap: 14px; }
-.live { display: flex; align-items: center; gap: 6px; font-size: 11px; color: #4ade80; }
-.live::before {
-  content: ''; width: 6px; height: 6px;
-  background: #4ade80; border-radius: 50%;
-  box-shadow: 0 0 6px #4ade80; animation: blink 2s infinite;
-}
+.live { display: flex; align-items: center; gap: 5px; font-size: 11px; color: #4ade80; font-weight: 500; }
+.live-dot { width: 6px; height: 6px; background: #4ade80; border-radius: 50%; box-shadow: 0 0 6px #4ade80; animation: blink 2s infinite; }
 @keyframes blink { 0%,100%{opacity:1}50%{opacity:.3} }
-.clock { font-size: 11px; color: #4a4a5a; }
-.btn {
-  background: #1e1e28; border: 1px solid #2a2a38;
-  border-radius: 6px; padding: 5px 12px;
-  font-size: 11px; font-weight: 500; color: #9b59d6;
-  cursor: pointer; font-family: inherit; transition: all .15s;
-}
-.btn:hover { background: #252535; border-color: #9b59d6; }
+.clock { font-size: 11px; color: #4a4a5a; font-variant-numeric: tabular-nums; }
+.btn { background: #1a1a22; border: 1px solid #2a2a38; border-radius: 6px; padding: 5px 12px; font-size: 11px; font-weight: 500; color: #9b59d6; cursor: pointer; font-family: inherit; transition: all .15s; }
+.btn:hover { border-color: #9b59d6; }
 
-/* ── Stats row ── */
-.stats-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  border-bottom: 1px solid #1e1e28;
-  flex-shrink: 0;
-}
-.stat {
-  padding: 12px 20px;
-  border-right: 1px solid #1e1e28;
-}
+/* ── Stats bar ── */
+.stats-bar { display: grid; grid-template-columns: repeat(4,1fr); border-bottom: 1px solid #1e1e2a; flex-shrink: 0; background: #111116; }
+.stat { padding: 11px 20px; border-right: 1px solid #1e1e2a; }
 .stat:last-child { border-right: none; }
-.slbl { font-size: 9px; font-weight: 600; color: #4a4a5a; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 4px; }
-.sval { font-size: 20px; font-weight: 700; color: #fff; line-height: 1; margin-bottom: 2px; }
-.schg { font-size: 11px; font-weight: 500; }
+.slbl { font-size: 9px; font-weight: 600; color: #4a4a5a; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 3px; }
+.sval { font-size: 20px; font-weight: 700; color: #fff; line-height: 1; margin-bottom: 2px; font-variant-numeric: tabular-nums; }
+.schg { font-size: 11px; font-weight: 500; font-variant-numeric: tabular-nums; }
 .up { color: #4ade80; }
 .dn { color: #f87171; }
 .neu { color: #4a4a5a; }
 
-/* ── Main body ── */
-.body {
-  display: grid;
-  grid-template-columns: 1fr 320px;
-  flex: 1;
-  overflow: hidden;
-}
+/* ── Layout ── */
+.main { display: grid; grid-template-columns: 1fr 360px; flex: 1; overflow: hidden; }
+.left { display: flex; flex-direction: column; overflow: hidden; border-right: 1px solid #1e1e2a; }
 
-/* ── Cards grid ── */
-.cards-wrap {
-  overflow-y: auto;
-  padding: 20px;
-}
-.cards-wrap::-webkit-scrollbar { width: 4px; }
-.cards-wrap::-webkit-scrollbar-thumb { background: #2a2a38; border-radius: 2px; }
+/* Charts */
+.charts-section { display: grid; grid-template-columns: 300px 1fr; border-bottom: 1px solid #1e1e2a; flex-shrink: 0; height: 250px; }
+.chart-panel { padding: 14px 16px; overflow: hidden; }
+.chart-panel:first-child { border-right: 1px solid #1e1e2a; }
+.chart-hdr { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.chart-title { font-size: 10px; font-weight: 600; color: #6b6b80; text-transform: uppercase; letter-spacing: .08em; }
+.chart-sub { font-size: 10px; color: #4a4a5a; }
+svg.chart { display: block; overflow: visible; }
 
-.section-hdr {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 14px;
-}
-.section-title { font-size: 13px; font-weight: 600; color: #c0c0d0; }
-.section-note { font-size: 11px; color: #4a4a5a; }
+/* Table */
+.tbl-section { flex: 1; overflow: hidden; display: flex; flex-direction: column; }
+.tbl-hdr { display: grid; grid-template-columns: 28px 26px 1fr 90px 76px 76px 76px 80px; gap: 4px; padding: 8px 16px; border-bottom: 1px solid #1a1a24; background: #0d0d11; position: sticky; top: 0; flex-shrink: 0; }
+.tbl-hdr span { font-size: 9px; font-weight: 600; color: #4a4a5a; text-transform: uppercase; letter-spacing: .05em; cursor: pointer; user-select: none; }
+.tbl-hdr span:hover { color: #9b59d6; }
+.tbl-hdr span:nth-child(n+4) { text-align: right; }
+.tbl-body { flex: 1; overflow-y: auto; }
+.tbl-body::-webkit-scrollbar { width: 4px; }
+.tbl-body::-webkit-scrollbar-thumb { background: #2a2a38; border-radius: 2px; }
 
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 12px;
-  margin-bottom: 28px;
-}
-
-.card {
-  background: #13131a;
-  border: 1px solid #1e1e28;
-  border-radius: 10px;
-  padding: 16px;
-  cursor: pointer;
-  transition: border-color .15s, background .15s;
-  position: relative;
-  overflow: hidden;
-}
-.card:hover { border-color: #2e2e44; background: #161620; }
-.card.sel { border-color: #9b59d6; background: #16102a; }
-.card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 2px;
-  opacity: 0;
-  transition: opacity .2s;
-}
-.card.sel::before { opacity: 1; }
-
-.card-top {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 14px;
-}
-.chain-logo {
-  width: 36px; height: 36px;
-  border-radius: 50%;
-  object-fit: cover;
-  flex-shrink: 0;
-  background: #1e1e28;
-}
-.chain-logo-fallback {
-  width: 36px; height: 36px;
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 14px; font-weight: 700;
-  flex-shrink: 0;
-}
-.card-name { font-size: 16px; font-weight: 700; color: #fff; line-height: 1; }
-.card-rank { font-size: 10px; color: #4a4a5a; margin-top: 2px; }
-
-.card-stats {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 0;
-  background: #0f0f13;
-  border-radius: 7px;
-  overflow: hidden;
-}
-.cstat {
-  padding: 9px 12px;
-  border-right: 1px solid #1a1a24;
-}
-.cstat:last-child { border-right: none; }
-.cstat-lbl { font-size: 9px; font-weight: 600; color: #4a4a5a; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 4px; }
-.cstat-val { font-size: 13px; font-weight: 700; color: #e2e2e8; }
-.cstat-chg { font-size: 10px; font-weight: 500; margin-top: 1px; }
-
-/* ── Right sidebar: table ── */
-.sidebar {
-  border-left: 1px solid #1e1e28;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-.sidebar-hdr {
-  padding: 12px 14px;
-  border-bottom: 1px solid #1e1e28;
-  display: flex; align-items: center; justify-content: space-between;
-  flex-shrink: 0;
-}
-.sidebar-title { font-size: 12px; font-weight: 600; color: #c0c0d0; }
-.sidebar-note { font-size: 10px; color: #4a4a5a; }
-
-.tbl-scroll { flex: 1; overflow-y: auto; }
-.tbl-scroll::-webkit-scrollbar { width: 4px; }
-.tbl-scroll::-webkit-scrollbar-thumb { background: #2a2a38; border-radius: 2px; }
-
-.tbl-head {
-  display: grid;
-  grid-template-columns: 22px 26px 1fr 76px 58px;
-  padding: 7px 14px;
-  border-bottom: 1px solid #1a1a24;
-  background: #0f0f13;
-  position: sticky; top: 0; z-index: 2;
-  gap: 6px;
-}
-.tbl-head span {
-  font-size: 9px; font-weight: 600;
-  color: #4a4a5a; text-transform: uppercase; letter-spacing: .06em;
-}
-.tbl-head span:nth-child(4),
-.tbl-head span:nth-child(5) { text-align: right; }
-
-.tbl-row {
-  display: grid;
-  grid-template-columns: 22px 26px 1fr 76px 58px;
-  padding: 8px 14px;
-  border-bottom: 1px solid #14141c;
-  align-items: center;
-  cursor: pointer;
-  transition: background .1s;
-  gap: 6px;
-}
-.tbl-row:hover { background: #141420; }
-.tbl-row.sel { background: #1a1030; }
+.row { display: grid; grid-template-columns: 28px 26px 1fr 90px 76px 76px 76px 80px; gap: 4px; padding: 9px 16px; border-bottom: 1px solid #131318; align-items: center; cursor: pointer; transition: background .1s; }
+.row:hover { background: #13131a; }
 .rnum { font-size: 10px; color: #3a3a4a; }
-.tlogo {
-  width: 20px; height: 20px; border-radius: 50%;
-  object-fit: cover; background: #1e1e28;
-}
-.tlogo-fb {
-  width: 20px; height: 20px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 9px; font-weight: 700;
-}
-.rname { font-size: 12px; font-weight: 600; color: #e2e2e8; min-width: 0; }
-.rval { font-size: 11px; font-weight: 500; color: #e2e2e8; text-align: right; }
-.rchg { font-size: 10px; font-weight: 500; text-align: right; }
+.logo-img { width: 22px; height: 22px; border-radius: 50%; object-fit: cover; background: #1e1e28; flex-shrink: 0; }
+.logo-fb { width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; flex-shrink: 0; }
+.rname { font-size: 12px; font-weight: 600; color: #e2e2e8; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.rval { font-size: 12px; font-weight: 500; color: #e2e2e8; text-align: right; font-variant-numeric: tabular-nums; }
+.rchg { font-size: 11px; font-weight: 500; text-align: right; font-variant-numeric: tabular-nums; }
+.rsm { font-size: 10px; color: #6b6b80; text-align: right; font-variant-numeric: tabular-nums; }
 
-/* ── Loading ── */
+/* Right sidebar */
+.right { display: flex; flex-direction: column; overflow: hidden; }
+.sb-hdr { padding: 11px 14px; border-bottom: 1px solid #1e1e2a; display: flex; align-items: center; justify-content: space-between; flex-shrink: 0; }
+.sb-title { font-size: 12px; font-weight: 600; color: #c0c0d0; }
+.sb-note { font-size: 10px; color: #4a4a5a; }
+.sb-tbl-hdr { display: grid; grid-template-columns: 20px 22px 1fr 72px 58px; gap: 5px; padding: 7px 14px; border-bottom: 1px solid #1a1a24; background: #0d0d11; flex-shrink: 0; }
+.sb-tbl-hdr span { font-size: 9px; font-weight: 600; color: #4a4a5a; text-transform: uppercase; letter-spacing: .05em; }
+.sb-tbl-hdr span:nth-child(n+4) { text-align: right; }
+.sb-row { display: grid; grid-template-columns: 20px 22px 1fr 72px 58px; gap: 5px; padding: 8px 14px; border-bottom: 1px solid #131318; align-items: center; cursor: pointer; transition: background .1s; }
+.sb-row:hover { background: #13131a; }
+.sb-scroll { flex: 1; overflow-y: auto; }
+.sb-scroll::-webkit-scrollbar { width: 4px; }
+.sb-scroll::-webkit-scrollbar-thumb { background: #2a2a38; border-radius: 2px; }
+
+/* Loading */
 .ld { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 40px; color: #4a4a5a; font-size: 11px; }
 .spin { width: 14px; height: 14px; border: 1.5px solid #2a2a38; border-top-color: #9b59d6; border-radius: 50%; animation: spin .6s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
+
+/* Tooltip */
+.tt { position: fixed; background: #1c1c28; border: 1px solid #2e2e42; border-radius: 8px; padding: 10px 14px; font-size: 12px; pointer-events: none; z-index: 999; opacity: 0; transition: opacity .1s; min-width: 160px; }
+.tt.show { opacity: 1; }
+.tt-name { font-weight: 700; font-size: 13px; margin-bottom: 6px; }
+.tt-row { display: flex; justify-content: space-between; gap: 20px; font-size: 11px; color: #9090a8; margin-top: 2px; }
+.tt-row b { color: #e2e2e8; font-weight: 600; }
 </style>
 </head>
 <body>
 
-<!-- Topbar -->
+<div class="tt" id="tt">
+  <div class="tt-name" id="tt-n"></div>
+  <div class="tt-row"><span>TVL</span><b id="tt-v"></b></div>
+  <div class="tt-row"><span>1D</span><b id="tt-1"></b></div>
+  <div class="tt-row"><span>7D</span><b id="tt-7"></b></div>
+  <div class="tt-row"><span>1M</span><b id="tt-m"></b></div>
+</div>
+
 <div class="topbar">
   <div style="display:flex;align-items:center;">
+    <a href="dashboard__77_.html" style="display:flex;align-items:center;gap:6px;color:#6b6b80;text-decoration:none;font-size:12px;font-weight:500;margin-right:12px;transition:color .15s;" onmouseover="this.style.color='#e2e2e8'" onmouseout="this.style.color='#6b6b80'">
+      <svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Dashboard
+    </a>
     <div class="logo">ZIMR <span>DeFi</span></div>
     <div class="tabs">
       <button class="tab active" onclick="switchTab('chains',this)">Chains</button>
@@ -251,398 +138,283 @@ body {
     </div>
   </div>
   <div class="topbar-right">
-    <span class="live">Live</span>
-    <span class="clock" id="clock">—</span>
+    <div class="live"><div class="live-dot"></div>Live</div>
+    <span class="clock" id="clock"></span>
     <button class="btn" onclick="loadAll()">↻ Refresh</button>
   </div>
 </div>
 
-<!-- Stats -->
-<div class="stats-row">
-  <div class="stat"><div class="slbl">Total DeFi TVL</div><div class="sval" id="s-total">—</div><div class="schg" id="s-total-c">—</div></div>
-  <div class="stat"><div class="slbl">Ethereum</div><div class="sval" id="s-eth">—</div><div class="schg" id="s-eth-c">—</div></div>
-  <div class="stat"><div class="slbl">Solana</div><div class="sval" id="s-sol">—</div><div class="schg" id="s-sol-c">—</div></div>
-  <div class="stat"><div class="slbl">BNB Chain</div><div class="sval" id="s-bsc">—</div><div class="schg" id="s-bsc-c">—</div></div>
+<div class="stats-bar">
+  <div class="stat"><div class="slbl">Total DeFi TVL</div><div class="sval" id="s-tot"></div><div class="schg" id="s-tc"></div></div>
+  <div class="stat"><div class="slbl">Ethereum</div><div class="sval" id="s-eth"></div><div class="schg" id="s-ec"></div></div>
+  <div class="stat"><div class="slbl">Solana</div><div class="sval" id="s-sol"></div><div class="schg" id="s-sc"></div></div>
+  <div class="stat"><div class="slbl">BNB Chain</div><div class="sval" id="s-bsc"></div><div class="schg" id="s-bc"></div></div>
 </div>
 
-<!-- Body -->
-<div class="body">
-
-  <!-- Cards -->
-  <div class="cards-wrap" id="cards-wrap">
-    <div class="ld"><div class="spin"></div>Loading chains…</div>
-  </div>
-
-  <!-- Sidebar table -->
-  <div class="sidebar">
-    <div class="sidebar-hdr">
-      <span class="sidebar-title" id="sb-title">All Chains</span>
-      <span class="sidebar-note" id="sb-note">—</span>
-    </div>
-    <div class="tbl-scroll">
-      <div class="tbl-head">
-        <span>#</span><span></span><span>Name</span><span>TVL</span><span>1D</span>
+<div class="main">
+  <div class="left">
+    <div class="charts-section">
+      <div class="chart-panel">
+        <div class="chart-hdr"><span class="chart-title">Chain Dominance</span><span class="chart-sub" id="pie-sub"></span></div>
+        <svg class="chart" id="pie-svg" width="268" height="210" viewBox="0 0 268 210"></svg>
       </div>
-      <div id="tbl-body"><div class="ld"><div class="spin"></div></div></div>
+      <div class="chart-panel">
+        <div class="chart-hdr"><span class="chart-title">Total TVL  1 Year</span><span class="chart-sub" id="area-sub">Loading…</span></div>
+        <svg class="chart" id="area-svg" viewBox="0 0 500 200" style="width:100%;height:210px;"></svg>
+      </div>
+    </div>
+
+    <div class="tbl-section">
+      <div class="tbl-hdr" id="tbl-hdr">
+        <span>#</span><span></span><span>Chain</span>
+        <span onclick="sortBy('tvl')">TVL ↕</span>
+        <span onclick="sortBy('change_1d')">1D ↕</span>
+        <span onclick="sortBy('change_7d')">7D ↕</span>
+        <span onclick="sortBy('change_1m')">1M ↕</span>
+        <span>Protocols</span>
+      </div>
+      <div class="tbl-body" id="tbl-body">
+        <div class="ld"><div class="spin"></div>Loading chains…</div>
+      </div>
     </div>
   </div>
 
+  <div class="right">
+    <div class="sb-hdr">
+      <span class="sb-title" id="sb-title">All Chains</span>
+      <span class="sb-note" id="sb-note"></span>
+    </div>
+    <div class="sb-tbl-hdr">
+      <span>#</span><span></span><span>Name</span><span>TVL</span><span>1D</span>
+    </div>
+    <div class="sb-scroll" id="sb-body">
+      <div class="ld"><div class="spin"></div></div>
+    </div>
+  </div>
 </div>
 
 <script>
-// ── Chain logo mapping (DeFiLlama gecko_id → CoinGecko image) ──
-const LOGO_MAP = {
-  'ethereum': 'https://assets.coingecko.com/coins/images/279/small/ethereum.png',
-  'binancecoin': 'https://assets.coingecko.com/coins/images/825/small/bnb-icon2_2x.png',
-  'solana': 'https://assets.coingecko.com/coins/images/4128/small/solana.png',
-  'tron': 'https://assets.coingecko.com/coins/images/1094/small/tron-logo.png',
-  'avalanche-2': 'https://assets.coingecko.com/coins/images/12559/small/Avalanche_Circle_RedWhite_Trans.png',
-  'matic-network': 'https://assets.coingecko.com/coins/images/4713/small/matic-token-icon.png',
-  'arbitrum': 'https://assets.coingecko.com/coins/images/16547/small/photo_2023-03-29_21.47.00.jpeg',
-  'optimism': 'https://assets.coingecko.com/coins/images/25244/small/Optimism.png',
-  'fantom': 'https://assets.coingecko.com/coins/images/4001/small/Fantom_round.png',
-  'near': 'https://assets.coingecko.com/coins/images/10365/small/near.jpg',
-  'cosmos': 'https://assets.coingecko.com/coins/images/1481/small/cosmos_hub.png',
-  'cronos': 'https://assets.coingecko.com/coins/images/7310/small/cro_token_logo.png',
-  'sui': 'https://assets.coingecko.com/coins/images/26375/small/sui_asset.jpeg',
-  'aptos': 'https://assets.coingecko.com/coins/images/26455/small/aptos_round.png',
-  'base': 'https://assets.coingecko.com/coins/images/33785/small/base-logo.png',
-};
+// Colors & logos
+const CC={Ethereum:'#627EEA',Solana:'#9945FF',BSC:'#F3BA2F',BNB:'#F3BA2F',Bitcoin:'#F7931A',Polygon:'#8247E5',Arbitrum:'#12AAFF',Optimism:'#FF0420',Avalanche:'#E84142',Tron:'#EF0027',Base:'#0052FF',Fantom:'#1969FF',Sui:'#4DA2FF',Aptos:'#00C2FF',Near:'#00C08B',Cronos:'#8247E5',Mantle:'#60caa8'};
+const LL={Ethereum:'https://assets.coingecko.com/coins/images/279/small/ethereum.png',BSC:'https://assets.coingecko.com/coins/images/825/small/bnb-icon2_2x.png',BNB:'https://assets.coingecko.com/coins/images/825/small/bnb-icon2_2x.png',Solana:'https://assets.coingecko.com/coins/images/4128/small/solana.png',Tron:'https://assets.coingecko.com/coins/images/1094/small/tron-logo.png',Bitcoin:'https://assets.coingecko.com/coins/images/1/small/bitcoin.png',Avalanche:'https://assets.coingecko.com/coins/images/12559/small/Avalanche_Circle_RedWhite_Trans.png',Polygon:'https://assets.coingecko.com/coins/images/4713/small/matic-token-icon.png',Arbitrum:'https://assets.coingecko.com/coins/images/16547/small/photo_2023-03-29_21.47.00.jpeg',Optimism:'https://assets.coingecko.com/coins/images/25244/small/Optimism.png',Fantom:'https://assets.coingecko.com/coins/images/4001/small/Fantom_round.png',Near:'https://assets.coingecko.com/coins/images/10365/small/near.jpg',Sui:'https://assets.coingecko.com/coins/images/26375/small/sui_asset.jpeg',Aptos:'https://assets.coingecko.com/coins/images/26455/small/aptos_round.png',Base:'https://assets.coingecko.com/coins/images/33785/small/base-logo.png'};
+function c(n){for(const k in CC)if(n===k||n.startsWith(k))return CC[k];return'#9b59d6';}
+function l(n){for(const k in LL)if(n===k||n.startsWith(k))return LL[k];return null;}
+function logoEl(name,sz=22){const url=l(name),col=c(name);if(url)return`<img class="logo-img" src="${url}" width="${sz}" height="${sz}" style="border-radius:50%" onerror="this.outerHTML='<div class=logo-fb style=\\'background:${col}22;color:${col};width:${sz}px;height:${sz}px;\\'>${name[0]}</div>'">`;return`<div class="logo-fb" style="background:${col}22;color:${col};width:${sz}px;height:${sz}px;">${name[0]}</div>`;}
 
-const NAME_LOGO = {
-  'Ethereum': LOGO_MAP['ethereum'],
-  'BSC': LOGO_MAP['binancecoin'],
-  'BNB': LOGO_MAP['binancecoin'],
-  'Solana': LOGO_MAP['solana'],
-  'Tron': LOGO_MAP['tron'],
-  'Avalanche': LOGO_MAP['avalanche-2'],
-  'Polygon': LOGO_MAP['matic-network'],
-  'Arbitrum': LOGO_MAP['arbitrum'],
-  'Optimism': LOGO_MAP['optimism'],
-  'Fantom': LOGO_MAP['fantom'],
-  'Near': LOGO_MAP['near'],
-  'Cosmos': LOGO_MAP['cosmos'],
-  'Cronos': LOGO_MAP['cronos'],
-  'Sui': LOGO_MAP['sui'],
-  'Aptos': LOGO_MAP['aptos'],
-  'Base': LOGO_MAP['base'],
-};
+function fmt(n){if(!n||isNaN(n))return'';const a=Math.abs(n),s=n<0?'-':'';if(a>=1e9)return s+'$'+(a/1e9).toFixed(2)+'B';if(a>=1e6)return s+'$'+(a/1e6).toFixed(1)+'M';return s+'$'+(a/1e3).toFixed(0)+'K';}
+function fmtB(n){if(!n||isNaN(n))return'';const a=Math.abs(n);if(a>=1e9)return(n/1e9).toFixed(0)+'B';if(a>=1e6)return(n/1e6).toFixed(0)+'M';return(n/1e3).toFixed(0)+'K';}
+function pct(n,d=2){if(n==null||isNaN(n))return'';return(n>0?'+':'')+n.toFixed(d)+'%';}
+function clr(n){return n>0?'up':n<0?'dn':'neu';}
 
-const CHAIN_COLORS = {
-  Ethereum:'#627EEA', Solana:'#9945FF', BSC:'#F3BA2F', BNB:'#F3BA2F',
-  Polygon:'#8247E5', Arbitrum:'#12AAFF', Optimism:'#FF0420',
-  Avalanche:'#E84142', Tron:'#EF0027', Base:'#0052FF', Fantom:'#1969FF',
-  Sui:'#4DA2FF', Aptos:'#00C2FF', Near:'#00C08B',
-};
-function chainCol(n) {
-  for (const k in CHAIN_COLORS) if (n === k || n.startsWith(k)) return CHAIN_COLORS[k];
-  return '#9b59d6';
-}
-function getLogo(name) {
-  if (NAME_LOGO[name]) return NAME_LOGO[name];
-  for (const k in NAME_LOGO) if (name.startsWith(k)) return NAME_LOGO[k];
-  return null;
+let chains=[],protocols=[],sortK='tvl',sortD=-1,tab='chains';
+
+setInterval(()=>{document.getElementById('clock').textContent=new Date().toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit',second:'2-digit'});},1000);
+
+async function loadAll(){loadChains();loadProtocols();}
+
+async function loadChains(){
+  try{
+    const r=await fetch('https://api.llama.fi/v2/chains');
+    chains=(await r.json()).sort((a,b)=>(b.tvl||0)-(a.tvl||0));
+    renderStats();renderPie();loadArea();
+    if(tab==='chains'){renderTable();renderSidebar();}
+    enrichChainChanges();
+  }catch(e){document.getElementById('tbl-body').innerHTML='<div class="ld" style="color:#f87171;">Failed - try refresh</div>';}
 }
 
-function fmt(n) {
-  if (!n || isNaN(n)) return '—';
-  const a = Math.abs(n), s = n<0?'-':'';
-  if (a>=1e9) return s+'$'+(a/1e9).toFixed(2)+'B';
-  if (a>=1e6) return s+'$'+(a/1e6).toFixed(1)+'M';
-  return s+'$'+(a/1e3).toFixed(0)+'K';
-}
-function pct(n) {
-  if (n==null||isNaN(n)) return '—';
-  return (n>0?'+':'')+n.toFixed(2)+'%';
-}
-function clr(n) { return n>0?'up':n<0?'dn':'neu'; }
-
-function logoEl(name, size=36) {
-  const url = getLogo(name);
-  const col = chainCol(name);
-  if (url) {
-    return `<img class="chain-logo" src="${url}" width="${size}" height="${size}"
-      onerror="this.style.display='none';this.nextSibling.style.display='flex';"
-      style="border-radius:50%;">
-      <div class="chain-logo-fallback" style="display:none;background:${col}20;color:${col};width:${size}px;height:${size}px;font-size:${Math.round(size*0.38)}px;">${name[0]}</div>`;
-  }
-  return `<div class="chain-logo-fallback" style="background:${col}20;color:${col};width:${size}px;height:${size}px;">${name[0]}</div>`;
-}
-
-function tLogoEl(name) {
-  const url = getLogo(name);
-  const col = chainCol(name);
-  if (url) {
-    return `<img class="tlogo" src="${url}" width="20" height="20"
-      onerror="this.style.display='none';this.nextSibling.style.display='flex';">
-      <div class="tlogo-fb" style="display:none;background:${col}20;color:${col};width:20px;height:20px;">${name[0]}</div>`;
-  }
-  return `<div class="tlogo-fb" style="background:${col}20;color:${col};">${name[0]}</div>`;
-}
-
-// ── State ──
-let chains = [], protocols = [], stables = [];
-let currentTab = 'chains';
-
-setInterval(() => {
-  document.getElementById('clock').textContent =
-    new Date().toLocaleTimeString('en-GB', {hour:'2-digit',minute:'2-digit',second:'2-digit'});
-}, 1000);
-
-async function loadAll() {
-  loadChains();
-  loadProtocols();
-}
-
-async function loadChains() {
-  document.getElementById('cards-wrap').innerHTML = '<div class="ld"><div class="spin"></div>Loading chains…</div>';
+async function enrichChainChanges(){
   try {
-    const r = await fetch('https://api.llama.fi/v2/chains');
-    chains = await r.json();
-    chains.sort((a,b) => (b.tvl||0)-(a.tvl||0));
+    const top = chains.slice(0,25);
+    await Promise.allSettled(top.map(async (ch) => {
+      try {
+        const name = encodeURIComponent(ch.name);
+        const r2 = await fetch('https://api.llama.fi/v2/historicalChainTvl/'+name);
+        if(!r2.ok) return;
+        const hist = await r2.json();
+        if(!Array.isArray(hist)||!hist.length) return;
+        const cur = hist[hist.length-1]?.tvl||0;
+        const p1  = hist[hist.length-2]?.tvl||cur;
+        const p7  = hist.length>7?hist[hist.length-8]?.tvl||cur:cur;
+        const p30 = hist.length>29?hist[hist.length-31]?.tvl||cur:cur;
+        ch.change_1d = p1 ? ((cur-p1)/p1)*100 : null;
+        ch.change_7d = p7 ? ((cur-p7)/p7)*100 : null;
+        ch.change_1m = p30 ? ((cur-p30)/p30)*100 : null;
+      } catch(e){}
+    }));
     renderStats();
-    if (currentTab === 'chains') renderChains();
-  } catch(e) {
-    document.getElementById('cards-wrap').innerHTML = '<div class="ld" style="color:#f87171;">Failed to load. Try refresh.</div>';
-  }
+    if(tab==='chains'){renderTable();renderSidebar();}
+  } catch(e){}
 }
 
-async function loadProtocols() {
-  try {
-    const r = await fetch('https://api.llama.fi/protocols');
-    protocols = await r.json();
-    protocols.sort((a,b) => (b.tvl||0)-(a.tvl||0));
-    if (currentTab === 'protocols') renderProtocols();
-  } catch(e) {}
+function renderStats(){
+  const tot=chains.reduce((s,c)=>s+(c.tvl||0),0);
+  document.getElementById('s-tot').textContent=fmt(tot);
+  function set(vi,ci,ch){if(!ch)return;document.getElementById(vi).textContent=fmt(ch.tvl);const el=document.getElementById(ci);el.textContent=pct(ch.change_1d);el.className='schg '+clr(ch.change_1d);}
+  set('s-eth','s-ec',chains.find(c=>c.name==='Ethereum'));
+  set('s-sol','s-sc',chains.find(c=>c.name==='Solana'));
+  set('s-bsc','s-bc',chains.find(c=>c.name==='BSC')||chains.find(c=>c.name==='BNB'));
 }
 
-function renderStats() {
-  const total = chains.reduce((s,c) => s+(c.tvl||0), 0);
-  document.getElementById('s-total').textContent = fmt(total);
-  function set(vId, cId, ch) {
-    if (!ch) return;
-    document.getElementById(vId).textContent = fmt(ch.tvl);
-    const el = document.getElementById(cId);
-    el.textContent = pct(ch.change_1d);
-    el.className = 'schg ' + clr(ch.change_1d);
-  }
-  set('s-eth','s-eth-c', chains.find(c=>c.name==='Ethereum'));
-  set('s-sol','s-sol-c', chains.find(c=>c.name==='Solana'));
-  set('s-bsc','s-bsc-c', chains.find(c=>c.name==='BSC')||chains.find(c=>c.name==='BNB'));
+// Pie chart
+function renderPie(){
+  const svg=document.getElementById('pie-svg');
+  const top=chains.slice(0,9);
+  const otherTVL=chains.slice(9).reduce((s,c)=>s+(c.tvl||0),0);
+  const all=[...top,{name:'Others',tvl:otherTVL,_o:true}];
+  const grand=all.reduce((s,c)=>s+(c.tvl||0),0);
+  document.getElementById('pie-sub').textContent=fmt(grand)+' total';
+
+  const cx=85,cy=100,R=72,ri=36;
+  let a=-Math.PI/2,paths='',lbls='',leg='';
+
+  all.forEach((ch,i)=>{
+    const fr=(ch.tvl||0)/grand,sw=fr*2*Math.PI;
+    const x1=cx+R*Math.cos(a),y1=cy+R*Math.sin(a);
+    const x2=cx+R*Math.cos(a+sw),y2=cy+R*Math.sin(a+sw);
+    const ix1=cx+ri*Math.cos(a),iy1=cy+ri*Math.sin(a);
+    const ix2=cx+ri*Math.cos(a+sw),iy2=cy+ri*Math.sin(a+sw);
+    const lg=sw>Math.PI?1:0;
+    const col=ch._o?'#222230':c(ch.name);
+    const pv=(fr*100).toFixed(1);
+    paths+=`<path d="M${ix1.toFixed(1)},${iy1.toFixed(1)} A${ri},${ri} 0 ${lg} 1 ${ix2.toFixed(1)},${iy2.toFixed(1)} L${x2.toFixed(1)},${y2.toFixed(1)} A${R},${R} 0 ${lg} 0 ${x1.toFixed(1)},${y1.toFixed(1)} Z" fill="${col}" stroke="#0d0d11" stroke-width="1.5" opacity=".9" style="cursor:pointer" onmouseenter="tt1(event,'${ch.name}','${fmt(ch.tvl)}','${pv}%')" onmouseleave="ht()"/>`;
+    if(fr>0.04){const lx=cx+(R*.68)*Math.cos(a+sw/2),ly=cy+(R*.68)*Math.sin(a+sw/2);lbls+=`<text x="${lx.toFixed(1)}" y="${ly.toFixed(1)}" text-anchor="middle" dominant-baseline="middle" font-size="8" fill="#fff" font-weight="700" font-family="Inter,sans-serif">${pv}%</text>`;}
+    const ly2=10+i*18;
+    leg+=`<rect x="170" y="${ly2+2}" width="8" height="8" rx="2" fill="${col}"/><text x="182" y="${ly2+10}" font-size="9" fill="#9090a8" font-family="Inter,sans-serif">${ch.name.slice(0,11)}</text><text x="266" y="${ly2+10}" font-size="9" fill="#e2e2e8" font-family="Inter,sans-serif" text-anchor="end" font-weight="600">${pv}%</text>`;
+    a+=sw;
+  });
+
+  svg.innerHTML=paths+lbls+leg+
+    `<text x="${cx}" y="${cy-7}" text-anchor="middle" font-size="8" fill="#6b6b80" font-family="Inter,sans-serif">TOTAL TVL</text>
+     <text x="${cx}" y="${cy+8}" text-anchor="middle" font-size="13" fill="#fff" font-family="Inter,sans-serif" font-weight="700">${fmt(grand)}</text>`;
 }
 
-function switchTab(name, btn) {
-  currentTab = name;
-  document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-  if (name==='chains') renderChains();
-  else if (name==='protocols') renderProtocols();
-  else renderStables();
+// Area chart
+async function loadArea(){
+  const svg=document.getElementById('area-svg');
+  try{
+    const r=await fetch('https://api.llama.fi/v2/historicalChainTvl');
+    const data=await r.json();
+    const pts=data.slice(-365);
+    if(!pts.length)return;
+    const W=500,H=200,PL=44,PR=8,PT=6,PB=26;
+    const cw=W-PL-PR,ch=H-PT-PB;
+    const vals=pts.map(d=>d.tvl||0);
+    const mn=Math.min(...vals)*.95,mx=Math.max(...vals)*1.03,rng=mx-mn||1;
+    const points=pts.map((d,i)=>[PL+i*(cw/(pts.length-1)),(PT+ch-((d.tvl||0)-mn)/rng*ch)]);
+    const pd=points.map((p,i)=>(i===0?`M${p[0].toFixed(1)},${p[1].toFixed(1)}`:`L${p[0].toFixed(1)},${p[1].toFixed(1)}`)).join(' ');
+    const ad=pd+` L${points[points.length-1][0].toFixed(1)},${PT+ch} L${PL},${PT+ch} Z`;
+    let grid='',ylt='',xlt='',lastM=-1;
+    for(let i=0;i<=4;i++){const y=PT+ch*(i/4);const v=mx-(rng*(i/4));grid+=`<line x1="${PL}" y1="${y.toFixed(1)}" x2="${W-PR}" y2="${y.toFixed(1)}" stroke="#1a1a24" stroke-width="1"/>`;ylt+=`<text x="${PL-3}" y="${(y+4).toFixed(1)}" text-anchor="end" font-size="8" fill="#4a4a5a" font-family="Inter,sans-serif">$${fmtB(v)}</text>`;}
+    pts.forEach((d,i)=>{const dt=new Date(d.date*1000),m=dt.getMonth();if(m!==lastM){const x=PL+i*(cw/(pts.length-1));xlt+=`<text x="${x.toFixed(1)}" y="${H-6}" text-anchor="middle" font-size="8" fill="#4a4a5a" font-family="Inter,sans-serif">${['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][m]}</text>`;lastM=m;}});
+    const lp=points[points.length-1],lv=vals[vals.length-1];
+    svg.innerHTML=`<defs><linearGradient id="ag" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9b59d6" stop-opacity=".3"/><stop offset="100%" stop-color="#9b59d6" stop-opacity=".02"/></linearGradient></defs>${grid}${ylt}${xlt}<path d="${ad}" fill="url(#ag)"/><path d="${pd}" fill="none" stroke="#9b59d6" stroke-width="1.8" stroke-linejoin="round"/><circle cx="${lp[0].toFixed(1)}" cy="${lp[1].toFixed(1)}" r="3" fill="#9b59d6"/><text x="${(W-PR-2)}" y="${(lp[1]-5).toFixed(1)}" text-anchor="end" font-size="9" fill="#9b59d6" font-family="Inter,sans-serif" font-weight="600">${fmt(lv)}</text>`;
+    const f=new Date(pts[0].date*1000),la=new Date(pts[pts.length-1].date*1000);
+    document.getElementById('area-sub').textContent=f.toLocaleDateString('en-GB',{month:'short',year:'2-digit'})+' – '+la.toLocaleDateString('en-GB',{month:'short',year:'2-digit'});
+  }catch(e){svg.innerHTML=`<text x="250" y="100" text-anchor="middle" font-size="11" fill="#f87171" font-family="Inter,sans-serif">Chart unavailable</text>`;}
 }
 
-// ── Chains ──
-function renderChains() {
-  document.getElementById('sb-title').textContent = 'All Chains';
-  document.getElementById('sb-note').textContent = chains.length + ' chains';
-
-  // Cards
-  const top20 = chains.slice(0, 20);
-  document.getElementById('cards-wrap').innerHTML = `
-    <div class="section-hdr">
-      <span class="section-title">Top Chains by TVL</span>
-      <span class="section-note">${chains.length} chains tracked · DeFiLlama</span>
-    </div>
-    <div class="cards-grid">
-      ${top20.map((c,i) => {
-        const col = chainCol(c.name);
-        return `<div class="card" onclick="selectCard(this,${i})" style="--col:${col}">
-          <div style="position:absolute;top:0;left:0;right:0;height:2px;background:${col};opacity:.6;border-radius:10px 10px 0 0;"></div>
-          <div class="card-top">
-            <div style="display:flex;align-items:center;gap:0;">${logoEl(c.name, 36)}</div>
-            <div>
-              <div class="card-name">${c.name}</div>
-              <div class="card-rank">#${i+1} by TVL · ${c.protocols||0} protocols</div>
-            </div>
-          </div>
-          <div class="card-stats">
-            <div class="cstat">
-              <div class="cstat-lbl">TVL</div>
-              <div class="cstat-val">${fmt(c.tvl)}</div>
-              <div class="cstat-chg ${clr(c.change_1d)}">${pct(c.change_1d)}</div>
-            </div>
-            <div class="cstat">
-              <div class="cstat-lbl">7D Change</div>
-              <div class="cstat-val ${clr(c.change_7d)}">${pct(c.change_7d)}</div>
-              <div class="cstat-chg neu">vs last week</div>
-            </div>
-            <div class="cstat">
-              <div class="cstat-lbl">1M Change</div>
-              <div class="cstat-val ${clr(c.change_1m)}">${pct(c.change_1m)}</div>
-              <div class="cstat-chg neu">vs last month</div>
-            </div>
-          </div>
-        </div>`;
-      }).join('')}
-    </div>`;
-
-  // Sidebar table
-  document.getElementById('tbl-body').innerHTML = chains.slice(0,80).map((c,i) => `
-    <div class="tbl-row" onclick="selectTableRow(this,${i})">
+// Table
+function sortBy(k){if(sortK===k)sortD*=-1;else{sortK=k;sortD=-1;}renderTable();}
+function renderTable(){
+  const s=[...chains].sort((a,b)=>((a[sortK]||0)-(b[sortK]||0))*sortD);
+  document.getElementById('tbl-body').innerHTML=s.slice(0,100).map((ch,i)=>`
+    <div class="row" onmouseenter="tt2(event,'${ch.name}','${fmt(ch.tvl)}','${pct(ch.change_1d)}','${pct(ch.change_7d)}','${pct(ch.change_1m)}')" onmouseleave="ht()">
       <span class="rnum">${i+1}</span>
-      <div style="display:flex;">${tLogoEl(c.name)}</div>
-      <span class="rname">${c.name}</span>
-      <span class="rval">${fmt(c.tvl)}</span>
-      <span class="rchg ${clr(c.change_1d)}">${pct(c.change_1d)}</span>
+      <div>${logoEl(ch.name)}</div>
+      <span class="rname">${ch.name}</span>
+      <span class="rval">${fmt(ch.tvl)}</span>
+      <span class="rchg ${clr(ch.change_1d)}">${pct(ch.change_1d)}</span>
+      <span class="rchg ${clr(ch.change_7d)}">${pct(ch.change_7d)}</span>
+      <span class="rchg ${clr(ch.change_1m)}">${pct(ch.change_1m)}</span>
+      <span class="rsm">${ch.protocols??''}</span>
     </div>`).join('');
 }
 
-function selectCard(el) {
-  document.querySelectorAll('.card').forEach(c=>c.classList.remove('sel'));
-  el.classList.add('sel');
+// Sidebar
+function renderSidebar(){
+  document.getElementById('sb-note').textContent=chains.length+' chains';
+  document.getElementById('sb-body').innerHTML=chains.slice(0,80).map((ch,i)=>`
+    <div class="sb-row" onmouseenter="tt2(event,'${ch.name}','${fmt(ch.tvl)}','${pct(ch.change_1d)}','${pct(ch.change_7d)}','${pct(ch.change_1m)}')" onmouseleave="ht()">
+      <span class="rnum" style="font-size:10px;color:#3a3a4a;">${i+1}</span>
+      <div>${logoEl(ch.name,20)}</div>
+      <span class="rname" style="font-size:11px;">${ch.name}</span>
+      <span class="rval" style="font-size:11px;">${fmt(ch.tvl)}</span>
+      <span class="rchg ${clr(ch.change_1d)}" style="font-size:10px;">${pct(ch.change_1d)}</span>
+    </div>`).join('');
 }
-function selectTableRow(el) {
-  document.querySelectorAll('.tbl-row').forEach(r=>r.classList.remove('sel'));
-  el.classList.add('sel');
+
+// Protocols
+async function loadProtocols(){
+  try{const r=await fetch('https://api.llama.fi/protocols');protocols=(await r.json()).sort((a,b)=>(b.tvl||0)-(a.tvl||0));if(tab==='protocols')renderProtos();}catch(e){}
 }
-
-// ── Protocols ──
-function renderProtocols() {
-  document.getElementById('sb-title').textContent = 'All Protocols';
-  document.getElementById('sb-note').textContent = protocols.length + ' protocols';
-
-  if (!protocols.length) {
-    document.getElementById('cards-wrap').innerHTML = '<div class="ld"><div class="spin"></div>Loading…</div>';
-    return;
-  }
-
-  const top20 = protocols.slice(0, 20);
-  document.getElementById('cards-wrap').innerHTML = `
-    <div class="section-hdr">
-      <span class="section-title">Top Protocols by TVL</span>
-      <span class="section-note">${protocols.length} protocols tracked</span>
-    </div>
-    <div class="cards-grid">
-      ${top20.map((p,i) => {
-        const col = '#9b59d6';
-        const logo = p.logo || '';
-        return `<div class="card" onclick="selectCard(this)">
-          <div style="position:absolute;top:0;left:0;right:0;height:2px;background:${col};opacity:.5;border-radius:10px 10px 0 0;"></div>
-          <div class="card-top">
-            ${logo
-              ? `<img src="${logo}" width="36" height="36" style="border-radius:50%;object-fit:cover;background:#1e1e28;" onerror="this.style.display='none'">`
-              : `<div style="width:36px;height:36px;border-radius:50%;background:rgba(155,89,214,.15);color:#9b59d6;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;">${(p.name||'?')[0]}</div>`}
-            <div>
-              <div class="card-name">${p.name}</div>
-              <div class="card-rank">${p.category||'Protocol'} · ${(p.chains||[]).slice(0,3).join(', ')}</div>
-            </div>
-          </div>
-          <div class="card-stats">
-            <div class="cstat">
-              <div class="cstat-lbl">TVL</div>
-              <div class="cstat-val">${fmt(p.tvl)}</div>
-              <div class="cstat-chg ${clr(p.change_1d)}">${pct(p.change_1d)}</div>
-            </div>
-            <div class="cstat">
-              <div class="cstat-lbl">7D Change</div>
-              <div class="cstat-val ${clr(p.change_7d)}">${pct(p.change_7d)}</div>
-              <div class="cstat-chg neu">vs last week</div>
-            </div>
-            <div class="cstat">
-              <div class="cstat-lbl">Category</div>
-              <div class="cstat-val" style="font-size:11px;color:#9b59d6;">${p.category||'—'}</div>
-              <div class="cstat-chg neu">&nbsp;</div>
-            </div>
-          </div>
-        </div>`;
-      }).join('')}
-    </div>`;
-
-  document.getElementById('tbl-body').innerHTML = protocols.slice(0,80).map((p,i) => {
-    const logo = p.logo || '';
-    return `<div class="tbl-row">
-      <span class="rnum">${i+1}</span>
-      <div style="display:flex;">
-        ${logo
-          ? `<img class="tlogo" src="${logo}" onerror="this.style.display='none'">`
-          : `<div class="tlogo-fb" style="background:rgba(155,89,214,.15);color:#9b59d6;">${(p.name||'?')[0]}</div>`}
-      </div>
+function renderProtos(){
+  document.getElementById('sb-title').textContent='Protocols';
+  document.getElementById('sb-note').textContent=protocols.length;
+  document.getElementById('tbl-hdr').innerHTML=`<span>#</span><span></span><span>Protocol</span><span>TVL</span><span>1D</span><span>7D</span><span>Category</span><span>Chains</span>`;
+  document.getElementById('tbl-body').innerHTML=protocols.slice(0,100).map((p,i)=>{
+    const pl=p.logo?`<img class="logo-img" src="${p.logo}" width="22" height="22" onerror="this.outerHTML='<div class=logo-fb style=\\'background:rgba(155,89,214,.15);color:#9b59d6;\\'>?</div>'">`:`<div class="logo-fb" style="background:rgba(155,89,214,.15);color:#9b59d6;">${(p.name||'?')[0]}</div>`;
+    return `<div class="row">
+      <span class="rnum">${i+1}</span><div>${pl}</div>
       <span class="rname">${p.name}</span>
       <span class="rval">${fmt(p.tvl)}</span>
+      <span class="rchg ${clr(p.change_1d)}">${pct(p.change_1d)}</span>
       <span class="rchg ${clr(p.change_7d)}">${pct(p.change_7d)}</span>
+      <span class="rsm">${(p.category||'').slice(0,10)}</span>
+      <span class="rsm">${(p.chains||[]).length}</span>
     </div>`;
+  }).join('');
+  document.getElementById('sb-body').innerHTML=protocols.slice(0,60).map((p,i)=>{
+    const pl=p.logo?`<img class="logo-img" src="${p.logo}" width="20" height="20" onerror="this.style.display='none'">`:`<div class="logo-fb" style="background:rgba(155,89,214,.15);color:#9b59d6;width:20px;height:20px;">${(p.name||'?')[0]}</div>`;
+    return `<div class="sb-row"><span class="rnum" style="font-size:10px;color:#3a3a4a;">${i+1}</span><div>${pl}</div><span class="rname" style="font-size:11px;">${p.name}</span><span class="rval" style="font-size:11px;">${fmt(p.tvl)}</span><span class="rchg ${clr(p.change_7d)}" style="font-size:10px;">${pct(p.change_7d)}</span></div>`;
   }).join('');
 }
 
-// ── Stablecoins ──
-async function renderStables() {
-  document.getElementById('sb-title').textContent = 'Stablecoins';
-  document.getElementById('cards-wrap').innerHTML = '<div class="ld"><div class="spin"></div>Loading stablecoins…</div>';
-  document.getElementById('tbl-body').innerHTML = '<div class="ld"><div class="spin"></div></div>';
-  try {
-    const r = await fetch('https://stablecoins.llama.fi/stablecoins?includePrices=true');
-    const d = await r.json();
-    stables = (d.peggedAssets||[]).sort((a,b)=>(b.circulating?.peggedUSD||0)-(a.circulating?.peggedUSD||0));
-    const total = stables.reduce((s,x)=>s+(x.circulating?.peggedUSD||0),0);
-    document.getElementById('sb-note').textContent = stables.length + ' stablecoins';
-
-    const top20 = stables.slice(0, 20);
-    document.getElementById('cards-wrap').innerHTML = `
-      <div class="section-hdr">
-        <span class="section-title">Top Stablecoins by Market Cap</span>
-        <span class="section-note">${stables.length} stablecoins · Total: ${fmt(total)}</span>
-      </div>
-      <div class="cards-grid">
-        ${top20.map((s,i) => {
-          const mc = s.circulating?.peggedUSD||0;
-          const dom = ((mc/total)*100).toFixed(1);
-          return `<div class="card" onclick="selectCard(this)">
-            <div style="position:absolute;top:0;left:0;right:0;height:2px;background:#4ade80;opacity:.5;border-radius:10px 10px 0 0;"></div>
-            <div class="card-top">
-              <div style="width:36px;height:36px;border-radius:50%;background:rgba(74,222,128,.1);color:#4ade80;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;">${(s.symbol||'?')[0]}</div>
-              <div>
-                <div class="card-name">${s.name}</div>
-                <div class="card-rank">${s.symbol} · ${dom}% dominance</div>
-              </div>
-            </div>
-            <div class="card-stats">
-              <div class="cstat">
-                <div class="cstat-lbl">Market Cap</div>
-                <div class="cstat-val">${fmt(mc)}</div>
-                <div class="cstat-chg ${clr(s.change_7d)}">${pct(s.change_7d)}</div>
-              </div>
-              <div class="cstat">
-                <div class="cstat-lbl">Peg Type</div>
-                <div class="cstat-val" style="font-size:11px;color:#4ade80;">${s.pegType||'USD'}</div>
-                <div class="cstat-chg neu">&nbsp;</div>
-              </div>
-              <div class="cstat">
-                <div class="cstat-lbl">Dominance</div>
-                <div class="cstat-val">${dom}%</div>
-                <div class="cstat-chg neu">of total</div>
-              </div>
-            </div>
-          </div>`;
-        }).join('')}
-      </div>`;
-
-    document.getElementById('tbl-body').innerHTML = stables.slice(0,60).map((s,i) => {
-      const mc = s.circulating?.peggedUSD||0;
-      return `<div class="tbl-row">
-        <span class="rnum">${i+1}</span>
-        <div class="tlogo-fb" style="background:rgba(74,222,128,.1);color:#4ade80;">${(s.symbol||'?')[0]}</div>
-        <span class="rname">${s.name}</span>
-        <span class="rval">${fmt(mc)}</span>
-        <span class="rchg ${clr(s.change_7d)}">${pct(s.change_7d)}</span>
-      </div>`;
+// Stables
+async function renderStables(){
+  document.getElementById('tbl-body').innerHTML='<div class="ld"><div class="spin"></div>Loading…</div>';
+  try{
+    const r=await fetch('https://stablecoins.llama.fi/stablecoins?includePrices=true');
+    const d=await r.json();
+    const st=(d.peggedAssets||[]).sort((a,b)=>(b.circulating?.peggedUSD||0)-(a.circulating?.peggedUSD||0));
+    const tot=st.reduce((s,x)=>s+(x.circulating?.peggedUSD||0),0);
+    document.getElementById('sb-title').textContent='Stablecoins';
+    document.getElementById('sb-note').textContent=st.length;
+    document.getElementById('tbl-hdr').innerHTML=`<span>#</span><span></span><span>Name</span><span>Market Cap</span><span>7D Chg</span><span>Dominance</span><span>Peg</span><span></span>`;
+    document.getElementById('tbl-body').innerHTML=st.slice(0,60).map((s,i)=>{
+      const mc=s.circulating?.peggedUSD||0,dom=(mc/tot*100).toFixed(2);
+      return `<div class="row"><span class="rnum">${i+1}</span><div class="logo-fb" style="background:rgba(74,222,128,.1);color:#4ade80;width:22px;height:22px;">${(s.symbol||'?')[0]}</div><span class="rname">${s.name}</span><span class="rval">${fmt(mc)}</span><span class="rchg ${clr(s.change_7d)}">${pct(s.change_7d)}</span><span class="rsm">${dom}%</span><span class="rsm">${s.pegType||'USD'}</span><span></span></div>`;
     }).join('');
-
-  } catch(e) {
-    document.getElementById('cards-wrap').innerHTML = '<div class="ld" style="color:#f87171;">Failed to load</div>';
-  }
+    document.getElementById('sb-body').innerHTML=st.slice(0,40).map((s,i)=>{
+      const mc=s.circulating?.peggedUSD||0;
+      return `<div class="sb-row"><span class="rnum" style="font-size:10px;color:#3a3a4a;">${i+1}</span><div class="logo-fb" style="background:rgba(74,222,128,.1);color:#4ade80;width:20px;height:20px;font-size:9px;">${(s.symbol||'?')[0]}</div><span class="rname" style="font-size:11px;">${s.name}</span><span class="rval" style="font-size:11px;">${fmt(mc)}</span><span class="rchg ${clr(s.change_7d)}" style="font-size:10px;">${pct(s.change_7d)}</span></div>`;
+    }).join('');
+  }catch(e){document.getElementById('tbl-body').innerHTML='<div class="ld" style="color:#f87171;">Failed</div>';}
 }
 
+// Tab switch
+function switchTab(name,btn){
+  tab=name;
+  document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('sb-title').textContent=name==='chains'?'All Chains':name==='protocols'?'Protocols':'Stablecoins';
+  if(name==='chains'){
+    document.getElementById('tbl-hdr').innerHTML=`<span>#</span><span></span><span>Chain</span><span onclick="sortBy('tvl')">TVL ↕</span><span onclick="sortBy('change_1d')">1D ↕</span><span onclick="sortBy('change_7d')">7D ↕</span><span onclick="sortBy('change_1m')">1M ↕</span><span>Protocols</span>`;
+    renderTable();renderSidebar();
+  } else if(name==='protocols'){
+    if(protocols.length)renderProtos();
+    else{document.getElementById('tbl-body').innerHTML='<div class="ld"><div class="spin"></div>Loading…</div>';loadProtocols();}
+  } else renderStables();
+}
+
+// Tooltip
+function tt1(e,n,v,p){const t=document.getElementById('tt');document.getElementById('tt-n').textContent=n;document.getElementById('tt-v').textContent=v;document.getElementById('tt-1').textContent=p;document.getElementById('tt-7').textContent='';document.getElementById('tt-m').textContent='';t.classList.add('show');mt(e);}
+function tt2(e,n,v,d1,d7,dm){const t=document.getElementById('tt');document.getElementById('tt-n').textContent=n;document.getElementById('tt-v').textContent=v;document.getElementById('tt-1').textContent=d1;document.getElementById('tt-7').textContent=d7;document.getElementById('tt-m').textContent=dm||'';t.classList.add('show');mt(e);}
+function ht(){document.getElementById('tt').classList.remove('show');}
+function mt(e){const t=document.getElementById('tt');t.style.left=(e.clientX+14)+'px';t.style.top=(e.clientY-10)+'px';}
+document.addEventListener('mousemove',mt);
+
 loadAll();
-setInterval(loadAll, 5*60*1000);
+setInterval(loadAll,5*60*1000);
 </script>
 </body>
 </html>
