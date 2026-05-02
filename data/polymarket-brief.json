@@ -1,42 +1,42 @@
 {
-  "date": "Friday May 01, 2026",
-  "generated": "2026-05-01T08:53:04.378320Z",
-  "brief": "# ZIMR DAILY BRIEF | Friday, May 1, 2026\n\n## \"MegaETH Momentum Craters as Reality Sets In\u2014But $1B Floor Holds\"\n\nThe market is ruthlessly repricing MegaETH's launch hype. The >$2B market at 2% (down 39% today) and >$3B market at 1% (down 11%) signal traders are rapidly abandoning euphoric scenarios. Yet the >$1B threshold sits at 99% with +4.3% gains\u2014a stark divergence. This tells us the market believes MegaETH clears a $1B FDV almost certainly, but the mega-bull case is already priced out. Smart money appears to be rotating out of lottery-ticket upside into more grounded geopolitical positions: Iran peace deal odds ticked up to 32%, suggesting traders are hedging against escalation while the Hormuz normal-traffic market (18% at -7.0%) remains soft. **The mispricing: Bitcoin at 1% for $150k by June 30 with $5.8M volume suggests genuine uncertainty\u2014not conviction that it won't happen.**\n\nIran headlines are subtly shifting narrative. The May 5 diplomatic meeting sits at a suspicious 4% (-4.5%), which feels *too low* given ongoing shuttle diplomacy. Traders may be treating this as a coin-flip that's already failed, when recent reporting suggests serious back-channel movement. This is a potential swing trade setup.\n\n## WATCH LIST\n\n1. **Strait of Hormuz Normal by End of May (18%)** \u2014 Up from 1% (end of April market) suggests de-escalation expectations are crystallizing. Watch for oil price action and Iranian statements; this could double or halve on a headline.\n\n2. **MegaETH >$1.5B (66%)** \u2014 The meat of the distribution. This is where conviction lives. If this cracks below 60%, the entire token is in trouble. If it holds/rises, that's institutional accumulation.\n\n3. **Bitcoin $150K by June 30 ($5.8M vol)** \u2014 Massively important vol/price signal. 1% odds with this much action = market is hedging tail risk, not dismissing it. Real money positioning here.",
+  "date": "Saturday May 02, 2026",
+  "generated": "2026-05-02T08:16:15.370103Z",
+  "brief": "# ZIMR Capital | Polymarket Daily Brief | Saturday, May 2, 2026\n\n## Headline\n**Markets Declare AI and Geopolitics Done Deals\u2014But $5.8M Bitcoin Bet Says Reality Begs to Differ**\n\n---\n\n## The Signal\n\nThree tech/events hitting 99% suggest markets are pricing in certainties that don't exist yet. The MAI model release (+87% today) and QatarEnergy LNG resume (+15%) are now pure crowdtrade territory\u2014late money chasing zero-risk plays with marginal edge. This is peak market confidence, which historically precedes sharp repricing.\n\nThe real money story: $5.8M is pinned on Bitcoin hitting $150K by June 30, priced at just 1%. That's *inverse* capitulation\u2014smart money either sees this as impossible or dirt cheap. Given the geopolitical risk premium (Strait of Hormuz blockade, Iran tensions) is currently suppressing crypto volatility, a peace deal resolution could trigger the unwind. Watch the Iran-US deals: June 30 peace deal sits at 38% with $316K vol but May 31 version at 22% with $875K. The liquidity concentration on the May deadline suggests traders expect clarity *soon*, not gradual progress.\n\nMispricing alert: Brentford at 54% (+3% today) in a high-stakes match has classic retail-backing energy. The Hormuz traffic return (<10% through May 15) is priced like permanent blockade. If geopolitical tensions ease even slightly, those trades get waterlogged.\n\n---\n\n## Watch List\n\n1. **US x Iran permanent peace deal by May 31 (22%, $875K vol)** \u2014 Highest-conviction volume sink. Any news cycle shift here ricochets through Bitcoin, energy, and Strait of Hormuz positions. This is your canary.\n\n2. **Bitcoin $150K by June 30 (1%, $5.8M vol)** \u2014 Extreme mispricing or extreme conviction. Watch for any Iran de-escalation news that could spark risk-on rotation. This market is *begging* to be wrong.\n\n3. **Strait of Hormuz traffic returns by May 15 (6%, $864K vol)** \u2014 Geopolitical optionality hedge. Moves in unison with Iran peace deal; first to reprice wins.",
   "top_movers": [
     {
-      "question": "LoL: DN SOOPers vs HANJIN BRION - Game 1 Winner",
-      "prob": 1,
-      "change": -47.9,
-      "vol24": "$814K",
-      "slug": "lol-dnf-bro2-2026-05-01-game1"
+      "question": "Will a new MAI model be released by April 30, 2026?",
+      "prob": 99,
+      "change": 87.4,
+      "vol24": "$275K",
+      "slug": "will-a-new-mai-model-be-released-by-april-30-2026"
     },
     {
-      "question": "MegaETH market cap (FDV) >$2B one day after launch?",
-      "prob": 2,
-      "change": -38.9,
-      "vol24": "$903K",
-      "slug": "megaeth-market-cap-fdv-2b-one-day-after-launch-738-867-649-272-765-733"
+      "question": "LoL: Team WE vs JD Gaming - Game 1 Winner",
+      "prob": 99,
+      "change": 79.5,
+      "vol24": "$439K",
+      "slug": "lol-we-jdg-2026-05-02-game1"
     },
     {
-      "question": "LoL: DN SOOPers vs HANJIN BRION (BO3) - LCK Rounds 1-2",
-      "prob": 24,
-      "change": -25.0,
-      "vol24": "$536K",
-      "slug": "lol-dnf-bro2-2026-05-01"
+      "question": "QatarEnergy announces/resumes LNG production in Qatar by April 30?",
+      "prob": 99,
+      "change": 15.4,
+      "vol24": "$671K",
+      "slug": "qatarenergy-announcesresumes-lng-production-in-qatar-by-april-30"
     },
     {
-      "question": "MegaETH market cap (FDV) >$3B one day after launch?",
-      "prob": 1,
-      "change": -10.9,
-      "vol24": "$476K",
-      "slug": "megaeth-market-cap-fdv-2b-one-day-after-launch-392-656-565-965-418-578-388"
+      "question": "Will a U.S. anti-cartel operation outside of the United States occur by April 30, 2026?",
+      "prob": 99,
+      "change": 13.2,
+      "vol24": "$455K",
+      "slug": "will-a-us-anti-cartel-operation-outside-of-the-united-states-occur-by-april-30-2026-822-284-191"
     },
     {
-      "question": "Strait of Hormuz traffic returns to normal by end of May?",
-      "prob": 18,
-      "change": -7.0,
-      "vol24": "$286K",
-      "slug": "strait-of-hormuz-traffic-returns-to-normal-by-end-of-may"
+      "question": "US x Iran permanent peace deal by June 30, 2026?",
+      "prob": 38,
+      "change": 6.0,
+      "vol24": "$316K",
+      "slug": "us-x-iran-permanent-peace-deal-by-june-30-2026-837"
     }
   ],
   "top_vol": [
@@ -48,18 +48,18 @@
       "slug": "will-bitcoin-hit-150k-by-june-30-2026"
     },
     {
-      "question": "Will the Indian National Congress (INC) win the most seats in the 2026 Tamil Nadu Legislative Assembly election?",
-      "prob": 1,
-      "change": -0.1,
-      "vol24": "$1.3M",
-      "slug": "will-the-indian-national-congress-inc-win-the-most-seats-in-the-2026-tamil-nadu-legislative-assembly-election"
+      "question": "US x Iran permanent peace deal by May 31, 2026?",
+      "prob": 22,
+      "change": 4.0,
+      "vol24": "$875K",
+      "slug": "us-x-iran-permanent-peace-deal-by-may-31-2026-333-871"
     },
     {
-      "question": "Strait of Hormuz traffic returns to normal by end of April?",
-      "prob": 1,
-      "change": -0.1,
-      "vol24": "$1.1M",
-      "slug": "strait-of-hormuz-traffic-returns-to-normal-by-april-30"
+      "question": "Strait of Hormuz traffic returns to normal by May 15?",
+      "prob": 6,
+      "change": 0,
+      "vol24": "$864K",
+      "slug": "strait-of-hormuz-traffic-returns-to-normal-by-may-15"
     }
   ]
 }
