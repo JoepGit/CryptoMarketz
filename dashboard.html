@@ -801,6 +801,81 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;background:ra
 
 /* ══ DASHBOARD NEW LAYOUT ══════════════════════════════ */
 .dash-new-layout{display:grid;grid-template-columns:1fr 300px;gap:20px;padding:24px 40px 60px;align-items:start}
+
+/* ── DASHBOARD V5 ── */
+.dh-screen{
+  display:grid;
+  grid-template-columns:1fr 260px;
+  height:calc(100vh - 35px);
+  overflow:hidden;
+}
+/* Left col */
+.dh-left-col{display:flex;flex-direction:column;padding:14px 14px 12px 24px;gap:8px;overflow:hidden;min-height:0;}
+/* Greeting row */
+.dh-greet-row{display:flex;align-items:flex-start;justify-content:space-between;flex-shrink:0;}
+.dh-loc-row{display:flex;align-items:center;gap:5px;font-size:9px;color:#9b59d6;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px;}
+.dh-greet-text{font-size:24px;font-weight:700;letter-spacing:-.02em;color:#e8e0d8;line-height:1;}
+.dh-greet-text span{color:#c084fc;}.dh-good{color:#2a2a3a!important;}
+.dh-greet-date{font-size:10px;color:#6b6b80;margin-top:2px;}
+.dh-clock-wrap{text-align:right;}
+.dh-clock{font-size:22px;font-weight:600;color:#c084fc;font-variant-numeric:tabular-nums;letter-spacing:-.01em;}
+.dh-clock-sub{font-size:10px;color:#4a4a5a;margin-top:2px;}
+/* Stats row */
+.dh-stats-row{display:flex;align-items:center;background:rgba(13,13,17,.9);border:1px solid rgba(255,255,255,.06);border-radius:8px;padding:7px 14px;flex-shrink:0;gap:0;overflow-x:auto;}
+.dh-si{display:flex;flex-direction:column;gap:1px;padding:0 12px;flex-shrink:0;}
+.dh-si:first-child{padding-left:4px;}
+.dh-sl{font-size:8px;font-weight:700;color:#4a4a5a;letter-spacing:.1em;text-transform:uppercase;}
+.dh-sv{font-size:13px;font-weight:700;color:#e8e0d8;font-variant-numeric:tabular-nums;line-height:1.2;}
+.dh-sc{font-size:10px;font-weight:500;font-variant-numeric:tabular-nums;}
+.dh-ss{width:1px;background:rgba(255,255,255,.06);height:26px;flex-shrink:0;}
+/* Map box */
+.dh-map-box{flex:1;min-height:0;overflow:hidden;}
+.dh-map-box .world-map-card{height:100%;}
+/* Right col */
+.dh-right-col{border-left:1px solid rgba(255,255,255,.05);display:grid;grid-template-rows:auto auto 1fr;gap:8px;padding:16px 14px;overflow:hidden;background:transparent;}
+/* Cards */
+.dh-card{background:rgba(17,18,22,.85);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:12px 14px;position:relative;overflow:hidden;transition:border-color .2s;}
+.dh-card:hover{border-color:rgba(155,89,214,.2);}
+.dh-glow{position:absolute;inset:0;background:radial-gradient(ellipse at top left,rgba(155,89,214,.07),transparent 65%);pointer-events:none;}
+/* Weather */
+.dh-card:first-child{text-align:center;display:flex;flex-direction:column;align-items:center;gap:3px;}
+.dhw-city{font-size:9px;font-weight:700;color:#9b59d6;text-transform:uppercase;letter-spacing:.06em;}
+.dhw-desc{font-size:9px;color:#6b6b80;text-transform:capitalize;}
+.dhw-temp{font-size:30px;font-weight:700;color:#e8e0d8;line-height:1;margin:3px 0;}
+.dhw-icon{margin:2px 0;}
+.dhw-fc{display:flex;gap:4px;margin-top:5px;justify-content:center;}
+.dhw-fcd{display:flex;flex-direction:column;align-items:center;gap:1px;background:rgba(255,255,255,.03);border-radius:5px;padding:3px 5px;}
+.dhw-fcn{font-size:7px;color:#4a4a5a;text-transform:uppercase;font-weight:600;}
+.dhw-fct{font-size:9px;font-weight:600;color:#9090a8;}
+/* Notifications */
+.dh-notif{overflow:hidden;}
+.dhn-hdr{display:flex;align-items:center;gap:6px;font-size:9px;font-weight:700;color:#9090a8;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;}
+.dhn-badge{background:rgba(155,89,214,.15);color:#9b59d6;border-radius:8px;padding:1px 6px;font-size:8px;font-weight:700;margin-left:auto;}
+.dhn-row{display:flex;align-items:flex-start;gap:7px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.03);}
+.dhn-row:last-child{border-bottom:none;}
+.dhn-ico{width:20px;height:20px;border-radius:5px;background:rgba(155,89,214,.1);color:#9b59d6;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.dhn-tag{font-size:8px;font-weight:700;color:#9b59d6;text-transform:uppercase;letter-spacing:.05em;margin-bottom:1px;}
+.dhn-txt{font-size:11px;font-weight:500;color:#e8e0d8;line-height:1.3;}
+.dhn-sub{font-size:9px;color:#4a4a5a;margin-top:1px;}
+/* AI Brief */
+.dh-brief{cursor:pointer;display:flex;flex-direction:column;overflow:hidden;}
+.dhb-top-line{position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(155,89,214,.5),transparent);}
+.dhb-kicker{font-size:8px;font-weight:700;color:#9b59d6;letter-spacing:.12em;text-transform:uppercase;margin-bottom:5px;display:flex;align-items:center;justify-content:space-between;}
+.dhb-title{font-size:12px;font-weight:700;color:#e8e0d8;margin-bottom:6px;line-height:1.3;}
+.dhb-pills{display:flex;gap:4px;margin-bottom:6px;flex-wrap:wrap;}
+.dhb-copy{font-size:10px;color:#6b6b80;line-height:1.5;margin-bottom:6px;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;}
+.dhb-cta{font-size:9px;font-weight:600;color:#9b59d6;margin-top:auto;}
+/* Date */
+.dh-date{display:flex!important;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:rgba(155,89,214,.1)!important;border-color:rgba(155,89,214,.2)!important;padding:8px!important;}
+.dhd-day{font-size:8px;font-weight:700;color:rgba(192,132,252,.6);letter-spacing:.14em;text-transform:uppercase;}
+.dhd-num{font-size:32px;font-weight:800;color:#c084fc;line-height:1;letter-spacing:-.02em;}
+.dhd-month{font-size:8px;font-weight:700;color:rgba(192,132,252,.6);letter-spacing:.14em;text-transform:uppercase;}
+/* Flash */
+@keyframes priceUp{0%{color:#4ade80}100%{color:#e8e0d8}}
+@keyframes priceDn{0%{color:#f87171}100%{color:#e8e0d8}}
+.flash-up{animation:priceUp .8s ease forwards;}
+.flash-dn{animation:priceDn .8s ease forwards;}
+
 @media(max-width:1100px){.dash-new-layout{grid-template-columns:1fr;padding:20px}}
 
 /* World map card */
@@ -2934,94 +3009,100 @@ a:focus-visible,button:focus-visible,input:focus-visible{
         </div>
       </div>
 
-      <div class="dashboard-hero">
-        <div class="greet">
-          <h1>Good <em id="g-pt">Day</em>, <em id="g-nm">&nbsp;</em>.<span id="clock" style="margin-left:20px;font-size:24px;color:rgba(155,89,214,.45);font-family:'Inter',sans-serif;font-weight:500;letter-spacing:.02em"></span></h1>
-          <p id="g-dt"></p>
-          <div id="clock-d"></div>
-        </div>
+      <div class="dh-screen">
 
-        <div class="dash-new-layout">
+        <!-- LEFT COLUMN -->
+        <div class="dh-left-col">
 
-          <!-- WORLD MAP with stats inside -->
-          <div class="world-map-card">
-            <div class="wm-header">
-              <div class="wm-title"><span class="wm-dot"></span>GLOBAL MARKETS</div>
-              <div id="wm-session-badge" class="wm-session-badge">ASIAN SESSION</div>
-              <div class="wm-live-badge">● LIVE</div>
+          <!-- Greeting -->
+          <div class="dh-greet-row">
+            <div>
+              <div class="dh-loc-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="10" height="10"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span id="dh-city">Locating...</span>
+              </div>
+              <div class="dh-greet-text"><span class="dh-good">Good</span> <span id="g-pt">Day</span>, <span id="g-nm">Joep</span>.</div>
+              <div class="dh-greet-date" id="g-dt"></div>
             </div>
-            <!-- Market stat widgets inside the card -->
-            <div class="mkt-stats-row" id="mkt-stats-row">
-              <div class="mkt-stat-card">
-                <div class="mst-label">BTC PRICE</div>
-                <div class="mst-val" id="mst-btc-price">—</div>
-                <div class="mst-chg" id="mst-btc-chg">—</div>
-              </div>
-              <div class="mkt-stat-card">
-                <div class="mst-label">ETH PRICE</div>
-                <div class="mst-val" id="mst-eth-price">—</div>
-                <div class="mst-chg" id="mst-eth-chg">—</div>
-              </div>
-              <div class="mkt-stat-card">
-                <div class="mst-label">MARKET CAP</div>
-                <div class="mst-val" id="mst-mcap">—</div>
-                <div class="mst-chg" id="mst-mcap-chg">—</div>
-              </div>
-              <div class="mkt-stat-card">
-                <div class="mst-label">BTC DOM</div>
-                <div class="mst-val" id="mst-btc-dom">—</div>
-                <div class="mst-chg" id="mst-dom-chg">—</div>
-              </div>
-              <div class="mkt-stat-card">
-                <div class="mst-label">FEAR &amp; GREED</div>
-                <div class="mst-val" id="mst-fng">—</div>
-                <div class="mst-chg" id="mst-fng-lbl">—</div>
-              </div>
+            <div class="dh-clock-wrap">
+              <div class="dh-clock" id="clock"></div>
+              <div class="dh-clock-sub" id="clock-d"></div>
             </div>
-            <div id="chartdiv" style="width:100%;height:320px;"></div>
-            <div class="market-clocks" id="market-clocks"></div>
           </div>
 
-          <!-- RIGHT COLUMN -->
-          <div class="dash-right-col">
-
-            <!-- Compact AI Brief -->
-            <div class="dash-brief-mini" onclick="briefClick()">
-              <div class="dbm-header">
-                <span class="dbm-kicker">AI BRIEF</span>
-                <span class="dbm-lock" id="brief-lock-badge" style="display:none">🔒 MEMBERS</span>
-              </div>
-              <div class="dbm-title" id="dash-brief-title">AI Market Report</div>
-              <div class="dbm-pills">
-                <span class="dbm-pill" id="dash-brief-time">Daily</span>
-                <span class="dbm-pill" id="dash-brief-risk">loading...</span>
-              </div>
-              <div class="dbm-copy" id="dash-brief-copy">Loading...</div>
-              <div class="dbm-cta">Open full brief →</div>
-            </div>
-
-            <!-- Notifications -->
-            <div class="dash-notif-card">
-              <div class="dash-section-head">
-                <div class="dash-section-title">🔔 Notifications</div>
-                <div class="dash-section-note" id="notif-count">0 new</div>
-              </div>
-              <div id="dash-notifications">
-                <div class="notif-item">
-                  <div class="notif-dot notif-dot-muted"></div>
-                  <div><div class="notif-text">Loading live data...</div><div class="notif-time">Please wait</div></div>
-                </div>
-              </div>
-            </div>
-
+          <!-- Stats strip ABOVE map -->
+          <div class="dh-stats-row">
+            <div class="dh-si"><div class="dh-sl">BTC</div><div class="dh-sv" id="mst-btc-price">-</div><div class="dh-sc" id="mst-btc-chg">-</div></div>
+            <div class="dh-ss"></div>
+            <div class="dh-si"><div class="dh-sl">ETH</div><div class="dh-sv" id="mst-eth-price">-</div><div class="dh-sc" id="mst-eth-chg">-</div></div>
+            <div class="dh-ss"></div>
+            <div class="dh-si"><div class="dh-sl">Market Cap</div><div class="dh-sv" id="mst-mcap">-</div><div class="dh-sc" id="mst-mcap-chg">-</div></div>
+            <div class="dh-ss"></div>
+            <div class="dh-si"><div class="dh-sl">BTC Dom</div><div class="dh-sv" id="mst-btc-dom">-</div><div class="dh-sc" id="mst-dom-chg">-</div></div>
+            <div class="dh-ss"></div>
+            <div class="dh-si"><div class="dh-sl">Fear & Greed</div><div class="dh-sv" id="mst-fng">-</div><div class="dh-sc" id="mst-fng-lbl">-</div></div>
+            <div class="dh-ss"></div>
+            <div class="dh-si"><div class="dh-sl">Session</div><div class="dh-sv" id="wm-session-badge" style="font-size:10px;">-</div><div class="dh-sc"><span class="wm-live-badge" style="font-size:8px;">LIVE</span></div></div>
           </div>
+
+          <!-- World map -->
+          <div class="dh-map-box">
+            <div class="world-map-card" style="border-radius:14px;overflow:hidden;height:100%;">
+              <div id="chartdiv" style="width:100%;height:calc(100% - 72px);"></div>
+              <div class="market-clocks" id="market-clocks"></div>
+            </div>
+          </div>
+
         </div>
 
-        <!-- Hidden for JS compatibility -->
-        <div style="display:none">
-          <div id="dash-analysis-wrap"></div>
-          <div id="dash-signals"></div>
+        <!-- RIGHT COLUMN -->
+        <div class="dh-right-col">
+
+          <!-- Weather -->
+          <div class="dh-card">
+            <div class="dh-glow"></div>
+            <div class="dhw-city" id="wc-city">-</div>
+            <div class="dhw-desc" id="wc-desc">Loading weather...</div>
+            <div class="dhw-temp" id="wc-temp">-</div>
+            <div class="dhw-icon" id="wc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="rgba(155,89,214,.4)" stroke-width="1.5" width="30" height="30"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg>
+            </div>
+            <div class="dhw-fc" id="wc-forecast"></div>
+          </div>
+
+          <!-- Notifications -->
+          <div class="dh-card dh-notif">
+            <div class="dh-glow"></div>
+            <div class="dhn-hdr">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="12" height="12"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg>
+              Notifications
+              <span class="dhn-badge" id="notif-count">0</span>
+            </div>
+            <div id="dash-notifications">
+              <div class="dhn-row"><div class="dhn-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="11" height="11"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><div><div class="dhn-txt">Loading...</div><div class="dhn-sub">Please wait</div></div></div>
+            </div>
+          </div>
+
+          <!-- AI Brief -->
+          <div class="dh-card dh-brief" onclick="briefClick()">
+            <div class="dh-glow" style="background:radial-gradient(ellipse at top left,rgba(155,89,214,.1),transparent 65%);"></div>
+            <div class="dhb-top-line"></div>
+            <div class="dhb-kicker">AI BRIEF <span class="dbm-lock" id="brief-lock-badge" style="display:none">MEMBERS</span></div>
+            <div class="dhb-title" id="dash-brief-title">AI Market Report</div>
+            <div class="dhb-pills"><span class="dbm-pill" id="dash-brief-time">Daily</span><span class="dbm-pill" id="dash-brief-risk">loading...</span></div>
+            <div class="dhb-copy" id="dash-brief-copy">Loading...</div>
+            <div class="dhb-cta">Open full brief →</div>
+          </div>
+
+
+
         </div>
+      </div>
+
+      <div style="display:none">
+        <div id="mkt-stats-row"></div>
+        <div id="dash-analysis-wrap"></div>
+        <div id="dash-signals"></div>
       </div>
     </div><!-- /page-dashboard -->
 
@@ -5073,6 +5154,209 @@ function fetchPrices(){
   });
 }
 setInterval(fetchPrices,30000);
+// ── DASHBOARD V5 JS ──
+(function(){
+  function updateDate(){
+    var now=new Date();
+    var D=['SUN','MON','TUE','WED','THU','FRI','SAT'],M=['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+    var s=function(id,v){var e=document.getElementById(id);if(e)e.textContent=v;};
+    s('dc-day',D[now.getDay()]);s('dc-num',now.getDate());s('dc-month',M[now.getMonth()]);
+  }
+  updateDate();
+
+  function loadWeather(loc){
+    fetch('https://wttr.in/'+encodeURIComponent(loc)+'?format=j1')
+    .then(function(r){return r.json();})
+    .then(function(d){
+      var cur=d.current_condition&&d.current_condition[0];if(!cur)return;
+      var temp=cur.temp_C,desc=(cur.weatherDesc&&cur.weatherDesc[0]&&cur.weatherDesc[0].value)||'';
+      var area=d.nearest_area&&d.nearest_area[0];
+      var city=area?(area.areaName[0].value+', '+area.country[0].value):loc;
+      var s2=function(id,v){var e=document.getElementById(id);if(e)e.textContent=v;};
+      s2('wc-city',city);s2('wc-temp',temp+'°C');s2('wc-desc',desc);s2('dh-city',city);
+      var ic=document.getElementById('wc-icon');
+      if(ic){var dl=desc.toLowerCase(),stroke=dl.includes('sun')||dl.includes('clear')?'#f5c842':dl.includes('rain')?'#60a5fa':'#9090a8';ic.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="'+stroke+'" stroke-width="1.5" width="30" height="30"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg>';}
+      var fc=document.getElementById('wc-forecast');
+      if(fc&&d.weather){var dns=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];fc.innerHTML=d.weather.slice(0,4).map(function(w){var dt=new Date(w.date);return'<div class="dhw-fcd"><div class="dhw-fcn">'+dns[dt.getDay()]+'</div><div class="dhw-fct">'+w.maxtempC+'°</div></div>';}).join('');}
+    }).catch(function(){});
+  }
+
+  if(navigator.geolocation){
+    navigator.geolocation.getCurrentPosition(
+      function(p){loadWeather(p.coords.latitude.toFixed(2)+','+p.coords.longitude.toFixed(2));},
+      function(){var e=document.getElementById('dh-city');if(e)e.textContent='Amsterdam, NL';loadWeather('Amsterdam');}
+    );
+  } else { loadWeather('Amsterdam'); }
+
+  // Flash on price update
+  var _p={};
+  var _orig=window.updateMiniCardsFromCoins;
+  if(typeof _orig==='function'){
+    window.updateMiniCardsFromCoins=function(coins){
+      _orig.apply(this,arguments);
+      coins.forEach(function(c){
+        var prev=_p[c.id],cur=c.current_price;
+        if(prev&&prev!==cur){var el=c.id==='bitcoin'?document.getElementById('mst-btc-price'):c.id==='ethereum'?document.getElementById('mst-eth-price'):null;if(el){el.classList.remove('flash-up','flash-dn');void el.offsetWidth;el.classList.add(cur>prev?'flash-up':'flash-dn');}}
+        _p[c.id]=cur;
+      });
+    };
+  }
+})();
+
+// ── DASHBOARD V3: Weather + Location + Date widget ──
+(function() {
+
+  // Update date widget
+  function updateDateWidget() {
+    var now = new Date();
+    var days = ['SUN','MON','TUE','WED','THU','FRI','SAT'];
+    var months = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+    var dDay = document.getElementById('dc-day');
+    var dNum = document.getElementById('dc-num');
+    var dMonth = document.getElementById('dc-month');
+    if (dDay) dDay.textContent = days[now.getDay()];
+    if (dNum) dNum.textContent = now.getDate();
+    if (dMonth) dMonth.textContent = months[now.getMonth()];
+  }
+  updateDateWidget();
+
+  // Get location + weather
+  function loadWeather(city) {
+    var url = 'https://wttr.in/' + encodeURIComponent(city) + '?format=j1';
+    fetch(url)
+      .then(function(r) { return r.json(); })
+      .then(function(d) {
+        var cur = d.current_condition && d.current_condition[0];
+        if (!cur) return;
+        var temp = cur.temp_C || '?';
+        var desc = cur.weatherDesc && cur.weatherDesc[0] && cur.weatherDesc[0].value || '';
+        var cityName = d.nearest_area && d.nearest_area[0];
+        var cName = cityName ? (cityName.areaName[0].value + ', ' + cityName.country[0].value) : city;
+
+        var el = document.getElementById('wc-city');
+        if (el) el.textContent = cName;
+        var tempEl = document.getElementById('wc-temp');
+        if (tempEl) tempEl.textContent = temp + '°C';
+        var descEl = document.getElementById('wc-desc');
+        if (descEl) descEl.textContent = desc;
+        var cityEl = document.getElementById('dh-city');
+        if (cityEl) cityEl.textContent = cName;
+
+        // Weather icon based on desc
+        var iconEl = document.getElementById('wc-icon');
+        if (iconEl) {
+          var dlow = desc.toLowerCase();
+          var iconSvg;
+          if (dlow.includes('sun') || dlow.includes('clear')) {
+            iconSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="#f5c842" stroke-width="1.8" width="44" height="44"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg>';
+          } else if (dlow.includes('rain') || dlow.includes('drizzle')) {
+            iconSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="1.8" width="44" height="44"><path d="M20 17.58A5 5 0 0018 8h-1.26A8 8 0 104 16.25"/><line x1="8" y1="19" x2="8" y2="21"/><line x1="8" y1="13" x2="8" y2="15"/><line x1="16" y1="19" x2="16" y2="21"/><line x1="16" y1="13" x2="16" y2="15"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="12" y1="15" x2="12" y2="17"/></svg>';
+          } else if (dlow.includes('cloud') || dlow.includes('overcast')) {
+            iconSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="#9090a8" stroke-width="1.8" width="44" height="44"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg>';
+          } else if (dlow.includes('snow')) {
+            iconSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="#bfdbfe" stroke-width="1.8" width="44" height="44"><path d="M20 17.58A5 5 0 0018 8h-1.26A8 8 0 104 16.25"/><line x1="8" y1="16" x2="8" y2="16.01"/><line x1="8" y1="20" x2="8" y2="20.01"/><line x1="12" y1="18" x2="12" y2="18.01"/><line x1="12" y1="22" x2="12" y2="22.01"/><line x1="16" y1="16" x2="16" y2="16.01"/><line x1="16" y1="20" x2="16" y2="20.01"/></svg>';
+          } else {
+            iconSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="#9b59d6" stroke-width="1.8" width="44" height="44"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg>';
+          }
+          iconEl.innerHTML = iconSvg;
+        }
+
+        // Forecast (next 3 days)
+        var forecast = d.weather;
+        if (forecast) {
+          var fcEl = document.getElementById('wc-forecast');
+          if (fcEl) {
+            var days2 = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+            fcEl.innerHTML = forecast.slice(0,4).map(function(day) {
+              var dt = new Date(day.date);
+              var dayName = days2[dt.getDay()];
+              var maxT = day.maxtempC;
+              return '<div class="wc-day"><div class="wc-day-name">' + dayName + '</div><div class="wc-day-temp">' + maxT + '°</div></div>';
+            }).join('');
+          }
+        }
+      })
+      .catch(function() {
+        var el = document.getElementById('wc-desc');
+        if (el) el.textContent = 'Weather unavailable';
+      });
+  }
+
+  // Get location
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      function(pos) {
+        var lat = pos.coords.latitude.toFixed(2);
+        var lon = pos.coords.longitude.toFixed(2);
+        loadWeather(lat + ',' + lon);
+      },
+      function() {
+        // Fallback to Amsterdam
+        var cityEl = document.getElementById('dh-city');
+        if (cityEl) cityEl.textContent = 'Amsterdam, NL';
+        loadWeather('Amsterdam');
+      }
+    );
+  } else {
+    loadWeather('Amsterdam');
+  }
+
+  // Refresh weather every 30 min
+  setInterval(function() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        function(pos) { loadWeather(pos.coords.latitude.toFixed(2) + ',' + pos.coords.longitude.toFixed(2)); },
+        function() { loadWeather('Amsterdam'); }
+      );
+    }
+  }, 30 * 60 * 1000);
+
+  // Override notification rendering to use new style
+  var _origRenderNotifs = window.renderNotifications;
+  window.renderDashNotifs = function(items) {
+    var el = document.getElementById('dash-notifications');
+    if (!el) return;
+    if (!items || !items.length) return;
+    el.innerHTML = items.map(function(n) {
+      return '<div class="dh-notif-item">' +
+        '<div class="dh-notif-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>' +
+        '<div>' +
+          (n.tag ? '<div class="dh-notif-tag">' + n.tag + '</div>' : '') +
+          '<div class="dh-notif-title">' + (n.text||n.title||'') + '</div>' +
+          '<div class="dh-notif-sub">' + (n.time||n.sub||'') + '</div>' +
+        '</div>' +
+      '</div>';
+    }).join('');
+  };
+
+  // Price flash on update
+  var _prevPricesV3 = {};
+  var _origUpdateMini = window.updateMiniCardsFromCoins;
+  if (typeof _origUpdateMini === 'function') {
+    window.updateMiniCardsFromCoins = function(coins) {
+      _origUpdateMini.apply(this, arguments);
+      // Flash stat strip values
+      coins.forEach(function(c) {
+        var prev = _prevPricesV3[c.id];
+        var cur = c.current_price;
+        if (prev && prev !== cur) {
+          var isUp = cur > prev;
+          var el = null;
+          if (c.id === 'bitcoin') el = document.getElementById('mst-btc-price');
+          else if (c.id === 'ethereum') el = document.getElementById('mst-eth-price');
+          if (el) {
+            el.classList.remove('flash-up','flash-dn');
+            void el.offsetWidth;
+            el.classList.add(isUp ? 'flash-up' : 'flash-dn');
+          }
+        }
+        _prevPricesV3[c.id] = cur;
+      });
+    };
+  }
+
+})();
+
 
 function fetchTotalMarketCap(){
   var hit=cGet('global');if(hit){applyMarketCap(hit);return;}
