@@ -1,5 +1,18 @@
 [
   {
+    "id": 1777382876621,
+    "coin": "BTC/USD",
+    "type": "BUY",
+    "entry": "76122",
+    "tp": "78800",
+    "sl": "75200",
+    "result": "win",
+    "pnl": "+3.52%",
+    "resolved_price": 79035,
+    "signal_date": "2026-04-28T13:27:53.725Z",
+    "resolved_at": "2026-05-03T22:30:06.243Z"
+  },
+  {
     "id": 1777489714893,
     "coin": "ETH/USD",
     "type": "SELL",
