@@ -4842,6 +4842,7 @@ function setupApp(name){
   document.getElementById('g-dt').textContent=new Date().toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
   applyState();startClock();showTerminalBoot();
   fetchPrices();fetchTotalMarketCap();
+  loadFearGreed();
   fetchNews();
   renderSignals();renderAnalysis();initBooks();
 }
@@ -5550,6 +5551,118 @@ function fetchNews(){
     });
 }
 setInterval(fetchNews, 3 * 60 * 1000);
+
+// ── FEAR & GREED LOADER ──
+async function loadFearGreed() {
+  try {
+    var r = await fetch('https://api.alternative.me/fng/?limit=31');
+    if (!r.ok) throw new Error('fng ' + r.status);
+    var d = await r.json();
+    var data = d.data;
+    var cur = data[0], prev = data[1];
+    var score = parseInt(cur.value);
+    var label = cur.value_classification;
+    var prevScore = parseInt(prev.value);
+    var diff = score - prevScore;
+
+    // Update score + label
+    var scoreEl = document.getElementById('fg-score');
+    var labelEl = document.getElementById('fg-label');
+    var updEl = document.getElementById('fg-updated');
+    if (scoreEl) scoreEl.textContent = score;
+    if (labelEl) {
+      labelEl.textContent = label;
+      var col = score <= 25 ? '#e8392a' : score <= 44 ? '#e67e22' : score <= 55 ? '#f0b90b' : score <= 74 ? '#27ae60' : '#00d4aa';
+      labelEl.style.color = col;
+    }
+    if (updEl) updEl.textContent = (diff >= 0 ? '+' : '') + diff + ' vs yesterday · Updated daily';
+
+    // Gauge needle
+    var needle = document.getElementById('fg-needle');
+    var arc = document.getElementById('fg-arc');
+    if (needle) {
+      var angle = (score / 100) * 180 - 90;
+      needle.setAttribute('transform', 'rotate(' + angle + ' 150 150)');
+    }
+    if (arc) {
+      var offset = 377 - (score / 100) * 377;
+      arc.style.strokeDashoffset = offset;
+    }
+
+    // Compare cards
+    var todayVal = document.getElementById('fg-today-val');
+    var todayLbl = document.getElementById('fg-today-lbl');
+    var yestVal = document.getElementById('fg-yest-val');
+    var yestLbl = document.getElementById('fg-yest-lbl');
+    if (todayVal) todayVal.textContent = score;
+    if (todayLbl) todayLbl.textContent = label;
+    if (yestVal) yestVal.textContent = prevScore;
+    if (yestLbl) yestLbl.textContent = prev.value_classification;
+
+    // Meaning text
+    var meaning = document.getElementById('fg-meaning');
+    if (meaning) {
+      var meanings = {
+        'Extreme Fear': 'Market is in panic mode. Historically this is when the best buying opportunities appear. Smart money accumulates while others sell.',
+        'Fear': 'Negative sentiment dominates. Patient buyers may find good entry points. Watch for reversal signals.',
+        'Neutral': 'Market sentiment is balanced. No clear directional signal. Wait for confirmation before making big moves.',
+        'Greed': 'Investors are getting greedy. Consider taking partial profits and tightening stop losses.',
+        'Extreme Greed': 'Dangerously euphoric market. High correction risk. Strong signal to reduce exposure and lock in profits.'
+      };
+      meaning.textContent = meanings[label] || 'Monitoring market sentiment...';
+    }
+
+    // 30-day history chart
+    var canvas = document.getElementById('fg-history-chart');
+    if (canvas && data.length > 1) {
+      var ctx = canvas.getContext('2d');
+      var w = canvas.offsetWidth || 400;
+      canvas.width = w;
+      canvas.height = 80;
+      var pts = data.slice(0, 30).reverse();
+      var vals = pts.map(function(p) { return parseInt(p.value); });
+      var minV = Math.min(...vals) - 5, maxV = Math.max(...vals) + 5;
+      var rng = maxV - minV || 1;
+      ctx.clearRect(0, 0, w, 80);
+      // Draw gradient area
+      var grad = ctx.createLinearGradient(0, 0, 0, 80);
+      grad.addColorStop(0, 'rgba(155,89,214,.3)');
+      grad.addColorStop(1, 'rgba(155,89,214,.02)');
+      ctx.beginPath();
+      vals.forEach(function(v, i) {
+        var x = i * (w / (vals.length - 1));
+        var y = 80 - ((v - minV) / rng) * 70;
+        i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      });
+      ctx.lineTo(w, 80); ctx.lineTo(0, 80); ctx.closePath();
+      ctx.fillStyle = grad; ctx.fill();
+      // Draw line
+      ctx.beginPath();
+      vals.forEach(function(v, i) {
+        var x = i * (w / (vals.length - 1));
+        var y = 80 - ((v - minV) / rng) * 70;
+        i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      });
+      ctx.strokeStyle = '#9b59d6'; ctx.lineWidth = 2; ctx.stroke();
+    }
+
+    // Update dashboard stat
+    var fngEl = document.getElementById('mst-fng');
+    var fngLbl = document.getElementById('mst-fng-lbl');
+    if (fngEl) fngEl.textContent = score;
+    if (fngLbl) { fngLbl.textContent = label; fngLbl.className = 'dh-stat-c ' + (score <= 44 ? 'dn' : score >= 56 ? 'up' : 'neu'); }
+
+  } catch(e) {
+    var scoreEl = document.getElementById('fg-score');
+    if (scoreEl) scoreEl.textContent = '--';
+    var labelEl = document.getElementById('fg-label');
+    if (labelEl) labelEl.textContent = 'Unavailable';
+    var updEl = document.getElementById('fg-updated');
+    if (updEl) updEl.textContent = 'Could not load data';
+    console.warn('Fear & Greed load failed:', e.message);
+  }
+}
+
 
 
 /* ═══════════════════════════════════════════
