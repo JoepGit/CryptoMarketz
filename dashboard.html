@@ -5551,47 +5551,6 @@ function fetchNews(){
 }
 setInterval(fetchNews, 3 * 60 * 1000);
 
-// ── SESSION STORAGE CACHE ──
-var CACHE_VERSION = 'zimr_v1';
-function cacheSet(key, data, ttlMs) {
-  try { sessionStorage.setItem(CACHE_VERSION+'_'+key, JSON.stringify({data:data,expires:Date.now()+(ttlMs||300000)})); } catch(e) {}
-}
-function cacheGet(key) {
-  try {
-    var raw = sessionStorage.getItem(CACHE_VERSION+'_'+key);
-    if (!raw) return null;
-    var obj = JSON.parse(raw);
-    if (Date.now() > obj.expires) { sessionStorage.removeItem(CACHE_VERSION+'_'+key); return null; }
-    return obj.data;
-  } catch(e) { return null; }
-}
-// Patch fetchNews
-var _origFetchNews = fetchNews;
-fetchNews = function() {
-  var cached = cacheGet('news');
-  if (cached && cached.length) { renderNews(cached); setTimeout(_origFetchNews, 800); return; }
-  _origFetchNews();
-};
-// Patch renderNews
-var _origRenderNews = renderNews;
-renderNews = function(items) {
-  if (items && items.length > 2) cacheSet('news', items, 5*60*1000);
-  _origRenderNews(items);
-};
-// Patch fetchPrices
-var _origFetchPrices = fetchPrices;
-fetchPrices = function() {
-  var cached = cacheGet('prices');
-  if (cached && cached.length) updateMiniCardsFromCoins(cached);
-  _origFetchPrices();
-};
-// Patch updateMiniCardsFromCoins
-var _origUpdateMini = updateMiniCardsFromCoins;
-updateMiniCardsFromCoins = function(coins) {
-  if (coins && coins.length) cacheSet('prices', coins, 60*1000);
-  _origUpdateMini(coins);
-};
-
 
 /* ═══════════════════════════════════════════
    HEATMAP PAGE loads only when tab opened
