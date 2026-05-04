@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Top 100 Coins — ZIMR Capital</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',sans-serif;background:#090909;color:#e2e2e8;min-height:100vh;display:flex;flex-direction:column;font-size:13px;-webkit-font-smoothing:antialiased;}
+
+/* Topbar */
+.topbar{background:#111116;border-bottom:1px solid #1e1e2a;padding:0 20px;height:46px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
+.topbar-left{display:flex;align-items:center;gap:14px;}
+.back-btn{display:flex;align-items:center;gap:6px;color:#6b6b80;text-decoration:none;font-size:12px;font-weight:500;transition:color .15s;background:none;border:none;cursor:pointer;font-family:inherit;}
+.back-btn:hover{color:#e2e2e8;}
+.logo{font-size:15px;font-weight:700;color:#fff;letter-spacing:-.01em;}
+.logo span{color:#9b59d6;}
+.topbar-right{display:flex;align-items:center;gap:14px;}
+.live{display:flex;align-items:center;gap:5px;font-size:11px;color:#4ade80;font-weight:500;}
+.live-dot{width:6px;height:6px;background:#4ade80;border-radius:50%;box-shadow:0 0 6px #4ade80;animation:blink 2s infinite;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.clock{font-size:11px;color:#4a4a5a;font-variant-numeric:tabular-nums;}
+.btn{background:#1a1a22;border:1px solid #2a2a38;border-radius:6px;padding:5px 12px;font-size:11px;font-weight:500;color:#9b59d6;cursor:pointer;font-family:inherit;transition:all .15s;}
+.btn:hover{border-color:#9b59d6;}
+
+/* Stats bar */
+.stats-bar{display:grid;grid-template-columns:repeat(5,1fr);border-bottom:1px solid #1e1e2a;flex-shrink:0;background:#111116;}
+.stat{padding:10px 18px;border-right:1px solid #1e1e2a;}
+.stat:last-child{border-right:none;}
+.slbl{font-size:9px;font-weight:600;color:#4a4a5a;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px;}
+.sval{font-size:16px;font-weight:700;color:#fff;line-height:1;margin-bottom:2px;font-variant-numeric:tabular-nums;}
+.schg{font-size:10px;font-weight:500;font-variant-numeric:tabular-nums;}
+.up{color:#4ade80;}.dn{color:#f87171;}.neu{color:#4a4a5a;}
+
+/* Filter bar */
+.filter-bar{display:flex;align-items:center;gap:8px;padding:10px 16px;border-bottom:1px solid #1e1e2a;flex-shrink:0;flex-wrap:wrap;}
+.filter-label{font-size:9px;font-weight:700;color:#4a4a5a;text-transform:uppercase;letter-spacing:.1em;margin-right:4px;}
+.fbtn{background:none;border:1px solid #1e1e2a;border-radius:20px;padding:4px 12px;font-size:11px;font-weight:500;color:#6b6b80;cursor:pointer;font-family:inherit;transition:all .15s;}
+.fbtn:hover{color:#e2e2e8;border-color:#2e2e42;}
+.fbtn.active{background:rgba(155,89,214,.1);border-color:rgba(155,89,214,.3);color:#9b59d6;}
+.search-input{margin-left:auto;background:#111116;border:1px solid #1e1e2a;border-radius:6px;padding:5px 12px;font-size:11px;color:#e2e2e8;font-family:inherit;width:200px;outline:none;transition:border-color .15s;}
+.search-input:focus{border-color:#9b59d6;}
+.search-input::placeholder{color:#4a4a5a;}
+
+/* Table */
+.tbl-wrap{flex:1;overflow-y:auto;}
+.tbl-wrap::-webkit-scrollbar{width:4px;}
+.tbl-wrap::-webkit-scrollbar-thumb{background:#2a2a38;border-radius:2px;}
+
+.tbl-head{display:grid;grid-template-columns:44px 28px 1fr 110px 100px 100px 100px 120px 80px;gap:4px;padding:8px 16px;border-bottom:1px solid #1a1a24;background:#090909;position:sticky;top:0;z-index:2;}
+.tbl-head span{font-size:9px;font-weight:600;color:#4a4a5a;text-transform:uppercase;letter-spacing:.05em;cursor:pointer;user-select:none;display:flex;align-items:center;gap:3px;}
+.tbl-head span:hover{color:#9b59d6;}
+.tbl-head span:nth-child(n+4){justify-content:flex-end;}
+
+.coin-row{display:grid;grid-template-columns:44px 28px 1fr 110px 100px 100px 100px 120px 80px;gap:4px;padding:10px 16px;border-bottom:1px solid #111118;align-items:center;cursor:pointer;transition:background .1s;}
+.coin-row:hover{background:#0f0f14;}
+
+.rnum{font-size:11px;color:#3a3a4a;font-variant-numeric:tabular-nums;text-align:center;}
+.coin-logo{width:24px;height:24px;border-radius:50%;object-fit:cover;background:#1e1e28;}
+.coin-logo-fb{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;}
+.coin-info{min-width:0;}
+.coin-name{font-size:13px;font-weight:600;color:#e2e2e8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.coin-sym{font-size:10px;color:#4a4a5a;margin-top:1px;text-transform:uppercase;}
+.rval{font-size:12px;font-weight:500;color:#e2e2e8;text-align:right;font-variant-numeric:tabular-nums;}
+.rchg{font-size:11px;font-weight:600;text-align:right;font-variant-numeric:tabular-nums;}
+.rsmall{font-size:10px;color:#6b6b80;text-align:right;font-variant-numeric:tabular-nums;}
+
+/* Sparkline */
+.spark-cell{display:flex;justify-content:flex-end;}
+
+/* Loading */
+.ld{display:flex;align-items:center;justify-content:center;gap:8px;padding:80px;color:#4a4a5a;font-size:11px;flex-direction:column;}
+.spin{width:18px;height:18px;border:2px solid #2a2a38;border-top-color:#9b59d6;border-radius:50%;animation:spin .6s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg)}}
+.err{color:#f87171;font-size:12px;}
+
+/* Responsive */
+@media(max-width:900px){
+  .tbl-head,.coin-row{grid-template-columns:32px 24px 1fr 90px 80px 80px;}
+  .tbl-head span:nth-child(7),.tbl-head span:nth-child(8),.tbl-head span:nth-child(9),
+  .coin-row>*:nth-child(7),.coin-row>*:nth-child(8),.coin-row>*:nth-child(9){display:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- Topbar -->
+<div class="topbar">
+  <div class="topbar-left">
+    <button class="back-btn" onclick="history.back()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Dashboard
+    </button>
+    <div class="logo">ZIMR <span>Markets</span></div>
+  </div>
+  <div class="topbar-right">
+    <div class="live"><div class="live-dot"></div>Live</div>
+    <span class="clock" id="clock">-</span>
+    <button class="btn" onclick="load()">↻ Refresh</button>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="stats-bar">
+  <div class="stat"><div class="slbl">Total Market Cap</div><div class="sval" id="s-mcap">-</div><div class="schg" id="s-mcap-c">-</div></div>
+  <div class="stat"><div class="slbl">24H Volume</div><div class="sval" id="s-vol">-</div><div class="schg neu">total traded</div></div>
+  <div class="stat"><div class="slbl">BTC Dominance</div><div class="sval" id="s-btc-dom">-</div><div class="schg" id="s-btc-dom-c">-</div></div>
+  <div class="stat"><div class="slbl">Top Gainer 24H</div><div class="sval" id="s-gainer">-</div><div class="schg up" id="s-gainer-c">-</div></div>
+  <div class="stat"><div class="slbl">Top Loser 24H</div><div class="sval" id="s-loser">-</div><div class="schg dn" id="s-loser-c">-</div></div>
+</div>
+
+<!-- Filters -->
+<div class="filter-bar">
+  <span class="filter-label">Sort</span>
+  <button class="fbtn active" onclick="setSort('market_cap',this)">Market Cap</button>
+  <button class="fbtn" onclick="setSort('price_change_percentage_24h',this)">24H Gainers</button>
+  <button class="fbtn" onclick="setSort('losers',this)">24H Losers</button>
+  <button class="fbtn" onclick="setSort('total_volume',this)">Volume</button>
+  <input class="search-input" type="text" id="search" placeholder="Search coins..." oninput="render()">
+</div>
+
+<!-- Table -->
+<div class="tbl-wrap">
+  <div class="tbl-head">
+    <span onclick="setSort('market_cap_rank',this)">#</span>
+    <span></span>
+    <span onclick="setSort('name',this)">Coin</span>
+    <span onclick="setSort('current_price',this)">Price</span>
+    <span onclick="setSort('price_change_percentage_24h',this)">24H</span>
+    <span onclick="setSort('price_change_percentage_7d_in_currency',this)">7D</span>
+    <span onclick="setSort('market_cap',this)">Market Cap</span>
+    <span onclick="setSort('total_volume',this)">Volume 24H</span>
+    <span>7D Chart</span>
+  </div>
+  <div id="tbl-body">
+    <div class="ld"><div class="spin"></div><span>Loading top 100 coins...</span></div>
+  </div>
+</div>
+
+<script>
+var coins = [];
+var sortKey = 'market_cap_rank';
+var sortDir = 1;
+
+// Clock
+setInterval(function(){
+  document.getElementById('clock').textContent = new Date().toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
+}, 1000);
+
+// Format helpers
+function fmtPrice(n) {
+  if (!n && n !== 0) return '-';
+  if (n >= 1000) return '$' + n.toLocaleString('en-US', {maximumFractionDigits: 0});
+  if (n >= 1) return '$' + n.toFixed(2);
+  if (n >= 0.01) return '$' + n.toFixed(4);
+  return '$' + n.toFixed(6);
+}
+function fmtLarge(n) {
+  if (!n) return '-';
+  if (n >= 1e12) return '$' + (n/1e12).toFixed(2) + 'T';
+  if (n >= 1e9) return '$' + (n/1e9).toFixed(2) + 'B';
+  if (n >= 1e6) return '$' + (n/1e6).toFixed(1) + 'M';
+  return '$' + n.toLocaleString('en-US');
+}
+function fmtPct(n) {
+  if (n == null || isNaN(n)) return '-';
+  return (n > 0 ? '+' : '') + n.toFixed(2) + '%';
+}
+function clr(n) { return n > 0 ? 'up' : n < 0 ? 'dn' : 'neu'; }
+
+// Sparkline from 7d data
+function sparkline(data, isUp) {
+  if (!data || !data.length) return '<svg width="80" height="28" viewBox="0 0 80 28"><line x1="0" y1="14" x2="80" y2="14" stroke="#2a2a38" stroke-width="1"/></svg>';
+  var min = Math.min(...data), max = Math.max(...data), range = max - min || 1;
+  var W = 80, H = 28, pad = 3;
+  var pts = data.map(function(v, i) {
+    var x = pad + i * (W - 2*pad) / (data.length - 1);
+    var y = H - pad - ((v - min) / range) * (H - 2*pad);
+    return x.toFixed(1) + ',' + y.toFixed(1);
+  }).join(' ');
+  var color = isUp ? '#4ade80' : '#f87171';
+  return '<svg width="80" height="28" viewBox="0 0 80 28"><polyline points="' + pts + '" fill="none" stroke="' + color + '" stroke-width="1.5" stroke-linejoin="round"/></svg>';
+}
+
+// Load data
+async function load() {
+  document.getElementById('tbl-body').innerHTML = '<div class="ld"><div class="spin"></div><span>Loading top 100 coins...</span></div>';
+  try {
+    // Try Vercel proxy first
+    var url = 'https://zimr-proxy.vercel.app/api/top100';
+    var r = await fetch(url, { signal: AbortSignal.timeout(10000) });
+    if (!r.ok) throw new Error('proxy ' + r.status);
+    coins = await r.json();
+    if (!Array.isArray(coins) || !coins.length) throw new Error('empty');
+  } catch(e) {
+    // Fallback: CoinGecko direct
+    try {
+      var url2 = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=true&price_change_percentage=24h,7d';
+      var r2 = await fetch(url2, { signal: AbortSignal.timeout(12000) });
+      if (!r2.ok) throw new Error('cg ' + r2.status);
+      coins = await r2.json();
+    } catch(e2) {
+      // Fallback 2: CryptoCompare top 100
+      try {
+        var url3 = 'https://min-api.cryptocompare.com/data/top/mktcapfull?limit=100&tsym=USD';
+        var r3 = await fetch(url3, { signal: AbortSignal.timeout(12000) });
+        var d3 = await r3.json();
+        coins = (d3.Data || []).map(function(item, i) {
+          var info = item.CoinInfo, raw = item.RAW && item.RAW.USD;
+          return {
+            id: info.Name.toLowerCase(),
+            symbol: info.Name,
+            name: info.FullName,
+            image: 'https://www.cryptocompare.com' + info.ImageUrl,
+            current_price: raw ? raw.PRICE : 0,
+            market_cap: raw ? raw.MKTCAP : 0,
+            market_cap_rank: i + 1,
+            price_change_percentage_24h: raw ? raw.CHANGEPCT24HOUR : 0,
+            total_volume: raw ? raw.VOLUME24HOURTO : 0,
+            sparkline_in_7d: null,
+          };
+        });
+      } catch(e3) {
+        document.getElementById('tbl-body').innerHTML = '<div class="ld"><span class="err">Failed to load market data. Try refresh.</span></div>';
+        return;
+      }
+    }
+  }
+  renderStats();
+  render();
+}
+
+function renderStats() {
+  var totalMcap = coins.reduce(function(s,c){return s+(c.market_cap||0);}, 0);
+  var totalVol = coins.reduce(function(s,c){return s+(c.total_volume||0);}, 0);
+  var btc = coins.find(function(c){return c.symbol&&c.symbol.toLowerCase()==='btc';});
+  var btcDom = btc && totalMcap ? ((btc.market_cap/totalMcap)*100).toFixed(1)+'%' : '-';
+
+  var sorted24 = [...coins].filter(function(c){return c.price_change_percentage_24h!=null;}).sort(function(a,b){return b.price_change_percentage_24h-a.price_change_percentage_24h;});
+  var gainer = sorted24[0], loser = sorted24[sorted24.length-1];
+
+  document.getElementById('s-mcap').textContent = fmtLarge(totalMcap);
+  document.getElementById('s-vol').textContent = fmtLarge(totalVol);
+  document.getElementById('s-btc-dom').textContent = btcDom;
+
+  if (gainer) {
+    document.getElementById('s-gainer').textContent = gainer.symbol.toUpperCase();
+    document.getElementById('s-gainer-c').textContent = fmtPct(gainer.price_change_percentage_24h);
+  }
+  if (loser) {
+    document.getElementById('s-loser').textContent = loser.symbol.toUpperCase();
+    document.getElementById('s-loser-c').textContent = fmtPct(loser.price_change_percentage_24h);
+  }
+}
+
+function setSort(key, btn) {
+  if (sortKey === key) { sortDir *= -1; }
+  else { sortKey = key; sortDir = key === 'losers' ? 1 : key === 'name' ? 1 : -1; }
+  document.querySelectorAll('.fbtn').forEach(function(b){b.classList.remove('active');});
+  if (btn) btn.classList.add('active');
+  render();
+}
+
+function render() {
+  var q = document.getElementById('search').value.toLowerCase().trim();
+  var list = [...coins];
+
+  // Filter
+  if (q) list = list.filter(function(c){
+    return (c.name||'').toLowerCase().includes(q) || (c.symbol||'').toLowerCase().includes(q);
+  });
+
+  // Sort
+  if (sortKey === 'losers') {
+    list.sort(function(a,b){return (a.price_change_percentage_24h||0)-(b.price_change_percentage_24h||0);});
+  } else if (sortKey === 'name') {
+    list.sort(function(a,b){return sortDir * (a.name||'').localeCompare(b.name||'');});
+  } else {
+    list.sort(function(a,b){return sortDir * ((b[sortKey]||0)-(a[sortKey]||0));});
+  }
+
+  if (!list.length) {
+    document.getElementById('tbl-body').innerHTML = '<div class="ld">No coins match your search</div>';
+    return;
+  }
+
+  document.getElementById('tbl-body').innerHTML = list.map(function(c, i) {
+    var chg24 = c.price_change_percentage_24h;
+    var chg7 = c.price_change_percentage_7d_in_currency;
+    var sparkData = c.sparkline_in_7d && c.sparkline_in_7d.price;
+    var isUp = chg24 >= 0;
+    var logoHtml = c.image
+      ? '<img class="coin-logo" src="'+c.image+'" width="24" height="24" onerror="this.style.display=\'none\'">'
+      : '<div class="coin-logo-fb" style="background:rgba(155,89,214,.15);color:#9b59d6;">'+(c.symbol||'?')[0].toUpperCase()+'</div>';
+
+    return '<div class="coin-row">'
+      + '<span class="rnum">'+(c.market_cap_rank||i+1)+'</span>'
+      + '<div>'+logoHtml+'</div>'
+      + '<div class="coin-info"><div class="coin-name">'+c.name+'</div><div class="coin-sym">'+c.symbol.toUpperCase()+'</div></div>'
+      + '<span class="rval">'+fmtPrice(c.current_price)+'</span>'
+      + '<span class="rchg '+clr(chg24)+'">'+fmtPct(chg24)+'</span>'
+      + '<span class="rchg '+clr(chg7)+'">'+fmtPct(chg7)+'</span>'
+      + '<span class="rval">'+fmtLarge(c.market_cap)+'</span>'
+      + '<span class="rval">'+fmtLarge(c.total_volume)+'</span>'
+      + '<div class="spark-cell">'+sparkline(sparkData, isUp)+'</div>'
+      + '</div>';
+  }).join('');
+}
+
+load();
+setInterval(load, 60000); // refresh every 60s
+</script>
+</body>
+</html>
