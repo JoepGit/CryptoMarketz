@@ -1590,17 +1590,6 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;background:ra
   line-height: 1.7;
 }
 
-
-#page-iframe {
-  display: none;
-  flex-direction: column;
-  height: 100%;
-  overflow: hidden;
-}
-#page-iframe.active {
-  display: flex !important;
-}
-
 </style>
 <style id="light-always">
 /* ═══════════════════════════════════════════════════════
@@ -2966,13 +2955,13 @@ a:focus-visible,button:focus-visible,input:focus-visible{
     <div class="sb-sec">Tools</div>
     <ul class="sbn">
 
-      <li><a href="#" onclick="openIframe('events.html','Events');return false;" style="display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;font-size:12.5px;font-weight:500;color:#e8e0d8;text-decoration:none;border:1px solid transparent;transition:all .15s;margin-bottom:2px;" onmouseenter="this.style.background='rgba(155,89,214,.1)';this.style.borderColor='rgba(155,89,214,.2)'" onmouseleave="this.style.background='';this.style.borderColor='transparent'">
+      <li><a href="events.html" style="display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;font-size:12.5px;font-weight:500;color:#e8e0d8;text-decoration:none;border:1px solid transparent;transition:all .15s;margin-bottom:2px;" onmouseenter="this.style.background='rgba(155,89,214,.1)';this.style.borderColor='rgba(155,89,214,.2)'" onmouseleave="this.style.background='';this.style.borderColor='transparent'">
         <svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;opacity:.65"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Events</a></li>
-      <li><a href="#" onclick="openIframe('defi-flows.html','DeFi Flows');return false;" style="display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;font-size:12.5px;font-weight:500;color:#e8e0d8;text-decoration:none;border:1px solid transparent;transition:all .15s;margin-bottom:2px;" onmouseenter="this.style.background='rgba(155,89,214,.1)';this.style.borderColor='rgba(155,89,214,.2)'" onmouseleave="this.style.background='';this.style.borderColor='transparent'">
+      <li><a href="defi-flows.html" style="display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;font-size:12.5px;font-weight:500;color:#e8e0d8;text-decoration:none;border:1px solid transparent;transition:all .15s;margin-bottom:2px;" onmouseenter="this.style.background='rgba(155,89,214,.1)';this.style.borderColor='rgba(155,89,214,.2)'" onmouseleave="this.style.background='';this.style.borderColor='transparent'">
         <svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;opacity:.65"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>DeFi Flows</a></li>
-      <li><a href="#" onclick="openIframe('polymarket.html','Polymarket');return false;" style="display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;font-size:12.5px;font-weight:500;color:#e8e0d8;text-decoration:none;border:1px solid transparent;transition:all .15s;margin-bottom:2px;" onmouseenter="this.style.background='rgba(155,89,214,.1)';this.style.borderColor='rgba(155,89,214,.2)'" onmouseleave="this.style.background='';this.style.borderColor='transparent'">
+      <li><a href="polymarket.html" style="display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;font-size:12.5px;font-weight:500;color:#e8e0d8;text-decoration:none;border:1px solid transparent;transition:all .15s;margin-bottom:2px;" onmouseenter="this.style.background='rgba(155,89,214,.1)';this.style.borderColor='rgba(155,89,214,.2)'" onmouseleave="this.style.background='';this.style.borderColor='transparent'">
         <svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;opacity:.65"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8l4 4-4 4"/></svg>Polymarket</a></li>
-      <li><a href="#" onclick="openIframe('early-signals.html','Early Signals');return false;" style="display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;font-size:12.5px;font-weight:700;color:#9b59d6;text-decoration:none;border:1px solid transparent;transition:all .15s;margin-bottom:2px;" onmouseenter="this.style.background='rgba(155,89,214,.1)';this.style.borderColor='rgba(155,89,214,.3)'" onmouseleave="this.style.background='';this.style.borderColor='transparent'">
+      <li><a href="early-signals.html" style="display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;font-size:12.5px;font-weight:700;color:#9b59d6;text-decoration:none;border:1px solid transparent;transition:all .15s;margin-bottom:2px;" onmouseenter="this.style.background='rgba(155,89,214,.1)';this.style.borderColor='rgba(155,89,214,.3)'" onmouseleave="this.style.background='';this.style.borderColor='transparent'">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;flex-shrink:0;opacity:.9"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>Early Signals <span style="font-size:7px;background:rgba(155,89,214,.2);color:#9b59d6;border:1px solid rgba(155,89,214,.4);padding:1px 5px;border-radius:3px;margin-left:2px;">X10</span></a></li>
 
 
@@ -4753,22 +4742,6 @@ a:focus-visible,button:focus-visible,input:focus-visible{
       </style>
     </div><!-- /page-scanner -->
 
-
-    <!-- ═══ IFRAME VIEWER ═══ -->
-    <div class="page" id="page-iframe">
-      <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 20px;background:#111116;border-bottom:1px solid #1e1e2a;flex-shrink:0;">
-        <div style="display:flex;align-items:center;gap:10px;">
-          <button onclick="goPage('dashboard',null)" style="display:flex;align-items:center;gap:6px;background:none;border:none;color:#6b6b80;font-size:12px;font-weight:500;cursor:pointer;font-family:inherit;transition:color .15s;" onmouseover="this.style.color='#e2e2e8'" onmouseout="this.style.color='#6b6b80'">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-            Dashboard
-          </button>
-          <span style="font-size:13px;font-weight:600;color:#e2e2e8;" id="iframe-title">Loading...</span>
-        </div>
-        <button onclick="document.getElementById('main-iframe').src=document.getElementById('main-iframe').src" style="background:#1a1a22;border:1px solid #2a2a38;border-radius:6px;padding:5px 12px;font-size:11px;color:#9b59d6;cursor:pointer;font-family:inherit;">↻ Refresh</button>
-      </div>
-      <iframe id="main-iframe" src="about:blank" style="width:100%;flex:1;border:none;display:block;" allow="geolocation"></iframe>
-    </div>
-
   </main>
 </div>
 
@@ -5577,6 +5550,48 @@ function fetchNews(){
     });
 }
 setInterval(fetchNews, 3 * 60 * 1000);
+
+// ── SESSION STORAGE CACHE ──
+var CACHE_VERSION = 'zimr_v1';
+function cacheSet(key, data, ttlMs) {
+  try { sessionStorage.setItem(CACHE_VERSION+'_'+key, JSON.stringify({data:data,expires:Date.now()+(ttlMs||300000)})); } catch(e) {}
+}
+function cacheGet(key) {
+  try {
+    var raw = sessionStorage.getItem(CACHE_VERSION+'_'+key);
+    if (!raw) return null;
+    var obj = JSON.parse(raw);
+    if (Date.now() > obj.expires) { sessionStorage.removeItem(CACHE_VERSION+'_'+key); return null; }
+    return obj.data;
+  } catch(e) { return null; }
+}
+// Patch fetchNews
+var _origFetchNews = fetchNews;
+fetchNews = function() {
+  var cached = cacheGet('news');
+  if (cached && cached.length) { renderNews(cached); setTimeout(_origFetchNews, 800); return; }
+  _origFetchNews();
+};
+// Patch renderNews
+var _origRenderNews = renderNews;
+renderNews = function(items) {
+  if (items && items.length > 2) cacheSet('news', items, 5*60*1000);
+  _origRenderNews(items);
+};
+// Patch fetchPrices
+var _origFetchPrices = fetchPrices;
+fetchPrices = function() {
+  var cached = cacheGet('prices');
+  if (cached && cached.length) updateMiniCardsFromCoins(cached);
+  _origFetchPrices();
+};
+// Patch updateMiniCardsFromCoins
+var _origUpdateMini = updateMiniCardsFromCoins;
+updateMiniCardsFromCoins = function(coins) {
+  if (coins && coins.length) cacheSet('prices', coins, 60*1000);
+  _origUpdateMini(coins);
+};
+
 
 /* ═══════════════════════════════════════════
    HEATMAP PAGE loads only when tab opened
