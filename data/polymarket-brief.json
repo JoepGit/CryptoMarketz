@@ -1,58 +1,51 @@
 {
-  "date": "Sunday May 03, 2026",
-  "generated": "2026-05-03T08:28:35.121345Z",
-  "brief": "# POLYMARKET PULSE | May 3, 2026\n\n## \"Iran Tensions Cooling\u2014Or Markets Just Exhausted?\"\n\nThe smart money is stepping back from escalation bets. The Hormuz blockade lift is down 13% today despite zero new headlines, while permanent peace deals have cratered across both May 31 and May 15 windows (now priced at 28% and 4% respectively). This isn't capitulation\u2014it's recalibration. After weeks of elevated geopolitical risk, traders are pricing in stalemate rather than breakthrough, which typically means either: (a) confidence that status quo holds through month-end, or (b) recognition that binary peace deals are unrealistic timelines.\n\nWatch the volume divergence. The top-tier volume markets (QatarEnergy LNG at $10M, 76ers-Celtics at $9M) are settled narrative plays\u2014production resumes, Boston advances. But the mid-tier geopolitical markets ($240-300K each) are still active despite one-way price action. That's either weak hands liquidating at losses, or sophisticated players accumulating downside exposure ahead of a potential reversal. The Sinaloa governor market tanking 78.9% in one day screams capitulation, not conviction.\n\n**Mispricing alert**: Magic-Pistons at 26% feels thin for an Orlando squad, but check injury reports before fading. The real edge is in the Iran airspace closure (14%)\u2014if regional tensions spike Monday, this reprices fast. Currently underbought relative to blockade headlines.\n\n---\n\n## WATCH LIST\n\n**1. US x Iran permanent peace deal by May 31 (28%)**  \nDown 13% on no news. Track State Dept. statements and UN activity tomorrow\u2014any diplomatic signal reverses this instantly. This is your volatility play.\n\n**2. Will the Iranian regime fall by May 31? (3%, $994K vol)**  \nHighest conviction bearish bet on the board right now. If this moves below 2%, expect coordinated shorting; above 5% signals real contagion fears.\n\n**3. 76ers vs. Celtics (99%)**  \nNot a trade\u2014confirmation bias. Boston is cooked in. Watch it *not* move toward 100% as tell that smart money isn't piling in at the margin.",
+  "date": "Monday May 04, 2026",
+  "generated": "2026-05-04T09:10:33.826685Z",
+  "brief": "# ZIMR CAPITAL MARKET INTELLIGENCE\n## Monday, May 4, 2026\n\n---\n\n## **Indian Elections Repricing Hard: TVK Surge Signals Major Polling Shift**\n\nThe Tamil Nadu legislative race just experienced a seismic rerating. TVK rocketed to 98% (+89.8%) while DMK collapsed to 1% (-84.5%) on massive $1.5M combined volume\u2014indicating serious new information hit the market overnight. This isn't noise; the magnitude and coordination across both contracts screams fresh polling data or last-minute campaign momentum. Meanwhile, BJP's West Bengal odds hardened further to 99% (+48.3%), suggesting regional bloc confidence is building across multiple Indian contests simultaneously.\n\nSmart money appears to be front-running late-stage polling releases ahead of voting. The TVK move is particularly sharp\u2014a regional challenger displacing the incumbent DMK in the market's eyes is a significant political narrative shift. Watch for whether this reflects genuine ground movement or overweighting of a single poll. The correlated strength across BJP positions suggests macro confidence in broader anti-incumbent sentiment, but the TVK explosion has the hallmarks of information asymmetry among professional traders with access to pre-published surveys.\n\nOn energy markets, QatarEnergy's 99% probability (11.1M volume) for April 30 LNG production signals the market already priced in recovery\u2014today's contract is essentially a formality. More revealing: Strait of Hormuz traffic normalcy odds remain depressed (7-22% across different May deadlines) despite the energy bottleneck potentially resolving. This disconnect suggests traders see structural shipping delays persisting even after production recovers, or they're pricing geopolitical tail risk that production data won't immediately fix.\n\n---\n\n## **WATCH LIST**\n\n**1. TVK Tamil Nadu | 98%** \u2014 The explosive move demands scrutiny. If this holds above 90% into Tuesday, it signals genuine upset confidence. If it mean-reverts below 85%, suspect coordinated speculation. Either way, closing price action today sets the narrative.\n\n**2. Strait of Hormuz (May 15/31 deadlines) | 7-22%** \u2014 Major arbitrage opportunity if QatarEnergy production recovery is confirmed. These odds look too pessimistic if supply actually normalizes; watch for sharp rallies if shipping data improves.\n\n**3. KT Rolster vs BNK FEARX | 70%** \u2014 Lower-volume esports contract showing meaningful swings (-14.5%). Monitor if this consolidates or see-saws; indicates whether pro gaming markets are drawing serious money or remain retail-driven.",
   "top_movers": [
     {
-      "question": "Ruben Rocha out as Governor of Sinaloa by May 31?",
-      "prob": 18,
-      "change": -78.9,
-      "vol24": "$234K",
-      "slug": "ruben-rocha-out-as-governor-of-sinaloa-by-may-31"
+      "question": "Will Tamilaga Vettri Kazhagam (TVK) win the most seats in the 2026 Tamil Nadu Legislative Assembly election?",
+      "prob": 98,
+      "change": 89.8,
+      "vol24": "$923K",
+      "slug": "will-tamilaga-vettri-kazhagam-tvk-win-the-most-seats-in-the-2026-tamil-nadu-legislative-assembly-election"
     },
     {
-      "question": "76ers vs. Celtics",
+      "question": "Will the Dravida Munnetra Kazhagam (DMK) win the most seats in the 2026 Tamil Nadu Legislative Assembly election?",
+      "prob": 1,
+      "change": -84.5,
+      "vol24": "$607K",
+      "slug": "will-the-dravida-munnetra-kazhagam-dmk-win-the-most-seats-in-the-2026-tamil-nadu-legislative-assembly-election"
+    },
+    {
+      "question": "Will the Bharatiya Janata Party (BJP) win the most seats in the 2026 West Bengal Legislative Assembly election?",
       "prob": 99,
-      "change": 70.5,
-      "vol24": "$9.0M",
-      "slug": "nba-phi-bos-2026-05-02"
+      "change": 48.3,
+      "vol24": "$592K",
+      "slug": "will-the-bharatiya-janata-party-bjp-win-the-most-seats-in-the-2026-west-bengal-legislative-assembly-election"
     },
     {
-      "question": "Will Donald Trump announce that the United States blockade of the Strait of Hormuz has been lifted by May 31, 2026?",
-      "prob": 28,
-      "change": -13.0,
-      "vol24": "$241K",
-      "slug": "will-donald-trump-announce-that-the-united-states-blockade-of-the-strait-of-hormuz-has-been-lifted-by-may-31-2026-313-388-459-589"
+      "question": "Will the All India Trinamool Congress (AITC) win the most seats in the 2026 West Bengal Legislative Assembly election?",
+      "prob": 1,
+      "change": -47.9,
+      "vol24": "$485K",
+      "slug": "will-the-all-india-trinamool-congress-aitc-win-the-most-seats-in-the-2026-west-bengal-legislative-assembly-election"
     },
     {
-      "question": "LoL: KT Rolster vs HANJIN BRION - Game 1 Winner",
-      "prob": 87,
-      "change": 8.5,
-      "vol24": "$311K",
-      "slug": "lol-kt-bro2-2026-05-03-game1"
-    },
-    {
-      "question": "US x Iran permanent peace deal by May 31, 2026?",
-      "prob": 18,
-      "change": -5.0,
-      "vol24": "$298K",
-      "slug": "us-x-iran-permanent-peace-deal-by-may-31-2026-333-871"
+      "question": "LoL: Kiwoom DRX vs DN SOOPers - Game 1 Winner",
+      "prob": 99,
+      "change": 42.4,
+      "vol24": "$416K",
+      "slug": "lol-drx-dnf-2026-05-04-game1"
     }
   ],
   "top_vol": [
     {
       "question": "QatarEnergy announces/resumes LNG production in Qatar by April 30?",
       "prob": 99,
-      "change": 0.4,
-      "vol24": "$10.0M",
+      "change": 0.2,
+      "vol24": "$11.1M",
       "slug": "qatarenergy-announcesresumes-lng-production-in-qatar-by-april-30"
-    },
-    {
-      "question": "76ers vs. Celtics",
-      "prob": 99,
-      "change": 70.5,
-      "vol24": "$9.0M",
-      "slug": "nba-phi-bos-2026-05-02"
     },
     {
       "question": "Will Bitcoin hit $150k by June 30, 2026?",
@@ -60,6 +53,13 @@
       "change": 0,
       "vol24": "$5.8M",
       "slug": "will-bitcoin-hit-150k-by-june-30-2026"
+    },
+    {
+      "question": "Will Eric Trump win the 2028 US Presidential Election?",
+      "prob": 1,
+      "change": -0.1,
+      "vol24": "$2.0M",
+      "slug": "will-eric-trump-win-the-2028-us-presidential-election"
     }
   ]
 }
