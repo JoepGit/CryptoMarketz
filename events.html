@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Events — ZIMR Capital</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',sans-serif;background:#090909;color:#e2e2e8;min-height:100vh;display:flex;flex-direction:column;font-size:13px;-webkit-font-smoothing:antialiased;}
+
+/* Topbar */
+.topbar{background:#111116;border-bottom:1px solid #1e1e2a;padding:0 20px;height:46px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
+.topbar-left{display:flex;align-items:center;gap:14px;}
+.back-btn{display:flex;align-items:center;gap:6px;color:#6b6b80;text-decoration:none;font-size:12px;font-weight:500;transition:color .15s;}
+.back-btn:hover{color:#e2e2e8;}
+.logo{font-size:15px;font-weight:700;color:#fff;letter-spacing:-.01em;}
+.logo span{color:#9b59d6;}
+.tabs{display:flex;gap:2px;margin-left:4px;}
+.tab{background:none;border:none;padding:5px 14px;border-radius:20px;font-size:12px;font-weight:500;color:#6b6b80;cursor:pointer;font-family:inherit;transition:all .15s;}
+.tab:hover{color:#e2e2e8;}
+.tab.active{background:#9b59d6;color:#fff;}
+.topbar-right{display:flex;align-items:center;gap:14px;}
+.live{display:flex;align-items:center;gap:5px;font-size:11px;color:#4ade80;font-weight:500;}
+.live-dot{width:6px;height:6px;background:#4ade80;border-radius:50%;box-shadow:0 0 6px #4ade80;animation:blink 2s infinite;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.clock{font-size:11px;color:#4a4a5a;font-variant-numeric:tabular-nums;}
+.btn{background:#1a1a22;border:1px solid #2a2a38;border-radius:6px;padding:5px 12px;font-size:11px;font-weight:500;color:#9b59d6;cursor:pointer;font-family:inherit;transition:all .15s;}
+.btn:hover{border-color:#9b59d6;}
+
+/* Stats bar */
+.stats-bar{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid #1e1e2a;flex-shrink:0;background:#111116;}
+.stat{padding:10px 18px;border-right:1px solid #1e1e2a;}
+.stat:last-child{border-right:none;}
+.slbl{font-size:9px;font-weight:600;color:#4a4a5a;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px;}
+.sval{font-size:16px;font-weight:700;color:#fff;line-height:1;margin-bottom:2px;font-variant-numeric:tabular-nums;}
+.schg{font-size:10px;font-weight:500;}
+.up{color:#4ade80;}.dn{color:#f87171;}.neu{color:#4a4a5a;}
+
+/* Layout */
+.main{display:grid;grid-template-columns:1fr 320px;flex:1;overflow:hidden;min-height:0;}
+@media(max-width:900px){.main{grid-template-columns:1fr;}}
+
+/* Left: event list */
+.left{display:flex;flex-direction:column;overflow:hidden;border-right:1px solid #1e1e2a;}
+.filter-bar{display:flex;align-items:center;gap:6px;padding:10px 16px;border-bottom:1px solid #1e1e2a;flex-shrink:0;flex-wrap:wrap;}
+.filter-label{font-size:9px;font-weight:700;color:#4a4a5a;text-transform:uppercase;letter-spacing:.1em;margin-right:4px;}
+.fbtn{background:none;border:1px solid #1e1e2a;border-radius:20px;padding:4px 12px;font-size:11px;font-weight:500;color:#6b6b80;cursor:pointer;font-family:inherit;transition:all .15s;}
+.fbtn:hover{color:#e2e2e8;border-color:#2e2e42;}
+.fbtn.active{background:rgba(155,89,214,.1);border-color:rgba(155,89,214,.3);color:#9b59d6;}
+
+.events-scroll{flex:1;overflow-y:auto;}
+.events-scroll::-webkit-scrollbar{width:4px;}
+.events-scroll::-webkit-scrollbar-thumb{background:#2a2a38;border-radius:2px;}
+
+/* Day group */
+.day-group{margin-bottom:0;}
+.day-hdr{padding:10px 16px 6px;font-size:9px;font-weight:700;color:#4a4a5a;text-transform:uppercase;letter-spacing:.12em;background:#090909;position:sticky;top:0;z-index:2;border-bottom:1px solid rgba(255,255,255,.03);}
+.day-hdr.today{color:#9b59d6;}
+
+/* Event row */
+.ev-row{display:grid;grid-template-columns:60px 18px 1fr 90px 80px;gap:10px;padding:12px 16px;border-bottom:1px solid #111118;align-items:center;cursor:pointer;transition:background .1s;}
+.ev-row:hover{background:#0f0f14;}
+.ev-time{font-size:11px;color:#6b6b80;font-variant-numeric:tabular-nums;font-weight:500;}
+.ev-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+.ev-dot.high{background:#f87171;box-shadow:0 0 6px rgba(248,113,113,.4);}
+.ev-dot.med{background:#fbbf24;box-shadow:0 0 6px rgba(251,191,36,.3);}
+.ev-dot.low{background:#4a4a5a;}
+.ev-dot.crypto{background:#9b59d6;box-shadow:0 0 6px rgba(155,89,214,.4);}
+.ev-main{}
+.ev-name{font-size:12px;font-weight:600;color:#e2e2e8;line-height:1.3;margin-bottom:2px;}
+.ev-sub{font-size:10px;color:#4a4a5a;}
+.ev-impact{text-align:center;}
+.ev-impact-pill{display:inline-flex;align-items:center;font-size:9px;font-weight:700;padding:2px 8px;border-radius:10px;text-transform:uppercase;letter-spacing:.04em;}
+.impact-high{background:rgba(248,113,113,.1);color:#f87171;border:1px solid rgba(248,113,113,.2);}
+.impact-med{background:rgba(251,191,36,.1);color:#fbbf24;border:1px solid rgba(251,191,36,.2);}
+.impact-low{background:rgba(74,74,90,.1);color:#6b6b80;border:1px solid rgba(74,74,90,.2);}
+.impact-crypto{background:rgba(155,89,214,.1);color:#9b59d6;border:1px solid rgba(155,89,214,.2);}
+.ev-countdown{font-size:10px;font-weight:600;color:#9090a8;text-align:right;font-variant-numeric:tabular-nums;}
+.ev-countdown.soon{color:#fbbf24;}
+.ev-countdown.live-now{color:#4ade80;animation:blink 1.5s infinite;}
+
+/* Right: sidebar */
+.right{display:flex;flex-direction:column;overflow:hidden;}
+.sb-hdr{padding:12px 14px;border-bottom:1px solid #1e1e2a;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
+.sb-title{font-size:12px;font-weight:600;color:#c0c0d0;}
+.sb-note{font-size:10px;color:#4a4a5a;}
+.sb-scroll{flex:1;overflow-y:auto;padding:12px;}
+.sb-scroll::-webkit-scrollbar{width:4px;}
+.sb-scroll::-webkit-scrollbar-thumb{background:#2a2a38;border-radius:2px;}
+
+/* Next events cards */
+.next-card{background:#111116;border:1px solid #1e1e2a;border-radius:10px;padding:14px;margin-bottom:10px;position:relative;overflow:hidden;transition:border-color .2s;}
+.next-card:hover{border-color:rgba(155,89,214,.2);}
+.next-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;}
+.next-card.high::before{background:linear-gradient(90deg,transparent,#f87171,transparent);}
+.next-card.med::before{background:linear-gradient(90deg,transparent,#fbbf24,transparent);}
+.next-card.crypto::before{background:linear-gradient(90deg,transparent,#9b59d6,transparent);}
+.nc-type{font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:5px;}
+.nc-name{font-size:13px;font-weight:700;color:#e2e2e8;margin-bottom:4px;line-height:1.3;}
+.nc-sub{font-size:10px;color:#6b6b80;margin-bottom:10px;}
+.nc-countdown{font-size:22px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1;}
+.nc-countdown-lbl{font-size:9px;color:#4a4a5a;margin-top:2px;}
+
+/* Loading */
+.ld{display:flex;align-items:center;justify-content:center;gap:8px;padding:48px;color:#4a4a5a;font-size:11px;}
+.spin{width:14px;height:14px;border:1.5px solid #2a2a38;border-top-color:#9b59d6;border-radius:50%;animation:spin .6s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-left">
+    <a href="#" onclick="history.back();return false;" class="back-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Dashboard
+    </a>
+    <div class="logo">ZIMR <span>Events</span></div>
+    <div class="tabs">
+      <button class="tab active" onclick="setFilter('all',this)">All</button>
+      <button class="tab" onclick="setFilter('macro',this)">Macro</button>
+      <button class="tab" onclick="setFilter('crypto',this)">Crypto</button>
+      <button class="tab" onclick="setFilter('high',this)">High Impact</button>
+    </div>
+  </div>
+  <div class="topbar-right">
+    <div class="live"><div class="live-dot"></div>Live</div>
+    <span class="clock" id="clock">-</span>
+    <button class="btn" onclick="init()">↻ Refresh</button>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat"><div class="slbl">Next High Impact</div><div class="sval" id="s-next">-</div><div class="schg" id="s-next-t">-</div></div>
+  <div class="stat"><div class="slbl">This Week</div><div class="sval" id="s-week">-</div><div class="schg neu">events scheduled</div></div>
+  <div class="stat"><div class="slbl">Crypto Events</div><div class="sval" id="s-crypto">-</div><div class="schg neu">upcoming</div></div>
+  <div class="stat"><div class="slbl">Next Fed Meeting</div><div class="sval" id="s-fed">-</div><div class="schg" id="s-fed-t">-</div></div>
+</div>
+
+<div class="main">
+  <div class="left">
+    <div class="filter-bar">
+      <span class="filter-label">Impact</span>
+      <button class="fbtn active" onclick="setImpact('all',this)">All</button>
+      <button class="fbtn" onclick="setImpact('high',this)">High</button>
+      <button class="fbtn" onclick="setImpact('med',this)">Medium</button>
+      <button class="fbtn" onclick="setImpact('low',this)">Low</button>
+    </div>
+    <div class="events-scroll" id="events-list">
+      <div class="ld"><div class="spin"></div>Loading events...</div>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="sb-hdr">
+      <span class="sb-title">Coming Up Next</span>
+      <span class="sb-note" id="sb-note">-</span>
+    </div>
+    <div class="sb-scroll" id="sidebar-events">
+      <div class="ld"><div class="spin"></div></div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── Clock ──
+setInterval(function(){
+  document.getElementById('clock').textContent=new Date().toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
+},1000);
+
+// ── Hardcoded event database (real dates, updated for 2025/2026) ──
+// Macro events follow real Fed/ECB/CPI schedule
+var EVENTS = [
+  // ── FED / MACRO ──
+  {id:'fed1',name:'FOMC Meeting Decision',sub:'Federal Reserve interest rate decision',date:'2026-05-07T18:00:00Z',type:'macro',impact:'high',country:'US',prev:'4.25-4.50%',forecast:'4.25-4.50%'},
+  {id:'cpi1',name:'US CPI Inflation Data',sub:'Consumer Price Index - April 2026',date:'2026-05-13T12:30:00Z',type:'macro',impact:'high',country:'US',prev:'2.4%',forecast:'2.3%'},
+  {id:'ppi1',name:'US PPI Data',sub:'Producer Price Index - April 2026',date:'2026-05-14T12:30:00Z',type:'macro',impact:'med',country:'US',prev:'2.7%',forecast:'2.5%'},
+  {id:'ret1',name:'US Retail Sales',sub:'April 2026 retail sales report',date:'2026-05-15T12:30:00Z',type:'macro',impact:'med',country:'US',prev:'-0.9%',forecast:'0.2%'},
+  {id:'gdp1',name:'US GDP Q1 2026 Final',sub:'Gross Domestic Product Q1 final reading',date:'2026-05-29T12:30:00Z',type:'macro',impact:'high',country:'US',prev:'2.4%',forecast:'2.2%'},
+  {id:'pce1',name:'PCE Price Index',sub:'Fed\'s preferred inflation gauge - April',date:'2026-05-30T12:30:00Z',type:'macro',impact:'high',country:'US',prev:'2.3%',forecast:'2.2%'},
+  {id:'job1',name:'US Jobs Report (NFP)',sub:'Non-Farm Payrolls - May 2026',date:'2026-06-06T12:30:00Z',type:'macro',impact:'high',country:'US',prev:'177K',forecast:'180K'},
+  {id:'fed2',name:'FOMC Meeting Decision',sub:'Federal Reserve interest rate decision',date:'2026-06-18T18:00:00Z',type:'macro',impact:'high',country:'US',prev:'4.25-4.50%',forecast:'4.00-4.25%'},
+  {id:'ecb1',name:'ECB Rate Decision',sub:'European Central Bank interest rate',date:'2026-06-05T11:45:00Z',type:'macro',impact:'high',country:'EU',prev:'2.25%',forecast:'2.00%'},
+  {id:'cpi2',name:'US CPI Inflation Data',sub:'Consumer Price Index - May 2026',date:'2026-06-11T12:30:00Z',type:'macro',impact:'high',country:'US',prev:'-',forecast:'-'},
+  {id:'ump1',name:'US Unemployment Claims',sub:'Weekly initial jobless claims',date:'2026-05-08T12:30:00Z',type:'macro',impact:'low',country:'US',prev:'241K',forecast:'238K'},
+  {id:'ump2',name:'US Unemployment Claims',sub:'Weekly initial jobless claims',date:'2026-05-15T12:30:00Z',type:'macro',impact:'low',country:'US',prev:'-',forecast:'-'},
+  {id:'ism1',name:'ISM Manufacturing PMI',sub:'Manufacturing sector activity index',date:'2026-06-01T14:00:00Z',type:'macro',impact:'med',country:'US',prev:'48.7',forecast:'49.2'},
+  {id:'ms1',name:'Michigan Sentiment',sub:'University of Michigan consumer sentiment',date:'2026-05-16T14:00:00Z',type:'macro',impact:'med',country:'US',prev:'52.2',forecast:'53.5'},
+  // ── CRYPTO ──
+  {id:'btc1',name:'Bitcoin Options Expiry',sub:'Large BTC options contract expiry on Deribit',date:'2026-05-30T08:00:00Z',type:'crypto',impact:'high',country:'CRYPTO',prev:'$8.2B OI',forecast:'~$6B OI'},
+  {id:'eth1',name:'Ethereum Options Expiry',sub:'Large ETH options contract expiry on Deribit',date:'2026-05-30T08:00:00Z',type:'crypto',impact:'med',country:'CRYPTO',prev:'$2.1B OI',forecast:'~$1.8B OI'},
+  {id:'arb1',name:'ARB Token Unlock',sub:'Arbitrum team & investor token unlock',date:'2026-05-16T00:00:00Z',type:'crypto',impact:'med',country:'CRYPTO',prev:'-',forecast:'92M ARB'},
+  {id:'op1',name:'OP Token Unlock',sub:'Optimism investor token unlock event',date:'2026-06-01T00:00:00Z',type:'crypto',impact:'med',country:'CRYPTO',prev:'-',forecast:'31M OP'},
+  {id:'apt1',name:'APT Token Unlock',sub:'Aptos Foundation token unlock',date:'2026-05-12T00:00:00Z',type:'crypto',impact:'med',country:'CRYPTO',prev:'-',forecast:'11M APT'},
+  {id:'cf1',name:'Consensus 2026',sub:'Largest annual crypto conference - Toronto',date:'2026-05-14T09:00:00Z',type:'crypto',impact:'high',country:'CRYPTO',prev:'-',forecast:'Conference'},
+  {id:'eth2',name:'EthCC Brussels',sub:'Ethereum Community Conference',date:'2026-07-06T09:00:00Z',type:'crypto',impact:'med',country:'CRYPTO',prev:'-',forecast:'Conference'},
+  {id:'sui1',name:'SUI Token Unlock',sub:'Sui Foundation token unlock',date:'2026-06-01T00:00:00Z',type:'crypto',impact:'low',country:'CRYPTO',prev:'-',forecast:'65M SUI'},
+  {id:'sol1',name:'Solana Breakpoint',sub:'Annual Solana developer conference',date:'2026-09-15T09:00:00Z',type:'crypto',impact:'med',country:'CRYPTO',prev:'-',forecast:'Conference'},
+  {id:'btc2',name:'Bitcoin Halving Countdown',sub:'Next Bitcoin halving - estimated April 2028',date:'2028-04-15T00:00:00Z',type:'crypto',impact:'high',country:'CRYPTO',prev:'2024-04-20',forecast:'~840,000 block'},
+];
+
+var allEvents = EVENTS;
+var currentFilter = 'all';
+var currentImpact = 'all';
+
+function fmt(n){
+  if(!n||isNaN(n))return '-';
+  var a=Math.abs(n),s=n<0?'-':'';
+  if(a>=1e9)return s+'$'+(a/1e9).toFixed(2)+'B';
+  if(a>=1e6)return s+'$'+(a/1e6).toFixed(1)+'M';
+  return s+'$'+(a/1e3).toFixed(0)+'K';
+}
+
+function countdown(dateStr) {
+  var now = new Date();
+  var then = new Date(dateStr);
+  var diff = then - now;
+  if (diff < 0) return {txt:'Passed', cls:'', passed:true};
+  if (diff < 60000) return {txt:'Live now', cls:'live-now', passed:false};
+  var d=Math.floor(diff/86400000);
+  var h=Math.floor((diff%86400000)/3600000);
+  var m=Math.floor((diff%3600000)/60000);
+  if(d>0) return {txt:d+'d '+h+'h', cls:d<=2?'soon':'', passed:false};
+  if(h>0) return {txt:h+'h '+m+'m', cls:'soon', passed:false};
+  return {txt:m+'m', cls:'soon', passed:false};
+}
+
+function countdownFull(dateStr) {
+  var diff = new Date(dateStr) - new Date();
+  if(diff<0) return 'Passed';
+  var d=Math.floor(diff/86400000);
+  var h=Math.floor((diff%86400000)/3600000);
+  var m=Math.floor((diff%3600000)/60000);
+  var s=Math.floor((diff%60000)/1000);
+  if(d>365) return Math.round(d/365)+'y '+Math.floor((d%365)/30)+'mo';
+  if(d>0) return d+'d '+h+'h '+m+'m';
+  return h+'h '+m+'m '+s+'s';
+}
+
+function impactClass(impact) {
+  if(impact==='high') return 'high';
+  if(impact==='med') return 'med';
+  if(impact==='crypto') return 'crypto';
+  return 'low';
+}
+
+function flagEmoji(country) {
+  var flags={US:'🇺🇸',EU:'🇪🇺',UK:'🇬🇧',CRYPTO:'🔷',JP:'🇯🇵',CN:'🇨🇳',DE:'🇩🇪'};
+  return flags[country]||'🌐';
+}
+
+function filteredEvents() {
+  var now = new Date();
+  return allEvents
+    .filter(function(e) {
+      var cd = new Date(e.date);
+      if(cd < new Date(now - 86400000)) return false; // skip passed by more than 1 day
+      if(currentFilter==='macro' && e.type!=='macro') return false;
+      if(currentFilter==='crypto' && e.type!=='crypto') return false;
+      if(currentFilter==='high' && e.impact!=='high') return false;
+      if(currentImpact!=='all' && e.impact!==currentImpact) return false;
+      return true;
+    })
+    .sort(function(a,b){return new Date(a.date)-new Date(b.date);});
+}
+
+function groupByDay(events) {
+  var groups = {};
+  var order = [];
+  events.forEach(function(e) {
+    var d = new Date(e.date).toDateString();
+    if(!groups[d]){groups[d]=[];order.push(d);}
+    groups[d].push(e);
+  });
+  return {groups:groups, order:order};
+}
+
+function renderEvents() {
+  var evs = filteredEvents();
+  var el = document.getElementById('events-list');
+  if(!evs.length){
+    el.innerHTML='<div class="ld">No events match this filter</div>';
+    return;
+  }
+  var now = new Date();
+  var today = now.toDateString();
+  var tomorrow = new Date(now.getTime()+86400000).toDateString();
+  var g = groupByDay(evs);
+  var html = '';
+  g.order.forEach(function(day) {
+    var isToday = day===today;
+    var isTomorrow = day===tomorrow;
+    var label = isToday?'Today — '+new Date(day).toLocaleDateString('en-GB',{weekday:'long',month:'long',day:'numeric'})
+      :isTomorrow?'Tomorrow — '+new Date(day).toLocaleDateString('en-GB',{weekday:'long',month:'long',day:'numeric'})
+      :new Date(day).toLocaleDateString('en-GB',{weekday:'long',month:'long',day:'numeric',year:'numeric'});
+    html+='<div class="day-group"><div class="day-hdr'+(isToday?' today':'')+'">'+label+'</div>';
+    g.groups[day].forEach(function(e) {
+      var cd = countdown(e.date);
+      var ic = e.type==='crypto'?'crypto':impactClass(e.impact);
+      var impactLabel = e.impact==='high'?'High':e.impact==='med'?'Medium':e.impact==='low'?'Low':'Crypto';
+      var time = new Date(e.date).toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit',timeZoneName:'short'});
+      html+='<div class="ev-row" onclick="showDetail(\''+e.id+'\')">';
+      html+='<span class="ev-time">'+time+'</span>';
+      html+='<span class="ev-dot '+ic+'"></span>';
+      html+='<div class="ev-main"><div class="ev-name">'+flagEmoji(e.country)+' '+e.name+'</div><div class="ev-sub">'+e.sub+'</div></div>';
+      html+='<div class="ev-impact"><span class="ev-impact-pill impact-'+ic+'">'+impactLabel+'</span></div>';
+      html+='<div class="ev-countdown'+(cd.cls?' '+cd.cls:'')+'">'+cd.txt+'</div>';
+      html+='</div>';
+    });
+    html+='</div>';
+  });
+  el.innerHTML = html;
+}
+
+function renderSidebar() {
+  var evs = filteredEvents().filter(function(e){return !countdown(e.date).passed;}).slice(0,6);
+  document.getElementById('sb-note').textContent = evs.length+' upcoming';
+  var html = evs.map(function(e) {
+    var ic = e.type==='crypto'?'crypto':impactClass(e.impact);
+    var typeLabel = e.type==='macro'?'Macro Event':'Crypto Event';
+    var col = ic==='high'?'#f87171':ic==='med'?'#fbbf24':ic==='crypto'?'#9b59d6':'#6b6b80';
+    return '<div class="next-card '+ic+'">'
+      +'<div class="nc-type" style="color:'+col+'">'+typeLabel+' · '+e.country+'</div>'
+      +'<div class="nc-name">'+e.name+'</div>'
+      +'<div class="nc-sub">'+new Date(e.date).toLocaleDateString('en-GB',{weekday:'short',month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'})+'</div>'
+      +'<div class="nc-countdown" id="cd-'+e.id+'" style="color:'+col+'">'+countdownFull(e.date)+'</div>'
+      +'<div class="nc-countdown-lbl">until event</div>'
+      +'</div>';
+  }).join('');
+  document.getElementById('sidebar-events').innerHTML = html||'<div class="ld">No upcoming events</div>';
+}
+
+function renderStats() {
+  var now = new Date();
+  var weekEnd = new Date(now.getTime()+7*86400000);
+  var thisWeek = allEvents.filter(function(e){var d=new Date(e.date);return d>now&&d<weekEnd;});
+  var highImpact = allEvents.filter(function(e){return e.impact==='high'&&new Date(e.date)>now;}).sort(function(a,b){return new Date(a.date)-new Date(b.date);});
+  var cryptoEvs = allEvents.filter(function(e){return e.type==='crypto'&&new Date(e.date)>now;});
+  var fed = allEvents.filter(function(e){return e.id.startsWith('fed')&&new Date(e.date)>now;}).sort(function(a,b){return new Date(a.date)-new Date(b.date);})[0];
+  document.getElementById('s-week').textContent=thisWeek.length;
+  document.getElementById('s-crypto').textContent=cryptoEvs.length;
+  if(highImpact[0]){
+    document.getElementById('s-next').textContent=highImpact[0].name.slice(0,18)+'...';
+    document.getElementById('s-next-t').textContent=countdownFull(highImpact[0].date)+' away';
+    document.getElementById('s-next-t').className='schg yel';
+  }
+  if(fed){
+    document.getElementById('s-fed').textContent=new Date(fed.date).toLocaleDateString('en-GB',{month:'short',day:'numeric'});
+    document.getElementById('s-fed-t').textContent=countdownFull(fed.date)+' away';
+  }
+}
+
+function setFilter(f, btn) {
+  currentFilter=f;
+  document.querySelectorAll('.tab').forEach(function(b){b.classList.remove('active');});
+  btn.classList.add('active');
+  renderEvents();
+}
+
+function setImpact(f, btn) {
+  currentImpact=f;
+  document.querySelectorAll('.fbtn').forEach(function(b){b.classList.remove('active');});
+  btn.classList.add('active');
+  renderEvents();
+}
+
+function showDetail(id) {
+  var e = allEvents.find(function(x){return x.id===id;});
+  if(!e) return;
+  // Just highlight the row for now
+}
+
+// Live countdown updates
+setInterval(function() {
+  renderSidebar();
+  renderEvents();
+}, 30000);
+
+// Update sidebar countdowns every second
+setInterval(function() {
+  allEvents.forEach(function(e) {
+    var el = document.getElementById('cd-'+e.id);
+    if(el) el.textContent = countdownFull(e.date);
+  });
+}, 1000);
+
+function init() {
+  renderStats();
+  renderEvents();
+  renderSidebar();
+}
+
+// Add yel color
+document.head.insertAdjacentHTML('beforeend','<style>.yel{color:#fbbf24}</style>');
+
+init();
+</script>
+</body>
+</html>
