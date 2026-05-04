@@ -802,80 +802,79 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;background:ra
 /* ══ DASHBOARD NEW LAYOUT ══════════════════════════════ */
 .dash-new-layout{display:grid;grid-template-columns:1fr 300px;gap:20px;padding:24px 40px 60px;align-items:start}
 
-/* ── DASHBOARD V3 ── */
-.dh-v3{padding:0 0 60px;}
-
-/* Topbar */
-.dh-topbar{display:flex;align-items:flex-end;justify-content:space-between;padding:32px 40px 20px;gap:20px;}
-.dh-greet-sub{display:flex;align-items:center;gap:5px;font-size:11px;color:#6b6b80;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px;}
-.dh-greet-main{font-size:42px;font-weight:700;letter-spacing:-.02em;line-height:1;color:#e8e0d8;margin-bottom:6px;}
-.dh-greet-main span{color:#9b59d6;}
-.dh-greet-date{font-size:13px;color:#4a4a5a;}
-.dh-clock-big{text-align:right;}
-.dh-clock-time{font-size:36px;font-weight:700;font-variant-numeric:tabular-nums;color:#e8e0d8;letter-spacing:-.01em;line-height:1;}
-.dh-clock-day{font-size:12px;color:#4a4a5a;margin-top:4px;text-align:right;}
-
-/* Stats strip */
-.dh-stats-strip{display:flex;align-items:center;padding:14px 40px;background:#0d0d11;border-top:1px solid rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.04);gap:0;overflow-x:auto;}
-.dh-stat{display:flex;flex-direction:column;gap:2px;padding:0 24px;flex-shrink:0;}
-.dh-stat-label{font-size:9px;font-weight:700;color:#4a4a5a;letter-spacing:.1em;text-transform:uppercase;}
-.dh-stat-val{font-size:16px;font-weight:700;color:#e8e0d8;font-variant-numeric:tabular-nums;line-height:1.2;}
-.dh-stat-chg{font-size:11px;font-weight:500;font-variant-numeric:tabular-nums;}
-.dh-stat-div{width:1px;background:rgba(255,255,255,.06);height:36px;flex-shrink:0;}
-
-/* Main grid */
-.dh-main-grid{display:grid;grid-template-columns:1fr 200px 110px 280px;grid-template-rows:auto;gap:16px;padding:20px 40px 0;align-items:start;}
-@media(max-width:1200px){.dh-main-grid{grid-template-columns:1fr 280px;grid-template-rows:auto auto;}.dh-weather-card{grid-column:2;grid-row:1;}.dh-date-card{display:none;}.dh-notif-col{grid-column:2;grid-row:2;}}
-@media(max-width:900px){.dh-main-grid{grid-template-columns:1fr;}.dh-weather-card,.dh-date-card,.dh-notif-col{grid-column:1;}.dh-topbar{padding:20px 20px 16px;}.dh-stats-strip{padding:12px 20px;}.dh-main-grid{padding:16px 20px 0;}.dh-greet-main{font-size:28px;}.dh-clock-time{font-size:24px;}}
-
-.dh-map-col{grid-column:1;grid-row:1/3;}
-
-/* Weather card */
-.dh-weather-card{background:#111214;border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:20px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;transition:border-color .2s;}
-.dh-weather-card:hover{border-color:rgba(155,89,214,.15);}
-.wc-city{font-size:13px;font-weight:600;color:#9b59d6;letter-spacing:.04em;text-transform:uppercase;}
-.wc-desc{font-size:11px;color:#6b6b80;text-transform:capitalize;}
-.wc-temp{font-size:48px;font-weight:700;color:#e8e0d8;line-height:1;margin:4px 0;}
-.wc-icon{margin:4px 0;}
-.wc-forecast{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;justify-content:center;}
-.wc-day{display:flex;flex-direction:column;align-items:center;gap:2px;background:rgba(255,255,255,.03);border-radius:8px;padding:6px 8px;min-width:36px;}
-.wc-day-name{font-size:8px;color:#4a4a5a;text-transform:uppercase;font-weight:600;}
-.wc-day-temp{font-size:11px;font-weight:600;color:#9090a8;}
-
-/* Date card */
-.dh-date-card{background:#9b59d6;border-radius:16px;padding:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:0;min-height:140px;}
-.dc-day{font-size:13px;font-weight:700;color:rgba(255,255,255,.7);letter-spacing:.12em;text-transform:uppercase;}
-.dc-num{font-size:56px;font-weight:800;color:#fff;line-height:1;letter-spacing:-.02em;}
-.dc-month{font-size:13px;font-weight:700;color:rgba(255,255,255,.7);letter-spacing:.12em;text-transform:uppercase;}
-
-/* Notifications column */
-.dh-notif-col{display:flex;flex-direction:column;gap:12px;}
-.dh-notif-hdr{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:#9090a8;letter-spacing:.04em;text-transform:uppercase;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06);}
-.dh-notif-count{background:rgba(155,89,214,.15);color:#9b59d6;border-radius:10px;padding:1px 7px;font-size:10px;font-weight:700;margin-left:auto;}
-.dh-notif-list{display:flex;flex-direction:column;gap:0;background:#111214;border:1px solid rgba(255,255,255,.06);border-radius:14px;overflow:hidden;}
-.dh-notif-item{display:flex;align-items:flex-start;gap:10px;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,.04);transition:background .15s;cursor:pointer;}
-.dh-notif-item:last-child{border-bottom:none;}
-.dh-notif-item:hover{background:rgba(155,89,214,.04);}
-.dh-notif-icon{width:28px;height:28px;border-radius:8px;background:rgba(155,89,214,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#9b59d6;}
-.dh-notif-title{font-size:12px;font-weight:600;color:#e8e0d8;line-height:1.3;}
-.dh-notif-sub{font-size:10px;color:#4a4a5a;margin-top:2px;}
-.dh-notif-tag{font-size:9px;font-weight:700;color:#9b59d6;text-transform:uppercase;letter-spacing:.06em;margin-bottom:2px;}
-
-/* AI Brief compact */
-.dh-brief-compact{background:#111214;border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:16px;cursor:pointer;transition:all .2s;position:relative;overflow:hidden;}
-.dh-brief-compact::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(155,89,214,.4),transparent);}
-.dh-brief-compact:hover{border-color:rgba(155,89,214,.2);}
-.dbc-kicker{font-size:9px;font-weight:700;color:#9b59d6;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;display:flex;align-items:center;justify-content:space-between;}
-.dbc-title{font-size:14px;font-weight:700;color:#e8e0d8;margin-bottom:8px;}
-.dbc-pills{display:flex;gap:6px;margin-bottom:10px;flex-wrap:wrap;}
-.dbc-copy{font-size:11px;color:#6b6b80;line-height:1.5;margin-bottom:10px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
-.dbc-cta{font-size:11px;font-weight:600;color:#9b59d6;}
-
+/* ── DASHBOARD V5 ── */
+.dh-screen{
+  display:grid;
+  grid-template-columns:1fr 260px;
+  height:calc(100vh - 35px);
+  overflow:hidden;
+}
+/* Left col */
+.dh-left-col{display:flex;flex-direction:column;padding:14px 14px 12px 24px;gap:8px;overflow:hidden;min-height:0;}
+/* Greeting row */
+.dh-greet-row{display:flex;align-items:flex-start;justify-content:space-between;flex-shrink:0;}
+.dh-loc-row{display:flex;align-items:center;gap:5px;font-size:9px;color:#9b59d6;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px;}
+.dh-greet-text{font-size:24px;font-weight:700;letter-spacing:-.02em;color:#e8e0d8;line-height:1;}
+.dh-greet-text span{color:#c084fc;}.dh-good{color:#2a2a3a!important;}
+.dh-greet-date{font-size:10px;color:#6b6b80;margin-top:2px;}
+.dh-clock-wrap{text-align:right;}
+.dh-clock{font-size:22px;font-weight:600;color:#c084fc;font-variant-numeric:tabular-nums;letter-spacing:-.01em;}
+.dh-clock-sub{font-size:10px;color:#4a4a5a;margin-top:2px;}
+/* Stats row */
+.dh-stats-row{display:flex;align-items:center;background:rgba(13,13,17,.9);border:1px solid rgba(255,255,255,.06);border-radius:8px;padding:7px 14px;flex-shrink:0;gap:0;overflow-x:auto;}
+.dh-si{display:flex;flex-direction:column;gap:1px;padding:0 12px;flex-shrink:0;}
+.dh-si:first-child{padding-left:4px;}
+.dh-sl{font-size:8px;font-weight:700;color:#4a4a5a;letter-spacing:.1em;text-transform:uppercase;}
+.dh-sv{font-size:13px;font-weight:700;color:#e8e0d8;font-variant-numeric:tabular-nums;line-height:1.2;}
+.dh-sc{font-size:10px;font-weight:500;font-variant-numeric:tabular-nums;}
+.dh-ss{width:1px;background:rgba(255,255,255,.06);height:26px;flex-shrink:0;}
+/* Map box */
+.dh-map-box{flex:1;min-height:0;overflow:hidden;}
+.dh-map-box .world-map-card{height:100%;}
+/* Right col */
+.dh-right-col{border-left:1px solid rgba(255,255,255,.05);display:grid;grid-template-rows:auto auto 1fr;gap:8px;padding:16px 14px;overflow:hidden;background:transparent;}
+/* Cards */
+.dh-card{background:rgba(17,18,22,.85);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:12px 14px;position:relative;overflow:hidden;transition:border-color .2s;}
+.dh-card:hover{border-color:rgba(155,89,214,.2);}
+.dh-glow{position:absolute;inset:0;background:radial-gradient(ellipse at top left,rgba(155,89,214,.07),transparent 65%);pointer-events:none;}
+/* Weather */
+.dh-card:first-child{text-align:center;display:flex;flex-direction:column;align-items:center;gap:3px;}
+.dhw-city{font-size:9px;font-weight:700;color:#9b59d6;text-transform:uppercase;letter-spacing:.06em;}
+.dhw-desc{font-size:9px;color:#6b6b80;text-transform:capitalize;}
+.dhw-temp{font-size:30px;font-weight:700;color:#e8e0d8;line-height:1;margin:3px 0;}
+.dhw-icon{margin:2px 0;}
+.dhw-fc{display:flex;gap:4px;margin-top:5px;justify-content:center;}
+.dhw-fcd{display:flex;flex-direction:column;align-items:center;gap:1px;background:rgba(255,255,255,.03);border-radius:5px;padding:3px 5px;}
+.dhw-fcn{font-size:7px;color:#4a4a5a;text-transform:uppercase;font-weight:600;}
+.dhw-fct{font-size:9px;font-weight:600;color:#9090a8;}
+/* Notifications */
+.dh-notif{overflow:hidden;}
+.dhn-hdr{display:flex;align-items:center;gap:6px;font-size:9px;font-weight:700;color:#9090a8;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;}
+.dhn-badge{background:rgba(155,89,214,.15);color:#9b59d6;border-radius:8px;padding:1px 6px;font-size:8px;font-weight:700;margin-left:auto;}
+.dhn-row{display:flex;align-items:flex-start;gap:7px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.03);}
+.dhn-row:last-child{border-bottom:none;}
+.dhn-ico{width:20px;height:20px;border-radius:5px;background:rgba(155,89,214,.1);color:#9b59d6;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.dhn-tag{font-size:8px;font-weight:700;color:#9b59d6;text-transform:uppercase;letter-spacing:.05em;margin-bottom:1px;}
+.dhn-txt{font-size:11px;font-weight:500;color:#e8e0d8;line-height:1.3;}
+.dhn-sub{font-size:9px;color:#4a4a5a;margin-top:1px;}
+/* AI Brief */
+.dh-brief{cursor:pointer;display:flex;flex-direction:column;overflow:hidden;}
+.dhb-top-line{position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(155,89,214,.5),transparent);}
+.dhb-kicker{font-size:8px;font-weight:700;color:#9b59d6;letter-spacing:.12em;text-transform:uppercase;margin-bottom:5px;display:flex;align-items:center;justify-content:space-between;}
+.dhb-title{font-size:12px;font-weight:700;color:#e8e0d8;margin-bottom:6px;line-height:1.3;}
+.dhb-pills{display:flex;gap:4px;margin-bottom:6px;flex-wrap:wrap;}
+.dhb-copy{font-size:10px;color:#6b6b80;line-height:1.5;margin-bottom:6px;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;}
+.dhb-cta{font-size:9px;font-weight:600;color:#9b59d6;margin-top:auto;}
+/* Date */
+.dh-date{display:flex!important;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:rgba(155,89,214,.1)!important;border-color:rgba(155,89,214,.2)!important;padding:8px!important;}
+.dhd-day{font-size:8px;font-weight:700;color:rgba(192,132,252,.6);letter-spacing:.14em;text-transform:uppercase;}
+.dhd-num{font-size:32px;font-weight:800;color:#c084fc;line-height:1;letter-spacing:-.02em;}
+.dhd-month{font-size:8px;font-weight:700;color:rgba(192,132,252,.6);letter-spacing:.14em;text-transform:uppercase;}
 /* Flash */
-@keyframes priceFlashUp{0%{color:#4ade80}100%{color:#e8e0d8}}
-@keyframes priceFlashDn{0%{color:#f87171}100%{color:#e8e0d8}}
-.flash-up{animation:priceFlashUp .8s ease forwards;}
-.flash-dn{animation:priceFlashDn .8s ease forwards;}
+@keyframes priceUp{0%{color:#4ade80}100%{color:#e8e0d8}}
+@keyframes priceDn{0%{color:#f87171}100%{color:#e8e0d8}}
+.flash-up{animation:priceUp .8s ease forwards;}
+.flash-dn{animation:priceDn .8s ease forwards;}
 
 @media(max-width:1100px){.dash-new-layout{grid-template-columns:1fr;padding:20px}}
 
@@ -2947,12 +2946,17 @@ a:focus-visible,button:focus-visible,input:focus-visible{
         <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Education<span class="sb-lk" id="lk-education">🔒</span></a></li>
       <li><a onclick="goPage('analysis',this)">
         <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Analysis<span class="sb-lk" id="lk-an">🔒</span></a></li>
+      <li><a href="thursday.html" style="display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;font-size:12.5px;font-weight:500;color:#e8e0d8;text-decoration:none;border:1px solid transparent;transition:all .15s;margin-bottom:2px;" onmouseenter="this.style.background='rgba(155,89,214,.1)';this.style.borderColor='rgba(155,89,214,.2)'" onmouseleave="this.style.background='';this.style.borderColor='transparent'">
+        <svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;opacity:.8"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Thursday Update <span style="font-family:'Inter',sans-serif;font-size:7px;background:rgba(155,89,214,.15);color:#9b59d6;border:1px solid rgba(155,89,214,.3);padding:1px 5px;border-radius:2px;margin-left:2px;font-weight:700;letter-spacing:.05em">WEEKLY</span></a></li>
+
       <li><a onclick="goPage('books',this)">
         <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Books<span class="sb-lk" id="lk-books">🔒</span></a></li>
     </ul>
     <div class="sb-sec">Tools</div>
     <ul class="sbn">
 
+      <li><a href="events.html" style="display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;font-size:12.5px;font-weight:500;color:#e8e0d8;text-decoration:none;border:1px solid transparent;transition:all .15s;margin-bottom:2px;" onmouseenter="this.style.background='rgba(155,89,214,.1)';this.style.borderColor='rgba(155,89,214,.2)'" onmouseleave="this.style.background='';this.style.borderColor='transparent'">
+        <svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;opacity:.65"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Events</a></li>
       <li><a href="defi-flows.html" style="display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;font-size:12.5px;font-weight:500;color:#e8e0d8;text-decoration:none;border:1px solid transparent;transition:all .15s;margin-bottom:2px;" onmouseenter="this.style.background='rgba(155,89,214,.1)';this.style.borderColor='rgba(155,89,214,.2)'" onmouseleave="this.style.background='';this.style.borderColor='transparent'">
         <svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;opacity:.65"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>DeFi Flows</a></li>
       <li><a href="polymarket.html" style="display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;font-size:12.5px;font-weight:500;color:#e8e0d8;text-decoration:none;border:1px solid transparent;transition:all .15s;margin-bottom:2px;" onmouseenter="this.style.background='rgba(155,89,214,.1)';this.style.borderColor='rgba(155,89,214,.2)'" onmouseleave="this.style.background='';this.style.borderColor='transparent'">
@@ -3007,139 +3011,100 @@ a:focus-visible,button:focus-visible,input:focus-visible{
         </div>
       </div>
 
-      <div class="dashboard-hero">
+      <div class="dh-screen">
 
-        <!-- NEW LAYOUT: Innovation Markets style -->
-        <div class="dh-v3">
+        <!-- LEFT COLUMN -->
+        <div class="dh-left-col">
 
-          <!-- TOP: Greeting + Ticker stats -->
-          <div class="dh-topbar">
-            <div class="dh-greeting">
-              <div class="dh-greet-sub" id="dh-location">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="12" height="12"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <!-- Greeting -->
+          <div class="dh-greet-row">
+            <div>
+              <div class="dh-loc-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="10" height="10"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 <span id="dh-city">Locating...</span>
               </div>
-              <h1 class="dh-greet-main">Good <span id="g-pt">Day</span>, <span id="g-nm">Joep</span>.</h1>
+              <div class="dh-greet-text"><span class="dh-good">Good</span> <span id="g-pt">Day</span>, <span id="g-nm">Joep</span>.</div>
               <div class="dh-greet-date" id="g-dt"></div>
             </div>
-            <div class="dh-clock-big">
-              <div class="dh-clock-time" id="clock"></div>
-              <div class="dh-clock-day" id="clock-d"></div>
+            <div class="dh-clock-wrap">
+              <div class="dh-clock" id="clock"></div>
+              <div class="dh-clock-sub" id="clock-d"></div>
             </div>
           </div>
 
-          <!-- STATS ROW -->
-          <div class="dh-stats-strip">
-            <div class="dh-stat">
-              <div class="dh-stat-label">BTC</div>
-              <div class="dh-stat-val" id="mst-btc-price">-</div>
-              <div class="dh-stat-chg" id="mst-btc-chg">-</div>
-            </div>
-            <div class="dh-stat-div"></div>
-            <div class="dh-stat">
-              <div class="dh-stat-label">ETH</div>
-              <div class="dh-stat-val" id="mst-eth-price">-</div>
-              <div class="dh-stat-chg" id="mst-eth-chg">-</div>
-            </div>
-            <div class="dh-stat-div"></div>
-            <div class="dh-stat">
-              <div class="dh-stat-label">MARKET CAP</div>
-              <div class="dh-stat-val" id="mst-mcap">-</div>
-              <div class="dh-stat-chg" id="mst-mcap-chg">-</div>
-            </div>
-            <div class="dh-stat-div"></div>
-            <div class="dh-stat">
-              <div class="dh-stat-label">BTC DOM</div>
-              <div class="dh-stat-val" id="mst-btc-dom">-</div>
-              <div class="dh-stat-chg" id="mst-dom-chg">-</div>
-            </div>
-            <div class="dh-stat-div"></div>
-            <div class="dh-stat">
-              <div class="dh-stat-label">FEAR & GREED</div>
-              <div class="dh-stat-val" id="mst-fng">-</div>
-              <div class="dh-stat-chg" id="mst-fng-lbl">-</div>
-            </div>
-            <div class="dh-stat-div"></div>
-            <div class="dh-stat">
-              <div class="dh-stat-label">SESSION</div>
-              <div class="dh-stat-val" id="wm-session-badge" style="font-size:13px;">-</div>
-              <div class="dh-stat-chg"><span class="wm-live-badge" style="font-size:9px;">LIVE</span></div>
+          <!-- Stats strip ABOVE map -->
+          <div class="dh-stats-row">
+            <div class="dh-si"><div class="dh-sl">BTC</div><div class="dh-sv" id="mst-btc-price">-</div><div class="dh-sc" id="mst-btc-chg">-</div></div>
+            <div class="dh-ss"></div>
+            <div class="dh-si"><div class="dh-sl">ETH</div><div class="dh-sv" id="mst-eth-price">-</div><div class="dh-sc" id="mst-eth-chg">-</div></div>
+            <div class="dh-ss"></div>
+            <div class="dh-si"><div class="dh-sl">Market Cap</div><div class="dh-sv" id="mst-mcap">-</div><div class="dh-sc" id="mst-mcap-chg">-</div></div>
+            <div class="dh-ss"></div>
+            <div class="dh-si"><div class="dh-sl">BTC Dom</div><div class="dh-sv" id="mst-btc-dom">-</div><div class="dh-sc" id="mst-dom-chg">-</div></div>
+            <div class="dh-ss"></div>
+            <div class="dh-si"><div class="dh-sl">Fear & Greed</div><div class="dh-sv" id="mst-fng">-</div><div class="dh-sc" id="mst-fng-lbl">-</div></div>
+            <div class="dh-ss"></div>
+            <div class="dh-si"><div class="dh-sl">Session</div><div class="dh-sv" id="wm-session-badge" style="font-size:10px;">-</div><div class="dh-sc"><span class="wm-live-badge" style="font-size:8px;">LIVE</span></div></div>
+          </div>
+
+          <!-- World map -->
+          <div class="dh-map-box">
+            <div class="world-map-card" style="border-radius:14px;overflow:hidden;height:100%;">
+              <div id="chartdiv" style="width:100%;height:calc(100% - 72px);"></div>
+              <div class="market-clocks" id="market-clocks"></div>
             </div>
           </div>
 
-          <!-- MAIN CONTENT: Map + Weather + Date + Notifications -->
-          <div class="dh-main-grid">
-
-            <!-- World map (center) -->
-            <div class="dh-map-col">
-              <div class="world-map-card" style="border-radius:16px;overflow:hidden;">
-                <div id="chartdiv" style="width:100%;height:340px;"></div>
-                <div class="market-clocks" id="market-clocks"></div>
-              </div>
-            </div>
-
-            <!-- Weather widget -->
-            <div class="dh-weather-card" id="weather-card">
-              <div class="wc-city" id="wc-city">-</div>
-              <div class="wc-desc" id="wc-desc">Loading weather...</div>
-              <div class="wc-temp" id="wc-temp">-</div>
-              <div class="wc-icon" id="wc-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="rgba(155,89,214,.4)" stroke-width="1.5" width="40" height="40"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-              </div>
-              <div class="wc-forecast" id="wc-forecast"></div>
-            </div>
-
-            <!-- Date widget -->
-            <div class="dh-date-card">
-              <div class="dc-day" id="dc-day">SAT</div>
-              <div class="dc-num" id="dc-num">2</div>
-              <div class="dc-month" id="dc-month">MAY</div>
-            </div>
-
-            <!-- Notifications -->
-            <div class="dh-notif-col">
-              <div class="dh-notif-hdr">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg>
-                Notifications
-                <span class="dh-notif-count" id="notif-count">0</span>
-              </div>
-              <div class="dh-notif-list" id="dash-notifications">
-                <div class="dh-notif-item">
-                  <div class="dh-notif-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                  </div>
-                  <div>
-                    <div class="dh-notif-title">Loading data...</div>
-                    <div class="dh-notif-sub">Please wait</div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- AI Brief compact -->
-              <div class="dh-brief-compact" onclick="briefClick()">
-                <div class="dbc-kicker">
-                  <span>AI BRIEF</span>
-                  <span class="dbm-lock" id="brief-lock-badge" style="display:none">MEMBERS</span>
-                </div>
-                <div class="dbc-title" id="dash-brief-title">AI Market Report</div>
-                <div class="dbc-pills">
-                  <span class="dbm-pill" id="dash-brief-time">Daily</span>
-                  <span class="dbm-pill" id="dash-brief-risk">loading...</span>
-                </div>
-                <div class="dbc-copy" id="dash-brief-copy">Loading market brief...</div>
-                <div class="dbc-cta">Open full brief →</div>
-              </div>
-            </div>
-
-          </div>
         </div>
 
-        <!-- Hidden for JS compatibility -->
-        <div style="display:none">
-          <div id="mkt-stats-row"></div>
-          <div id="dash-analysis-wrap"></div>
-          <div id="dash-signals"></div>
+        <!-- RIGHT COLUMN -->
+        <div class="dh-right-col">
+
+          <!-- Weather -->
+          <div class="dh-card">
+            <div class="dh-glow"></div>
+            <div class="dhw-city" id="wc-city">-</div>
+            <div class="dhw-desc" id="wc-desc">Loading weather...</div>
+            <div class="dhw-temp" id="wc-temp">-</div>
+            <div class="dhw-icon" id="wc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="rgba(155,89,214,.4)" stroke-width="1.5" width="30" height="30"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg>
+            </div>
+            <div class="dhw-fc" id="wc-forecast"></div>
+          </div>
+
+          <!-- Notifications -->
+          <div class="dh-card dh-notif">
+            <div class="dh-glow"></div>
+            <div class="dhn-hdr">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="12" height="12"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg>
+              Notifications
+              <span class="dhn-badge" id="notif-count">0</span>
+            </div>
+            <div id="dash-notifications">
+              <div class="dhn-row"><div class="dhn-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="11" height="11"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><div><div class="dhn-txt">Loading...</div><div class="dhn-sub">Please wait</div></div></div>
+            </div>
+          </div>
+
+          <!-- AI Brief -->
+          <div class="dh-card dh-brief" onclick="briefClick()">
+            <div class="dh-glow" style="background:radial-gradient(ellipse at top left,rgba(155,89,214,.1),transparent 65%);"></div>
+            <div class="dhb-top-line"></div>
+            <div class="dhb-kicker">AI BRIEF <span class="dbm-lock" id="brief-lock-badge" style="display:none">MEMBERS</span></div>
+            <div class="dhb-title" id="dash-brief-title">AI Market Report</div>
+            <div class="dhb-pills"><span class="dbm-pill" id="dash-brief-time">Daily</span><span class="dbm-pill" id="dash-brief-risk">loading...</span></div>
+            <div class="dhb-copy" id="dash-brief-copy">Loading...</div>
+            <div class="dhb-cta">Open full brief →</div>
+          </div>
+
+
+
         </div>
+      </div>
+
+      <div style="display:none">
+        <div id="mkt-stats-row"></div>
+        <div id="dash-analysis-wrap"></div>
+        <div id="dash-signals"></div>
       </div>
     </div><!-- /page-dashboard -->
 
@@ -5191,6 +5156,54 @@ function fetchPrices(){
   });
 }
 setInterval(fetchPrices,30000);
+// ── DASHBOARD V5 JS ──
+(function(){
+  function updateDate(){
+    var now=new Date();
+    var D=['SUN','MON','TUE','WED','THU','FRI','SAT'],M=['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+    var s=function(id,v){var e=document.getElementById(id);if(e)e.textContent=v;};
+    s('dc-day',D[now.getDay()]);s('dc-num',now.getDate());s('dc-month',M[now.getMonth()]);
+  }
+  updateDate();
+
+  function loadWeather(loc){
+    fetch('https://wttr.in/'+encodeURIComponent(loc)+'?format=j1')
+    .then(function(r){return r.json();})
+    .then(function(d){
+      var cur=d.current_condition&&d.current_condition[0];if(!cur)return;
+      var temp=cur.temp_C,desc=(cur.weatherDesc&&cur.weatherDesc[0]&&cur.weatherDesc[0].value)||'';
+      var area=d.nearest_area&&d.nearest_area[0];
+      var city=area?(area.areaName[0].value+', '+area.country[0].value):loc;
+      var s2=function(id,v){var e=document.getElementById(id);if(e)e.textContent=v;};
+      s2('wc-city',city);s2('wc-temp',temp+'°C');s2('wc-desc',desc);s2('dh-city',city);
+      var ic=document.getElementById('wc-icon');
+      if(ic){var dl=desc.toLowerCase(),stroke=dl.includes('sun')||dl.includes('clear')?'#f5c842':dl.includes('rain')?'#60a5fa':'#9090a8';ic.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="'+stroke+'" stroke-width="1.5" width="30" height="30"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg>';}
+      var fc=document.getElementById('wc-forecast');
+      if(fc&&d.weather){var dns=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];fc.innerHTML=d.weather.slice(0,4).map(function(w){var dt=new Date(w.date);return'<div class="dhw-fcd"><div class="dhw-fcn">'+dns[dt.getDay()]+'</div><div class="dhw-fct">'+w.maxtempC+'°</div></div>';}).join('');}
+    }).catch(function(){});
+  }
+
+  if(navigator.geolocation){
+    navigator.geolocation.getCurrentPosition(
+      function(p){loadWeather(p.coords.latitude.toFixed(2)+','+p.coords.longitude.toFixed(2));},
+      function(){var e=document.getElementById('dh-city');if(e)e.textContent='Amsterdam, NL';loadWeather('Amsterdam');}
+    );
+  } else { loadWeather('Amsterdam'); }
+
+  // Flash on price update
+  var _p={};
+  var _orig=window.updateMiniCardsFromCoins;
+  if(typeof _orig==='function'){
+    window.updateMiniCardsFromCoins=function(coins){
+      _orig.apply(this,arguments);
+      coins.forEach(function(c){
+        var prev=_p[c.id],cur=c.current_price;
+        if(prev&&prev!==cur){var el=c.id==='bitcoin'?document.getElementById('mst-btc-price'):c.id==='ethereum'?document.getElementById('mst-eth-price'):null;if(el){el.classList.remove('flash-up','flash-dn');void el.offsetWidth;el.classList.add(cur>prev?'flash-up':'flash-dn');}}
+        _p[c.id]=cur;
+      });
+    };
+  }
+})();
 
 // ── DASHBOARD V3: Weather + Location + Date widget ──
 (function() {
