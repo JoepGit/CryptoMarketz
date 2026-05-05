@@ -1,52 +1,45 @@
 {
-  "date": "Monday May 04, 2026",
-  "generated": "2026-05-04T09:10:33.826685Z",
-  "brief": "# ZIMR CAPITAL MARKET INTELLIGENCE\n## Monday, May 4, 2026\n\n---\n\n## **Indian Elections Repricing Hard: TVK Surge Signals Major Polling Shift**\n\nThe Tamil Nadu legislative race just experienced a seismic rerating. TVK rocketed to 98% (+89.8%) while DMK collapsed to 1% (-84.5%) on massive $1.5M combined volume\u2014indicating serious new information hit the market overnight. This isn't noise; the magnitude and coordination across both contracts screams fresh polling data or last-minute campaign momentum. Meanwhile, BJP's West Bengal odds hardened further to 99% (+48.3%), suggesting regional bloc confidence is building across multiple Indian contests simultaneously.\n\nSmart money appears to be front-running late-stage polling releases ahead of voting. The TVK move is particularly sharp\u2014a regional challenger displacing the incumbent DMK in the market's eyes is a significant political narrative shift. Watch for whether this reflects genuine ground movement or overweighting of a single poll. The correlated strength across BJP positions suggests macro confidence in broader anti-incumbent sentiment, but the TVK explosion has the hallmarks of information asymmetry among professional traders with access to pre-published surveys.\n\nOn energy markets, QatarEnergy's 99% probability (11.1M volume) for April 30 LNG production signals the market already priced in recovery\u2014today's contract is essentially a formality. More revealing: Strait of Hormuz traffic normalcy odds remain depressed (7-22% across different May deadlines) despite the energy bottleneck potentially resolving. This disconnect suggests traders see structural shipping delays persisting even after production recovers, or they're pricing geopolitical tail risk that production data won't immediately fix.\n\n---\n\n## **WATCH LIST**\n\n**1. TVK Tamil Nadu | 98%** \u2014 The explosive move demands scrutiny. If this holds above 90% into Tuesday, it signals genuine upset confidence. If it mean-reverts below 85%, suspect coordinated speculation. Either way, closing price action today sets the narrative.\n\n**2. Strait of Hormuz (May 15/31 deadlines) | 7-22%** \u2014 Major arbitrage opportunity if QatarEnergy production recovery is confirmed. These odds look too pessimistic if supply actually normalizes; watch for sharp rallies if shipping data improves.\n\n**3. KT Rolster vs BNK FEARX | 70%** \u2014 Lower-volume esports contract showing meaningful swings (-14.5%). Monitor if this consolidates or see-saws; indicates whether pro gaming markets are drawing serious money or remain retail-driven.",
+  "date": "Tuesday May 05, 2026",
+  "generated": "2026-05-05T09:02:57.991057Z",
+  "brief": "# ZIMR POLYMARKET BRIEFING | Tuesday, May 5, 2026\n\n## \"Iran Crisis Bifurcates: Traders Pricing Near-Term Escalation, Long-Term De-Escalation Collapse\"\n\nThe market is telling two contradictory stories, and smart money is exploiting the gap. The May 8 airspace closure is now 22% (up 9.5%) on $2.7M volume\u2014heaviest single bet on the board\u2014while the May 31 version sits at 52%. This inverted curve screams immediate concern. Simultaneously, traders are hammering the peace deal to 12% (-6%), suggesting they've mentally closed the door on diplomacy within 26 days. The Strait of Hormuz recovery markets are in freefall (2% on May 15), which tracks: if airspace closes and tensions escalate, normalized shipping is off the table.\n\n**The mispricing**: The $5.8M Bitcoin bet at 1% for $150K by June 30 is noise compared to what's actually moving. Real smart money isn't betting on crypto\u2014it's pricing oil ($110 WTI now 78%, +8.5%) and geopolitical bifurcation. The Musk tweet market (+44.5%, 86%) is a liquidity play; retail chasing. The core signal is *conviction on Iran escalation in the next 3 days, zero conviction on resolution*. Hornets not doves.\n\nCrude strength and airspace closure odds are correlated and real. Everything else is positioning.\n\n---\n\n## WATCH LIST\n\n**1. Iran Airspace Closure (May 8) \u2014 $2.7M | 22%**  \nThe thermal. If this ticks to 30%+ intraday, expect cascading bets into oil and inverse peace-deal positions. This is the market's real-time barometer.\n\n**2. WTI $110 High (May) \u2014 $246K | 78%**  \nSurprisingly calm for 78%. Any geopolitical headline should push this higher. Flatness here suggests either consensus pricing or potential reversal signal.\n\n**3. Hormuz Recovery by May 15 \u2014 $1.0M | 2%**  \nThis is graveyard odds. Traders have zero hope for rapid normalization. Watch if it moves at all\u2014any uptick = shifting baseline assumptions on escalation trajectory.",
   "top_movers": [
     {
-      "question": "Will Tamilaga Vettri Kazhagam (TVK) win the most seats in the 2026 Tamil Nadu Legislative Assembly election?",
-      "prob": 98,
-      "change": 89.8,
-      "vol24": "$923K",
-      "slug": "will-tamilaga-vettri-kazhagam-tvk-win-the-most-seats-in-the-2026-tamil-nadu-legislative-assembly-election"
+      "question": "Jiujiang: Viktoria Morvayova vs Yexin Ma",
+      "prob": 79,
+      "change": 45.6,
+      "vol24": "$257K",
+      "slug": "wta-morvayo-ma-2026-05-04"
     },
     {
-      "question": "Will the Dravida Munnetra Kazhagam (DMK) win the most seats in the 2026 Tamil Nadu Legislative Assembly election?",
-      "prob": 1,
-      "change": -84.5,
-      "vol24": "$607K",
-      "slug": "will-the-dravida-munnetra-kazhagam-dmk-win-the-most-seats-in-the-2026-tamil-nadu-legislative-assembly-election"
+      "question": "Will Elon Musk post 140-159 tweets from April 28 to May 5, 2026?",
+      "prob": 86,
+      "change": 44.5,
+      "vol24": "$249K",
+      "slug": "elon-musk-of-tweets-april-28-may-5-140-159"
     },
     {
-      "question": "Will the Bharatiya Janata Party (BJP) win the most seats in the 2026 West Bengal Legislative Assembly election?",
-      "prob": 99,
-      "change": 48.3,
-      "vol24": "$592K",
-      "slug": "will-the-bharatiya-janata-party-bjp-win-the-most-seats-in-the-2026-west-bengal-legislative-assembly-election"
+      "question": "Iran closes its airspace by May 31?",
+      "prob": 52,
+      "change": 17.0,
+      "vol24": "$327K",
+      "slug": "iran-closes-its-airspace-by-may-31"
     },
     {
-      "question": "Will the All India Trinamool Congress (AITC) win the most seats in the 2026 West Bengal Legislative Assembly election?",
-      "prob": 1,
-      "change": -47.9,
-      "vol24": "$485K",
-      "slug": "will-the-all-india-trinamool-congress-aitc-win-the-most-seats-in-the-2026-west-bengal-legislative-assembly-election"
+      "question": "Iran closes its airspace by May 8?",
+      "prob": 22,
+      "change": 9.5,
+      "vol24": "$2.7M",
+      "slug": "iran-closes-its-airspace-by-may-8"
     },
     {
-      "question": "LoL: Kiwoom DRX vs DN SOOPers - Game 1 Winner",
-      "prob": 99,
-      "change": 42.4,
-      "vol24": "$416K",
-      "slug": "lol-drx-dnf-2026-05-04-game1"
+      "question": "Will WTI Crude Oil (WTI) hit (HIGH) $110 in May?",
+      "prob": 78,
+      "change": 8.5,
+      "vol24": "$246K",
+      "slug": "will-wti-reach-110-in-may-2026-116-472"
     }
   ],
   "top_vol": [
-    {
-      "question": "QatarEnergy announces/resumes LNG production in Qatar by April 30?",
-      "prob": 99,
-      "change": 0.2,
-      "vol24": "$11.1M",
-      "slug": "qatarenergy-announcesresumes-lng-production-in-qatar-by-april-30"
-    },
     {
       "question": "Will Bitcoin hit $150k by June 30, 2026?",
       "prob": 1,
@@ -55,11 +48,18 @@
       "slug": "will-bitcoin-hit-150k-by-june-30-2026"
     },
     {
-      "question": "Will Eric Trump win the 2028 US Presidential Election?",
-      "prob": 1,
-      "change": -0.1,
-      "vol24": "$2.0M",
-      "slug": "will-eric-trump-win-the-2028-us-presidential-election"
+      "question": "Iran closes its airspace by May 8?",
+      "prob": 22,
+      "change": 9.5,
+      "vol24": "$2.7M",
+      "slug": "iran-closes-its-airspace-by-may-8"
+    },
+    {
+      "question": "Will the U.S. invade Iran before 2027?",
+      "prob": 30,
+      "change": 0,
+      "vol24": "$1.2M",
+      "slug": "will-the-us-invade-iran-before-2027"
     }
   ]
 }
