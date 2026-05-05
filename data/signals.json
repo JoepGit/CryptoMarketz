@@ -1,26 +1,14 @@
 [
   {
-    "id": 1777847425018,
+    "id": 1777967608417,
     "coin": "BTC/USD",
-    "type": "BUY",
-    "entry": "79035",
-    "tp": "80500",
-    "sl": "78400",
-    "note": "4H bullish trend with price above both EMAs, 1H above EMA20/50, RSI 53.9 in healthy range. Entry near 24h high with support at previous resistance around 78400. Use 1/3 position size.",
-    "timestamp": "2026-05-03T22:30:24.606Z",
-    "generated_at": "Sun, 03 May 2026 22:30:24 GMT",
-    "source": "claude-bot"
-  },
-  {
-    "id": 1777640118450,
-    "coin": "ETH/USD",
-    "type": "BUY",
-    "entry": "2304",
-    "tp": "2370",
-    "sl": "2258",
-    "note": "1H bullish with price above EMAs, RSI 69 strong but not extreme, 4H sideways with price above EMA20, support at 24h low 2258, resistance broken at 2303. Use 1/3 position size.",
-    "timestamp": "2026-05-01T12:55:10.019Z",
-    "generated_at": "Fri, 01 May 2026 12:55:10 GMT",
+    "type": "SELL",
+    "entry": "80900",
+    "tp": "78200",
+    "sl": "81400",
+    "note": "1H RSI extremely overbought at 81.8, price near 24h high with clear resistance. 4H bullish but short-term correction expected to EMA50 area. Use 1/3 position size.",
+    "timestamp": "2026-05-05T07:53:18.599Z",
+    "generated_at": "Tue, 05 May 2026 07:53:18 GMT",
     "source": "claude-bot"
   }
 ]
