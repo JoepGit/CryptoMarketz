@@ -1,14 +1,14 @@
 [
   {
-    "id": 1777967608417,
+    "id": 1777986652876,
     "coin": "BTC/USD",
-    "type": "SELL",
-    "entry": "80900",
-    "tp": "78200",
-    "sl": "81400",
-    "note": "1H RSI extremely overbought at 81.8, price near 24h high with clear resistance. 4H bullish but short-term correction expected to EMA50 area. Use 1/3 position size.",
-    "timestamp": "2026-05-05T07:53:18.599Z",
-    "generated_at": "Tue, 05 May 2026 07:53:18 GMT",
+    "type": "BUY",
+    "entry": "81599",
+    "tp": "84500",
+    "sl": "80000",
+    "note": "4H strong bullish trend with RSI 71.0 showing momentum, price well above both EMAs on 4H timeframe. 1H RSI 53.7 allows room for continuation. Support at 80k psychological level and 24h low. Use 1/3 position size.",
+    "timestamp": "2026-05-05T13:10:43.285Z",
+    "generated_at": "Tue, 05 May 2026 13:10:43 GMT",
     "source": "claude-bot"
   }
 ]

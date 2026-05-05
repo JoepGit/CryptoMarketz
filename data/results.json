@@ -1,5 +1,18 @@
 [
   {
+    "id": 1777967608417,
+    "coin": "BTC/USD",
+    "type": "SELL",
+    "entry": "80900",
+    "tp": "78200",
+    "sl": "81400",
+    "result": "loss",
+    "pnl": "0.62%",
+    "resolved_price": 81599,
+    "signal_date": "2026-05-05T07:53:18.599Z",
+    "resolved_at": "2026-05-05T13:10:23.287Z"
+  },
+  {
     "id": 1777847425018,
     "coin": "BTC/USD",
     "type": "BUY",
