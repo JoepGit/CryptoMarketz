@@ -1,5 +1,17 @@
 [
   {
+    "id": 1778074118802,
+    "coin": "ETH/USD",
+    "type": "SELL",
+    "entry": "2383",
+    "tp": "2300",
+    "sl": "2420",
+    "note": "4H bullish but 1H RSI 73.3 severely overbought at 24h high resistance $2420. Price rejecting from resistance with clear downside to 4H support around $2300. Use 1/3 position size.",
+    "timestamp": "2026-05-06T13:28:36.826Z",
+    "generated_at": "Wed, 06 May 2026 13:28:36 GMT",
+    "source": "claude-bot"
+  },
+  {
     "id": 1777986652876,
     "coin": "BTC/USD",
     "type": "BUY",
