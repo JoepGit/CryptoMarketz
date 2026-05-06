@@ -1,42 +1,42 @@
 {
-  "date": "Tuesday May 05, 2026",
-  "generated": "2026-05-05T09:02:57.991057Z",
-  "brief": "# ZIMR POLYMARKET BRIEFING | Tuesday, May 5, 2026\n\n## \"Iran Crisis Bifurcates: Traders Pricing Near-Term Escalation, Long-Term De-Escalation Collapse\"\n\nThe market is telling two contradictory stories, and smart money is exploiting the gap. The May 8 airspace closure is now 22% (up 9.5%) on $2.7M volume\u2014heaviest single bet on the board\u2014while the May 31 version sits at 52%. This inverted curve screams immediate concern. Simultaneously, traders are hammering the peace deal to 12% (-6%), suggesting they've mentally closed the door on diplomacy within 26 days. The Strait of Hormuz recovery markets are in freefall (2% on May 15), which tracks: if airspace closes and tensions escalate, normalized shipping is off the table.\n\n**The mispricing**: The $5.8M Bitcoin bet at 1% for $150K by June 30 is noise compared to what's actually moving. Real smart money isn't betting on crypto\u2014it's pricing oil ($110 WTI now 78%, +8.5%) and geopolitical bifurcation. The Musk tweet market (+44.5%, 86%) is a liquidity play; retail chasing. The core signal is *conviction on Iran escalation in the next 3 days, zero conviction on resolution*. Hornets not doves.\n\nCrude strength and airspace closure odds are correlated and real. Everything else is positioning.\n\n---\n\n## WATCH LIST\n\n**1. Iran Airspace Closure (May 8) \u2014 $2.7M | 22%**  \nThe thermal. If this ticks to 30%+ intraday, expect cascading bets into oil and inverse peace-deal positions. This is the market's real-time barometer.\n\n**2. WTI $110 High (May) \u2014 $246K | 78%**  \nSurprisingly calm for 78%. Any geopolitical headline should push this higher. Flatness here suggests either consensus pricing or potential reversal signal.\n\n**3. Hormuz Recovery by May 15 \u2014 $1.0M | 2%**  \nThis is graveyard odds. Traders have zero hope for rapid normalization. Watch if it moves at all\u2014any uptick = shifting baseline assumptions on escalation trajectory.",
+  "date": "Wednesday May 06, 2026",
+  "generated": "2026-05-06T09:14:03.952493Z",
+  "brief": "# ZIMR POLYMARKET BRIEFING | Wednesday, May 6, 2026\n\n## HEADLINE\n**Markets Pivot From Iran Crisis to Diplomacy: Hormuz Blockade Lift Priced 32%, Peace Deal by June 30 Now 46%**\n\n---\n\n## THE SIGNAL\n\nThe Iran-US tension trade is recalibrating sharply. Today's biggest movers tell a coherent story: traders are rotating OUT of near-term catastrophe (airspace closure by May 8 crashed to 6%) and INTO medium-term resolution (peace deal by June 30 up 13% to 46%). The Strait of Hormuz \"normal traffic\" market climbing to 54% suggests the market is now pricing a *managed de-escalation* rather than sustained blockade.\n\n**What smart money is doing:** Volume is *heavy* on the May 31 peace deal (up to $1.1M), indicating sophisticated players are locking in positions before announcement risk. Bitcoin's MicroStrategy question spiking +27% on $278K volume is noise\u2014but the real tell is the ratio: traders believe geopolitical risk *decreases* into June, meaning BTC tailwinds return. The $5.8M Bitcoin $150K bet remains a 1% joke (realistic given macro headwinds).\n\n**The mispricing:** The 32% odds on Trump announcing Hormuz blockade lift by May 15 feel *low* given the 46% probability of a full peace deal by June 30. If negotiations are moving (evidenced by peace deal odds rising), an interim symbolic win (blockade lift announcement) is a natural political stepping stone. Watch for 32% to spike to 45%+ on any administration signal.\n\n---\n\n## WATCH LIST\n\n**1. US x Iran permanent peace deal by May 31 | 26% | $1.1M volume**\n- The volume concentration here is the real story. If this breaks 30% today, expect a cascade through the entire Iran complex. May 31 is the political deadline; watch for leaked negotiations or Blinken statements.\n\n**2. Strait of Hormuz traffic returns to normal by end of June | 54%**\n- At 54%, this is *already priced for resolution*. If this drops below 50%, it signals the market is losing confidence in near-term de-escalation. Real barometer for conviction.\n\n**3. Will the U.S. invade Iran before 2027? | 26% | $2.1M volume**\n- Highest volume in the Iran complex. The fact this held steady while peace odds rose suggests the market sees invasion risk as separate from diplomacy risk. Worth monitoring for any spillover flows.",
   "top_movers": [
     {
-      "question": "Jiujiang: Viktoria Morvayova vs Yexin Ma",
-      "prob": 79,
-      "change": 45.6,
-      "vol24": "$257K",
-      "slug": "wta-morvayo-ma-2026-05-04"
+      "question": "MicroStrategy sells any Bitcoin by June 30, 2026?",
+      "prob": 29,
+      "change": 27.0,
+      "vol24": "$278K",
+      "slug": "microstrategy-sells-any-bitcoin-by-june-30-2026"
     },
     {
-      "question": "Will Elon Musk post 140-159 tweets from April 28 to May 5, 2026?",
-      "prob": 86,
-      "change": 44.5,
-      "vol24": "$249K",
-      "slug": "elon-musk-of-tweets-april-28-may-5-140-159"
+      "question": "Will Donald Trump announce that the United States blockade of the Strait of Hormuz has been lifted by May 15, 2026?",
+      "prob": 32,
+      "change": 25.0,
+      "vol24": "$294K",
+      "slug": "will-donald-trump-announce-that-the-united-states-blockade-of-the-strait-of-hormuz-has-been-lifted-by-may-15-2026-154"
+    },
+    {
+      "question": "LoL: Gen.G vs Nongshim Red Force - Game 1 Winner",
+      "prob": 99,
+      "change": 20.4,
+      "vol24": "$698K",
+      "slug": "lol-gen-ns-2026-05-06-game1"
     },
     {
       "question": "Iran closes its airspace by May 31?",
-      "prob": 52,
-      "change": 17.0,
-      "vol24": "$327K",
-      "slug": "iran-closes-its-airspace-by-may-31"
+      "prob": 32,
+      "change": -20.0,
+      "vol24": "$409K",
+      "slug": "iran-closes-its-airspace-by-may-31-434-443-672"
     },
     {
       "question": "Iran closes its airspace by May 8?",
-      "prob": 22,
-      "change": 9.5,
-      "vol24": "$2.7M",
-      "slug": "iran-closes-its-airspace-by-may-8"
-    },
-    {
-      "question": "Will WTI Crude Oil (WTI) hit (HIGH) $110 in May?",
-      "prob": 78,
-      "change": 8.5,
-      "vol24": "$246K",
-      "slug": "will-wti-reach-110-in-may-2026-116-472"
+      "prob": 6,
+      "change": -16.0,
+      "vol24": "$1.7M",
+      "slug": "iran-closes-its-airspace-by-may-8-754-861"
     }
   ],
   "top_vol": [
@@ -48,18 +48,18 @@
       "slug": "will-bitcoin-hit-150k-by-june-30-2026"
     },
     {
-      "question": "Iran closes its airspace by May 8?",
-      "prob": 22,
-      "change": 9.5,
-      "vol24": "$2.7M",
-      "slug": "iran-closes-its-airspace-by-may-8"
+      "question": "Will the U.S. invade Iran before 2027?",
+      "prob": 26,
+      "change": -5.0,
+      "vol24": "$2.1M",
+      "slug": "will-the-us-invade-iran-before-2027"
     },
     {
-      "question": "Will the U.S. invade Iran before 2027?",
-      "prob": 30,
-      "change": 0,
-      "vol24": "$1.2M",
-      "slug": "will-the-us-invade-iran-before-2027"
+      "question": "Iran closes its airspace by May 8?",
+      "prob": 6,
+      "change": -16.0,
+      "vol24": "$1.7M",
+      "slug": "iran-closes-its-airspace-by-may-8-754-861"
     }
   ]
 }
