@@ -1,42 +1,42 @@
 {
-  "date": "Wednesday May 06, 2026",
-  "generated": "2026-05-06T09:14:03.952493Z",
-  "brief": "# ZIMR POLYMARKET BRIEFING | Wednesday, May 6, 2026\n\n## HEADLINE\n**Markets Pivot From Iran Crisis to Diplomacy: Hormuz Blockade Lift Priced 32%, Peace Deal by June 30 Now 46%**\n\n---\n\n## THE SIGNAL\n\nThe Iran-US tension trade is recalibrating sharply. Today's biggest movers tell a coherent story: traders are rotating OUT of near-term catastrophe (airspace closure by May 8 crashed to 6%) and INTO medium-term resolution (peace deal by June 30 up 13% to 46%). The Strait of Hormuz \"normal traffic\" market climbing to 54% suggests the market is now pricing a *managed de-escalation* rather than sustained blockade.\n\n**What smart money is doing:** Volume is *heavy* on the May 31 peace deal (up to $1.1M), indicating sophisticated players are locking in positions before announcement risk. Bitcoin's MicroStrategy question spiking +27% on $278K volume is noise\u2014but the real tell is the ratio: traders believe geopolitical risk *decreases* into June, meaning BTC tailwinds return. The $5.8M Bitcoin $150K bet remains a 1% joke (realistic given macro headwinds).\n\n**The mispricing:** The 32% odds on Trump announcing Hormuz blockade lift by May 15 feel *low* given the 46% probability of a full peace deal by June 30. If negotiations are moving (evidenced by peace deal odds rising), an interim symbolic win (blockade lift announcement) is a natural political stepping stone. Watch for 32% to spike to 45%+ on any administration signal.\n\n---\n\n## WATCH LIST\n\n**1. US x Iran permanent peace deal by May 31 | 26% | $1.1M volume**\n- The volume concentration here is the real story. If this breaks 30% today, expect a cascade through the entire Iran complex. May 31 is the political deadline; watch for leaked negotiations or Blinken statements.\n\n**2. Strait of Hormuz traffic returns to normal by end of June | 54%**\n- At 54%, this is *already priced for resolution*. If this drops below 50%, it signals the market is losing confidence in near-term de-escalation. Real barometer for conviction.\n\n**3. Will the U.S. invade Iran before 2027? | 26% | $2.1M volume**\n- Highest volume in the Iran complex. The fact this held steady while peace odds rose suggests the market sees invasion risk as separate from diplomacy risk. Worth monitoring for any spillover flows.",
+  "date": "Thursday May 07, 2026",
+  "generated": "2026-05-07T09:24:11.349978Z",
+  "brief": "# POLYMARKET DAILY BRIEF | May 7, 2026\n\n## \"Iran Tensions Soften While Markets Price in Asymmetric Tail Risks\"\n\nSmart money is rotating out of worst-case Iran scenarios. The US-Iran permanent peace deal by May 31 ticked up 4.5% to 32% on $1.3M volume\u2014the single highest-volume market today\u2014suggesting institutional conviction that diplomatic channels are warming. Simultaneous weakness in regime-fall (14%, -5%) and invasion (20%, -1.8M vol) probabilities points to a coordinated de-escalation narrative taking hold. But here's the catch: $2.2M is still flooding into the May 15 diplomatic meeting at just 18%, a clear mispricing if May 31 peace odds are genuinely improving.\n\nThe esports collapse is brutal and instructive. DK vs KT Game 1 (1%, -49.5%) inverse-correlates perfectly with Game 2 (97%, +47.5%)\u2014Game 1 result is now fully priced in. This is textbook information efficiency on Polymarket's sports verticals. Crypto traders should note: the $5.8M Bitcoin $150k bet remains pathologically underwater at 1%, suggesting either genuine bearish conviction or extreme skew capturing BTC volatility premium into June.\n\nStray observation: MicroStrategy short Bitcoin at 25% (-4.7%) seems soft given the massive $150k bet languishing at 1%. If institutional players are serious about MSTR not selling, that's tacit confidence in price levels ahead.\n\n---\n\n## WATCH LIST\n\n**1. US x Iran permanent peace deal by May 31 (32%, $1.3M) vs May 15 (17%, $2.2M)**  \nArbitrage opportunity. If May 31 holds 32%, May 15 should floor higher. Monitor diplomatic wire reports today\u2014any concrete summit announcement kills the spread.\n\n**2. Will Bitcoin hit $150k by June 30 (1%, $5.8M)**  \nExtreme tail positioning. With $5.8M in play and BTC trading ~$62-68k range, this is either a capitulation trap or genuine conviction in 100%+ upside. Watch intraday volatility; if we gap above $75k, this reprices violently.\n\n**3. Strait of Hormuz traffic returns to normal by May 15 (6%, $1.3M)**  \nLowest-priced geopolitical bellwether. If Iran talks genuinely accelerate, this should be first to move. Currently criminally underpriced relative to May 31 peace odds.",
   "top_movers": [
     {
-      "question": "MicroStrategy sells any Bitcoin by June 30, 2026?",
-      "prob": 29,
-      "change": 27.0,
-      "vol24": "$278K",
-      "slug": "microstrategy-sells-any-bitcoin-by-june-30-2026"
+      "question": "LoL: Dplus KIA vs KT Rolster - Game 1 Winner",
+      "prob": 1,
+      "change": -49.5,
+      "vol24": "$692K",
+      "slug": "lol-dk-kt-2026-05-07-game1"
     },
     {
-      "question": "Will Donald Trump announce that the United States blockade of the Strait of Hormuz has been lifted by May 15, 2026?",
-      "prob": 32,
-      "change": 25.0,
-      "vol24": "$294K",
-      "slug": "will-donald-trump-announce-that-the-united-states-blockade-of-the-strait-of-hormuz-has-been-lifted-by-may-15-2026-154"
+      "question": "LoL: Dplus KIA vs KT Rolster - Game 2 Winner",
+      "prob": 97,
+      "change": 47.5,
+      "vol24": "$378K",
+      "slug": "lol-dk-kt-2026-05-07-game2"
     },
     {
-      "question": "LoL: Gen.G vs Nongshim Red Force - Game 1 Winner",
-      "prob": 99,
-      "change": 20.4,
-      "vol24": "$698K",
-      "slug": "lol-gen-ns-2026-05-06-game1"
+      "question": "Internazionali BNL d'Italia: Yulia Starodubtseva vs Simona Waltert",
+      "prob": 8,
+      "change": -46.5,
+      "vol24": "$289K",
+      "slug": "wta-starodu-waltert-2026-05-06"
     },
     {
-      "question": "Iran closes its airspace by May 31?",
-      "prob": 32,
-      "change": -20.0,
-      "vol24": "$409K",
-      "slug": "iran-closes-its-airspace-by-may-31-434-443-672"
+      "question": "Cincinnati Reds vs. Chicago Cubs",
+      "prob": 1,
+      "change": -39.5,
+      "vol24": "$436K",
+      "slug": "mlb-cin-chc-2026-05-06"
     },
     {
-      "question": "Iran closes its airspace by May 8?",
-      "prob": 6,
-      "change": -16.0,
-      "vol24": "$1.7M",
-      "slug": "iran-closes-its-airspace-by-may-8-754-861"
+      "question": "Will PSG win the 2025\u201326 Champions League?",
+      "prob": 57,
+      "change": 29.0,
+      "vol24": "$399K",
+      "slug": "will-psg-win-the-202526-champions-league"
     }
   ],
   "top_vol": [
@@ -48,18 +48,18 @@
       "slug": "will-bitcoin-hit-150k-by-june-30-2026"
     },
     {
-      "question": "Will the U.S. invade Iran before 2027?",
-      "prob": 26,
-      "change": -5.0,
-      "vol24": "$2.1M",
-      "slug": "will-the-us-invade-iran-before-2027"
+      "question": "US x Iran permanent peace deal by May 15, 2026?",
+      "prob": 17,
+      "change": 4.2,
+      "vol24": "$2.2M",
+      "slug": "us-x-iran-permanent-peace-deal-by-may-15-2026"
     },
     {
-      "question": "Iran closes its airspace by May 8?",
-      "prob": 6,
-      "change": -16.0,
-      "vol24": "$1.7M",
-      "slug": "iran-closes-its-airspace-by-may-8-754-861"
+      "question": "Will the U.S. invade Iran before 2027?",
+      "prob": 20,
+      "change": -4.0,
+      "vol24": "$1.8M",
+      "slug": "will-the-us-invade-iran-before-2027"
     }
   ]
 }
